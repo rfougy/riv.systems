@@ -7,12 +7,13 @@ import type {
 import { join } from "path";
 import getFileNamesInDirectory, { getFileContents } from "../../lib/getContent";
 import IPost from "../../interfaces/post";
+import MarkDown from "markdown-to-jsx";
 
 const DynamicTestPage: NextPage<{ content: string; slug: string }> = ({
   content,
   slug,
 }) => {
-  return <>{content}</>;
+  return <MarkDown>{content}</MarkDown>;
 };
 
 export default DynamicTestPage;
@@ -20,10 +21,10 @@ export default DynamicTestPage;
 export const getStaticPaths: GetStaticPaths = async () => {
   const categories: string[] = getFileNamesInDirectory("test");
 
-  let posts: any = categories.map((category: string) => {
+  let posts: IPost[][] = categories.map((category: string) => {
     const posts = getFileNamesInDirectory("test", category);
 
-    const postList = posts.map((fileName: string) => {
+    const postList: IPost[] = posts.map((fileName: string) => {
       return {
         title: fileName.replace(/\.md/, ""),
         category: category,

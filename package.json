@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "fs": "^0.0.1-security",
+    "markdown-to-jsx": "^7.1.7",
     "next": "12.3.1",
     "path": "^0.12.7",
     "react": "18.2.0",

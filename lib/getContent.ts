@@ -3,8 +3,8 @@ import { readdirSync, readFileSync } from "fs";
 
 export function getAbsolutePathToDir(page: string, category?: string) {
   return category
-    ? join(process.cwd(), "content", page, category)
-    : join(process.cwd(), "content", page);
+    ? join(process.cwd(), "cms", page, category)
+    : join(process.cwd(), "cms", page);
 }
 
 export default function getFileNamesInDirectory(

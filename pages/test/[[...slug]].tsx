@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps = async ({
 }: GetStaticPropsContext) => {
   const path = join(
     process.cwd(),
-    "content",
+    "cms",
     "test",
     params.slug[0],
     params.slug[1] + ".md"

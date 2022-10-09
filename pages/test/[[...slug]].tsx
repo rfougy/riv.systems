@@ -12,7 +12,7 @@ const DynamicTestPage: NextPage<{ content: string; slug: string }> = ({
   content,
   slug,
 }) => {
-  return <>{slug}</>;
+  return <>{content}</>;
 };
 
 export default DynamicTestPage;
@@ -20,31 +20,25 @@ export default DynamicTestPage;
 export const getStaticPaths: GetStaticPaths = async () => {
   const categories: string[] = getFileNamesInDirectory("test");
 
-  const posts: IPost[] = categories.reduce(
-    (postList: any, category: string) => {
-      const posts = getFileNamesInDirectory("test", category);
+  let posts: any = categories.map((category: string) => {
+    const posts = getFileNamesInDirectory("test", category);
 
-      const CategoryPostPairing = posts.map((fileName: string) => {
-        const datePublished = fileName.split("_")[0];
-        const title = fileName.split("_")[1];
+    const postList = posts.map((fileName: string) => {
+      return {
+        title: fileName.replace(/\.md/, ""),
+        category: category,
+      };
+    });
 
-        return {
-          title: title,
-          category: category,
-          datePublished: datePublished,
-        };
-      });
+    return postList;
+  });
 
-      postList.concat(CategoryPostPairing);
-      return postList;
-    },
-    []
-  );
+  posts = Array.prototype.concat.apply([], posts);
 
   return {
-    paths: posts.map((post) => ({
+    paths: posts.map((post: any) => ({
       params: {
-        slug: join(post.category, post.title),
+        slug: [post.category, post.title],
       },
     })),
     fallback: false,
@@ -54,7 +48,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({
   params,
 }: GetStaticPropsContext) => {
-  const content = getFileContents(params.slug);
+  const path = join(
+    process.cwd(),
+    "content",
+    "test",
+    params.slug[0],
+    params.slug[1] + ".md"
+  );
+  const content = getFileContents(path);
 
   return {
     props: {

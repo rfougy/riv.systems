@@ -1,11 +1,10 @@
-import { join } from "path";
+import { join, resolve } from "path";
 import { readdirSync, readFileSync } from "fs";
 
-// docs: returns path to directory. If there is a category, function will return path to category directory.
 export function getAbsolutePathToDir(page: string, category?: string) {
   return category
-    ? join(__dirname, "..", "content", page, category)
-    : join(__dirname, "..", "content", page);
+    ? join(process.cwd(), "content", page, category)
+    : join(process.cwd(), "content", page);
 }
 
 export default function getFileNamesInDirectory(
@@ -14,14 +13,9 @@ export default function getFileNamesInDirectory(
 ) {
   const path = getAbsolutePathToDir(page, category);
 
-  return readdirSync(path).map((fileName) =>
-    fileName.includes(".md") ? fileName.replace(".md", "") : fileName
-  );
+  return readdirSync(path);
 }
 
 export function getFileContents(path: string) {
   return readFileSync(path).toString();
 }
-
-const test = getFileNamesInDirectory("test", "categoryOne");
-console.log(test);

@@ -21,8 +21,8 @@ export default DynamicTestPage;
 export const getStaticPaths: GetStaticPaths = async () => {
   const categories: string[] = getFileNamesInDirectory("test");
 
-  let posts: IPost[][] = categories.map((category: string) => {
-    const posts = getFileNamesInDirectory("test", category);
+  let posts: IPost[][] = categories.map((category) => {
+    const posts: string[] = getFileNamesInDirectory("test", category);
 
     const postList: IPost[] = posts.map((fileName: string) => {
       return {
@@ -49,14 +49,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({
   params,
 }: GetStaticPropsContext) => {
-  const path = join(
+  const path: string = join(
     process.cwd(),
     "cms",
     "test",
     params.slug[0],
     params.slug[1] + ".md"
   );
-  const content = getFileContents(path);
+
+  const content: string = getFileContents(path);
 
   return {
     props: {

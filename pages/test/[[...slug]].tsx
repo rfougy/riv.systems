@@ -4,12 +4,6 @@ import type {
   GetStaticPropsContext,
   NextPage,
 } from "next";
-import {
-  getFileNamesInDirectory,
-  getAbsolutePath,
-  getAllPosts,
-  getFileContents,
-} from "../../lib/getContent";
 import Section from "../../components/section/Section";
 import Category from "../../components/category/Category";
 import Post from "../../components/post/Post";
@@ -24,7 +18,8 @@ const DynamicTestPage: NextPage<{ slug: string; content?: string }> = ({
   // Docs: Section Page
   if (!slug) return <Section slug={slug} content={content} section={"test"} />;
 
-  // Docs: Category Page
+  // Docs: Category Page 
+  // @ts-ignore
   if (slug?.length === 1) return <Category slug={slug} content={content} />;
 
   // Docs: Post Page
@@ -48,7 +43,7 @@ export const getStaticProps: GetStaticProps = async ({
 }: GetStaticPropsContext) => {
   const slug: string | string[] | undefined = params?.slug;
   const content: IPost[][] | string[] | string | undefined =
-    getContentByDynamicPage(slug);
+    getContentByDynamicPage("test", slug);
 
   return {
     props: {

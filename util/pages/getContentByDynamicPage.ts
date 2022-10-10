@@ -5,12 +5,16 @@ import {
   getFileContents,
   getFileNamesInDirectory,
 } from "../../lib/getContent";
+import { sectionType } from "../../types/sectionType";
 
-export function getContentByDynamicPage(slug: string | string[] | undefined) {
+export function getContentByDynamicPage(
+  section: sectionType,
+  slug: string | string[] | undefined
+) {
   // Docs: Content for Section Page
   if (!slug) {
-    const categories: string[] = getFileNamesInDirectory("test");
-    const allPosts: IPost[][] = getAllPosts("test", categories);
+    const categories: string[] = getFileNamesInDirectory(section);
+    const allPosts: IPost[][] = getAllPosts(section, categories);
 
     return allPosts;
   }
@@ -19,7 +23,7 @@ export function getContentByDynamicPage(slug: string | string[] | undefined) {
   if (slug?.length === 1) {
     const category: string = slug[0];
     const postsFromCategory: string[] = getFileNamesInDirectory(
-      "test",
+      section,
       category
     ).map((post) => post.replace(/\.md/, ""));
 
@@ -30,7 +34,7 @@ export function getContentByDynamicPage(slug: string | string[] | undefined) {
   if (slug?.length === 2) {
     const category: string = slug[0];
     const post: string = slug[1];
-    const path: string = getAbsolutePath("test", category, post);
+    const path: string = getAbsolutePath(section, category, post);
     const postContent = getFileContents(path);
 
     return postContent;

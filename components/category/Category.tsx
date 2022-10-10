@@ -1,4 +1,4 @@
-const Category: React.FC<{ slug: string; content: string | string[] | undefined }> = ({
+const Category: React.FC<{ slug: string; content: string[] | undefined }> = ({
   slug,
   content,
 }) => {

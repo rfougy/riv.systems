@@ -1,6 +1,7 @@
 import IPost from "../../interfaces/post";
+import { sectionType } from "../../types/sectionType";
 
-const Section: React.FC<{ slug: string; content: any; section: string }> = ({
+const Section: React.FC<{ slug: string; content: any; section: sectionType }> = ({
   slug,
   content,
   section,

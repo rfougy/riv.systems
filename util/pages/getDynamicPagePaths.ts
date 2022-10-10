@@ -1,6 +1,7 @@
 import { getAllPosts, getFileNamesInDirectory } from "../../lib/getContent";
+import { sectionType } from "../../types/sectionType";
 
-export function getDynamicPagePaths(section: string) {
+export function getDynamicPagePaths(section: sectionType) {
   const categories: string[] = getFileNamesInDirectory(section);
   const allPosts = getAllPosts(section, categories);
 

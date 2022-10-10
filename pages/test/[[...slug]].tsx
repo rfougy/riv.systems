@@ -8,9 +8,11 @@ import { join } from "path";
 import getFileNamesInDirectory, { getFileContents } from "../../lib/getContent";
 import IPost from "../../interfaces/post";
 import MarkDown from "markdown-to-jsx";
+import Section from "../../components/section/Section";
+import Category from "../../components/category/Category";
+import Post from "../../components/post/Post";
 
 const DynamicTestPage: NextPage<{ slug: string }> = ({ slug }) => {
-
   // NOTE: This logic wil be used in components, with slug being passed down to them.
   // const path: string = join(
   //   process.cwd(),
@@ -23,17 +25,17 @@ const DynamicTestPage: NextPage<{ slug: string }> = ({ slug }) => {
 
   // Docs: Section Page
   if (!slug) {
-    return <div>Page: Page</div>;
+    return <Section slug={slug} />;
   }
 
   // Docs: Category Page
   if (slug?.length === 1) {
-    return <div>Page: Category</div>;
+    return <Category slug={slug} />;
   }
 
   // Docs: Post Page
   if (slug?.length === 2) {
-    return <div>Page: Post</div>;
+    return <Post slug={slug} />;
   }
 };
 

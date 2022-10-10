@@ -1,4 +1,4 @@
-import { join, resolve } from "path";
+import { join } from "path";
 import { readdirSync, readFileSync } from "fs";
 
 export function getAbsolutePath(
@@ -6,16 +6,11 @@ export function getAbsolutePath(
   category?: string,
   post?: string
 ) {
-  switch (arguments.length) {
-    case 1:
-      return join(process.cwd(), "cms", section);
-    case 2:
-      return join(process.cwd(), "cms", section, category);
-    case 3:
-      return join(process.cwd(), "cms", section, category, post + ".md");
-    default:
-      break;
-  }
+  return category
+    ? post
+      ? join(process.cwd(), "cms", section, category, post + ".md")
+      : join(process.cwd(), "cms", section, category)
+    : join(process.cwd(), "cms", section);
 }
 
 export default function getFileNamesInDirectory(

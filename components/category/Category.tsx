@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Category: React.FC<{ slug: string; content: string[] | undefined }> = ({
+const Category: React.FC<{ slug: string; content: string | string[] | undefined }> = ({
   slug,
   content,
 }) => {

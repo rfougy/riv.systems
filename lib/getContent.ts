@@ -1,5 +1,6 @@
 import { join } from "path";
 import { readdirSync, readFileSync } from "fs";
+import IPost from "../interfaces/post";
 
 export function getAbsolutePath(
   section: string,
@@ -24,4 +25,23 @@ export default function getFileNamesInDirectory(
 
 export function getFileContents(path: string) {
   return readFileSync(path).toString();
+}
+
+export function getAllPosts(section: string, categories: string[]) {
+  let posts: IPost[][] = categories.map((category) => {
+    const posts: string[] = getFileNamesInDirectory(section, category);
+
+    const postList: IPost[] = posts.map((fileName: string) => {
+      return {
+        title: fileName.replace(/\.md/, ""),
+        category: category,
+      };
+    });
+
+    return postList;
+  });
+
+  posts = Array.prototype.concat.apply([], posts);
+
+  return posts;
 }

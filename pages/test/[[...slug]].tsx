@@ -6,6 +6,7 @@ import type {
 } from "next";
 import getFileNamesInDirectory, {
   getAbsolutePath,
+  getAllPosts,
   getFileContents,
 } from "../../lib/getContent";
 import IPost from "../../interfaces/post";
@@ -36,21 +37,7 @@ export default DynamicTestPage;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const categories: string[] = getFileNamesInDirectory("test");
-
-  let posts: IPost[][] = categories.map((category) => {
-    const posts: string[] = getFileNamesInDirectory("test", category);
-
-    const postList: IPost[] = posts.map((fileName: string) => {
-      return {
-        title: fileName.replace(/\.md/, ""),
-        category: category,
-      };
-    });
-
-    return postList;
-  });
-
-  posts = Array.prototype.concat.apply([], posts);
+  const posts = getAllPosts("test", categories);
 
   const pathToPostPage = posts.map((post: any) => ({
     params: {

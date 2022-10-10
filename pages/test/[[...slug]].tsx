@@ -4,38 +4,31 @@ import type {
   GetStaticPropsContext,
   NextPage,
 } from "next";
-import { join } from "path";
-import getFileNamesInDirectory, { getFileContents } from "../../lib/getContent";
+import getFileNamesInDirectory, {
+  getAbsolutePath,
+  getFileContents,
+} from "../../lib/getContent";
 import IPost from "../../interfaces/post";
-import MarkDown from "markdown-to-jsx";
 import Section from "../../components/section/Section";
 import Category from "../../components/category/Category";
 import Post from "../../components/post/Post";
 
-const DynamicTestPage: NextPage<{ slug: string }> = ({ slug }) => {
-  // NOTE: This logic wil be used in components, with slug being passed down to them.
-  // const path: string = join(
-  //   process.cwd(),
-  //   "cms",
-  //   "test",
-  //   params.slug[0],
-  //   params.slug[1] + ".md"
-  // );
-  // const content: string = getFileContents(path);
-
-  // Docs: Section Page
+const DynamicTestPage: NextPage<{ slug: string; content?: string }> = ({
+  slug,
+  content,
+}) => {
   if (!slug) {
     return <Section slug={slug} />;
   }
 
-  // Docs: Category Page
   if (slug?.length === 1) {
-    return <Category slug={slug} />;
+    console.log("CONTENT: ", content);
+    return <Category slug={slug} content={content} />;
   }
 
-  // Docs: Post Page
   if (slug?.length === 2) {
-    return <Post slug={slug} />;
+    console.log("CONTENT: ", content);
+    return <Post slug={slug} content={content} />;
   }
 };
 
@@ -82,9 +75,33 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({
   params,
 }: GetStaticPropsContext) => {
+  const slug: string | string[] | undefined = params?.slug;
+  let content: string | string[] | undefined;
+
+  if (!slug) {
+  }
+
+  if (slug?.length === 1) {
+    const category: string = slug[0];
+    const postList: string[] = getFileNamesInDirectory("test", category).map(
+      (post) => post.replace(/\.md/, "")
+    );
+
+    content = postList;
+  }
+
+  if (slug?.length === 2) {
+    const category: string = slug[0];
+    const post: string = slug[1];
+    const path: string = getAbsolutePath("test", category, post);
+
+    content = getFileContents(path);
+  }
+
   return {
     props: {
       slug: params?.slug || null,
+      content: content,
     },
   };
 };

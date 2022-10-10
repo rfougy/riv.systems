@@ -11,6 +11,7 @@ import MarkDown from "markdown-to-jsx";
 
 const DynamicTestPage: NextPage<{ slug: string }> = ({ slug }) => {
 
+  // NOTE: This logic wil be used in components, with slug being passed down to them.
   // const path: string = join(
   //   process.cwd(),
   //   "cms",
@@ -18,11 +19,10 @@ const DynamicTestPage: NextPage<{ slug: string }> = ({ slug }) => {
   //   params.slug[0],
   //   params.slug[1] + ".md"
   // );
-
   // const content: string = getFileContents(path);
 
   // Docs: Section Page
-  if (slug === null) {
+  if (!slug) {
     return <div>Page: Page</div>;
   }
 

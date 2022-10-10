@@ -14,7 +14,7 @@ export function getAbsolutePath(
     : join(process.cwd(), "cms", section);
 }
 
-export default function getFileNamesInDirectory(
+export function getFileNamesInDirectory(
   section: string,
   category?: string
 ) {

@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 const Category: React.FC<{ slug: string; content: string | string[] | undefined }> = ({
   slug,
   content,
@@ -8,7 +6,7 @@ const Category: React.FC<{ slug: string; content: string | string[] | undefined 
 
   return content ? (
     <div>
-      <div>{category}</div>
+      <div>Category Page: {category}</div>
       <div>
         {content.map((post: string, index: number) => {
           const date = post.split("_")[0];

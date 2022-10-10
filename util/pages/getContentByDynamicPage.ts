@@ -4,7 +4,7 @@ import {
   getAllPosts,
   getFileContents,
   getFileNamesInDirectory,
-} from "../../lib/getContent";
+} from "../getCmsContent";
 import { sectionType } from "../../types/sectionType";
 
 export function getContentByDynamicPage(

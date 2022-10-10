@@ -1,4 +1,4 @@
-import { getAllPosts, getFileNamesInDirectory } from "../../lib/getContent";
+import { getAllPosts, getFileNamesInDirectory } from "../getCmsContent";
 import { sectionType } from "../../types/sectionType";
 
 export function getDynamicPagePaths(section: sectionType) {

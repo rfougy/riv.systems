@@ -14,6 +14,8 @@ import Section from "../../components/section/Section";
 import Category from "../../components/category/Category";
 import Post from "../../components/post/Post";
 import IPost from "../../interfaces/post";
+import { getContentByDynamicPage } from "../../util/pages/getContentByDynamicPage";
+import { getDynamicPagePaths } from "../../util/pages/getDynamicPagePaths";
 
 const DynamicTestPage: NextPage<{ slug: string; content?: string }> = ({
   slug,
@@ -32,22 +34,8 @@ const DynamicTestPage: NextPage<{ slug: string; content?: string }> = ({
 export default DynamicTestPage;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const categories: string[] = getFileNamesInDirectory("test");
-  const allPosts = getAllPosts("test", categories);
-
-  const pathToPostPage = allPosts.map((post: any) => ({
-    params: {
-      slug: [post.category, post.title],
-    },
-  }));
-
-  const pathToCategoryPage = categories.map((category: string) => ({
-    params: {
-      slug: [category],
-    },
-  }));
-
-  const pathToSectionPage = [{ params: { slug: [] } }];
+  const { pathToSectionPage, pathToCategoryPage, pathToPostPage } =
+    getDynamicPagePaths("test");
 
   return {
     paths: [...pathToSectionPage, ...pathToCategoryPage, ...pathToPostPage],
@@ -59,34 +47,8 @@ export const getStaticProps: GetStaticProps = async ({
   params,
 }: GetStaticPropsContext) => {
   const slug: string | string[] | undefined = params?.slug;
-  let content: IPost[][] | string[] | string | undefined;
-
-  // Docs: Content for Section Page
-  if (!slug) {
-    const categories: string[] = getFileNamesInDirectory("test");
-    const allPosts: IPost[][] = getAllPosts("test", categories);
-
-    content = allPosts;
-  }
-
-  // Docs: Content for Category Page
-  if (slug?.length === 1) {
-    const category: string = slug[0];
-    const postList: string[] = getFileNamesInDirectory("test", category).map(
-      (post) => post.replace(/\.md/, "")
-    );
-
-    content = postList;
-  }
-
-  // Docs: Content for Post Page
-  if (slug?.length === 2) {
-    const category: string = slug[0];
-    const post: string = slug[1];
-    const path: string = getAbsolutePath("test", category, post);
-
-    content = getFileContents(path);
-  }
+  const content: IPost[][] | string[] | string | undefined =
+    getContentByDynamicPage(slug);
 
   return {
     props: {

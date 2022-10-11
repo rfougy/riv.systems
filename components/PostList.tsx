@@ -1,5 +1,6 @@
 import IPost from "../interfaces/post";
 import { sectionType } from "../types/sectionType";
+import PostCard from "./PostCard";
 
 function isForSectionPage(content: any): content is IPost {
   return (
@@ -38,11 +39,12 @@ const PostList: React.FC<{
         }
 
         return (
-          <div key={index}>
-            <div>Post Title: {postTitle}</div>
-            <div>Date Published: {datePublished}</div>
-            <div>Post Category: {category}</div>
-          </div>
+          <PostCard
+            key={index}
+            postTitle={postTitle}
+            datePublished={datePublished}
+            category={category}
+          />
         );
       })}
     </div>
@@ -52,12 +54,3 @@ const PostList: React.FC<{
 };
 
 export default PostList;
-
-/*
-
-Pseudocode: 
-
-- SectionPage and CategoryPage are going to have PostList as child component, this way we can pass directly into the component as opposed to pro drilling.
-- Create a postList component that 
-
-*/

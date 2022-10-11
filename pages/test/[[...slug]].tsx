@@ -4,26 +4,32 @@ import type {
   GetStaticPropsContext,
   NextPage,
 } from "next";
-import Section from "../../components/section/Section";
-import Category from "../../components/category/Category";
-import Post from "../../components/post/Post";
+import SectionPage from "../../components/section/SectionPage";
+import CategoryPage from "../../components/category/CategoryPage";
+import PostPage from "../../components/post/PostPage";
 import IPost from "../../interfaces/post";
 import { getContentByDynamicPage } from "../../util/pages/getContentByDynamicPage";
 import { getDynamicPagePaths } from "../../util/pages/getDynamicPagePaths";
+import PostList from "../../components/PostList";
 
 const DynamicTestPage: NextPage<{ slug: string; content?: string }> = ({
   slug,
   content,
 }) => {
-  // Docs: Section Page
-  if (!slug) return <Section slug={slug} content={content} section={"test"} />;
+  if (!slug)
+    return (
+      <SectionPage>
+        <PostList slug={slug} content={content} section={"test"} />
+      </SectionPage>
+    );
 
-  // Docs: Category Page 
-  // @ts-ignore
-  if (slug?.length === 1) return <Category slug={slug} content={content} />;
+  if (slug?.length === 1)
+    return (
+      <CategoryPage>
+        <PostList slug={slug} content={content} />
+      </CategoryPage>    );
 
-  // Docs: Post Page
-  if (slug?.length === 2) return <Post slug={slug} content={content} />;
+  if (slug?.length === 2) return <PostPage slug={slug} content={content} />;
 };
 
 export default DynamicTestPage;

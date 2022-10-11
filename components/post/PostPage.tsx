@@ -1,6 +1,6 @@
 import Markdown from "markdown-to-jsx";
 
-const Post: React.FC<{ slug: string; content: string | undefined }> = ({
+const PostPage: React.FC<{ slug: string; content: string | undefined }> = ({
   slug,
   content,
 }) => {
@@ -11,4 +11,4 @@ const Post: React.FC<{ slug: string; content: string | undefined }> = ({
   );
 };
 
-export default Post;
+export default PostPage;

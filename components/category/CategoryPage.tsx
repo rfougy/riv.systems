@@ -1,7 +1,7 @@
-const Category: React.FC<{ slug: string; content: string[] | undefined }> = ({
-  slug,
-  content,
-}) => {
+const CategoryPage: React.FC<{
+  slug: string;
+  content: string | string[] | undefined;
+}> = ({ slug, content }) => {
   const category: string = slug[0];
 
   return content ? (
@@ -9,13 +9,14 @@ const Category: React.FC<{ slug: string; content: string[] | undefined }> = ({
       <div>Category Page: {category}</div>
       <div>
         {content.map((post: string, index: number) => {
-          const date = post.split("_")[0];
+          const datePublished = post.split("_")[0];
           const title = post.split("_")[1];
 
           return (
             <div key={index}>
-              <div>{title}</div>
-              <div>{date}</div>
+              <div>Post Title: {title}</div>
+              <div>Date Published: {datePublished}</div>
+              <div>Post Category: {category}</div>
             </div>
           );
         })}
@@ -26,4 +27,4 @@ const Category: React.FC<{ slug: string; content: string[] | undefined }> = ({
   );
 };
 
-export default Category;
+export default CategoryPage;

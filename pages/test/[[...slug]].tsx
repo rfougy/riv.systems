@@ -10,15 +10,24 @@ import PostPage from "../../components/post/PostPage";
 import IPost from "../../interfaces/post";
 import { getContentByDynamicPage } from "../../util/pages/getContentByDynamicPage";
 import { getDynamicPagePaths } from "../../util/pages/getDynamicPagePaths";
+import PostList from "../../components/PostList";
 
 const DynamicTestPage: NextPage<{ slug: string; content?: string }> = ({
   slug,
   content,
 }) => {
   if (!slug)
-    return <SectionPage slug={slug} content={content} section={"test"} />;
+    return (
+      <SectionPage>
+        <PostList slug={slug} content={content} section={"test"} />
+      </SectionPage>
+    );
 
-  if (slug?.length === 1) return <CategoryPage slug={slug} content={content} />;
+  if (slug?.length === 1)
+    return (
+      <CategoryPage>
+        <PostList slug={slug} content={content} />
+      </CategoryPage>    );
 
   if (slug?.length === 2) return <PostPage slug={slug} content={content} />;
 };

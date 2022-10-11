@@ -1,8 +1,10 @@
 import IPost from "../interfaces/post";
 import { sectionType } from "../types/sectionType";
 
-function isForSectionPage(object: any): object is IPost {
-  return "title" in object && "category" in object;
+function isForSectionPage(content: any): content is IPost {
+  return (
+    typeof content !== "string" && "title" in content && "category" in content
+  );
 }
 
 const PostList: React.FC<{
@@ -10,8 +12,8 @@ const PostList: React.FC<{
   content: any;
   section?: sectionType;
 }> = ({ slug, content, section }) => {
-  const pageTitle: string | undefined = slug.length ? slug[0] : section;
-  
+  const pageTitle: string | undefined = !slug ? section : slug[0];
+
   return content ? (
     <div>
       <div>{pageTitle}</div>

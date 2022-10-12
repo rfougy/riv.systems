@@ -15,6 +15,8 @@ const PostList: React.FC<{
 }> = ({ slug, content, section }) => {
   const pageTitle: string | undefined = !slug ? section : slug[0];
 
+  console.log(content);
+
   return content ? (
     <div>
       <div>{pageTitle}</div>

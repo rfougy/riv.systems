@@ -30,7 +30,6 @@ export function getAllCategories(sections: string[]) {
     const posts: string[] = getFileNamesInDirectory(section);
 
     const categoryList: any = posts.map((fileName: string) => {
-
       return {
         title: fileName,
         section: section,
@@ -51,10 +50,15 @@ export function getAllPosts(categories: any) {
     const posts: any = getFileNamesInDirectory(section, categoryTitle);
 
     const postList: any = posts.map((fileName: string) => {
+      const postTitle = fileName.replace(/\.md/, "");
+      const path = getAbsolutePath(section, categoryTitle, postTitle);
+      const postContent = getFileContents(path);
+
       return {
-        title: fileName.replace(/\.md/, ""),
+        title: postTitle,
         category: categoryTitle,
         section: section,
+        content: postContent,
       };
     });
 

@@ -20,21 +20,21 @@ export function getContentByDynamicPage(slug: string | string[] | undefined) {
   if (slug?.length === 1) {
     const section = slug;
     const categories: any = getAllCategories(section);
-    const allPosts: any = getAllPosts(categories);
+    const postsBySection: any = getAllPosts(categories);
 
-    return allPosts;
+    return postsBySection;
   }
 
   // Docs: Content for Category Page
   if (slug?.length === 2) {
     const category: string = slug[0];
     const section: string = slug[1];
-    const postsFromCategory: string[] = getFileNamesInDirectory(
-      category,
-      section
-    ).map((post) => post.replace(/\.md/, ""));
+    // Bug: title and section are mismatched, this is temporary fix and needs more concrete solution.
+    const postsbyCategory: any = getAllPosts([
+      { title: section, section: category },
+    ]);
 
-    return postsFromCategory;
+    return postsbyCategory;
   }
 
   // Docs: Content for Post Page

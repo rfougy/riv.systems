@@ -81,6 +81,5 @@ export const getStaticProps: GetStaticProps = async ({
 
 To-Do:
 - Add types across new changes.
-- Restructuring CMS folder structure, where a post is a directory that contains the markdown file and the cover image.
-
+- Address bug in getContentByDynamicPage
 */

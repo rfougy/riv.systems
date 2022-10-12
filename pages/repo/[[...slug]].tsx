@@ -12,34 +12,52 @@ import { getContentByDynamicPage } from "../../util/pages/getContentByDynamicPag
 import { getDynamicPagePaths } from "../../util/pages/getDynamicPagePaths";
 import PostList from "../../components/PostList";
 
-const DynamicTestPage: NextPage<{ slug: string; content?: string }> = ({
+const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
   slug,
   content,
 }) => {
-  if (!slug)
+  // Docs: Repo Page
+  if (!slug) return <div>PAGE: Repo</div>;
+
+  // Docs: Section Page
+  if (slug?.length === 1) {
+    const section = slug[0];
     return (
       <SectionPage>
-        <PostList slug={slug} content={content} section={"test"} />
+        <PostList slug={slug} content={content} section={section} />
       </SectionPage>
     );
+  }
 
-  if (slug?.length === 1)
+  // Docs: Category Page
+  if (slug?.length === 2)
     return (
       <CategoryPage>
         <PostList slug={slug} content={content} />
-      </CategoryPage>    );
+      </CategoryPage>
+    );
 
-  if (slug?.length === 2) return <PostPage slug={slug} content={content} />;
+  // Docs: Post Page
+  if (slug?.length === 3) return <PostPage slug={slug} content={content} />;
 };
 
-export default DynamicTestPage;
+export default DynamicPage;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { pathToSectionPage, pathToCategoryPage, pathToPostPage } =
-    getDynamicPagePaths("test");
+  const {
+    pathToRepoPage,
+    pathToSectionPage,
+    pathToCategoryPage,
+    pathToPostPage,
+  } = getDynamicPagePaths();
 
   return {
-    paths: [...pathToSectionPage, ...pathToCategoryPage, ...pathToPostPage],
+    paths: [
+      ...pathToRepoPage,
+      ...pathToSectionPage,
+      ...pathToCategoryPage,
+      ...pathToPostPage,
+    ],
     fallback: false,
   };
 };
@@ -49,7 +67,7 @@ export const getStaticProps: GetStaticProps = async ({
 }: GetStaticPropsContext) => {
   const slug: string | string[] | undefined = params?.slug;
   const content: IPost[][] | string[] | string | undefined =
-    getContentByDynamicPage("test", slug);
+    getContentByDynamicPage(slug);
 
   return {
     props: {
@@ -58,3 +76,11 @@ export const getStaticProps: GetStaticProps = async ({
     },
   };
 };
+
+/*
+
+To-Do:
+- Add types across new changes.
+- Restructuring CMS folder structure, where a post is a directory that contains the markdown file and the cover image.
+
+*/

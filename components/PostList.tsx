@@ -11,7 +11,7 @@ function isForSectionPage(content: any): content is IPost {
 const PostList: React.FC<{
   slug: string;
   content: any;
-  section?: sectionType;
+  section?: sectionType | string;
 }> = ({ slug, content, section }) => {
   const pageTitle: string | undefined = !slug ? section : slug[0];
 

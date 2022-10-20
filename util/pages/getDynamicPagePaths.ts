@@ -1,23 +1,38 @@
-import { getAllPosts, getFileNamesInDirectory } from "../getCmsContent";
-import { sectionType } from "../../types/sectionType";
+import {
+  getPosts,
+  getFileNamesInDirectory,
+  getCategories,
+} from "../getCmsContent";
 
-export function getDynamicPagePaths(section: sectionType) {
-  const categories: string[] = getFileNamesInDirectory(section);
-  const allPosts = getAllPosts(section, categories);
+export function getDynamicPagePaths() {
+  const sections: any = getFileNamesInDirectory();
+  const allCategories: any = getCategories(sections);
+  const allPosts = getPosts(allCategories);
+
+  const pathToRepoPage = [{ params: { slug: [] } }];
+
+  const pathToSectionPage = sections.map((section: string) => ({
+    params: {
+      slug: [section],
+    },
+  }));
+
+  const pathToCategoryPage = allCategories.map((category: any) => ({
+    params: {
+      slug: [category.section, category.title],
+    },
+  }));
 
   const pathToPostPage = allPosts.map((post: any) => ({
     params: {
-      slug: [post.category, post.title],
+      slug: [post.section, post.category, post.title],
     },
   }));
 
-  const pathToCategoryPage = categories.map((category: string) => ({
-    params: {
-      slug: [category],
-    },
-  }));
-
-  const pathToSectionPage = [{ params: { slug: [] } }];
-
-  return { pathToPostPage, pathToCategoryPage, pathToSectionPage };
+  return {
+    pathToRepoPage,
+    pathToSectionPage,
+    pathToCategoryPage,
+    pathToPostPage,
+  };
 }

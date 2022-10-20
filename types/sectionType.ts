@@ -1,1 +1,1 @@
-export type sectionType = "archivepdf" | "items" | "works" | "logs" | "test";
+export type sectionType = "items" | "works" | "logs" | "test";

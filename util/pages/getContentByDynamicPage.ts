@@ -1,7 +1,7 @@
 import {
   getAbsolutePath,
-  getAllCategories,
-  getAllPosts,
+  getCategories,
+  getPosts,
   getFileContents,
   getFileNamesInDirectory,
 } from "../getCmsContent";
@@ -10,8 +10,8 @@ export function getContentByDynamicPage(slug: string | string[] | undefined) {
   // Docs: Content for Repo Page
   if (!slug) {
     const sections: string[] = getFileNamesInDirectory();
-    const categories: any = getAllCategories(sections);
-    const allPosts: any = getAllPosts(categories);
+    const allCategories: any = getCategories(sections);
+    const allPosts: any = getPosts(allCategories);
 
     return allPosts;
   }
@@ -19,10 +19,10 @@ export function getContentByDynamicPage(slug: string | string[] | undefined) {
   // Docs: Content for Section Page
   if (slug?.length === 1) {
     const section = slug;
-    const categories: any = getAllCategories(section);
-    const postsBySection: any = getAllPosts(categories);
+    const categoriesFromSection: any = getCategories(section);
+    const postsFromSection: any = getPosts(categoriesFromSection);
 
-    return postsBySection;
+    return postsFromSection;
   }
 
   // Docs: Content for Category Page
@@ -30,11 +30,11 @@ export function getContentByDynamicPage(slug: string | string[] | undefined) {
     const category: string = slug[0];
     const section: string = slug[1];
     // Bug: title and section are mismatched, this is temporary fix and needs more concrete solution.
-    const postsbyCategory: any = getAllPosts([
+    const postsFromCategory: any = getPosts([
       { title: section, section: category },
     ]);
 
-    return postsbyCategory;
+    return postsFromCategory;
   }
 
   // Docs: Content for Post Page

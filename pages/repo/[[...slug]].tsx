@@ -17,7 +17,9 @@ const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
   content,
 }) => {
   // Docs: Repo Page
-  if (!slug) return <div>PAGE: Repo</div>;
+  if (!slug) {
+    return <PostList slug={slug} content={content} />;
+  }
 
   // Docs: Section Page
   if (slug?.length === 1) {
@@ -30,15 +32,18 @@ const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
   }
 
   // Docs: Category Page
-  if (slug?.length === 2)
+  if (slug?.length === 2) {
     return (
       <CategoryPage>
         <PostList slug={slug} content={content} />
       </CategoryPage>
     );
+  }
 
   // Docs: Post Page
-  if (slug?.length === 3) return <PostPage slug={slug} content={content} />;
+  if (slug?.length === 3) {
+    return <PostPage slug={slug} content={content} />;
+  }
 };
 
 export default DynamicPage;
@@ -76,10 +81,3 @@ export const getStaticProps: GetStaticProps = async ({
     },
   };
 };
-
-/*
-
-To-Do:
-- Add types across new changes.
-- Address bug in getContentByDynamicPage
-*/

@@ -25,7 +25,7 @@ export function getFileContents(path: string) {
   return readFileSync(path).toString();
 }
 
-export function getAllCategories(sections: string[]) {
+export function getCategories(sections: string[]) {
   let categories: string[][] = sections.map((section) => {
     const posts: string[] = getFileNamesInDirectory(section);
 
@@ -44,7 +44,7 @@ export function getAllCategories(sections: string[]) {
   return categories;
 }
 
-export function getAllPosts(categories: any) {
+export function getPosts(categories: any) {
   let posts: any = categories.map((category: any) => {
     const { title: categoryTitle, section } = category;
     const posts: any = getFileNamesInDirectory(section, categoryTitle);

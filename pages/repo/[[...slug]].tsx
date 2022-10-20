@@ -10,7 +10,7 @@ import PostPage from "../../components/post/PostPage";
 import IPost from "../../interfaces/post";
 import { getContentByDynamicPage } from "../../util/pages/getContentByDynamicPage";
 import { getDynamicPagePaths } from "../../util/pages/getDynamicPagePaths";
-import PostList from "../../components/PostList";
+import PostList from "../../components/PostList/PostList";
 
 const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
   slug,

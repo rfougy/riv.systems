@@ -15,14 +15,17 @@ const PostList: React.FC<{
       <div className={styles.title}>{pageTitle}</div>
       <div className={styles.list}>
         {content.map((singleContent: any, index: number) => {
-          const { title: postTitle, category, path } = singleContent;
-          const title: string | undefined = postTitle.split("_")[1];
-          const datePublished: string | undefined = postTitle.split("_")[0];
+          const {
+            title,
+            datePublished,
+            category,
+            path,
+          } = singleContent;
 
           return (
             <PostCard
               key={index}
-              postTitle={title}
+              title={title}
               datePublished={datePublished}
               category={category}
               path={path}

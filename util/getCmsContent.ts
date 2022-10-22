@@ -50,16 +50,24 @@ export function getPosts(categories: any) {
     const posts: any = getFileNamesInDirectory(section, categoryTitle);
 
     const postList: any = posts.map((fileName: string) => {
-      const postTitle = fileName.replace(/\.md/, "");
-      const path = getAbsolutePath(section, categoryTitle, postTitle);
+      const formattedFileName = fileName.replace(/\.md/, "");
+      const title = formattedFileName
+        .split("_")[1]
+        .replaceAll("-", " ")
+        .toUpperCase();
+      const datePublished = formattedFileName.split("_")[0];
+
+      const path = getAbsolutePath(section, categoryTitle, formattedFileName);
       const postContent = getFileContents(path);
 
       return {
-        title: postTitle,
+        fileName: formattedFileName,
+        title: title,
+        datePublished: datePublished,
         category: categoryTitle,
         section: section,
         content: postContent,
-        path: `/repo/${section}/${categoryTitle}/${postTitle}`,
+        path: `/repo/${section}/${categoryTitle}/${formattedFileName}`,
       };
     });
 

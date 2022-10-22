@@ -25,7 +25,7 @@ export function getDynamicPagePaths() {
 
   const pathToPostPage = allPosts.map((post: any) => ({
     params: {
-      slug: [post.section, post.category, post.title],
+      slug: [post.section, post.category, post.fileName],
     },
   }));
 

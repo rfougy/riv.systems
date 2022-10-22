@@ -59,6 +59,7 @@ export function getPosts(categories: any) {
         category: categoryTitle,
         section: section,
         content: postContent,
+        path: `/repo/${section}/${categoryTitle}/${postTitle}`,
       };
     });
 

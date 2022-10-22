@@ -1,17 +1,34 @@
 import { useEffect, useState } from "react";
-import { sectionType } from "../../types/sectionType";
 import PostList from "../PostList/PostList";
 import ICategoryObj from "../../interfaces/ICategoryObj";
 import ISectionObj from "../../interfaces/ISectionObj";
 import FilterMenu from "../FilterMenu/FilterMenu";
 
-const SectionPage: React.FC<{
+const RepoPage: React.FC<{
   slug: string;
   content: any;
-  section: sectionType | string;
-}> = ({ slug, content, section }) => {
+}> = ({ slug, content }) => {
+  const [sectionFilters, setSectionFilters] = useState<ISectionObj[]>([]);
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
   const [filteredContent, setFilteredContent] = useState<any>(null);
+
+  const sections: ISectionObj[] = content.reduce(
+    (list: ISectionObj[], singleContent: any) => {
+      const { section: contentSection } = singleContent;
+
+      const sectionObj: ISectionObj = {
+        section: contentSection,
+      };
+
+      const sectionInList: ISectionObj | undefined = list.find(
+        (item) => item.section === sectionObj.section
+      );
+
+      if (!sectionInList) list.push(sectionObj);
+      return list;
+    },
+    []
+  );
 
   const categories: ICategoryObj[] = content.reduce(
     (list: ICategoryObj[], singleContent: any) => {
@@ -37,8 +54,23 @@ const SectionPage: React.FC<{
 
   useEffect(() => {
     // Docs: no content filtering
-    if (!categoryFilters.length) {
+    if (!sectionFilters.length && !categoryFilters.length) {
       setFilteredContent(content);
+    }
+
+    // Docs: filter content based on sectionFilters
+    if (sectionFilters.length && !categoryFilters.length) {
+      const updatedFilteredContent = content.filter((singleContent: any) => {
+        const sectionObj: ISectionObj = { section: singleContent.section };
+        const sectionInFilterState: ISectionObj | undefined =
+          sectionFilters.find(
+            (item: ISectionObj) => item.section === sectionObj.section
+          );
+
+        return sectionInFilterState;
+      });
+      setFilteredContent(updatedFilteredContent);
+      return;
     }
 
     // Docs: filter content based on categoryFilters
@@ -60,18 +92,21 @@ const SectionPage: React.FC<{
       setFilteredContent(updatedFilteredContent);
       return;
     }
-  }, [categoryFilters, content]);
+  }, [categoryFilters, sectionFilters, content]);
 
   return (
     <div>
       <FilterMenu
+        sections={sections}
         categories={categories}
+        sectionFilters={sectionFilters}
         categoryFilters={categoryFilters}
+        setSectionFilters={setSectionFilters}
         setCategoryFilters={setCategoryFilters}
       />
-      <PostList slug={slug} content={filteredContent} section={section} />
+      <PostList slug={slug} content={filteredContent} />
     </div>
   );
 };
 
-export default SectionPage;
+export default RepoPage;

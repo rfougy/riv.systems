@@ -1,0 +1,10 @@
+.title {
+  margin: 24px 24px 24px 0px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+}

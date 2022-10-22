@@ -26,12 +26,16 @@ const PostList: React.FC<{
       <div className={styles.list}>
         {content.map((singleContent: any, index: number) => {
           const { title, datePublished, category, path } = singleContent;
+          const formattedDatePublished: string = datePublished.replaceAll(
+            "-",
+            "."
+          );
 
           return (
             <PostCard
               key={index}
               title={title}
-              datePublished={datePublished}
+              datePublished={formattedDatePublished}
               category={category}
               path={path}
             />

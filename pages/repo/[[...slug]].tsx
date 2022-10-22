@@ -4,46 +4,26 @@ import type {
   GetStaticPropsContext,
   NextPage,
 } from "next";
+import RepoPage from "../../components/RepoPage/RepoPage";
 import SectionPage from "../../components/section/SectionPage";
 import CategoryPage from "../../components/category/CategoryPage";
 import PostPage from "../../components/post/PostPage";
 import IPost from "../../interfaces/post";
 import { getContentByDynamicPage } from "../../util/pages/getContentByDynamicPage";
 import { getDynamicPagePaths } from "../../util/pages/getDynamicPagePaths";
-import PostList from "../../components/PostList/PostList";
 
 const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
   slug,
   content,
 }) => {
-  // Docs: Repo Page
-  if (!slug) {
-    return <PostList slug={slug} content={content} />;
-  }
+  if (!slug) return <RepoPage slug={slug} content={content} />;
 
-  // Docs: Section Page
-  if (slug?.length === 1) {
-    const section = slug[0];
-    return (
-      <SectionPage>
-        <PostList slug={slug} content={content} section={section} />
-      </SectionPage>
-    );
-  }
+  if (slug?.length === 1)
+    return <SectionPage slug={slug} content={content} section={slug[0]} />;
 
-  // Docs: Category Page
-  if (slug?.length === 2) {
-    return (
-      <CategoryPage>
-        <PostList slug={slug} content={content} />
-      </CategoryPage>
-    );
-  }
+  if (slug?.length === 2) return <CategoryPage slug={slug} content={content} />;
 
-  // Docs: Post Page
-  if (slug?.length === 3) {
-    return <PostPage slug={slug} content={content} />;
-  }
+  if (slug?.length === 3) return <PostPage slug={slug} content={content} />;
 };
 
 export default DynamicPage;

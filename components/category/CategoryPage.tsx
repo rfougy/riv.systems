@@ -1,7 +1,10 @@
+import PostList from "../PostList/PostList";
+
 const CategoryPage: React.FC<{
-  children: React.ReactNode;
-}> = ({ children }) => {
-  return <div>{children}</div>;
+  slug: string;
+  content: any;
+}> = ({ slug, content }) => {
+  return <PostList slug={slug} content={content} />;
 };
 
 export default CategoryPage;

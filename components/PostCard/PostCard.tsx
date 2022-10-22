@@ -11,10 +11,9 @@ const PostCard: React.FC<{
     <Link href={path} passHref>
       <a>
         <div className={styles.container}>
-          <div>Post Title: {postTitle}</div>
+          <div>Title: {postTitle}</div>
           <div>Date Published: {datePublished}</div>
-          <div>Post Category: {category}</div>
-          <div>Path: {path}</div>
+          <div>Category: {category}</div>
         </div>
       </a>
     </Link>

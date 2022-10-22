@@ -1,7 +1,12 @@
+import { sectionType } from "../../types/sectionType";
+import PostList from "../PostList/PostList";
+
 const SectionPage: React.FC<{
-  children: React.ReactNode;
-}> = ({ children }) => {
-  return <div>{children}</div>;
+  slug: string;
+  content: any;
+  section: sectionType | string;
+}> = ({ slug, content, section }) => {
+  return <PostList slug={slug} content={content} section={section} />;
 };
 
 export default SectionPage;

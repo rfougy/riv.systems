@@ -3,10 +3,10 @@ import ISectionObj from "../interfaces/ISectionObj";
 
 export default function handleFilterByCategory(
   categoryObj: ICategoryObj,
-  categoryFilters: ICategoryObj[],
   sectionFilters: ISectionObj[] | undefined,
+  categoryFilters: ICategoryObj[],
+  setSectionFilters: ((arg: any) => void) | undefined,
   setCategoryFilters: (arg: any) => void,
-  setSectionFilters: ((arg: any) => void) | undefined
 ) {
   const categoryInFilterState: ICategoryObj | undefined = categoryFilters.find(
     (item: ICategoryObj) =>

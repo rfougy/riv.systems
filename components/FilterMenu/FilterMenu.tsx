@@ -9,15 +9,15 @@ const FilterMenu: React.FC<{
   categories: ICategoryObj[];
   sectionFilters?: ISectionObj[];
   categoryFilters: ICategoryObj[];
-  setCategoryFilters: (arg: any) => void;
   setSectionFilters?: undefined | ((arg: any) => void);
+  setCategoryFilters: (arg: any) => void;
 }> = ({
   sections,
   categories,
   sectionFilters,
   categoryFilters,
-  setCategoryFilters,
   setSectionFilters,
+  setCategoryFilters,
 }) => {
   return (
     <div>
@@ -43,10 +43,10 @@ const FilterMenu: React.FC<{
                     handleFilterBySection(
                       sectionObj,
                       categories,
-                      categoryFilters,
                       sectionFilters,
+                      categoryFilters,
+                      setSectionFilters,
                       setCategoryFilters,
-                      setSectionFilters
                     )
                   }
                 />
@@ -77,10 +77,10 @@ const FilterMenu: React.FC<{
                 onChange={() =>
                   handleFilterByCategory(
                     categoryObj,
-                    categoryFilters,
                     sectionFilters,
+                    categoryFilters,
+                    setSectionFilters,
                     setCategoryFilters,
-                    setSectionFilters
                   )
                 }
               />

@@ -101,8 +101,8 @@ const RepoPage: React.FC<{
         categories={categories}
         sectionFilters={sectionFilters}
         categoryFilters={categoryFilters}
-        setCategoryFilters={setCategoryFilters}
         setSectionFilters={setSectionFilters}
+        setCategoryFilters={setCategoryFilters}
       />
       <PostList slug={slug} content={filteredContent} />
     </div>

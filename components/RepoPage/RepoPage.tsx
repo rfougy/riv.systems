@@ -1,184 +1,173 @@
 import { useEffect, useState } from "react";
 import PostList from "../PostList/PostList";
+import ICategoryObj from "../../interfaces/ICategoryObj";
+import ISectionObj from "../../interfaces/ISectionObj";
 
 const RepoPage: React.FC<{
   slug: string;
   content: any;
 }> = ({ slug, content }) => {
-  const [sectionFilters, setSectionFilters] = useState<any[]>([]);
-  const [categoryFilters, setCategoryFilters] = useState<any[]>([]);
+  const [sectionFilters, setSectionFilters] = useState<ISectionObj[]>([]);
+  const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
   const [filteredContent, setFilteredContent] = useState<any>(null);
 
-  const sections = content.reduce((sectionList: any[], singleContent: any) => {
+  const sections = content.reduce((list: ISectionObj[], singleContent: any) => {
     const { section: contentSection } = singleContent;
 
-    const sectionObj = {
+    const sectionObj: ISectionObj = {
       section: contentSection,
     };
 
-    const sectionInList = sectionList.find(
+    const sectionInList: ISectionObj | undefined = list.find(
       (item) => item.section === sectionObj.section
     );
 
-    if (!sectionInList) sectionList.push(sectionObj);
-    return sectionList;
+    if (!sectionInList) list.push(sectionObj);
+    return list;
   }, []);
 
   const categories = content.reduce(
-    (categoryList: any[], singleContent: any) => {
+    (list: ICategoryObj[], singleContent: any) => {
       const { category: categorySection, section: contentSection } =
         singleContent;
 
-      const categoryObj = {
+      const categoryObj: ICategoryObj = {
         category: categorySection,
         section: contentSection,
       };
 
-      const categoryInList = categoryList.find(
+      const categoryInList: ICategoryObj | undefined = list.find(
         (item) =>
           item.category === categoryObj.category &&
           item.section === categoryObj.section
       );
 
-      if (!categoryInList) categoryList.push(categoryObj);
-      return categoryList;
+      if (!categoryInList) list.push(categoryObj);
+      return list;
     },
     []
   );
 
-  function handleFilterByCategory(categoryObj: any) {
-    const categoryInState = categoryFilters.find(
-      (item) =>
-        item.category === categoryObj.category &&
-        item.section === categoryObj.section
-    );
-    const sectionInState = sectionFilters.find(
-      (item) => item.section === categoryObj.section
+  /*
+
+  Notes:
+  - improve naming conventions
+  
+  */
+
+  function handleFilterByCategory(categoryObj: ICategoryObj) {
+    const categoryInFilterState: ICategoryObj | undefined =
+      categoryFilters.find(
+        (item: ICategoryObj) =>
+          item.category === categoryObj.category &&
+          item.section === categoryObj.section
+      );
+    const sectionInFilterState: ISectionObj | undefined = sectionFilters.find(
+      (item: ISectionObj) => item.section === categoryObj.section
     );
 
-    console.log(
-      "\x1b[36m%s\x1b[0m",
-      "TRIGGER (handleFilterByCategory): ",
-      categoryObj.category
-    );
-
-    // Docs: Remove category from filter state.
-    if (categoryInState) {
-      const updatedCategoryFilters = categoryFilters.filter(
-        (category) => category !== categoryInState
+    // Docs: remove category from filter state.
+    if (categoryInFilterState) {
+      const updatedCategoryFilters: ICategoryObj[] = categoryFilters.filter(
+        (item: ICategoryObj) => item !== categoryInFilterState
       );
       setCategoryFilters(updatedCategoryFilters);
 
-      console.log("Category in State.");
-      console.log("updatedCategoryFilters: ", updatedCategoryFilters);
-      console.log("categoryFilters: ", categoryFilters);
+      const categoryWithMatchingSection: ICategoryObj[] =
+        categoryFilters.filter(
+          (item: ICategoryObj) => item.section === categoryInFilterState.section
+        );
+
+      // Docs: remove section from filter state once all related categories are removed
+      if (categoryWithMatchingSection.length === 1) {
+        const updatedSectionFilters: ISectionObj[] = sectionFilters.filter(
+          (item: ISectionObj) => item.section !== categoryInFilterState.section
+        );
+        setSectionFilters(updatedSectionFilters);
+      }
     }
 
-    // Docs: Add category to filter state.
-    if (!categoryInState) {
-      setCategoryFilters((currState) => [...currState, categoryObj]);
+    // Docs: add category to filter state.
+    if (!categoryInFilterState) {
+      setCategoryFilters((prevState) => [...prevState, categoryObj]);
 
-      console.log("Category not in State.");
-      console.log("categoryFilters: ", categoryFilters);
-
-      // Docs: Add section to filter state.
-      if (!sectionInState) {
-        const sectionObj = { section: categoryObj.section };
-        setSectionFilters((currState) => [...currState, sectionObj]);
-
-        console.log("sectionFilters: ", sectionFilters);
+      // Docs: add section to filter state.
+      if (!sectionInFilterState) {
+        const sectionObj: ISectionObj = { section: categoryObj.section };
+        setSectionFilters((prevState) => [...prevState, sectionObj]);
       }
     }
   }
 
-  function handleFilterBySection(sectionObj: any) {
-    const sectionInState = sectionFilters.find(
-      (item) => item.section === sectionObj.section
+  function handleFilterBySection(sectionObj: ISectionObj) {
+    const sectionInFilterState: ISectionObj | undefined = sectionFilters.find(
+      (item: ISectionObj) => item.section === sectionObj.section
     );
 
-    console.log(
-      "\x1b[36m%s\x1b[0m",
-      "TRIGGER (handleFilterBySection): ",
-      sectionObj
-    );
-
-    // Docs: Remove section and affiliated categories from filter states.
-    if (sectionInState) {
-      const updatedSectionFilters = sectionFilters.filter(
-        (section) => section !== sectionInState
+    // Docs: remove section and related categories from filter states.
+    if (sectionInFilterState) {
+      const updatedSectionFilters: ISectionObj[] = sectionFilters.filter(
+        (item: ISectionObj) => item !== sectionInFilterState
       );
       setSectionFilters(updatedSectionFilters);
 
-      const updatedCategoryFilters = categoryFilters.filter(
-        (item) => item.section !== sectionObj.section
+      const updatedCategoryFilters: ICategoryObj[] = categoryFilters.filter(
+        (item: ICategoryObj) => item.section !== sectionObj.section
       );
       setCategoryFilters(updatedCategoryFilters);
-
-      console.log("Section in State.");
-      console.log("updatedSectionFilters: ", updatedSectionFilters);
-      console.log("sectionFilters: ", sectionFilters);
-      console.log("updatedCategoryFilters: ", updatedCategoryFilters);
-      console.log("categoryFilters: ", categoryFilters);
     }
 
-    // Docs: Add section to filter state.
-    if (!sectionInState) {
-      setSectionFilters((currState) => [...currState, sectionObj]);
-      console.log(categories);
+    // Docs: add section to filter state.
+    if (!sectionInFilterState) {
+      setSectionFilters((prevState) => [...prevState, sectionObj]);
 
-      const updatedCategoryFilters = categories.filter(
-        (item: any) => item.section === sectionObj.section
+      const updatedCategoryFilters: ICategoryObj[] = categories.filter(
+        (item: ICategoryObj) => item.section === sectionObj.section
       );
 
-      setCategoryFilters((currState) => [
-        ...currState,
+      setCategoryFilters((prevState) => [
+        ...prevState,
         ...updatedCategoryFilters,
       ]);
     }
   }
 
-  // Docs: Initialize filteredContent state with content passed as props
   useEffect(() => {
-    setFilteredContent(content);
-  }, [content]);
-
-  useEffect(() => {
-    console.log("\x1b[31m%s\x1b[0m", "TRIGGER (useEffect, filteredContent)");
-
-    if (!categoryFilters.length && !sectionFilters.length) {
-      console.log("\x1b[33m%s\x1b[0m", "TRIGGER: no filter");
+    // Docs: no content filtering
+    if (!sectionFilters.length && !categoryFilters.length) {
       setFilteredContent(content);
     }
 
-    if (!categoryFilters.length && sectionFilters.length) {
-      console.log("\x1b[33m%s\x1b[0m", "TRIGGER: filter by section");
-
+    // Docs: filter content based on sectionFilters
+    if (sectionFilters.length && !categoryFilters.length) {
       const updatedFilteredContent = content.filter((singleContent: any) => {
-        const { section } = singleContent;
-        const contentSectionObj = { section: section };
-        const contentSectionInFilteredState = sectionFilters.find(
-          (item) => item.section === contentSectionObj.section
-        );
+        const sectionObj: ISectionObj = { section: singleContent.section };
+        const sectionInFilterState: ISectionObj | undefined =
+          sectionFilters.find(
+            (item: ISectionObj) => item.section === sectionObj.section
+          );
 
-        return contentSectionInFilteredState;
+        return sectionInFilterState;
       });
       setFilteredContent(updatedFilteredContent);
       return;
     }
 
-    // Docs: filter content based on categories in filter state
+    // Docs: filter content based on categoryFilters
     if (categoryFilters.length) {
-      console.log("\x1b[33m%s\x1b[0m", "TRIGGER: filter by category");
       const updatedFilteredContent = content.filter((singleContent: any) => {
-        const { category, section } = singleContent;
-        const contentCategoryObj = { category: category, section: section };
-        const contentCategoryInFilteredState = categoryFilters.find(
-          (item) =>
-            item.category === contentCategoryObj.category &&
-            item.section === contentCategoryObj.section
-        );
+        const categoryObj: ICategoryObj = {
+          category: singleContent.category,
+          section: singleContent.section,
+        };
+        const categoryInFilterState: ICategoryObj | undefined =
+          categoryFilters.find(
+            (item: ICategoryObj) =>
+              item.category === categoryObj.category &&
+              item.section === categoryObj.section
+          );
 
-        return contentCategoryInFilteredState;
+        return categoryInFilterState;
       });
       setFilteredContent(updatedFilteredContent);
       return;
@@ -191,9 +180,9 @@ const RepoPage: React.FC<{
         <div>Filtering:</div>
         <form>
           <div>Filter by Section:</div>
-          {sections.map((sectionObj: any, index: number) => {
+          {sections.map((sectionObj: ISectionObj, index: number) => {
             const { section } = sectionObj;
-            const sectionInState = sectionFilters.find(
+            const sectionInFilterState = sectionFilters.find(
               (item) => item.section === sectionObj.section
             );
 
@@ -203,7 +192,8 @@ const RepoPage: React.FC<{
                   type="checkbox"
                   name={section}
                   value={section}
-                  checked={sectionInState}
+                  //@ts-ignore
+                  checked={sectionInFilterState || ""}
                   onChange={() => handleFilterBySection(sectionObj)}
                 />
                 <label>{section}</label>
@@ -213,9 +203,9 @@ const RepoPage: React.FC<{
         </form>
         <form>
           <div>Filter by Category:</div>
-          {categories.map((categoryObj: any, index: number) => {
+          {categories.map((categoryObj: ICategoryObj, index: number) => {
             const { category } = categoryObj;
-            const categoryInState = categoryFilters.find(
+            const categoryInFilterState = categoryFilters.find(
               (item) =>
                 item.category === categoryObj.category &&
                 item.section === categoryObj.section
@@ -226,8 +216,9 @@ const RepoPage: React.FC<{
                 <input
                   type="checkbox"
                   name={category}
-                  value={categoryObj}
-                  checked={categoryInState}
+                  value={category}
+                  //@ts-ignore
+                  checked={categoryInFilterState || ""}
                   onChange={() => handleFilterByCategory(categoryObj)}
                 />
                 <label>{category}</label>

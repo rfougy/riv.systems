@@ -10,20 +10,32 @@ const PostList: React.FC<{
 }> = ({ slug, content, section }) => {
   const pageTitle: string | undefined = !slug ? section : slug[1];
 
+  // Docs: sort list by newest to oldest
+  if (content) {
+    content.sort((a: any, b: any) => {
+      const dateA = new Date(a.datePublished);
+      const dateB = new Date(b.datePublished);
+
+      return dateB.getTime() - dateA.getTime();
+    });
+  }
+
   return content ? (
     <div>
       <div className={styles.title}>{pageTitle}</div>
       <div className={styles.list}>
         {content.map((singleContent: any, index: number) => {
-          const { title: postTitle, category, path } = singleContent;
-          const title: string | undefined = postTitle.split("_")[1];
-          const datePublished: string | undefined = postTitle.split("_")[0];
+          const { title, datePublished, category, path } = singleContent;
+          const formattedDatePublished: string = datePublished.replaceAll(
+            "-",
+            "."
+          );
 
           return (
             <PostCard
               key={index}
-              postTitle={title}
-              datePublished={datePublished}
+              title={title}
+              datePublished={formattedDatePublished}
               category={category}
               path={path}
             />
@@ -37,10 +49,3 @@ const PostList: React.FC<{
 };
 
 export default PostList;
-
-/*
-
-Notes:
-- order by date published
-
-*/

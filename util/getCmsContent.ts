@@ -1,5 +1,6 @@
 import { join } from "path";
 import { readdirSync, readFileSync } from "fs";
+import matter from "gray-matter";
 
 export function getAbsolutePath(
   section?: string,
@@ -51,22 +52,17 @@ export function getPosts(categories: any) {
 
     const postList: any = posts.map((fileName: string) => {
       const formattedFileName = fileName.replace(/\.md/, "");
-      const title = formattedFileName
-        .split("_")[1]
-        .replaceAll("-", " ")
-        .toUpperCase();
-      const datePublished = formattedFileName.split("_")[0];
 
       const path = getAbsolutePath(section, categoryTitle, formattedFileName);
-      const postContent = getFileContents(path);
+      const markdownContent = getFileContents(path);
+
+      const { data: frontmatter } = matter(markdownContent);
 
       return {
         fileName: formattedFileName,
-        title: title,
-        datePublished: datePublished,
-        category: categoryTitle,
         section: section,
-        content: postContent,
+        category: categoryTitle,
+        frontmatter: frontmatter,
         path: `/repo/${section}/${categoryTitle}/${formattedFileName}`,
       };
     });

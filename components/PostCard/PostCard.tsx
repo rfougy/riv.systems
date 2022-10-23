@@ -2,17 +2,19 @@ import Link from "next/link";
 import styles from "./PostCard.module.css";
 
 const PostCard: React.FC<{
-  title: string | undefined;
-  datePublished: string | undefined;
-  category: string;
   path: string;
-}> = ({ title, datePublished, category, path }) => {
+  frontmatter: any;
+}> = ({ path, frontmatter }) => {
+  const { title, datePublished, category, section, excerpt, coverImage } =
+    frontmatter;
+  const formattedDatePublished: string = datePublished.replaceAll("-", ".");
+
   return (
     <Link href={path} passHref>
       <a>
         <div className={styles.container}>
           <div>Title: {title}</div>
-          <div>Date Published: {datePublished}</div>
+          <div>Date Published: {formattedDatePublished}</div>
           <div>Category: {category}</div>
         </div>
       </a>

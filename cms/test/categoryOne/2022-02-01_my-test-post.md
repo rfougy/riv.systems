@@ -1,3 +1,12 @@
+---
+title: My Test Post
+datePublished: "2022-02-01"
+category: categoryOne
+section: test
+excerpt: This a is an excerpt to be placed in the PostCard.
+coverImage: https://i.pinimg.com/564x/d1/c5/54/d1c5548070354f0e66861b7d78b83baf.jpg
+---
+
 # My Test Post
 
 ## January 1, 2022

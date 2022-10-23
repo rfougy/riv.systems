@@ -6,10 +6,12 @@ import {
   getFileNamesInDirectory,
 } from "../getCmsContent";
 
+import matter from "gray-matter";
+
 export function sortPostsByDate(posts: any) {
   return posts.sort((a: any, b: any) => {
-    const dateA = new Date(a.datePublished);
-    const dateB = new Date(b.datePublished);
+    const dateA = new Date(a.frontmatter.datePublished);
+    const dateB = new Date(b.frontmatter.datePublished);
 
     return dateB.getTime() - dateA.getTime();
   });
@@ -58,8 +60,10 @@ export function getContentByDynamicPage(slug: string | string[] | undefined) {
     const category: string = slug[1];
     const post: string = slug[2];
     const path: string = getAbsolutePath(section, category, post);
-    const postContent = getFileContents(path);
+    const markDownContent = getFileContents(path);
 
-    return postContent;
+    const { data: frontmatter, content: postContent } = matter(markDownContent);
+
+    return { frontmatter, postContent };
   }
 }

@@ -1,3 +1,12 @@
+---
+title: Undercover Biker Jacket
+datePublished: "2022-01-01"
+category: fashion
+section: items
+excerpt: This a is an excerpt to be placed in the PostCard.
+coverImage: https://i.pinimg.com/564x/d1/c5/54/d1c5548070354f0e66861b7d78b83baf.jpg
+---
+
 # Undercover: Biker Jacket
 
 ## January 1, 2022

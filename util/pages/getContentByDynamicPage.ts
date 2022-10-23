@@ -6,6 +6,15 @@ import {
   getFileNamesInDirectory,
 } from "../getCmsContent";
 
+export function sortPostsByDate(posts: any) {
+  return posts.sort((a: any, b: any) => {
+    const dateA = new Date(a.datePublished);
+    const dateB = new Date(b.datePublished);
+
+    return dateB.getTime() - dateA.getTime();
+  });
+}
+
 export function getContentByDynamicPage(slug: string | string[] | undefined) {
   // Docs: Content for Repo Page
   if (!slug) {
@@ -13,7 +22,9 @@ export function getContentByDynamicPage(slug: string | string[] | undefined) {
     const allCategories: any = getCategories(sections);
     const allPosts: any = getPosts(allCategories);
 
-    return allPosts;
+    const allPostsSorted = sortPostsByDate(allPosts);
+
+    return allPostsSorted;
   }
 
   // Docs: Content for Section Page
@@ -22,7 +33,9 @@ export function getContentByDynamicPage(slug: string | string[] | undefined) {
     const categoriesFromSection: any = getCategories(section);
     const postsFromSection: any = getPosts(categoriesFromSection);
 
-    return postsFromSection;
+    const postsFromSectionSorted = sortPostsByDate(postsFromSection);
+
+    return postsFromSectionSorted;
   }
 
   // Docs: Content for Category Page
@@ -34,7 +47,9 @@ export function getContentByDynamicPage(slug: string | string[] | undefined) {
       { title: section, section: category },
     ]);
 
-    return postsFromCategory;
+    const postsFromCategorySorted = sortPostsByDate(postsFromCategory);
+
+    return postsFromCategorySorted;
   }
 
   // Docs: Content for Post Page

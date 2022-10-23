@@ -10,16 +10,6 @@ const PostList: React.FC<{
 }> = ({ slug, content, section }) => {
   const pageTitle: string | undefined = !slug ? section : slug[1];
 
-  // Docs: sort list by newest to oldest
-  if (content) {
-    content.sort((a: any, b: any) => {
-      const dateA = new Date(a.datePublished);
-      const dateB = new Date(b.datePublished);
-
-      return dateB.getTime() - dateA.getTime();
-    });
-  }
-
   return content ? (
     <div>
       <div className={styles.title}>{pageTitle}</div>

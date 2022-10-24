@@ -13,19 +13,17 @@ const RepoPage: React.FC<{
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
   const [filteredContent, setFilteredContent] = useState<any>(content);
 
+  // Docs: states for pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [postCardsPerPage] = useState<number>(2);
+  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(2);
 
-  // Get current postCards
+  // Docs: currentPostCards for pagination
   const indexOfLastPostCard: number = currentPage * postCardsPerPage;
   const indexOfFirstPostCard: number = indexOfLastPostCard - postCardsPerPage;
   const currentPostCards: any[] = filteredContent.slice(
     indexOfFirstPostCard,
     indexOfLastPostCard
   );
-
-  // Change page
-  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   const sections: ISectionObj[] = content.reduce(
     (list: ISectionObj[], singleContent: any) => {
@@ -66,6 +64,11 @@ const RepoPage: React.FC<{
     },
     []
   );
+
+  useEffect(() => {
+    // Docs: reset current page for pagination upon filtering
+    setCurrentPage(1);
+  }, [postCardsPerPage, categoryFilters, sectionFilters, content]);
 
   useEffect(() => {
     // Docs: no content filtering
@@ -121,9 +124,11 @@ const RepoPage: React.FC<{
       />
       <PostList slug={slug} content={currentPostCards} />
       <Pagination
+        currentPage={currentPage}
         postCardsPerPage={postCardsPerPage}
         totalPostCards={filteredContent.length}
-        paginate={paginate}
+        setCurrentPage={setCurrentPage}
+        setPostCardsPerPage={setPostCardsPerPage}
       />
     </div>
   );

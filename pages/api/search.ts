@@ -8,7 +8,7 @@ import {
   getPosts,
 } from "../../util/getCmsContent";
 
-const apiRoute = (req: NextApiRequest, res: NextApiResponse) => {
+const searchApiRoute = (req: NextApiRequest, res: NextApiResponse) => {
   let posts: any;
 
   if (process.env.NODE_ENV === "production") {
@@ -32,4 +32,4 @@ const apiRoute = (req: NextApiRequest, res: NextApiResponse) => {
   res.status(200).json({ results });
 };
 
-export default apiRoute;
+export default searchApiRoute;

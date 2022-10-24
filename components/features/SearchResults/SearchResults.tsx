@@ -1,4 +1,4 @@
-import PostCard from "../../PostCard/PostCard";
+import PostCard from "../../posts/PostCard/PostCard";
 
 const SearchResults: React.FC<{ results: any }> = ({ results }) => {
   return (

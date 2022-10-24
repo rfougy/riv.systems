@@ -19,7 +19,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/search/SearchResults"
+    "components/features/SearchResults"
   ],
   "exclude": ["node_modules"]
 }

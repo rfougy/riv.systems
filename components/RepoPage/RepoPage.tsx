@@ -3,6 +3,7 @@ import PostList from "../PostList/PostList";
 import ICategoryObj from "../../interfaces/ICategoryObj";
 import ISectionObj from "../../interfaces/ISectionObj";
 import FilterMenu from "../FilterMenu/FilterMenu";
+import Pagination from "../Pagination/Pagination";
 
 const RepoPage: React.FC<{
   slug: string;
@@ -10,7 +11,19 @@ const RepoPage: React.FC<{
 }> = ({ slug, content }) => {
   const [sectionFilters, setSectionFilters] = useState<ISectionObj[]>([]);
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
-  const [filteredContent, setFilteredContent] = useState<any>(null);
+  const [filteredContent, setFilteredContent] = useState<any>(content);
+
+  // Docs: states for pagination
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(2);
+
+  // Docs: currentPostCards for pagination
+  const indexOfLastPostCard: number = currentPage * postCardsPerPage;
+  const indexOfFirstPostCard: number = indexOfLastPostCard - postCardsPerPage;
+  const currentPostCards: any[] = filteredContent.slice(
+    indexOfFirstPostCard,
+    indexOfLastPostCard
+  );
 
   const sections: ISectionObj[] = content.reduce(
     (list: ISectionObj[], singleContent: any) => {
@@ -51,6 +64,11 @@ const RepoPage: React.FC<{
     },
     []
   );
+
+  useEffect(() => {
+    // Docs: reset current page for pagination upon filtering
+    setCurrentPage(1);
+  }, [postCardsPerPage, categoryFilters, sectionFilters, content]);
 
   useEffect(() => {
     // Docs: no content filtering
@@ -104,7 +122,14 @@ const RepoPage: React.FC<{
         setSectionFilters={setSectionFilters}
         setCategoryFilters={setCategoryFilters}
       />
-      <PostList slug={slug} content={filteredContent} />
+      <PostList slug={slug} content={currentPostCards} />
+      <Pagination
+        currentPage={currentPage}
+        postCardsPerPage={postCardsPerPage}
+        totalPostCards={filteredContent.length}
+        setCurrentPage={setCurrentPage}
+        setPostCardsPerPage={setPostCardsPerPage}
+      />
     </div>
   );
 };

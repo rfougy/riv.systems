@@ -4,6 +4,7 @@ import PostList from "../PostList/PostList";
 import ICategoryObj from "../../interfaces/ICategoryObj";
 import ISectionObj from "../../interfaces/ISectionObj";
 import FilterMenu from "../FilterMenu/FilterMenu";
+import Pagination from "../Pagination/Pagination";
 
 const SectionPage: React.FC<{
   slug: string;
@@ -11,7 +12,19 @@ const SectionPage: React.FC<{
   section: sectionType | string;
 }> = ({ slug, content, section }) => {
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
-  const [filteredContent, setFilteredContent] = useState<any>(null);
+  const [filteredContent, setFilteredContent] = useState<any>(content);
+
+  // Docs: states for pagination
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(2);
+
+  // Docs: currentPostCards for pagination
+  const indexOfLastPostCard: number = currentPage * postCardsPerPage;
+  const indexOfFirstPostCard: number = indexOfLastPostCard - postCardsPerPage;
+  const currentPostCards: any[] = filteredContent.slice(
+    indexOfFirstPostCard,
+    indexOfLastPostCard
+  );
 
   const categories: ICategoryObj[] = content.reduce(
     (list: ICategoryObj[], singleContent: any) => {
@@ -34,6 +47,11 @@ const SectionPage: React.FC<{
     },
     []
   );
+
+  useEffect(() => {
+    // Docs: reset current page for pagination upon filtering
+    setCurrentPage(1);
+  }, [postCardsPerPage, categoryFilters, content]);
 
   useEffect(() => {
     // Docs: no content filtering
@@ -69,7 +87,14 @@ const SectionPage: React.FC<{
         categoryFilters={categoryFilters}
         setCategoryFilters={setCategoryFilters}
       />
-      <PostList slug={slug} content={filteredContent} section={section} />
+      <PostList slug={slug} content={currentPostCards} section={section} />
+      <Pagination
+        currentPage={currentPage}
+        postCardsPerPage={postCardsPerPage}
+        totalPostCards={filteredContent.length}
+        setCurrentPage={setCurrentPage}
+        setPostCardsPerPage={setPostCardsPerPage}
+      />
     </div>
   );
 };

@@ -19,6 +19,11 @@ const FilterMenu: React.FC<{
   setSectionFilters,
   setCategoryFilters,
 }) => {
+  function handleFilterClear() {
+    if (setSectionFilters) setSectionFilters([]);
+    setCategoryFilters([]);
+  }
+
   return (
     <div>
       <div>Filtering:</div>
@@ -46,7 +51,7 @@ const FilterMenu: React.FC<{
                       sectionFilters,
                       categoryFilters,
                       setSectionFilters,
-                      setCategoryFilters,
+                      setCategoryFilters
                     )
                   }
                 />
@@ -80,7 +85,7 @@ const FilterMenu: React.FC<{
                     sectionFilters,
                     categoryFilters,
                     setSectionFilters,
-                    setCategoryFilters,
+                    setCategoryFilters
                   )
                 }
               />
@@ -89,6 +94,7 @@ const FilterMenu: React.FC<{
           );
         })}
       </form>
+      <button onClick={() => handleFilterClear()}>Clear Filters</button>
     </div>
   );
 };

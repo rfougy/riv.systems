@@ -3,6 +3,7 @@ import PostList from "../PostList/PostList";
 import ICategoryObj from "../../interfaces/ICategoryObj";
 import ISectionObj from "../../interfaces/ISectionObj";
 import FilterMenu from "../FilterMenu/FilterMenu";
+import Pagination from "../Pagination/Pagination";
 
 const RepoPage: React.FC<{
   slug: string;
@@ -10,7 +11,21 @@ const RepoPage: React.FC<{
 }> = ({ slug, content }) => {
   const [sectionFilters, setSectionFilters] = useState<ISectionObj[]>([]);
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
-  const [filteredContent, setFilteredContent] = useState<any>(null);
+  const [filteredContent, setFilteredContent] = useState<any>(content);
+
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [postCardsPerPage] = useState<number>(2);
+
+  // Get current postCards
+  const indexOfLastPostCard: number = currentPage * postCardsPerPage;
+  const indexOfFirstPostCard: number = indexOfLastPostCard - postCardsPerPage;
+  const currentPostCards: any[] = filteredContent.slice(
+    indexOfFirstPostCard,
+    indexOfLastPostCard
+  );
+
+  // Change page
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   const sections: ISectionObj[] = content.reduce(
     (list: ISectionObj[], singleContent: any) => {
@@ -104,7 +119,12 @@ const RepoPage: React.FC<{
         setSectionFilters={setSectionFilters}
         setCategoryFilters={setCategoryFilters}
       />
-      <PostList slug={slug} content={filteredContent} />
+      <PostList slug={slug} content={currentPostCards} />
+      <Pagination
+        postCardsPerPage={postCardsPerPage}
+        totalPostCards={filteredContent.length}
+        paginate={paginate}
+      />
     </div>
   );
 };

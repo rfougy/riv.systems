@@ -4,7 +4,8 @@ import styles from "./PostCard.module.css";
 const PostCard: React.FC<{
   path: string;
   frontmatter: any;
-}> = ({ path, frontmatter }) => {
+  forSearchResults?: boolean;
+}> = ({ path, frontmatter, forSearchResults }) => {
   const { title, datePublished, category, section, excerpt, coverImage } =
     frontmatter;
   const formattedDatePublished: string = datePublished.replaceAll("-", ".");

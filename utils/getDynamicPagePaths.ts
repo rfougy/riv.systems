@@ -2,7 +2,7 @@ import {
   getPosts,
   getFileNamesInDirectory,
   getCategories,
-} from "../getCmsContent";
+} from "./getCmsContent";
 
 export function getDynamicPagePaths() {
   const sections: any = getFileNamesInDirectory();

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { sectionType } from "../../types/sectionType";
-import PostList from "../PostList/PostList";
-import ICategoryObj from "../../interfaces/ICategoryObj";
-import ISectionObj from "../../interfaces/ISectionObj";
-import FilterMenu from "../FilterMenu/FilterMenu";
-import Pagination from "../Pagination/Pagination";
+import { sectionType } from "../../../types/sectionType";
+import PostList from "../../posts/PostList/PostList";
+import ICategoryObj from "../../../interfaces/ICategoryObj";
+import ISectionObj from "../../../interfaces/ISectionObj";
+import FilterMenu from "../../features/FilterMenu/FilterMenu";
+import Pagination from "../../features/Pagination/Pagination";
 
 const SectionPage: React.FC<{
   slug: string;

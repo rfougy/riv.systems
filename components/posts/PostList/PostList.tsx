@@ -1,5 +1,5 @@
-import IPost from "../../interfaces/IPost";
-import { sectionType } from "../../types/sectionType";
+import IPost from "../../../interfaces/IPost";
+import { sectionType } from "../../../types/sectionType";
 import PostCard from "../PostCard/PostCard";
 import styles from "./PostList.module.css";
 

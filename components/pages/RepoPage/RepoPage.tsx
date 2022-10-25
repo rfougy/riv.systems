@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import PostList from "../PostList/PostList";
-import ICategoryObj from "../../interfaces/ICategoryObj";
-import ISectionObj from "../../interfaces/ISectionObj";
-import FilterMenu from "../FilterMenu/FilterMenu";
-import Pagination from "../Pagination/Pagination";
+import PostList from "../../posts/PostList/PostList";
+import ICategoryObj from "../../../interfaces/ICategoryObj";
+import ISectionObj from "../../../interfaces/ISectionObj";
+import FilterMenu from "../../features/FilterMenu/FilterMenu";
+import Pagination from "../../features/Pagination/Pagination";
 
 const RepoPage: React.FC<{
   slug: string;

@@ -4,7 +4,7 @@ import {
   getPosts,
   getFileContents,
   getFileNamesInDirectory,
-} from "../getCmsContent";
+} from "./getCmsContent";
 
 import matter from "gray-matter";
 
@@ -32,6 +32,7 @@ export function getContentByDynamicPage(slug: string | string[] | undefined) {
   // Docs: Content for Section Page
   if (slug?.length === 1) {
     const section = slug;
+    // @ts-ignore
     const categoriesFromSection: any = getCategories(section);
     const postsFromSection: any = getPosts(categoriesFromSection);
 

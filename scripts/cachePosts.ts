@@ -12,7 +12,7 @@ function postData() {
 
   const posts = allPosts;
 
-  return `export const posts = ${JSON.stringify(posts)}`;
+  return `module.exports = ${JSON.stringify(posts)}`;
 }
 
 try {

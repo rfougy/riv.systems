@@ -9,7 +9,7 @@ const searchApiRoute = (req: NextApiRequest, res: NextApiResponse) => {
   let posts: any;
 
   if (process.env.NODE_ENV === "production") {
-    posts = require("../../cache/data").posts;
+    posts = require("../../cache/data");
   } else {
     const sections: string[] = getFileNamesInDirectory();
     const allCategories: any = getCategories(sections);

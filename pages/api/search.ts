@@ -19,11 +19,20 @@ const searchApiRoute = (req: NextApiRequest, res: NextApiResponse) => {
   }
 
   const results = posts.filter(
-    ({ frontmatter: { title, category, section, excerpt } }) =>
-      title.toLowerCase().indexOf(req.query.q) != -1 ||
-      category.toLowerCase().indexOf(req.query.q) != -1 ||
-      section.toLowerCase().indexOf(req.query.q) != -1 ||
-      excerpt.toLowerCase().indexOf(req.query.q) != -1
+    ({
+      frontmatter: { title, category, section, excerpt },
+    }: {
+      frontmatter: {
+        title: string;
+        category: string;
+        section: string;
+        excerpt: string;
+      };
+    }) =>
+      title?.toLowerCase().indexOf(req.query.q as string) != -1 ||
+      category.toLowerCase().indexOf(req.query.q as string) != -1 ||
+      section.toLowerCase().indexOf(req.query.q as string) != -1 ||
+      excerpt.toLowerCase().indexOf(req.query.q as string) != -1
   );
 
   res.status(200).json({ results });

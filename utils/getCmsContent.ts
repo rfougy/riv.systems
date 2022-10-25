@@ -27,7 +27,7 @@ export function getFileContents(path: string) {
 }
 
 export function getCategories(sections: string[]) {
-  let categories: string[][] = sections.map((section) => {
+  let categories: string[][] = sections.map((section: any) => {
     const posts: string[] = getFileNamesInDirectory(section);
 
     const categoryList: any = posts.map((fileName: string) => {

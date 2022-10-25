@@ -1,18 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import {
   getCategories,
   getFileNamesInDirectory,
   getPosts,
-} from "../../util/getCmsContent";
+} from "../../utils/getCmsContent";
 
 const searchApiRoute = (req: NextApiRequest, res: NextApiResponse) => {
   let posts: any;
 
   if (process.env.NODE_ENV === "production") {
-    // fetch from cache
+    posts = require("../../cache/data").posts;
   } else {
     const sections: string[] = getFileNamesInDirectory();
     const allCategories: any = getCategories(sections);

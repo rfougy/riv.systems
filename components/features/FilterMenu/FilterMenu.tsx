@@ -1,8 +1,8 @@
 import ISectionObj from "../../../interfaces/ISectionObj";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 
-import handleFilterByCategory from "../../../util/handleFilterByCategory";
-import handleFilterBySection from "../../../util/handleFilterBySection";
+import handleFilterByCategory from "../../../utils/handleFilterByCategory";
+import handleFilterBySection from "../../../utils/handleFilterBySection";
 
 const FilterMenu: React.FC<{
   sections?: ISectionObj[];

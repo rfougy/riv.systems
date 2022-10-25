@@ -9,8 +9,8 @@ import SectionPage from "../../components/pages/SectionPage/SectionPage";
 import CategoryPage from "../../components/pages/CategoryPage/CategoryPage";
 import PostPage from "../../components/pages/PostPage/PostPage";
 import IPost from "../../interfaces/IPost";
-import { getContentByDynamicPage } from "../../util/getContentByDynamicPage";
-import { getDynamicPagePaths } from "../../util/getDynamicPagePaths";
+import { getContentByDynamicPage } from "../../utils/getContentByDynamicPage";
+import { getDynamicPagePaths } from "../../utils/getDynamicPagePaths";
 
 const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
   slug,

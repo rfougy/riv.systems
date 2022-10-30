@@ -1,21 +1,25 @@
 import { useEffect, useState } from "react";
-import SearchResults from "../SearchResults/SearchResults";
+import SearchResults from "./SearchResults";
 
+/**
+ * @deprecated currently not in use
+ */
 const Search: React.FC<{}> = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [searchResults, setSearchResults] = useState<any[]>([]);
 
+  async function getSearchResults() {
+    if (searchTerm === "") {
+      setSearchResults([]);
+    } else {
+      const res = await fetch(`/api/search?q=${searchTerm}`);
+      const { results } = await res.json();
+      setSearchResults(results);
+    }
+  }
+
   useEffect(() => {
-    const getResults = async () => {
-      if (searchTerm === "") {
-        setSearchResults([]);
-      } else {
-        const res = await fetch(`/api/search?q=${searchTerm}`);
-        const { results } = await res.json();
-        setSearchResults(results);
-      }
-    };
-    getResults();
+    getSearchResults();
   }, [searchTerm]);
 
   return (

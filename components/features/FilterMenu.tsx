@@ -1,8 +1,8 @@
-import ISectionObj from "../../../interfaces/ISectionObj";
-import ICategoryObj from "../../../interfaces/ICategoryObj";
+import ISectionObj from "../../interfaces/ISectionObj";
+import ICategoryObj from "../../interfaces/ICategoryObj";
 
-import handleFilterByCategory from "../../../utils/handleFilterByCategory";
-import handleFilterBySection from "../../../utils/handleFilterBySection";
+import filterByCategory from "../../utils/filterByCategory";
+import filterBySection from "../../utils/filterBySection";
 
 const FilterMenu: React.FC<{
   sections?: ISectionObj[];
@@ -19,7 +19,7 @@ const FilterMenu: React.FC<{
   setSectionFilters,
   setCategoryFilters,
 }) => {
-  function handleFilterClear() {
+  function clearFilters() {
     if (setSectionFilters) setSectionFilters([]);
     setCategoryFilters([]);
   }
@@ -45,7 +45,7 @@ const FilterMenu: React.FC<{
                   //@ts-ignore
                   checked={sectionInFilterState || ""}
                   onChange={() =>
-                    handleFilterBySection(
+                    filterBySection(
                       sectionObj,
                       categories,
                       sectionFilters,
@@ -80,7 +80,7 @@ const FilterMenu: React.FC<{
                 //@ts-ignore
                 checked={categoryInFilterState || ""}
                 onChange={() =>
-                  handleFilterByCategory(
+                  filterByCategory(
                     categoryObj,
                     sectionFilters,
                     categoryFilters,
@@ -94,7 +94,7 @@ const FilterMenu: React.FC<{
           );
         })}
       </form>
-      <button onClick={() => handleFilterClear()}>Clear Filters</button>
+      <button onClick={() => clearFilters()}>Clear Filters</button>
     </div>
   );
 };

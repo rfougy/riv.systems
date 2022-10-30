@@ -1,7 +1,7 @@
 import ICategoryObj from "../interfaces/ICategoryObj";
 import ISectionObj from "../interfaces/ISectionObj";
 
-export default function handleFilterBySection(
+export default function filterBySection(
   sectionObj: ISectionObj,
   categories: ICategoryObj[],
   sectionFilters: ISectionObj[] | undefined,
@@ -13,7 +13,7 @@ export default function handleFilterBySection(
     (item: ISectionObj) => item.section === sectionObj.section
   );
 
-  // Docs: remove section and related categories from filter states.
+  // remove section and related categories from filter states
   if (sectionInFilterState && setSectionFilters) {
     const updatedSectionFilters: ISectionObj[] | undefined =
       sectionFilters?.filter(
@@ -27,7 +27,7 @@ export default function handleFilterBySection(
     setCategoryFilters(updatedCategoryFilters);
   }
 
-  // Docs: add section to filter state.
+  // add section to filter state
   if (!sectionInFilterState && setSectionFilters) {
     setSectionFilters((prevState: ISectionObj[]) => [...prevState, sectionObj]);
 

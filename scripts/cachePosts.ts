@@ -5,7 +5,7 @@ const {
   getPosts,
 } = require("../utils/getCmsContent.ts");
 
-function postData() {
+function createCacheForPostData() {
   const sections: string[] = getFileNamesInDirectory();
   const allCategories: any = getCategories(sections);
   const allPosts: any = getPosts(allCategories);
@@ -21,7 +21,7 @@ try {
   fs.mkdirSync("cache");
 }
 
-fs.writeFile("cache/data.js", postData(), (err: any) => {
+fs.writeFile("cache/data.js", createCacheForPostData(), (err: any) => {
   if (err) return console.log(err);
   console.log("Posts Cached...");
 });

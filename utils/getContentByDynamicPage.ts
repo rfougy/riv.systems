@@ -17,8 +17,10 @@ export function sortPostsByDate(posts: any) {
   });
 }
 
+/**
+ * @todo for content for category page, title and section are mismatched. This is temporary fix and needs more concrete solution.
+ */
 export function getContentByDynamicPage(slug: string | string[] | undefined) {
-  // Docs: Content for Repo Page
   if (!slug) {
     const sections: string[] = getFileNamesInDirectory();
     const allCategories: any = getCategories(sections);
@@ -29,7 +31,6 @@ export function getContentByDynamicPage(slug: string | string[] | undefined) {
     return allPostsSorted;
   }
 
-  // Docs: Content for Section Page
   if (slug?.length === 1) {
     const section = slug;
     // @ts-ignore
@@ -41,11 +42,9 @@ export function getContentByDynamicPage(slug: string | string[] | undefined) {
     return postsFromSectionSorted;
   }
 
-  // Docs: Content for Category Page
   if (slug?.length === 2) {
     const category: string = slug[0];
     const section: string = slug[1];
-    // Bug: title and section are mismatched, this is temporary fix and needs more concrete solution.
     const postsFromCategory: any = getPosts([
       { title: section, section: category },
     ]);
@@ -55,7 +54,6 @@ export function getContentByDynamicPage(slug: string | string[] | undefined) {
     return postsFromCategorySorted;
   }
 
-  // Docs: Content for Post Page
   if (slug?.length === 3) {
     const section: string = slug[0];
     const category: string = slug[1];

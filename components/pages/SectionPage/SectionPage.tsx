@@ -3,8 +3,8 @@ import { sectionType } from "../../../types/sectionType";
 import PostList from "../../posts/PostList/PostList";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 import ISectionObj from "../../../interfaces/ISectionObj";
-import FilterMenu from "../../features/FilterMenu/FilterMenu";
-import Pagination from "../../features/Pagination/Pagination";
+import FilterMenu from "../../features/FilterMenu";
+import Pagination from "../../features/Pagination";
 
 const SectionPage: React.FC<{
   slug: string;
@@ -14,11 +14,11 @@ const SectionPage: React.FC<{
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
   const [filteredContent, setFilteredContent] = useState<any>(content);
 
-  // Docs: states for pagination
+  // states for pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [postCardsPerPage, setPostCardsPerPage] = useState<number>(2);
 
-  // Docs: currentPostCards for pagination
+  // deducting the current PostCards for pagination
   const indexOfLastPostCard: number = currentPage * postCardsPerPage;
   const indexOfFirstPostCard: number = indexOfLastPostCard - postCardsPerPage;
   const currentPostCards: any[] = filteredContent.slice(
@@ -49,17 +49,19 @@ const SectionPage: React.FC<{
   );
 
   useEffect(() => {
-    // Docs: reset current page for pagination upon filtering
     setCurrentPage(1);
   }, [postCardsPerPage, categoryFilters, content]);
 
+  /**
+   * @description filtering scenarios based on active section & category filters
+   */
   useEffect(() => {
-    // Docs: no content filtering
+    // no content filtering
     if (!categoryFilters.length) {
       setFilteredContent(content);
     }
 
-    // Docs: filter content based on categoryFilters
+    // filter content based on categoryFilters
     if (categoryFilters.length) {
       const updatedFilteredContent = content.filter((singleContent: any) => {
         const categoryObj: ICategoryObj = {

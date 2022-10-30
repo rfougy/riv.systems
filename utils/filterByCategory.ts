@@ -1,7 +1,7 @@
 import ICategoryObj from "../interfaces/ICategoryObj";
 import ISectionObj from "../interfaces/ISectionObj";
 
-export default function handleFilterByCategory(
+export default function filterByCategory(
   categoryObj: ICategoryObj,
   sectionFilters: ISectionObj[] | undefined,
   categoryFilters: ICategoryObj[],
@@ -17,7 +17,7 @@ export default function handleFilterByCategory(
     (item: ISectionObj) => item.section === categoryObj.section
   );
 
-  // Docs: remove category from filter state.
+  // remove category from filter state.
   if (categoryInFilterState) {
     const updatedCategoryFilters: ICategoryObj[] = categoryFilters.filter(
       (item: ICategoryObj) => item !== categoryInFilterState
@@ -28,7 +28,7 @@ export default function handleFilterByCategory(
       (item: ICategoryObj) => item.section === categoryInFilterState.section
     );
 
-    // Docs: remove section from filter state once all related categories are removed
+    // remove section from filter state once all related categories are removed
     if (categoryWithMatchingSection.length === 1 && setSectionFilters) {
       const updatedSectionFilters: ISectionObj[] | undefined =
         sectionFilters?.filter(
@@ -38,14 +38,14 @@ export default function handleFilterByCategory(
     }
   }
 
-  // Docs: add category to filter state.
+  // add category to filter state.
   if (!categoryInFilterState) {
     setCategoryFilters((prevState: ICategoryObj[]) => [
       ...prevState,
       categoryObj,
     ]);
 
-    // Docs: add section to filter state.
+    // add section to filter state.
     if (!sectionInFilterState && setSectionFilters) {
       const sectionObj: ISectionObj = { section: categoryObj.section };
       setSectionFilters((prevState: ISectionObj[]) => [

@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
-import Pagination from "../../features/Pagination/Pagination";
+import Pagination from "../../features/Pagination";
 import PostList from "../../posts/PostList/PostList";
 
 const CategoryPage: React.FC<{
   slug: string;
   content: any;
 }> = ({ slug, content }) => {
-  // Docs: states for pagination
+  // states for pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [postCardsPerPage, setPostCardsPerPage] = useState<number>(2);
 
-  // Docs: currentPostCards for pagination
+  // deducting the current PostCards for pagination
   const indexOfLastPostCard: number = currentPage * postCardsPerPage;
   const indexOfFirstPostCard: number = indexOfLastPostCard - postCardsPerPage;
   const currentPostCards: any[] = content.slice(
@@ -19,7 +19,6 @@ const CategoryPage: React.FC<{
   );
 
   useEffect(() => {
-    // Docs: reset current page for pagination upon filtering
     setCurrentPage(1);
   }, [postCardsPerPage, content]);
 

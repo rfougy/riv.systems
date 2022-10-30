@@ -15,23 +15,29 @@ const Pagination: React.FC<{
     totalPostCards / postCardsPerPage
   );
 
-  function handlePrev() {
-    if (currentPage > 1) setCurrentPage(currentPage - 1);
+  function handlePrevButtonClick() {
+    if (currentPage > 1) {
+      const prevPage: number = currentPage - 1;
+      setCurrentPage(prevPage);
+    }
   }
 
-  function handleNext() {
-    if (lastPage && currentPage < lastPage) setCurrentPage(currentPage + 1);
+  function handleNextButtonClick() {
+    if (lastPage && currentPage < lastPage) {
+      const nextPage: number = currentPage + 1;
+      setCurrentPage(nextPage);
+    }
   }
 
   return (
     <nav>
       <div>
         <button onClick={() => setCurrentPage(1)}>&lt;&lt;</button>
-        <button onClick={() => handlePrev()}>&lt;</button>
+        <button onClick={() => handlePrevButtonClick()}>&lt;</button>
         <div>
           {currentPage}/{lastPage}
         </div>
-        <button onClick={() => handleNext()}>&gt;</button>
+        <button onClick={() => handleNextButtonClick()}>&gt;</button>
         <button onClick={() => setCurrentPage(lastPage)}>&gt;&gt;</button>
       </div>
       <div>

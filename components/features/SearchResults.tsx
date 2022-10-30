@@ -1,5 +1,8 @@
-import PostCard from "../../posts/PostCard/PostCard";
+import PostCard from "../posts/PostCard/PostCard";
 
+/**
+ * @deprecated currently not in use
+ */
 const SearchResults: React.FC<{ results: any }> = ({ results }) => {
   return (
     <>

@@ -11,6 +11,15 @@
  *   }, 10000);
  * 
  * @note 1 second = 1000 milliseconds
+ * 
+ * @description CSS for creating circle
+ * @example
+ * #circle {
+ *  background: lightblue;
+ *  border-radius: 50%;
+ *  width: 100px;
+ *  height: 100px;
+ * }
  */
 
 import React from "react";

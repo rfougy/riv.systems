@@ -33,7 +33,7 @@ const FilterMenu: React.FC<{
   );
 
   function createFilterHashtable() {
-    const hashtable = JSON.parse(JSON.stringify(sectionHashtableRef));
+    const hashtable = structuredClone(sectionHashtableRef);
     for (let key in hashtable) {
       hashtable[key] = [];
     }
@@ -55,11 +55,13 @@ const FilterMenu: React.FC<{
     return hashtable;
   }
 
-  const nestedFilteringOptions = Object.values(createFilterHashtable());
+  const nestedFilteringOptions = sections
+    ? Object.values(createFilterHashtable())
+    : undefined;
 
   return (
     <div>
-      {sections && (
+      {nestedFilteringOptions ? (
         <form>
           {nestedFilteringOptions.map((nestedCategories: any, index) => {
             const section = sectionHashtableRef[index];
@@ -122,6 +124,39 @@ const FilterMenu: React.FC<{
                     }
                   )}
                 </div>
+              </div>
+            );
+          })}
+        </form>
+      ) : (
+        <form>
+          {categories.map((categoryObj: ICategoryObj, index: number) => {
+            const { category } = categoryObj;
+            const categoryInFilterState = categoryFilters.find(
+              (item) =>
+                item.category === categoryObj.category &&
+                item.section === categoryObj.section
+            );
+
+            return (
+              <div key={index}>
+                <input
+                  type="checkbox"
+                  name={category}
+                  value={category}
+                  //@ts-ignore
+                  checked={categoryInFilterState || ""}
+                  onChange={() =>
+                    filterByCategory(
+                      categoryObj,
+                      sectionFilters,
+                      categoryFilters,
+                      setSectionFilters,
+                      setCategoryFilters
+                    )
+                  }
+                />
+                <label>{category}</label>
               </div>
             );
           })}

@@ -33,7 +33,7 @@ const FilterMenu: React.FC<{
   );
 
   function createFilterHashtable() {
-    const hashtable = structuredClone(sectionHashtableRef);
+    const hashtable = JSON.parse(JSON.stringify(sectionHashtableRef));
     for (let key in hashtable) {
       hashtable[key] = [];
     }

@@ -3,6 +3,7 @@ import ICategoryObj from "../../interfaces/ICategoryObj";
 
 import filterByCategory from "../../utils/filterByCategory";
 import filterBySection from "../../utils/filterBySection";
+import { useEffect } from "react";
 
 const FilterMenu: React.FC<{
   sections?: ISectionObj[];
@@ -24,6 +25,41 @@ const FilterMenu: React.FC<{
     setCategoryFilters([]);
   }
 
+  const sectionHashtableRef = sections?.reduce(
+    (dictionary: any, section, index) => {
+      dictionary[index] = section.section;
+      return dictionary;
+    },
+    {}
+  );
+
+  function createFilterHashtable() {
+    const hashtable = JSON.parse(JSON.stringify(sectionHashtableRef));
+    for (let key in hashtable) {
+      hashtable[key] = [];
+    }
+
+    const hashtableRefEntries = Object.entries(sectionHashtableRef);
+
+    categories.map((category) => {
+      const { section } = category;
+
+      // @ts-ignore
+      const refIndex = hashtableRefEntries.find((entry) => {
+        const sectionInEntry = entry[1];
+        return sectionInEntry === section;
+      })[0];
+
+      hashtable[refIndex].push(category);
+    });
+
+    return hashtable;
+  }
+
+  useEffect(() => {
+    console.log("FUNCTION INITIATED: ", createFilterHashtable());
+  });
+
   return (
     <div>
       <div>Filtering:</div>
@@ -33,7 +69,7 @@ const FilterMenu: React.FC<{
           {sections?.map((sectionObj: ISectionObj, index: number) => {
             const { section } = sectionObj;
             const sectionInFilterState = sectionFilters?.find(
-              (item) => item.section === sectionObj.section
+              (category) => category.section === sectionObj.section
             );
 
             return (
@@ -66,9 +102,9 @@ const FilterMenu: React.FC<{
         {categories.map((categoryObj: ICategoryObj, index: number) => {
           const { category } = categoryObj;
           const categoryInFilterState = categoryFilters.find(
-            (item) =>
-              item.category === categoryObj.category &&
-              item.section === categoryObj.section
+            (category) =>
+              category.category === categoryObj.category &&
+              category.section === categoryObj.section
           );
 
           return (

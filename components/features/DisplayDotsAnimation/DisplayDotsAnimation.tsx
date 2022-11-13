@@ -94,16 +94,44 @@ const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
 
   /**
    *
-   * Take into account that each letter's x coordinates will depend on the order they're in
+   * declare a variable where the value is a filter through the above variable. The result is an array of inactive coordinates, aka negative space.
    *
-   * declare a variable where the value is a map through charArr. The result is an array with all dot locations.
-   *
-   * declare a variable where the value is a filter through the above variable. The reulst is an array of dot locations that ARE NOT characters, aka negative space.
-   *
-   * From there, create a function that will be used in JSX.
-   * Function will be a setInterval,
-   * 
    * Need to take into account words and flex wrapping...
+   *  - split the string into an array of words
+   *  - map through each word and get active dot coordinates;
+   *    - add 1 extra width to totalWidth (aka charStartingXCoordPosition) to account for missing spaces inbetween words.
+   *    - after mapping, flatten array (Ex. [[[0,1], [0,2]], [[1,1], [2,2]]] --> [[0,1], [0,2], [1,1], [2,2]]).
+   *  - create list of inactive dot coordinates that references the flattened array.
+   *  - create list 'mergedList' that merges both active and inactive coordinate lists.
+   *    - the general idea is to reference coordinates in mergedList, then group them by width
+   *      - Ex. word has max xcoord of 4, group coordinates with max xcoord 4).
+   *    - after/while grouping, sort coordinates in each group in ascending order (Ex. [0,0] [0,1] [0,2] [1,0] ...)
+   *      - *Note: is there a built-in method that can sort mergedList?
+   * 
+   *  - From here we would create the HTML structure.
+   *    - 3 components used: DotRow and DotCell
+   *
+   *      // map through each group of coordinates
+   *      <DotWord>
+   *       <DotRow>
+   *         // map through each coordinate in group
+   *         <DotCell coord={[0,0]}>
+   *         <DotCell coord={[0,1]}>
+   *         <DotCell coord={[0,2]}>
+   *         ...
+   *       </DotRow>
+   *      </DotWord>
+   *
+   *  - Method for animation
+   *    a...
+   *      1... via DisplayDotsAnimation Component
+   *      - setInterval every x milliseconds, select an inactive coord from list of inactive coordinates.
+   *        - Set coordToDeactivate state to the selected inactive coord.
+   *        - remove the selected inactive coord from the list.
+   *      - clearInterval once list of inactive coordinates is empty.
+   *      2... via DotCell Component
+   *      - create a useEffect that watches for changes in coordToDeactivate.
+   *      - if the coord for the DotCell matches the coord in coordToDeactivate, change the styling to have the dot "dissapear" in the UI.
    */
 
   return (

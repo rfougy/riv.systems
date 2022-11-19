@@ -2,6 +2,13 @@ import styles from "./DisplayDotsAnimation.module.css";
 import { displayDotsDictionary } from "../../../dictionaries/displayDotsDictionary";
 import { useEffect } from "react";
 import "../../../ext/string.extensions";
+import _ from "lodash";
+
+interface IAllCoords {
+  allCoords: number[][];
+  activeCoords: number[][];
+  inactiveCoords: number[][];
+}
 
 const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
   string = "EE EE",
@@ -10,7 +17,8 @@ const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
 
   let charStartingXCoord: number = 0;
 
-  function getActiveCoords(charArr: string[]) {
+  function getActiveCoordsForWord(word: string): number[][] {
+    const charArr: string[] = word.split("");
     const dictionaryCharArr = charArr.map((char: string) => {
       const displayDotsDictionaryClone = structuredClone(displayDotsDictionary);
       const dictionaryChar = displayDotsDictionaryClone[char];
@@ -40,7 +48,20 @@ const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
     return activeCoords;
   }
 
-  function getAllCoords(activeCoords: number[][]): number[][] {
+  function getAllCoords(string: string): IAllCoords {
+    const wordsArr: string[] = string.toUpperCase().split(" ");
+
+    const activeCoordsGrouped: number[][][] = wordsArr.reduce(
+      (output: any[], word: string) => {
+        const activeCoordsForWord = getActiveCoordsForWord(word);
+        output.push(...activeCoordsForWord);
+        return output;
+      },
+      []
+    );
+
+    const activeCoords: number[][] = activeCoordsGrouped.flat(1).sortCoords();
+
     const allCoords = [];
 
     for (let i = 0; i < activeCoords.length; i++) {
@@ -69,14 +90,18 @@ const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
       }
     }
 
-    return allCoords;
+    const inactiveCoords: number[][] = allCoords
+      .filter((coord) => !activeCoords.includes(coord))
+      .sortCoords();
+
+    return { allCoords: allCoords.sortCoords(), activeCoords, inactiveCoords };
   }
 
   function getGapCoordsHelper(
     currCoord: number[],
     largerXCoord: number,
     isMaxXCoord?: boolean
-  ) {
+  ): number[][] {
     let xCoordGap: number = isMaxXCoord
       ? largerXCoord - currCoord[1]
       : largerXCoord - currCoord[1] - 1;
@@ -92,7 +117,7 @@ const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
     return gapCoords;
   }
 
-  function getStartAndEndXCoordsPerChar(): number[][] {
+  function getStartEndXCoordsPerChar(string: string): number[][] {
     const charArr = string.split("");
 
     let startXCoord: number = 0;
@@ -120,37 +145,66 @@ const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
     return /\s/.test(char);
   }
 
-  const activeCoordsTEST: number[][][] = wordsArr.reduce(
-    // Step 2
-    (output: any[], word: string, indexOfWordInArr) => {
-      const charArr: string[] = word.split("");
-      const activeCoordsForWord = getActiveCoords(charArr);
-      output.push(...activeCoordsForWord);
-      return output;
-    },
-    []
-  );
+  function groupCoords(string: string) {
+    const { allCoords, activeCoords, inactiveCoords }: IAllCoords =
+      getAllCoords(string);
+    const startEndXCoords = getStartEndXCoordsPerChar(string);
 
-  const activeCoords: number[][] = activeCoordsTEST.flat(1).sortCoords();
-
-  // includes coordinates for spaces
-  const allCoords: number[][] = getAllCoords(activeCoords).sortCoords();
-
-  const inactiveCoords: number[][] = allCoords
-    .filter((coord) => !activeCoords.includes(coord))
-    .sortCoords();
-
-  useEffect(() => {
-    console.log("activeCoordsTEST: ", activeCoordsTEST);
-    console.log(
-      "getStartAndEndXCoordsPerChar: ",
-      getStartAndEndXCoordsPerChar()
+    const groupedCoordsHashtable = startEndXCoords.reduce(
+      (ht: any, coord: number[]) => {
+        const coordAsKey = coord.join("-");
+        ht[coordAsKey] = {
+          allCoords: [],
+          activeCoords: [],
+          inactiveCoords: [],
+        };
+        return ht;
+      },
+      {}
     );
 
-    console.log("activeCoords: ", activeCoords);
-    console.log("allCoords: ", allCoords);
-    console.log("inactiveCoords: ", inactiveCoords);
-  });
+    allCoords.map((coord: number[]) => {
+      startEndXCoords.map((startEndXCoord) => {
+        const startXCoord = startEndXCoord[0];
+        const endXCoord = startEndXCoord[1];
+        const coordAsKey = startEndXCoord.join("-");
+
+        const coordInRange: boolean = isBetweenXCoordRangeHelper(
+          coord,
+          startXCoord,
+          endXCoord
+        );
+
+        if (coordInRange) {
+          groupedCoordsHashtable[coordAsKey].allCoords.push(coord);
+        }
+
+        if (coordInRange && activeCoords.includes(coord)) {
+          groupedCoordsHashtable[coordAsKey].activeCoords.push(coord);
+        }
+
+        if (coordInRange && inactiveCoords.includes(coord)) {
+          groupedCoordsHashtable[coordAsKey].inactiveCoords.push(coord);
+        }
+      });
+    });
+
+    return groupedCoordsHashtable;
+  }
+
+  function isBetweenXCoordRangeHelper(
+    coord: number[],
+    startXCoord: number,
+    endXCoord: number
+  ) {
+    return startXCoord <= coord[1] && coord[1] <= endXCoord;
+  }
+
+  const result = groupCoords(string);
+
+  useEffect(() => {
+    console.log("result: ", result);
+  }, []);
 
   /**
    *
@@ -164,11 +218,10 @@ const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
    * [X]   a. add 1 extra width to totalWidth (aka charStartingXCoord) to account for missing spaces inbetween words.
    * [X]   b. after mapping, flatten array (Ex. [[[0,1], [0,2]], [[1,1], [2,2]]] --> [[0,1], [0,2], [1,1], [2,2]]).
    * [X] 3. create list of inactive dot coordinates that references the flattened array.
-   * [X] 4. create list 'mergedList' that merges both active and inactive coordinate lists.
-   *    a. the general idea is to reference coordinates in mergedList, then group them by width
-   *      i. Ex. word has max xcoord of 4, group coordinates with max xcoord 4).
-   *    b. after/while grouping, sort coordinates in each group in ascending order (Ex. [[0,0] [0,1] [0,2]] [[1,0]] ...)
-   *      i. *Note: is there a built-in method that can sort mergedList?
+   * [X] 4. create list 'allCoords' that merges both active and inactive coordinate lists.
+   * [X]   a. the general idea is to reference coordinates in allCoords, then group them by width
+   * [X]     i. Ex. word has max xcoord of 4, group coordinates with max xcoord 4).
+   * [X]   b. after/while grouping, sort coordinates in each group in ascending order (Ex. [[0,0] [0,1] [0,2]] [[1,0]] ...)
    *
    *  5. From here we would create the HTML structure.
    *    a. 3 components used: DotRow and DotCell

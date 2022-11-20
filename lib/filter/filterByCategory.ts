@@ -1,12 +1,12 @@
-import ICategoryObj from "../interfaces/ICategoryObj";
-import ISectionObj from "../interfaces/ISectionObj";
+import ICategoryObj from "../../interfaces/ICategoryObj";
+import ISectionObj from "../../interfaces/ISectionObj";
 
 export default function filterByCategory(
   categoryObj: ICategoryObj,
   sectionFilters: ISectionObj[] | undefined,
   categoryFilters: ICategoryObj[],
   setSectionFilters: ((arg: any) => void) | undefined,
-  setCategoryFilters: (arg: any) => void,
+  setCategoryFilters: (arg: any) => void
 ) {
   const categoryInFilterState: ICategoryObj | undefined = categoryFilters.find(
     (item: ICategoryObj) =>

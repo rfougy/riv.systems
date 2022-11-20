@@ -2,14 +2,14 @@ import {
   getPosts,
   getFileNamesInDirectory,
   getCategories,
-} from "./getCmsContent";
+} from "../cms/getCmsContent";
 
 export function getDynamicPagePaths() {
   const sections: any = getFileNamesInDirectory();
   const allCategories: any = getCategories(sections);
   const allPosts = getPosts(allCategories);
 
-  const pathToRepoPage = [{ params: { slug: [] } }];
+  const pathToContentPage = [{ params: { slug: [] } }];
 
   const pathToSectionPage = sections.map((section: string) => ({
     params: {
@@ -34,7 +34,7 @@ export function getDynamicPagePaths() {
   }));
 
   return {
-    pathToRepoPage,
+    pathToContentPage,
     pathToSectionPage,
     pathToCategoryPage,
     pathToPostPage,

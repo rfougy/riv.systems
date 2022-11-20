@@ -4,19 +4,19 @@ import type {
   GetStaticPropsContext,
   NextPage,
 } from "next";
-import RepoPage from "../../components/pages/RepoPage/RepoPage";
-import SectionPage from "../../components/pages/SectionPage/SectionPage";
-import CategoryPage from "../../components/pages/CategoryPage/CategoryPage";
-import PostPage from "../../components/pages/PostPage/PostPage";
+import ContentPage from "../../components/pages/content/ContentPage";
+import SectionPage from "../../components/pages/section/SectionPage";
+import CategoryPage from "../../components/pages/category/CategoryPage";
+import PostPage from "../../components/pages/post/PostPage";
 import IPost from "../../interfaces/IPost";
-import { getContentByDynamicPage } from "../../utils/getContentByDynamicPage";
-import { getDynamicPagePaths } from "../../utils/getDynamicPagePaths";
+import { getContentByDynamicPage } from "../../lib/dynamic-pages/getContentByDynamicPage";
+import { getDynamicPagePaths } from "../../lib/dynamic-pages/getDynamicPagePaths";
 
 const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
   slug,
   content,
 }) => {
-  if (!slug) return <RepoPage slug={slug} content={content} />;
+  if (!slug) return <ContentPage slug={slug} content={content} />;
 
   if (slug?.length === 1)
     return <SectionPage slug={slug} content={content} section={slug[0]} />;
@@ -32,7 +32,7 @@ export default DynamicPage;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const {
-    pathToRepoPage,
+    pathToContentPage,
     pathToSectionPage,
     pathToCategoryPage,
     pathToPostPage,
@@ -40,7 +40,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: [
-      ...pathToRepoPage,
+      ...pathToContentPage,
       ...pathToSectionPage,
       ...pathToCategoryPage,
       ...pathToPostPage,

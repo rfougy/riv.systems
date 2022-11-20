@@ -1,4 +1,4 @@
-import PostCard from "../posts/PostCard/PostCard";
+import PostCard from "../../posts/card/PostCard";
 
 /**
  * @deprecated currently not in use

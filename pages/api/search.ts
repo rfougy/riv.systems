@@ -3,7 +3,7 @@ import {
   getCategories,
   getFileNamesInDirectory,
   getPosts,
-} from "../../utils/getCmsContent";
+} from "../../lib/cms/getCmsContent";
 
 /**
  * @deprecated currently not in use

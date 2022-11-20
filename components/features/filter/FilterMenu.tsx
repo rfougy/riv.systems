@@ -1,8 +1,8 @@
-import ISectionObj from "../../interfaces/ISectionObj";
-import ICategoryObj from "../../interfaces/ICategoryObj";
+import ISectionObj from "../../../interfaces/ISectionObj";
+import ICategoryObj from "../../../interfaces/ICategoryObj";
 
-import filterByCategory from "../../utils/filterByCategory";
-import filterBySection from "../../utils/filterBySection";
+import filterByCategory from "../../../lib/filter/filterByCategory";
+import filterBySection from "../../../lib/filter/filterBySection";
 
 const FilterMenu: React.FC<{
   sections?: ISectionObj[];

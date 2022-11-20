@@ -4,7 +4,7 @@ import {
   getPosts,
   getFileContents,
   getFileNamesInDirectory,
-} from "./getCmsContent";
+} from "../cms/getCmsContent";
 
 import matter from "gray-matter";
 

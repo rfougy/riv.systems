@@ -65,38 +65,47 @@ const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
     const allCoords = [];
 
     for (let i = 0; i < activeCoords.length; i++) {
-      const prevCoord = activeCoords[i - 1];
-      const currCoord = activeCoords[i];
-      const nextCoord = activeCoords[i + 1];
-      const maxXCoord = activeCoords[activeCoords.length - 1][1];
+      const prevCoord: number[] = activeCoords[i - 1];
+      const currCoord: number[] = activeCoords[i];
+      const nextCoord: number[] = activeCoords[i + 1];
+      const maxXCoord: number = activeCoords[activeCoords.length - 1][1];
+
+      const conditionals = {
+        currYCoordNotInAllCoords:
+          prevCoord &&
+          activeCoordsGrouped[0].includes(currCoord) && // currCoord is included in first word of the string
+          prevCoord[0] !== currCoord[0], // yCoord of currCoord is not included in allCoords
+        currCoordInFirstWord:
+          !prevCoord && activeCoordsGrouped[0].includes(currCoord),
+        currAndNextCoordsInSameRowWithGap:
+          nextCoord &&
+          currCoord[0] === nextCoord[0] && // currCoord and nextCoord are on same row
+          nextCoord[1] - currCoord[1] > 1, // there is a gap between currCoord and nextCoord
+        currAndNextCoordsInDiffRowWithGap:
+          nextCoord &&
+          currCoord[0] !== nextCoord[0] && // currCoord and nextCoord are on different rows
+          maxXCoord - currCoord[1] > 1, // there is a gap between currXCoord and maxXCoord
+      };
+
+      let inactiveCoords: number[][];
 
       if (
-        (prevCoord &&
-          activeCoordsGrouped[0].includes(currCoord) && // currCoord is included in first word of the string
-          prevCoord[0] !== currCoord[0]) || // yCoord of currCoord is not included in allCoords
-        (!prevCoord && activeCoordsGrouped[0].includes(currCoord)) // allCoords is empty, implying currCoord has yCoord of 0 & currCoord is included in first word of the string
+        conditionals.currYCoordNotInAllCoords ||
+        conditionals.currCoordInFirstWord
       ) {
-        const inactiveCoords = getPrevGapCoordsHelper(currCoord);
+        inactiveCoords = getPrecGapCoordsHelper(currCoord);
         allCoords.push(...inactiveCoords);
       }
 
       allCoords.push(currCoord);
 
-      if (
-        nextCoord &&
-        currCoord[0] === nextCoord[0] && // currCoord and nextCoord are on same row
-        nextCoord[1] - currCoord[1] > 1 // there is a gap between currCoord and nextCoord
-      ) {
-        const inactiveCoords = getGapCoordsHelper(currCoord, nextCoord[1]);
+      if (conditionals.currAndNextCoordsInSameRowWithGap) {
+        inactiveCoords = getProcGapCoordsHelper(currCoord, nextCoord[1]);
         allCoords.push(...inactiveCoords);
       }
 
-      if (
-        nextCoord &&
-        currCoord[0] !== nextCoord[0] && // currCoord and nextCoord are on different rows
-        maxXCoord - currCoord[1] > 1 // there is a gap between currXCoord and maxXCoord
-      ) {
-        const inactiveCoords = getGapCoordsHelper(currCoord, maxXCoord, true);
+      if (conditionals.currAndNextCoordsInDiffRowWithGap) {
+        inactiveCoords = getProcGapCoordsHelper(currCoord, maxXCoord, true);
         allCoords.push(...inactiveCoords);
       }
     }
@@ -111,7 +120,7 @@ const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
   /**
    * @description finds gap coords where the starting coord of a given row doesn't have xCoord of 0
    */
-  function getPrevGapCoordsHelper(currCoord: number[]) {
+  function getPrecGapCoordsHelper(currCoord: number[]) {
     const gapCoords: number[][] = [];
     let xCoordGap = currCoord[1];
 
@@ -124,7 +133,7 @@ const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
     return gapCoords;
   }
 
-  function getGapCoordsHelper(
+  function getProcGapCoordsHelper(
     currCoord: number[],
     largerXCoord: number,
     isMaxXCoord?: boolean

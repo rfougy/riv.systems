@@ -4,11 +4,17 @@ import "../../ext/string.extensions";
 
 let charStartingXCoord: number = 0;
 
+/**
+ *
+ * @todo create tests and add descriptions + examples
+ *
+ */
 function getActiveCoordsForWord(word: string): number[][] {
   const charArr: string[] = word.split("");
   const dictionaryCharArr = charArr.map((char: string) => {
     const displayDotsDictionaryClone = structuredClone(displayDotsDictionary);
-    const dictionaryChar = displayDotsDictionaryClone[char];
+    const dictionaryChar =
+      displayDotsDictionaryClone[char as keyof typeof displayDotsDictionary];
 
     return dictionaryChar;
   });
@@ -152,7 +158,8 @@ function getStartEndXCoordsPerChar(string: string): number[][] {
 
   const startEndXCoordsPerChar = charArr.map((char): number[] => {
     const displayDotsDictionaryClone = structuredClone(displayDotsDictionary);
-    const dictionaryChar = displayDotsDictionaryClone[char];
+    const dictionaryChar =
+      displayDotsDictionaryClone[char as keyof typeof displayDotsDictionary];
     const dictionaryCharWidth = dictionaryChar.width - 1;
 
     endXCoord = startXCoord + dictionaryCharWidth;
@@ -183,7 +190,7 @@ export function groupCoords(string: string) {
     {}
   );
 
-  allCoords.map((coord: number[], index: number) => {
+  allCoords.map((coord: number[]) => {
     startEndXCoords.map((startEndXCoord) => {
       const startXCoord = startEndXCoord[0];
       const endXCoord = startEndXCoord[1];

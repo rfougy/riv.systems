@@ -13,7 +13,7 @@ DisplayDots Animation:
     a. 3 components used: DotRow and DotCell
 
          // map through each group of coordinates
-         <DotWord>
+         <DotChar>
           <DotRow>
             // map through each coordinate in group
             <DotCell coord={[0,0]}>
@@ -21,7 +21,7 @@ DisplayDots Animation:
             <DotCell coord={[0,2]}>
             ...
           </DotRow>
-         </DotWord>
+         </DotChar>
 
 2.  Method for animation
     1... via DisplayDotsAnimation Component 6. setInterval every x milliseconds, select an inactive coord from list of inactive coordinates.

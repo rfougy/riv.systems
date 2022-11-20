@@ -1,6 +1,6 @@
 import IPost from "../../../interfaces/IPost";
 import { sectionType } from "../../../types/sectionType";
-import PostCard from "../PostCard/PostCard";
+import PostCard from "../card/PostCard";
 import styles from "./PostList.module.css";
 
 const PostList: React.FC<{

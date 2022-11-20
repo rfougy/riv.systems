@@ -1,5 +1,5 @@
-import ICategoryObj from "../interfaces/ICategoryObj";
-import ISectionObj from "../interfaces/ISectionObj";
+import ICategoryObj from "../../interfaces/ICategoryObj";
+import ISectionObj from "../../interfaces/ISectionObj";
 
 export default function filterBySection(
   sectionObj: ISectionObj,

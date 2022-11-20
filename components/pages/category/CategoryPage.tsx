@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Pagination from "../../features/Pagination";
-import PostList from "../../posts/PostList/PostList";
+import Pagination from "../../features/pagination/Pagination";
+import PostList from "../../posts/list/PostList";
 
 const CategoryPage: React.FC<{
   slug: string;

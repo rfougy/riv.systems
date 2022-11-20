@@ -3,7 +3,7 @@ const {
   getCategories,
   getFileNamesInDirectory,
   getPosts,
-} = require("../utils/getCmsContent.ts");
+} = require("../lib/cms/getCmsContent.ts");
 
 function createCacheForPostData() {
   const sections: string[] = getFileNamesInDirectory();

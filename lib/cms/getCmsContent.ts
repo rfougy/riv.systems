@@ -63,7 +63,7 @@ export function getPosts(categories: any) {
         section: section,
         category: categoryTitle,
         frontmatter: frontmatter,
-        path: `/repo/${section}/${categoryTitle}/${formattedFileName}`,
+        path: `/content/${section}/${categoryTitle}/${formattedFileName}`,
       };
     });
 

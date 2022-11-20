@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import PostList from "../../posts/PostList/PostList";
+import PostList from "../../posts/list/PostList";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 import ISectionObj from "../../../interfaces/ISectionObj";
-import FilterMenu from "../../features/FilterMenu";
-import Pagination from "../../features/Pagination";
+import FilterMenu from "../../features/filter/FilterMenu";
+import Pagination from "../../features/pagination/Pagination";
 
-const RepoPage: React.FC<{
+const ContentPage: React.FC<{
   slug: string;
   content: any;
 }> = ({ slug, content }) => {
@@ -136,4 +136,4 @@ const RepoPage: React.FC<{
   );
 };
 
-export default RepoPage;
+export default ContentPage;

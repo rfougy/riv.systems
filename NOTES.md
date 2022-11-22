@@ -1,30 +1,41 @@
-For Post Page:
+# My Dev Notes
+## For Post Page:
 
 - Adding Recommendations Component
 - Adding next/prev post navigation
 
-Other:
+## Other:
 
 - Have search feature work on mobile
 
-DisplayDots Animation:
+## DisplayDots Animation:
 
-1.  Create the HTML structure.
-    a. 3 components used: DotRow and DotCell
+The idea is to have the animation work with responsive design, where:
+  a. the string can have flex wrap (requires segmenting the string into words)
+  b. size can shrink and grow based on viewport
 
-         // map through each group of coordinates
-         <DotChar>
-          <DotRow>
-            // map through each coordinate in group
-            <DotCell coord={[0,0]}>
-            <DotCell coord={[0,1]}>
-            <DotCell coord={[0,2]}>
-            ...
-          </DotRow>
-         </DotChar>
+###### Notes to Self:
+- find out how to work around nested mapping
+- find out how to avoid rerendering for following approach 
 
-2.  Method for animation
-    1... via DisplayDotsAnimation Component 6. setInterval every x milliseconds, select an inactive coord from list of inactive coordinates.
-    a. Set coordToDeactivate state to the selected inactive coord.
-    b. remove the selected inactive coord from the list. 7. clearInterval once list of inactive coordinates is empty.
-    2... via DotCell Component 8. create a useEffect that watches for changes in coordToDeactivate. 9. if the coord for the DotCell matches the coord in coordToDeactivate, change the styling to have the dot "dissapear" in the UI.
+#### Part 1: Refactoring, group coords by word
+
+Refactor the current approach so that the grouped coords are grouped by word. This can be done by referencing grouped coords that are for spaces (a.k.a. custom split method).
+
+#### Part 2: Approach to updating DotCell Styling
+
+##### Context & deactivateCorods
+
+1. Create context that stores the following states: 
+  a. 'deactivatedCoords' (array)
+2. In Component: setInterval every x milliseconds, select an inactiveCoord from inactiveCoords local state.
+  i. Push inactiveCoord to deactivatedCoords context state.
+  ii. In Contex (useEffect hook): remove the inactiveCoord from inactiveCoords local state. 
+  iii. clearInterval once list of inactiveCoords local state is empty.
+
+##### Updating Styles
+
+1. In DotCell Component: Create a local state 'active' with type boolean.
+2. In DotCell Styled Component: Create conditional styling logic based on active state.
+3. In DotCell Component: have a useEffect that watches for changes in deactivatedCoords context state.
+  i. If a change occurs, check if the last coord in the array matches the DotCell's coord. If it does, change the 'active' state to false.

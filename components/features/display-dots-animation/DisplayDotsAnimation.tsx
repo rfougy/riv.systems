@@ -1,3 +1,4 @@
+import _ from "lodash";
 import { useEffect } from "react";
 import { groupCoords as getCoords } from "../../../lib/display-dots-animation/getCoords";
 import IAllCoords from "../../../interfaces/IAllCoords";

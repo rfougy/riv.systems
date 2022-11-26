@@ -1,15 +1,30 @@
 import _ from "lodash";
 import { useEffect } from "react";
-import { groupCoordsByWord as getCoords } from "../../../lib/display-dots-animation/getCoords";
+import {
+  groupCoordsByChar,
+  groupCoordsByWord,
+} from "../../../lib/display-dots-animation/getCoords";
+import { shuffleArr } from "../../../utils/shuffleArr";
 import IAllCoords from "../../../interfaces/IAllCoords";
+import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsContext";
 
 const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
   string = "EE EE",
 }) => {
-  const groupedCoords: IAllCoords[] = Object.values(getCoords(string));
+  const { setInactiveCoords, inactiveCoords } = useDisplayDotsCoordsContext();
+
+  const coordsByWord: any = Object.values(groupCoordsByWord(string));
+  const coordsByChar: IAllCoords[] = Object.values(groupCoordsByChar(string));
+  const allInactiveCoords: number[][] = coordsByChar.reduce(
+    (inactiveCoordsList: number[][], coordGroup: IAllCoords) => {
+      inactiveCoordsList.push(...coordGroup.inactiveCoords);
+      return inactiveCoordsList;
+    },
+    []
+  );
 
   useEffect(() => {
-    console.log("groupedCoords: ", groupedCoords);
+    setInactiveCoords(shuffleArr(allInactiveCoords));
   }, []);
 
   return <></>;

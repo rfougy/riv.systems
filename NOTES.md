@@ -13,17 +13,13 @@ The idea is to have the animation work with responsive design, where:
 - find out how to work around nested mapping
 - find out how to avoid rerendering for following approach 
 
-#### Part 1: Refactoring, group coords by word
-
-Refactor the current approach so that the grouped coords are grouped by word. This can be done by referencing grouped coords that are for spaces (a.k.a. custom split method).
-
 #### Part 2: Approach to updating DotCell Styling
 
 ##### Context & deactivateCorods
 
-1. Create context that stores the following states: 
+[X] 1. Create context that stores the following states: 
   a. 'deactivatedCoords' (array)
-2. In Context: setInterval every x milliseconds, select an inactiveCoord from inactiveCoords local state.
+[X] 2. In Context: setInterval every x milliseconds, select an inactiveCoord from inactiveCoords local state.
   i. Push inactiveCoord to deactivatedCoords context state.
   ii. In Context (useEffect hook): remove the inactiveCoord from inactiveCoords context state. 
   iii. clearInterval once list of inactiveCoords context state is empty.

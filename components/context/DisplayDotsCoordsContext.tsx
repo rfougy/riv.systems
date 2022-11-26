@@ -8,24 +8,26 @@ export const useDisplayDotsCoordsContext = () =>
 const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [deactivatedCoords, setDeactivatedCoords] = useState<
-    number[][] | undefined
-  >(undefined);
+  const [deactivatedCoords, setDeactivatedCoords] = useState<number[][] | any>(
+    []
+  );
   const [inactiveCoords, setInactiveCoords] = useState<number[][] | undefined>(
     undefined
   );
   const [inactiveCoordsInContext, setInactiveCoordsInContext] =
     useState<boolean>(false);
 
-  const [countdown, setCountdown] = useState<number>(5);
   function displayDotsAnimeCallback() {
-    if (inactiveCoordsInContext && countdown > 0) {
-      setCountdown((prevCountdown) => prevCountdown - 1);
-      console.log("COUNTDOWN: ", countdown);
+    if (inactiveCoordsInContext && inactiveCoords?.length) {
+      const inactiveCoord = inactiveCoords?.pop();
+
+      deactivatedCoords.length
+        ? setDeactivatedCoords((prev: number[][]) => [...prev, inactiveCoord])
+        : setDeactivatedCoords([inactiveCoord]);
     }
   }
 
-  useInterval(displayDotsAnimeCallback, 1000);
+  useInterval(displayDotsAnimeCallback, 100);
 
   return (
     <DisplayDotsCoordsContext.Provider

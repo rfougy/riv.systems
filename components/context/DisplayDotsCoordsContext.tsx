@@ -1,4 +1,5 @@
-import React, { createContext, useState, useEffect, useContext } from "react";
+import React, { createContext, useState, useContext } from "react";
+import { useInterval } from "../../hooks/useInterval";
 
 export const DisplayDotsCoordsContext = createContext<any | null>(null);
 export const useDisplayDotsCoordsContext = () =>
@@ -13,32 +14,18 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
   const [inactiveCoords, setInactiveCoords] = useState<number[][] | undefined>(
     undefined
   );
+  const [inactiveCoordsInContext, setInactiveCoordsInContext] =
+    useState<boolean>(false);
 
   const [countdown, setCountdown] = useState<number>(5);
-  let timeout: any;
-  let test = 5;
-
-  /**
-   * @todo change approach to factor in state
-   * @see https://eight-bites.blog/en/2021/05/setinterval-setstate/
-   */
-  function triggerDisplayDotsAnimation() {
-    console.log("TRIGGER!");
-    timeout = setInterval(() => {
-      if (test > 0) {
-        setCountdown((prev) => prev--);
-        console.log("Delayed for 1 second. Countdown: ", test);
-        test--;
-      } else {
-        clearInterval(timeout);
-      }
-    }, 1000);
+  function displayDotsAnimeCallback() {
+    if (inactiveCoordsInContext && countdown > 0) {
+      setCountdown((prevCountdown) => prevCountdown - 1);
+      console.log("COUNTDOWN: ", countdown);
+    }
   }
 
-  useEffect(() => {
-    console.log("CONTEXT: inactiveCoords: ", inactiveCoords);
-    if (inactiveCoords) triggerDisplayDotsAnimation();
-  }, [inactiveCoords]);
+  useInterval(displayDotsAnimeCallback, 1000);
 
   return (
     <DisplayDotsCoordsContext.Provider
@@ -47,6 +34,7 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
         deactivatedCoords,
         setInactiveCoords,
         setDeactivatedCoords,
+        setInactiveCoordsInContext,
       }}
     >
       {children}

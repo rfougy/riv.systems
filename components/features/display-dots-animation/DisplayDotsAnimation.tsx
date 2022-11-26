@@ -11,7 +11,8 @@ import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsCont
 const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
   string = "EE EE",
 }) => {
-  const { setInactiveCoords, inactiveCoords } = useDisplayDotsCoordsContext();
+  const { setInactiveCoords, inactiveCoords, setInactiveCoordsInContext } =
+    useDisplayDotsCoordsContext();
 
   const coordsByWord: any = Object.values(groupCoordsByWord(string));
   const coordsByChar: IAllCoords[] = Object.values(groupCoordsByChar(string));
@@ -25,6 +26,7 @@ const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
 
   useEffect(() => {
     setInactiveCoords(shuffleArr(allInactiveCoords));
+    setInactiveCoordsInContext(true);
   }, []);
 
   return <></>;

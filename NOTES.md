@@ -1,12 +1,7 @@
 # My Dev Notes
-## For Post Page:
+## Refactoring:
 
-- Adding Recommendations Component
-- Adding next/prev post navigation
-
-## Other:
-
-- Have search feature work on mobile
+- optimize section and content pages (filtering and pagination redundancy)
 
 ## DisplayDots Animation:
 
@@ -28,10 +23,10 @@ Refactor the current approach so that the grouped coords are grouped by word. Th
 
 1. Create context that stores the following states: 
   a. 'deactivatedCoords' (array)
-2. In Component: setInterval every x milliseconds, select an inactiveCoord from inactiveCoords local state.
+2. In Context: setInterval every x milliseconds, select an inactiveCoord from inactiveCoords local state.
   i. Push inactiveCoord to deactivatedCoords context state.
-  ii. In Contex (useEffect hook): remove the inactiveCoord from inactiveCoords local state. 
-  iii. clearInterval once list of inactiveCoords local state is empty.
+  ii. In Context (useEffect hook): remove the inactiveCoord from inactiveCoords context state. 
+  iii. clearInterval once list of inactiveCoords context state is empty.
 
 ##### Updating Styles
 

@@ -173,7 +173,7 @@ function getStartEndXCoordsPerChar(string: string): number[][] {
   return startEndXCoordsPerChar;
 }
 
-export function groupCoords(string: string) {
+export function groupCoordsByChar(string: string) {
   const { allCoords, activeCoords, inactiveCoords }: IAllCoords =
     getAllCoords(string);
   const startEndXCoords = getStartEndXCoordsPerChar(string);
@@ -216,6 +216,37 @@ export function groupCoords(string: string) {
   });
 
   return groupedCoordsHashtable;
+}
+
+export function groupCoordsByWord(string: string) {
+  const groupedCoordsByChar = Object.values(groupCoordsByChar(string));
+
+  const groupedCoordsByWord: any[] = [];
+  let groupedWord: any[] = [];
+
+  groupedCoordsByChar.map((coordGroup: any, index: number) => {
+    const isWhiteSpace: boolean = !coordGroup.activeCoords.length;
+    const isLastCoordGroupInArr: boolean = index === groupedCoordsByChar.length - 1;
+
+    if (!isWhiteSpace && isLastCoordGroupInArr) {
+      groupedWord.push(coordGroup);
+      groupedCoordsByWord.push(groupedWord);
+      return;
+    }
+
+    if (!isWhiteSpace) {
+      groupedWord.push(coordGroup);
+      return;
+    }
+
+    if (isWhiteSpace) {
+      groupedCoordsByWord.push(groupedWord);
+      groupedWord = [];
+      return;
+    }
+  });
+
+  return groupedCoordsByWord;
 }
 
 function isBetweenXCoordRangeHelper(

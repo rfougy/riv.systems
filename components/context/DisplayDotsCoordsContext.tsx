@@ -24,7 +24,11 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
       deactivatedCoords.length
         ? setDeactivatedCoords((prev: number[][]) => [...prev, inactiveCoord])
         : setDeactivatedCoords([inactiveCoord]);
+    } else {
+      return;
     }
+    console.log("INACTIVE COORDS LENGTH: ", inactiveCoords.length);
+    console.log("DEACTIVE COORDS LENGTH: ", deactivatedCoords.length);
   }
 
   useInterval(displayDotsAnimeCallback, 100);

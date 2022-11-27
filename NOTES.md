@@ -15,15 +15,6 @@ The idea is to have the animation work with responsive design, where:
 
 #### Part 2: Approach to updating DotCell Styling
 
-##### Context & deactivateCorods
-
-[X] 1. Create context that stores the following states: 
-  a. 'deactivatedCoords' (array)
-[X] 2. In Context: setInterval every x milliseconds, select an inactiveCoord from inactiveCoords local state.
-  i. Push inactiveCoord to deactivatedCoords context state.
-  ii. In Context (useEffect hook): remove the inactiveCoord from inactiveCoords context state. 
-  iii. clearInterval once list of inactiveCoords context state is empty.
-
 ##### Updating Styles
 
 1. In DotCell Component: Create a local state 'active' with type boolean.

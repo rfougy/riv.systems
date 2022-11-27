@@ -2,6 +2,7 @@ import { displayDotsDictionary } from "../../dictionaries/displayDotsDictionary"
 import IAllCoords from "../../interfaces/IAllCoords";
 import "../../ext/string.extensions";
 import { structuredClone } from "../../utils/structuredClone";
+import _ from "lodash";
 
 let charStartingXCoord: number = 0;
 
@@ -183,6 +184,7 @@ export function groupCoordsByChar(string: string) {
       const coordAsKey = coord.join("-");
       ht[coordAsKey] = {
         allCoords: [],
+        allCoordsByRow: [],
         activeCoords: [],
         inactiveCoords: [],
       };
@@ -215,10 +217,17 @@ export function groupCoordsByChar(string: string) {
     });
   });
 
+  for (let key in groupedCoordsHashtable) {
+    groupedCoordsHashtable[key].allCoordsByRow = _.groupBy(
+      groupedCoordsHashtable[key].allCoords,
+      (coord) => coord[0]
+    );
+  }
+
   return groupedCoordsHashtable;
 }
 
-export function groupCoordsByWord(string: string) {
+export function groupCoordsByWordAndSpace(string: string) {
   const groupedCoordsByChar = Object.values(groupCoordsByChar(string));
 
   const groupedCoordsByWord: any[] = [];
@@ -226,7 +235,8 @@ export function groupCoordsByWord(string: string) {
 
   groupedCoordsByChar.map((coordGroup: any, index: number) => {
     const isWhiteSpace: boolean = !coordGroup.activeCoords.length;
-    const isLastCoordGroupInArr: boolean = index === groupedCoordsByChar.length - 1;
+    const isLastCoordGroupInArr: boolean =
+      index === groupedCoordsByChar.length - 1;
 
     if (!isWhiteSpace && isLastCoordGroupInArr) {
       groupedWord.push(coordGroup);
@@ -241,6 +251,7 @@ export function groupCoordsByWord(string: string) {
 
     if (isWhiteSpace) {
       groupedCoordsByWord.push(groupedWord);
+      groupedCoordsByWord.push([coordGroup]);
       groupedWord = [];
       return;
     }

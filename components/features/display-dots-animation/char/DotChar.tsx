@@ -1,21 +1,20 @@
 import { useEffect } from "react";
-import DotRow from "./DotRow";
+import DotRow from "../row/DotRow";
+import * as S from "./DotChar.styled";
 
 const DotChar: React.FC<{ char: any }> = ({ char }) => {
-  const { allCoordsByRow } = char;
-
-  const allCoordsByRowVals = Object.values(allCoordsByRow);
+  const allCoordsByRow = Object.values(char.allCoordsByRow);
 
   useEffect(() => {
     console.log("CHAR: ", char);
   }, []);
 
   return (
-    <div>
-      {allCoordsByRowVals.map((coordRow: any, index: number) => (
+    <S.Container>
+      {allCoordsByRow.map((coordRow: any, index: number) => (
         <DotRow key={index} coordRow={coordRow} />
       ))}
-    </div>
+    </S.Container>
   );
 };
 

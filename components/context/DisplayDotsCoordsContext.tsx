@@ -14,7 +14,7 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
   const [inactiveCoords, setInactiveCoords] = useState<number[][] | undefined>(
     undefined
   );
-  const [inactiveCoordsInContext, setInactiveCoordsInContext] =
+  const [inactiveCoordsInContext, setInactiveCoordsIsInContext] =
     useState<boolean>(false);
 
   function displayDotsAnimeCallback() {
@@ -27,8 +27,6 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
     } else {
       return;
     }
-    // console.log("INACTIVE COORDS LENGTH: ", inactiveCoords);
-    // console.log("DEACTIVE COORDS LENGTH: ", deactivatedCoords);
   }
 
   useInterval(displayDotsAnimeCallback, 100);
@@ -36,11 +34,9 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
   return (
     <DisplayDotsCoordsContext.Provider
       value={{
-        inactiveCoords,
         deactivatedCoords,
         setInactiveCoords,
-        setDeactivatedCoords,
-        setInactiveCoordsInContext,
+        setInactiveCoordsIsInContext,
       }}
     >
       {children}

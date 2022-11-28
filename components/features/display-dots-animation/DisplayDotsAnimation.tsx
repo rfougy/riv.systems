@@ -7,12 +7,14 @@ import {
 import { shuffleArr } from "../../../utils/shuffleArr";
 import IAllCoords from "../../../interfaces/IAllCoords";
 import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsContext";
-import DotWord from "./DotWord";
+import DotWord from "./word/DotWord";
+
+import * as S from "./DisplayDotsAnimation.styled";
 
 const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
   string = "EE EE",
 }) => {
-  const { setInactiveCoords, inactiveCoords, setInactiveCoordsInContext } =
+  const { setInactiveCoords, setInactiveCoordsIsInContext } =
     useDisplayDotsCoordsContext();
 
   const coordsByWordAndSpace: any = Object.values(
@@ -29,16 +31,16 @@ const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
 
   useEffect(() => {
     setInactiveCoords(shuffleArr(allInactiveCoords));
-    setInactiveCoordsInContext(true);
+    setInactiveCoordsIsInContext(true);
     console.log("ALL WORDS: ", coordsByWordAndSpace);
   }, []);
 
   return (
-    <div>
+    <S.Container>
       {coordsByWordAndSpace.map((wordOrSpace: any, index: number) => (
         <DotWord key={index} wordOrSpace={wordOrSpace} />
       ))}
-    </div>
+    </S.Container>
   );
 };
 

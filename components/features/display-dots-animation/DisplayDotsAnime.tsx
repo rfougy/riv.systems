@@ -11,16 +11,16 @@ import DotWord from "./word/DotWord";
 
 import * as S from "./DisplayDotsAnime.styled";
 
-const DisplayDotsAnime: React.FC<{ string?: string }> = ({
-  string = "RIV.SYSTEMS",
+const DisplayDotsAnime: React.FC<{ text?: string }> = ({
+  text = "RIV.SYSTEMS",
 }) => {
   const { setInactiveCoords, setInactiveCoordsIsInContext } =
     useDisplayDotsCoordsContext();
 
   const coordsByWordAndSpace: any = Object.values(
-    groupCoordsByWordAndSpace(string)
+    groupCoordsByWordAndSpace(text)
   );
-  const coordsByChar: IAllCoords[] = Object.values(groupCoordsByChar(string));
+  const coordsByChar: IAllCoords[] = Object.values(groupCoordsByChar(text));
   const allInactiveCoords: number[][] = coordsByChar.reduce(
     (inactiveCoordsList: number[][], coordGroup: IAllCoords) => {
       inactiveCoordsList.push(...coordGroup.inactiveCoords);
@@ -32,7 +32,6 @@ const DisplayDotsAnime: React.FC<{ string?: string }> = ({
   useEffect(() => {
     setInactiveCoords(shuffleArr(allInactiveCoords));
     setInactiveCoordsIsInContext(true);
-    console.log("ALL WORDS: ", coordsByWordAndSpace);
   }, []);
 
   return (

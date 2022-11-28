@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDisplayDotsCoordsContext } from "../../../context/DisplayDotsCoordsContext";
 import * as S from "./DotCell.styled";
 
-const DotCell: React.FC<{ coord: any }> = ({ coord }) => {
+const DotCell: React.FC<{ coord: number[] }> = ({ coord }) => {
   const [isDeactivated, setIsDeactivated] = useState<boolean>(false);
 
   const { deactivatedCoords: dCoords } = useDisplayDotsCoordsContext();

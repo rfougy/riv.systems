@@ -1,6 +1,5 @@
 import Markdown from "markdown-to-jsx";
 import Image from "next/image";
-import { useEffect } from "react";
 import { dateToStr } from "../../../utils/dateToStr";
 import DisplayDotsAnime from "../../features/display-dots-animation/DisplayDotsAnime";
 
@@ -27,7 +26,7 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
             <p>{dateAsStr}</p>
           </div>
         </div>
-        <DisplayDotsAnime />
+        <DisplayDotsAnime text={"SYS"} />
         <Image src={coverImage} alt="" width={500} height={500} />
       </div>
       <Markdown>{postContent}</Markdown>

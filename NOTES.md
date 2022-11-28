@@ -10,3 +10,4 @@
 - create placeholder image in scenario where user is offline
 - have dots animation wrap
 - remove category and section from frontmatter, refer strictly to slug whenever referencing caategory and/or section
+- refactor: replacing any with strict types

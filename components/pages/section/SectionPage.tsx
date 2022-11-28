@@ -86,10 +86,6 @@ const SectionPage: React.FC<{
     }
   }, [categoryFilters, content]);
 
-  useEffect(() => {
-    console.log(section);
-  }, []);
-
   return (
     <div>
       <SH.Title>Section: {sectionAsTitle}</SH.Title>

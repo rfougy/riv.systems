@@ -8,7 +8,7 @@ export const useDisplayDotsCoordsContext = () =>
 const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [deactivatedCoords, setDeactivatedCoords] = useState<number[][] | any>(
+  const [deactivatedCoords, setDeactivatedCoords] = useState<number[][] | any[]>(
     []
   );
   const [inactiveCoords, setInactiveCoords] = useState<number[][] | undefined>(

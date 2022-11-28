@@ -29,7 +29,7 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
     }
   }
 
-  useInterval(displayDotsAnimeCallback, 25);
+  useInterval(displayDotsAnimeCallback, 20);
 
   return (
     <DisplayDotsCoordsContext.Provider

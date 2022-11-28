@@ -9,9 +9,9 @@ import IAllCoords from "../../../interfaces/IAllCoords";
 import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsContext";
 import DotWord from "./word/DotWord";
 
-import * as S from "./DisplayDotsAnimation.styled";
+import * as S from "./DisplayDotsAnime.styled";
 
-const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
+const DisplayDotsAnime: React.FC<{ string?: string }> = ({
   string = "RIV.SYSTEMS",
 }) => {
   const { setInactiveCoords, setInactiveCoordsIsInContext } =
@@ -44,4 +44,4 @@ const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
   );
 };
 
-export default DisplayDotsAnimation;
+export default DisplayDotsAnime;

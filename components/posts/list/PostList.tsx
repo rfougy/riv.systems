@@ -4,15 +4,10 @@ import PostCard from "../card/PostCard";
 import styles from "./PostList.module.css";
 
 const PostList: React.FC<{
-  slug: string;
   content: any;
-  section?: sectionType | string;
-}> = ({ slug, content, section }) => {
-  const pageTitle: string | undefined = !slug ? section : slug[1];
-
+}> = ({ content }) => {
   return content ? (
     <div>
-      <div className={styles.title}>{pageTitle}</div>
       <div className={styles.list}>
         {content.map((singleContent: any, index: number) => {
           const { path, frontmatter } = singleContent;

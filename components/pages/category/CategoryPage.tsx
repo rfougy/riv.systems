@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react";
 import Pagination from "../../features/pagination/Pagination";
 import PostList from "../../posts/list/PostList";
-import * as SH from "../../../styles/DynamicPage.styled";
+import * as SH from "../../../styles/shared/DynamicPage.styled";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 
 const CategoryPage: React.FC<{
-  slug: string;
+  category: string;
   content: any;
-}> = ({ slug, content }) => {
+}> = ({ category, content }) => {
   // states for pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [postCardsPerPage, setPostCardsPerPage] = useState<number>(2);
 
-  const category: string = slug[1];
   const categoryAsTitle: string = capitalizeFirstChar(category);
 
   // deducting the current PostCards for pagination
@@ -26,10 +25,6 @@ const CategoryPage: React.FC<{
   useEffect(() => {
     setCurrentPage(1);
   }, [postCardsPerPage, content]);
-
-  useEffect(() => {
-    console.log(slug);
-  });
 
   return (
     <div>

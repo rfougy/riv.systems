@@ -4,12 +4,11 @@ import ICategoryObj from "../../../interfaces/ICategoryObj";
 import ISectionObj from "../../../interfaces/ISectionObj";
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
-import * as SH from "../../../styles/DynamicPage.styled";
+import * as SH from "../../../styles/shared/DynamicPage.styled";
 
 const ContentPage: React.FC<{
-  slug: string;
   content: any;
-}> = ({ slug, content }) => {
+}> = ({ content }) => {
   const [sectionFilters, setSectionFilters] = useState<ISectionObj[]>([]);
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
   const [filteredContent, setFilteredContent] = useState<any>(content);

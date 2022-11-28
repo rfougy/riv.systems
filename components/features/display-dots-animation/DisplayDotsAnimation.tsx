@@ -12,7 +12,7 @@ import DotWord from "./word/DotWord";
 import * as S from "./DisplayDotsAnimation.styled";
 
 const DisplayDotsAnimation: React.FC<{ string?: string }> = ({
-  string = "EE EE",
+  string = "RIV.SYSTEMS",
 }) => {
   const { setInactiveCoords, setInactiveCoordsIsInContext } =
     useDisplayDotsCoordsContext();

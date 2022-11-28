@@ -1,25 +1,25 @@
 import { useEffect, useState } from "react";
 import { useDisplayDotsCoordsContext } from "../../../context/DisplayDotsCoordsContext";
 import * as S from "./DotCell.styled";
-import _ from "lodash";
 
 const DotCell: React.FC<{ coord: any }> = ({ coord }) => {
   const [isDeactivated, setIsDeactivated] = useState<boolean>(false);
 
-  const { deactivatedCoords } = useDisplayDotsCoordsContext();
+  const { deactivatedCoords: dCoords } = useDisplayDotsCoordsContext();
 
   useEffect(() => {
-    console.log("COORD: ", coord);
-  }, []);
+    const latestDCoord: number[] | undefined = dCoords
+      ? dCoords[dCoords.length - 1]
+      : undefined;
+    const coordMatchesDCoord: boolean | undefined =
+      latestDCoord &&
+      latestDCoord[0] === coord[0] &&
+      latestDCoord[1] === coord[1];
 
-  useEffect(() => {
-    const coordInDeactivatedList = _.includes(deactivatedCoords, coord);
-
-    if (coordInDeactivatedList) {
-      console.log("HIT");
+    if (coordMatchesDCoord) {
       setIsDeactivated(true);
     }
-  }, [coord, deactivatedCoords]);
+  }, [coord, dCoords]);
 
   return <S.Dot isDeactivated={isDeactivated} />;
 };

@@ -21,6 +21,6 @@ export const Margin = styled.p`
 export const Button = styled.button`
   border: none;
   padding: 0.5rem;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
 `;

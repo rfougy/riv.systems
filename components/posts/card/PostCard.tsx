@@ -1,8 +1,6 @@
 import Link from "next/link";
 import * as S from "./PostCard.styled";
-import * as G from "../../../styles/Globals.styled";
 import Image from "next/image";
-import { useEffect } from "react";
 
 const PostCard: React.FC<{
   path: string;
@@ -29,11 +27,11 @@ const PostCard: React.FC<{
           height={239}
           objectFit="cover"
         />{" "}
-        <G.H2>{title}</G.H2>
-        <G.H2>{formattedDatePublished}</G.H2>
-        <G.H2>
+        <h2>{title}</h2>
+        <h2>{formattedDatePublished}</h2>
+        <h2>
           {section} &gt; {category}
-        </G.H2>
+        </h2>
       </S.Container>
     </Link>
   );

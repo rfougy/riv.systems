@@ -5,6 +5,10 @@ import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import { getFileNamesInDirectory } from "../lib/cms/getCmsContent";
 
+import "@fontsource/roboto-mono/400.css";
+import "@fontsource/roboto-mono/500.css";
+import "@fontsource/roboto-mono/700.css";
+
 const MyApp = (props: any) => {
   const { Component, pageProps }: AppProps = props;
 

@@ -1,7 +1,7 @@
 import Markdown from "markdown-to-jsx";
 import Image from "next/image";
 import { dateToStr } from "../../../utils/dateToStr";
-import DisplayDotsAnime from "../../features/display-dots-animation/DisplayDotsAnime";
+import DisplayDotsAnime from "../../features/display-dots-anime/DisplayDotsAnime";
 
 const PostPage: React.FC<{ slug: string; content: any }> = ({
   slug,

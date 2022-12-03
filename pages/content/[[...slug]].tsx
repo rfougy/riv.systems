@@ -16,12 +16,13 @@ const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
   slug,
   content,
 }) => {
-  if (!slug) return <ContentPage slug={slug} content={content} />;
+  if (!slug) return <ContentPage content={content} />;
 
   if (slug?.length === 1)
-    return <SectionPage slug={slug} content={content} section={slug[0]} />;
+    return <SectionPage section={slug[0]} content={content} />;
 
-  if (slug?.length === 2) return <CategoryPage slug={slug} content={content} />;
+  if (slug?.length === 2)
+    return <CategoryPage category={slug[1]} content={content} />;
 
   if (slug?.length === 3) return <PostPage slug={slug} content={content} />;
 

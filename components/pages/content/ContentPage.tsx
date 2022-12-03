@@ -4,11 +4,11 @@ import ICategoryObj from "../../../interfaces/ICategoryObj";
 import ISectionObj from "../../../interfaces/ISectionObj";
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
+import * as SH from "../../../styles/shared/DynamicPage.styled";
 
 const ContentPage: React.FC<{
-  slug: string;
   content: any;
-}> = ({ slug, content }) => {
+}> = ({ content }) => {
   const [sectionFilters, setSectionFilters] = useState<ISectionObj[]>([]);
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
   const [filteredContent, setFilteredContent] = useState<any>(content);
@@ -116,6 +116,7 @@ const ContentPage: React.FC<{
 
   return (
     <div>
+      <SH.Title>Content</SH.Title>
       <FilterMenu
         sections={sections}
         categories={categories}
@@ -124,7 +125,7 @@ const ContentPage: React.FC<{
         setSectionFilters={setSectionFilters}
         setCategoryFilters={setCategoryFilters}
       />
-      <PostList slug={slug} content={currentPostCards} />
+      <PostList content={currentPostCards} />
       <Pagination
         currentPage={currentPage}
         postCardsPerPage={postCardsPerPage}

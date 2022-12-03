@@ -6,13 +6,17 @@ import ISectionObj from "../../../interfaces/ISectionObj";
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
 
+import * as SH from "../../../styles/shared/DynamicPage.styled";
+import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
+
 const SectionPage: React.FC<{
-  slug: string;
-  content: any;
   section: sectionType | string;
-}> = ({ slug, content, section }) => {
+  content: any;
+}> = ({ section, content }) => {
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
   const [filteredContent, setFilteredContent] = useState<any>(content);
+
+  const sectionAsTitle: string = capitalizeFirstChar(section);
 
   // states for pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -84,12 +88,13 @@ const SectionPage: React.FC<{
 
   return (
     <div>
+      <SH.Title>Section: {sectionAsTitle}</SH.Title>
       <FilterMenu
         categories={categories}
         categoryFilters={categoryFilters}
         setCategoryFilters={setCategoryFilters}
       />
-      <PostList slug={slug} content={currentPostCards} section={section} />
+      <PostList content={currentPostCards} />
       <Pagination
         currentPage={currentPage}
         postCardsPerPage={postCardsPerPage}

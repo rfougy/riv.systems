@@ -2,6 +2,7 @@ import { displayDotsDictionary } from "../../dictionaries/displayDotsDictionary"
 import IAllCoords from "../../interfaces/IAllCoords";
 import "../../ext/string.extensions";
 import { structuredClone } from "../../utils/structuredClone";
+import _ from "lodash";
 
 let charStartingXCoord: number = 0;
 
@@ -173,7 +174,7 @@ function getStartEndXCoordsPerChar(string: string): number[][] {
   return startEndXCoordsPerChar;
 }
 
-export function groupCoords(string: string) {
+export function groupCoordsByChar(string: string) {
   const { allCoords, activeCoords, inactiveCoords }: IAllCoords =
     getAllCoords(string);
   const startEndXCoords = getStartEndXCoordsPerChar(string);
@@ -183,6 +184,7 @@ export function groupCoords(string: string) {
       const coordAsKey = coord.join("-");
       ht[coordAsKey] = {
         allCoords: [],
+        allCoordsByRow: [],
         activeCoords: [],
         inactiveCoords: [],
       };
@@ -215,7 +217,47 @@ export function groupCoords(string: string) {
     });
   });
 
+  for (let key in groupedCoordsHashtable) {
+    groupedCoordsHashtable[key].allCoordsByRow = _.groupBy(
+      groupedCoordsHashtable[key].allCoords,
+      (coord) => coord[0]
+    );
+  }
+
   return groupedCoordsHashtable;
+}
+
+export function groupCoordsByWordAndSpace(string: string) {
+  const groupedCoordsByChar = Object.values(groupCoordsByChar(string));
+
+  const groupedCoordsByWord: any[] = [];
+  let groupedWord: any[] = [];
+
+  groupedCoordsByChar.map((coordGroup: any, index: number) => {
+    const isWhiteSpace: boolean = !coordGroup.activeCoords.length;
+    const isLastCoordGroupInArr: boolean =
+      index === groupedCoordsByChar.length - 1;
+
+    if (!isWhiteSpace && isLastCoordGroupInArr) {
+      groupedWord.push(coordGroup);
+      groupedCoordsByWord.push(groupedWord);
+      return;
+    }
+
+    if (!isWhiteSpace) {
+      groupedWord.push(coordGroup);
+      return;
+    }
+
+    if (isWhiteSpace) {
+      groupedCoordsByWord.push(groupedWord);
+      groupedCoordsByWord.push([coordGroup]);
+      groupedWord = [];
+      return;
+    }
+  });
+
+  return groupedCoordsByWord;
 }
 
 function isBetweenXCoordRangeHelper(

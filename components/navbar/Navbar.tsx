@@ -3,7 +3,7 @@ import DisplayDotsAnime from "../features/display-dots-anime/DisplayDotsAnime";
 
 const Navbar: React.FC<{ sections: string[] }> = ({ sections }) => {
   return (
-    <div>
+    <nav>
       {/* <DisplayDotsAnime /> */}
       <p>RIV.SYSTEMS</p>
       <ul>
@@ -15,7 +15,7 @@ const Navbar: React.FC<{ sections: string[] }> = ({ sections }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </nav>
   );
 };
 

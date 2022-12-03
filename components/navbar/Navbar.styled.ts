@@ -5,18 +5,18 @@ export const Nav = styled.nav`
   justify-content: space-between;
 `;
 
-export const MenuItems = styled.ul`
+export const NavMenu = styled.ul`
   list-style-type: none;
   padding: 0;
   margin: 0;
 `;
 
-export const Item = styled.li`
+export const MenuOption = styled.li`
   display: inline-block;
   padding: 0 0.75rem;
 `;
 
-export const Anchor = styled.a`
+export const A = styled.a`
   font-weight: 500;
   text-decoration: none;
 

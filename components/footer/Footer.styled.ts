@@ -1,26 +1,17 @@
 import styled from "@emotion/styled";
 
-export const Nav = styled.nav`
+export const Footer = styled.footer`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 `;
 
 export const MenuItems = styled.ul`
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 auto;
 `;
 
 export const Item = styled.li`
   display: inline-block;
   padding: 0 0.75rem;
-`;
-
-export const Anchor = styled.a`
-  font-weight: 500;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 `;

@@ -9,7 +9,10 @@ const Navbar: React.FC<{ sections?: string[] }> = ({ sections }) => {
   return (
     <Nav>
       {/* <DisplayDotsAnime /> */}
-      <p>RIV.SYSTEMS</p>
+      <Link href={`/`} passHref>
+        <Anchor>RIV.SYSTEMS</Anchor>
+      </Link>
+
       <MenuItems>
         {sectionsList.map((section: string, index: number) => (
           <Item key={index}>

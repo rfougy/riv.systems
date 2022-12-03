@@ -1,4 +1,5 @@
 import ISocials from "../../interfaces/ISocials";
+import { Footer as Foot, MenuItems, Item } from "./Footer.styled";
 
 const socials: ISocials[] = [
   {
@@ -20,19 +21,18 @@ const socials: ISocials[] = [
 ];
 
 const Footer: React.FC = () => {
-
   return (
-    <footer>
-      <ul>
+    <Foot>
+      <MenuItems>
         {socials.map((social: ISocials, index: number) => (
-          <li key={index}>
+          <Item key={index}>
             <a href={social.url} target="_blank" rel="noreferrer">
               {social.title}
             </a>
-          </li>
+          </Item>
         ))}
-      </ul>
-    </footer>
+      </MenuItems>
+    </Foot>
   );
 };
 

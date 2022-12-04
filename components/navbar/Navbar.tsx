@@ -1,24 +1,28 @@
 import Link from "next/link";
 import { sectionType } from "../../types/sectionType";
 import DisplayDotsAnime from "../features/display-dots-anime/DisplayDotsAnime";
+import { Nav, NavMenu, MenuOption, A } from "./Navbar.styled";
 
 const sectionsList: sectionType[] = ["works", "logs", "items", "test"];
 
 const Navbar: React.FC<{ sections?: string[] }> = ({ sections }) => {
   return (
-    <nav>
+    <Nav>
       {/* <DisplayDotsAnime /> */}
-      <p>RIV.SYSTEMS</p>
-      <ul>
+      <Link href={`/`} passHref>
+        <A>RIV.SYSTEMS</A>
+      </Link>
+
+      <NavMenu>
         {sectionsList.map((section: string, index: number) => (
-          <li key={index}>
+          <MenuOption key={index}>
             <Link href={`/content/${section}`} passHref>
-              <a>{section}</a>
+              <A>{section}</A>
             </Link>
-          </li>
+          </MenuOption>
         ))}
-      </ul>
-    </nav>
+      </NavMenu>
+    </Nav>
   );
 };
 

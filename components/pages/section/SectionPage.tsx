@@ -6,7 +6,6 @@ import ISectionObj from "../../../interfaces/ISectionObj";
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
 
-import * as SH from "../../../styles/shared/DynamicPage.styled";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 
 const SectionPage: React.FC<{
@@ -88,7 +87,7 @@ const SectionPage: React.FC<{
 
   return (
     <div>
-      <SH.Title>Section: {sectionAsTitle}</SH.Title>
+      <h1>Section: {sectionAsTitle}</h1>
       <FilterMenu
         categories={categories}
         categoryFilters={categoryFilters}

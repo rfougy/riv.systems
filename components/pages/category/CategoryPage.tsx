@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Pagination from "../../features/pagination/Pagination";
 import PostList from "../../posts/list/PostList";
-import * as SH from "../../../styles/shared/DynamicPage.styled";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 
 const CategoryPage: React.FC<{
@@ -28,7 +27,7 @@ const CategoryPage: React.FC<{
 
   return (
     <div>
-      <SH.Title>Category: {categoryAsTitle}</SH.Title>
+      <h1>Category: {categoryAsTitle}</h1>
       <PostList content={currentPostCards} />
       <Pagination
         currentPage={currentPage}

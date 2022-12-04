@@ -4,7 +4,6 @@ import ICategoryObj from "../../../interfaces/ICategoryObj";
 import ISectionObj from "../../../interfaces/ISectionObj";
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
-import * as SH from "../../../styles/shared/DynamicPage.styled";
 
 const ContentPage: React.FC<{
   content: any;
@@ -116,7 +115,7 @@ const ContentPage: React.FC<{
 
   return (
     <div>
-      <SH.Title>Content</SH.Title>
+      <h1>Content</h1>
       <FilterMenu
         sections={sections}
         categories={categories}

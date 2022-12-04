@@ -1,3 +1,5 @@
+import { Button, Container, PageNav, PageNumber } from "./Pagination.styled";
+
 const Pagination: React.FC<{
   currentPage: number;
   postCardsPerPage: number;
@@ -30,21 +32,19 @@ const Pagination: React.FC<{
   }
 
   return (
-    <nav>
-      <div>
-        <button onClick={() => setCurrentPage(1)}>&lt;&lt;</button>
-        <button onClick={() => handlePrevButtonClick()}>&lt;</button>
-        <div>
-          {currentPage}/{lastPage}
-        </div>
-        <button onClick={() => handleNextButtonClick()}>&gt;</button>
-        <button onClick={() => setCurrentPage(lastPage)}>&gt;&gt;</button>
-      </div>
-      <div>
-        <button onClick={() => setPostCardsPerPage(1)}>1 item per page</button>
-        <button onClick={() => setPostCardsPerPage(2)}>2 items per page</button>
-      </div>
-    </nav>
+    <Container>
+      <PageNav>
+        <Button onClick={() => setCurrentPage(1)}>&lt;&lt;</Button>
+        <Button onClick={() => handlePrevButtonClick()}>&lt;</Button>
+        <PageNumber>Page {currentPage}</PageNumber>
+        <Button onClick={() => handleNextButtonClick()}>&gt;</Button>
+        <Button onClick={() => setCurrentPage(lastPage)}>&gt;&gt;</Button>
+      </PageNav>
+      {/* <div>
+        <Button onClick={() => setPostCardsPerPage(1)}>1 item per page</Button>
+        <Button onClick={() => setPostCardsPerPage(2)}>2 items per page</Button>
+      </div> */}
+    </Container>
   );
 };
 

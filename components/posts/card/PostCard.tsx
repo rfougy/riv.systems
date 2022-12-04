@@ -1,8 +1,8 @@
 import Link from "next/link";
-import * as S from "./PostCard.styled";
-import * as G from "../../../styles/Globals.styled";
+import { Container, Metadata } from "./PostCard.styled";
 import Image from "next/image";
-import { useEffect } from "react";
+import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
+import { dateToStr } from "../../../utils/dateToStr";
 
 const PostCard: React.FC<{
   path: string;
@@ -17,24 +17,26 @@ const PostCard: React.FC<{
     excerpt,
     coverImage: image,
   } = frontmatter;
-  const formattedDatePublished: string = datePublished.replaceAll("-", ".");
+  const dateAsStr: string = dateToStr(new Date(datePublished));
 
   return (
     <Link href={path} passHref>
-      <S.Container>
+      <Container>
         <Image
           src={`${image}`}
           alt={`Cover image for post titled '${title}'`}
           width={300}
-          height={239}
+          height={300}
           objectFit="cover"
-        />{" "}
-        <G.H2>{title}</G.H2>
-        <G.H2>{formattedDatePublished}</G.H2>
-        <G.H2>
-          {section} &gt; {category}
-        </G.H2>
-      </S.Container>
+        />
+        <h2>{title}</h2>
+        <div>
+          <Metadata>{dateAsStr}</Metadata>
+          <Metadata>
+            {capitalizeFirstChar(section)} &gt; {capitalizeFirstChar(category)}
+          </Metadata>
+        </div>
+      </Container>
     </Link>
   );
 };

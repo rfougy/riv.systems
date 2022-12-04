@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
-import PostList from "../../posts/list/PostList";
+import PostGrid from "../../posts/grid/PostGrid";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 import ISectionObj from "../../../interfaces/ISectionObj";
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
+import {
+  FilterAndGridContainer,
+  FilterContainer,
+} from "../../../styles/Layout.styled";
 
 const ContentPage: React.FC<{
   content: any;
@@ -14,7 +18,7 @@ const ContentPage: React.FC<{
 
   // states for pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(2);
+  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(6);
 
   // deducting the current PostCards for pagination
   const indexOfLastPostCard: number = currentPage * postCardsPerPage;
@@ -114,17 +118,21 @@ const ContentPage: React.FC<{
   }, [categoryFilters, sectionFilters, content]);
 
   return (
-    <div>
-      <h1>Content</h1>
-      <FilterMenu
-        sections={sections}
-        categories={categories}
-        sectionFilters={sectionFilters}
-        categoryFilters={categoryFilters}
-        setSectionFilters={setSectionFilters}
-        setCategoryFilters={setCategoryFilters}
-      />
-      <PostList content={currentPostCards} />
+    <>
+      <FilterAndGridContainer>
+        <FilterContainer>
+          <h1>Content</h1>
+          <FilterMenu
+            sections={sections}
+            categories={categories}
+            sectionFilters={sectionFilters}
+            categoryFilters={categoryFilters}
+            setSectionFilters={setSectionFilters}
+            setCategoryFilters={setCategoryFilters}
+          />
+        </FilterContainer>
+        <PostGrid content={currentPostCards} />
+      </FilterAndGridContainer>
       <Pagination
         currentPage={currentPage}
         postCardsPerPage={postCardsPerPage}
@@ -132,7 +140,7 @@ const ContentPage: React.FC<{
         setCurrentPage={setCurrentPage}
         setPostCardsPerPage={setPostCardsPerPage}
       />
-    </div>
+    </>
   );
 };
 

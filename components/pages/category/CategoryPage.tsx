@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Pagination from "../../features/pagination/Pagination";
-import PostList from "../../posts/list/PostList";
+import PostGrid from "../../posts/grid/PostGrid";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 
 const CategoryPage: React.FC<{
@@ -28,7 +28,7 @@ const CategoryPage: React.FC<{
   return (
     <div>
       <h1>Category: {categoryAsTitle}</h1>
-      <PostList content={currentPostCards} />
+      <PostGrid content={currentPostCards} />
       <Pagination
         currentPage={currentPage}
         postCardsPerPage={postCardsPerPage}

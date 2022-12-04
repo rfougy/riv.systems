@@ -5,7 +5,6 @@ export const Container = styled.a`
   text-decoration: none;
 
   width: 100%;
-  max-width: 250px;
   padding: 10px;
 
   &:hover {

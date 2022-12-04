@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { sectionType } from "../../../types/sectionType";
-import PostList from "../../posts/list/PostList";
+import PostGrid from "../../posts/grid/PostGrid";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 import ISectionObj from "../../../interfaces/ISectionObj";
 import FilterMenu from "../../features/filter/FilterMenu";
@@ -93,7 +93,7 @@ const SectionPage: React.FC<{
         categoryFilters={categoryFilters}
         setCategoryFilters={setCategoryFilters}
       />
-      <PostList content={currentPostCards} />
+      <PostGrid content={currentPostCards} />
       <Pagination
         currentPage={currentPage}
         postCardsPerPage={postCardsPerPage}

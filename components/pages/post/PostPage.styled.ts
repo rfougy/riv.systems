@@ -1,5 +1,12 @@
 import styled from "@emotion/styled";
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 50rem;
+`;
+
 export const Metadata = styled.ul`
   list-style-type: none;
   padding: 0;

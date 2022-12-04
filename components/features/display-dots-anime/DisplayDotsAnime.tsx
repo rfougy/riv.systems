@@ -32,7 +32,6 @@ const DisplayDotsAnime: React.FC<{ text?: string }> = ({
   useEffect(() => {
     setInactiveCoords(shuffleArr(allInactiveCoords));
     setInactiveCoordsIsInContext(true);
-    console.log(coordsByWordAndSpace);
   }, []);
 
   return (

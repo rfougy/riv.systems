@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { Container, Metadata, P } from "./PostCard.styled";
+import { Container, Metadata } from "./PostCard.styled";
 import Image from "next/image";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
+import { dateToStr } from "../../../utils/dateToStr";
 
 const PostCard: React.FC<{
   path: string;
@@ -16,7 +17,7 @@ const PostCard: React.FC<{
     excerpt,
     coverImage: image,
   } = frontmatter;
-  const formattedDatePublished: string = datePublished.replaceAll("-", ".");
+  const dateAsStr: string = dateToStr(new Date(datePublished));
 
   return (
     <Link href={path} passHref>
@@ -30,7 +31,7 @@ const PostCard: React.FC<{
         />
         <h2>{title}</h2>
         <div>
-          <Metadata>{formattedDatePublished}</Metadata>
+          <Metadata>{dateAsStr}</Metadata>
           <Metadata>
             {capitalizeFirstChar(section)} &gt; {capitalizeFirstChar(category)}
           </Metadata>

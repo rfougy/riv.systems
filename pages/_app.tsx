@@ -4,7 +4,7 @@ import DisplayDotsCoordsProvider from "../components/context/DisplayDotsCoordsCo
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import { getFileNamesInDirectory } from "../lib/cms/getCmsContent";
-import { Margin } from "../styles/App.styled";
+import { ContentWrap, PageContainer } from "../styles/App.styled";
 
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
@@ -15,11 +15,13 @@ const MyApp = (props: any) => {
 
   return (
     <DisplayDotsCoordsProvider>
-      <Navbar />
-      <Margin>
-        <Component {...pageProps} />
-      </Margin>
-      <Footer />
+      <PageContainer>
+        <Navbar />
+        <ContentWrap>
+          <Component {...pageProps} />
+        </ContentWrap>
+        <Footer />
+      </PageContainer>
     </DisplayDotsCoordsProvider>
   );
 };

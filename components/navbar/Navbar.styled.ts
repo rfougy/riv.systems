@@ -3,6 +3,9 @@ import styled from "@emotion/styled";
 export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  height: 2rem;
 `;
 
 export const NavMenu = styled.ul`

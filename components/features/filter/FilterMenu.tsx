@@ -3,6 +3,8 @@ import ICategoryObj from "../../../interfaces/ICategoryObj";
 
 import filterByCategory from "../../../lib/filter/filterByCategory";
 import filterBySection from "../../../lib/filter/filterBySection";
+import { FilterOption, Title } from "./FilterMenu.styled";
+import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 
 const FilterMenu: React.FC<{
   sections?: ISectionObj[];
@@ -72,24 +74,26 @@ const FilterMenu: React.FC<{
 
             return (
               <div key={index}>
-                <input
-                  type="checkbox"
-                  name={section}
-                  value={section}
-                  //@ts-ignore
-                  checked={sectionInFilterState || ""}
-                  onChange={() =>
-                    filterBySection(
-                      sectionObj,
-                      categories,
-                      sectionFilters,
-                      categoryFilters,
-                      setSectionFilters,
-                      setCategoryFilters
-                    )
-                  }
-                />
-                <label>{section}</label>
+                <FilterOption>
+                  <input
+                    type="checkbox"
+                    name={section}
+                    value={section}
+                    //@ts-ignore
+                    checked={sectionInFilterState || ""}
+                    onChange={() =>
+                      filterBySection(
+                        sectionObj,
+                        categories,
+                        sectionFilters,
+                        categoryFilters,
+                        setSectionFilters,
+                        setCategoryFilters
+                      )
+                    }
+                  />
+                  <Title>{section.toUpperCase()}</Title>
+                </FilterOption>
                 <div>
                   {nestedCategories.map(
                     (categoryObj: ICategoryObj, index: number) => {
@@ -101,7 +105,7 @@ const FilterMenu: React.FC<{
                       );
 
                       return (
-                        <div key={index}>
+                        <FilterOption isCategoryFilter={true} key={index}>
                           <input
                             type="checkbox"
                             name={categoryTitle}
@@ -118,8 +122,8 @@ const FilterMenu: React.FC<{
                               )
                             }
                           />
-                          <label>{categoryTitle}</label>
-                        </div>
+                          <Title>{capitalizeFirstChar(categoryTitle)}</Title>
+                        </FilterOption>
                       );
                     }
                   )}
@@ -139,7 +143,11 @@ const FilterMenu: React.FC<{
             );
 
             return (
-              <div key={index}>
+              <FilterOption
+                isCategoryFilter={true}
+                onlyCategoryFilters={true}
+                key={index}
+              >
                 <input
                   type="checkbox"
                   name={category}
@@ -156,8 +164,8 @@ const FilterMenu: React.FC<{
                     )
                   }
                 />
-                <label>{category}</label>
-              </div>
+                <Title>{capitalizeFirstChar(category)}</Title>
+              </FilterOption>
             );
           })}
         </form>

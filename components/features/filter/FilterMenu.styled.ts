@@ -15,17 +15,28 @@ export const FilterOption = styled.div`
   }) => (isCategoryFilter && !onlyCategoryFilters ? "1rem" : 0)};
 `;
 
+export const Form = styled.form`
+  margin-bottom: 2rem;
+`;
+
+export const Checkbox = styled.input`
+  background-color: red;
+`;
+
 export const Title = styled.label`
   font-size: 0.7rem;
 `;
 
-export const SocialsList = styled.ul`
-  list-style-type: none;
-  padding: 0;
-  margin: 0 0 0 auto;
-`;
+export const Button = styled.button`
+  font-size: 0.7rem;
+  color: #000000;
+  background-color: transparent;
+  border: solid;
 
-export const SocialsLink = styled.li`
-  display: inline-block;
-  padding: 0 0.75rem;
+  padding: 0.25rem 0.5rem;
+  margin-top: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;

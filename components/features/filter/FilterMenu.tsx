@@ -3,9 +3,19 @@ import ICategoryObj from "../../../interfaces/ICategoryObj";
 
 import filterByCategory from "../../../lib/filter/filterByCategory";
 import filterBySection from "../../../lib/filter/filterBySection";
-import { FilterOption, Title } from "./FilterMenu.styled";
+import {
+  Checkbox,
+  FilterOption,
+  Title,
+  Form,
+  Button,
+} from "./FilterMenu.styled";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 
+/**
+ * @todo change structure of checkboxes
+ * @see https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+ */
 const FilterMenu: React.FC<{
   sections?: ISectionObj[];
   categories: ICategoryObj[];
@@ -64,7 +74,7 @@ const FilterMenu: React.FC<{
   return (
     <div>
       {nestedFilteringOptions ? (
-        <form>
+        <Form>
           {nestedFilteringOptions.map((nestedCategories: any, index) => {
             const section = sectionHashtableRef[index];
             const sectionObj: ISectionObj = { section: section };
@@ -131,9 +141,9 @@ const FilterMenu: React.FC<{
               </div>
             );
           })}
-        </form>
+        </Form>
       ) : (
-        <form>
+        <Form>
           {categories.map((categoryObj: ICategoryObj, index: number) => {
             const { category } = categoryObj;
             const categoryInFilterState = categoryFilters.find(
@@ -148,7 +158,7 @@ const FilterMenu: React.FC<{
                 onlyCategoryFilters={true}
                 key={index}
               >
-                <input
+                <Checkbox
                   type="checkbox"
                   name={category}
                   value={category}
@@ -168,9 +178,9 @@ const FilterMenu: React.FC<{
               </FilterOption>
             );
           })}
-        </form>
+        </Form>
       )}
-      <button onClick={() => clearFilters()}>Clear Filters</button>
+      <Button onClick={() => clearFilters()}>Clear Filters</Button>
     </div>
   );
 };

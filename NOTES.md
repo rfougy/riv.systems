@@ -6,6 +6,15 @@
 
 ###### To-Do:
 
+1. General
+- Add Grid Layout to Content Pages
+- Mini displayDots for Navbar
+- Custom Checkbox Styling (look into external libraries)
+
+2. Features
+- PostPage: Next/Prev/Random Post Navigation Component (Might require use of context)
+
+3. Refactor / Optimization
 - use useMemo to avoid rerendering (see: https://alexsidorenko.com/articles)
 - create placeholder image in scenario where user is offline
 - have dots animation wrap

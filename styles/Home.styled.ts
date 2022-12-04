@@ -6,21 +6,25 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50%;
+  min-height: 75vh;
 `;
 
 export const Description = styled.p`
   text-align: center;
-  width: 25em;
 `;
 
-export const Margin = styled.p`
-  margin: 3rem;
+export const Margin = styled.div`
+  margin: 2rem;
 `;
 
 export const Button = styled.button`
   border: none;
   padding: 0.5rem;
+  margin-top: 1rem;
   background-color: #000000;
   color: #ffffff;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;

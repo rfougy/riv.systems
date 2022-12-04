@@ -1,5 +1,9 @@
 import styled from "@emotion/styled";
 
+export const Container = styled.div`
+  margin: 1rem 0;
+`;
+
 export const FilterOption = styled.div`
   display: flex;
   flex-wrap: no-wrap;
@@ -32,11 +36,14 @@ export const Button = styled.button`
   color: #000000;
   background-color: transparent;
   border: solid;
+  border-color: #000000
 
   padding: 0.25rem 0.5rem;
   margin-top: 1rem;
 
   &:hover {
     cursor: pointer;
+    color: #999999;
+    border-color: #999999;
   }
 `;

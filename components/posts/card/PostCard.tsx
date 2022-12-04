@@ -1,5 +1,5 @@
 import Link from "next/link";
-import * as S from "./PostCard.styled";
+import { Container, Metadata, P } from "./PostCard.styled";
 import Image from "next/image";
 
 const PostCard: React.FC<{
@@ -19,20 +19,22 @@ const PostCard: React.FC<{
 
   return (
     <Link href={path} passHref>
-      <S.Container>
+      <Container>
         <Image
           src={`${image}`}
           alt={`Cover image for post titled '${title}'`}
           width={300}
-          height={239}
+          height={300}
           objectFit="cover"
         />{" "}
         <h2>{title}</h2>
-        <h2>{formattedDatePublished}</h2>
-        <h2>
-          {section} &gt; {category}
-        </h2>
-      </S.Container>
+        <div>
+          <Metadata>{formattedDatePublished}</Metadata>
+          <Metadata>
+            {section} &gt; {category}
+          </Metadata>
+        </div>
+      </Container>
     </Link>
   );
 };

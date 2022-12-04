@@ -9,6 +9,7 @@ import {
   Title,
   Form,
   Button,
+  Container,
 } from "./FilterMenu.styled";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 
@@ -72,7 +73,7 @@ const FilterMenu: React.FC<{
     : undefined;
 
   return (
-    <div>
+    <Container>
       {nestedFilteringOptions ? (
         <Form>
           {nestedFilteringOptions.map((nestedCategories: any, index) => {
@@ -181,7 +182,7 @@ const FilterMenu: React.FC<{
         </Form>
       )}
       <Button onClick={() => clearFilters()}>Clear Filters</Button>
-    </div>
+    </Container>
   );
 };
 

@@ -25,3 +25,7 @@ export const Inline = styled.p`
 export const MarginBottom = styled.div`
   margin-bottom: 3rem;
 `;
+
+export const MarginTop = styled.div`
+  margin-top: 3rem;
+`;

@@ -36,11 +36,13 @@ ul {
 
 iframe {
   margin: 3rem 0;
+  aspect-ratio: 16 / 9;
+  height: 100%;
+  width: 100%;
 }
 
-/* article {
+article {
   display: flex;
   flex-direction: column;
-  text-align: start;
   align-items: center;
-} */
+}

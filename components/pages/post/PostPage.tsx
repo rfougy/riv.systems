@@ -9,6 +9,7 @@ import {
   P,
   MarginBottom,
   Container,
+  MarginTop,
 } from "./PostPage.styled";
 
 const PostPage: React.FC<{ slug: string; content: any }> = ({
@@ -39,7 +40,9 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
         height={300}
         objectFit="cover"
       />
-      <Markdown options={{ wrapper: "article" }}>{postContent}</Markdown>
+      <MarginTop>
+        <Markdown options={{ wrapper: "article" }}>{postContent}</Markdown>
+      </MarginTop>
     </Container>
   ) : (
     <div>Error: No content available...</div>

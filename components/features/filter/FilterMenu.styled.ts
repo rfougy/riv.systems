@@ -1,5 +1,9 @@
 import styled from "@emotion/styled";
 
+export const Title = styled.h3`
+  font-size: 1rem;
+`;
+
 export const Container = styled.div`
   margin: 1rem 0;
 `;
@@ -27,7 +31,7 @@ export const Checkbox = styled.input`
   background-color: red;
 `;
 
-export const Title = styled.label`
+export const Label = styled.label`
   font-size: 0.7rem;
 `;
 

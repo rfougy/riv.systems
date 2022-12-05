@@ -92,9 +92,9 @@ const SectionPage: React.FC<{
 
   return (
     <div>
-      <PageTitle>Section: {sectionAsTitle}</PageTitle>
       <FilterAndGridContainer>
         <FilterContainer>
+          <PageTitle>{sectionAsTitle}</PageTitle>
           <FilterMenu
             categories={categories}
             categoryFilters={categoryFilters}

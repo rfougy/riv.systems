@@ -31,10 +31,10 @@ const PostCard: React.FC<{
         />
         <h2>{title}</h2>
         <div>
-          <Metadata>{dateAsStr}</Metadata>
           <Metadata>
             {capitalizeFirstChar(section)} &gt; {capitalizeFirstChar(category)}
           </Metadata>
+          <Metadata>{dateAsStr}</Metadata>
         </div>
       </Container>
     </Link>

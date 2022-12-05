@@ -4,6 +4,12 @@ export const Title = styled.h3`
   font-size: 1rem;
 `;
 
+export const TitleContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 export const Container = styled.div`
   margin: 1rem 0;
 `;
@@ -37,16 +43,9 @@ export const Label = styled.label`
 
 export const Button = styled.button`
   font-size: 0.7rem;
-  color: #000000;
+  font-weight: 500;
+  color: #9c9c9c;
   background-color: transparent;
-  border: solid;
-  border-color: #000000
-
-  padding: 0.25rem 0.5rem;
-  margin-top: 1rem;
-
-  &:hover {
-    color: #999999;
-    border-color: #999999;
-  }
+  border: none;
+  text-decoration: underline;
 `;

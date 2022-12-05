@@ -11,6 +11,7 @@ export const Grid = styled.section`
   }
 
   @media (min-width: 60em) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: ${({ numOfItems }: { numOfItems: number }) =>
+      numOfItems < 3 ? `repeat(${numOfItems}, 1fr)` : "repeat(3, 1fr)"};
   }
 `;

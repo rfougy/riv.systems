@@ -4,8 +4,10 @@ export const Container = styled.a`
   border: 1px #ffffff solid;
   text-decoration: none;
 
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 10px;
+  margin: auto;
 
   &:hover {
     text-decoration: underline;
@@ -13,5 +15,5 @@ export const Container = styled.a`
 `;
 
 export const Metadata = styled.div`
-    margin: none;
+  margin: none;
 `;

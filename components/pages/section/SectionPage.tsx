@@ -7,6 +7,11 @@ import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
 
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
+import {
+  FilterAndGridContainer,
+  FilterContainer,
+  PageTitle,
+} from "../../../styles/Layout.styled";
 
 const SectionPage: React.FC<{
   section: sectionType | string;
@@ -87,20 +92,26 @@ const SectionPage: React.FC<{
 
   return (
     <div>
-      <h1>Section: {sectionAsTitle}</h1>
-      <FilterMenu
-        categories={categories}
-        categoryFilters={categoryFilters}
-        setCategoryFilters={setCategoryFilters}
-      />
-      <PostGrid content={currentPostCards} />
-      <Pagination
-        currentPage={currentPage}
-        postCardsPerPage={postCardsPerPage}
-        totalPostCards={filteredContent.length}
-        setCurrentPage={setCurrentPage}
-        setPostCardsPerPage={setPostCardsPerPage}
-      />
+      <PageTitle>Section: {sectionAsTitle}</PageTitle>
+      <FilterAndGridContainer>
+        <FilterContainer>
+          <FilterMenu
+            categories={categories}
+            categoryFilters={categoryFilters}
+            setCategoryFilters={setCategoryFilters}
+          />
+        </FilterContainer>
+        <section>
+          <PostGrid content={currentPostCards} />
+          <Pagination
+            currentPage={currentPage}
+            postCardsPerPage={postCardsPerPage}
+            totalPostCards={filteredContent.length}
+            setCurrentPage={setCurrentPage}
+            setPostCardsPerPage={setPostCardsPerPage}
+          />
+        </section>
+      </FilterAndGridContainer>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import IPost from "../../../interfaces/IPost";
 import { sectionType } from "../../../types/sectionType";
 import PostCard from "../card/PostCard";
@@ -7,8 +8,10 @@ import { Grid } from "./PostGrid.styled";
 const PostGrid: React.FC<{
   content: any;
 }> = ({ content }) => {
+  useEffect(() => console.log("contentLength: ", content.length));
+
   return content ? (
-    <Grid>
+    <Grid numOfItems={content.length}>
       {content.map((singleContent: any, index: number) => {
         const { path, frontmatter } = singleContent;
 

@@ -15,6 +15,7 @@
 - PostPage: Next/Prev/Random Post Navigation Component (Might require use of context)
 
 3. Refactor / Optimization
+- Combining Content, Section, and Category Page Components into a single component
 - use useMemo to avoid rerendering (see: https://alexsidorenko.com/articles)
 - create placeholder image in scenario where user is offline
 - have dots animation wrap

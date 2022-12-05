@@ -7,6 +7,7 @@ import Pagination from "../../features/pagination/Pagination";
 import {
   FilterAndGridContainer,
   FilterContainer,
+  PageTitle,
 } from "../../../styles/Layout.styled";
 
 const ContentPage: React.FC<{
@@ -118,10 +119,10 @@ const ContentPage: React.FC<{
   }, [categoryFilters, sectionFilters, content]);
 
   return (
-    <>
+    <div>
+      <PageTitle>Content</PageTitle>
       <FilterAndGridContainer>
         <FilterContainer>
-          <h1>Content</h1>
           <FilterMenu
             sections={sections}
             categories={categories}
@@ -131,16 +132,18 @@ const ContentPage: React.FC<{
             setCategoryFilters={setCategoryFilters}
           />
         </FilterContainer>
-        <PostGrid content={currentPostCards} />
+        <section>
+          <PostGrid content={currentPostCards} />
+          <Pagination
+            currentPage={currentPage}
+            postCardsPerPage={postCardsPerPage}
+            totalPostCards={filteredContent.length}
+            setCurrentPage={setCurrentPage}
+            setPostCardsPerPage={setPostCardsPerPage}
+          />
+        </section>
       </FilterAndGridContainer>
-      <Pagination
-        currentPage={currentPage}
-        postCardsPerPage={postCardsPerPage}
-        totalPostCards={filteredContent.length}
-        setCurrentPage={setCurrentPage}
-        setPostCardsPerPage={setPostCardsPerPage}
-      />
-    </>
+    </div>
   );
 };
 

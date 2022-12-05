@@ -6,13 +6,12 @@ export const Title = styled.h3`
 
 export const TitleContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
 `;
 
-export const Container = styled.div`
-  margin: 1rem 0;
-`;
+export const Container = styled.div``;
+
+export const FilterSet = styled.div``;
 
 export const FilterOption = styled.div`
   display: flex;
@@ -30,7 +29,14 @@ export const FilterOption = styled.div`
 `;
 
 export const Form = styled.form`
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 40em) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
 `;
 
 export const Checkbox = styled.input`
@@ -48,4 +54,5 @@ export const Button = styled.button`
   background-color: transparent;
   border: none;
   text-decoration: underline;
+  margin-left: 1rem;
 `;

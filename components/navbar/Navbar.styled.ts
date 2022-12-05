@@ -3,20 +3,25 @@ import styled from "@emotion/styled";
 export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  height: 2rem;
+  margin-top: 1rem;
 `;
 
 export const NavMenu = styled.ul`
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  display: grid;
+  gap: 0rem 2rem;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  @media (max-width: 40em) {
+    gap: 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const MenuOption = styled.li`
-  display: inline-block;
-  padding: 0 0.75rem;
+  display: flex;
+  justify-content: center;
+  justify-self: start;
 `;
 
 export const A = styled.a`

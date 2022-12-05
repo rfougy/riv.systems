@@ -12,6 +12,7 @@ import {
   Container,
   Title,
   TitleContainer,
+  FilterSet,
 } from "./FilterMenu.styled";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 
@@ -90,7 +91,7 @@ const FilterMenu: React.FC<{
             );
 
             return (
-              <div key={index}>
+              <FilterSet key={index}>
                 <FilterOption>
                   <input
                     type="checkbox"
@@ -109,7 +110,7 @@ const FilterMenu: React.FC<{
                       )
                     }
                   />
-                  <Label>{section.toUpperCase()}</Label>
+                  <Label>{capitalizeFirstChar(section)}</Label>
                 </FilterOption>
                 <div>
                   {nestedCategories.map(
@@ -145,7 +146,7 @@ const FilterMenu: React.FC<{
                     }
                   )}
                 </div>
-              </div>
+              </FilterSet>
             );
           })}
         </Form>

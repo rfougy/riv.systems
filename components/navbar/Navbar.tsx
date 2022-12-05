@@ -17,13 +17,13 @@ const Navbar: React.FC<{ sections?: string[] }> = ({ sections }) => {
         {sectionsList.map((section: string, index: number) => (
           <MenuOption key={index}>
             <Link href={`/content/${section}`} passHref>
-              <A>{section.toUpperCase()}</A>
+              <A>{"//" + section.toUpperCase()}</A>
             </Link>
           </MenuOption>
         ))}
         <MenuOption>
           <Link href={`/content`} passHref>
-            <A>ALL</A>
+            <A>{"//" + "ALL"}</A>
           </Link>
         </MenuOption>
       </NavMenu>

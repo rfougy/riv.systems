@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
-import PostList from "../../posts/list/PostList";
+import PostGrid from "../../posts/grid/PostGrid";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 import ISectionObj from "../../../interfaces/ISectionObj";
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
+import {
+  FilterAndGridContainer,
+  FilterContainer,
+  PageTitle,
+} from "../../../styles/Layout.styled";
 
 const ContentPage: React.FC<{
   content: any;
@@ -14,7 +19,7 @@ const ContentPage: React.FC<{
 
   // states for pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(2);
+  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(6);
 
   // deducting the current PostCards for pagination
   const indexOfLastPostCard: number = currentPage * postCardsPerPage;
@@ -115,23 +120,29 @@ const ContentPage: React.FC<{
 
   return (
     <div>
-      <h1>Content</h1>
-      <FilterMenu
-        sections={sections}
-        categories={categories}
-        sectionFilters={sectionFilters}
-        categoryFilters={categoryFilters}
-        setSectionFilters={setSectionFilters}
-        setCategoryFilters={setCategoryFilters}
-      />
-      <PostList content={currentPostCards} />
-      <Pagination
-        currentPage={currentPage}
-        postCardsPerPage={postCardsPerPage}
-        totalPostCards={filteredContent.length}
-        setCurrentPage={setCurrentPage}
-        setPostCardsPerPage={setPostCardsPerPage}
-      />
+      <PageTitle>Content</PageTitle>
+      <FilterAndGridContainer>
+        <FilterContainer>
+          <FilterMenu
+            sections={sections}
+            categories={categories}
+            sectionFilters={sectionFilters}
+            categoryFilters={categoryFilters}
+            setSectionFilters={setSectionFilters}
+            setCategoryFilters={setCategoryFilters}
+          />
+        </FilterContainer>
+        <section>
+          <PostGrid content={currentPostCards} />
+          <Pagination
+            currentPage={currentPage}
+            postCardsPerPage={postCardsPerPage}
+            totalPostCards={filteredContent.length}
+            setCurrentPage={setCurrentPage}
+            setPostCardsPerPage={setPostCardsPerPage}
+          />
+        </section>
+      </FilterAndGridContainer>
     </div>
   );
 };

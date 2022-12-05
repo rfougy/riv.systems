@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import Pagination from "../../features/pagination/Pagination";
-import PostList from "../../posts/list/PostList";
+import PostGrid from "../../posts/grid/PostGrid";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
+import {
+  FilterAndGridContainer,
+  PageTitle,
+} from "../../../styles/Layout.styled";
 
 const CategoryPage: React.FC<{
   category: string;
@@ -27,15 +31,17 @@ const CategoryPage: React.FC<{
 
   return (
     <div>
-      <h1>Category: {categoryAsTitle}</h1>
-      <PostList content={currentPostCards} />
-      <Pagination
-        currentPage={currentPage}
-        postCardsPerPage={postCardsPerPage}
-        totalPostCards={content.length}
-        setCurrentPage={setCurrentPage}
-        setPostCardsPerPage={setPostCardsPerPage}
-      />
+      <PageTitle>Category: {categoryAsTitle}</PageTitle>
+      <section>
+        <PostGrid content={currentPostCards} />
+        <Pagination
+          currentPage={currentPage}
+          postCardsPerPage={postCardsPerPage}
+          totalPostCards={content.length}
+          setCurrentPage={setCurrentPage}
+          setPostCardsPerPage={setPostCardsPerPage}
+        />
+      </section>
     </div>
   );
 };

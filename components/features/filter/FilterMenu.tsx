@@ -6,10 +6,13 @@ import filterBySection from "../../../lib/filter/filterBySection";
 import {
   Checkbox,
   FilterOption,
-  Title,
+  Label,
   Form,
   Button,
   Container,
+  Title,
+  TitleContainer,
+  FilterSet,
 } from "./FilterMenu.styled";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 
@@ -74,6 +77,10 @@ const FilterMenu: React.FC<{
 
   return (
     <Container>
+      <TitleContainer>
+        <Title>Filters</Title>
+        <Button onClick={() => clearFilters()}>Clear</Button>
+      </TitleContainer>
       {nestedFilteringOptions ? (
         <Form>
           {nestedFilteringOptions.map((nestedCategories: any, index) => {
@@ -84,7 +91,7 @@ const FilterMenu: React.FC<{
             );
 
             return (
-              <div key={index}>
+              <FilterSet key={index}>
                 <FilterOption>
                   <input
                     type="checkbox"
@@ -103,12 +110,12 @@ const FilterMenu: React.FC<{
                       )
                     }
                   />
-                  <Title>{section.toUpperCase()}</Title>
+                  <Label>{capitalizeFirstChar(section)}</Label>
                 </FilterOption>
                 <div>
                   {nestedCategories.map(
                     (categoryObj: ICategoryObj, index: number) => {
-                      const { category: categoryTitle } = categoryObj;
+                      const { category: categoryLabel } = categoryObj;
                       const categoryInFilterState = categoryFilters.find(
                         (category) =>
                           category.category === categoryObj.category &&
@@ -119,8 +126,8 @@ const FilterMenu: React.FC<{
                         <FilterOption isCategoryFilter={true} key={index}>
                           <input
                             type="checkbox"
-                            name={categoryTitle}
-                            value={categoryTitle}
+                            name={categoryLabel}
+                            value={categoryLabel}
                             //@ts-ignore
                             checked={categoryInFilterState || ""}
                             onChange={() =>
@@ -133,13 +140,13 @@ const FilterMenu: React.FC<{
                               )
                             }
                           />
-                          <Title>{capitalizeFirstChar(categoryTitle)}</Title>
+                          <Label>{capitalizeFirstChar(categoryLabel)}</Label>
                         </FilterOption>
                       );
                     }
                   )}
                 </div>
-              </div>
+              </FilterSet>
             );
           })}
         </Form>
@@ -175,13 +182,12 @@ const FilterMenu: React.FC<{
                     )
                   }
                 />
-                <Title>{capitalizeFirstChar(category)}</Title>
+                <Label>{capitalizeFirstChar(category)}</Label>
               </FilterOption>
             );
           })}
         </Form>
       )}
-      <Button onClick={() => clearFilters()}>Clear Filters</Button>
     </Container>
   );
 };

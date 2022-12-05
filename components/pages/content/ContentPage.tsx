@@ -120,9 +120,9 @@ const ContentPage: React.FC<{
 
   return (
     <div>
-      <PageTitle>Content</PageTitle>
       <FilterAndGridContainer>
         <FilterContainer>
+          <PageTitle>Content</PageTitle>
           <FilterMenu
             sections={sections}
             categories={categories}

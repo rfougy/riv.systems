@@ -1,27 +1,70 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import DisplayDotsCoordsProvider from "../components/context/DisplayDotsCoordsContext";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
-import { ContentWrap, PageContainer } from "../styles/App.styled";
+import { ContentWrap, PageContainer } from "../styles/pages/App.styled";
+import DisplayDotsCoordsProvider from "../components/context/DisplayDotsCoordsContext";
+
+import { Global, css } from "@emotion/react";
+import { lightTheme, darkTheme } from "../styles/Themes";
+import { ThemeProvider } from "@emotion/react";
 
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
+import { useState } from "react";
 
 const MyApp = (props: any) => {
   const { Component, pageProps }: AppProps = props;
+  const [currTheme, setTheme] = useState<any>(lightTheme);
+
+  function toggleTheme(): void {
+    const newTheme = currTheme.id === lightTheme.id ? darkTheme : lightTheme;
+    setTheme(newTheme);
+  }
+
+  const globalColors = css`
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      color: ${currTheme.primary};
+    }
+
+    body {
+      background-color: ${currTheme.secondary};
+    }
+
+    a {
+      color: ${currTheme.primary};
+    }
+
+    button {
+      color: ${currTheme.primary};
+      background-color: ${currTheme.secondary};
+    }
+
+    label {
+      color: ${currTheme.primary};
+    }
+  `;
 
   return (
-    <DisplayDotsCoordsProvider>
-      <PageContainer>
-        <Navbar />
-        <ContentWrap>
-          <Component {...pageProps} />
-        </ContentWrap>
-        <Footer />
-      </PageContainer>
-    </DisplayDotsCoordsProvider>
+    <ThemeProvider theme={currTheme}>
+      <Global styles={globalColors} />
+      <DisplayDotsCoordsProvider>
+        <PageContainer>
+          <Navbar toggleTheme={toggleTheme} />
+          <ContentWrap>
+            <Component {...pageProps} />
+          </ContentWrap>
+          <Footer />
+        </PageContainer>
+      </DisplayDotsCoordsProvider>
+    </ThemeProvider>
   );
 };
 

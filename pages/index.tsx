@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
 
-import { Container, Description, Margin, Button } from "../styles/Home.styled";
+import { Container, Description, Margin, Button } from "../styles/pages/Home.styled";
 
 const Home: NextPage = () => {
   return (

@@ -21,6 +21,6 @@ export const Button = styled.button`
   border: none;
   padding: 0.5rem;
   margin-top: 1rem;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: ${(props: any) => props.theme.primary};
+  color: ${(props: any) => props.theme.secondary};
 `;

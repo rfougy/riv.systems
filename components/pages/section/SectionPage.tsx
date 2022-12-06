@@ -11,7 +11,7 @@ import {
   FilterAndGridContainer,
   FilterContainer,
   PageTitle,
-} from "../../../styles/Layout.styled";
+} from "../../../styles/Layouts.styled";
 
 const SectionPage: React.FC<{
   section: sectionType | string;

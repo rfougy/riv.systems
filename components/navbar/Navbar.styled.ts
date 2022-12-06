@@ -32,3 +32,15 @@ export const A = styled.a`
     text-decoration: underline;
   }
 `;
+
+export const ThemeTest = styled.div`
+  background-color: ${(props: any) => props.theme.color};
+`;
+
+export const LogoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 3.5rem;
+`;

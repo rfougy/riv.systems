@@ -12,8 +12,6 @@ export const PageNav = styled.nav`
 `;
 
 export const Button = styled.button`
-  color: #000000;
-  background-color: transparent;
   border: none;
 
   &:hover {

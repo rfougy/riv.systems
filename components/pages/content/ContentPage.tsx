@@ -8,7 +8,7 @@ import {
   FilterAndGridContainer,
   FilterContainer,
   PageTitle,
-} from "../../../styles/Layout.styled";
+} from "../../../styles/Layouts.styled";
 
 const ContentPage: React.FC<{
   content: any;

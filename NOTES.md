@@ -29,3 +29,10 @@
 - https://www.section.io/engineering-education/dark-mode-for-react-app-using-context-api-and-hooks/#When-to-use-React's-Context-API-instead-of-Redux
 https://medium.com/lets-make-something-up/creating-light-dark-mode-on-a-react-app-with-context-589a5465f639
 - https://emotion.sh/docs/theming
+
+
+- create context for switching darkMode
+- create button that will trigger the change in global darkMode context\
+
+questions
+- how to make the switch most efficiently across all styling

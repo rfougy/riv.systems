@@ -1,18 +1,28 @@
 import Link from "next/link";
 import { sectionType } from "../../types/sectionType";
 import DisplayDotsAnime from "../features/display-dots-anime/DisplayDotsAnime";
-import { Nav, NavMenu, MenuOption, A } from "./Navbar.styled";
+import ThemeToggle from "../features/theme-toggle/ThemeToggle";
+import {
+  Nav,
+  NavMenu,
+  MenuOption,
+  A,
+  ThemeTest,
+  LogoContainer,
+} from "./Navbar.styled";
 
 const sectionsList: sectionType[] = ["works", "logs", "items", "test"];
 
-const Navbar: React.FC<{ sections?: string[] }> = ({ sections }) => {
+const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
   return (
     <Nav>
       {/* <DisplayDotsAnime /> */}
-      <Link href={`/`} passHref>
-        <A>RIV.SYSTEMS</A>
-      </Link>
-
+      <LogoContainer>
+        <Link href={`/`} passHref>
+          <A>RIV.SYSTEMS</A>
+        </Link>
+        <ThemeToggle toggleTheme={toggleTheme} />
+      </LogoContainer>
       <NavMenu>
         {sectionsList.map((section: string, index: number) => (
           <MenuOption key={index}>

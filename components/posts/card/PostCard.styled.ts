@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 
 export const Container = styled.a`
-  border: 1px #ffffff solid;
   text-decoration: none;
 
   display: flex;

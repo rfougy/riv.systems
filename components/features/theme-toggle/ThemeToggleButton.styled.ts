@@ -12,8 +12,8 @@ export const Container = styled.button`
   justify-content: space-between;
   align-items: center;
 
-  width: 4rem;
-  padding: 0.1rem 0.3rem 0.1rem 0.2rem;
+  width: 2.5rem;
+  padding: 0;
 `;
 
 export const Circle = styled.div`
@@ -29,4 +29,6 @@ export const Title = styled.p`
   background-color: none;
 
   margin: 0;
+  padding: ${(props: any) =>
+    props.theme.id === "light" ? "0 0.6rem 0 0" : "0 0 0 0.6rem"};
 `;

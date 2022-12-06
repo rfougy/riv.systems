@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const Dot = styled.div`
   display: inline-block;
-  background: #000000;
+  background: ${(props: any) => props.theme.primary};
   border-radius: 50%;
   width: 0.5rem;
   opacity: ${({ isDeactivated }: { isDeactivated: boolean }) =>

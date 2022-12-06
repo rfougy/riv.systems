@@ -5,7 +5,7 @@ import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 import {
   FilterAndGridContainer,
   PageTitle,
-} from "../../../styles/Layout.styled";
+} from "../../../styles/Layouts.styled";
 
 const CategoryPage: React.FC<{
   category: string;

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { sectionType } from "../../types/sectionType";
 import DisplayDotsAnime from "../features/display-dots-anime/DisplayDotsAnime";
-import ThemeToggle from "../features/theme-toggle/ThemeToggle";
+import ThemeToggleButton from "../features/theme-toggle/ThemeToggleButton";
 import {
   Nav,
   NavMenu,
@@ -21,19 +21,19 @@ const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
         <Link href={`/`} passHref>
           <A>RIV.SYSTEMS</A>
         </Link>
-        <ThemeToggle toggleTheme={toggleTheme} />
+        <ThemeToggleButton toggleTheme={toggleTheme} />
       </LogoContainer>
       <NavMenu>
         {sectionsList.map((section: string, index: number) => (
           <MenuOption key={index}>
             <Link href={`/content/${section}`} passHref>
-              <A>{"//" + section.toUpperCase()}</A>
+              <A>{"/" + section.toUpperCase()}</A>
             </Link>
           </MenuOption>
         ))}
         <MenuOption>
           <Link href={`/content`} passHref>
-            <A>{"//" + "ALL"}</A>
+            <A>{"/" + "ALL"}</A>
           </Link>
         </MenuOption>
       </NavMenu>

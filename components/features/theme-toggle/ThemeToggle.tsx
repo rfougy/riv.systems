@@ -6,12 +6,10 @@ const ThemeToggle: React.FC<{ toggleTheme: () => void }> = ({
 }) => {
   const { id: theme }: any = useTheme();
 
-  const toggleTitle: string = theme === "light" ? "DARK" : "LIGHT";
-
   return (
     <Container onClick={() => toggleTheme()}>
       <Circle />
-      <Title>{toggleTitle}</Title>
+      <Title>{theme.toUpperCase()}</Title>
     </Container>
   );
 };

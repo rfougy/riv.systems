@@ -2,11 +2,10 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
   display: flex;
-  flex-wrap: no-wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 75vh;
+  min-height: 70vh;
 `;
 
 export const Description = styled.p`
@@ -14,7 +13,7 @@ export const Description = styled.p`
 `;
 
 export const Margin = styled.div`
-  margin: 2rem;
+  margin: 2rem 0;
 `;
 
 export const Button = styled.button`

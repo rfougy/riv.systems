@@ -3,7 +3,12 @@ import Head from "next/head";
 import Link from "next/link";
 import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
 
-import { Container, Description, Margin, Button } from "../styles/pages/Home.styled";
+import {
+  Container,
+  Description,
+  Margin,
+  Button,
+} from "../styles/pages/Home.styled";
 
 const Home: NextPage = () => {
   return (
@@ -13,9 +18,8 @@ const Home: NextPage = () => {
         <DisplayDotsAnime />
       </Margin>
       <Description>
-        I created this website to document the work I’ve made, <br />
-        the experiences and thoughts I’ve had, <br />
-        and the variety of ‘things’ I’ve acquired.
+        I created this website to document <br />
+        my projects, experiences and thoughts.
       </Description>
       <Link href={`/content`} passHref>
         <Button>EXPLORE SYSTEMS</Button>

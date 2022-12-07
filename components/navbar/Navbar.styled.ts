@@ -24,11 +24,12 @@ export const MenuOption = styled.li`
 `;
 
 export const A = styled.a`
-  font-weight: 500;
+  font-weight: ${({ currMenuOption }: { currMenuOption?: boolean }) =>
+    currMenuOption ? 700 : 400};
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
+    font-weight: 700;
   }
 `;
 

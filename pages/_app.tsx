@@ -12,14 +12,23 @@ import { ThemeProvider } from "@emotion/react";
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MyApp = (props: any) => {
   const { Component, pageProps }: AppProps = props;
   const [currTheme, setTheme] = useState<any>(lightTheme);
 
+  useEffect(() => {
+    const themeInLocalStorage = localStorage.getItem("theme");
+
+    if (themeInLocalStorage) {
+      setTheme(JSON.parse(themeInLocalStorage));
+    }
+  }, []);
+
   function toggleTheme(): void {
     const newTheme = currTheme.id === lightTheme.id ? darkTheme : lightTheme;
+    localStorage.setItem("theme", JSON.stringify(newTheme));
     setTheme(newTheme);
   }
 

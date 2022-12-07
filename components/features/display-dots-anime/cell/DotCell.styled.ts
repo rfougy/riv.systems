@@ -3,10 +3,16 @@ import styled from "@emotion/styled";
 export const Dot = styled.div`
   display: inline-block;
   background: ${(props: any) => props.theme.primary};
+  height: 0.425rem;
+  width: 0.425rem;
+  margin: 0.085rem;
   border-radius: 50%;
-  width: 0.5rem;
   opacity: ${({ isDeactivated }: { isDeactivated: boolean }) =>
     isDeactivated ? 0 : 1};
-  height: 0.5rem;
-  margin: 0.1rem;
+
+  @media (max-width: 40em) {
+    height: 0.25rem;
+    width: 0.25rem;
+    margin: 0.05rem;
+  }
 `;

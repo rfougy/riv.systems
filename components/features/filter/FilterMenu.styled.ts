@@ -1,8 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Title = styled.h3`
-  font-size: 1rem;
-`;
+export const Title = styled.h3``;
 
 export const TitleContainer = styled.div`
   display: flex;

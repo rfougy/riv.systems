@@ -9,7 +9,7 @@ import IAllCoords from "../../../interfaces/IAllCoords";
 import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsContext";
 import DotWord from "./word/DotWord";
 
-import * as S from "./DisplayDotsAnime.styled";
+import { Container } from "./DisplayDotsAnime.styled";
 
 const DisplayDotsAnime: React.FC<{ text?: string }> = ({
   text = "RIV.SYSTEMS",
@@ -35,11 +35,11 @@ const DisplayDotsAnime: React.FC<{ text?: string }> = ({
   }, []);
 
   return (
-    <S.Container>
+    <Container>
       {coordsByWordAndSpace.map((wordOrSpace: any, index: number) => (
         <DotWord key={index} wordOrSpace={wordOrSpace} />
       ))}
-    </S.Container>
+    </Container>
   );
 };
 

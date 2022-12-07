@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const ContentWrap = styled.div`
-  margin: 5rem 0;
+  margin: 3rem 0;
   display: flex;
   flex-direction: column;
   flex-wrap: no-wrap;

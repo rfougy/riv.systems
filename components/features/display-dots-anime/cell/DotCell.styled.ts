@@ -3,9 +3,9 @@ import styled from "@emotion/styled";
 export const Dot = styled.div`
   display: inline-block;
   background: ${(props: any) => props.theme.primary};
-  height: 0.5rem;
-  width: 0.5rem;
-  margin: 0.1rem;
+  height: 0.425rem;
+  width: 0.425rem;
+  margin: 0.085rem;
   border-radius: 50%;
   opacity: ${({ isDeactivated }: { isDeactivated: boolean }) =>
     isDeactivated ? 0 : 1};

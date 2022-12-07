@@ -3,8 +3,7 @@ import styled from "@emotion/styled";
 export const Footer = styled.footer`
   display: flex;
   flex-direction: column;
-  margin-top: auto;
-  height: 2rem;
+  justify-content: end;
 `;
 
 export const SocialsList = styled.ul`

@@ -4,6 +4,7 @@ export const Footer = styled.footer`
   display: flex;
   flex-direction: column;
   justify-content: end;
+  margin-top: auto;
 `;
 
 export const SocialsList = styled.ul`

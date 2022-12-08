@@ -24,7 +24,7 @@ export const Circle = styled.div`
   margin: 0.1rem;
 `;
 
-export const Title = styled.p`
+export const Title = styled.h6`
   color: ${(props: any) => props.theme.primary};
   background-color: none;
 

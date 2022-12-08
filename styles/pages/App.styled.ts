@@ -13,15 +13,17 @@ export const PageContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100vh;
-  cursor: crosshair;
 
+  cursor: crosshair;
   &:hover label {
     cursor: crosshair;
   }
-
   &:hover button,
   a,
   input {
     cursor: cell;
+  }
+  &:hover p {
+    cursor: text;
   }
 `;

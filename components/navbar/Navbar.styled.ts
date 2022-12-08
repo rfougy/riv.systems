@@ -16,9 +16,9 @@ export const LogoContainer = styled.div`
 export const NavMenu = styled.ul`
   display: grid;
   gap: 0rem 2rem;
+  height: 100%;
 
   grid-template-columns: repeat(5, 1fr);
-
   @media (max-width: 40em) {
     gap: 0;
     grid-template-columns: repeat(1, 1fr);

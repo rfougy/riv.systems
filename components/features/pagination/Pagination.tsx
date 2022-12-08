@@ -36,7 +36,9 @@ const Pagination: React.FC<{
       <PageNav>
         <Button onClick={() => setCurrentPage(1)}>&lt;&lt;</Button>
         <Button onClick={() => handlePrevButtonClick()}>&lt;</Button>
-        <PageNumber>Page {currentPage}</PageNumber>
+        <PageNumber>
+          Page {currentPage} of {lastPage}
+        </PageNumber>
         <Button onClick={() => handleNextButtonClick()}>&gt;</Button>
         <Button onClick={() => setCurrentPage(lastPage)}>&gt;&gt;</Button>
       </PageNav>

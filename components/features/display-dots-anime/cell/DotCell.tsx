@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDisplayDotsCoordsContext } from "../../../context/DisplayDotsCoordsContext";
-import * as S from "./DotCell.styled";
+import { Dot } from "./DotCell.styled";
 
 const DotCell: React.FC<{ coord: number[] }> = ({ coord }) => {
   const [isDeactivated, setIsDeactivated] = useState<boolean>(false);
@@ -21,7 +21,7 @@ const DotCell: React.FC<{ coord: number[] }> = ({ coord }) => {
     }
   }, [coord, dCoords]);
 
-  return <S.Dot isDeactivated={isDeactivated} />;
+  return <Dot isDeactivated={isDeactivated} />;
 };
 
 export default DotCell;

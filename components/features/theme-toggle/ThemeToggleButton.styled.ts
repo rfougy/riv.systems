@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const Container = styled.button`
-  background-color: none;
+  background-color: ${(props: any) => props.theme.idle};
   border: 0.1rem solid ${(props: any) => props.theme.primary};
   border-radius: 25rem;
 

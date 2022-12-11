@@ -4,7 +4,7 @@
  */
 export const displayDotsDictionary = {
   E: {
-    width: 4,
+    width: 5,
     coordinates: [
       [0, 1],
       [0, 2],
@@ -21,7 +21,7 @@ export const displayDotsDictionary = {
     ],
   },
   I: {
-    width: 3,
+    width: 4,
     coordinates: [
       [0, 0],
       [0, 1],
@@ -35,7 +35,7 @@ export const displayDotsDictionary = {
     ],
   },
   M: {
-    width: 5,
+    width: 6,
     coordinates: [
       [0, 0],
       [0, 4],
@@ -53,7 +53,7 @@ export const displayDotsDictionary = {
     ],
   },
   R: {
-    width: 4,
+    width: 5,
     coordinates: [
       [0, 0],
       [0, 1],
@@ -70,7 +70,7 @@ export const displayDotsDictionary = {
     ],
   },
   S: {
-    width: 4,
+    width: 5,
     coordinates: [
       [0, 1],
       [0, 2],
@@ -85,7 +85,7 @@ export const displayDotsDictionary = {
     ],
   },
   T: {
-    width: 5,
+    width: 6,
     coordinates: [
       [0, 0],
       [0, 1],
@@ -113,7 +113,7 @@ export const displayDotsDictionary = {
     ],
   },
   Y: {
-    width: 5,
+    width: 6,
     coordinates: [
       [0, 0],
       [0, 4],
@@ -127,11 +127,11 @@ export const displayDotsDictionary = {
     ],
   },
   ".": {
-    width: 1,
+    width: 2,
     coordinates: [[4, 0]],
   },
   " ": {
-    width: 1,
+    width: 2,
     coordinates: null,
   },
 };

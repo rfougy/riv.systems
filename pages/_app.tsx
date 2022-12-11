@@ -66,7 +66,7 @@ const MyApp = (props: any) => {
       <Global styles={globalColors} />
       <DisplayDotsCoordsProvider>
         <PageContainer>
-          <Navbar toggleTheme={toggleTheme} />
+          <Navbar toggleTheme={toggleTheme} theme={currTheme} />
           <ContentWrap>
             <Component {...pageProps} />
           </ContentWrap>

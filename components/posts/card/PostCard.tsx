@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Container, Metadata, Text, Title } from "./PostCard.styled";
+import { Container, Info, Metadata, Text, Title } from "./PostCard.styled";
 import Image from "next/image";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 import { dateToStr } from "../../../utils/dateToStr";
@@ -31,13 +31,13 @@ const PostCard: React.FC<{
         />
         <Text>
           <Title>{title}</Title>
-          <div>
-            <Metadata>
+          <Metadata>
+            <Info>
               {capitalizeFirstChar(section)} &gt;{" "}
               {capitalizeFirstChar(category)}
-            </Metadata>
-            <Metadata>{dateAsStr}</Metadata>
-          </div>
+            </Info>
+            <Info>{dateAsStr}</Info>
+          </Metadata>
         </Text>
       </Container>
     </Link>

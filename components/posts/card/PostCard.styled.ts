@@ -34,8 +34,13 @@ export const Text = styled.div`
   }
 `;
 
+export const Metadata = styled.div`
+`;
+
 export const Title = styled.h2`
   margin-top: 0;
 `;
 
-export const Metadata = styled.div``;
+export const Info = styled.p`
+  margin: 0;
+`;

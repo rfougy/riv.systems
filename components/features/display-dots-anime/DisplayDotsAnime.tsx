@@ -12,15 +12,19 @@ import DotWord from "./word/DotWord";
 import { Container } from "./DisplayDotsAnime.styled";
 
 const DisplayDotsAnime: React.FC<{ text?: string }> = ({
-  text = "RIV.SYSTEMS",
+  text = "DISPLAY DOTS!",
 }) => {
   const { setInactiveCoords, setInactiveCoordsIsInContext } =
     useDisplayDotsCoordsContext();
 
+  const upperCaseText = text.toUpperCase();
+
   const coordsByWordAndSpace: any = Object.values(
-    groupCoordsByWordAndSpace(text)
+    groupCoordsByWordAndSpace(upperCaseText)
   );
-  const coordsByChar: IAllCoords[] = Object.values(groupCoordsByChar(text));
+  const coordsByChar: IAllCoords[] = Object.values(
+    groupCoordsByChar(upperCaseText)
+  );
   const allInactiveCoords: number[][] = coordsByChar.reduce(
     (inactiveCoordsList: number[][], coordGroup: IAllCoords) => {
       inactiveCoordsList.push(...coordGroup.inactiveCoords);

@@ -9,6 +9,7 @@ import {
   FilterContainer,
   PageTitle,
 } from "../../../styles/Layouts.styled";
+import PageHead from "../../seo/page/PageHead";
 
 const ContentPage: React.FC<{
   content: any;
@@ -119,7 +120,13 @@ const ContentPage: React.FC<{
   }, [categoryFilters, sectionFilters, content]);
 
   return (
-    <div>
+    <>
+      <PageHead
+        title={"Content"}
+        description={
+          "Main directory where you can browse all blog posts in the website, from professional work to journal entries and miscellaneous content."
+        }
+      />
       <FilterAndGridContainer>
         <FilterContainer>
           <PageTitle>Content</PageTitle>
@@ -143,7 +150,7 @@ const ContentPage: React.FC<{
           />
         </section>
       </FilterAndGridContainer>
-    </div>
+    </>
   );
 };
 

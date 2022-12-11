@@ -21,17 +21,26 @@ export const Container = styled.a`
 
   @media (max-width: 40em) {
     border: solid 0.075rem;
-    border-radius: 7.5%;
+    border-radius: 2.5%;
   }
 `;
 
 export const Text = styled.div`
-  border-top: solid;
+  border-top: solid 0.1rem;
   padding: 1rem;
+
+  @media (max-width: 40em) {
+    border-top: solid 0.075rem;
+  }
+`;
+
+export const Metadata = styled.div`
 `;
 
 export const Title = styled.h2`
   margin-top: 0;
 `;
 
-export const Metadata = styled.div``;
+export const Info = styled.p`
+  margin: 0;
+`;

@@ -13,6 +13,15 @@ export const Metadata = styled.ul`
   margin: 0 0 1rem 0;
 `;
 
+export const Title = styled.h1`
+  font-size: 2rem;
+  margin: 0;
+
+  @media (max-width: 40em) {
+    font-size: 1.75rem;
+  }
+`;
+
 export const P = styled.p`
   margin: 0;
 `;

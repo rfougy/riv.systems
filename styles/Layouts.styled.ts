@@ -18,6 +18,7 @@ export const FilterAndGridContainer = styled.div`
   @media (max-width: 40em) {
     flex-direction: column;
     gap: 4rem;
+    width: 100%;
   }
 `;
 

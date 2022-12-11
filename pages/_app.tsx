@@ -4,7 +4,6 @@ import GlobalHead from "../components/seo/global/GlobalHead";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import { ContentWrap, PageContainer } from "../styles/pages/App.styled";
-import DisplayDotsCoordsProvider from "../components/context/DisplayDotsCoordsContext";
 
 import { Global as GlobalTheme, css } from "@emotion/react";
 import { lightTheme, darkTheme } from "../styles/Themes";
@@ -67,15 +66,13 @@ const MyApp = (props: any) => {
       <GlobalHead />
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
-        <DisplayDotsCoordsProvider>
-          <PageContainer>
-            <Navbar toggleTheme={toggleTheme} theme={currTheme} />
-            <ContentWrap>
-              <Component {...pageProps} />
-            </ContentWrap>
-            <Footer />
-          </PageContainer>
-        </DisplayDotsCoordsProvider>
+        <PageContainer>
+          <Navbar toggleTheme={toggleTheme} theme={currTheme} />
+          <ContentWrap>
+            <Component {...pageProps} />
+          </ContentWrap>
+          <Footer />
+        </PageContainer>
       </ThemeProvider>
     </>
   );

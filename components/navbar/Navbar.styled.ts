@@ -11,6 +11,10 @@ export const LogoContainer = styled.div`
   justify-content: space-between;
   width: 15rem;
   height: 3.5rem;
+
+  @media (max-width: 40em) {
+    width: 12.5rem;
+  }
 `;
 
 export const NavMenu = styled.ul`

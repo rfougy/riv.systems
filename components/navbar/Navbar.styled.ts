@@ -10,6 +10,7 @@ export const LogoContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 10rem;
+  height: 3rem;
 
   @media (max-width: 40em) {
     width: 9.5rem;

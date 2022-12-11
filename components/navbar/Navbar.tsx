@@ -71,6 +71,8 @@ const Navbar: React.FC<{ theme: any; toggleTheme: () => void }> = ({
               alt="website logo"
               onMouseOver={() => setLogo(logoActive)}
               onMouseLeave={() => setLogo(logoHidden)}
+              onMouseDown={() => setLogo(logoActive)}
+              onMouseUp={() => setLogo(logoHidden)}
             />
           </a>
         </Link>

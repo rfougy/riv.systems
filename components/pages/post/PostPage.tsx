@@ -10,6 +10,7 @@ import {
   MarginBottom,
   Container,
   MarginTop,
+  Title,
 } from "./PostPage.styled";
 
 const PostPage: React.FC<{ slug: string; content: any }> = ({
@@ -31,7 +32,8 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
         <P>{dateAsStr}</P>
       </Metadata>
       <MarginBottom>
-        <DisplayDotsAnime text={"SYS"} />
+        <Title>{title}</Title>
+        {/* <DisplayDotsAnime text={title} /> */}
       </MarginBottom>
       <Image
         src={coverImage}

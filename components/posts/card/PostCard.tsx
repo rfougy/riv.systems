@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Container, Metadata } from "./PostCard.styled";
+import { Container, Metadata, Text, Title } from "./PostCard.styled";
 import Image from "next/image";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 import { dateToStr } from "../../../utils/dateToStr";
@@ -26,16 +26,19 @@ const PostCard: React.FC<{
           src={`${image}`}
           alt={`Cover image for post titled '${title}'`}
           width={300}
-          height={300}
+          height={150}
           objectFit="cover"
         />
-        <h2>{title}</h2>
-        <div>
-          <Metadata>
-            {capitalizeFirstChar(section)} &gt; {capitalizeFirstChar(category)}
-          </Metadata>
-          <Metadata>{dateAsStr}</Metadata>
-        </div>
+        <Text>
+          <Title>{title}</Title>
+          <div>
+            <Metadata>
+              {capitalizeFirstChar(section)} &gt;{" "}
+              {capitalizeFirstChar(category)}
+            </Metadata>
+            <Metadata>{dateAsStr}</Metadata>
+          </div>
+        </Text>
       </Container>
     </Link>
   );

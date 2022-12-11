@@ -1,11 +1,12 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
+import GlobalHead from "../components/seo/global/GlobalHead";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import { ContentWrap, PageContainer } from "../styles/pages/App.styled";
 import DisplayDotsCoordsProvider from "../components/context/DisplayDotsCoordsContext";
 
-import { Global, css } from "@emotion/react";
+import { Global as GlobalTheme, css } from "@emotion/react";
 import { lightTheme, darkTheme } from "../styles/Themes";
 import { ThemeProvider } from "@emotion/react";
 
@@ -62,18 +63,21 @@ const MyApp = (props: any) => {
   `;
 
   return (
-    <ThemeProvider theme={currTheme}>
-      <Global styles={globalColors} />
-      <DisplayDotsCoordsProvider>
-        <PageContainer>
-          <Navbar toggleTheme={toggleTheme} theme={currTheme} />
-          <ContentWrap>
-            <Component {...pageProps} />
-          </ContentWrap>
-          <Footer />
-        </PageContainer>
-      </DisplayDotsCoordsProvider>
-    </ThemeProvider>
+    <>
+      <GlobalHead />
+      <ThemeProvider theme={currTheme}>
+        <GlobalTheme styles={globalColors} />
+        <DisplayDotsCoordsProvider>
+          <PageContainer>
+            <Navbar toggleTheme={toggleTheme} theme={currTheme} />
+            <ContentWrap>
+              <Component {...pageProps} />
+            </ContentWrap>
+            <Footer />
+          </PageContainer>
+        </DisplayDotsCoordsProvider>
+      </ThemeProvider>
+    </>
   );
 };
 

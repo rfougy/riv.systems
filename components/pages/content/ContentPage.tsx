@@ -9,6 +9,7 @@ import {
   FilterContainer,
   PageTitle,
 } from "../../../styles/Layouts.styled";
+import PageHead from "../../seo/page/PageHead";
 
 const ContentPage: React.FC<{
   content: any;
@@ -119,31 +120,34 @@ const ContentPage: React.FC<{
   }, [categoryFilters, sectionFilters, content]);
 
   return (
-    <div>
-      <FilterAndGridContainer>
-        <FilterContainer>
-          <PageTitle>Content</PageTitle>
-          <FilterMenu
-            sections={sections}
-            categories={categories}
-            sectionFilters={sectionFilters}
-            categoryFilters={categoryFilters}
-            setSectionFilters={setSectionFilters}
-            setCategoryFilters={setCategoryFilters}
-          />
-        </FilterContainer>
-        <section>
-          <PostGrid content={currentPostCards} />
-          <Pagination
-            currentPage={currentPage}
-            postCardsPerPage={postCardsPerPage}
-            totalPostCards={filteredContent.length}
-            setCurrentPage={setCurrentPage}
-            setPostCardsPerPage={setPostCardsPerPage}
-          />
-        </section>
-      </FilterAndGridContainer>
-    </div>
+    <>
+      <PageHead title={"Content"} />
+      <div>
+        <FilterAndGridContainer>
+          <FilterContainer>
+            <PageTitle>Content</PageTitle>
+            <FilterMenu
+              sections={sections}
+              categories={categories}
+              sectionFilters={sectionFilters}
+              categoryFilters={categoryFilters}
+              setSectionFilters={setSectionFilters}
+              setCategoryFilters={setCategoryFilters}
+            />
+          </FilterContainer>
+          <section>
+            <PostGrid content={currentPostCards} />
+            <Pagination
+              currentPage={currentPage}
+              postCardsPerPage={postCardsPerPage}
+              totalPostCards={filteredContent.length}
+              setCurrentPage={setCurrentPage}
+              setPostCardsPerPage={setPostCardsPerPage}
+            />
+          </section>
+        </FilterAndGridContainer>
+      </div>
+    </>
   );
 };
 

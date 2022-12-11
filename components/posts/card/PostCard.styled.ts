@@ -9,7 +9,7 @@ export const Container = styled.a`
   width: 100%;
 
   margin: auto;
-  border: solid;
+  border: solid 0.1rem;
   border-radius: 5%;
 
   background: ${(props: any) => props.theme.idle};
@@ -20,6 +20,7 @@ export const Container = styled.a`
   }
 
   @media (max-width: 40em) {
+    border: solid 0.075rem;
     border-radius: 7.5%;
   }
 `;

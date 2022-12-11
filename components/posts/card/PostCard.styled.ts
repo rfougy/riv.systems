@@ -26,8 +26,12 @@ export const Container = styled.a`
 `;
 
 export const Text = styled.div`
-  border-top: solid;
+  border-top: solid 0.1rem;
   padding: 1rem;
+
+  @media (max-width: 40em) {
+    border-top: : solid 0.075rem;    
+  }
 `;
 
 export const Title = styled.h2`

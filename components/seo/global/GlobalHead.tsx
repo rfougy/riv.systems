@@ -5,6 +5,7 @@ const GlobalHead: React.FC = () => {
   return (
     <Head>
       <Favicon />
+      <meta name="author" content="Riviere Fougy" />
     </Head>
   );
 };

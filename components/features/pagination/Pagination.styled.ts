@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const Container = styled.div`
-  margin-top: 2rem;
+  margin-top: 4rem;
 `;
 
 export const PageNav = styled.nav`

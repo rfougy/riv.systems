@@ -21,7 +21,7 @@ export const Container = styled.a`
 
   @media (max-width: 40em) {
     border: solid 0.075rem;
-    border-radius: 7.5%;
+    border-radius: 2.5%;
   }
 `;
 
@@ -30,7 +30,7 @@ export const Text = styled.div`
   padding: 1rem;
 
   @media (max-width: 40em) {
-    border-top: : solid 0.075rem;    
+    border-top: solid 0.075rem;
   }
 `;
 

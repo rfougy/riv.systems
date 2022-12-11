@@ -127,31 +127,29 @@ const ContentPage: React.FC<{
           "Main directory where you can browse all blog posts in the website, from professional work to journal entries and miscellaneous content."
         }
       />
-      <div>
-        <FilterAndGridContainer>
-          <FilterContainer>
-            <PageTitle>Content</PageTitle>
-            <FilterMenu
-              sections={sections}
-              categories={categories}
-              sectionFilters={sectionFilters}
-              categoryFilters={categoryFilters}
-              setSectionFilters={setSectionFilters}
-              setCategoryFilters={setCategoryFilters}
-            />
-          </FilterContainer>
-          <section>
-            <PostGrid content={currentPostCards} />
-            <Pagination
-              currentPage={currentPage}
-              postCardsPerPage={postCardsPerPage}
-              totalPostCards={filteredContent.length}
-              setCurrentPage={setCurrentPage}
-              setPostCardsPerPage={setPostCardsPerPage}
-            />
-          </section>
-        </FilterAndGridContainer>
-      </div>
+      <FilterAndGridContainer>
+        <FilterContainer>
+          <PageTitle>Content</PageTitle>
+          <FilterMenu
+            sections={sections}
+            categories={categories}
+            sectionFilters={sectionFilters}
+            categoryFilters={categoryFilters}
+            setSectionFilters={setSectionFilters}
+            setCategoryFilters={setCategoryFilters}
+          />
+        </FilterContainer>
+        <section>
+          <PostGrid content={currentPostCards} />
+          <Pagination
+            currentPage={currentPage}
+            postCardsPerPage={postCardsPerPage}
+            totalPostCards={filteredContent.length}
+            setCurrentPage={setCurrentPage}
+            setPostCardsPerPage={setPostCardsPerPage}
+          />
+        </section>
+      </FilterAndGridContainer>
     </>
   );
 };

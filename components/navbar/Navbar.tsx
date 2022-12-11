@@ -1,18 +1,40 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { sectionType } from "../../types/sectionType";
-import DisplayDotsAnime from "../features/display-dots-anime/DisplayDotsAnime";
 import ThemeToggleButton from "../features/theme-toggle/ThemeToggleButton";
 import { Nav, NavMenu, MenuOption, A, LogoContainer } from "./Navbar.styled";
 
+import logoActiveWhite from "../../public/assets/logo-active-light.svg";
+import logoHiddenWhite from "../../public/assets/logo-hidden-light.svg";
+import logoActiveBlack from "../../public/assets/logo-active-dark.svg";
+import logoHiddenBlack from "../../public/assets/logo-hidden-dark.svg";
+
+const logoTheme: any = {
+  light: {
+    active: logoActiveBlack,
+    hidden: logoHiddenBlack,
+  },
+  dark: {
+    active: logoActiveWhite,
+    hidden: logoHiddenWhite,
+  },
+};
+
 const sectionsList: sectionType[] = ["works", "logs", "items", "test"];
 
-const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
+const Navbar: React.FC<{ theme: any; toggleTheme: () => void }> = ({
+  theme,
+  toggleTheme,
+}) => {
+  const { asPath: path } = useRouter();
+  const logoActive = logoTheme[theme.id].active;
+  const logoHidden = logoTheme[theme.id].hidden;
+
+  const [logo, setLogo] = useState<any>(logoHidden);
   const [hoveredOption, setHoveredOption] = useState<string | null>();
   const [activeOption, setActiveOption] = useState<string | null>();
-
-  const { asPath: path } = useRouter();
 
   function setNavStates(): void {
     const parsedPath: string[] = path.split("/");
@@ -37,12 +59,20 @@ const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
 
   useEffect(() => setNavStates(), [path]);
 
+  useEffect(() => setLogo(logoHidden), [logoHidden, theme]);
+
   return (
     <Nav>
-      {/* <DisplayDotsAnime /> */}
       <LogoContainer>
         <Link href={`/`} passHref>
-          <A optionIsLogo>RIV.SYSTEMS</A>
+          <a>
+            <Image
+              src={logo}
+              alt="website logo"
+              onMouseOver={() => setLogo(logoActive)}
+              onMouseLeave={() => setLogo(logoHidden)}
+            />
+          </a>
         </Link>
         <ThemeToggleButton toggleTheme={toggleTheme} />
       </LogoContainer>

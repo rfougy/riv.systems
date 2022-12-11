@@ -9,7 +9,7 @@ export const LogoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  width: 15rem;
   height: 3.5rem;
 `;
 

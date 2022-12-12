@@ -35,10 +35,11 @@ export const MarginBottom = styled.div`
   margin-bottom: 3rem;
 `;
 
-export const MarginTop = styled.div`
+export const Content = styled.div`
   margin-top: 3rem;
 
   img {
+    margin: 3rem 0;
     width: 100%;
   }
 

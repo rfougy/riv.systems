@@ -4,7 +4,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2rem;
+  min-height: 2rem;
+  padding: 0.5rem 1rem;
 
   background-color: ${(props: any) => props.theme.primary};
 `;

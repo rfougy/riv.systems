@@ -35,12 +35,12 @@ export const MarginBottom = styled.div`
   margin-bottom: 3rem;
 `;
 
-export const MarginTop = styled.div`
+export const Content = styled.div`
   margin-top: 3rem;
 
   img {
+    margin: 3rem 0;
     width: 100%;
-    border-radius: 3vh;
   }
 
   iframe {
@@ -48,7 +48,6 @@ export const MarginTop = styled.div`
     aspect-ratio: 16 / 9;
     height: 100%;
     width: 100%;
-    border-radius: 3vh;
   }
 
   article {

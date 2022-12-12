@@ -13,6 +13,7 @@ import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
 import { useEffect, useState } from "react";
+import Announcement from "../components/announcement/Announcment";
 
 const MyApp = (props: any) => {
   const { Component, pageProps }: AppProps = props;
@@ -66,6 +67,7 @@ const MyApp = (props: any) => {
       <GlobalHead />
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
+        <Announcement />
         <PageContainer>
           <Navbar toggleTheme={toggleTheme} theme={currTheme} />
           <ContentWrap>

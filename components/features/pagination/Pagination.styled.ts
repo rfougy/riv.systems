@@ -2,12 +2,6 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
   margin-top: 4rem;
-  border: solid ${(props: any) => props.theme.primary};
-  max-width: 15rem;
-  margin: 4rem auto 0 auto;
-  padding: 0.25rem;
-
-  border-radius: 5vh;
 `;
 
 export const PageNav = styled.nav`
@@ -18,13 +12,21 @@ export const PageNav = styled.nav`
 `;
 
 export const Button = styled.button`
-  border: none;
+  border: solid 0.1rem ${(props: any) => props.theme.primary};
+  border-radius: 1.45vh;
+  padding: 0.05rem 0.7rem;
+  margin: 0 0.35rem;
 
   &:hover {
-    text-decoration: underline;
+    background: ${(props: any) => props.theme.highlight};
+  }
+
+  @media (max-width: 40em) {
+    border: solid 0.075rem ${(props: any) => props.theme.primary};
   }
 `;
 
 export const PageNumber = styled.p`
+  text-align: center;
   margin: 0 1rem;
 `;

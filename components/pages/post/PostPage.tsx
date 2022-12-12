@@ -2,15 +2,14 @@ import Markdown from "markdown-to-jsx";
 import Image from "next/image";
 import Link from "next/link";
 import { dateToStr } from "../../../utils/dateToStr";
-import DisplayDotsAnime from "../../features/display-dots-anime/DisplayDotsAnime";
 import {
   Inline,
   Metadata,
   P,
   MarginBottom,
   Container,
-  MarginTop,
   Title,
+  Content,
 } from "./PostPage.styled";
 
 const PostPage: React.FC<{ slug: string; content: any }> = ({
@@ -40,11 +39,10 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
         width={100}
         height={300}
         objectFit="cover"
-        style={{ borderRadius: "3vh" }}
       />
-      <MarginTop>
+      <Content>
         <Markdown options={{ wrapper: "article" }}>{postContent}</Markdown>
-      </MarginTop>
+      </Content>
     </Container>
   ) : (
     <div>Error: No content available...</div>

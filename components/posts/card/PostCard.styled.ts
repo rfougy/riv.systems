@@ -7,6 +7,7 @@ export const Container = styled.a`
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 18.75rem;
 
   margin: auto;
   border: solid 0.1rem;
@@ -21,7 +22,7 @@ export const Container = styled.a`
 
   @media (max-width: 40em) {
     border: solid 0.075rem;
-    border-radius: 2vh;
+    max-width: none;
   }
 `;
 

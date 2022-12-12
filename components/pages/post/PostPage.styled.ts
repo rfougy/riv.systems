@@ -40,7 +40,6 @@ export const MarginTop = styled.div`
 
   img {
     width: 100%;
-    border-radius: 3vh;
   }
 
   iframe {
@@ -48,7 +47,6 @@ export const MarginTop = styled.div`
     aspect-ratio: 16 / 9;
     height: 100%;
     width: 100%;
-    border-radius: 3vh;
   }
 
   article {

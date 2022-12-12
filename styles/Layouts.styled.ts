@@ -22,6 +22,17 @@ export const FilterAndGridContainer = styled.div`
   }
 `;
 
+export const CategoryPageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 40em) {
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+  }
+`;
+
 export const FilterContainer = styled.section`
   display: flex;
   flex-direction: column;

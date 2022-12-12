@@ -3,7 +3,7 @@ import Pagination from "../../features/pagination/Pagination";
 import PostGrid from "../../posts/grid/PostGrid";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 import {
-  FilterAndGridContainer,
+  CategoryPageContainer,
   PageTitle,
 } from "../../../styles/Layouts.styled";
 
@@ -13,7 +13,7 @@ const CategoryPage: React.FC<{
 }> = ({ category, content }) => {
   // states for pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(2);
+  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(6);
 
   const categoryAsTitle: string = capitalizeFirstChar(category);
 
@@ -30,19 +30,21 @@ const CategoryPage: React.FC<{
   }, [postCardsPerPage, content]);
 
   return (
-    <div>
-      <PageTitle>Category: {categoryAsTitle}</PageTitle>
-      <section>
-        <PostGrid content={currentPostCards} />
-        <Pagination
-          currentPage={currentPage}
-          postCardsPerPage={postCardsPerPage}
-          totalPostCards={content.length}
-          setCurrentPage={setCurrentPage}
-          setPostCardsPerPage={setPostCardsPerPage}
-        />
-      </section>
-    </div>
+    <>
+      <CategoryPageContainer>
+        <PageTitle>Category: {categoryAsTitle}</PageTitle>
+        <section>
+          <PostGrid content={currentPostCards} />
+          <Pagination
+            currentPage={currentPage}
+            postCardsPerPage={postCardsPerPage}
+            totalPostCards={content.length}
+            setCurrentPage={setCurrentPage}
+            setPostCardsPerPage={setPostCardsPerPage}
+          />
+        </section>
+      </CategoryPageContainer>
+    </>
   );
 };
 

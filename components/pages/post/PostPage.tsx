@@ -33,7 +33,6 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
       </Metadata>
       <MarginBottom>
         <Title>{title}</Title>
-        {/* <DisplayDotsAnime text={title} /> */}
       </MarginBottom>
       <Image
         src={coverImage}

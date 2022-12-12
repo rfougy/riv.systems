@@ -24,7 +24,7 @@ const SectionPage: React.FC<{
 
   // states for pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(2);
+  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(6);
 
   // deducting the current PostCards for pagination
   const indexOfLastPostCard: number = currentPage * postCardsPerPage;
@@ -91,7 +91,7 @@ const SectionPage: React.FC<{
   }, [categoryFilters, content]);
 
   return (
-    <div>
+    <>
       <FilterAndGridContainer>
         <FilterContainer>
           <PageTitle>{sectionAsTitle}</PageTitle>
@@ -112,7 +112,7 @@ const SectionPage: React.FC<{
           />
         </section>
       </FilterAndGridContainer>
-    </div>
+    </>
   );
 };
 

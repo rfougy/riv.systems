@@ -9,6 +9,6 @@ export const darkTheme = {
   id: "dark",
   primary: "#ffffff",
   secondary: "#101010",
-  highlight: "#2d2d2d",
-  idle: "#000000",
+  highlight: "#333333",
+  idle: "#212121",
 };

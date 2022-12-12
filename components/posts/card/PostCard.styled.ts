@@ -23,6 +23,7 @@ export const Container = styled.a`
   @media (max-width: 40em) {
     border: solid 0.075rem;
     border-radius: 2vh;
+    max-width: none;
   }
 `;
 

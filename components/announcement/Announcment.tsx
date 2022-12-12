@@ -4,7 +4,7 @@ const Announcement: React.FC = () => {
   return (
     <Container>
       <Text>
-        Latest Update (12/8/22): Created this announcement bar! Still needs
+        Latest Update (12/12/22): Created this announcement bar! Still needs
         work.. hmm..
       </Text>
     </Container>

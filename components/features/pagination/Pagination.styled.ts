@@ -12,7 +12,6 @@ export const PageNav = styled.nav`
 `;
 
 export const Button = styled.button`
-  // border: none;
   border: solid 0.1rem ${(props: any) => props.theme.primary};
   border-radius: 1.45vh;
   padding: 0.05rem 0.7rem;
@@ -20,6 +19,10 @@ export const Button = styled.button`
 
   &:hover {
     background: ${(props: any) => props.theme.highlight};
+  }
+
+  @media (max-width: 40em) {
+    border: solid 0.075rem ${(props: any) => props.theme.primary};
   }
 `;
 

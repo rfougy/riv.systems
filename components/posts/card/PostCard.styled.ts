@@ -34,11 +34,22 @@ export const Text = styled.div`
   }
 `;
 
-export const Metadata = styled.div`
-`;
+export const Metadata = styled.div``;
 
+/**
+ * @description webkit portion allows for ellipsis after reaching two lines of text
+ * @see https://chipcullen.com/truncating-type-at-more-than-one-line/
+ */
 export const Title = styled.h2`
+  display: inline-block;
   margin-top: 0;
+  height: 2.9rem;
+  width: 100%;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 `;
 
 export const Info = styled.p`

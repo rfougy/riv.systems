@@ -1,5 +1,5 @@
 ---
-title: Undercover Biker Jacket
+title: An Extremely Long Title for a Post Called My Test Post
 datePublished: "2022-01-01"
 category: fashion
 section: items

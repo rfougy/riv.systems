@@ -37,4 +37,23 @@ export const MarginBottom = styled.div`
 
 export const MarginTop = styled.div`
   margin-top: 3rem;
+
+  img {
+    width: 100%;
+    border-radius: 3vh;
+  }
+
+  iframe {
+    margin: 3rem 0;
+    aspect-ratio: 16 / 9;
+    height: 100%;
+    width: 100%;
+    border-radius: 3vh;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;

@@ -10,7 +10,7 @@ export const Container = styled.a`
 
   margin: auto;
   border: solid 0.1rem;
-  border-radius: 5%;
+  border-radius: 2vh;
 
   background: ${(props: any) => props.theme.idle};
 
@@ -21,7 +21,7 @@ export const Container = styled.a`
 
   @media (max-width: 40em) {
     border: solid 0.075rem;
-    border-radius: 2.5%;
+    border-radius: 2vh;
   }
 `;
 

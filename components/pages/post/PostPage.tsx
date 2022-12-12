@@ -40,6 +40,7 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
         width={100}
         height={300}
         objectFit="cover"
+        style={{ borderRadius: "3vh" }}
       />
       <MarginTop>
         <Markdown options={{ wrapper: "article" }}>{postContent}</Markdown>

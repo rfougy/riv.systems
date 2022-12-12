@@ -18,7 +18,7 @@ export const Margin = styled.div`
 
 export const Button = styled.button`
   border: 0.1rem solid ${(props: any) => props.theme.primary};
-  border-radius: 25rem;
+  border-radius: 5vh;
 
   padding: 0.5rem 1rem;
   margin-top: 1rem;

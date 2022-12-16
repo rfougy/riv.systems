@@ -5,7 +5,7 @@ import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 import {
   CategoryPageContainer,
   PageTitle,
-} from "../../../styles/layouts.styled";
+} from "../../../styles/Layouts.styled";
 import PageHead from "../../head/page/PageHead";
 
 const CategoryPage: React.FC<{

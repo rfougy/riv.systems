@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import DisplayDotsCoordsProvider from "../components/context/DisplayDotsCoordsContext";
 import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
-import PageHead from "../components/seo/page/PageHead";
+import PageHead from "../components/head/page/PageHead";
 
 import {
   Container,
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       <PageHead
         title={"Home"}
         description={
-          "Welcome to riv.systems, a personal portfolio and blog website featuring content on fashion, design, web development and more."
+          "Welcome to riv.systems, a personal portfolio and blog website featuring content on fashion, web development, design and more."
         }
       />
       <DisplayDotsCoordsProvider>

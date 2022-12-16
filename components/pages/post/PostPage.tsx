@@ -2,7 +2,7 @@ import Markdown from "markdown-to-jsx";
 import Image from "next/image";
 import Link from "next/link";
 import { dateToStr } from "../../../utils/dateToStr";
-import PageHead from "../../seo/page/PageHead";
+import PageHead from "../../head/page/PageHead";
 import {
   Inline,
   Metadata,

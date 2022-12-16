@@ -1,22 +1,31 @@
 {
   "name": "riv.systems",
   "short_name": "riv.systems",
+  "description": "A personal portfolio and blog website featuring content on fashion, web development, design and more.",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
+      "src": "/icon/icons-vector.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
       "purpose": "any maskable"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "/icon/maskable/maskable_icon_x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon/maskable/maskable_icon_x512.png",
+      "type": "image/png",
       "sizes": "512x512",
-      "type": "image/png"
+      "purpose": "any maskable"
     }
   ],
-  "theme_color": "#FFFFFF",
-  "background_color": "#FFFFFF",
   "start_url": "/",
-  "display": "standalone",
-  "orientation": "portrait"
+  "display": "minimal-ui",
+  "orientation": "portrait",
+  "scope": "/",
+  "theme_color": "#000000",
+  "background_color": "#f0f0f0"
 }

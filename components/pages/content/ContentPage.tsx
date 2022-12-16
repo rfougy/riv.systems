@@ -9,7 +9,7 @@ import {
   FilterContainer,
   PageTitle,
 } from "../../../styles/layouts.styled";
-import PageHead from "../../seo/page/PageHead";
+import PageHead from "../../head/page/PageHead";
 
 const ContentPage: React.FC<{
   content: any;

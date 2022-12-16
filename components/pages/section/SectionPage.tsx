@@ -11,7 +11,7 @@ import {
   FilterAndGridContainer,
   FilterContainer,
   PageTitle,
-} from "../../../styles/Layouts.styled";
+} from "../../../styles/layouts.styled";
 import PageHead from "../../seo/page/PageHead";
 
 const SectionPage: React.FC<{

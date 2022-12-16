@@ -11,7 +11,8 @@ import {
   FilterAndGridContainer,
   FilterContainer,
   PageTitle,
-} from "../../../styles/layouts.styled";
+} from "../../../styles/Layouts.styled";
+import PageHead from "../../seo/page/PageHead";
 
 const SectionPage: React.FC<{
   section: sectionType | string;
@@ -92,6 +93,10 @@ const SectionPage: React.FC<{
 
   return (
     <>
+      <PageHead
+        title={`Category: ${sectionAsTitle}`}
+        description={`Section page for viewing all content related to ${sectionAsTitle}.`}
+      />
       <FilterAndGridContainer>
         <FilterContainer>
           <PageTitle>{sectionAsTitle}</PageTitle>

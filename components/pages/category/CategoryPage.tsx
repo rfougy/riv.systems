@@ -5,7 +5,8 @@ import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 import {
   CategoryPageContainer,
   PageTitle,
-} from "../../../styles/layouts.styled";
+} from "../../../styles/Layouts.styled";
+import PageHead from "../../seo/page/PageHead";
 
 const CategoryPage: React.FC<{
   category: string;
@@ -31,6 +32,10 @@ const CategoryPage: React.FC<{
 
   return (
     <>
+      <PageHead
+        title={`Category: ${categoryAsTitle}`}
+        description={`Category page for viewing all content related to ${categoryAsTitle}.`}
+      />
       <CategoryPageContainer>
         <PageTitle>Category: {categoryAsTitle}</PageTitle>
         <section>

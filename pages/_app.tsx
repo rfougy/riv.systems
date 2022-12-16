@@ -1,6 +1,5 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import GlobalHead from "../components/seo/global/GlobalHead";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import { ContentWrap, PageContainer } from "../styles/pages/App.styled";
@@ -66,7 +65,6 @@ const MyApp = (props: any) => {
 
   return (
     <>
-      <GlobalHead />
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
         {announcementIsActive && <Announcement theme={currTheme} setAnnouncementIsActive={setAnnouncementIsActive} />}

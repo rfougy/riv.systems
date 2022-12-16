@@ -83,12 +83,14 @@ const Navbar: React.FC<{ theme: any; toggleTheme: () => void }> = ({
           <MenuOption key={index} onMouseOver={() => setHoveredOption(section)}>
             <Link href={`/content/${section}`} passHref>
               <A
-                isActiveOption={activeOption === section}
-                isHoveredOption={hoveredOption === section}
+                isActiveOption={section === activeOption}
+                isHoveredOption={section === hoveredOption}
                 hoverIsActive={typeof hoveredOption === "string"}
                 userInHomePage={!activeOption}
               >
-                {"/" + section.toUpperCase()}
+                {section === activeOption
+                  ? "./" + section.toUpperCase()
+                  : "/" + section.toUpperCase()}
               </A>
             </Link>
           </MenuOption>
@@ -96,12 +98,12 @@ const Navbar: React.FC<{ theme: any; toggleTheme: () => void }> = ({
         <MenuOption onMouseOver={() => setHoveredOption("content")}>
           <Link href={`/content`} passHref>
             <A
-              isActiveOption={activeOption === "content"}
-              isHoveredOption={hoveredOption === "content"}
+              isActiveOption={"content" === activeOption}
+              isHoveredOption={"content" === hoveredOption}
               hoverIsActive={typeof hoveredOption === "string"}
               userInHomePage={!activeOption}
             >
-              {"/" + "ALL"}
+              {"content" === activeOption ? "./" + "ALL" : "/" + "ALL"}
             </A>
           </Link>
         </MenuOption>

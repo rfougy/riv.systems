@@ -6,7 +6,7 @@ import {
   CategoryPageContainer,
   PageTitle,
 } from "../../../styles/Layouts.styled";
-import PageHead from "../../seo/page/PageHead";
+import PageHead from "../../head/page/PageHead";
 
 const CategoryPage: React.FC<{
   category: string;

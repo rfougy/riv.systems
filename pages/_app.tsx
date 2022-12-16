@@ -1,21 +1,21 @@
-import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import GlobalHead from "../components/seo/global/GlobalHead";
+import { useEffect, useState } from "react";
+
+import Announcement from "../components/announcement/Announcment";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
-import { ContentWrap, PageContainer } from "../styles/pages/App.styled";
 
-import { Global as GlobalTheme, css } from "@emotion/react";
+import { Global as GlobalTheme, ThemeProvider, css } from "@emotion/react";
+import { ContentWrap, PageContainer } from "../styles/pages/App.styled";
 import { lightTheme, darkTheme } from "../styles/Themes";
-import { ThemeProvider } from "@emotion/react";
+import "../styles/globals.css";
 
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
-import { useEffect, useState } from "react";
-import Announcement from "../components/announcement/Announcment";
+import GlobalHead from "../components/head/global/GlobalHead";
 
-const MyApp = (props: any) => {
+const App = (props: any) => {
   const { Component, pageProps }: AppProps = props;
   const [currTheme, setTheme] = useState<any>(lightTheme);
   const [announcementIsActive, setAnnouncementIsActive] =
@@ -69,7 +69,12 @@ const MyApp = (props: any) => {
       <GlobalHead />
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
-        {announcementIsActive && <Announcement theme={currTheme} setAnnouncementIsActive={setAnnouncementIsActive} />}
+        {announcementIsActive && (
+          <Announcement
+            theme={currTheme}
+            setAnnouncementIsActive={setAnnouncementIsActive}
+          />
+        )}
         <PageContainer>
           <Navbar toggleTheme={toggleTheme} theme={currTheme} />
           <ContentWrap>
@@ -82,4 +87,4 @@ const MyApp = (props: any) => {
   );
 };
 
-export default MyApp;
+export default App;

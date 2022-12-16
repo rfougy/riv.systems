@@ -33,6 +33,10 @@ export const MenuOption = styled.li`
   display: flex;
   justify-content: center;
   justify-self: start;
+
+  @media (max-width: 40em) {
+    justify-self: end;
+  }
 `;
 
 export const A = styled.a`

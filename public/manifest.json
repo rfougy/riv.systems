@@ -23,7 +23,7 @@
     }
   ],
   "start_url": "/",
-  "display": "minimal-ui",
+  "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
   "theme_color": "#000000",

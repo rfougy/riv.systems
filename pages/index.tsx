@@ -19,12 +19,6 @@ const Home: NextPage = () => {
           <DisplayDotsAnime text={"RIV.SYSTEMS"} />
         </Margin>
         <Description>
-          I&apos;m a frontend engineer based in Boston <br />+ the founder of{" "}
-          <a href="https://www.archivepdf.net/">ARCHIVE.pdf</a>,
-          <br />
-          an online fashion resource.
-        </Description>
-        <Description>
           I created this website to document <br />
           my projects, experiences and thoughts. <br /> Enjoy!
         </Description>

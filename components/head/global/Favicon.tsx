@@ -16,7 +16,7 @@ const Favicon: React.FC = () => {
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/icons/maskable/maskable_icon_x192.png"
+        href="/icon/maskable/maskable_icon_x192.png"
       />
       <link rel="manifest" href="/manifest.json" />
     </>

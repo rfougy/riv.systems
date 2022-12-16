@@ -7,7 +7,7 @@ import Footer from "../components/footer/Footer";
 
 import { Global as GlobalTheme, ThemeProvider, css } from "@emotion/react";
 import { ContentWrap, PageContainer } from "../styles/pages/App.styled";
-import { lightTheme, darkTheme } from "../styles/themes";
+import { lightTheme, darkTheme } from "../styles/Themes";
 import "../styles/globals.css";
 
 import "@fontsource/roboto-mono/400.css";

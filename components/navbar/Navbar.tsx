@@ -6,19 +6,19 @@ import { sectionType } from "../../types/sectionType";
 import ThemeToggleButton from "../features/theme-toggle/ThemeToggleButton";
 import { Nav, NavMenu, MenuOption, A, LogoContainer } from "./Navbar.styled";
 
-import logoActiveWhite from "../../public/assets/logo-active-light.svg";
-import logoHiddenWhite from "../../public/assets/logo-hidden-light.svg";
-import logoActiveBlack from "../../public/assets/logo-active-dark.svg";
-import logoHiddenBlack from "../../public/assets/logo-hidden-dark.svg";
+import logoActiveLight from "../../public/assets/logo-active-light.svg";
+import logoHiddenLight from "../../public/assets/logo-hidden-light.svg";
+import logoActiveDark from "../../public/assets/logo-active-dark.svg";
+import logoHiddenDark from "../../public/assets/logo-hidden-dark.svg";
 
 const logoTheme: any = {
   light: {
-    active: logoActiveBlack,
-    hidden: logoHiddenBlack,
+    active: logoActiveDark,
+    hidden: logoHiddenDark,
   },
   dark: {
-    active: logoActiveWhite,
-    hidden: logoHiddenWhite,
+    active: logoActiveLight,
+    hidden: logoHiddenLight,
   },
 };
 
@@ -83,12 +83,14 @@ const Navbar: React.FC<{ theme: any; toggleTheme: () => void }> = ({
           <MenuOption key={index} onMouseOver={() => setHoveredOption(section)}>
             <Link href={`/content/${section}`} passHref>
               <A
-                isActiveOption={activeOption === section}
-                isHoveredOption={hoveredOption === section}
+                isActiveOption={section === activeOption}
+                isHoveredOption={section === hoveredOption}
                 hoverIsActive={typeof hoveredOption === "string"}
                 userInHomePage={!activeOption}
               >
-                {"/" + section.toUpperCase()}
+                {section === activeOption
+                  ? "./" + section.toUpperCase()
+                  : "/" + section.toUpperCase()}
               </A>
             </Link>
           </MenuOption>
@@ -96,12 +98,12 @@ const Navbar: React.FC<{ theme: any; toggleTheme: () => void }> = ({
         <MenuOption onMouseOver={() => setHoveredOption("content")}>
           <Link href={`/content`} passHref>
             <A
-              isActiveOption={activeOption === "content"}
-              isHoveredOption={hoveredOption === "content"}
+              isActiveOption={"content" === activeOption}
+              isHoveredOption={"content" === hoveredOption}
               hoverIsActive={typeof hoveredOption === "string"}
               userInHomePage={!activeOption}
             >
-              {"/" + "ALL"}
+              {"content" === activeOption ? "./" + "ALL" : "/" + "ALL"}
             </A>
           </Link>
         </MenuOption>

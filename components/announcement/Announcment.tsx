@@ -1,12 +1,30 @@
-import { Container, Text } from "./Announcement.styled";
+import { CloseIconContainer, Container, Text } from "./Announcement.styled";
 
-const Announcement: React.FC = () => {
+import closeIconLight from "../../public/assets/close-icon-light.svg";
+import closeIconDark from "../../public/assets/close-icon-dark.svg";
+import Image from "next/image";
+
+const closeIconTheme: any = {
+  light: closeIconLight,
+  dark: closeIconDark,
+};
+
+const Announcement: React.FC<{
+  theme: any;
+  setAnnouncementIsActive: (bool: boolean) => void;
+}> = ({ theme, setAnnouncementIsActive }) => {
+  const closeIcon = closeIconTheme[theme.id];
+
   return (
     <Container>
-      <Text>
-        Latest Update (12/12/22): Created this announcement bar! Still needs
-        work.. hmm..
-      </Text>
+      <CloseIconContainer>
+        <Image
+          src={closeIcon}
+          alt="announcement close icon"
+          onClick={() => setAnnouncementIsActive(false)}
+        />
+      </CloseIconContainer>
+      <Text>Latest Update (12/16/22): Announcement Bar can now collapse!</Text>
     </Container>
   );
 };

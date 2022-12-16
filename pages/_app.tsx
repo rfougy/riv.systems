@@ -18,6 +18,8 @@ import Announcement from "../components/announcement/Announcment";
 const MyApp = (props: any) => {
   const { Component, pageProps }: AppProps = props;
   const [currTheme, setTheme] = useState<any>(lightTheme);
+  const [announcementIsActive, setAnnouncementIsActive] =
+    useState<boolean>(true);
 
   useEffect(() => {
     const themeInLocalStorage = localStorage.getItem("theme");
@@ -67,7 +69,7 @@ const MyApp = (props: any) => {
       <GlobalHead />
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
-        <Announcement />
+        {announcementIsActive && <Announcement theme={currTheme} setAnnouncementIsActive={setAnnouncementIsActive} />}
         <PageContainer>
           <Navbar toggleTheme={toggleTheme} theme={currTheme} />
           <ContentWrap>

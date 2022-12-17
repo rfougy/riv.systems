@@ -37,7 +37,7 @@ export const FilterOption = styled.label`
     color: ${(props: any) => props.theme.primary};
     width: 0.75rem;
     height: 0.75rem;
-    border: 0.1rem solid;
+    border: 0.075rem solid;
     border-radius: 0.2rem;
   }
 
@@ -55,7 +55,7 @@ export const Form = styled.form`
   @media (max-width: 40em) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 3rem;
   }
 `;
 

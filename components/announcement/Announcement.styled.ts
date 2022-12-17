@@ -23,6 +23,7 @@ export const CloseIconContainer = styled.button`
 
 export const Text = styled.p`
   color: ${(props: any) => props.theme.secondary};
+  font-weight: 500;
   text-align: center;
   margin: auto;
   padding-left: 0.75rem;

@@ -8,7 +8,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["i.pinimg.com"],
+    domains: ["i.pinimg.com", "user-images.githubusercontent.com"],
   },
 };
 

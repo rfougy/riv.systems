@@ -4,7 +4,7 @@ datePublished: "2019-09-25"
 section: works
 category: fashion
 excerpt: This a is an excerpt to be placed in the PostCard.
-coverImage: ![Cover Photo for Sleepless Magazine Archive Fashion Editorial Post](https://user-images.githubusercontent.com/77861258/208268038-345e528c-1132-451a-8503-f60ae7faa38c.jpg)
+coverImage: https://user-images.githubusercontent.com/77861258/208268038-345e528c-1132-451a-8503-f60ae7faa38c.jpg
 ---
 
 In the summer of 2019, I was asked by a fellow Bostonian to be featured in his magazine 'Sleepless'. During this time I was an avid reseller of Archive Fashion, and frankly had more articles of clothing than I can manage. It was from here where the lights clicked: "What if I used this opportunity to create an Archive Fashion editorial?" I decided to reach out to Layne, a friend who photographed for Bodega at the time, and from there we began to conceptualize the project.

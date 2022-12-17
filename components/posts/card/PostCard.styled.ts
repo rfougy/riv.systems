@@ -53,6 +53,13 @@ export const Title = styled.h2`
   overflow: hidden;
 `;
 
-export const Info = styled.p`
+export const InfoContainer = styled.div`
+  display: flex;
   margin: 0;
+`;
+
+export const Info = styled.p`
+  display: flex;
+  align-items: center;
+  margin: 0 0.5rem 0 0;
 `;

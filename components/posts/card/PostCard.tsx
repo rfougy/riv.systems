@@ -1,8 +1,16 @@
 import Link from "next/link";
-import { Container, Info, Metadata, Text, Title } from "./PostCard.styled";
+import {
+  Container,
+  Info,
+  InfoContainer,
+  Metadata,
+  Text,
+  Title,
+} from "./PostCard.styled";
 import Image from "next/image";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 import { dateToStr } from "../../../utils/dateToStr";
+import ArrowIcon from "../../icons/ArrowIcon";
 
 const PostCard: React.FC<{
   path: string;
@@ -32,10 +40,13 @@ const PostCard: React.FC<{
         <Text>
           <Title>{title}</Title>
           <Metadata>
-            <Info>
-              {capitalizeFirstChar(section)} &gt;{" "}
-              {capitalizeFirstChar(category)}
-            </Info>
+            <InfoContainer>
+              <Info>{capitalizeFirstChar(section)}</Info>
+              <Info>
+                <ArrowIcon left />
+              </Info>
+              <Info>{capitalizeFirstChar(category)}</Info>
+            </InfoContainer>
             <Info>{dateAsStr}</Info>
           </Metadata>
         </Text>

@@ -1,5 +1,5 @@
 ---
-title: TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol
+title: "TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol"
 datePublished: "2022-12-17"
 category: fashion
 section: items
@@ -7,7 +7,7 @@ excerpt: An informal review of one of my favorite pieces that I've had the pleas
 coverImage: https://user-images.githubusercontent.com/77861258/208269368-449444ef-6ca7-4bfb-8702-4fb0e9761fdb.jpg
 ---
 
-Made entirely of Sterling Silver, the Femme Fatale Protector Ring cannot be fully expressed by words alone, as nothing compares to seeing this piece in person. The ring is modeled after the Le Petit Protector Ring Gun, with which you could fire miniature bullets and give damage unto your enemies. 
+Made entirely of Sterling Silver, the Femme Fatale Protector Ring cannot be fully expressed by words alone, as nothing compares to seeing this piece in person. The ring is modeled after the Le Petit Protector Ring Gun, with which you could fire miniature bullets and give damage unto your enemies.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/x3TWp29pdzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

@@ -1,12 +1,13 @@
 import Head from "next/head";
 
-const PageHead: React.FC<{ title: string; description: string }> = ({
-  title,
-  description,
-}) => {
+const PageHead: React.FC<{
+  title: string;
+  description: string;
+  isHomePage?: boolean;
+}> = ({ title, description, isHomePage }) => {
   return (
     <Head>
-      <title>{title} | riv.systems</title>
+      <title>{isHomePage ? title : `${title} | RIV.SYSTEMS}`}</title>
       <meta name="description" content={description} />
     </Head>
   );

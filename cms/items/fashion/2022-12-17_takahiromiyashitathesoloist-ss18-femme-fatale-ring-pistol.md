@@ -1,5 +1,5 @@
 ---
-title: "TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol"
+title: "Takahiromiyashita The Soloist: SS18 'Femme Fatale' Ring Pistol"
 datePublished: "2022-12-17"
 category: fashion
 section: items

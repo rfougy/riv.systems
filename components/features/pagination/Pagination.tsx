@@ -1,3 +1,4 @@
+import ArrowIcon from "../../icons/ArrowIcon";
 import { Button, Container, PageNav, PageNumber } from "./Pagination.styled";
 
 const Pagination: React.FC<{
@@ -34,13 +35,23 @@ const Pagination: React.FC<{
   return (
     <Container>
       <PageNav>
-        <Button onClick={() => setCurrentPage(1)}>&lt;&lt;</Button>
-        <Button onClick={() => handlePrevButtonClick()}>&lt;</Button>
+        <Button onClick={() => setCurrentPage(1)}>
+          <ArrowIcon right />
+          <ArrowIcon right />
+        </Button>
+        <Button onClick={() => handlePrevButtonClick()}>
+          <ArrowIcon right />
+        </Button>
         <PageNumber>
           Page {currentPage} of {lastPage}
         </PageNumber>
-        <Button onClick={() => handleNextButtonClick()}>&gt;</Button>
-        <Button onClick={() => setCurrentPage(lastPage)}>&gt;&gt;</Button>
+        <Button onClick={() => handleNextButtonClick()}>
+          <ArrowIcon left />
+        </Button>
+        <Button onClick={() => setCurrentPage(lastPage)}>
+          <ArrowIcon left />
+          <ArrowIcon left />
+        </Button>
       </PageNav>
       {/* <div>
         <Button onClick={() => setPostCardsPerPage(1)}>1 item per page</Button>

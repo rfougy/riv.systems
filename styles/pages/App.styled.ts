@@ -27,4 +27,8 @@ export const PageContainer = styled.div`
   &:hover p {
     cursor: text;
   }
+
+  @media (max-width: 40em) {
+    margin: 1rem;
+  }
 `;

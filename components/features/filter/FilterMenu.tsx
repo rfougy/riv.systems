@@ -2,16 +2,12 @@ import ISectionObj from "../../../interfaces/ISectionObj";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 
 import filterByCategory from "../../../lib/filter/filterByCategory";
-import filterBySection from "../../../lib/filter/filterBySection";
 import {
   Checkbox,
   FilterOption,
   Label,
-  Form,
-  Button,
   Container,
-  Title,
-  TitleContainer,
+  Form,
   FilterSet,
   SectionTitle,
 } from "./FilterMenu.styled";
@@ -78,42 +74,13 @@ const FilterMenu: React.FC<{
 
   return (
     <Container>
-      {/* <TitleContainer>
-        <Title>Filters</Title>
-        <Button onClick={() => clearFilters()}>Clear</Button>
-      </TitleContainer> */}
       {nestedFilteringOptions ? (
         <Form>
           {nestedFilteringOptions.map((nestedCategories: any, index) => {
             const section = sectionHashtableRef[index];
-            const sectionObj: ISectionObj = { section: section };
-            const sectionInFilterState = sectionFilters?.find(
-              (category) => category.section === section
-            );
 
             return (
               <FilterSet key={index}>
-                {/* Commented until better UI design is improved */}
-                {/* <FilterOption>
-                  <input
-                    type="checkbox"
-                    name={section}
-                    value={section}
-                    //@ts-ignore
-                    checked={sectionInFilterState || ""}
-                    onChange={() =>
-                      filterBySection(
-                        sectionObj,
-                        categories,
-                        sectionFilters,
-                        categoryFilters,
-                        setSectionFilters,
-                        setCategoryFilters
-                      )
-                    }
-                  />
-                  <Label>{capitalizeFirstChar(section)}</Label>
-                </FilterOption> */}
                 <SectionTitle>{capitalizeFirstChar(section)}</SectionTitle>
                 <div>
                   {nestedCategories.map(

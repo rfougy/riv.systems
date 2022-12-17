@@ -1,18 +1,11 @@
 import styled from "@emotion/styled";
 
-export const Title = styled.h3`
-  margin: 0;
+export const Container = styled.div`
+  margin-top: 1rem;
 `;
-
-export const TitleContainer = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-export const Container = styled.div``;
 
 export const FilterSet = styled.div`
-  margin-top: 0.75rem;
+  margin-top: 1rem;
 `;
 
 /**
@@ -61,7 +54,7 @@ export const Form = styled.form`
 
   @media (max-width: 40em) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
 `;
@@ -76,17 +69,5 @@ export const Label = styled.h4`
 
 export const SectionTitle = styled.h4`
   font-size: 0.7rem;
-  // font-weight: 400;
   margin: 0 0 0.5rem 0;
-  text-decoartion
-`;
-
-export const Button = styled.button`
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: #9c9c9c;
-  background-color: transparent;
-  border: none;
-  text-decoration: underline;
-  margin-left: 1rem;
 `;

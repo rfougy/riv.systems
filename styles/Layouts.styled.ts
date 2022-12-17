@@ -3,12 +3,7 @@ import styled from "@emotion/styled";
 export const PageTitle = styled.h1`
   text-align: start;
   width: 100%;
-  margin-top: 0;
-  margin-bottom: 3rem;
-
-  @media (max-width: 40em) {
-    margin-bottom: 1rem;
-  }
+  margin: 0;
 `;
 
 export const FilterAndGridContainer = styled.div`
@@ -17,7 +12,7 @@ export const FilterAndGridContainer = styled.div`
 
   @media (max-width: 40em) {
     flex-direction: column;
-    gap: 4rem;
+    gap: 3rem;
     width: 100%;
   }
 `;

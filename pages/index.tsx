@@ -15,9 +15,10 @@ const Home: NextPage = () => {
   return (
     <>
       <PageHead
-        title={"Home"}
+        isHomePage
+        title={"RIV.SYSTEMS: Fashion, Web Development, Life Experiences"}
         description={
-          "Welcome to riv.systems, a personal portfolio and blog website featuring content on fashion, web development, design and more."
+          "Welcome to RIV.SYSTEMS, a personal portfolio and blog website featuring content on fashion, web development, design and more."
         }
       />
       <DisplayDotsCoordsProvider>

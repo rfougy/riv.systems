@@ -7,7 +7,7 @@ const PageHead: React.FC<{
 }> = ({ title, description, isHomePage }) => {
   return (
     <Head>
-      <title>{isHomePage ? title : `${title} | RIV.SYSTEMS}`}</title>
+      <title>{isHomePage ? title : `${title} | RIV.SYSTEMS`}</title>
       <meta name="description" content={description} />
     </Head>
   );

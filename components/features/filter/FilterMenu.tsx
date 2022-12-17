@@ -13,6 +13,7 @@ import {
   Title,
   TitleContainer,
   FilterSet,
+  SectionTitle,
 } from "./FilterMenu.styled";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 
@@ -77,10 +78,10 @@ const FilterMenu: React.FC<{
 
   return (
     <Container>
-      <TitleContainer>
+      {/* <TitleContainer>
         <Title>Filters</Title>
         <Button onClick={() => clearFilters()}>Clear</Button>
-      </TitleContainer>
+      </TitleContainer> */}
       {nestedFilteringOptions ? (
         <Form>
           {nestedFilteringOptions.map((nestedCategories: any, index) => {
@@ -92,7 +93,8 @@ const FilterMenu: React.FC<{
 
             return (
               <FilterSet key={index}>
-                <FilterOption>
+                {/* Commented until better UI design is improved */}
+                {/* <FilterOption>
                   <input
                     type="checkbox"
                     name={section}
@@ -111,7 +113,8 @@ const FilterMenu: React.FC<{
                     }
                   />
                   <Label>{capitalizeFirstChar(section)}</Label>
-                </FilterOption>
+                </FilterOption> */}
+                <SectionTitle>{capitalizeFirstChar(section)}</SectionTitle>
                 <div>
                   {nestedCategories.map(
                     (categoryObj: ICategoryObj, index: number) => {

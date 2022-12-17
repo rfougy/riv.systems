@@ -43,8 +43,8 @@ export const FilterOption = styled.label`
 
   input[type="checkbox"]:checked {
     background: ${(props: any) => props.theme.primary};
-    outline: 0.1rem solid ${(props: any) => props.theme.secondary};
-    outline-offset: -0.2rem;
+    // outline: 0.075rem solid ${(props: any) => props.theme.secondary};
+    // outline-offset: -0.15rem;
   }
 `;
 

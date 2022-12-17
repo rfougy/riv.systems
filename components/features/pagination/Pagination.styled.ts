@@ -17,7 +17,7 @@ export const Button = styled.button`
 
   border: solid 0.1rem ${(props: any) => props.theme.primary};
   border-radius: 1.45vh;
-  padding: 0.35rem 0.7rem;
+  padding: 0.4rem 0.7rem;
   margin: 0 0.35rem;
 
   &:hover {

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { dateToStr } from "../../../utils/dateToStr";
 import PageHead from "../../head/page/PageHead";
+import ArrowIcon from "../../icons/ArrowIcon";
 import {
   Inline,
   Metadata,
@@ -29,7 +30,9 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
       <Container>
         <Metadata>
           <Link href={`/content/${section}`}>{section}</Link>
-          <Inline>&gt;</Inline>
+          <Inline>
+            <ArrowIcon />
+          </Inline>
           <Link href={`/content/${section}/${category}`}>{category}</Link>
           <P>{dateAsStr}</P>
         </Metadata>

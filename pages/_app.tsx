@@ -14,6 +14,7 @@ import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
 import GlobalHead from "../components/head/global/GlobalHead";
+import SmoothScrollbar from "../components/features/smooth-scrollbar/SmoothScrollbar";
 
 const App = (props: any) => {
   const { Component, pageProps }: AppProps = props;
@@ -52,6 +53,19 @@ const App = (props: any) => {
 
     label {
       color: ${currTheme.primary};
+    }
+
+    .scrollbar-thumb {
+      background-color: ${currTheme.primary} !important;
+      width: 0.75rem !important;
+      height: 0.75rem !important;
+
+      border-radius: 1rem !important;
+    }
+
+    .scrollbar-track-y {
+      width: 1rem !important;
+      background-color: transparent !important;
     }
   `;
 
@@ -92,6 +106,7 @@ const App = (props: any) => {
   return (
     <>
       <GlobalHead />
+      <SmoothScrollbar />
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
         {announcementIsActive && (

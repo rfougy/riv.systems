@@ -39,10 +39,9 @@ export const Content = styled.div`
   margin-top: 3rem;
 
   img {
-    margin: 3rem 0;
+    margin: 1rem 0;
     width: 100%;
     border-radius: 2vh;
-    
   }
 
   iframe {
@@ -56,5 +55,13 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  ul {
+    margin: 2.75rem 0;
+  }
+
+  ul img {
+    margin: 0.25rem 0;
   }
 `;

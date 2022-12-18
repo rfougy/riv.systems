@@ -17,7 +17,6 @@ const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
   slug,
   content,
 }) => {
-  useEffect(() => console.log(content));
 
   if (!slug) return <ContentPage content={content} />;
 

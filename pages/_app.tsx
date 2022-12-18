@@ -55,6 +55,7 @@ const App = (props: any) => {
     }
 
     body::-webkit-scrollbar {
+      -webkit-appearance: none;
       width: 0.75rem;
       height: 0.75rem;
 

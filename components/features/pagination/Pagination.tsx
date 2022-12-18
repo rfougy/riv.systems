@@ -33,31 +33,35 @@ const Pagination: React.FC<{
   }
 
   return (
-    <Container>
-      <PageNav>
-        <Button onClick={() => setCurrentPage(1)}>
-          <ArrowIcon right />
-          <ArrowIcon right />
-        </Button>
-        <Button onClick={() => handlePrevButtonClick()}>
-          <ArrowIcon right />
-        </Button>
-        <PageNumber>
-          Page {currentPage} of {lastPage}
-        </PageNumber>
-        <Button onClick={() => handleNextButtonClick()}>
-          <ArrowIcon left />
-        </Button>
-        <Button onClick={() => setCurrentPage(lastPage)}>
-          <ArrowIcon left />
-          <ArrowIcon left />
-        </Button>
-      </PageNav>
-      {/* <div>
+    <>
+      {lastPage !== 1 && (
+        <Container>
+          <PageNav>
+            <Button onClick={() => setCurrentPage(1)}>
+              <ArrowIcon right />
+              <ArrowIcon right />
+            </Button>
+            <Button onClick={() => handlePrevButtonClick()}>
+              <ArrowIcon right />
+            </Button>
+            <PageNumber>
+              Page {currentPage} of {lastPage}
+            </PageNumber>
+            <Button onClick={() => handleNextButtonClick()}>
+              <ArrowIcon left />
+            </Button>
+            <Button onClick={() => setCurrentPage(lastPage)}>
+              <ArrowIcon left />
+              <ArrowIcon left />
+            </Button>
+          </PageNav>
+          {/* <div>
         <Button onClick={() => setPostCardsPerPage(1)}>1 item per page</Button>
         <Button onClick={() => setPostCardsPerPage(2)}>2 items per page</Button>
       </div> */}
-    </Container>
+        </Container>
+      )}
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 ---
 title: "Example"
-datePublished: "2022-01-01"
+datePublished: "2222-01-01"
 section: example
 category: category
 excerpt: The excerpt will be used for the description metatag of the post page.

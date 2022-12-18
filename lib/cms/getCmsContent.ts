@@ -19,7 +19,11 @@ export function getAbsolutePath(
 export function getFileNamesInDirectory(...args: any) {
   const path = getAbsolutePath(...args);
 
-  return readdirSync(path);
+  const fileNames: string[] = readdirSync(path).filter(
+    (fileName: string) => fileName !== "example"
+  );
+
+  return fileNames;
 }
 
 export function getFileContents(path: string) {

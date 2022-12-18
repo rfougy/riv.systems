@@ -9,8 +9,6 @@ export function getDynamicPagePaths() {
   const allCategories: any = getCategories(sections);
   const allPosts = getPosts(allCategories);
 
-  console.log("SECTION: ", sections);
-
   const pathToContentPage = [{ params: { slug: [] } }];
 
   const pathToSectionPage = sections.map((section: string) => ({

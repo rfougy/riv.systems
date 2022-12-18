@@ -55,32 +55,27 @@ const App = (props: any) => {
     }
 
     body::-webkit-scrollbar {
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 0.75rem;
+      height: 0.75rem;
 
       @media (max-width: 40em) {
-        width: 0;
-        height: 0;
+        width: 0.5rem;
+        height: 0.5rem;
       }
     }
 
     body::-webkit-scrollbar-track {
       background-color: transparent;
+      border-left: 0.1rem solid ${currTheme.primary};
     }
 
     body::-webkit-scrollbar-thumb {
       height: 1rem;
       width: 1rem;
-      background-color: #808080;
-      border-radius: 100vw;
-      border: 0.5rem solid ${currTheme.secondary};
+      background-color: none;
+      border-top: 0.1rem solid ${currTheme.primary};
 
       opacity: 0.5;
-
-      @media (max-width: 40em) {
-        border: 0.6rem solid ${currTheme.secondary};
-      }
-    }
     }
   `;
 

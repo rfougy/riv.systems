@@ -55,7 +55,7 @@ export const Form = styled.form`
   @media (max-width: 40em) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    gap: 0 3rem;
   }
 `;
 

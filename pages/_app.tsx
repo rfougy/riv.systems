@@ -53,6 +53,35 @@ const App = (props: any) => {
     label {
       color: ${currTheme.primary};
     }
+
+    body::-webkit-scrollbar {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      @media (max-width: 40em) {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    body::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      height: 1rem;
+      width: 1rem;
+      background-color: #808080;
+      border-radius: 100vw;
+      border: 0.5rem solid ${currTheme.secondary};
+
+      opacity: 0.5;
+
+      @media (max-width: 40em) {
+        border: 0.6rem solid ${currTheme.secondary};
+      }
+    }
+    }
   `;
 
   function toggleTheme(): void {

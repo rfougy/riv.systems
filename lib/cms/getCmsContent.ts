@@ -18,8 +18,9 @@ export function getAbsolutePath(
 
 export function getFileNamesInDirectory(...args: any) {
   const path = getAbsolutePath(...args);
+  const fileNames: string[] = readdirSync(path);
 
-  return readdirSync(path);
+  return fileNames;
 }
 
 export function getFileContents(path: string) {

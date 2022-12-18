@@ -22,7 +22,8 @@ export const NavMenu = styled.ul`
   gap: 0rem 2rem;
   height: 100%;
 
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: ${({ numOfSections }: { numOfSections: number }) =>
+    `repeat(${numOfSections + 1}, 1fr)`};
   @media (max-width: 40em) {
     gap: 0;
     grid-template-columns: repeat(1, 1fr);

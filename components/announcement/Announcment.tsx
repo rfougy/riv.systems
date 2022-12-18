@@ -13,10 +13,16 @@ const announcementText: string =
   "Latest Update (12/16/22): Announcement Bar can now collapse!";
 
 const Announcement: React.FC<{
+  announcement: any;
   theme: any;
   setAnnouncementIsActive: (bool: boolean) => void;
-}> = ({ theme, setAnnouncementIsActive }) => {
+}> = ({ announcement, theme, setAnnouncementIsActive }) => {
   const closeIcon = closeIconTheme[theme.id];
+
+  function handleClose() {
+    localStorage.setItem("announcement", JSON.stringify(announcement));
+    setAnnouncementIsActive(false);
+  }
 
   return (
     <Container>
@@ -24,10 +30,13 @@ const Announcement: React.FC<{
         <Image
           src={closeIcon}
           alt="announcement close icon"
-          onClick={() => setAnnouncementIsActive(false)}
+          onClick={() => handleClose()}
         />
       </CloseIconContainer>
-      <Text>{announcementText}</Text>
+      <Text>
+        Latest Update ({new Date(announcement.dateCreated).toLocaleDateString()}
+        ): {announcement.text}
+      </Text>
     </Container>
   );
 };

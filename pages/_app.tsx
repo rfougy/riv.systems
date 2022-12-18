@@ -21,19 +21,10 @@ const App = (props: any) => {
   const [announcementIsActive, setAnnouncementIsActive] =
     useState<boolean>(true);
 
-  useEffect(() => {
-    const themeInLocalStorage = localStorage.getItem("theme");
-
-    if (themeInLocalStorage) {
-      setTheme(JSON.parse(themeInLocalStorage));
-    }
-  }, []);
-
-  function toggleTheme(): void {
-    const newTheme = currTheme.id === lightTheme.id ? darkTheme : lightTheme;
-    localStorage.setItem("theme", JSON.stringify(newTheme));
-    setTheme(newTheme);
-  }
+  const announcement = {
+    dateCreated: "2022-12-17",
+    text: "3 new posts are up!",
+  };
 
   const globalColors = css`
     h1,
@@ -64,6 +55,41 @@ const App = (props: any) => {
     }
   `;
 
+  function toggleTheme(): void {
+    const newTheme = currTheme.id === lightTheme.id ? darkTheme : lightTheme;
+    localStorage.setItem("theme", JSON.stringify(newTheme));
+    setTheme(newTheme);
+  }
+
+  useEffect(() => {
+    const themeInLocalStorage = localStorage.getItem("theme");
+
+    if (themeInLocalStorage) {
+      setTheme(JSON.parse(themeInLocalStorage));
+    }
+  }, []);
+
+  useEffect(() => {
+    const announcementInLocalStorage: any =
+      localStorage.getItem("announcement");
+
+    const announcementDate = announcementInLocalStorage
+      ? new Date(announcementInLocalStorage.dateCreated)
+      : undefined;
+    const newestAnnouncementDate = new Date(announcement.dateCreated);
+
+    if (
+      announcementInLocalStorage &&
+      announcementDate === newestAnnouncementDate
+    ) {
+      setAnnouncementIsActive(false);
+      return;
+    }
+
+    localStorage.removeItem("announcement");
+    setAnnouncementIsActive(true);
+  }, []);
+
   return (
     <>
       <GlobalHead />
@@ -73,6 +99,7 @@ const App = (props: any) => {
           <Announcement
             theme={currTheme}
             setAnnouncementIsActive={setAnnouncementIsActive}
+            announcement={announcement}
           />
         )}
         <PageContainer>

@@ -18,7 +18,10 @@ export function getAbsolutePath(
 
 export function getFileNamesInDirectory(...args: any) {
   const path = getAbsolutePath(...args);
-  const fileNames: string[] = readdirSync(path);
+  const fileNames: string[] =
+    process.env.NODE_ENV === "development"
+      ? readdirSync(path)
+      : readdirSync(path).filter((fileName) => fileName !== "example");
 
   return fileNames;
 }

@@ -42,6 +42,7 @@ export const Content = styled.div`
     margin: 3rem 0;
     width: 100%;
     border-radius: 2vh;
+    
   }
 
   iframe {

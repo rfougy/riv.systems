@@ -22,7 +22,7 @@ const logoTheme: any = {
   },
 };
 
-const sectionsList: sectionType[] = ["works", "logs", "items", "test"];
+const sectionsList: sectionType[] = ["works", "logs", "items"];
 
 const Navbar: React.FC<{ theme: any; toggleTheme: () => void }> = ({
   theme,
@@ -78,7 +78,10 @@ const Navbar: React.FC<{ theme: any; toggleTheme: () => void }> = ({
         </Link>
         <ThemeToggleButton toggleTheme={toggleTheme} />
       </LogoContainer>
-      <NavMenu onMouseLeave={() => setHoveredOption(activeOption)}>
+      <NavMenu
+        onMouseLeave={() => setHoveredOption(activeOption)}
+        numOfSections={sectionsList.length}
+      >
         {sectionsList.map((section: string, index: number) => (
           <MenuOption key={index} onMouseOver={() => setHoveredOption(section)}>
             <Link href={`/content/${section}`} passHref>

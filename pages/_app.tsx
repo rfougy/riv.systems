@@ -22,7 +22,7 @@ const App = (props: any) => {
     useState<boolean>(true);
 
   const announcement = {
-    dateCreated: "2022-12-17",
+    dateCreated: "2022-12-18",
     text: "3 new posts are up!",
   };
 
@@ -74,20 +74,19 @@ const App = (props: any) => {
       localStorage.getItem("announcement");
 
     const announcementDate = announcementInLocalStorage
-      ? new Date(announcementInLocalStorage.dateCreated)
+      ? JSON.parse(announcementInLocalStorage).dateCreated
       : undefined;
-    const newestAnnouncementDate = new Date(announcement.dateCreated);
+    const newestAnnouncementDate = announcement.dateCreated;
 
     if (
       announcementInLocalStorage &&
       announcementDate === newestAnnouncementDate
     ) {
       setAnnouncementIsActive(false);
-      return;
+    } else {
+      localStorage.removeItem("announcement");
+      setAnnouncementIsActive(true);
     }
-
-    localStorage.removeItem("announcement");
-    setAnnouncementIsActive(true);
   }, []);
 
   return (

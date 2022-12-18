@@ -22,7 +22,7 @@ const App = (props: any) => {
     useState<boolean>(true);
 
   const announcement = {
-    dateCreated: "2022-12-19",
+    dateCreated: "2022-12-18",
     text: "3 new posts are up!",
   };
 

@@ -35,10 +35,10 @@ export const FilterOption = styled.label`
     place-content: center;
 
     color: ${(props: any) => props.theme.primary};
-    width: 0.75rem;
-    height: 0.75rem;
+    width: 0.7rem;
+    height: 0.7rem;
     border: 0.075rem solid;
-    border-radius: 0.2rem;
+    border-radius: 1rem;
   }
 
   input[type="checkbox"]:checked {

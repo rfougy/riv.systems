@@ -55,13 +55,12 @@ const App = (props: any) => {
     }
 
     body::-webkit-scrollbar {
-      -webkit-appearance: none;
-      width: 0.75rem;
-      height: 0.75rem;
+      width: 0.75rem !important;
+      height: 0.75rem !important;
 
       @media (max-width: 40em) {
-        width: 0.5rem;
-        height: 0.5rem;
+        width: 0.5rem !important;
+        height: 0.5rem !important;
       }
     }
 

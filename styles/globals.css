@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: "Roboto Mono", sans-serif;
+  -webkit-overflow-scrolling: auto;
 }
 
 body {

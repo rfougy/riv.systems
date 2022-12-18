@@ -18,6 +18,9 @@ const Pagination: React.FC<{
     totalPostCards / postCardsPerPage
   );
 
+  const onFirstPage: boolean = currentPage === 1;
+  const onLastPage: boolean = currentPage === lastPage;
+
   function handlePrevButtonClick() {
     if (currentPage > 1) {
       const prevPage: number = currentPage - 1;
@@ -35,20 +38,20 @@ const Pagination: React.FC<{
   return (
     <Container>
       <PageNav>
-        <Button onClick={() => setCurrentPage(1)}>
+        <Button disabled={onFirstPage} onClick={() => setCurrentPage(1)}>
           <ArrowIcon right />
           <ArrowIcon right />
         </Button>
-        <Button onClick={() => handlePrevButtonClick()}>
+        <Button disabled={onFirstPage} onClick={() => handlePrevButtonClick()}>
           <ArrowIcon right />
         </Button>
         <PageNumber>
           Page {currentPage} of {lastPage}
         </PageNumber>
-        <Button onClick={() => handleNextButtonClick()}>
+        <Button disabled={onLastPage} onClick={() => handleNextButtonClick()}>
           <ArrowIcon left />
         </Button>
-        <Button onClick={() => setCurrentPage(lastPage)}>
+        <Button disabled={onLastPage} onClick={() => setCurrentPage(lastPage)}>
           <ArrowIcon left />
           <ArrowIcon left />
         </Button>

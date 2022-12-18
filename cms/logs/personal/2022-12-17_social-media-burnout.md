@@ -1,5 +1,5 @@
 ---
-title: "Instagram Burnout: On Blurring the Lines Between the Personal and Online Self"
+title: "Social Media Burnout: On Blurring the Lines Between the Personal and Branded Self"
 datePublished: "2022-12-17"
 section: logs
 category: personal

@@ -1,6 +1,7 @@
 import Markdown from "markdown-to-jsx";
 import Image from "next/image";
 import Link from "next/link";
+import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 import { dateToStr } from "../../../utils/dateToStr";
 import PageHead from "../../head/page/PageHead";
 import ArrowIcon from "../../icons/ArrowIcon";
@@ -29,11 +30,15 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
       <PageHead title={title} description={excerpt} />
       <Container>
         <Metadata>
-          <Link href={`/content/${section}`}>{section}</Link>
+          <Link href={`/content/${section}`}>
+            {capitalizeFirstChar(section)}
+          </Link>
           <Inline>
             <ArrowIcon />
           </Inline>
-          <Link href={`/content/${section}/${category}`}>{category}</Link>
+          <Link href={`/content/${section}/${category}`}>
+            {capitalizeFirstChar(category)}
+          </Link>
           <P>{dateAsStr}</P>
         </Metadata>
         <MarginBottom>
@@ -45,9 +50,12 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
           width={100}
           height={300}
           objectFit="cover"
+          style={{ borderRadius: "2vh" }}
         />
         <Content>
-          <Markdown options={{ wrapper: "article" }}>{postContent}</Markdown>
+          <Markdown options={{ wrapper: "article", forceBlock: true }}>
+            {postContent}
+          </Markdown>
         </Content>
       </Container>
     </>

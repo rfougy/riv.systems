@@ -9,6 +9,9 @@ const closeIconTheme: any = {
   dark: closeIconDark,
 };
 
+const announcementText: string =
+  "Latest Update (12/16/22): Announcement Bar can now collapse!";
+
 const Announcement: React.FC<{
   theme: any;
   setAnnouncementIsActive: (bool: boolean) => void;
@@ -24,7 +27,7 @@ const Announcement: React.FC<{
           onClick={() => setAnnouncementIsActive(false)}
         />
       </CloseIconContainer>
-      <Text>Latest Update (12/16/22): Announcement Bar can now collapse!</Text>
+      <Text>{announcementText}</Text>
     </Container>
   );
 };

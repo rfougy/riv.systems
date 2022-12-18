@@ -13,12 +13,12 @@ Made entirely of Sterling Silver, the Femme Fatale Protector Ring cannot be full
 
 On the backside is an engraving that spells out ‘Femme Fatale,’ a seductive women who brings disaster unto those who become involved with her. Certain parts of the ring are movable, such as the revolving cylinder and small mechanics seen on the inner side of the ring.
 
-I bought this gem at the Soloist flagship store in Tokyo. The interior design and atmosphere of the store can be its own post. Anyhow, I was lucky enough to acquire this ring as it was the last in stock, and with good reason. The sheer craftsmanship of this ring cannot be compared to what is produced as a whole in the fashion scene. Unfortunately I ended up selling the piece (and deeply regret it to this day, rip). 
+I bought this gem at the Soloist flagship store in Tokyo. The interior design and atmosphere of the store can be its own post. Anyhow, I was lucky enough to acquire this ring as it was the last in stock, and with good reason. The sheer craftsmanship of this ring cannot be compared to what is produced as a whole in the fashion scene. Unfortunately I ended up selling the piece (and deeply regret it to this day, rip).
 
-![Product Photo of TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol](https://user-images.githubusercontent.com/77861258/208269441-cf37fdc2-d1d2-4da1-b0ec-6aeedf33f141.jpg)
-![Product Photo of TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol](https://user-images.githubusercontent.com/77861258/208269442-cad09bc2-b459-4c2b-9607-cf7349cd249b.jpg)
-![Product Photo of TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol](https://user-images.githubusercontent.com/77861258/208269443-6ddebd21-bf2d-49f8-bdec-79230d501d1c.jpg)
-![Product Photo of TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol](https://user-images.githubusercontent.com/77861258/208269445-a2fc846c-fc1b-44e0-83f0-08f00aeb3d9d.jpg)
-![Product Photo of TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol](https://user-images.githubusercontent.com/77861258/208269446-5ffa0765-56eb-4573-b450-75b48e488b4d.jpg)
-![Product Photo of TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol](https://user-images.githubusercontent.com/77861258/208269448-8765ff2d-0fb4-4755-b857-a24759d25011.jpg)
-![Product Photo of TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol](https://user-images.githubusercontent.com/77861258/208269449-d6eabdda-df08-4867-ba30-044bf05865a0.JPG)
+- ![Product Photo of TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol](https://user-images.githubusercontent.com/77861258/208269441-cf37fdc2-d1d2-4da1-b0ec-6aeedf33f141.jpg)
+- ![Product Photo of TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol](https://user-images.githubusercontent.com/77861258/208269442-cad09bc2-b459-4c2b-9607-cf7349cd249b.jpg)
+- ![Product Photo of TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol](https://user-images.githubusercontent.com/77861258/208269443-6ddebd21-bf2d-49f8-bdec-79230d501d1c.jpg)
+- ![Product Photo of TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol](https://user-images.githubusercontent.com/77861258/208269445-a2fc846c-fc1b-44e0-83f0-08f00aeb3d9d.jpg)
+- ![Product Photo of TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol](https://user-images.githubusercontent.com/77861258/208269446-5ffa0765-56eb-4573-b450-75b48e488b4d.jpg)
+- ![Product Photo of TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol](https://user-images.githubusercontent.com/77861258/208269448-8765ff2d-0fb4-4755-b857-a24759d25011.jpg)
+- ![Product Photo of TAKAHIROMIYASHITATheSoloist: SS18 'Femme Fatale' Ring Pistol](https://user-images.githubusercontent.com/77861258/208269449-d6eabdda-df08-4867-ba30-044bf05865a0.JPG)

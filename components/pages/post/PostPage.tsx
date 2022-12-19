@@ -45,9 +45,10 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
           <Title>{title}</Title>
         </MarginBottom>
         <Image
+          priority
           src={coverImage}
           alt={`Cover image for the blog post titled ${title}`}
-          width={100}
+          width={800}
           height={300}
           objectFit="cover"
           style={{ borderRadius: "2vh" }}

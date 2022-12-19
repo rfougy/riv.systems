@@ -56,8 +56,7 @@ const App = (props: any) => {
 
     body::-webkit-scrollbar {
       -webkit-appearance: none !important;
-      // -webkit-overflow-scrolling: auto !important;
-      -webkit-overflow-scrolling: touch !important;
+      -webkit-overflow-scrolling: auto !important;
 
       width: 0.75rem !important;
       height: 0.75rem !important;
@@ -69,17 +68,17 @@ const App = (props: any) => {
     }
 
     body::-webkit-scrollbar-track {
-      background-color: transparent;
-      border-left: 0.1rem solid ${currTheme.primary};
+      background-color: transparent !important;
+      border-left: 0.1rem solid ${currTheme.primary} !important;
     }
 
     body::-webkit-scrollbar-thumb {
-      height: 1rem;
-      width: 1rem;
-      background-color: none;
-      border-top: 0.1rem solid ${currTheme.primary};
+      height: 1rem !important;
+      width: 1rem !important;
+      background-color: none !important;
+      border-top: 0.1rem solid ${currTheme.primary} !important;
 
-      opacity: 0.5;
+      opacity: 0.5 !important;
     }
   `;
 

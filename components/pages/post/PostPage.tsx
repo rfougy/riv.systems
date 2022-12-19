@@ -5,6 +5,7 @@ import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 import { dateToStr } from "../../../utils/dateToStr";
 import PageHead from "../../head/page/PageHead";
 import ArrowIcon from "../../icons/ArrowIcon";
+import NextImage from "../../posts/content/next-image/NextImage";
 import {
   Inline,
   Metadata,
@@ -54,7 +55,20 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
           style={{ borderRadius: "2vh" }}
         />
         <Content>
-          <Markdown options={{ wrapper: "article", forceBlock: true }}>
+          <Markdown
+            options={{
+              wrapper: "article",
+              forceBlock: true,
+              overrides: {
+                img: {
+                  component: NextImage,
+                  // props: {
+                  //   className: "foo",
+                  // },
+                },
+              },
+            }}
+          >
             {postContent}
           </Markdown>
         </Content>

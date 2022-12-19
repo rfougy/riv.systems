@@ -5,6 +5,7 @@ import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 import { dateToStr } from "../../../utils/dateToStr";
 import PageHead from "../../head/page/PageHead";
 import ArrowIcon from "../../icons/ArrowIcon";
+import NextImage from "../../posts/content/next-image/NextImage";
 import {
   Inline,
   Metadata,
@@ -45,15 +46,29 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
           <Title>{title}</Title>
         </MarginBottom>
         <Image
+          priority
           src={coverImage}
           alt={`Cover image for the blog post titled ${title}`}
-          width={100}
+          width={800}
           height={300}
           objectFit="cover"
           style={{ borderRadius: "2vh" }}
         />
         <Content>
-          <Markdown options={{ wrapper: "article", forceBlock: true }}>
+          <Markdown
+            options={{
+              wrapper: "article",
+              forceBlock: true,
+              overrides: {
+                img: {
+                  component: NextImage,
+                  // props: {
+                  //   className: "foo",
+                  // },
+                },
+              },
+            }}
+          >
             {postContent}
           </Markdown>
         </Content>

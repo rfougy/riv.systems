@@ -16,7 +16,6 @@ export const Container = styled.a`
   background: ${(props: any) => props.theme.idle};
 
   &:hover {
-    text-decoration: underline;
     background: ${(props: any) => props.theme.highlight};
   }
 
@@ -62,4 +61,5 @@ export const Info = styled.p`
   display: flex;
   align-items: center;
   margin: 0 0.5rem 0 0;
+  cursor: cell !important;
 `;

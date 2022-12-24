@@ -9,9 +9,12 @@ const NextImage: React.FC<{
   alt = "Photo for blog post in riv.systems",
   aspectRatio = "3:4",
 }) => {
-  const aspectRatioArr: any = aspectRatio?.split(":");
-  const width: number = 800 * aspectRatioArr[0];
-  const height: number = 800 * aspectRatioArr[1];
+  const aspectRatioArr: string[] = aspectRatio?.split(":");
+  const ratioWidth: number = parseInt(aspectRatioArr[0]);
+  const ratioHeight: number = parseInt(aspectRatioArr[1]);
+
+  const width: number = 800;
+  const height: number = (width * ratioHeight) / ratioWidth;
 
   return (
     <Image

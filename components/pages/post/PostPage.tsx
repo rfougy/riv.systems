@@ -5,7 +5,7 @@ import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 import { dateToStr } from "../../../utils/dateToStr";
 import PageHead from "../../head/page/PageHead";
 import ArrowIcon from "../../icons/ArrowIcon";
-import NextImage from "../../posts/content/next-image/NextImage";
+import NextImage from "../../markdown-to-jsx/NextImage";
 import {
   Inline,
   Metadata,
@@ -62,9 +62,9 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
               overrides: {
                 img: {
                   component: NextImage,
-                  // props: {
-                  //   className: "foo",
-                  // },
+                },
+                Image: {
+                  component: NextImage,
                 },
               },
             }}

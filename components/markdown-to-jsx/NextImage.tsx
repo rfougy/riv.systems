@@ -18,7 +18,6 @@ const NextImage: React.FC<{
 
   return (
     <Image
-      priority
       src={src}
       alt={alt}
       width={width}

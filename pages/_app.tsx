@@ -27,31 +27,9 @@ const App = (props: any) => {
   };
 
   const globalColors = css`
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-      color: ${currTheme.primary};
-    }
-
     body {
       background-color: ${currTheme.secondary};
-    }
-
-    a {
-      color: ${currTheme.primary};
-    }
-
-    button {
-      color: ${currTheme.primary};
-      background-color: ${currTheme.secondary};
-    }
-
-    label {
-      color: ${currTheme.primary};
+      transition: 100ms ease-in; // ease-in for theme toggling
     }
 
     body::-webkit-scrollbar {
@@ -76,6 +54,29 @@ const App = (props: any) => {
       border-top: 0.1rem solid ${currTheme.primary};
 
       opacity: 0.5;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      color: ${currTheme.primary};
+    }
+
+    a {
+      color: ${currTheme.primary};
+    }
+
+    button {
+      color: ${currTheme.primary};
+      background-color: ${currTheme.secondary};
+    }
+
+    label {
+      color: ${currTheme.primary};
     }
   `;
 

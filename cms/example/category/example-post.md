@@ -37,3 +37,11 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
 **Video...**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/owa9wCZIllc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+**Component: NextImage...**
+
+<Image 
+  src="https://user-images.githubusercontent.com/77861258/206950699-8cb4c4ec-b093-460a-a965-6f27ab4f0772.png" 
+  alt="Alt Text for Image" 
+  aspectRatio="3:4"
+/>

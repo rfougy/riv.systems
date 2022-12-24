@@ -4,7 +4,9 @@ export const Footer = styled.footer`
   display: flex;
   flex-direction: column;
   justify-content: end;
-  margin-top: auto;
+  // margin-top: auto;
+
+  height: 1.375rem
 `;
 
 export const SocialsList = styled.ul`

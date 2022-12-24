@@ -56,11 +56,11 @@ const App = (props: any) => {
 
     body::-webkit-scrollbar {
       width: 0.75rem;
-      height: 0.75rem;
+      height: 0;
 
       @media (max-width: 40em) {
         width: 0.5rem;
-        height: 0.5rem;
+        height: 0;
       }
     }
 
@@ -70,7 +70,7 @@ const App = (props: any) => {
     }
 
     body::-webkit-scrollbar-thumb {
-      height: 1rem;
+      height: 0;
       width: 1rem;
       background-color: none;
       border-top: 0.1rem solid ${currTheme.primary};

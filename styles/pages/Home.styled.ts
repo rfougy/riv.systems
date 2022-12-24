@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
+  // min-height: 70vh;
 `;
 
 export const Description = styled.p`

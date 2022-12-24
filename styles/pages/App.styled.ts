@@ -12,14 +12,13 @@ export const ContentWrap = styled.div`
   align-items: center;
   justify-content: center;
 
-  padding: 2.5rem 0;
+  padding: 4rem 0;
 
   margin: 0;
 
   min-height: calc(100vh - (5rem + 3.375rem));
 
   @media (max-width: 40em) {
-    padding: 2rem 0 3rem 0;
     min-height: calc(100vh - (4rem + 2.375rem));
   }
 `;

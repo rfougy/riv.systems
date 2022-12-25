@@ -37,7 +37,7 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
             </Link>
           </Inline>
           <Inline>
-            <ArrowIcon />
+            <ArrowIcon aria-label="Arrow Icon" />
           </Inline>
           <Inline>
             <Link href={`/content/${section}/${category}`}>

@@ -83,7 +83,7 @@ const App = (props: any) => {
   /**
    * @description remove console logs in production.
    */
-  if (process.env.NODE_ENV === "production") {
+  if (process.env.NODE_ENV !== "development") {
     console.log = () => {};
     console.error = () => {};
     console.debug = () => {};

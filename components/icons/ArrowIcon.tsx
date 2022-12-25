@@ -4,7 +4,7 @@ const ArrowIcon: React.FC<{ left?: boolean; right?: boolean }> = ({
   left,
   right,
 }) => {
-  return <Container aria-label="Arrow Icon" left={left} right={right} />;
+  return <Container left={left} right={right} />;
 };
 
 export default ArrowIcon;

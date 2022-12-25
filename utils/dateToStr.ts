@@ -3,9 +3,7 @@ export function dateToStr(date: string): string {
     .toLocaleString("en-US", {
       timeZone: "America/New_York",
       year: "numeric",
-      month: "numeric",
+      month: "long",
       day: "numeric",
     })
-    .split("/")
-    .join(".");
 }

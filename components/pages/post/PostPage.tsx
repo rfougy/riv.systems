@@ -51,7 +51,7 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
         <MarginBottom>
           <Title>{title}</Title>
         </MarginBottom>
-        {section !== "boards" && (
+        {section !== "refs" && (
           <Image
             priority
             src={coverImage}

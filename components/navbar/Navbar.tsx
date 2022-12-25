@@ -22,7 +22,7 @@ const logoTheme: any = {
   },
 };
 
-const sectionsList: sectionType[] = ["works", "logs", "items"];
+const sectionsList: sectionType[] = ["works", "logs", "items", "boards"];
 
 const Navbar: React.FC<{ theme: any; toggleTheme: () => void }> = ({
   theme,

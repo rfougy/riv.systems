@@ -12,7 +12,7 @@ import {
   SectionTitle,
 } from "./FilterMenu.styled";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
-import { useEffect } from "react";
+import { sortInAlphabeticOrder } from "../../../utils/sortInAlphabeticOrder";
 
 /**
  * @todo change structure of checkboxes
@@ -38,16 +38,15 @@ const FilterMenu: React.FC<{
     setCategoryFilters([]);
   }
 
-  const sectionHashtableRef = sections?.reduce(
-    (dictionary: any, section, index) => {
-      dictionary[index] = section.section;
-      return dictionary;
-    },
-    {}
-  );
+  const sectionHashtableRef = sections
+    ?.reduce((arr: any, section) => {
+      arr.push(section.section);
+      return arr;
+    }, [])
+    .sort((a: string, b: string) => sortInAlphabeticOrder(a, b));
 
   function createFilterHashtable() {
-    const hashtable = JSON.parse(JSON.stringify(sectionHashtableRef));
+    const hashtable = { ...sectionHashtableRef };
     for (let key in hashtable) {
       hashtable[key] = [];
     }
@@ -69,19 +68,9 @@ const FilterMenu: React.FC<{
     return hashtable;
   }
 
-  function sortBySection(a: any, b: any) {
-    const textA = a[0].section.toLowerCase();
-    const textB = b[0].section.toLowerCase();
-    return textA > textB ? 1 : -1;
-  }
-
   const nestedFilteringOptions = sections
-    ? Object.values(createFilterHashtable()).sort((a: any, b: any) =>
-        sortBySection(a, b)
-      )
+    ? Object.values(createFilterHashtable())
     : undefined;
-
-  useEffect(() => console.log(nestedFilteringOptions));
 
   return (
     <Container>

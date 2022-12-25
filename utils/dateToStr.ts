@@ -1,7 +1,9 @@
-export function dateToStr(date: Date): string {
-  return date.toLocaleString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+export function dateToStr(date: string): string {
+  return new Date(date.replace(/-/g, "/"))
+    .toLocaleString("en-US", {
+      timeZone: "America/New_York",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })
 }

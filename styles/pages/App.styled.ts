@@ -13,14 +13,14 @@ export const ContentWrap = styled.div`
   justify-content: ${({ isHomePage }: { isHomePage: boolean }) =>
     isHomePage ? "center" : "start"};
 
-  padding: 4rem 0;
+  padding: 2rem 0 4rem 0;
 
   margin: 0;
 
   min-height: calc(100vh - (5rem + 3.375rem));
 
   @media (max-width: 40em) {
-    min-height: calc(100vh - (4rem + 2.375rem));
+    min-height: calc(100vh - (6rem + 2.375rem));
   }
 `;
 

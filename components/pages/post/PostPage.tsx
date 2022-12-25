@@ -10,10 +10,11 @@ import {
   Inline,
   Metadata,
   Li,
-  MarginBottom,
   Container,
   Title,
   Content,
+  CoverImage,
+  Header,
 } from "./PostPage.styled";
 
 const PostPage: React.FC<{ slug: string; content: any }> = ({
@@ -24,12 +25,26 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
   const { title, datePublished, coverImage, excerpt } = frontmatter;
   const section: string = slug[0];
   const category: string = slug[1];
-  const dateAsStr: string = dateToStr(new Date(datePublished));
+  const dateAsStr: string = dateToStr(datePublished);
 
   return content ? (
     <>
       <PageHead title={title} description={excerpt} />
       <Container>
+        {section !== "refs" && (
+          <CoverImage>
+            <Image
+              priority
+              src={coverImage}
+              alt={`Cover image for the blog post titled ${title}`}
+              width={800}
+              height={400}
+              objectFit="cover"
+              style={{ borderRadius: "2vh" }}
+            />
+          </CoverImage>
+        )}
+        <Header>
         <Metadata>
           <Inline>
             <Link href={`/content/${section}`}>
@@ -48,21 +63,8 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
             <p>{dateAsStr}</p>
           </Li>
         </Metadata>
-        <MarginBottom>
-          <Title>{title}</Title>
-        </MarginBottom>
-        {section !== "boards" && (
-          <Image
-            priority
-            src={coverImage}
-            alt={`Cover image for the blog post titled ${title}`}
-            width={800}
-            height={300}
-            objectFit="cover"
-            style={{ borderRadius: "2vh" }}
-          />
-        )}
-
+        <Title>{title}</Title>
+        </Header>
         <Content>
           <Markdown
             options={{

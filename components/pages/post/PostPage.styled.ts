@@ -10,8 +10,10 @@ export const Container = styled.div`
 export const Metadata = styled.ul`
   list-style-type: none;
   padding: 0;
-  margin: 0 0 1rem 0;
+  margin-bottom: 1rem;
 `;
+
+export const Header = styled.header``;
 
 export const Title = styled.h1`
   font-size: 2rem;
@@ -20,6 +22,10 @@ export const Title = styled.h1`
   @media (max-width: 40em) {
     font-size: 1.75rem;
   }
+`;
+
+export const CoverImage = styled.div`
+  margin: 1.5rem 0;
 `;
 
 export const Li = styled.li`
@@ -31,10 +37,6 @@ export const Li = styled.li`
 export const Inline = styled.li`
   display: inline-block;
   margin-right: 0.5rem;
-`;
-
-export const MarginBottom = styled.div`
-  margin-bottom: 3rem;
 `;
 
 export const Content = styled.div`
@@ -54,7 +56,7 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem
+    gap: 3rem;
   }
 
   ul {

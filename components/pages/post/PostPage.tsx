@@ -10,7 +10,6 @@ import {
   Inline,
   Metadata,
   Li,
-  MarginBottom,
   Container,
   Title,
   Content,

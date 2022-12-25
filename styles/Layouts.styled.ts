@@ -20,12 +20,7 @@ export const FilterAndGridContainer = styled.div`
 export const CategoryPageContainer = styled.div`
   display: flex;
   flex-direction: column;
-
-  @media (max-width: 40em) {
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-  }
+  gap: 3rem;
 `;
 
 export const FilterContainer = styled.section`

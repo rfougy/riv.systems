@@ -40,14 +40,12 @@ export const MarginBottom = styled.div`
 export const Content = styled.div`
   margin-top: 3rem;
 
-  img {
-    margin: 1rem 0;
+  p {
     width: 100%;
-    border-radius: 2vh;
   }
 
   iframe {
-    margin: 3rem 0;
+    // margin: 1.5rem 0;
     aspect-ratio: 16 / 9;
     height: 100%;
     width: 100%;
@@ -57,10 +55,11 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 3rem
   }
 
   ul {
-    margin: 2.75rem 0;
+    // margin: 1.5rem 0;
   }
 
   ul img {

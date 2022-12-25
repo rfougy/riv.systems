@@ -12,6 +12,7 @@ import {
   SectionTitle,
 } from "./FilterMenu.styled";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
+import { useEffect } from "react";
 
 /**
  * @todo change structure of checkboxes
@@ -68,9 +69,19 @@ const FilterMenu: React.FC<{
     return hashtable;
   }
 
+  function sortBySection(a: any, b: any) {
+    const textA = a[0].section.toLowerCase();
+    const textB = b[0].section.toLowerCase();
+    return textA > textB ? 1 : -1;
+  }
+
   const nestedFilteringOptions = sections
-    ? Object.values(createFilterHashtable())
+    ? Object.values(createFilterHashtable()).sort((a: any, b: any) =>
+        sortBySection(a, b)
+      )
     : undefined;
+
+  useEffect(() => console.log(nestedFilteringOptions));
 
   return (
     <Container>

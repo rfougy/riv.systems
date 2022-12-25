@@ -17,7 +17,7 @@ export const Container = styled.button`
 `;
 
 export const Circle = styled.div`
-  background: ${(props: any) => props.theme.primary};
+  background: ${(props: any) => props.theme.red};
   border-radius: 50%;
   width: 0.75rem;
   height: 0.75rem;

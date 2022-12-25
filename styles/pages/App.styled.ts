@@ -20,7 +20,7 @@ export const ContentWrap = styled.div`
   min-height: calc(100vh - (5rem + 3.375rem));
 
   @media (max-width: 40em) {
-    min-height: calc(100vh - (4rem + 2.375rem));
+    min-height: calc(100vh - (6rem + 2.375rem));
   }
 `;
 

@@ -34,7 +34,7 @@ const CategoryPage: React.FC<{
     <>
       <PageHead
         title={`Category: ${categoryAsTitle}`}
-        description={`Category page for viewing all content related to ${categoryAsTitle}.`}
+        description={`View all content related to ${categoryAsTitle} in RIV.SYSTEMS.`}
       />
       <CategoryPageContainer>
         <PageTitle>Category: {categoryAsTitle}</PageTitle>

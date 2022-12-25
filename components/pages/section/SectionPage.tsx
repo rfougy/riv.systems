@@ -95,7 +95,7 @@ const SectionPage: React.FC<{
     <>
       <PageHead
         title={`Category: ${sectionAsTitle}`}
-        description={`Section page for viewing all content related to ${sectionAsTitle}.`}
+        description={`View all content related to ${sectionAsTitle} in RIV.SYSTEMS.`}
       />
       <FilterAndGridContainer>
         <FilterContainer>

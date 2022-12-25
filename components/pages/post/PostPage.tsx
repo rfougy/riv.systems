@@ -51,15 +51,18 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
         <MarginBottom>
           <Title>{title}</Title>
         </MarginBottom>
-        <Image
-          priority
-          src={coverImage}
-          alt={`Cover image for the blog post titled ${title}`}
-          width={800}
-          height={300}
-          objectFit="cover"
-          style={{ borderRadius: "2vh" }}
-        />
+        {section !== "boards" && (
+          <Image
+            priority
+            src={coverImage}
+            alt={`Cover image for the blog post titled ${title}`}
+            width={800}
+            height={300}
+            objectFit="cover"
+            style={{ borderRadius: "2vh" }}
+          />
+        )}
+
         <Content>
           <Markdown
             options={{

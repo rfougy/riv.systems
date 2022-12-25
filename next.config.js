@@ -13,7 +13,7 @@ const nextConfig = {
   },
   // @see https://nextjs.org/docs/advanced-features/compiler#remove-console
   compiler: {
-    removeConsole: true,
+    removeConsole: process.env.NODE_ENV !== "development",
   },
 };
 

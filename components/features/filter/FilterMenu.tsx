@@ -12,6 +12,7 @@ import {
   SectionTitle,
 } from "./FilterMenu.styled";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
+import { sortInAlphabeticOrder } from "../../../utils/sortInAlphabeticOrder";
 
 /**
  * @todo change structure of checkboxes
@@ -37,21 +38,20 @@ const FilterMenu: React.FC<{
     setCategoryFilters([]);
   }
 
-  const sectionHashtableRef = sections?.reduce(
-    (dictionary: any, section, index) => {
-      dictionary[index] = section.section;
-      return dictionary;
-    },
-    {}
-  );
+  const sectionsArr = sections
+    ?.reduce((arr: any, section) => {
+      arr.push(section.section);
+      return arr;
+    }, [])
+    .sort((a: string, b: string) => sortInAlphabeticOrder(a, b));
 
   function createFilterHashtable() {
-    const hashtable = JSON.parse(JSON.stringify(sectionHashtableRef));
+    const hashtable = { ...sectionsArr };
     for (let key in hashtable) {
       hashtable[key] = [];
     }
 
-    const hashtableRefEntries = Object.entries(sectionHashtableRef);
+    const hashtableRefEntries = Object.entries(sectionsArr);
 
     categories.map((category) => {
       const { section } = category;
@@ -77,7 +77,7 @@ const FilterMenu: React.FC<{
       {nestedFilteringOptions ? (
         <Form>
           {nestedFilteringOptions.map((nestedCategories: any, index) => {
-            const section = sectionHashtableRef[index];
+            const section = sectionsArr[index];
 
             return (
               <FilterSet key={index}>

@@ -20,26 +20,19 @@ export const LogoContainer = styled.div`
 `;
 
 export const NavMenu = styled.ul`
-  display: grid;
-  gap: 0rem 2rem;
+  display: flex;
+  gap: 0 2rem;
   height: 100%;
+  justify-content: end;
 
-  grid-template-columns: ${({ numOfSections }: { numOfSections: number }) =>
-    `repeat(${numOfSections + 1}, 1fr)`};
   @media (max-width: 40em) {
-    gap: 0;
-    grid-template-columns: repeat(1, 1fr);
+    flex-direction: column;
+    align-items: end;
   }
 `;
 
 export const MenuOption = styled.li`
   display: flex;
-  justify-content: center;
-  justify-self: start;
-
-  @media (max-width: 40em) {
-    justify-self: end;
-  }
 `;
 
 export const A = styled.a`

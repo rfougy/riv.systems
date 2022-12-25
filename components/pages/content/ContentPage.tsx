@@ -124,7 +124,7 @@ const ContentPage: React.FC<{
       <PageHead
         title={"Content"}
         description={
-          "Main directory where you can browse all blog posts in the website, from professional work to journal entries and miscellaneous content."
+          "Browse all blog posts in RIV.SYSTEMS, from professional work to journal entries and miscellaneous content."
         }
       />
       <FilterAndGridContainer>

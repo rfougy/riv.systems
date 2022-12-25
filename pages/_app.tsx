@@ -115,10 +115,7 @@ const App = (props: any) => {
     }
   }, []);
 
-  useEffect(() => {
-    setHydrated(true);
-  }, []);
-  // Returns null on first render, so the client and server match
+  useEffect(() => setHydrated(true), []);
   if (!hydrated) return null;
 
   return (

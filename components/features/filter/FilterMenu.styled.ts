@@ -67,7 +67,8 @@ export const Label = styled.h4`
   margin: 0;
 `;
 
-export const SectionTitle = styled.h4`
+export const SectionTitle = styled.h3`
   font-size: 0.7rem;
   margin: 0 0 0.5rem 0;
+  font-weight: 700;
 `;

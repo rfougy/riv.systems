@@ -8,7 +8,7 @@ const ThemeToggleButton: React.FC<{ toggleTheme: () => void }> = ({
   const themeInitial: string = theme.split("")[0].toUpperCase();
 
   return (
-    <Container onClick={() => toggleTheme()}>
+    <Container aria-label="Color Theme Toggle" onClick={() => toggleTheme()}>
       <Circle />
       <Title>{themeInitial}</Title>
     </Container>

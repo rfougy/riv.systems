@@ -22,13 +22,15 @@ export const Title = styled.h1`
   }
 `;
 
-export const P = styled.p`
-  margin: 0;
+export const Li = styled.li`
+  p {
+    margin: 0;
+  }
 `;
 
-export const Inline = styled.p`
+export const Inline = styled.li`
   display: inline-block;
-  margin: 0 0.5rem;
+  margin-right: 0.5rem;
 `;
 
 export const MarginBottom = styled.div`

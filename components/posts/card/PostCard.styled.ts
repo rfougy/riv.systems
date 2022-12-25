@@ -57,7 +57,7 @@ export const InfoContainer = styled.div`
   margin: 0;
 `;
 
-export const Info = styled.p`
+export const Info = styled.div`
   display: flex;
   align-items: center;
   margin: 0 0.5rem 0 0;

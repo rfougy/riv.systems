@@ -43,7 +43,7 @@ const PostCard: React.FC<{
             <InfoContainer>
               <Info>{capitalizeFirstChar(section)}</Info>
               <Info>
-                <ArrowIcon left />
+                <ArrowIcon aria-label="Arrow Icon" left />
               </Info>
               <Info>{capitalizeFirstChar(category)}</Info>
             </InfoContainer>

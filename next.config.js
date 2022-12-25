@@ -9,8 +9,11 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    // unoptimized: true,
     domains: ["i.pinimg.com", "user-images.githubusercontent.com"],
+  },
+  // @see https://nextjs.org/docs/advanced-features/compiler#remove-console
+  compiler: {
+    removeConsole: true,
   },
 };
 

@@ -16,7 +16,7 @@ export const Button = styled.button`
   flex-wrap: no-wrap;
 
   border: solid 0.1rem ${(props: any) => props.theme.primary};
-  border-radius: 1.45vh;
+  border-radius: 1rem;
   padding: 0.4rem 0.7rem;
   margin: 0 0.35rem;
 

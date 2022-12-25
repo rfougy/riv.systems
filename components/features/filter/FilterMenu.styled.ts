@@ -61,13 +61,14 @@ export const Form = styled.form`
 
 export const Checkbox = styled.input``;
 
-export const Label = styled.h4`
+export const Label = styled.h3`
   font-size: 0.7rem;
   font-weight: 400;
   margin: 0;
 `;
 
-export const SectionTitle = styled.h4`
+export const SectionTitle = styled.h2`
   font-size: 0.7rem;
   margin: 0 0 0.5rem 0;
+  font-weight: 700;
 `;

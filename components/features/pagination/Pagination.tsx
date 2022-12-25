@@ -38,20 +38,36 @@ const Pagination: React.FC<{
   return (
     <Container>
       <PageNav>
-        <Button disabled={onFirstPage} onClick={() => setCurrentPage(1)}>
+        <Button
+          aria-label="Navigate to First Results Page"
+          disabled={onFirstPage}
+          onClick={() => setCurrentPage(1)}
+        >
           <ArrowIcon right />
           <ArrowIcon right />
         </Button>
-        <Button disabled={onFirstPage} onClick={() => handlePrevButtonClick()}>
+        <Button
+          aria-label="Navigate to Previous Results Page"
+          disabled={onFirstPage}
+          onClick={() => handlePrevButtonClick()}
+        >
           <ArrowIcon right />
         </Button>
         <PageNumber>
           Page {currentPage} of {lastPage}
         </PageNumber>
-        <Button disabled={onLastPage} onClick={() => handleNextButtonClick()}>
+        <Button
+          aria-label="Navigate to Next Results Page"
+          disabled={onLastPage}
+          onClick={() => handleNextButtonClick()}
+        >
           <ArrowIcon left />
         </Button>
-        <Button disabled={onLastPage} onClick={() => setCurrentPage(lastPage)}>
+        <Button
+          aria-label="Navigate to Last Results Page"
+          disabled={onLastPage}
+          onClick={() => setCurrentPage(lastPage)}
+        >
           <ArrowIcon left />
           <ArrowIcon left />
         </Button>

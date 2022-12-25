@@ -9,7 +9,7 @@ import NextImage from "../../markdown-to-jsx/NextImage";
 import {
   Inline,
   Metadata,
-  P,
+  Li,
   MarginBottom,
   Container,
   Title,
@@ -31,16 +31,22 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
       <PageHead title={title} description={excerpt} />
       <Container>
         <Metadata>
-          <Link href={`/content/${section}`}>
-            {capitalizeFirstChar(section)}
-          </Link>
           <Inline>
-            <ArrowIcon />
+            <Link href={`/content/${section}`}>
+              {capitalizeFirstChar(section)}
+            </Link>
           </Inline>
-          <Link href={`/content/${section}/${category}`}>
-            {capitalizeFirstChar(category)}
-          </Link>
-          <P>{dateAsStr}</P>
+          <Inline>
+            <ArrowIcon aria-label="Arrow Icon" />
+          </Inline>
+          <Inline>
+            <Link href={`/content/${section}/${category}`}>
+              {capitalizeFirstChar(category)}
+            </Link>
+          </Inline>
+          <Li>
+            <p>{dateAsStr}</p>
+          </Li>
         </Metadata>
         <MarginBottom>
           <Title>{title}</Title>

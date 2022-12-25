@@ -14,9 +14,11 @@ import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
 import GlobalHead from "../components/head/global/GlobalHead";
+import { useRouter } from "next/router";
 
 const App = (props: any) => {
   const { Component, pageProps }: AppProps = props;
+  const { route } = useRouter();
   const [currTheme, setTheme] = useState<any>(lightTheme);
   const [announcementIsActive, setAnnouncementIsActive] =
     useState<boolean>(true);
@@ -132,7 +134,7 @@ const App = (props: any) => {
         )}
         <PageContainer>
           <Navbar toggleTheme={toggleTheme} theme={currTheme} />
-          <ContentWrap>
+          <ContentWrap isHomePage={route === "/"}>
             <Component {...pageProps} />
           </ContentWrap>
           <Footer />

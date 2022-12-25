@@ -45,7 +45,6 @@ export const Content = styled.div`
   }
 
   iframe {
-    // margin: 1.5rem 0;
     aspect-ratio: 16 / 9;
     height: 100%;
     width: 100%;

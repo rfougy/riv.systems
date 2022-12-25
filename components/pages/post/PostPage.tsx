@@ -31,6 +31,27 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
     <>
       <PageHead title={title} description={excerpt} />
       <Container>
+        <Header>
+          <Metadata>
+            <Inline>
+              <Link href={`/content/${section}`}>
+                {capitalizeFirstChar(section)}
+              </Link>
+            </Inline>
+            <Inline>
+              <ArrowIcon aria-label="Arrow Icon" />
+            </Inline>
+            <Inline>
+              <Link href={`/content/${section}/${category}`}>
+                {capitalizeFirstChar(category)}
+              </Link>
+            </Inline>
+            <Li>
+              <p>{dateAsStr}</p>
+            </Li>
+          </Metadata>
+          <Title>{title}</Title>
+        </Header>
         {section !== "refs" && (
           <CoverImage>
             <Image
@@ -44,27 +65,6 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
             />
           </CoverImage>
         )}
-        <Header>
-        <Metadata>
-          <Inline>
-            <Link href={`/content/${section}`}>
-              {capitalizeFirstChar(section)}
-            </Link>
-          </Inline>
-          <Inline>
-            <ArrowIcon aria-label="Arrow Icon" />
-          </Inline>
-          <Inline>
-            <Link href={`/content/${section}/${category}`}>
-              {capitalizeFirstChar(category)}
-            </Link>
-          </Inline>
-          <Li>
-            <p>{dateAsStr}</p>
-          </Li>
-        </Metadata>
-        <Title>{title}</Title>
-        </Header>
         <Content>
           <Markdown
             options={{

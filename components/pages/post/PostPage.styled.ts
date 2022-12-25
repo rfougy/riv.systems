@@ -25,7 +25,7 @@ export const Title = styled.h1`
 `;
 
 export const CoverImage = styled.div`
-  margin: 1.5rem 0;
+  margin-top: 1.5rem;
 `;
 
 export const Li = styled.li`

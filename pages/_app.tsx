@@ -20,6 +20,7 @@ const App = (props: any) => {
   const [currTheme, setTheme] = useState<any>(lightTheme);
   const [announcementIsActive, setAnnouncementIsActive] =
     useState<boolean>(true);
+  const [hydrated, setHydrated] = useState<boolean>(false);
 
   const announcement = {
     dateCreated: "2022-12-18",
@@ -113,6 +114,12 @@ const App = (props: any) => {
       setAnnouncementIsActive(true);
     }
   }, []);
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+  // Returns null on first render, so the client and server match
+  if (!hydrated) return null;
 
   return (
     <>

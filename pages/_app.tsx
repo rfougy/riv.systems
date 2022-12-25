@@ -26,7 +26,7 @@ const App = (props: any) => {
 
   const announcement = {
     dateCreated: "2022-12-25",
-    text: "Website is now complete, on to content creation.",
+    text: "Website V1.0 is now complete, on to content creation.",
   };
 
   const globalColors = css`

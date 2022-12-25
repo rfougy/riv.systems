@@ -11,9 +11,12 @@ Made entirely of Sterling Silver, the Femme Fatale Protector Ring cannot be full
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/x3TWp29pdzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<div>
 On the backside is an engraving that spells out ‘Femme Fatale,’ a seductive women who brings disaster unto those who become involved with her. Certain parts of the ring are movable, such as the revolving cylinder and small mechanics seen on the inner side of the ring.
 
 I bought this gem at the Soloist flagship store in Tokyo. The interior design and atmosphere of the store can be its own post. Anyhow, I was lucky enough to acquire this ring as it was the last in stock, and with good reason. The sheer craftsmanship of this ring cannot be compared to what is produced as a whole in the fashion scene. Unfortunately I ended up selling the piece (and deeply regret it to this day, rip).
+
+</div>
 
 - <Image 
     src="https://user-images.githubusercontent.com/77861258/208269441-cf37fdc2-d1d2-4da1-b0ec-6aeedf33f141.jpg" 

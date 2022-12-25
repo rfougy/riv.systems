@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           </Margin>
           <Description>
             I created this website to document <br />
-            my projects, experiences and thoughts. <br /> Enjoy!
+            my projects, experiences and thoughts.
           </Description>
           <Link href={`/content`} passHref>
             <Button>EXPLORE SYSTEMS</Button>

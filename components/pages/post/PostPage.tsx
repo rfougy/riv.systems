@@ -24,7 +24,7 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
   const { title, datePublished, coverImage, excerpt } = frontmatter;
   const section: string = slug[0];
   const category: string = slug[1];
-  const dateAsStr: string = dateToStr(new Date(datePublished));
+  const dateAsStr: string = dateToStr(datePublished);
 
   return content ? (
     <>

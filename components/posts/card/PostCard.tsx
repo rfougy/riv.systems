@@ -25,7 +25,7 @@ const PostCard: React.FC<{
     excerpt,
     coverImage: image,
   } = frontmatter;
-  const dateAsStr: string = dateToStr(new Date(datePublished));
+  const dateAsStr: string = dateToStr(datePublished);
 
   return (
     <Link href={path} passHref>

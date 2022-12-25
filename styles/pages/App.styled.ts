@@ -13,7 +13,7 @@ export const ContentWrap = styled.div`
   justify-content: ${({ isHomePage }: { isHomePage: boolean }) =>
     isHomePage ? "center" : "start"};
 
-  padding: 4rem 0;
+  padding: 2rem 0 4rem 0;
 
   margin: 0;
 

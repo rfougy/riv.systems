@@ -41,7 +41,10 @@ const Pagination: React.FC<{
         <Button
           aria-label="Navigate to First Results Page"
           disabled={onFirstPage}
-          onClick={() => setCurrentPage(1)}
+          onClick={() => {
+            window.scrollTo(0, 0);
+            setCurrentPage(1);
+          }}
         >
           <ArrowIcon right />
           <ArrowIcon right />
@@ -49,7 +52,10 @@ const Pagination: React.FC<{
         <Button
           aria-label="Navigate to Previous Results Page"
           disabled={onFirstPage}
-          onClick={() => handlePrevButtonClick()}
+          onClick={() => {
+            window.scrollTo(0, 0);
+            handlePrevButtonClick();
+          }}
         >
           <ArrowIcon right />
         </Button>
@@ -59,14 +65,20 @@ const Pagination: React.FC<{
         <Button
           aria-label="Navigate to Next Results Page"
           disabled={onLastPage}
-          onClick={() => handleNextButtonClick()}
+          onClick={() => {
+            window.scrollTo(0, 0);
+            handleNextButtonClick();
+          }}
         >
           <ArrowIcon left />
         </Button>
         <Button
           aria-label="Navigate to Last Results Page"
           disabled={onLastPage}
-          onClick={() => setCurrentPage(lastPage)}
+          onClick={() => {
+            window.scrollTo(0, 0);
+            setCurrentPage(lastPage);
+          }}
         >
           <ArrowIcon left />
           <ArrowIcon left />

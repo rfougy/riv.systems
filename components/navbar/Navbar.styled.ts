@@ -4,7 +4,7 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
 
-  height: 3rem;
+  height: 100%;
 `;
 
 export const LogoContainer = styled.div`

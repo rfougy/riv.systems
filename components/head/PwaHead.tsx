@@ -7,7 +7,7 @@ const PwaHead: React.FC = () => {
         content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=yes, viewport-fit=cover"
       />
       <meta name="application-name" content="RIV.SYSTEMS" />
-      <meta name="theme-color" content="#f0f0f0" />
+      <meta name="theme-color" content="#101010" />
 
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />

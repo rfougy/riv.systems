@@ -61,7 +61,7 @@ export const Form = styled.form`
 
 export const Checkbox = styled.input``;
 
-export const Label = styled.h4`
+export const Label = styled.h3`
   font-size: 0.7rem;
   font-weight: 400;
   margin: 0;

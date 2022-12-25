@@ -80,15 +80,6 @@ const App = (props: any) => {
     }
   `;
 
-  /**
-   * @description remove console logs in production.
-   */
-  if (process.env.NODE_ENV !== "development") {
-    console.log = () => {};
-    console.error = () => {};
-    console.debug = () => {};
-  }
-
   function toggleTheme(): void {
     const newTheme = currTheme.id === lightTheme.id ? darkTheme : lightTheme;
     localStorage.setItem("theme", JSON.stringify(newTheme));

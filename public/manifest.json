@@ -22,7 +22,7 @@
       "purpose": "any maskable"
     }
   ],
-  "start_url": "/content",
+  "start_url": "https://riv.systems/content",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#101010",

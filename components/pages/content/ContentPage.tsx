@@ -17,7 +17,7 @@ const ContentPage: React.FC<{
   const [sectionFilters, setSectionFilters] = useState<ISectionObj[]>([]);
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
   const [filteredContent, setFilteredContent] = useState<any>(content);
-  const [currentPostCards, setCurrentPostCards] = useState<any>();
+  const [renderedPostCards, setRenderedPostCards] = useState<any>();
 
   const sections: ISectionObj[] = content.reduce(
     (list: ISectionObj[], singleContent: any) => {
@@ -125,7 +125,7 @@ const ContentPage: React.FC<{
           />
         </FilterContainer>
         <section>
-          <PostGrid content={currentPostCards} />
+          <PostGrid content={renderedPostCards} />
           <Pagination
             contentToPaginate={filteredContent}
             paginationResetDeps={[
@@ -134,7 +134,7 @@ const ContentPage: React.FC<{
               filteredContent,
               content,
             ]}
-            setCurrentPostCards={setCurrentPostCards}
+            setRenderedPostCards={setRenderedPostCards}
             totalPostCards={filteredContent.length}
           />
         </section>

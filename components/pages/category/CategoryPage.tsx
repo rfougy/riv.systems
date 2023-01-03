@@ -12,7 +12,7 @@ const CategoryPage: React.FC<{
   category: string;
   content: any;
 }> = ({ category, content }) => {
-  const [currentPostCards, setCurrentPostCards] = useState<any>();
+  const [renderedPostCards, setRenderedPostCards] = useState<any>();
 
   const categoryAsTitle: string = capitalizeFirstChar(category);
 
@@ -25,11 +25,11 @@ const CategoryPage: React.FC<{
       <CategoryPageContainer>
         <PageTitle>Category: {categoryAsTitle}</PageTitle>
         <section>
-          <PostGrid content={currentPostCards} />
+          <PostGrid content={renderedPostCards} />
           <Pagination
             contentToPaginate={content}
             paginationResetDeps={[content]}
-            setCurrentPostCards={setCurrentPostCards}
+            setRenderedPostCards={setRenderedPostCards}
             totalPostCards={content.length}
           />
         </section>

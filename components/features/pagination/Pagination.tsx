@@ -5,12 +5,12 @@ import { Button, Container, PageNav, PageNumber } from "./Pagination.styled";
 const Pagination: React.FC<{
   contentToPaginate: any[];
   paginationResetDeps: any;
-  setCurrentPostCards: (arg: any) => void;
+  setRenderedPostCards: (arg: any) => void;
   totalPostCards: number;
 }> = ({
   contentToPaginate,
   paginationResetDeps, // dependencides for useEffect hook to reset pagination to 1.
-  setCurrentPostCards,
+  setRenderedPostCards,
   totalPostCards,
 }) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -19,7 +19,7 @@ const Pagination: React.FC<{
   // deducting the current PostCards for pagination
   const indexOfLastPostCard: number = currentPage * postCardsPerPage;
   const indexOfFirstPostCard: number = indexOfLastPostCard - postCardsPerPage;
-  const currentPostCards: any[] = contentToPaginate.slice(
+  const renderedPostCards: any[] = contentToPaginate.slice(
     indexOfFirstPostCard,
     indexOfLastPostCard
   );
@@ -49,7 +49,7 @@ const Pagination: React.FC<{
   }, [...paginationResetDeps, postCardsPerPage]);
 
   useEffect(
-    () => setCurrentPostCards(currentPostCards),
+    () => setRenderedPostCards(renderedPostCards),
     [...paginationResetDeps, currentPage]
   );
 

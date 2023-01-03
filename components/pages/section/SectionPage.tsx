@@ -20,7 +20,7 @@ const SectionPage: React.FC<{
 }> = ({ section, content }) => {
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
   const [filteredContent, setFilteredContent] = useState<any>(content);
-  const [currentPostCards, setCurrentPostCards] = useState<any>();
+  const [renderedPostCards, setRenderedPostCards] = useState<any>();
 
   const sectionAsTitle: string = capitalizeFirstChar(section);
 
@@ -92,15 +92,11 @@ const SectionPage: React.FC<{
           />
         </FilterContainer>
         <section>
-          <PostGrid content={currentPostCards} />
+          <PostGrid content={renderedPostCards} />
           <Pagination
             contentToPaginate={filteredContent}
-            paginationResetDeps={[
-              categoryFilters,
-              filteredContent,
-              content,
-            ]}
-            setCurrentPostCards={setCurrentPostCards}
+            paginationResetDeps={[categoryFilters, filteredContent, content]}
+            setRenderedPostCards={setRenderedPostCards}
             totalPostCards={filteredContent.length}
           />
         </section>

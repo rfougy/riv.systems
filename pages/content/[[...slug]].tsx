@@ -4,10 +4,14 @@ import type {
   GetStaticPropsContext,
   NextPage,
 } from "next";
-import ContentPage from "../../components/pages/content/ContentPage";
-import SectionPage from "../../components/pages/section/SectionPage";
-import CategoryPage from "../../components/pages/category/CategoryPage";
-import PostPage from "../../components/pages/post/PostPage";
+
+import {
+  ContentPage,
+  SectionPage,
+  CategoryPage,
+  PostPage,
+} from "../../components/pages";
+
 import IPost from "../../interfaces/IPost";
 import { getContentByDynamicPage } from "../../lib/dynamic-pages/getContentByDynamicPage";
 import { getDynamicPagePaths } from "../../lib/dynamic-pages/getDynamicPagePaths";
@@ -16,7 +20,6 @@ const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
   slug,
   content,
 }) => {
-
   if (!slug) return <ContentPage content={content} />;
 
   if (slug?.length === 1)

@@ -2,6 +2,7 @@ import ISectionObj from "../../../interfaces/ISectionObj";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 
 import filterByCategory from "../../../lib/filter/filterByCategory";
+import filterBySection from "../../../lib/filter/filterBySection";
 import {
   Checkbox,
   FilterOption,
@@ -74,13 +75,38 @@ const FilterMenu: React.FC<{
   return (
     <Container>
       {nestedFilteringOptions ? (
+        // Filter for Sections and Categories
         <Form>
           {nestedFilteringOptions.map((nestedCategories: any, index) => {
             const section = sectionsArr[index];
 
+            const sectionInFilterState = sectionFilters?.find(
+              (item) => item.section === section
+            );
+
             return (
               <FilterSet key={index}>
-                <SectionTitle>{capitalizeFirstChar(section)}</SectionTitle>
+                {/* <SectionTitle>{capitalizeFirstChar(section)}</SectionTitle> */}
+                <FilterOption>
+                  <SectionTitle>{capitalizeFirstChar(section)}</SectionTitle>
+                  <input
+                    type="checkbox"
+                    name={section}
+                    value={section}
+                    //@ts-ignore
+                    checked={sectionInFilterState || ""}
+                    onChange={() =>
+                      filterBySection(
+                        { section },
+                        categories,
+                        sectionFilters,
+                        categoryFilters,
+                        setSectionFilters,
+                        setCategoryFilters
+                      )
+                    }
+                  />
+                </FilterOption>
                 <div>
                   {nestedCategories.map(
                     (categoryObj: ICategoryObj, index: number) => {
@@ -92,7 +118,7 @@ const FilterMenu: React.FC<{
                       );
 
                       return (
-                        <FilterOption isCategoryFilter={true} key={index}>
+                        <FilterOption isCategoryFilter key={index}>
                           <input
                             type="checkbox"
                             name={categoryLabel}
@@ -120,6 +146,7 @@ const FilterMenu: React.FC<{
           })}
         </Form>
       ) : (
+        // Filter for Categories
         <Form>
           {categories.map((categoryObj: ICategoryObj, index: number) => {
             const { category } = categoryObj;

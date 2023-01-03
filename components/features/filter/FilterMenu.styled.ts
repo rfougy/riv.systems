@@ -46,6 +46,47 @@ export const FilterOption = styled.label`
   }
 `;
 
+export const SectionFilterOption = styled(FilterOption)`
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0 0.5rem 0 0;
+
+    padding: 0.15rem 0.4rem;
+
+    position: relative;
+
+    display: grid;
+    place-content: center;
+
+    color: ${(props: any) => props.theme.primary};
+    width: 0.9rem;
+    height: 0.4rem;
+    border: 0.075rem solid;
+    border-radius: 1rem;
+  }
+
+  input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    border-radius: 1.5rem;
+    height: 0.2rem;
+    width: 0.35rem;
+    background-color: ${(props: any) => props.theme.primary};
+  }
+
+  input[type="checkbox"]:checked {
+    background: none;
+  }
+
+  input[type="checkbox"]:checked::after {
+    left: 70%;
+  }
+`;
+
 export const Form = styled.form`
   display: flex;
   flex-direction: column;

@@ -11,6 +11,7 @@ import {
   Form,
   FilterSet,
   SectionTitle,
+  SectionFilterOption,
 } from "./FilterMenu.styled";
 import { capitalizeFirstChar, sortInAlphabeticOrder } from "../../../utils";
 
@@ -86,10 +87,9 @@ const FilterMenu: React.FC<{
 
             return (
               <FilterSet key={index}>
-                {/* <SectionTitle>{capitalizeFirstChar(section)}</SectionTitle> */}
-                <FilterOption>
+                <SectionFilterOption>
                   <SectionTitle>{capitalizeFirstChar(section)}</SectionTitle>
-                  <input
+                  <Checkbox
                     type="checkbox"
                     name={section}
                     value={section}
@@ -106,7 +106,7 @@ const FilterMenu: React.FC<{
                       )
                     }
                   />
-                </FilterOption>
+                </SectionFilterOption>
                 <div>
                   {nestedCategories.map(
                     (categoryObj: ICategoryObj, index: number) => {

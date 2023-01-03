@@ -6,7 +6,7 @@ import ISectionObj from "../../../interfaces/ISectionObj";
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
 
-import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
+import { capitalizeFirstChar } from "../../../utils";
 import {
   FilterAndGridContainer,
   FilterContainer,

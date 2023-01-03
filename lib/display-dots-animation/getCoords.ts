@@ -1,7 +1,7 @@
 import { displayDotsDictionary } from "../../dictionaries/displayDotsDictionary";
 import IAllCoords from "../../interfaces/IAllCoords";
 import "../../ext/string.extensions";
-import { structuredClone } from "../../utils/structuredClone";
+import { structuredClone } from "../../utils";
 import _ from "lodash";
 
 let charStartingXCoord: number = 0;

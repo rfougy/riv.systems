@@ -8,8 +8,7 @@ import {
   Title,
 } from "./PostCard.styled";
 import Image from "next/image";
-import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
-import { dateToStr } from "../../../utils/dateToStr";
+import { capitalizeFirstChar, dateToStr } from "../../../utils";
 import ArrowIcon from "../../icons/ArrowIcon";
 
 const PostCard: React.FC<{

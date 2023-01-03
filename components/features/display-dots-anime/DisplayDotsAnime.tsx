@@ -4,7 +4,7 @@ import {
   groupCoordsByChar,
   groupCoordsByWordAndSpace,
 } from "../../../lib/display-dots-animation/getCoords";
-import { shuffleArr } from "../../../utils/shuffleArr";
+import { shuffleArr } from "../../../utils";
 import IAllCoords from "../../../interfaces/IAllCoords";
 import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsContext";
 import DotWord from "./word/DotWord";

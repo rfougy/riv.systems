@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Pagination from "../../features/pagination/Pagination";
 import PostGrid from "../../posts/grid/PostGrid";
-import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
+import { capitalizeFirstChar } from "../../../utils";
 import {
   CategoryPageContainer,
   PageTitle,

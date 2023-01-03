@@ -11,8 +11,7 @@ import {
   FilterSet,
   SectionTitle,
 } from "./FilterMenu.styled";
-import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
-import { sortInAlphabeticOrder } from "../../../utils/sortInAlphabeticOrder";
+import { capitalizeFirstChar, sortInAlphabeticOrder } from "../../../utils";
 
 /**
  * @todo change structure of checkboxes

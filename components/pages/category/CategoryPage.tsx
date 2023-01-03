@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Pagination from "../../features/pagination/Pagination";
 import PostGrid from "../../posts/grid/PostGrid";
 import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
@@ -12,23 +12,9 @@ const CategoryPage: React.FC<{
   category: string;
   content: any;
 }> = ({ category, content }) => {
-  // states for pagination
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(6);
+  const [currentPostCards, setCurrentPostCards] = useState<any>();
 
   const categoryAsTitle: string = capitalizeFirstChar(category);
-
-  // deducting the current PostCards for pagination
-  const indexOfLastPostCard: number = currentPage * postCardsPerPage;
-  const indexOfFirstPostCard: number = indexOfLastPostCard - postCardsPerPage;
-  const currentPostCards: any[] = content.slice(
-    indexOfFirstPostCard,
-    indexOfLastPostCard
-  );
-
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [postCardsPerPage, content]);
 
   return (
     <>
@@ -41,11 +27,10 @@ const CategoryPage: React.FC<{
         <section>
           <PostGrid content={currentPostCards} />
           <Pagination
-            currentPage={currentPage}
-            postCardsPerPage={postCardsPerPage}
+            contentToPaginate={content}
+            paginationResetDeps={[content]}
+            setCurrentPostCards={setCurrentPostCards}
             totalPostCards={content.length}
-            setCurrentPage={setCurrentPage}
-            setPostCardsPerPage={setPostCardsPerPage}
           />
         </section>
       </CategoryPageContainer>

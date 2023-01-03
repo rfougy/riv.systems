@@ -20,20 +20,9 @@ const SectionPage: React.FC<{
 }> = ({ section, content }) => {
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
   const [filteredContent, setFilteredContent] = useState<any>(content);
+  const [currentPostCards, setCurrentPostCards] = useState<any>();
 
   const sectionAsTitle: string = capitalizeFirstChar(section);
-
-  // states for pagination
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(6);
-
-  // deducting the current PostCards for pagination
-  const indexOfLastPostCard: number = currentPage * postCardsPerPage;
-  const indexOfFirstPostCard: number = indexOfLastPostCard - postCardsPerPage;
-  const currentPostCards: any[] = filteredContent.slice(
-    indexOfFirstPostCard,
-    indexOfLastPostCard
-  );
 
   const categories: ICategoryObj[] = content.reduce(
     (list: ICategoryObj[], singleContent: any) => {
@@ -56,10 +45,6 @@ const SectionPage: React.FC<{
     },
     []
   );
-
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [postCardsPerPage, categoryFilters, content]);
 
   /**
    * @description filtering scenarios based on active section & category filters
@@ -109,11 +94,14 @@ const SectionPage: React.FC<{
         <section>
           <PostGrid content={currentPostCards} />
           <Pagination
-            currentPage={currentPage}
-            postCardsPerPage={postCardsPerPage}
+            contentToPaginate={filteredContent}
+            paginationResetDeps={[
+              categoryFilters,
+              filteredContent,
+              content,
+            ]}
+            setCurrentPostCards={setCurrentPostCards}
             totalPostCards={filteredContent.length}
-            setCurrentPage={setCurrentPage}
-            setPostCardsPerPage={setPostCardsPerPage}
           />
         </section>
       </FilterAndGridContainer>

@@ -3,25 +3,16 @@ import ArrowIcon from "../../icons/ArrowIcon";
 import { Button, Container, PageNav, PageNumber } from "./Pagination.styled";
 
 const Pagination: React.FC<{
-  // currentPage: number;
-  // postCardsPerPage: number;
-  // setCurrentPage: (arg: number) => void;
-  // setPostCardsPerPage: (arg: number) => void;
-  totalPostCards: number;
   contentToPaginate: any[];
   paginationResetDeps: any;
   setCurrentPostCards: (arg: any) => void;
+  totalPostCards: number;
 }> = ({
-  // currentPage,
-  // postCardsPerPage,
-  // setCurrentPage,
-  // setPostCardsPerPage,
-  totalPostCards,
   contentToPaginate,
   paginationResetDeps, // dependencides for useEffect hook to reset pagination to 1.
   setCurrentPostCards,
+  totalPostCards,
 }) => {
-  // states for pagination
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [postCardsPerPage, setPostCardsPerPage] = useState<number>(6);
 
@@ -36,7 +27,6 @@ const Pagination: React.FC<{
   const lastPage: number | undefined = Math.ceil(
     totalPostCards / postCardsPerPage
   );
-
   const onFirstPage: boolean = currentPage === 1;
   const onLastPage: boolean = currentPage === lastPage;
 

@@ -11,7 +11,6 @@ import PostPage from "../../components/pages/post/PostPage";
 import IPost from "../../interfaces/IPost";
 import { getContentByDynamicPage } from "../../lib/dynamic-pages/getContentByDynamicPage";
 import { getDynamicPagePaths } from "../../lib/dynamic-pages/getDynamicPagePaths";
-import { useEffect } from "react";
 
 const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
   slug,

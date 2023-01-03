@@ -152,6 +152,7 @@ const ContentPage: React.FC<{
             paginationResetDeps={[
               categoryFilters,
               sectionFilters,
+              filteredContent,
               content,
             ]}
             setCurrentPostCards={setCurrentPostCards}

@@ -3,41 +3,59 @@ import ISectionObj from "../../interfaces/ISectionObj";
 
 export default function filterBySection(
   sectionObj: ISectionObj,
+  allCategoriesForSectionAreSelected: boolean,
   categories: ICategoryObj[],
   sectionFilters: ISectionObj[] | undefined,
   categoryFilters: ICategoryObj[],
-  setSectionFilters: ((arg: any) => void) | undefined,
-  setCategoryFilters: (arg: any) => void
-) {
+  setCategoryFilters: (arg: any) => void,
+  setSectionFilters: ((arg: any) => void) | undefined
+): void {
   const sectionInFilterState: ISectionObj | undefined = sectionFilters?.find(
     (item: ISectionObj) => item.section === sectionObj.section
   );
-
-  // remove section and related categories from filter states
-  if (sectionInFilterState && setSectionFilters) {
-    const updatedSectionFilters: ISectionObj[] | undefined =
-      sectionFilters?.filter(
-        (item: ISectionObj) => item !== sectionInFilterState
-      );
-    setSectionFilters(updatedSectionFilters);
-
-    const updatedCategoryFilters: ICategoryObj[] = categoryFilters.filter(
-      (item: ICategoryObj) => item.section !== sectionObj.section
-    );
-    setCategoryFilters(updatedCategoryFilters);
-  }
-
-  // add section to filter state
-  if (!sectionInFilterState && setSectionFilters) {
-    setSectionFilters((prevState: ISectionObj[]) => [...prevState, sectionObj]);
-
+  // add section and all categories to filter states (via clicking toggle checkbox)
+  if (sectionInFilterState && !allCategoriesForSectionAreSelected) {
     const updatedCategoryFilters: ICategoryObj[] = categories.filter(
       (item: ICategoryObj) => item.section === sectionObj.section
     );
 
+    setCategoryFilters(updatedCategoryFilters);
+
+    return;
+  }
+
+  // remove section and related categories from filter states
+  if (sectionInFilterState) {
+    const updatedSectionFilters: ISectionObj[] | undefined =
+      sectionFilters?.filter(
+        (item: ISectionObj) => item !== sectionInFilterState
+      );
+    const updatedCategoryFilters: ICategoryObj[] = categoryFilters.filter(
+      (item: ICategoryObj) => item.section !== sectionObj.section
+    );
+
+    setSectionFilters && setSectionFilters(updatedSectionFilters);
+    setCategoryFilters(updatedCategoryFilters);
+
+    return;
+  }
+
+  // add section to filter state
+  if (!sectionInFilterState) {
+    const updatedCategoryFilters: ICategoryObj[] = categories.filter(
+      (item: ICategoryObj) => item.section === sectionObj.section
+    );
+
+    setSectionFilters &&
+      setSectionFilters((prevState: ISectionObj[]) => [
+        ...prevState,
+        sectionObj,
+      ]);
     setCategoryFilters((prevState: ICategoryObj[]) => [
       ...prevState,
       ...updatedCategoryFilters,
     ]);
+
+    return;
   }
 }

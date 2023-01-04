@@ -2,6 +2,7 @@ import ISectionObj from "../../../interfaces/ISectionObj";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 
 import filterByCategory from "../../../lib/filter/filterByCategory";
+import filterBySection from "../../../lib/filter/filterBySection";
 import {
   Checkbox,
   FilterOption,
@@ -10,39 +11,36 @@ import {
   Form,
   FilterSet,
   SectionTitle,
+  SectionFilterOption,
+  ToggleCheckbox,
 } from "./FilterMenu.styled";
 import { capitalizeFirstChar, sortInAlphabeticOrder } from "../../../utils";
 
-/**
- * @todo change structure of checkboxes
- * @see https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
- */
 const FilterMenu: React.FC<{
-  sections?: ISectionObj[];
   categories: ICategoryObj[];
-  sectionFilters?: ISectionObj[];
   categoryFilters: ICategoryObj[];
-  setSectionFilters?: undefined | ((arg: any) => void);
+  sections?: ISectionObj[];
+  sectionFilters?: ISectionObj[];
   setCategoryFilters: (arg: any) => void;
+  setSectionFilters?: undefined | ((arg: any) => void);
 }> = ({
-  sections,
   categories,
-  sectionFilters,
   categoryFilters,
-  setSectionFilters,
+  sections,
+  sectionFilters,
   setCategoryFilters,
+  setSectionFilters,
 }) => {
-  function clearFilters() {
-    if (setSectionFilters) setSectionFilters([]);
-    setCategoryFilters([]);
-  }
-
   const sectionsArr = sections
     ?.reduce((arr: any, section) => {
       arr.push(section.section);
       return arr;
     }, [])
     .sort((a: string, b: string) => sortInAlphabeticOrder(a, b));
+
+  const nestedFilteringOptions: ICategoryObj[][] | undefined = sections
+    ? Object.values(createFilterHashtable())
+    : undefined;
 
   function createFilterHashtable() {
     const hashtable = { ...sectionsArr };
@@ -67,20 +65,67 @@ const FilterMenu: React.FC<{
     return hashtable;
   }
 
-  const nestedFilteringOptions = sections
-    ? Object.values(createFilterHashtable())
-    : undefined;
+  function validateAllCategoriesForSectionAreSelected(
+    categoryFilters: ICategoryObj[],
+    nestedFilteringOptions: ICategoryObj[][] | undefined,
+    section: string
+  ): boolean {
+    const categoriesCheckedForSection = categoryFilters.filter(
+      (category: ICategoryObj) => category.section === section
+    );
+    const allCategoriesForSection: ICategoryObj[] | undefined =
+      nestedFilteringOptions?.find(
+        (setOfCategories: ICategoryObj[]) =>
+          setOfCategories[0].section === section
+      );
+
+    return (
+      categoriesCheckedForSection.length === allCategoriesForSection?.length
+    );
+  }
+
+  function clearFilters(): void {
+    if (setSectionFilters) setSectionFilters([]);
+    setCategoryFilters([]);
+  }
 
   return (
     <Container>
       {nestedFilteringOptions ? (
+        // Filter for Sections and Categories
         <Form>
           {nestedFilteringOptions.map((nestedCategories: any, index) => {
             const section = sectionsArr[index];
+            const allCategoriesForSectionAreSelected =
+              validateAllCategoriesForSectionAreSelected(
+                categoryFilters,
+                nestedFilteringOptions,
+                section
+              );
 
             return (
               <FilterSet key={index}>
-                <SectionTitle>{capitalizeFirstChar(section)}</SectionTitle>
+                <SectionFilterOption>
+                  <SectionTitle>{capitalizeFirstChar(section)}</SectionTitle>
+                  <ToggleCheckbox
+                    type="checkbox"
+                    name={section}
+                    value={section}
+                    //@ts-ignore
+                    checked={allCategoriesForSectionAreSelected || ""}
+                    onChange={() =>
+                      filterBySection(
+                        { section },
+                        allCategoriesForSectionAreSelected,
+                        categories,
+                        sectionFilters,
+                        categoryFilters,
+                        setCategoryFilters,
+                        setSectionFilters,
+                      )
+                    }
+                  />
+                </SectionFilterOption>
                 <div>
                   {nestedCategories.map(
                     (categoryObj: ICategoryObj, index: number) => {
@@ -92,7 +137,7 @@ const FilterMenu: React.FC<{
                       );
 
                       return (
-                        <FilterOption isCategoryFilter={true} key={index}>
+                        <FilterOption isCategoryFilter key={index}>
                           <input
                             type="checkbox"
                             name={categoryLabel}
@@ -120,6 +165,7 @@ const FilterMenu: React.FC<{
           })}
         </Form>
       ) : (
+        // Filter for Categories
         <Form>
           {categories.map((categoryObj: ICategoryObj, index: number) => {
             const { category } = categoryObj;

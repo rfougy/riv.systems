@@ -120,8 +120,8 @@ const FilterMenu: React.FC<{
                         categories,
                         sectionFilters,
                         categoryFilters,
+                        setCategoryFilters,
                         setSectionFilters,
-                        setCategoryFilters
                       )
                     }
                   />

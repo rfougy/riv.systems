@@ -3,41 +3,55 @@ import ISectionObj from "../../interfaces/ISectionObj";
 
 export default function filterBySection(
   sectionObj: ISectionObj,
+  allCategoriesForSectionAreSelected: boolean,
   categories: ICategoryObj[],
   sectionFilters: ISectionObj[] | undefined,
   categoryFilters: ICategoryObj[],
   setSectionFilters: ((arg: any) => void) | undefined,
   setCategoryFilters: (arg: any) => void
-) {
+): void {
   const sectionInFilterState: ISectionObj | undefined = sectionFilters?.find(
     (item: ISectionObj) => item.section === sectionObj.section
   );
-
-  // remove section and related categories from filter states
-  if (sectionInFilterState && setSectionFilters) {
-    const updatedSectionFilters: ISectionObj[] | undefined =
-      sectionFilters?.filter(
-        (item: ISectionObj) => item !== sectionInFilterState
+  if (setSectionFilters) {
+    if (sectionInFilterState && !allCategoriesForSectionAreSelected) {
+      const updatedCategoryFilters: ICategoryObj[] = categories.filter(
+        (item: ICategoryObj) => item.section === sectionObj.section
       );
-    setSectionFilters(updatedSectionFilters);
+      setCategoryFilters(updatedCategoryFilters);
+      return;
+    }
 
-    const updatedCategoryFilters: ICategoryObj[] = categoryFilters.filter(
-      (item: ICategoryObj) => item.section !== sectionObj.section
-    );
-    setCategoryFilters(updatedCategoryFilters);
-  }
+    // remove section and related categories from filter states
+    if (sectionInFilterState) {
+      const updatedSectionFilters: ISectionObj[] | undefined =
+        sectionFilters?.filter(
+          (item: ISectionObj) => item !== sectionInFilterState
+        );
+      const updatedCategoryFilters: ICategoryObj[] = categoryFilters.filter(
+        (item: ICategoryObj) => item.section !== sectionObj.section
+      );
 
-  // add section to filter state
-  if (!sectionInFilterState && setSectionFilters) {
-    setSectionFilters((prevState: ISectionObj[]) => [...prevState, sectionObj]);
+      setSectionFilters(updatedSectionFilters);
+      setCategoryFilters(updatedCategoryFilters);
+      return;
+    }
 
-    const updatedCategoryFilters: ICategoryObj[] = categories.filter(
-      (item: ICategoryObj) => item.section === sectionObj.section
-    );
+    // add section to filter state
+    if (!sectionInFilterState) {
+      const updatedCategoryFilters: ICategoryObj[] = categories.filter(
+        (item: ICategoryObj) => item.section === sectionObj.section
+      );
 
-    setCategoryFilters((prevState: ICategoryObj[]) => [
-      ...prevState,
-      ...updatedCategoryFilters,
-    ]);
+      setSectionFilters((prevState: ISectionObj[]) => [
+        ...prevState,
+        sectionObj,
+      ]);
+      setCategoryFilters((prevState: ICategoryObj[]) => [
+        ...prevState,
+        ...updatedCategoryFilters,
+      ]);
+      return;
+    }
   }
 }

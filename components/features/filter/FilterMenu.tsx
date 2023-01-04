@@ -65,7 +65,7 @@ const FilterMenu: React.FC<{
     return hashtable;
   }
 
-  function validateCategoriesForSectionChecked(
+  function validateAllCategoriesForSectionAreSelected(
     categoryFilters: ICategoryObj[],
     nestedFilteringOptions: ICategoryObj[][] | undefined,
     section: string
@@ -84,7 +84,7 @@ const FilterMenu: React.FC<{
     );
   }
 
-  function clearFilters() {
+  function clearFilters(): void {
     if (setSectionFilters) setSectionFilters([]);
     setCategoryFilters([]);
   }
@@ -96,6 +96,12 @@ const FilterMenu: React.FC<{
         <Form>
           {nestedFilteringOptions.map((nestedCategories: any, index) => {
             const section = sectionsArr[index];
+            const allCategoriesForSectionAreSelected =
+              validateAllCategoriesForSectionAreSelected(
+                categoryFilters,
+                nestedFilteringOptions,
+                section
+              );
 
             return (
               <FilterSet key={index}>
@@ -106,16 +112,11 @@ const FilterMenu: React.FC<{
                     name={section}
                     value={section}
                     //@ts-ignore
-                    checked={
-                      validateCategoriesForSectionChecked(
-                        categoryFilters,
-                        nestedFilteringOptions,
-                        section
-                      ) || ""
-                    }
+                    checked={allCategoriesForSectionAreSelected || ""}
                     onChange={() =>
                       filterBySection(
                         { section },
+                        allCategoriesForSectionAreSelected,
                         categories,
                         sectionFilters,
                         categoryFilters,

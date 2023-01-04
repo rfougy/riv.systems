@@ -12,39 +12,35 @@ import {
   FilterSet,
   SectionTitle,
   SectionFilterOption,
+  ToggleCheckbox,
 } from "./FilterMenu.styled";
 import { capitalizeFirstChar, sortInAlphabeticOrder } from "../../../utils";
 
-/**
- * @todo change structure of checkboxes
- * @see https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
- */
 const FilterMenu: React.FC<{
-  sections?: ISectionObj[];
   categories: ICategoryObj[];
-  sectionFilters?: ISectionObj[];
   categoryFilters: ICategoryObj[];
-  setSectionFilters?: undefined | ((arg: any) => void);
+  sections?: ISectionObj[];
+  sectionFilters?: ISectionObj[];
   setCategoryFilters: (arg: any) => void;
+  setSectionFilters?: undefined | ((arg: any) => void);
 }> = ({
-  sections,
   categories,
-  sectionFilters,
   categoryFilters,
-  setSectionFilters,
+  sections,
+  sectionFilters,
   setCategoryFilters,
+  setSectionFilters,
 }) => {
-  function clearFilters() {
-    if (setSectionFilters) setSectionFilters([]);
-    setCategoryFilters([]);
-  }
-
   const sectionsArr = sections
     ?.reduce((arr: any, section) => {
       arr.push(section.section);
       return arr;
     }, [])
     .sort((a: string, b: string) => sortInAlphabeticOrder(a, b));
+
+  const nestedFilteringOptions: ICategoryObj[][] | undefined = sections
+    ? Object.values(createFilterHashtable())
+    : undefined;
 
   function createFilterHashtable() {
     const hashtable = { ...sectionsArr };
@@ -69,9 +65,29 @@ const FilterMenu: React.FC<{
     return hashtable;
   }
 
-  const nestedFilteringOptions = sections
-    ? Object.values(createFilterHashtable())
-    : undefined;
+  function validateCategoriesForSectionChecked(
+    categoryFilters: ICategoryObj[],
+    nestedFilteringOptions: ICategoryObj[][] | undefined,
+    section: string
+  ): boolean {
+    const categoriesCheckedForSection = categoryFilters.filter(
+      (category: ICategoryObj) => category.section === section
+    );
+    const allCategoriesForSection: ICategoryObj[] | undefined =
+      nestedFilteringOptions?.find(
+        (setOfCategories: ICategoryObj[]) =>
+          setOfCategories[0].section === section
+      );
+
+    return (
+      categoriesCheckedForSection.length === allCategoriesForSection?.length
+    );
+  }
+
+  function clearFilters() {
+    if (setSectionFilters) setSectionFilters([]);
+    setCategoryFilters([]);
+  }
 
   return (
     <Container>
@@ -81,20 +97,22 @@ const FilterMenu: React.FC<{
           {nestedFilteringOptions.map((nestedCategories: any, index) => {
             const section = sectionsArr[index];
 
-            const sectionInFilterState = sectionFilters?.find(
-              (item) => item.section === section
-            );
-
             return (
               <FilterSet key={index}>
                 <SectionFilterOption>
                   <SectionTitle>{capitalizeFirstChar(section)}</SectionTitle>
-                  <Checkbox
+                  <ToggleCheckbox
                     type="checkbox"
                     name={section}
                     value={section}
                     //@ts-ignore
-                    checked={sectionInFilterState || ""}
+                    checked={
+                      validateCategoriesForSectionChecked(
+                        categoryFilters,
+                        nestedFilteringOptions,
+                        section
+                      ) || ""
+                    }
                     onChange={() =>
                       filterBySection(
                         { section },

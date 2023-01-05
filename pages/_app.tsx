@@ -15,6 +15,7 @@ import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
 import GlobalHead from "../components/head/global/GlobalHead";
 import { useRouter } from "next/router";
+import { IAnnouncement } from "../interfaces/IAnnouncement";
 
 const App = (props: any) => {
   const { Component, pageProps }: AppProps = props;
@@ -24,7 +25,7 @@ const App = (props: any) => {
     useState<boolean>(true);
   const [hydrated, setHydrated] = useState<boolean>(false);
 
-  const announcement = {
+  const announcement: IAnnouncement = {
     dateCreated: "2022-12-25",
     text: "Website V1.0 is now complete, on to content creation.",
   };

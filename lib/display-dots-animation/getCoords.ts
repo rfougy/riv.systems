@@ -7,9 +7,7 @@ import _ from "lodash";
 let charStartingXCoord: number = 0;
 
 /**
- *
  * @todo create tests and add descriptions + examples
- *
  */
 function getActiveCoordsForWord(word: string): number[][] {
   const charArr: string[] = word.split("");

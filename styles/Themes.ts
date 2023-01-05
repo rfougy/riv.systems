@@ -1,4 +1,6 @@
-export const lightTheme = {
+import { ITheme } from "../interfaces/ITheme";
+
+export const lightTheme: ITheme = {
   id: "light",
   primary: "#101010",
   secondary: "#f0f0f0",
@@ -6,7 +8,8 @@ export const lightTheme = {
   idle: "#ffffff",
   red: "#DD4F3F",
 };
-export const darkTheme = {
+
+export const darkTheme: ITheme = {
   id: "dark",
   primary: "#ffffff",
   secondary: "#101010",

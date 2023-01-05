@@ -6,7 +6,7 @@ export function getAbsolutePath(
   section?: string,
   category?: string,
   post?: string
-) {
+): string {
   return section
     ? category
       ? post
@@ -16,8 +16,8 @@ export function getAbsolutePath(
     : join(process.cwd(), "cms");
 }
 
-export function getFileNamesInDirectory(...args: any) {
-  const path = getAbsolutePath(...args);
+export function getFileNamesInDirectory(...args: any): string[] {
+  const path: string = getAbsolutePath(...args);
   const fileNames: string[] =
     process.env.NODE_ENV === "development"
       ? readdirSync(path)
@@ -26,7 +26,7 @@ export function getFileNamesInDirectory(...args: any) {
   return fileNames;
 }
 
-export function getFileContents(path: string) {
+export function getFileContents(path: string): string {
   return readFileSync(path).toString();
 }
 

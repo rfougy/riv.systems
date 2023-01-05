@@ -26,8 +26,10 @@ const SectionPage: React.FC<{
 
   const categories: ICategoryObj[] = content.reduce(
     (list: ICategoryObj[], singleContent: any) => {
-      const { category: categorySection, section: contentSection } =
-        singleContent;
+      const {
+        category: categorySection,
+        section: contentSection,
+      }: { category: string; section: sectionType } = singleContent;
 
       const categoryObj: ICategoryObj = {
         category: categorySection,
@@ -35,7 +37,7 @@ const SectionPage: React.FC<{
       };
 
       const categoryInList: ICategoryObj | undefined = list.find(
-        (item) =>
+        (item): boolean =>
           item.category === categoryObj.category &&
           item.section === categoryObj.section
       );
@@ -49,7 +51,7 @@ const SectionPage: React.FC<{
   /**
    * @description filtering scenarios based on active section & category filters
    */
-  useEffect(() => {
+  useEffect((): void => {
     // no content filtering
     if (!categoryFilters.length) {
       setFilteredContent(content);
@@ -64,7 +66,7 @@ const SectionPage: React.FC<{
         };
         const categoryInFilterState: ICategoryObj | undefined =
           categoryFilters.find(
-            (item: ICategoryObj) =>
+            (item: ICategoryObj): boolean =>
               item.category === categoryObj.category &&
               item.section === categoryObj.section
           );

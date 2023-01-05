@@ -21,14 +21,14 @@ const ContentPage: React.FC<{
 
   const sections: ISectionObj[] = content.reduce(
     (list: ISectionObj[], singleContent: any) => {
-      const { section: contentSection } = singleContent;
+      const { section: contentSection }: { section: string } = singleContent;
 
       const sectionObj: ISectionObj = {
         section: contentSection,
       };
 
       const sectionInList: ISectionObj | undefined = list.find(
-        (item) => item.section === sectionObj.section
+        (item): boolean => item.section === sectionObj.section
       );
 
       if (!sectionInList) list.push(sectionObj);
@@ -39,8 +39,10 @@ const ContentPage: React.FC<{
 
   const categories: ICategoryObj[] = content.reduce(
     (list: ICategoryObj[], singleContent: any) => {
-      const { category: categorySection, section: contentSection } =
-        singleContent;
+      const {
+        category: categorySection,
+        section: contentSection,
+      }: { category: string; section: string } = singleContent;
 
       const categoryObj: ICategoryObj = {
         category: categorySection,
@@ -48,7 +50,7 @@ const ContentPage: React.FC<{
       };
 
       const categoryInList: ICategoryObj | undefined = list.find(
-        (item) =>
+        (item): boolean =>
           item.category === categoryObj.category &&
           item.section === categoryObj.section
       );
@@ -62,7 +64,7 @@ const ContentPage: React.FC<{
   /**
    * @description filtering scenarios based on active section & category filters
    */
-  useEffect(() => {
+  useEffect((): void => {
     // no content filtering
     if (!sectionFilters.length && !categoryFilters.length) {
       setFilteredContent(content);
@@ -74,7 +76,7 @@ const ContentPage: React.FC<{
         const sectionObj: ISectionObj = { section: singleContent.section };
         const sectionInFilterState: ISectionObj | undefined =
           sectionFilters.find(
-            (item: ISectionObj) => item.section === sectionObj.section
+            (item: ISectionObj): boolean => item.section === sectionObj.section
           );
 
         return sectionInFilterState;
@@ -92,7 +94,7 @@ const ContentPage: React.FC<{
         };
         const categoryInFilterState: ICategoryObj | undefined =
           categoryFilters.find(
-            (item: ICategoryObj) =>
+            (item: ICategoryObj): boolean =>
               item.category === categoryObj.category &&
               item.section === categoryObj.section
           );

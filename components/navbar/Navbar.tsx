@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { sectionType } from "../../types/sectionType";
 import ThemeToggleButton from "../features/theme-toggle/ThemeToggleButton";
@@ -10,6 +10,7 @@ import logoActiveLight from "../../public/assets/logo-active-light.svg";
 import logoHiddenLight from "../../public/assets/logo-hidden-light.svg";
 import logoActiveDark from "../../public/assets/logo-active-dark.svg";
 import logoHiddenDark from "../../public/assets/logo-hidden-dark.svg";
+import { ITheme } from "../../interfaces/ITheme";
 
 const logoTheme: any = {
   light: {
@@ -24,13 +25,13 @@ const logoTheme: any = {
 
 const sectionsList: sectionType[] = ["works", "logs", "items", "refs"];
 
-const Navbar: React.FC<{ theme: any; toggleTheme: () => void }> = ({
+const Navbar: React.FC<{ theme: ITheme; toggleTheme: () => void }> = ({
   theme,
   toggleTheme,
 }) => {
-  const { asPath: path } = useRouter();
-  const logoActive = logoTheme[theme.id].active;
-  const logoHidden = logoTheme[theme.id].hidden;
+  const { asPath: path }: NextRouter = useRouter();
+  const logoActive: any = logoTheme[theme.id].active;
+  const logoHidden: any = logoTheme[theme.id].hidden;
 
   const [logo, setLogo] = useState<any>(logoHidden);
   const [hoveredOption, setHoveredOption] = useState<string | null>();
@@ -57,9 +58,9 @@ const Navbar: React.FC<{ theme: any; toggleTheme: () => void }> = ({
     setActiveOption(activeMenuOption);
   }
 
-  useEffect(() => setNavStates(), [path]);
+  useEffect((): void => setNavStates(), [path]);
 
-  useEffect(() => setLogo(logoHidden), [logoHidden, theme]);
+  useEffect((): void => setLogo(logoHidden), [logoHidden, theme]);
 
   return (
     <Nav>
@@ -69,19 +70,22 @@ const Navbar: React.FC<{ theme: any; toggleTheme: () => void }> = ({
             <Image
               src={logo}
               alt="website logo"
-              onMouseOver={() => setLogo(logoActive)}
-              onMouseLeave={() => setLogo(logoHidden)}
-              onTouchStart={() => setLogo(logoActive)}
-              onTouchEnd={() => setLogo(logoHidden)}
-              onTouchCancel={() => setLogo(logoHidden)}
+              onMouseOver={(): void => setLogo(logoActive)}
+              onMouseLeave={(): void => setLogo(logoHidden)}
+              onTouchStart={(): void => setLogo(logoActive)}
+              onTouchEnd={(): void => setLogo(logoHidden)}
+              onTouchCancel={(): void => setLogo(logoHidden)}
             />
           </a>
         </Link>
         <ThemeToggleButton toggleTheme={toggleTheme} />
       </LogoContainer>
-      <NavMenu onMouseLeave={() => setHoveredOption(activeOption)}>
+      <NavMenu onMouseLeave={(): void => setHoveredOption(activeOption)}>
         {sectionsList.map((section: string, index: number) => (
-          <MenuOption key={index} onMouseOver={() => setHoveredOption(section)}>
+          <MenuOption
+            key={index}
+            onMouseOver={(): void => setHoveredOption(section)}
+          >
             <Link href={`/content/${section}`} passHref>
               <A
                 isActiveOption={section === activeOption}
@@ -96,7 +100,7 @@ const Navbar: React.FC<{ theme: any; toggleTheme: () => void }> = ({
             </Link>
           </MenuOption>
         ))}
-        <MenuOption onMouseOver={() => setHoveredOption("content")}>
+        <MenuOption onMouseOver={(): void => setHoveredOption("content")}>
           <Link href={`/content`} passHref>
             <A
               isActiveOption={"content" === activeOption}

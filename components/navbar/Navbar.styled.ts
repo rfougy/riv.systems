@@ -2,17 +2,16 @@ import styled from "@emotion/styled";
 
 export const Nav = styled.nav`
   display: flex;
-  justify-content: space-between;
-
   height: 100%;
+  justify-content: space-between;
 `;
 
 export const LogoContainer = styled.div`
   display: flex;
   flex-direction: column;
+  height: 3rem;
   justify-content: space-between;
   width: 10rem;
-  height: 3rem;
 
   @media (max-width: 40em) {
     width: 9.5rem;
@@ -26,8 +25,8 @@ export const NavMenu = styled.ul`
   justify-content: end;
 
   @media (max-width: 40em) {
-    flex-direction: column;
     align-items: end;
+    flex-direction: column;
   }
 `;
 
@@ -36,7 +35,6 @@ export const MenuOption = styled.li`
 `;
 
 export const A = styled.a`
-  text-decoration: none;
   font-weight: ${({
     isActiveOption,
     isHoveredOption,
@@ -78,6 +76,7 @@ export const A = styled.a`
 
     return 0.5;
   }};
+  text-decoration: none;
 
   &:hover {
     font-weight: 700;

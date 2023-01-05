@@ -4,12 +4,12 @@ import { Button, Container, PageNav, PageNumber } from "./Pagination.styled";
 
 const Pagination: React.FC<{
   contentToPaginate: any[];
-  paginationResetDeps: any;
+  paginationResetDeps: any[]; // dependencies for useEffect hook to reset pagination to 1.
   setRenderedPostCards: (arg: any) => void;
   totalPostCards: number;
 }> = ({
   contentToPaginate,
-  paginationResetDeps, // dependencides for useEffect hook to reset pagination to 1.
+  paginationResetDeps,
   setRenderedPostCards,
   totalPostCards,
 }) => {
@@ -30,26 +30,26 @@ const Pagination: React.FC<{
   const onFirstPage: boolean = currentPage === 1;
   const onLastPage: boolean = currentPage === lastPage;
 
-  function handlePrevButtonClick() {
+  function handlePrevButtonClick(): void {
     if (currentPage > 1) {
       const prevPage: number = currentPage - 1;
       setCurrentPage(prevPage);
     }
   }
 
-  function handleNextButtonClick() {
+  function handleNextButtonClick(): void {
     if (lastPage && currentPage < lastPage) {
       const nextPage: number = currentPage + 1;
       setCurrentPage(nextPage);
     }
   }
 
-  useEffect(() => {
+  useEffect((): void => {
     setCurrentPage(1);
   }, [...paginationResetDeps, postCardsPerPage]);
 
   useEffect(
-    () => setRenderedPostCards(renderedPostCards),
+    (): void => setRenderedPostCards(renderedPostCards),
     [...paginationResetDeps, currentPage]
   );
 
@@ -59,7 +59,7 @@ const Pagination: React.FC<{
         <Button
           aria-label="Navigate to First Results Page"
           disabled={onFirstPage}
-          onClick={() => {
+          onClick={(): void => {
             window.scrollTo(0, 0);
             setCurrentPage(1);
           }}
@@ -70,7 +70,7 @@ const Pagination: React.FC<{
         <Button
           aria-label="Navigate to Previous Results Page"
           disabled={onFirstPage}
-          onClick={() => {
+          onClick={(): void => {
             window.scrollTo(0, 0);
             handlePrevButtonClick();
           }}
@@ -83,7 +83,7 @@ const Pagination: React.FC<{
         <Button
           aria-label="Navigate to Next Results Page"
           disabled={onLastPage}
-          onClick={() => {
+          onClick={(): void => {
             window.scrollTo(0, 0);
             handleNextButtonClick();
           }}
@@ -93,7 +93,7 @@ const Pagination: React.FC<{
         <Button
           aria-label="Navigate to Last Results Page"
           disabled={onLastPage}
-          onClick={() => {
+          onClick={(): void => {
             window.scrollTo(0, 0);
             setCurrentPage(lastPage);
           }}

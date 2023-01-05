@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 import { capitalizeFirstChar, dateToStr } from "../../../utils";
 import ArrowIcon from "../../icons/ArrowIcon";
+import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
 
 const PostCard: React.FC<{
   path: string;
@@ -21,9 +22,8 @@ const PostCard: React.FC<{
     datePublished,
     category,
     section,
-    excerpt,
     coverImage: image,
-  } = frontmatter;
+  }: IPostFrontMatter = frontmatter;
   const dateAsStr: string = dateToStr(datePublished);
 
   return (

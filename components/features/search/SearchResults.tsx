@@ -1,5 +1,4 @@
-import PostCard from "../../posts/card/PostCard";
-
+import DefaultCard from "../../posts/default/card/DefaultCard";
 /**
  * @deprecated currently not in use
  */
@@ -11,7 +10,7 @@ const SearchResults: React.FC<{ results: any }> = ({ results }) => {
           <div>
             <p>{results.length} results</p>
             {results.map((result: any, index: number) => (
-              <PostCard
+              <DefaultCard
                 key={index}
                 path={result.path}
                 frontmatter={result.frontmatter}

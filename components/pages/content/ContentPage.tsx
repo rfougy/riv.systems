@@ -122,6 +122,7 @@ const ContentPage: React.FC<{
         <FilterContainer>
           <PageTitle>Content</PageTitle>
           <PostViewToggle postView={postView} setPostView={setPostView} />
+          <p>{postView}</p>
           <FilterMenu
             sections={sections}
             categories={categories}
@@ -151,16 +152,3 @@ const ContentPage: React.FC<{
 };
 
 export default ContentPage;
-
-/*
- 
-Pseudocode: Different views for content
-
-- When user clicks on view
-  - The layout and styling for postCard and PostView changes
-  - The number of postCards via pagination changes
-
-
-
-
-*/

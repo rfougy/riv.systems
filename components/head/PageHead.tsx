@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { NextRouter, useRouter } from "next/router";
-import Favicon from "./Favicon";
 
 const PageHead: React.FC<{
   title: string;
@@ -14,7 +13,6 @@ const PageHead: React.FC<{
 
   return (
     <Head>
-      <Favicon />
       <title>{isHomePage ? title : `${title} | RIV.SYSTEMS`}</title>
       <meta name="description" content={description} />
 

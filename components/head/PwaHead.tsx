@@ -1,5 +1,7 @@
+import Head from "next/head";
+
 const PwaHead: React.FC = () => (
-  <>
+  <Head>
     <link rel="manifest" href="/manifest.json" />
     <meta
       name="viewport"
@@ -15,7 +17,7 @@ const PwaHead: React.FC = () => (
       rel="apple-touch-icon"
       href="/icons/maskable/maskable_icon_x192.png"
     />
-  </>
+  </Head>
 );
 
 export default PwaHead;

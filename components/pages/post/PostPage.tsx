@@ -1,9 +1,9 @@
 import Markdown from "markdown-to-jsx";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
 import { capitalizeFirstChar, dateToStr } from "../../../utils";
-import OpenGraph from "../../head/OpenGraph";
 import PageHead from "../../head/PageHead";
 import ArrowIcon from "../../icons/ArrowIcon";
 import NextImage from "../../markdown-to-jsx/NextImage";
@@ -31,7 +31,7 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
 
   return content ? (
     <>
-      <OpenGraph title={title} description={excerpt} image={coverImage} />
+      <PageHead title={title} description={excerpt} image={coverImage} />
 
       <Container>
         <Header>

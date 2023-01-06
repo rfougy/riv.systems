@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import PostView from "../../posts/view/PostView";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 import ISectionObj from "../../../interfaces/ISectionObj";
 import FilterMenu from "../../features/filter/FilterMenu";
@@ -12,6 +11,8 @@ import {
 import PageHead from "../../head/page/PageHead";
 import { postViewType } from "../../../types/postViewType";
 import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
+import GridView from "../../posts/grid/view/GridView";
+import DefaultView from "../../posts/default/view/DefaultView";
 
 const ContentPage: React.FC<{
   content: any;
@@ -64,6 +65,15 @@ const ContentPage: React.FC<{
     },
     []
   );
+
+  function renderPostView(): React.ReactElement {
+    switch (postView) {
+      case "grid":
+        return <GridView content={renderedPostCards} />;
+      default:
+        return <DefaultView content={renderedPostCards} />;
+    }
+  }
 
   /**
    * @description filtering scenarios based on active section & category filters
@@ -122,7 +132,6 @@ const ContentPage: React.FC<{
         <FilterContainer>
           <PageTitle>Content</PageTitle>
           <PostViewToggle postView={postView} setPostView={setPostView} />
-          <p>{postView}</p>
           <FilterMenu
             sections={sections}
             categories={categories}
@@ -133,7 +142,8 @@ const ContentPage: React.FC<{
           />
         </FilterContainer>
         <section>
-          <PostView content={renderedPostCards} />
+          {/* <DefaultView content={renderedPostCards} /> */}
+          {renderPostView()}
           <Pagination
             contentToPaginate={filteredContent}
             paginationResetDeps={[

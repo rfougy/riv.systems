@@ -2,10 +2,13 @@ import IPost from "../../../../interfaces/IPost";
 import { sectionType } from "../../../../types/sectionType";
 import { Grid, GridItem } from "./DefaultView.styled";
 import DefaultCard from "../card/DefaultCard";
+import { useEffect } from "react";
 
-const PostView: React.FC<{
+const DefaultView: React.FC<{
   content: any;
 }> = ({ content }) => {
+  useEffect(() => console.log("HIT: DEFAULT"));
+
   return content ? (
     <Grid>
       {content.map((singleContent: any, index: number) => {
@@ -23,4 +26,4 @@ const PostView: React.FC<{
   );
 };
 
-export default PostView;
+export default DefaultView;

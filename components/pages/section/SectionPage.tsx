@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { sectionType } from "../../../types/sectionType";
-import PostView from "../../posts/view/PostView";
+import DefaultView from "../../posts/default/view/DefaultView";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 import ISectionObj from "../../../interfaces/ISectionObj";
 import FilterMenu from "../../features/filter/FilterMenu";
@@ -94,7 +94,7 @@ const SectionPage: React.FC<{
           />
         </FilterContainer>
         <section>
-          <PostView content={renderedPostCards} />
+          <DefaultView content={renderedPostCards} />
           <Pagination
             contentToPaginate={filteredContent}
             paginationResetDeps={[categoryFilters, filteredContent, content]}

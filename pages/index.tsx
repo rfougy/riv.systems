@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import DisplayDotsCoordsProvider from "../components/context/DisplayDotsCoordsContext";
 import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
-import PageHead from "../components/head/page/PageHead";
+import PageHead from "../components/head/PageHead";
 
 import {
   Container,

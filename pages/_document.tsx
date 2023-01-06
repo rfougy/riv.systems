@@ -1,4 +1,5 @@
 import Document, { Html, Main, Head, NextScript } from "next/document";
+import Favicon from "../components/head/Favicon";
 import PwaHead from "../components/head/PwaHead";
 
 class MyDocument extends Document {
@@ -10,6 +11,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
+        <Favicon />
         <PwaHead />
         <Head />
         <body>

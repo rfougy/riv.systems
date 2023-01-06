@@ -6,13 +6,13 @@ import {
   Metadata,
   Text,
   Title,
-} from "./PostCard.styled";
+} from "./DefaultCard.styled";
 import Image from "next/image";
-import { capitalizeFirstChar, dateToStr } from "../../../utils";
-import ArrowIcon from "../../icons/ArrowIcon";
-import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
+import { capitalizeFirstChar, dateToStr } from "../../../../utils";
+import ArrowIcon from "../../../icons/ArrowIcon";
+import { IPostFrontMatter } from "../../../../interfaces/IPostFrontMatter";
 
-const PostCard: React.FC<{
+const DefaultCard: React.FC<{
   path: string;
   frontmatter: any;
   forSearchResults?: boolean;
@@ -54,4 +54,4 @@ const PostCard: React.FC<{
   );
 };
 
-export default PostCard;
+export default DefaultCard;

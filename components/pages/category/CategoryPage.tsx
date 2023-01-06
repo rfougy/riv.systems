@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Pagination from "../../features/pagination/Pagination";
-import PostGrid from "../../posts/grid/PostGrid";
+import DefaultView from "../../posts/default/view/DefaultView";
 import { capitalizeFirstChar } from "../../../utils";
 import {
   CategoryPageContainer,
@@ -25,7 +25,7 @@ const CategoryPage: React.FC<{
       <CategoryPageContainer>
         <PageTitle>Category: {categoryAsTitle}</PageTitle>
         <section>
-          <PostGrid content={renderedPostCards} />
+          <DefaultView content={renderedPostCards} />
           <Pagination
             contentToPaginate={content}
             paginationResetDeps={[content]}

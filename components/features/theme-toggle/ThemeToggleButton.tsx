@@ -4,11 +4,14 @@ import { Circle, Container, Title } from "./ThemeToggleButton.styled";
 const ThemeToggleButton: React.FC<{ toggleTheme: () => void }> = ({
   toggleTheme,
 }) => {
-  const { id: theme }: any = useTheme();
-  const themeInitial: string = theme.split("")[0].toUpperCase();
+  const { id: themeTitle }: any = useTheme();
+  const themeInitial: string = themeTitle.split("")[0].toUpperCase();
 
   return (
-    <Container aria-label="Color Theme Toggle" onClick={() => toggleTheme()}>
+    <Container
+      aria-label="Color Theme Toggle"
+      onClick={(): void => toggleTheme()}
+    >
       <Circle />
       <Title>{themeInitial}</Title>
     </Container>

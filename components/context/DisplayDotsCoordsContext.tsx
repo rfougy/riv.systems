@@ -11,15 +11,13 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
   const [deactivatedCoords, setDeactivatedCoords] = useState<
     number[][] | any[]
   >([]);
-  const [inactiveCoords, setInactiveCoords] = useState<number[][] | undefined>(
-    undefined
-  );
+  const [inactiveCoords, setInactiveCoords] = useState<number[][]>();
   const [inactiveCoordsInContext, setInactiveCoordsIsInContext] =
     useState<boolean>(false);
 
-  function displayDotsAnimeCallback() {
+  function displayDotsAnimeCallback(): void {
     if (inactiveCoordsInContext && inactiveCoords?.length) {
-      const inactiveCoord = inactiveCoords?.pop();
+      const inactiveCoord: number[] | undefined = inactiveCoords?.pop();
 
       deactivatedCoords.length
         ? setDeactivatedCoords((prev: number[][]) => [...prev, inactiveCoord])

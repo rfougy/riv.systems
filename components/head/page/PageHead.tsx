@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 
 const PageHead: React.FC<{
   title: string;
@@ -7,7 +7,7 @@ const PageHead: React.FC<{
   image?: string;
   isHomePage?: boolean;
 }> = ({ title, description, image, isHomePage }) => {
-  const { asPath } = useRouter();
+  const { asPath }: NextRouter = useRouter();
   const url: string = "https://riv.systems" + asPath;
   const defaultImage: string = "https://imgur.com/a/J7iX10a"; // riv.systems logo
 

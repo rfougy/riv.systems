@@ -1,5 +1,5 @@
-export function structuredClone(objectToClone: any) {
-  const stringified = JSON.stringify(objectToClone);
+export function structuredClone(objectToClone: any): any {
+  const stringified: string = JSON.stringify(objectToClone);
   const parsed = JSON.parse(stringified);
   return parsed;
 }

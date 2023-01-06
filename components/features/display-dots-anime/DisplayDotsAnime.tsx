@@ -17,7 +17,7 @@ const DisplayDotsAnime: React.FC<{ text?: string }> = ({
   const { setInactiveCoords, setInactiveCoordsIsInContext } =
     useDisplayDotsCoordsContext();
 
-  const upperCaseText = text.toUpperCase();
+  const upperCaseText: string = text.toUpperCase();
 
   const coordsByWordAndSpace: any = Object.values(
     groupCoordsByWordAndSpace(upperCaseText)
@@ -33,14 +33,14 @@ const DisplayDotsAnime: React.FC<{ text?: string }> = ({
     []
   );
 
-  useEffect(() => {
+  useEffect((): void => {
     setInactiveCoords(shuffleArr(allInactiveCoords));
     setInactiveCoordsIsInContext(true);
   }, []);
 
   return (
     <Container>
-      {coordsByWordAndSpace.map((wordOrSpace: any, index: number) => (
+      {coordsByWordAndSpace.map((wordOrSpace: string, index: number) => (
         <DotWord key={index} wordOrSpace={wordOrSpace} />
       ))}
     </Container>

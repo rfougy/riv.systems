@@ -5,20 +5,19 @@ export const Container = styled.div`
 `;
 
 export const PageNav = styled.nav`
+  align-items: center;
   display: flex;
   flex-wrap: no-wrap;
   justify-content: center;
-  align-items: center;
 `;
 
 export const Button = styled.button`
-  display: flex;
-  flex-wrap: no-wrap;
-
   border: solid 0.1rem ${(props: any) => props.theme.primary};
   border-radius: 1rem;
-  padding: 0.4rem 0.7rem;
+  display: flex;
+  flex-wrap: no-wrap;
   margin: 0 0.35rem;
+  padding: 0.4rem 0.7rem;
 
   &:hover {
     background: ${(props: any) => props.theme.highlight};
@@ -30,6 +29,6 @@ export const Button = styled.button`
 `;
 
 export const PageNumber = styled.p`
-  text-align: center;
   margin: 0 1rem;
+  text-align: center;
 `;

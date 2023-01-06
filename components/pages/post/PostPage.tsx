@@ -1,6 +1,7 @@
 import Markdown from "markdown-to-jsx";
 import Image from "next/image";
 import Link from "next/link";
+import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
 import { capitalizeFirstChar, dateToStr } from "../../../utils";
 import PageHead from "../../head/page/PageHead";
 import ArrowIcon from "../../icons/ArrowIcon";
@@ -20,8 +21,9 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
   slug,
   content,
 }) => {
-  const { frontmatter, postContent } = content;
-  const { title, datePublished, coverImage, excerpt } = frontmatter;
+  const { frontmatter, postContent }: any = content;
+  const { title, datePublished, coverImage, excerpt }: IPostFrontMatter =
+    frontmatter;
   const section: string = slug[0];
   const category: string = slug[1];
   const dateAsStr: string = dateToStr(datePublished);

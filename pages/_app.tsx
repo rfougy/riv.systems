@@ -14,17 +14,19 @@ import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
 import GlobalHead from "../components/head/global/GlobalHead";
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
+import { IAnnouncement } from "../interfaces/IAnnouncement";
+import { ITheme } from "../interfaces/ITheme";
 
 const App = (props: any) => {
   const { Component, pageProps }: AppProps = props;
-  const { route } = useRouter();
-  const [currTheme, setTheme] = useState<any>(lightTheme);
+  const { route }: NextRouter = useRouter();
+  const [currTheme, setTheme] = useState<ITheme>(lightTheme);
   const [announcementIsActive, setAnnouncementIsActive] =
     useState<boolean>(true);
   const [hydrated, setHydrated] = useState<boolean>(false);
 
-  const announcement = {
+  const announcement: IAnnouncement = {
     dateCreated: "2022-12-25",
     text: "Website V1.0 is now complete, on to content creation.",
   };
@@ -84,27 +86,28 @@ const App = (props: any) => {
   `;
 
   function toggleTheme(): void {
-    const newTheme = currTheme.id === lightTheme.id ? darkTheme : lightTheme;
+    const newTheme: ITheme =
+      currTheme.id === lightTheme.id ? darkTheme : lightTheme;
     localStorage.setItem("theme", JSON.stringify(newTheme));
     setTheme(newTheme);
   }
 
-  useEffect(() => {
-    const themeInLocalStorage = localStorage.getItem("theme");
+  useEffect((): void => {
+    const themeInLocalStorage: string | null = localStorage.getItem("theme");
 
     if (themeInLocalStorage) {
       setTheme(JSON.parse(themeInLocalStorage));
     }
   }, []);
 
-  useEffect(() => {
-    const announcementInLocalStorage: any =
+  useEffect((): void => {
+    const announcementInLocalStorage: string | null =
       localStorage.getItem("announcement");
 
-    const announcementDate = announcementInLocalStorage
+    const announcementDate: string | undefined = announcementInLocalStorage
       ? JSON.parse(announcementInLocalStorage).dateCreated
       : undefined;
-    const newestAnnouncementDate = announcement.dateCreated;
+    const newestAnnouncementDate: string = announcement.dateCreated;
 
     if (
       announcementInLocalStorage &&
@@ -117,7 +120,7 @@ const App = (props: any) => {
     }
   }, []);
 
-  useEffect(() => setHydrated(true), []);
+  useEffect((): void => setHydrated(true), []);
   if (!hydrated) return null;
 
   return (

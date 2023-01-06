@@ -7,6 +7,7 @@ import {
 } from "../cms/getCmsContent";
 
 import matter from "gray-matter";
+import { ICmsCategory } from "../../interfaces/lCmsCategories";
 
 export function sortPostsByDate(posts: any) {
   return posts.sort((a: any, b: any) => {
@@ -23,7 +24,7 @@ export function sortPostsByDate(posts: any) {
 export function getContentByDynamicPage(slug: string | string[] | undefined) {
   if (!slug) {
     const sections: string[] = getFileNamesInDirectory();
-    const allCategories: any = getCategories(sections);
+    const allCategories: ICmsCategory[] = getCategories(sections);
     const allPosts: any = getPosts(allCategories);
 
     const allPostsSorted = sortPostsByDate(allPosts);
@@ -32,9 +33,9 @@ export function getContentByDynamicPage(slug: string | string[] | undefined) {
   }
 
   if (slug?.length === 1) {
-    const section = slug;
+    const section: string | string[] = slug;
     // @ts-ignore
-    const categoriesFromSection: any = getCategories(section);
+    const categoriesFromSection: ICmsCategory[] = getCategories(section);
     const postsFromSection: any = getPosts(categoriesFromSection);
 
     const postsFromSectionSorted = sortPostsByDate(postsFromSection);

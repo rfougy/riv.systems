@@ -1,22 +1,24 @@
-import { CloseIconContainer, Container, Text } from "./Announcement.styled";
-
-import closeIconLight from "../../public/assets/close-icon-light.svg";
 import closeIconDark from "../../public/assets/close-icon-dark.svg";
+import closeIconLight from "../../public/assets/close-icon-light.svg";
 import Image from "next/image";
 
+import { CloseIconContainer, Container, Text } from "./Announcement.styled";
+import { IAnnouncement } from "../../interfaces/IAnnouncement";
+import { ITheme } from "../../interfaces/ITheme";
+
 const closeIconTheme: any = {
-  light: closeIconLight,
   dark: closeIconDark,
+  light: closeIconLight,
 };
 
 const Announcement: React.FC<{
-  announcement: any;
-  theme: any;
+  announcement: IAnnouncement;
   setAnnouncementIsActive: (bool: boolean) => void;
-}> = ({ announcement, theme, setAnnouncementIsActive }) => {
+  theme: ITheme;
+}> = ({ announcement, setAnnouncementIsActive, theme }) => {
   const closeIcon = closeIconTheme[theme.id];
 
-  function handleClose() {
+  function handleClose(): void {
     localStorage.setItem("announcement", JSON.stringify(announcement));
     setAnnouncementIsActive(false);
   }

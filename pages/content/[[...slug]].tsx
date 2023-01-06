@@ -41,7 +41,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     pathToSectionPage,
     pathToCategoryPage,
     pathToPostPage,
-  } = getDynamicPagePaths();
+  }: any = getDynamicPagePaths();
 
   return {
     paths: [

@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
-import PostGrid from "../../posts/grid/PostGrid";
+import PostView from "../../posts/view/PostView";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 import ISectionObj from "../../../interfaces/ISectionObj";
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
 import {
-  FilterAndGridContainer,
+  FilterAndViewContainer,
   FilterContainer,
   PageTitle,
 } from "../../../styles/Layouts.styled";
 import PageHead from "../../head/page/PageHead";
+import { postViewType } from "../../../types/postViewType";
+import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
 
 const ContentPage: React.FC<{
   content: any;
@@ -18,6 +20,8 @@ const ContentPage: React.FC<{
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
   const [filteredContent, setFilteredContent] = useState<any>(content);
   const [renderedPostCards, setRenderedPostCards] = useState<any>();
+
+  const [postView, setPostView] = useState<postViewType>("default");
 
   const sections: ISectionObj[] = content.reduce(
     (list: ISectionObj[], singleContent: any) => {
@@ -114,9 +118,10 @@ const ContentPage: React.FC<{
           "Browse all blog posts in RIV.SYSTEMS, from professional work to journal entries and miscellaneous content."
         }
       />
-      <FilterAndGridContainer>
+      <FilterAndViewContainer>
         <FilterContainer>
           <PageTitle>Content</PageTitle>
+          <PostViewToggle postView={postView} setPostView={setPostView} />
           <FilterMenu
             sections={sections}
             categories={categories}
@@ -127,7 +132,7 @@ const ContentPage: React.FC<{
           />
         </FilterContainer>
         <section>
-          <PostGrid content={renderedPostCards} />
+          <PostView content={renderedPostCards} />
           <Pagination
             contentToPaginate={filteredContent}
             paginationResetDeps={[
@@ -140,9 +145,22 @@ const ContentPage: React.FC<{
             totalPostCards={filteredContent.length}
           />
         </section>
-      </FilterAndGridContainer>
+      </FilterAndViewContainer>
     </>
   );
 };
 
 export default ContentPage;
+
+/*
+ 
+Pseudocode: Different views for content
+
+- When user clicks on view
+  - The layout and styling for postCard and PostView changes
+  - The number of postCards via pagination changes
+
+
+
+
+*/

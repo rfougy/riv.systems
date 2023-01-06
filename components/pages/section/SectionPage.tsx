@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { sectionType } from "../../../types/sectionType";
-import PostGrid from "../../posts/grid/PostGrid";
+import PostView from "../../posts/view/PostView";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 import ISectionObj from "../../../interfaces/ISectionObj";
 import FilterMenu from "../../features/filter/FilterMenu";
@@ -8,7 +8,7 @@ import Pagination from "../../features/pagination/Pagination";
 
 import { capitalizeFirstChar } from "../../../utils";
 import {
-  FilterAndGridContainer,
+  FilterAndViewContainer,
   FilterContainer,
   PageTitle,
 } from "../../../styles/Layouts.styled";
@@ -84,7 +84,7 @@ const SectionPage: React.FC<{
         title={`Category: ${sectionAsTitle}`}
         description={`View all content related to ${sectionAsTitle} in RIV.SYSTEMS.`}
       />
-      <FilterAndGridContainer>
+      <FilterAndViewContainer>
         <FilterContainer>
           <PageTitle>{sectionAsTitle}</PageTitle>
           <FilterMenu
@@ -94,7 +94,7 @@ const SectionPage: React.FC<{
           />
         </FilterContainer>
         <section>
-          <PostGrid content={renderedPostCards} />
+          <PostView content={renderedPostCards} />
           <Pagination
             contentToPaginate={filteredContent}
             paginationResetDeps={[categoryFilters, filteredContent, content]}
@@ -102,7 +102,7 @@ const SectionPage: React.FC<{
             totalPostCards={filteredContent.length}
           />
         </section>
-      </FilterAndGridContainer>
+      </FilterAndViewContainer>
     </>
   );
 };

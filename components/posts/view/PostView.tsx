@@ -1,9 +1,9 @@
 import IPost from "../../../interfaces/IPost";
 import { sectionType } from "../../../types/sectionType";
 import PostCard from "../card/PostCard";
-import { Grid, GridItem } from "./PostGrid.styled";
+import { Grid, GridItem } from "./PostView.styled";
 
-const PostGrid: React.FC<{
+const PostView: React.FC<{
   content: any;
 }> = ({ content }) => {
   return content ? (
@@ -23,4 +23,4 @@ const PostGrid: React.FC<{
   );
 };
 
-export default PostGrid;
+export default PostView;

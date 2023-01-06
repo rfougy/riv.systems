@@ -6,7 +6,7 @@ export const PageTitle = styled.h1`
   margin: 0;
 `;
 
-export const FilterAndGridContainer = styled.div`
+export const FilterAndViewContainer = styled.div`
   display: flex;
   gap: 6rem;
 

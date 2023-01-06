@@ -30,7 +30,7 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
 
   return content ? (
     <>
-      <PageHead title={title} description={excerpt} />
+      <PageHead title={title} description={excerpt} image={coverImage} />
       <Container>
         <Header>
           <Metadata>

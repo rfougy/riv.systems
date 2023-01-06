@@ -1,9 +1,10 @@
 import Markdown from "markdown-to-jsx";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
 import { capitalizeFirstChar, dateToStr } from "../../../utils";
-import PageHead from "../../head/page/PageHead";
+import PageHead from "../../head/PageHead";
 import ArrowIcon from "../../icons/ArrowIcon";
 import NextImage from "../../markdown-to-jsx/NextImage";
 import {
@@ -30,7 +31,8 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
 
   return content ? (
     <>
-      <PageHead title={title} description={excerpt} />
+      <PageHead title={title} description={excerpt} image={coverImage} />
+
       <Container>
         <Header>
           <Metadata>

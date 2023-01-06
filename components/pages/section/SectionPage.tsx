@@ -12,7 +12,7 @@ import {
   FilterContainer,
   PageTitle,
 } from "../../../styles/Layouts.styled";
-import PageHead from "../../head/page/PageHead";
+import PageHead from "../../head/PageHead";
 
 const SectionPage: React.FC<{
   section: sectionType | string;
@@ -81,7 +81,7 @@ const SectionPage: React.FC<{
   return (
     <>
       <PageHead
-        title={`Category: ${sectionAsTitle}`}
+        title={sectionAsTitle}
         description={`View all content related to ${sectionAsTitle} in RIV.SYSTEMS.`}
       />
       <FilterAndGridContainer>

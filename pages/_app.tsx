@@ -13,10 +13,12 @@ import "../styles/globals.css";
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
-import GlobalHead from "../components/head/global/GlobalHead";
 import { NextRouter, useRouter } from "next/router";
 import { IAnnouncement } from "../interfaces/IAnnouncement";
 import { ITheme } from "../interfaces/ITheme";
+import Head from "next/head";
+import PwaHead from "../components/head/PwaHead";
+import Favicon from "../components/head/Favicon";
 
 const App = (props: any) => {
   const { Component, pageProps }: AppProps = props;
@@ -125,7 +127,8 @@ const App = (props: any) => {
 
   return (
     <>
-      <GlobalHead />
+      <PwaHead />
+      <Favicon />
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
         {announcementIsActive && (

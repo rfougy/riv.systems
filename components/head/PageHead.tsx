@@ -9,7 +9,7 @@ const PageHead: React.FC<{
 }> = ({ title, description, image, isHomePage }) => {
   const { asPath }: NextRouter = useRouter();
   const url: string = "https://riv.systems" + asPath;
-  const defaultImage: string = "https://imgur.com/a/J7iX10a"; // riv.systems logo
+  const defaultImage: string = "https://i.imgur.com/dk7mgAz.png"; // riv.systems logo
 
   return (
     <Head>

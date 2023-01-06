@@ -9,30 +9,32 @@ export default function filterByCategory(
   setCategoryFilters: (arg: any) => void
 ) {
   const categoryInFilterState: ICategoryObj | undefined = categoryFilters.find(
-    (item: ICategoryObj) =>
+    (item: ICategoryObj): boolean =>
       item.category === categoryObj.category &&
       item.section === categoryObj.section
   );
   const sectionInFilterState: ISectionObj | undefined = sectionFilters?.find(
-    (item: ISectionObj) => item.section === categoryObj.section
+    (item: ISectionObj): boolean => item.section === categoryObj.section
   );
 
   // remove category from filter state.
   if (categoryInFilterState) {
     const updatedCategoryFilters: ICategoryObj[] = categoryFilters.filter(
-      (item: ICategoryObj) => item !== categoryInFilterState
+      (item: ICategoryObj): boolean => item !== categoryInFilterState
     );
     setCategoryFilters(updatedCategoryFilters);
 
     const categoryWithMatchingSection: ICategoryObj[] = categoryFilters.filter(
-      (item: ICategoryObj) => item.section === categoryInFilterState.section
+      (item: ICategoryObj): boolean =>
+        item.section === categoryInFilterState.section
     );
 
     // remove section from filter state once all related categories are removed
     if (categoryWithMatchingSection.length === 1 && setSectionFilters) {
       const updatedSectionFilters: ISectionObj[] | undefined =
         sectionFilters?.filter(
-          (item: ISectionObj) => item.section !== categoryInFilterState.section
+          (item: ISectionObj): boolean =>
+            item.section !== categoryInFilterState.section
         );
       setSectionFilters(updatedSectionFilters);
     }
@@ -40,7 +42,7 @@ export default function filterByCategory(
 
   // add category to filter state.
   if (!categoryInFilterState) {
-    setCategoryFilters((prevState: ICategoryObj[]) => [
+    setCategoryFilters((prevState: ICategoryObj[]): ICategoryObj[] => [
       ...prevState,
       categoryObj,
     ]);
@@ -48,7 +50,7 @@ export default function filterByCategory(
     // add section to filter state.
     if (!sectionInFilterState && setSectionFilters) {
       const sectionObj: ISectionObj = { section: categoryObj.section };
-      setSectionFilters((prevState: ISectionObj[]) => [
+      setSectionFilters((prevState: ISectionObj[]): ISectionObj[] => [
         ...prevState,
         sectionObj,
       ]);

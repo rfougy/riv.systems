@@ -11,12 +11,12 @@ export default function filterBySection(
   setSectionFilters: ((arg: any) => void) | undefined
 ): void {
   const sectionInFilterState: ISectionObj | undefined = sectionFilters?.find(
-    (item: ISectionObj) => item.section === sectionObj.section
+    (item: ISectionObj): boolean => item.section === sectionObj.section
   );
   // add section and all categories to filter states (via clicking toggle checkbox)
   if (sectionInFilterState && !allCategoriesForSectionAreSelected) {
     const updatedCategoryFilters: ICategoryObj[] = categories.filter(
-      (item: ICategoryObj) => item.section === sectionObj.section
+      (item: ICategoryObj): boolean => item.section === sectionObj.section
     );
 
     setCategoryFilters(updatedCategoryFilters);
@@ -28,10 +28,10 @@ export default function filterBySection(
   if (sectionInFilterState) {
     const updatedSectionFilters: ISectionObj[] | undefined =
       sectionFilters?.filter(
-        (item: ISectionObj) => item !== sectionInFilterState
+        (item: ISectionObj): boolean => item !== sectionInFilterState
       );
     const updatedCategoryFilters: ICategoryObj[] = categoryFilters.filter(
-      (item: ICategoryObj) => item.section !== sectionObj.section
+      (item: ICategoryObj): boolean => item.section !== sectionObj.section
     );
 
     setSectionFilters && setSectionFilters(updatedSectionFilters);
@@ -43,15 +43,15 @@ export default function filterBySection(
   // add section to filter state
   if (!sectionInFilterState) {
     const updatedCategoryFilters: ICategoryObj[] = categories.filter(
-      (item: ICategoryObj) => item.section === sectionObj.section
+      (item: ICategoryObj): boolean => item.section === sectionObj.section
     );
 
     setSectionFilters &&
-      setSectionFilters((prevState: ISectionObj[]) => [
+      setSectionFilters((prevState: ISectionObj[]): ISectionObj[] => [
         ...prevState,
         sectionObj,
       ]);
-    setCategoryFilters((prevState: ICategoryObj[]) => [
+    setCategoryFilters((prevState: ICategoryObj[]): ICategoryObj[] => [
       ...prevState,
       ...updatedCategoryFilters,
     ]);

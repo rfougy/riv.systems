@@ -1,6 +1,7 @@
 import { join } from "path";
 import { readdirSync, readFileSync } from "fs";
 import matter from "gray-matter";
+import { ICmsCategory } from "../../interfaces/lCmsCategories";
 
 export function getAbsolutePath(
   section?: string,
@@ -30,8 +31,8 @@ export function getFileContents(path: string): string {
   return readFileSync(path).toString();
 }
 
-export function getCategories(sections: string[]) {
-  let categories: string[][] = sections.map((section: any) => {
+export function getCategories(sections: string[]): ICmsCategory[] {
+  let categories: ICmsCategory[] = sections.map((section: string) => {
     const posts: string[] = getFileNamesInDirectory(section);
 
     const categoryList: any = posts.map((fileName: string) => {
@@ -49,7 +50,7 @@ export function getCategories(sections: string[]) {
   return categories;
 }
 
-export function getPosts(categories: any) {
+export function getPosts(categories: ICmsCategory[]) {
   let posts: any = categories.map((category: any) => {
     const { title: categoryTitle, section } = category;
     const posts: any = getFileNamesInDirectory(section, categoryTitle);

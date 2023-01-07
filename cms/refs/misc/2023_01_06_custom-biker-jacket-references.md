@@ -1,13 +1,13 @@
 ---
 title: Custom Biker Jacket References
-datePublished: "2022-01-06"
+datePublished: "2023-01-06"
 section: refs
 category: misc
 excerpt: Since starting my journey of DIY through this biker jacket, I’ve amassed a collection of images as references and inspiration.
 coverImage: https://user-images.githubusercontent.com/77861258/211128031-dd249a04-9093-4736-850a-e915f08cc6dd.png
 ---
 
-Creating a custom punk biker jacket from absolute zero is a task few can take on without a true passion for the craft. Hand-stitching a cute little patch on a sleeve or adding in a few studs across the backside? Sure. But to spend tens of hours to fill every empty portion of a piece to the brim? Most would shrug the challenge off, “Forget ‘bout it!”
+Creating a custom punk biker jacket from absolute zero is a task only few can take on. Hand-stitch a patch onto a sleeve or add in a few studs across the backside? Sure. But spend tens of hours to fill every empty portion of a piece to the brim? Most would shrug the challenge off: [“Forget ‘bout it!”](https://youtu.be/pS6zJ7IsJkM)
 
 <Image 
   src="https://user-images.githubusercontent.com/77861258/211128085-b0be9fbf-579f-4aaf-b6af-ec172ee10a79.jpg" 
@@ -15,9 +15,8 @@ Creating a custom punk biker jacket from absolute zero is a task few can take on
   aspectRatio="3:4"
 />
 
-I’ve spent 50+ hours working on my biker jacket over the years, and I’m not putting this out there as a means of bragging — you know what, maybe it is. But more importantly, it’s evidence of just how immersed you can become when creating a one-of-a-kind piece that you and you alone can take pride in. However, creating a custom jacket requires inspiration from unique pieces created by likeminded fanatics. But where in the tarnation can you actually find them? It’s rare to see a genuine custom punk biker jacket in the flesh nowadays. 
-
-Since starting my journey of DIY through this biker jacket, I’ve amassed a [collection of images](https://www.are.na/riviere-fougy/biker-jacket-8yzhrsdicgc) as references and inspiration. Those who created such pieces including the likes of Bounty Hunter’s founder [Hikaru Iwanaga](https://youtu.be/cSgs-5bXCMg), the mysterious [Shiga from Japan](http://whev.com/actafp/), Japanese punk band [The Erections](https://www.infringe.com/the-erections/), and [cult-brand Blackmeans](https://www.archivepdf.net/post/brand-breakdown-yujiro-komatsu-and-blackmeans). The pieces are nothing short of DIY perfection, carefully curated with passion oozing in every nook and cranny.
+I’ve spent a total of 50+ hours customizing my biker jacket, and I’m not putting this out there as a means of bragging — you know what, maybe I am! But more importantly, the hours tallied is evidence enough of just how immersive creating a one-of-a-kind piece can be. The pride that comes with the craft is unexplainable. With that being said, customizing a jacket requires inspo from unique pieces created by fanatics like ourselves. "But where is Gods' tarnation can you actually find them?", you might ask (well maybe not, I just wanted to write 'what in God's tarnation' somewhere on this site).
+Since starting my journey of DIY through this biker jacket, I’ve amassed a [collection of images](https://www.are.na/riviere-fougy/biker-jacket-8yzhrsdicgc) as references and inspiration. Those who created such pieces includes the likes of Bounty Hunter’s founder [Hikaru Iwanaga](https://youtu.be/cSgs-5bXCMg), the mysterious and obscure [Shiga from Japan](http://whev.com/actafp/), Japanese punk band [The Erections](https://www.infringe.com/the-erections/), and cult-brand [Blackmeans](https://www.archivepdf.net/post/brand-breakdown-yujiro-komatsu-and-blackmeans). The pieces are nothing short of DIY perfection, carefully curated with passion oozing out of every nook and cranny.
 
 - <Image 
     src="https://user-images.githubusercontent.com/77861258/211128148-14252895-4240-4e54-b588-cd77807857f8.png" 

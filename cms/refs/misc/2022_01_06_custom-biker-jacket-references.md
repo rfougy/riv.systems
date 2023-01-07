@@ -68,7 +68,7 @@ Since starting my journey of DIY through this biker jacket, I’ve amassed a [co
    src="https://user-images.githubusercontent.com/77861258/211128434-ee5db6be-d104-4bf2-b0c0-f121fcb78cd9.png" 
    alt="Custom Biker Jacket by Hikaru Iwanaga of Bounty Hunter"
    aspectRatio="16:9"
- />![Group 11]()
+ />
  - <Image
    src="https://user-images.githubusercontent.com/77861258/211128455-a9b932d2-6d83-4f12-aa23-5a4a9cf59e57.png" 
    alt="Custom Biker Jacket by Hikaru Iwanaga of Bounty Hunter"

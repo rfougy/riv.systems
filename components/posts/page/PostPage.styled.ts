@@ -44,7 +44,7 @@ export const Content = styled.div`
   margin-top: 3rem;
 
   a {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   p {

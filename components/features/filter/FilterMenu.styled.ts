@@ -97,13 +97,13 @@ export const Checkbox = styled.input``;
 export const ToggleCheckbox = styled.input``;
 
 export const Label = styled.h3`
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 400;
   margin: 0;
 `;
 
 export const SectionTitle = styled.h2`
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 700;
   margin-right: 0.5rem;
 `;

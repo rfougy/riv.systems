@@ -29,6 +29,7 @@ export const Button = styled.button`
 `;
 
 export const PageNumber = styled.p`
+  font-size: 0.75rem;
   margin: 0 1rem;
   text-align: center;
 `;

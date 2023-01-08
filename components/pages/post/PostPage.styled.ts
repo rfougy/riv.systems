@@ -9,8 +9,8 @@ export const Container = styled.div`
 
 export const Metadata = styled.ul`
   list-style-type: none;
-  padding: 0;
   margin-bottom: 1rem;
+  padding: 0;
 `;
 
 export const Header = styled.header``;
@@ -30,6 +30,7 @@ export const CoverImage = styled.div`
 
 export const Li = styled.li`
   p {
+    font-size: 0.75rem;
     margin: 0;
   }
 `;
@@ -42,6 +43,10 @@ export const Inline = styled.li`
 export const Content = styled.div`
   margin-top: 3rem;
 
+  a {
+    font-size: 1rem;
+  }
+
   p {
     width: 100%;
   }
@@ -53,14 +58,10 @@ export const Content = styled.div`
   }
 
   article {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 3rem;
-  }
-
-  ul {
-    // margin: 1.5rem 0;
   }
 
   ul img {

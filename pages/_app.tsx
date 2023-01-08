@@ -16,13 +16,13 @@ import "@fontsource/roboto-mono/700.css";
 import { NextRouter, useRouter } from "next/router";
 import { IAnnouncement } from "../interfaces/IAnnouncement";
 import { ITheme } from "../interfaces/ITheme";
-import Head from "next/head";
 import PwaHead from "../components/head/PwaHead";
 import Favicon from "../components/head/Favicon";
 
 const App = (props: any) => {
   const { Component, pageProps }: AppProps = props;
   const { route }: NextRouter = useRouter();
+  
   const [currTheme, setTheme] = useState<ITheme>(lightTheme);
   const [announcementIsActive, setAnnouncementIsActive] =
     useState<boolean>(true);
@@ -30,7 +30,8 @@ const App = (props: any) => {
 
   const announcement: IAnnouncement = {
     dateCreated: "2022-01-06",
-    text: "'Custom Biker Jacket References' post is now online, with more coming through the pipeline.",
+    text: "'Custom Biker Jacket References' post is now online.",
+    link: "/content/refs/misc/2023_01_06_custom-biker-jacket-references"
   };
 
   const globalColors = css`

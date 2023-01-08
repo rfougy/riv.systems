@@ -1,9 +1,10 @@
-import { ICmsCategory } from "./../../interfaces/lCmsCategories";
 import {
   getPosts,
   getFileNamesInDirectory,
   getCategories,
 } from "../cms/getCmsContent";
+
+import { ICmsCategory } from "./../../interfaces/lCmsCategories";
 
 export function getDynamicPagePaths() {
   const sections: string[] = getFileNamesInDirectory();

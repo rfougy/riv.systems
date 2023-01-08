@@ -1,6 +1,7 @@
+import matter from "gray-matter";
 import { join } from "path";
 import { readdirSync, readFileSync } from "fs";
-import matter from "gray-matter";
+
 import { ICmsCategory } from "../../interfaces/lCmsCategories";
 
 export function getAbsolutePath(

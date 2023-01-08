@@ -1,4 +1,5 @@
 import DotRow from "../row/DotRow";
+
 import { Container } from "./DotChar.styled";
 
 const DotChar: React.FC<{ char: any }> = ({ char }) => {

@@ -1,11 +1,15 @@
-import Markdown from "markdown-to-jsx";
 import Image from "next/image";
 import Link from "next/link";
+import Markdown from "markdown-to-jsx";
+
 import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
 import { capitalizeFirstChar, dateToStr } from "../../../utils";
+
 import PageHead from "../../head/PageHead";
-import ArrowIcon from "../../icons/ArrowIcon";
 import NextImage from "../../markdown-to-jsx/NextImage";
+
+import ArrowIcon from "../../icons/ArrowIcon";
+
 import {
   Inline,
   Metadata,

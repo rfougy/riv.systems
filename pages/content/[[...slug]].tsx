@@ -13,6 +13,7 @@ import {
 } from "../../components/results";
 
 import IPost from "../../interfaces/IPost";
+
 import { getContentByDynamicPage } from "../../lib/dynamic-pages/getContentByDynamicPage";
 import { getDynamicPagePaths } from "../../lib/dynamic-pages/getDynamicPagePaths";
 

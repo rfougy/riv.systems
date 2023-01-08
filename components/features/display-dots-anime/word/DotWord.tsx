@@ -1,4 +1,5 @@
 import DotChar from "../char/DotChar";
+
 import { Container } from "./DotWord.styled";
 
 const DotWord: React.FC<{ wordOrSpace: any }> = ({ wordOrSpace }) => {

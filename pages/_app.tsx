@@ -1,6 +1,8 @@
 import type { AppProps } from "next/app";
 import { NextRouter, useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { Global as GlobalTheme, ThemeProvider, css } from "@emotion/react";
+import "../styles/globals.css";
 
 import Announcement from "../components/announcement/Announcment";
 import Navbar from "../components/navbar/Navbar";
@@ -11,10 +13,8 @@ import Favicon from "../components/head/Favicon";
 import { IAnnouncement } from "../interfaces/IAnnouncement";
 import { ITheme } from "../interfaces/ITheme";
 
-import { Global as GlobalTheme, ThemeProvider, css } from "@emotion/react";
 import { ContentWrap, PageContainer } from "../styles/pages/App.styled";
 import { lightTheme, darkTheme } from "../styles/Themes";
-import "../styles/globals.css";
 
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";

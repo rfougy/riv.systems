@@ -1,13 +1,16 @@
 import _ from "lodash";
 import { useEffect } from "react";
+
+import DotWord from "./word/DotWord";
+import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsContext";
+
+import IAllCoords from "../../../interfaces/IAllCoords";
+
 import {
   groupCoordsByChar,
   groupCoordsByWordAndSpace,
 } from "../../../lib/display-dots-animation/getCoords";
 import { shuffleArr } from "../../../utils";
-import IAllCoords from "../../../interfaces/IAllCoords";
-import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsContext";
-import DotWord from "./word/DotWord";
 
 import { Container } from "./DisplayDotsAnime.styled";
 

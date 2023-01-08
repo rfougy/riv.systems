@@ -1,4 +1,5 @@
 import DotCell from "../cell/DotCell";
+
 import { Container } from "./DotRow.styled";
 
 const DotRow: React.FC<{ coordRow: number[][] }> = ({ coordRow }) => {

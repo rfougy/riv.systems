@@ -30,7 +30,7 @@ const App = (props: any) => {
 
   const announcement: IAnnouncement = {
     dateCreated: "2022-01-06",
-    text: "'Custom Biker Jacket References' post is now online, with more coming through the pipeline.",
+    text: "'Custom Biker Jacket References' post is now online.",
   };
 
   const globalColors = css`

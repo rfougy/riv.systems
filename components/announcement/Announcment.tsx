@@ -12,6 +12,9 @@ const closeIconTheme: any = {
   light: closeIconLight,
 };
 
+/**
+ * @attention To change the announcement text, please refer to the variable 'announcement' via _app.tsx
+ */
 const Announcement: React.FC<{
   announcement: IAnnouncement;
   setAnnouncementIsActive: (bool: boolean) => void;

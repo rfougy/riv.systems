@@ -29,8 +29,8 @@ const App = (props: any) => {
   const [hydrated, setHydrated] = useState<boolean>(false);
 
   const announcement: IAnnouncement = {
-    dateCreated: "2022-12-25",
-    text: "Website V1.0 is now complete, on to content creation.",
+    dateCreated: "2022-01-06",
+    text: "'Custom Biker Jacket References' post is now online, with more coming through the pipeline.",
   };
 
   const globalColors = css`

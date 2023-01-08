@@ -8,10 +8,10 @@ import {
   FilterAndGridContainer,
   FilterContainer,
   PageTitle,
-} from "../../../styles/Layouts.styled";
+} from "../Results.styled";
 import PageHead from "../../head/PageHead";
 
-const ContentPage: React.FC<{
+const ContentResults: React.FC<{
   content: any;
 }> = ({ content }) => {
   const [sectionFilters, setSectionFilters] = useState<ISectionObj[]>([]);
@@ -145,4 +145,4 @@ const ContentPage: React.FC<{
   );
 };
 
-export default ContentPage;
+export default ContentResults;

@@ -6,11 +6,11 @@ import type {
 } from "next";
 
 import {
-  ContentPage,
-  SectionPage,
-  CategoryPage,
+  ContentResults,
+  SectionResults,
+  CategoryResults,
   PostPage,
-} from "../../components/pages";
+} from "../../components/results";
 
 import IPost from "../../interfaces/IPost";
 import { getContentByDynamicPage } from "../../lib/dynamic-pages/getContentByDynamicPage";
@@ -20,13 +20,13 @@ const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
   slug,
   content,
 }) => {
-  if (!slug) return <ContentPage content={content} />;
+  if (!slug) return <ContentResults content={content} />;
 
   if (slug?.length === 1)
-    return <SectionPage section={slug[0]} content={content} />;
+    return <SectionResults section={slug[0]} content={content} />;
 
   if (slug?.length === 2)
-    return <CategoryPage category={slug[1]} content={content} />;
+    return <CategoryResults category={slug[1]} content={content} />;
 
   if (slug?.length === 3) return <PostPage slug={slug} content={content} />;
 
@@ -37,17 +37,17 @@ export default DynamicPage;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const {
-    pathToContentPage,
-    pathToSectionPage,
-    pathToCategoryPage,
+    pathToContentResults,
+    pathToSectionResults,
+    pathToCategoryResults,
     pathToPostPage,
   }: any = getDynamicPagePaths();
 
   return {
     paths: [
-      ...pathToContentPage,
-      ...pathToSectionPage,
-      ...pathToCategoryPage,
+      ...pathToContentResults,
+      ...pathToSectionResults,
+      ...pathToCategoryResults,
       ...pathToPostPage,
     ],
     fallback: false,

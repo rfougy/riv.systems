@@ -10,10 +10,10 @@ import {
   FilterAndGridContainer,
   FilterContainer,
   PageTitle,
-} from "../../../styles/Layouts.styled";
+} from "../Results.styled";
 import PageHead from "../../head/PageHead";
 
-const SectionPage: React.FC<{
+const SectionResults: React.FC<{
   section: sectionType | string;
   content: any;
 }> = ({ section, content }) => {
@@ -106,4 +106,4 @@ const SectionPage: React.FC<{
   );
 };
 
-export default SectionPage;
+export default SectionResults;

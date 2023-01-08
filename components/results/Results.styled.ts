@@ -17,7 +17,7 @@ export const FilterAndGridContainer = styled.div`
   }
 `;
 
-export const CategoryPageContainer = styled.div`
+export const CategoryResultsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3rem;

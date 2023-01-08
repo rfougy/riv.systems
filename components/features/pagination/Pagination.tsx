@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+
 import ArrowIcon from "../../icons/ArrowIcon";
+
 import { Button, Container, PageNav, PageNumber } from "./Pagination.styled";
 
 const Pagination: React.FC<{

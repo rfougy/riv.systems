@@ -1,19 +1,22 @@
 import { useEffect, useState } from "react";
-import { sectionType } from "../../../types/sectionType";
-import PostGrid from "../../posts/grid/PostGrid";
-import ICategoryObj from "../../../interfaces/ICategoryObj";
+
 import FilterMenu from "../../features/filter/FilterMenu";
+import PageHead from "../../head/PageHead";
 import Pagination from "../../features/pagination/Pagination";
+import PostGrid from "../../posts/grid/PostGrid";
 
 import { capitalizeFirstChar } from "../../../utils";
+
+import { sectionType } from "../../../types/sectionType";
+import ICategoryObj from "../../../interfaces/ICategoryObj";
+
 import {
   FilterAndGridContainer,
   FilterContainer,
   PageTitle,
-} from "../../../styles/Layouts.styled";
-import PageHead from "../../head/PageHead";
+} from "../Results.styled";
 
-const SectionPage: React.FC<{
+const SectionResults: React.FC<{
   section: sectionType | string;
   content: any;
 }> = ({ section, content }) => {
@@ -106,4 +109,4 @@ const SectionPage: React.FC<{
   );
 };
 
-export default SectionPage;
+export default SectionResults;

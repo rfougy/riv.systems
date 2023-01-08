@@ -1,14 +1,14 @@
 import { useState } from "react";
+
 import Pagination from "../../features/pagination/Pagination";
 import PostGrid from "../../posts/grid/PostGrid";
-import { capitalizeFirstChar } from "../../../utils";
-import {
-  CategoryPageContainer,
-  PageTitle,
-} from "../../../styles/Layouts.styled";
 import PageHead from "../../head/PageHead";
 
-const CategoryPage: React.FC<{
+import { capitalizeFirstChar } from "../../../utils";
+
+import { CategoryResultsContainer, PageTitle } from "../Results.styled";
+
+const CategoryResults: React.FC<{
   category: string;
   content: any;
 }> = ({ category, content }) => {
@@ -22,7 +22,7 @@ const CategoryPage: React.FC<{
         title={`Category: ${categoryAsTitle}`}
         description={`View all content related to ${categoryAsTitle} in RIV.SYSTEMS.`}
       />
-      <CategoryPageContainer>
+      <CategoryResultsContainer>
         <PageTitle>Category: {categoryAsTitle}</PageTitle>
         <section>
           <PostGrid content={renderedPostCards} />
@@ -33,9 +33,9 @@ const CategoryPage: React.FC<{
             totalPostCards={content.length}
           />
         </section>
-      </CategoryPageContainer>
+      </CategoryResultsContainer>
     </>
   );
 };
 
-export default CategoryPage;
+export default CategoryResults;

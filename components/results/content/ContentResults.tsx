@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
+
+import FilterMenu from "../../features/filter/FilterMenu";
+import PageHead from "../../head/PageHead";
+import Pagination from "../../features/pagination/Pagination";
 import PostGrid from "../../posts/grid/PostGrid";
+
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 import ISectionObj from "../../../interfaces/ISectionObj";
-import FilterMenu from "../../features/filter/FilterMenu";
-import Pagination from "../../features/pagination/Pagination";
+
 import {
   FilterAndGridContainer,
   FilterContainer,
   PageTitle,
-} from "../../../styles/Layouts.styled";
-import PageHead from "../../head/PageHead";
+} from "../Results.styled";
 
-const ContentPage: React.FC<{
+const ContentResults: React.FC<{
   content: any;
 }> = ({ content }) => {
   const [sectionFilters, setSectionFilters] = useState<ISectionObj[]>([]);
@@ -145,4 +148,4 @@ const ContentPage: React.FC<{
   );
 };
 
-export default ContentPage;
+export default ContentResults;

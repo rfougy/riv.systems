@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+
 import { useDisplayDotsCoordsContext } from "../../../context/DisplayDotsCoordsContext";
+
 import { Dot } from "./DotCell.styled";
 
 const DotCell: React.FC<{ coord: number[] }> = ({ coord }) => {

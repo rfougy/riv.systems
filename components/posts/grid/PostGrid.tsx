@@ -1,4 +1,5 @@
 import PostCard from "../card/PostCard";
+
 import { Grid, GridItem } from "./PostGrid.styled";
 
 const PostGrid: React.FC<{

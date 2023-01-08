@@ -1,3 +1,5 @@
+import matter from "gray-matter";
+
 import {
   getAbsolutePath,
   getCategories,
@@ -6,7 +8,6 @@ import {
   getFileNamesInDirectory,
 } from "../cms/getCmsContent";
 
-import matter from "gray-matter";
 import { ICmsCategory } from "../../interfaces/lCmsCategories";
 
 export function sortPostsByDate(posts: any) {

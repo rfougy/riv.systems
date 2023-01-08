@@ -1,4 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
+
+import { capitalizeFirstChar, dateToStr } from "../../../utils";
+import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
+
+import ArrowIcon from "../../icons/ArrowIcon";
+
 import {
   Container,
   Info,
@@ -7,10 +14,6 @@ import {
   Text,
   Title,
 } from "./PostCard.styled";
-import Image from "next/image";
-import { capitalizeFirstChar, dateToStr } from "../../../utils";
-import ArrowIcon from "../../icons/ArrowIcon";
-import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
 
 const PostCard: React.FC<{
   path: string;

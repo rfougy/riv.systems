@@ -1,4 +1,5 @@
 import ISocials from "../../interfaces/ISocials";
+
 import { Footer as Foot, SocialsList, SocialsLink } from "./Footer.styled";
 
 const socials: ISocials[] = [

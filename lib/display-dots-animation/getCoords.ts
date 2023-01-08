@@ -1,8 +1,10 @@
-import { displayDotsDictionary } from "../../dictionaries/displayDotsDictionary";
-import IAllCoords from "../../interfaces/IAllCoords";
-import "../../ext/string.extensions";
-import { structuredClone } from "../../utils";
 import _ from "lodash";
+import "../../ext/string.extensions";
+
+import { displayDotsDictionary } from "../../dictionaries/displayDotsDictionary";
+import { structuredClone } from "../../utils";
+
+import IAllCoords from "../../interfaces/IAllCoords";
 
 let charStartingXCoord: number = 0;
 

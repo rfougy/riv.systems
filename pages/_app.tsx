@@ -16,7 +16,6 @@ import "@fontsource/roboto-mono/700.css";
 import { NextRouter, useRouter } from "next/router";
 import { IAnnouncement } from "../interfaces/IAnnouncement";
 import { ITheme } from "../interfaces/ITheme";
-import Head from "next/head";
 import PwaHead from "../components/head/PwaHead";
 import Favicon from "../components/head/Favicon";
 

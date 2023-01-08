@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { sectionType } from "../../../types/sectionType";
 import PostGrid from "../../posts/grid/PostGrid";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
-import ISectionObj from "../../../interfaces/ISectionObj";
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
 

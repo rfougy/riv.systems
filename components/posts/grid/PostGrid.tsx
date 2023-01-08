@@ -1,5 +1,3 @@
-import IPost from "../../../interfaces/IPost";
-import { sectionType } from "../../../types/sectionType";
 import PostCard from "../card/PostCard";
 import { Grid, GridItem } from "./PostGrid.styled";
 

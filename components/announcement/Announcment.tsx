@@ -1,8 +1,14 @@
 import closeIconDark from "../../public/assets/close-icon-dark.svg";
 import closeIconLight from "../../public/assets/close-icon-light.svg";
 import Image from "next/image";
+import { default as NextLink } from "next/link";
 
-import { CloseIconContainer, Container, Text } from "./Announcement.styled";
+import {
+  CloseIconContainer,
+  Container,
+  Link,
+  Text,
+} from "./Announcement.styled";
 import { IAnnouncement } from "../../interfaces/IAnnouncement";
 import { ITheme } from "../../interfaces/ITheme";
 import { dateToNumericStr } from "../../utils/dateToNumericStr";
@@ -38,7 +44,14 @@ const Announcement: React.FC<{
         />
       </CloseIconContainer>
       <Text>
-        Latest Update {convertedDate}: {announcement.text}
+        Latest Update {convertedDate}: {announcement.text}{" "}
+        {announcement.link && (
+          <span>
+            <NextLink href={announcement.link} passHref>
+              <Link>Click here.</Link>
+            </NextLink>
+          </span>
+        )}
       </Text>
     </Container>
   );

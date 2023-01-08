@@ -20,8 +20,16 @@ export const CloseIconContainer = styled.button`
 
 export const Text = styled.p`
   color: ${(props: any) => props.theme.secondary};
+  cursor: crosshair;
   font-weight: 500;
   margin: auto;
   padding-left: 0.75rem;
   text-align: center;
+`;
+
+export const Link = styled.a`
+  color: ${(props: any) => props.theme.secondary};
+  cursor: cell;
+  font-weight: 500;
+  text-decoration: underline;
 `;

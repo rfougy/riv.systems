@@ -22,6 +22,7 @@ export const Text = styled.p`
   color: ${(props: any) => props.theme.secondary};
   cursor: crosshair;
   font-weight: 500;
+  font-size: 0.75rem;
   margin: auto;
   padding-left: 0.75rem;
   text-align: center;

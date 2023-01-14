@@ -13,6 +13,7 @@ import {
 } from "../../components/results";
 
 import IPost from "../../interfaces/IPost";
+import { getMetaTagInputs } from "../../lib/dynamic-pages/getMetaTagInputs";
 
 import { getContentByDynamicPage } from "../../lib/dynamic-pages/getContentByDynamicPage";
 import { getDynamicPagePaths } from "../../lib/dynamic-pages/getDynamicPagePaths";
@@ -61,6 +62,8 @@ export const getStaticProps: GetStaticProps = async ({
   const slug: string | string[] | undefined = params?.slug;
   const content: IPost[][] | string[] | string | undefined =
     getContentByDynamicPage(slug);
+
+  const metaTagInputs = getMetaTagInputs(content, slug);
 
   return {
     props: {

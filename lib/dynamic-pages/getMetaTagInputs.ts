@@ -46,13 +46,10 @@ export function getMetaTagInputs(
   switch (slug?.length) {
     case 1:
       return sectionResultsPageMetaTagInputs(content, slug);
-      break;
     case 2:
       return categoryResultsPageMetaTagInputs(content, slug);
-      break;
     case 3:
       return postPageMetaTagInputs(content);
-      break;
     default:
       return contentResultsPageMetaTagInputs(content);
   }

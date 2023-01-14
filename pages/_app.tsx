@@ -9,6 +9,7 @@ import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import PwaHead from "../components/head/PwaHead";
 import Favicon from "../components/head/Favicon";
+import PageHead from "../components/head/PageHead";
 
 import { IAnnouncement } from "../interfaces/IAnnouncement";
 import { ITheme } from "../interfaces/ITheme";
@@ -131,6 +132,7 @@ const App = (props: any) => {
     <>
       <PwaHead />
       <Favicon />
+      <PageHead {...props.metaTagInputs} />
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
         {announcementIsActive && (

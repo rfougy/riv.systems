@@ -69,6 +69,7 @@ export const getStaticProps: GetStaticProps = async ({
     props: {
       slug: params?.slug || null,
       content: content,
+      metaTagInputs: metaTagInputs,
     },
   };
 };

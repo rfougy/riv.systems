@@ -132,7 +132,7 @@ const App = (props: any) => {
     <>
       {/* description: references metaTagInputs via pre-rendering methods */}
       {/* @ts-ignore */}
-      <PageHead {...pageProps.metaTagInputs} />
+      {/* <PageHead {...pageProps.metaTagInputs} /> */}
       <PwaHead />
       <Favicon />
       <ThemeProvider theme={currTheme}>

@@ -7,6 +7,7 @@ import Link from "next/link";
 
 import DisplayDotsCoordsProvider from "../components/context/DisplayDotsCoordsContext";
 import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
+import PageHead from "../components/head/PageHead";
 
 import {
   Container,
@@ -15,9 +16,10 @@ import {
   Button,
 } from "../styles/pages/Home.styled";
 
-const Home: NextPage = () => {
+const Home: NextPage<{ metaTagInputs: any }> = ({ metaTagInputs }) => {
   return (
     <>
+      <PageHead {...metaTagInputs} />
       <DisplayDotsCoordsProvider>
         <Container>
           <Description>Hi, my name is Riviere, welcome to:</Description>

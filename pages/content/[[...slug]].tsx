@@ -17,20 +17,44 @@ import { getMetaTagInputs } from "../../lib/dynamic-pages/getMetaTagInputs";
 
 import { getContentByDynamicPage } from "../../lib/dynamic-pages/getContentByDynamicPage";
 import { getDynamicPagePaths } from "../../lib/dynamic-pages/getDynamicPagePaths";
+import PageHead from "../../components/head/PageHead";
 
-const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
-  slug,
-  content,
-}) => {
-  if (!slug) return <ContentResults content={content} />;
+const DynamicPage: NextPage<{
+  slug: string;
+  content?: string;
+  metaTagInputs: any;
+}> = ({ slug, content, metaTagInputs }) => {
+  if (!slug)
+    return (
+      <>
+        <PageHead {...metaTagInputs} />
+        <ContentResults content={content} />
+      </>
+    );
 
   if (slug?.length === 1)
-    return <SectionResults section={slug[0]} content={content} />;
+    return (
+      <>
+        <PageHead {...metaTagInputs} />
+        <SectionResults section={slug[0]} content={content} />
+      </>
+    );
 
   if (slug?.length === 2)
-    return <CategoryResults category={slug[1]} content={content} />;
+    return (
+      <>
+        <PageHead {...metaTagInputs} />
+        <CategoryResults category={slug[1]} content={content} />
+      </>
+    );
 
-  if (slug?.length === 3) return <PostPage slug={slug} content={content} />;
+  if (slug?.length === 3)
+    return (
+      <>
+        <PageHead {...metaTagInputs} />
+        <PostPage slug={slug} content={content} />
+      </>
+    );
 
   return null;
 };

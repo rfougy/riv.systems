@@ -27,6 +27,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   const url: string = "https://riv.systems" + asPath;
   const defaultImage: string = "https://i.imgur.com/dk7mgAz.png"; // riv.systems logo
+  // @ts-ignore
   const { title, description, image, isHomePage } = pageProps.metaTagInputs;
 
   const [currTheme, setTheme] = useState<ITheme>(lightTheme);

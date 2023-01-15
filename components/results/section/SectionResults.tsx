@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 import FilterMenu from "../../features/filter/FilterMenu";
-import PageHead from "../../head/PageHead";
 import Pagination from "../../features/pagination/Pagination";
 import PostGrid from "../../posts/grid/PostGrid";
 
@@ -81,31 +80,25 @@ const SectionResults: React.FC<{
   }, [categoryFilters, content]);
 
   return (
-    <>
-      <PageHead
-        title={sectionAsTitle}
-        description={`View all content related to ${sectionAsTitle} in RIV.SYSTEMS.`}
-      />
-      <FilterAndGridContainer>
-        <FilterContainer>
-          <PageTitle>{sectionAsTitle}</PageTitle>
-          <FilterMenu
-            categories={categories}
-            categoryFilters={categoryFilters}
-            setCategoryFilters={setCategoryFilters}
-          />
-        </FilterContainer>
-        <section>
-          <PostGrid content={renderedPostCards} />
-          <Pagination
-            contentToPaginate={filteredContent}
-            paginationResetDeps={[categoryFilters, filteredContent, content]}
-            setRenderedPostCards={setRenderedPostCards}
-            totalPostCards={filteredContent.length}
-          />
-        </section>
-      </FilterAndGridContainer>
-    </>
+    <FilterAndGridContainer>
+      <FilterContainer>
+        <PageTitle>{sectionAsTitle}</PageTitle>
+        <FilterMenu
+          categories={categories}
+          categoryFilters={categoryFilters}
+          setCategoryFilters={setCategoryFilters}
+        />
+      </FilterContainer>
+      <section>
+        <PostGrid content={renderedPostCards} />
+        <Pagination
+          contentToPaginate={filteredContent}
+          paginationResetDeps={[categoryFilters, filteredContent, content]}
+          setRenderedPostCards={setRenderedPostCards}
+          totalPostCards={filteredContent.length}
+        />
+      </section>
+    </FilterAndGridContainer>
   );
 };
 

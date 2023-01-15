@@ -9,6 +9,7 @@ import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import PwaHead from "../components/head/PwaHead";
 import Favicon from "../components/head/Favicon";
+import PageHead from "../components/head/PageHead";
 
 import { IAnnouncement } from "../interfaces/IAnnouncement";
 import { ITheme } from "../interfaces/ITheme";
@@ -129,6 +130,9 @@ const App = (props: any) => {
 
   return (
     <>
+      {/* description: references metaTagInputs via pre-rendering methods */}
+      {/* @ts-ignore */}
+      <PageHead {...pageProps.metaTagInputs} />
       <PwaHead />
       <Favicon />
       <ThemeProvider theme={currTheme}>

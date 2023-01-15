@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 import FilterMenu from "../../features/filter/FilterMenu";
-import PageHead from "../../head/PageHead";
 import Pagination from "../../features/pagination/Pagination";
 import PostGrid from "../../posts/grid/PostGrid";
 
@@ -110,41 +109,33 @@ const ContentResults: React.FC<{
   }, [categoryFilters, sectionFilters, content]);
 
   return (
-    <>
-      <PageHead
-        title={"Content"}
-        description={
-          "Browse all blog posts in RIV.SYSTEMS, from professional work to journal entries and miscellaneous content."
-        }
-      />
-      <FilterAndGridContainer>
-        <FilterContainer>
-          <PageTitle>Content</PageTitle>
-          <FilterMenu
-            sections={sections}
-            categories={categories}
-            sectionFilters={sectionFilters}
-            categoryFilters={categoryFilters}
-            setSectionFilters={setSectionFilters}
-            setCategoryFilters={setCategoryFilters}
-          />
-        </FilterContainer>
-        <section>
-          <PostGrid content={renderedPostCards} />
-          <Pagination
-            contentToPaginate={filteredContent}
-            paginationResetDeps={[
-              categoryFilters,
-              sectionFilters,
-              filteredContent,
-              content,
-            ]}
-            setRenderedPostCards={setRenderedPostCards}
-            totalPostCards={filteredContent.length}
-          />
-        </section>
-      </FilterAndGridContainer>
-    </>
+    <FilterAndGridContainer>
+      <FilterContainer>
+        <PageTitle>Content</PageTitle>
+        <FilterMenu
+          sections={sections}
+          categories={categories}
+          sectionFilters={sectionFilters}
+          categoryFilters={categoryFilters}
+          setSectionFilters={setSectionFilters}
+          setCategoryFilters={setCategoryFilters}
+        />
+      </FilterContainer>
+      <section>
+        <PostGrid content={renderedPostCards} />
+        <Pagination
+          contentToPaginate={filteredContent}
+          paginationResetDeps={[
+            categoryFilters,
+            sectionFilters,
+            filteredContent,
+            content,
+          ]}
+          setRenderedPostCards={setRenderedPostCards}
+          totalPostCards={filteredContent.length}
+        />
+      </section>
+    </FilterAndGridContainer>
   );
 };
 

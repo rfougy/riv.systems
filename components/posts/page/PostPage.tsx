@@ -5,7 +5,6 @@ import Markdown from "markdown-to-jsx";
 import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
 import { capitalizeFirstChar, dateToStr } from "../../../utils";
 
-import PageHead from "../../head/PageHead";
 import NextImage from "../../markdown-to-jsx/NextImage";
 
 import ArrowIcon from "../../icons/ArrowIcon";
@@ -33,64 +32,60 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
   const dateAsStr: string = dateToStr(datePublished);
 
   return content ? (
-    <>
-      <PageHead title={title} description={excerpt} image={coverImage} />
-
-      <Container>
-        <Header>
-          <Metadata>
-            <Inline>
-              <Link href={`/content/${section}`}>
-                {capitalizeFirstChar(section)}
-              </Link>
-            </Inline>
-            <Inline>
-              <ArrowIcon aria-label="Arrow Icon" />
-            </Inline>
-            <Inline>
-              <Link href={`/content/${section}/${category}`}>
-                {capitalizeFirstChar(category)}
-              </Link>
-            </Inline>
-            <Li>
-              <p>{dateAsStr}</p>
-            </Li>
-          </Metadata>
-          <Title>{title}</Title>
-        </Header>
-        {section !== "refs" && (
-          <CoverImage>
-            <Image
-              priority
-              src={coverImage}
-              alt={`Cover image for the blog post titled ${title}`}
-              width={800}
-              height={400}
-              objectFit="cover"
-              style={{ borderRadius: "2vh" }}
-            />
-          </CoverImage>
-        )}
-        <Content>
-          <Markdown
-            options={{
-              wrapper: "article",
-              forceBlock: true,
-              overrides: {
-                img: {
-                  component: NextImage,
-                },
-                Image: {
-                  component: NextImage,
-                },
+    <Container>
+      <Header>
+        <Metadata>
+          <Inline>
+            <Link href={`/content/${section}`}>
+              {capitalizeFirstChar(section)}
+            </Link>
+          </Inline>
+          <Inline>
+            <ArrowIcon aria-label="Arrow Icon" />
+          </Inline>
+          <Inline>
+            <Link href={`/content/${section}/${category}`}>
+              {capitalizeFirstChar(category)}
+            </Link>
+          </Inline>
+          <Li>
+            <p>{dateAsStr}</p>
+          </Li>
+        </Metadata>
+        <Title>{title}</Title>
+      </Header>
+      {section !== "refs" && (
+        <CoverImage>
+          <Image
+            priority
+            src={coverImage}
+            alt={`Cover image for the blog post titled ${title}`}
+            width={800}
+            height={400}
+            objectFit="cover"
+            style={{ borderRadius: "2vh" }}
+          />
+        </CoverImage>
+      )}
+      <Content>
+        <Markdown
+          options={{
+            wrapper: "article",
+            forceBlock: true,
+            overrides: {
+              img: {
+                component: NextImage,
               },
-            }}
-          >
-            {postContent}
-          </Markdown>
-        </Content>
-      </Container>
-    </>
+              Image: {
+                component: NextImage,
+              },
+            },
+          }}
+        >
+          {postContent}
+        </Markdown>
+      </Content>
+    </Container>
   ) : (
     <div>Error: No content available...</div>
   );

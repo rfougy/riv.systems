@@ -15,6 +15,12 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV !== "development",
   },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback.fs = false;
+    }
+    return config;
+  },
 };
 
 module.exports = withPWA(nextConfig);

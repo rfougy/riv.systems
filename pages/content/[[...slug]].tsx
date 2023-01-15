@@ -1,9 +1,4 @@
-import type {
-  GetServerSideProps,
-  GetServerSidePropsContext,
-  GetStaticPaths,
-  NextPage,
-} from "next";
+import type { NextPageContext } from "next";
 
 import {
   ContentResults,
@@ -14,47 +9,29 @@ import {
 
 import IPost from "../../interfaces/IPost";
 import { getMetaTagInputs } from "../../lib/dynamic-pages/getMetaTagInputs";
-
 import { getContentByDynamicPage } from "../../lib/dynamic-pages/getContentByDynamicPage";
-import { getDynamicPagePaths } from "../../lib/dynamic-pages/getDynamicPagePaths";
-import PageHead from "../../components/head/PageHead";
+import { useEffect } from "react";
 
-const DynamicPage: NextPage<{
+const DynamicPage = ({
+  slug,
+  content,
+  isServer,
+}: {
   slug: string;
   content?: string;
-  metaTagInputs: any;
-}> = ({ slug, content, metaTagInputs }) => {
-  if (!slug)
-    return (
-      <>
-        <PageHead {...metaTagInputs} />
-        <ContentResults content={content} />
-      </>
-    );
+  isServer: boolean;
+}) => {
+  useEffect(() => console.log(isServer));
+
+  if (!slug) return <ContentResults content={content} />;
 
   if (slug?.length === 1)
-    return (
-      <>
-        <PageHead {...metaTagInputs} />
-        <SectionResults section={slug[0]} content={content} />
-      </>
-    );
+    return <SectionResults section={slug[0]} content={content} />;
 
   if (slug?.length === 2)
-    return (
-      <>
-        <PageHead {...metaTagInputs} />
-        <CategoryResults category={slug[1]} content={content} />
-      </>
-    );
+    return <CategoryResults category={slug[1]} content={content} />;
 
-  if (slug?.length === 3)
-    return (
-      <>
-        <PageHead {...metaTagInputs} />
-        <PostPage slug={slug} content={content} />
-      </>
-    );
+  if (slug?.length === 3) return <PostPage slug={slug} content={content} />;
 
   return null;
 };
@@ -80,29 +57,20 @@ export default DynamicPage;
 //   };
 // };
 
-export const getServerSideProps: GetServerSideProps = async ({
-  params,
-  res,
-}: GetServerSidePropsContext) => {
-  const slug: string | string[] | undefined = params?.slug;
+DynamicPage.getInitialProps = async (context: NextPageContext) => {
+  const { query, req } = context;
+  console.log(query.slug);
+
+  const slug: string | string[] | undefined = query.slug;
   const content: IPost[][] | string[] | string | undefined =
-    getContentByDynamicPage(slug);
+    await getContentByDynamicPage(slug);
 
   const metaTagInputs = getMetaTagInputs(content, slug);
 
-  /**
-   * @see https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props#caching-with-server-side-rendering-ssr
-   */
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=10, stale-while-revalidate=59"
-  );
-
   return {
-    props: {
-      slug: params?.slug || null,
-      content: content,
-      metaTagInputs: metaTagInputs,
-    },
+    slug: query.slug || null,
+    content: content,
+    metaTagInputs: metaTagInputs,
+    isServer: !!req,
   };
 };

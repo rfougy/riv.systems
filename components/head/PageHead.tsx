@@ -8,7 +8,6 @@ const PageHead: React.FC<{
   image?: string;
   isHomePage?: boolean;
 }> = ({ title, description, image, isHomePage }) => {
-  useEffect(() => console.log(image));
 
   const { asPath }: NextRouter = useRouter();
   const url: string = "https://riv.systems" + asPath;

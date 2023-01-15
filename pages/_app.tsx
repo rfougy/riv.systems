@@ -20,10 +20,14 @@ import { lightTheme, darkTheme } from "../styles/Themes";
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
+import Head from "next/head";
 
-const App = (props: any) => {
-  const { Component, pageProps }: AppProps = props;
-  const { route }: NextRouter = useRouter();
+const App = ({ Component, pageProps }: AppProps) => {
+  const { route, asPath }: NextRouter = useRouter();
+
+  const url: string = "https://riv.systems" + asPath;
+  const defaultImage: string = "https://i.imgur.com/dk7mgAz.png"; // riv.systems logo
+  const { title, description, image, isHomePage } = pageProps.metaTagInputs;
 
   const [currTheme, setTheme] = useState<ITheme>(lightTheme);
   const [announcementIsActive, setAnnouncementIsActive] =
@@ -132,9 +136,45 @@ const App = (props: any) => {
     <>
       {/* description: references metaTagInputs via pre-rendering methods */}
       {/* @ts-ignore */}
-      <PageHead {...pageProps.metaTagInputs} />
+      {/* <PageHead {...pageProps.metaTagInputs} /> */}
       <PwaHead />
       <Favicon />
+      <Head>
+        <title>{isHomePage ? title : `${title} | RIV.SYSTEMS`}</title>
+        <meta name="description" key="description" content={description} />
+
+        <meta
+          property="og:site_name"
+          key="og-site-name"
+          content="RIV.SYSTEMS"
+        />
+        <meta
+          property="og:title"
+          key="og-title"
+          content={`${title} | RIV.SYSTEMS`}
+        />
+        <meta
+          property="og:description"
+          key="og-description"
+          content={description}
+        />
+        <meta
+          property="og:type"
+          key="og-type"
+          content={image ? "article" : "website"}
+        />
+        <meta
+          property="og:image"
+          key="og-image"
+          content={image ? image : defaultImage}
+        />
+        <meta property="og:url" content={url} key="og-url" />
+        <meta
+          name="twitter:card"
+          key="og-twitter-card"
+          content="summary_large_image"
+        />
+      </Head>
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
         {announcementIsActive && (

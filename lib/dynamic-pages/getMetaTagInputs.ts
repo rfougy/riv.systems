@@ -34,9 +34,13 @@ export function sectionResultsPageMetaTagInputs(
 
 export function postPageMetaTagInputs(content: any) {
   const { frontmatter }: any = content;
-  const { coverImage, excerpt, title }: IPostFrontMatter = frontmatter;
+  const {
+    excerpt: description,
+    coverImage: image,
+    title,
+  }: IPostFrontMatter = frontmatter;
 
-  return { coverImage, excerpt, title };
+  return { description, image, title };
 }
 
 export function getMetaTagInputs(

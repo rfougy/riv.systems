@@ -1,7 +1,7 @@
 import type {
+  GetServerSideProps,
+  GetServerSidePropsContext,
   GetStaticPaths,
-  GetStaticProps,
-  GetStaticPropsContext,
   NextPage,
 } from "next";
 
@@ -56,14 +56,23 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({
+export const getServerSideProps: GetServerSideProps = async ({
   params,
-}: GetStaticPropsContext) => {
+  res,
+}: GetServerSidePropsContext) => {
   const slug: string | string[] | undefined = params?.slug;
   const content: IPost[][] | string[] | string | undefined =
     getContentByDynamicPage(slug);
 
   const metaTagInputs = getMetaTagInputs(content, slug);
+
+  /**
+   * @see https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props#caching-with-server-side-rendering-ssr
+   */
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=10, stale-while-revalidate=59"
+  );
 
   return {
     props: {

@@ -1,4 +1,8 @@
-import type { GetStaticProps, NextPage } from "next";
+import type {
+  GetServerSideProps,
+  GetServerSidePropsContext,
+  NextPage,
+} from "next";
 import Link from "next/link";
 
 import DisplayDotsCoordsProvider from "../components/context/DisplayDotsCoordsContext";
@@ -35,7 +39,17 @@ const Home: NextPage = () => {
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async ({
+  res,
+}: GetServerSidePropsContext) => {
+  /**
+   * @see https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props#caching-with-server-side-rendering-ssr
+   */
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=10, stale-while-revalidate=59"
+  );
+
   return {
     props: {
       metaTagInputs: {

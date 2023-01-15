@@ -37,24 +37,24 @@ const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
 
 export default DynamicPage;
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const {
-    pathToContentResults,
-    pathToSectionResults,
-    pathToCategoryResults,
-    pathToPostPage,
-  }: any = getDynamicPagePaths();
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const {
+//     pathToContentResults,
+//     pathToSectionResults,
+//     pathToCategoryResults,
+//     pathToPostPage,
+//   }: any = getDynamicPagePaths();
 
-  return {
-    paths: [
-      ...pathToContentResults,
-      ...pathToSectionResults,
-      ...pathToCategoryResults,
-      ...pathToPostPage,
-    ],
-    fallback: false,
-  };
-};
+//   return {
+//     paths: [
+//       ...pathToContentResults,
+//       ...pathToSectionResults,
+//       ...pathToCategoryResults,
+//       ...pathToPostPage,
+//     ],
+//     fallback: false,
+//   };
+// };
 
 export const getServerSideProps: GetServerSideProps = async ({
   params,

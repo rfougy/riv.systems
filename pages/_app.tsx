@@ -134,7 +134,6 @@ const App = (props: any) => {
 
   return (
     <>
-      {/* description: references metaTagInputs via pre-rendering methods */}
       {/* @ts-ignore */}
       <PageHead {...pageProps.metaTagInputs} />
       <PwaHead />

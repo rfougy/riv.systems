@@ -10,8 +10,8 @@ export const ContentWrap = styled.div`
   flex-direction: column;
   flex-wrap: no-wrap;
   align-items: center;
-  justify-content: ${({ isHomePage }: { isHomePage: boolean }) =>
-    isHomePage ? "center" : "start"};
+  justify-content: ${({ isDisplayDotsPage }: { isDisplayDotsPage: boolean }) =>
+    isDisplayDotsPage ? "center" : "start"};
 
   padding: 2rem 0 4rem 0;
 

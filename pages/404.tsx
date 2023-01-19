@@ -1,31 +1,25 @@
-import type { GetStaticProps, NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
-
 import DisplayDotsCoordsProvider from "../components/context/DisplayDotsCoordsContext";
 import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
-
 import {
+  Button,
   Container,
   Description,
   Margin,
-  Button,
 } from "../styles/pages/DisplayDotsPage.styled";
 
-const Home: NextPage = () => {
+const Custom404: NextPage = () => {
   return (
     <>
       <DisplayDotsCoordsProvider>
         <Container>
-          <Description>Hi, my name is Riviere, welcome to:</Description>
           <Margin>
-            <DisplayDotsAnime text={"RIV.SYSTEMS"} />
+            <DisplayDotsAnime text={"404"} />
           </Margin>
-          <Description>
-            I created this website to document <br />
-            my projects, experiences and thoughts.
-          </Description>
+          <Description>404 Error: Page not found.</Description>
           <Link href={`/content`} passHref>
-            <Button>EXPLORE SYSTEMS</Button>
+            <Button>RETURN TO SYSTEMS</Button>
           </Link>
         </Container>
       </DisplayDotsCoordsProvider>
@@ -33,16 +27,14 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Custom404;
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       metaTagInputs: {
-        title: "RIV.SYSTEMS: Fashion, Web Development, Life Experiences",
-        description:
-          "Welcome to RIV.SYSTEMS, a personal portfolio and blog website featuring content on fashion, web development, design and more.",
-        isHomePage: true,
+        title: "404 Error",
+        description: "404 Error: Page not found.",
       },
       isDisplayDotsPage: true,
     },

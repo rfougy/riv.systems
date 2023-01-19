@@ -1,11 +1,14 @@
 import styled from "@emotion/styled";
 
+/**
+ * @description styled components are used for: Home Page, 404 Page, and 500 Page.
+ */
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // min-height: 70vh;
 `;
 
 export const Description = styled.p`

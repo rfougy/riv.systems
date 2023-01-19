@@ -1,31 +1,25 @@
-import type { GetStaticProps, NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
-
 import DisplayDotsCoordsProvider from "../components/context/DisplayDotsCoordsContext";
 import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
-
 import {
+  Button,
   Container,
   Description,
   Margin,
-  Button,
 } from "../styles/pages/DisplayDotsPage.styled";
 
-const Home: NextPage = () => {
+const Custom500: NextPage = () => {
   return (
     <>
       <DisplayDotsCoordsProvider>
         <Container>
-          <Description>Hi, my name is Riviere, welcome to:</Description>
           <Margin>
-            <DisplayDotsAnime text={"RIV.SYSTEMS"} />
+            <DisplayDotsAnime text={"500"} />
           </Margin>
-          <Description>
-            I created this website to document <br />
-            my projects, experiences and thoughts.
-          </Description>
+          <Description>500 Error: A Server-side error occurred.</Description>
           <Link href={`/content`} passHref>
-            <Button>EXPLORE SYSTEMS</Button>
+            <Button>RETURN TO SYSTEMS</Button>
           </Link>
         </Container>
       </DisplayDotsCoordsProvider>
@@ -33,16 +27,14 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Custom500;
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       metaTagInputs: {
-        title: "RIV.SYSTEMS: Fashion, Web Development, Life Experiences",
-        description:
-          "Welcome to RIV.SYSTEMS, a personal portfolio and blog website featuring content on fashion, web development, design and more.",
-        isHomePage: true,
+        title: "500 Error",
+        description: "500 Error: A Server-side error occurred.",
       },
       isDisplayDotsPage: true,
     },

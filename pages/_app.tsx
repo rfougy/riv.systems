@@ -30,6 +30,10 @@ const App = (props: any) => {
     useState<boolean>(true);
   const [hydrated, setHydrated] = useState<boolean>(false);
 
+  // Home Page, 404 Page, 500 Page
+  // @ts-ignore
+  const isDisplayDotsPage = pageProps.isDisplayDotsPage ? true : false;
+
   const announcement: IAnnouncement = {
     dateCreated: "2022-01-06",
     text: "'Custom Biker Jacket References' post is now online.",
@@ -146,7 +150,7 @@ const App = (props: any) => {
         )}
         <PageContainer>
           <Navbar toggleTheme={toggleTheme} theme={currTheme} />
-          <ContentWrap isHomePage={route === "/"}>
+          <ContentWrap isDisplayDotsPage={isDisplayDotsPage}>
             <Component {...pageProps} />
           </ContentWrap>
           <Footer />

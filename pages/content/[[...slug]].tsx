@@ -17,6 +17,7 @@ import { getMetaTagInputs } from "../../lib/dynamic-pages/getMetaTagInputs";
 
 import { getContentByDynamicPage } from "../../lib/dynamic-pages/getContentByDynamicPage";
 import { getDynamicPagePaths } from "../../lib/dynamic-pages/getDynamicPagePaths";
+import { includePlaceholderImage } from "../../lib/dynamic-pages/includePlaceholderImage";
 
 const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
   slug,
@@ -65,10 +66,12 @@ export const getStaticProps: GetStaticProps = async ({
 
   const metaTagInputs = getMetaTagInputs(content, slug);
 
+  const contentWithPlaceholderImage = includePlaceholderImage(content);
+
   return {
     props: {
       slug: params?.slug || null,
-      content: content,
+      content: contentWithPlaceholderImage,
       metaTagInputs: metaTagInputs,
     },
   };

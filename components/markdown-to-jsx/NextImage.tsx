@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getPlaiceholder } from "plaiceholder";
 
 const NextImage: React.FC<{
   src: string;

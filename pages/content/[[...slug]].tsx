@@ -66,7 +66,7 @@ export const getStaticProps: GetStaticProps = async ({
 
   const metaTagInputs = getMetaTagInputs(content, slug);
 
-  const contentWithPlaceholderImage = includePlaceholderImage(content);
+  const contentWithPlaceholderImage = await includePlaceholderImage(content);
 
   return {
     props: {

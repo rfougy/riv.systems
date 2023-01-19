@@ -25,7 +25,8 @@ const PostCard: React.FC<{
     datePublished,
     category,
     section,
-    coverImage: image,
+    coverImage,
+    placeholderImage,
   }: IPostFrontMatter = frontmatter;
   const dateAsStr: string = dateToStr(datePublished);
 
@@ -33,11 +34,13 @@ const PostCard: React.FC<{
     <Link href={path} passHref>
       <Container>
         <Image
-          src={`${image}`}
+          src={coverImage}
           alt={`Cover image for post titled '${title}'`}
           width={300}
           height={150}
           objectFit="cover"
+          placeholder="blur"
+          blurDataURL={placeholderImage}
         />
         <Text>
           <Title>{title}</Title>

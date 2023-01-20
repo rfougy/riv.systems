@@ -25,8 +25,13 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
   content,
 }) => {
   const { frontmatter, postContent }: any = content;
-  const { title, datePublished, coverImage, excerpt }: IPostFrontMatter =
-    frontmatter;
+  const {
+    title,
+    datePublished,
+    coverImage,
+    excerpt,
+    placeholderImage,
+  }: IPostFrontMatter = frontmatter;
   const section: string = slug[0];
   const category: string = slug[1];
   const dateAsStr: string = dateToStr(datePublished);
@@ -64,6 +69,8 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
             height={400}
             objectFit="cover"
             style={{ borderRadius: "2vh" }}
+            placeholder="blur"
+            blurDataURL={placeholderImage}
           />
         </CoverImage>
       )}

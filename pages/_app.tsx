@@ -35,9 +35,9 @@ const App = (props: any) => {
   const isDisplayDotsPage = pageProps.isDisplayDotsPage ? true : false;
 
   const announcement: IAnnouncement = {
-    dateCreated: "2022-01-06",
-    text: "'Custom Biker Jacket References' post is now online.",
-    link: "/content/refs/misc/2023_01_06_custom-biker-jacket-references",
+    dateCreated: "2022-01-20",
+    text: "'Mei Archive Test Shots Editorial' post is now online!",
+    link: "/content/works/fashion/2020-08-20_mei-archive-archive-fashion-editorial",
   };
 
   const globalColors = css`

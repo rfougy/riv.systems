@@ -1,5 +1,4 @@
 import type { AppProps } from "next/app";
-import { NextRouter, useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Global as GlobalTheme, ThemeProvider, css } from "@emotion/react";
 import "../styles/globals.css";
@@ -23,7 +22,6 @@ import "@fontsource/roboto-mono/700.css";
 
 const App = (props: any) => {
   const { Component, pageProps }: AppProps = props;
-  const { route }: NextRouter = useRouter();
 
   const [currTheme, setTheme] = useState<ITheme>(lightTheme);
   const [announcementIsActive, setAnnouncementIsActive] =

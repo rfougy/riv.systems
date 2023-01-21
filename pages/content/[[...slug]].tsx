@@ -1,7 +1,6 @@
 import type {
-  GetStaticPaths,
-  GetStaticProps,
-  GetStaticPropsContext,
+  GetServerSideProps,
+  GetServerSidePropsContext,
   NextPage,
 } from "next";
 
@@ -16,7 +15,6 @@ import IPost from "../../interfaces/IPost";
 import { getMetaTagInputs } from "../../lib/dynamic-pages/getMetaTagInputs";
 
 import { getContentByDynamicPage } from "../../lib/dynamic-pages/getContentByDynamicPage";
-import { getDynamicPagePaths } from "../../lib/dynamic-pages/getDynamicPagePaths";
 import { includePlaceholderImage } from "../../lib/dynamic-pages/includePlaceholderImage";
 
 const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
@@ -38,28 +36,9 @@ const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
 
 export default DynamicPage;
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const {
-    pathToContentResults,
-    pathToSectionResults,
-    pathToCategoryResults,
-    pathToPostPage,
-  }: any = getDynamicPagePaths();
-
-  return {
-    paths: [
-      ...pathToContentResults,
-      ...pathToSectionResults,
-      ...pathToCategoryResults,
-      ...pathToPostPage,
-    ],
-    fallback: false,
-  };
-};
-
-export const getStaticProps: GetStaticProps = async ({
+export const getServerSideProps: GetServerSideProps = async ({
   params,
-}: GetStaticPropsContext) => {
+}: GetServerSidePropsContext) => {
   const slug: string | string[] | undefined = params?.slug;
   const content: IPost[][] | string[] | string | undefined =
     getContentByDynamicPage(slug);

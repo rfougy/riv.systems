@@ -4,7 +4,7 @@ datePublished: "2020-08-20"
 section: works
 category: fashion
 excerpt: Editorial content featuring Mei’s collection of high quality and hard-to-find garments.
-coverImage: https://user-images.githubusercontent.com/77861258/208268870-cb48a2a4-b28d-49ac-a6ba-8d26b1dabe9b.png
+coverImage: https://user-images.githubusercontent.com/77861258/213831808-d75fab61-7769-44ef-ae66-65175d7c3cbd.jpg
 ---
 
 <div>
@@ -15,3 +15,25 @@ In the midst of a hot summer day, the both of us decided to create editorial con
 </div>
 
 <iframe src="https://player.vimeo.com/video/791349582?h=5163db8b41&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="&amp;#039;Test Shots&amp;#039; Archive Fashion Editorial Video"></iframe>
+
+- <Image 
+    src="https://user-images.githubusercontent.com/77861258/213831485-4c6c256a-5588-49ad-93e1-cbaac862d7e9.jpg" 
+    alt="Eagle Li from Mei Archive wearing Walter Van Beirendonck, Carol Christian Poell and Rick Owens" 
+    aspectRatio="4:3"
+  />
+- <Image
+    src="https://user-images.githubusercontent.com/77861258/213831808-d75fab61-7769-44ef-ae66-65175d7c3cbd.jpg"
+    alt="Eagle Li from Mei Archive wearing Walter Van Beirendonck"
+    aspectRatio="4:3"
+  />
+- <Image 
+    src="https://user-images.githubusercontent.com/77861258/213831836-a09f331f-a886-4a29-a548-2e8ef9b59293.png" 
+    alt="Eagle Li from Mei Archive"
+    aspectRatio="4:3"
+  />
+- <Image 
+    src="https://user-images.githubusercontent.com/77861258/213831745-9b7c44d2-8a3b-4a9c-8f5a-3e55247d0232.png" 
+    alt="Eagle Li from Mei Archive wearing Rick Owens"
+    aspectRatio="4:3"
+  />
+

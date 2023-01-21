@@ -28,7 +28,8 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
+        <Head />
+        {/* <Head>
           <title>{metaDataInputs.title}</title>
           <meta
             name="description"
@@ -64,7 +65,7 @@ class MyDocument extends Document {
           />
           <PwaHead />
           <Favicon />
-        </Head>
+        </Head> */}
         <body>
           <Main />
           <NextScript />

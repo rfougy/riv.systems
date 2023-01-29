@@ -45,3 +45,20 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
   alt="Alt Text for Image" 
   aspectRatio="3:4"
 />
+
+**Component: Slideshow...**
+
+<Slideshow>
+<Slide 
+  src="https://user-images.githubusercontent.com/77861258/206950699-8cb4c4ec-b093-460a-a965-6f27ab4f0772.png" 
+  alt="Alt Text for Image" 
+/>
+<Slide 
+  src="https://user-images.githubusercontent.com/77861258/206950699-8cb4c4ec-b093-460a-a965-6f27ab4f0772.png" 
+  alt="Alt Text for Image" 
+/>
+<Slide 
+  src="https://user-images.githubusercontent.com/77861258/206950699-8cb4c4ec-b093-460a-a965-6f27ab4f0772.png" 
+  alt="Alt Text for Image" 
+=/>
+</Slideshow>

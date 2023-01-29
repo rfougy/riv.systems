@@ -1,20 +1,25 @@
 import { useEffect, useState } from "react";
+import { ISlide } from "../../../interfaces/ISlide";
+import { aspectRatio } from "../../../types/aspectRatio";
 import SlideThumbnailList from "./slide-thumbnail-list/SlideThumbnailList";
 import Slide from "./slide/Slide";
 
-const Slideshow: React.FC<{ children: any[] }> = ({ children }) => {
+const Slideshow: React.FC<{ children: any[]; aspectRatio: aspectRatio }> = ({
+  children,
+  aspectRatio = "4:3",
+}) => {
   const [currSlide, setCurrSlide] = useState();
 
-  const slides = children.map((child: any) => {
-    return { src: child.props.src, alt: child.props.alt };
+  const slides: ISlide[] = children.map((child: any) => {
+    return { src: child.props.src, alt: child.props.alt, key: child.props.key };
   });
 
   useEffect(() => console.log("Slideshow props: ", children));
 
   return (
     <>
-      {slides.map((slide: any, index: number) => (
-        <Slide key={index} slide={slide} />
+      {slides.map((slide: ISlide) => (
+        <Slide key={slide.key} slide={slide} aspectRatio={aspectRatio} />
       ))}
     </>
   );

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getWidthHeightFromAspectRatio } from "../../utils/getWidthHeightFromAspectRatio";
 
 const NextImage: React.FC<{
   src: string;
@@ -9,12 +10,7 @@ const NextImage: React.FC<{
   alt = "Photo for blog post in riv.systems",
   aspectRatio = "3:4",
 }) => {
-  const aspectRatioArr: string[] = aspectRatio?.split(":");
-  const ratioWidth: number = parseInt(aspectRatioArr[0]);
-  const ratioHeight: number = parseInt(aspectRatioArr[1]);
-
-  const width: number = 800;
-  const height: number = (width * ratioHeight) / ratioWidth;
+  const { width, height } = getWidthHeightFromAspectRatio(aspectRatio);
 
   return (
     <Image

@@ -24,7 +24,10 @@ export const List = styled.ol`
 export const Navigation = styled.div`
   display: flex;
   position: absolute;
+
   top: 40%;
+  transform: translate(0%, -40%);
+
   flex-wrap: no-wrap;
   justify-content: space-between;
   width: 100%;
@@ -33,4 +36,20 @@ export const Navigation = styled.div`
 
 export const Container = styled.div`
   position: relative;
+`;
+
+export const AltText = styled.p`
+  height: 3.281rem;
+
+  display: inline-block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+`;
+
+export const SubContainer = styled.div`
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
 `;

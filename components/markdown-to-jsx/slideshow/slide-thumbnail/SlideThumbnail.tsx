@@ -3,7 +3,7 @@ import _ from "lodash";
 
 import { ISlide } from "../../../../interfaces/ISlide";
 
-import { Thumbnail } from "./SlideThumbnail.styled";
+import { ListItem, Thumbnail } from "./SlideThumbnail.styled";
 
 const SlideThumbnail: React.FC<{
   currSlide: ISlide;
@@ -14,12 +14,14 @@ const SlideThumbnail: React.FC<{
   const isCurrSlide: boolean = _.isEqual(slide, currSlide);
 
   return (
-    <Thumbnail
-      isCurrSlide={isCurrSlide}
-      onClick={() => setCurrSlideIndex(slideIndex)}
-    >
-      <NextImage aspectRatio={"1:1"} isSlideThumbnail {...slide} />
-    </Thumbnail>
+    <ListItem>
+      <Thumbnail
+        isCurrSlide={isCurrSlide}
+        onClick={() => setCurrSlideIndex(slideIndex)}
+      >
+        <NextImage aspectRatio={"1:1"} isSlideThumbnail {...slide} />
+      </Thumbnail>
+    </ListItem>
   );
 };
 

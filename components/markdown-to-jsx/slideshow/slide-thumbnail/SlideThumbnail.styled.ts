@@ -11,3 +11,7 @@ export const Thumbnail = styled.button`
     opacity: 1;
   }
 `;
+
+export const ListItem = styled.li`
+  all: unset;
+`;

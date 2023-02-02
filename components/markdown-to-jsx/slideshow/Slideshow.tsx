@@ -3,6 +3,7 @@ import { ISlide } from "../../../interfaces/ISlide";
 import { aspectRatio } from "../../../types/aspectRatio";
 import SlideThumbnail from "./slide-thumbnail/SlideThumbnail";
 import SlideDisplay from "./slide-display/SlideDisplay";
+import { Button, Navigation, List, Container } from "./Slideshow.styled";
 
 const Slideshow: React.FC<{ children: any[]; aspectRatio: aspectRatio }> = ({
   children,
@@ -35,15 +36,17 @@ const Slideshow: React.FC<{ children: any[]; aspectRatio: aspectRatio }> = ({
   useEffect(() => setCurrSlide(slides[currSlideIndex]), [currSlideIndex]);
 
   return (
-    <>
-      <button onClick={() => handleNextSlide()}></button>
+    <Container>
       <SlideDisplay
         key={currSlide.key}
         slide={currSlide}
         aspectRatio={aspectRatio}
       />
-      <button onClick={() => handlePrevSlide()}></button>
-      <div>
+      <Navigation>
+        <Button onClick={() => handlePrevSlide()} />
+        <Button onClick={() => handleNextSlide()} />
+      </Navigation>
+      <List>
         {slides.map((slide: ISlide, index: number) => (
           <SlideThumbnail
             key={slide.key}
@@ -53,8 +56,8 @@ const Slideshow: React.FC<{ children: any[]; aspectRatio: aspectRatio }> = ({
             setCurrSlideIndex={setCurrSlideIndex}
           />
         ))}
-      </div>
-    </>
+      </List>
+    </Container>
   );
 };
 

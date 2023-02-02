@@ -3,16 +3,23 @@ import _ from "lodash";
 
 import { ISlide } from "../../../../interfaces/ISlide";
 
-const SlideThumbnail: React.FC<{ slide: ISlide; currSlide: ISlide }> = ({
-  slide,
-  currSlide,
-}) => {
+import { Thumbnail } from "./SlideThumbnail.styled";
+
+const SlideThumbnail: React.FC<{
+  currSlide: ISlide;
+  slide: ISlide;
+  slideIndex: number;
+  setCurrSlideIndex: (arg: number) => void;
+}> = ({ slide, currSlide, slideIndex, setCurrSlideIndex }) => {
   const isCurrSlide: boolean = _.isEqual(slide, currSlide);
 
   return (
-    <div>
-      <NextImage aspectRatio={"1:1"} {...slide} />
-    </div>
+    <Thumbnail
+      isCurrSlide={isCurrSlide}
+      onClick={() => setCurrSlideIndex(slideIndex)}
+    >
+      <NextImage aspectRatio={"1:1"} isSlideThumbnail {...slide} />
+    </Thumbnail>
   );
 };
 

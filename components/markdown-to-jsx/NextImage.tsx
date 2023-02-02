@@ -5,10 +5,12 @@ const NextImage: React.FC<{
   src: string;
   alt?: string | undefined;
   aspectRatio?: "16:9" | "9:16" | "4:3" | "3:4" | "1:1";
+  isSlideThumbnail?: boolean;
 }> = ({
   src,
   alt = "Photo for blog post in riv.systems",
   aspectRatio = "3:4",
+  isSlideThumbnail,
 }) => {
   const { width, height } = getWidthHeightFromAspectRatio(aspectRatio);
 
@@ -19,7 +21,7 @@ const NextImage: React.FC<{
       width={width}
       height={height}
       objectFit="cover"
-      style={{ borderRadius: "2vh" }}
+      style={{ borderRadius: isSlideThumbnail ? "50%" : "2vh" }}
     />
   );
 };

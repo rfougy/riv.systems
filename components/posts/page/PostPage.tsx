@@ -20,7 +20,7 @@ import {
   Header,
 } from "./PostPage.styled";
 import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
-import Slide from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
+import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
 
 const PostPage: React.FC<{ slug: string; content: any }> = ({
   slug,
@@ -92,7 +92,7 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
                 component: Slideshow,
               },
               Slide: {
-                component: Slide,
+                component: SlideDisplay,
               },
             },
           }}

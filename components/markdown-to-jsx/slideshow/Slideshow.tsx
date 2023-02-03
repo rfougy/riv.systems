@@ -10,7 +10,9 @@ import {
   Container,
   AltText,
   SubContainer,
+  NavArrowIcon,
 } from "./Slideshow.styled";
+import ArrowIcon from "../../icons/ArrowIcon";
 
 const Slideshow: React.FC<{ children: any[]; aspectRatio: aspectRatio }> = ({
   children,
@@ -50,8 +52,12 @@ const Slideshow: React.FC<{ children: any[]; aspectRatio: aspectRatio }> = ({
         aspectRatio={aspectRatio}
       />
       <Navigation>
-        <Button onClick={() => handlePrevSlide()} />
-        <Button onClick={() => handleNextSlide()} />
+        <Button onClick={() => handlePrevSlide()}>
+          <NavArrowIcon right />
+        </Button>
+        <Button onClick={() => handleNextSlide()}>
+          <NavArrowIcon left />
+        </Button>
       </Navigation>
       <SubContainer>
         <AltText>{currSlide.alt}</AltText>

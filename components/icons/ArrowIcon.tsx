@@ -1,10 +1,10 @@
-import { Container } from "./ArrowIcon.styled";
+import { ArrowIcon as Icon } from "./ArrowIcon.styled";
 
 const ArrowIcon: React.FC<{ left?: boolean; right?: boolean }> = ({
   left,
   right,
 }) => {
-  return <Container left={left} right={right} />;
+  return <Icon left right />;
 };
 
 export default ArrowIcon;

@@ -24,9 +24,9 @@ export const NavArrowIcon = styled(ArrowIcon)`
   position: relative;
   width: 0.75rem;
   height: 0.75rem;
-  margin: ${({ left, right }: { left?: boolean; right?: boolean }) => {
-    if (left) return "0 0.25rem 0 0";
-    if (right) return "0 0 0 0.25rem";
+  margin: ${({ right, left }: { right?: boolean; left?: boolean }) => {
+    if (right) return "0 0.25rem 0 0";
+    if (left) return "0 0 0 0.25rem";
   }};
 `;
 

@@ -8,19 +8,19 @@ export const ArrowIcon = styled.div`
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 
-  transform: ${({ left, right }: { left?: boolean; right?: boolean }) => {
-    if (left) return "rotate(-45deg);";
-    if (right) return "rotate(135deg);";
+  transform: ${({ right, left }: { right?: boolean; left?: boolean }) => {
+    if (right) return "rotate(-45deg);";
+    if (left) return "rotate(135deg);";
   }};
 
   -webkit-transform: ${({
-    left,
     right,
+    left,
   }: {
-    left?: boolean;
     right?: boolean;
+    left?: boolean;
   }) => {
-    if (left) return "rotate(-45deg);";
-    if (right) return "rotate(135deg);";
+    if (right) return "rotate(-45deg);";
+    if (left) return "rotate(135deg);";
   }};
 `;

@@ -53,10 +53,10 @@ const Slideshow: React.FC<{ children: any[]; aspectRatio: aspectRatio }> = ({
       />
       <Navigation>
         <Button onClick={() => handlePrevSlide()}>
-          <NavArrowIcon right />
+          <NavArrowIcon left />
         </Button>
         <Button onClick={() => handleNextSlide()}>
-          <NavArrowIcon left />
+          <NavArrowIcon right />
         </Button>
       </Navigation>
       <SubContainer>

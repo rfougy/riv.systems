@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { lightTheme } from "../../../styles/Themes";
+import { aspectRatio } from "../../../types/aspectRatio";
 import { ArrowIcon } from "../../icons/ArrowIcon.styled";
 
 export const Button = styled.button`
@@ -8,7 +9,22 @@ export const Button = styled.button`
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
-  margin: 27.75% 0;
+  margin: ${({ aspectRatio = "16:9" }: { aspectRatio?: aspectRatio }) => {
+    switch (aspectRatio) {
+      case "16:9":
+        return "27.75% 0";
+      case "9:16":
+        return "27.75% 0";
+      case "4:3":
+        return "27.75% 0";
+      case "3:4":
+        return "70% 0";
+      case "1:1":
+        return "27.75% 0";
+      default:
+        return "0";
+    }
+  }};
   display: flex;
   align-items: center;
   justify-content: center;

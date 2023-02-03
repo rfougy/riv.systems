@@ -21,6 +21,7 @@ I’ve spent a total of 50+ hours customizing my biker jacket, and I’m not put
 Since starting my journey of DIY through this biker jacket, I’ve amassed a [collection of images](https://www.are.na/riviere-fougy/biker-jacket-8yzhrsdicgc) as references and inspiration. Those who created such pieces includes the likes of Bounty Hunter’s founder [Hikaru Iwanaga](https://youtu.be/cSgs-5bXCMg), the mysterious and obscure [Shiga from Japan](http://whev.com/actafp/), Japanese punk band [The Erections](https://www.infringe.com/the-erections/), and cult-brand [Blackmeans](https://www.archivepdf.net/post/brand-breakdown-yujiro-komatsu-and-blackmeans). The pieces are nothing short of DIY perfection, carefully curated with passion oozing out of every nook and cranny.
 </div>
 
+<Slideshow aspectRatio="16:9">
 - <Image 
     src="https://user-images.githubusercontent.com/77861258/211128148-14252895-4240-4e54-b588-cd77807857f8.png" 
     alt="Custom Punk Biker Jacket by Shiga" 
@@ -81,3 +82,4 @@ Since starting my journey of DIY through this biker jacket, I’ve amassed a [co
    alt="Custom Biker Jacket by Hikaru Iwanaga of Bounty Hunter"
    aspectRatio="16:9"
  />
+</Slideshow>

@@ -5,6 +5,6 @@ import NextImage from "../../NextImage";
 const SlideDisplay: React.FC<{ slide: ISlide; aspectRatio: aspectRatio }> = ({
   slide,
   aspectRatio,
-}) => <NextImage aspectRatio={aspectRatio} {...slide} />;
+}) => <NextImage priority aspectRatio={aspectRatio} {...slide} />;
 
 export default SlideDisplay;

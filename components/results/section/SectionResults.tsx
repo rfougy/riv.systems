@@ -10,9 +10,10 @@ import { sectionType } from "../../../types/sectionType";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 
 import {
-  FilterAndViewContainer,
-  FilterContainer,
+  Container,
+  FilterSection,
   PageTitle,
+  ViewSection,
 } from "../Results.styled";
 
 const SectionResults: React.FC<{
@@ -80,16 +81,16 @@ const SectionResults: React.FC<{
   }, [categoryFilters, content]);
 
   return (
-    <FilterAndViewContainer>
-      <FilterContainer>
+    <Container>
+      <FilterSection>
         <PageTitle>{sectionAsTitle}</PageTitle>
         <FilterMenu
           categories={categories}
           categoryFilters={categoryFilters}
           setCategoryFilters={setCategoryFilters}
         />
-      </FilterContainer>
-      <section>
+      </FilterSection>
+      <ViewSection>
         <DefaultView content={renderedPostCards} />
         <Pagination
           contentToPaginate={filteredContent}
@@ -97,8 +98,8 @@ const SectionResults: React.FC<{
           setRenderedPostCards={setRenderedPostCards}
           totalPostCards={filteredContent.length}
         />
-      </section>
-    </FilterAndViewContainer>
+      </ViewSection>
+    </Container>
   );
 };
 

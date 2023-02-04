@@ -6,7 +6,7 @@ export const PageTitle = styled.h1`
   margin: 0;
 `;
 
-export const FilterAndViewContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   gap: 6rem;
 
@@ -17,13 +17,15 @@ export const FilterAndViewContainer = styled.div`
   }
 `;
 
+export const ViewSection = styled.section``;
+
 export const CategoryResultsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3rem;
 `;
 
-export const FilterContainer = styled.section`
+export const FilterSection = styled.section`
   display: flex;
   flex-direction: column;
 `;

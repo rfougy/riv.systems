@@ -5,7 +5,11 @@ import DefaultView from "../../posts/views/default/DefaultView";
 
 import { capitalizeFirstChar } from "../../../utils";
 
-import { CategoryResultsContainer, PageTitle } from "../Results.styled";
+import {
+  CategoryResultsContainer,
+  PageTitle,
+  ViewSection,
+} from "../Results.styled";
 
 const CategoryResults: React.FC<{
   category: string;
@@ -18,7 +22,7 @@ const CategoryResults: React.FC<{
   return (
     <CategoryResultsContainer>
       <PageTitle>Category: {categoryAsTitle}</PageTitle>
-      <section>
+      <ViewSection>
         <DefaultView content={renderedPostCards} />
         <Pagination
           contentToPaginate={content}
@@ -26,7 +30,7 @@ const CategoryResults: React.FC<{
           setRenderedPostCards={setRenderedPostCards}
           totalPostCards={content.length}
         />
-      </section>
+      </ViewSection>
     </CategoryResultsContainer>
   );
 };

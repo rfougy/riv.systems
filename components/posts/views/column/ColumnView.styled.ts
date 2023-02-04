@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Grid = styled.section`
+export const List = styled.section`
   display: grid;
   gap: 2rem 1rem;
   align-items: start;
@@ -15,6 +15,6 @@ export const Grid = styled.section`
   }
 `;
 
-export const GridItem = styled.div`
+export const Item = styled.div`
   display: flex;
 `;

@@ -1,25 +1,25 @@
 import PostCard from "./card/PostCard";
 
-import { Grid, GridItem } from "./ColumnView.styled";
+import { List, Item } from "./ColumnView.styled";
 
-const DefaultView: React.FC<{
+const ColumnView: React.FC<{
   content: any;
 }> = ({ content }) => {
   return content ? (
-    <Grid>
+    <List>
       {content.map((singleContent: any, index: number) => {
         const { path, frontmatter } = singleContent;
 
         return (
-          <GridItem key={index}>
+          <Item key={index}>
             <PostCard path={path} frontmatter={frontmatter} />
-          </GridItem>
+          </Item>
         );
       })}
-    </Grid>
+    </List>
   ) : (
     <div>Error: No content available...</div>
   );
 };
 
-export default DefaultView;
+export default ColumnView;

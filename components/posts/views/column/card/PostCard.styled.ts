@@ -7,7 +7,7 @@ export const Container = styled.a`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 18.75rem;
+  max-width: 50rem;
 
   margin: auto;
   border: solid 0.1rem;
@@ -26,6 +26,9 @@ export const Container = styled.a`
 `;
 
 export const Text = styled.div`
+  display: flex;
+  justify-content: space-between;
+
   border-top: solid 0.1rem;
   padding: 1rem;
 
@@ -34,7 +37,11 @@ export const Text = styled.div`
   }
 `;
 
-export const Metadata = styled.div``;
+export const Metadata = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+`;
 
 /**
  * @description webkit portion allows for ellipsis after reaching two lines of text
@@ -43,7 +50,7 @@ export const Metadata = styled.div``;
 export const Title = styled.h2`
   display: inline-block;
   margin-top: 0;
-  height: 2.9rem;
+  max-height: 2.9rem;
   width: 100%;
 
   display: -webkit-box;

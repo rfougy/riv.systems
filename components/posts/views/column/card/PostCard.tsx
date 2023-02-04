@@ -28,7 +28,7 @@ const PostCard: React.FC<{
     coverImage,
     placeholderImage,
   }: IPostFrontMatter = frontmatter;
-  const dateAsStr: string = dateToStr(datePublished);
+  const dateAsStr: string = datePublished.replace(/-/g, "/");
 
   return (
     <Link href={path} passHref>
@@ -37,7 +37,7 @@ const PostCard: React.FC<{
           src={coverImage}
           alt={`Cover image for post titled '${title}'`}
           width={300}
-          height={150}
+          height={250}
           objectFit="cover"
           placeholder="blur"
           blurDataURL={placeholderImage}

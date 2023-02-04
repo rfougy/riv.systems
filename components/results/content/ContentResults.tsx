@@ -8,7 +8,7 @@ import ICategoryObj from "../../../interfaces/ICategoryObj";
 import ISectionObj from "../../../interfaces/ISectionObj";
 
 import {
-  FilterAndGridContainer,
+  FilterAndViewContainer,
   FilterContainer,
   PageTitle,
 } from "../Results.styled";
@@ -109,7 +109,7 @@ const ContentResults: React.FC<{
   }, [categoryFilters, sectionFilters, content]);
 
   return (
-    <FilterAndGridContainer>
+    <FilterAndViewContainer>
       <FilterContainer>
         <PageTitle>Content</PageTitle>
         <FilterMenu
@@ -135,7 +135,7 @@ const ContentResults: React.FC<{
           totalPostCards={filteredContent.length}
         />
       </section>
-    </FilterAndGridContainer>
+    </FilterAndViewContainer>
   );
 };
 

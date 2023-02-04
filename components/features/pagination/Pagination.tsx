@@ -9,14 +9,16 @@ const Pagination: React.FC<{
   paginationResetDeps: any[]; // dependencies for useEffect hook to reset pagination to 1.
   setRenderedPostCards: (arg: any) => void;
   totalPostCards: number;
+  initialPostCardsPerPage?: number;
 }> = ({
   contentToPaginate,
   paginationResetDeps,
   setRenderedPostCards,
   totalPostCards,
+  initialPostCardsPerPage = 6,
 }) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(6);
+  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(initialPostCardsPerPage);
 
   // deducting the current PostCards for pagination
   const indexOfLastPostCard: number = currentPage * postCardsPerPage;

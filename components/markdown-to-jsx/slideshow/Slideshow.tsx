@@ -12,7 +12,6 @@ import {
   SubContainer,
   NavArrowIcon,
 } from "./Slideshow.styled";
-import ArrowIcon from "../../icons/ArrowIcon";
 
 const Slideshow: React.FC<{ children: any[]; aspectRatio: aspectRatio }> = ({
   children,

@@ -17,7 +17,8 @@ export const Container = styled.div`
   }
 `;
 
-export const ViewSection = styled.section``;
+export const ViewSection = styled.section`
+`;
 
 export const CategoryResultsContainer = styled.div`
   display: flex;

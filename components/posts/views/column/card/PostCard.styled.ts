@@ -28,6 +28,7 @@ export const Container = styled.a`
 export const Text = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
 
   border-top: solid 0.1rem;
   padding: 1rem;

@@ -1,8 +1,8 @@
-import PostCard from "../card/PostCard";
+import PostCard from "./card/PostCard";
 
-import { Grid, GridItem } from "./PostGrid.styled";
+import { Grid, GridItem } from "./DefaultView.styled";
 
-const PostGrid: React.FC<{
+const DefaultView: React.FC<{
   content: any;
 }> = ({ content }) => {
   return content ? (
@@ -22,4 +22,4 @@ const PostGrid: React.FC<{
   );
 };
 
-export default PostGrid;
+export default DefaultView;

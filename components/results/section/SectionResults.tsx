@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
-import PostGrid from "../../posts/views/default/grid/PostGrid";
+import DefaultView from "../../posts/views/default/DefaultView";
 
 import { capitalizeFirstChar } from "../../../utils";
 
@@ -90,7 +90,7 @@ const SectionResults: React.FC<{
         />
       </FilterContainer>
       <section>
-        <PostGrid content={renderedPostCards} />
+        <DefaultView content={renderedPostCards} />
         <Pagination
           contentToPaginate={filteredContent}
           paginationResetDeps={[categoryFilters, filteredContent, content]}

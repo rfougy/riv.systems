@@ -1,9 +1,8 @@
 import { postView } from "../../../types/postView";
 
 const PostViewToggle: React.FC<{
-  postView: postView;
   setPostView: (arg: postView) => void;
-}> = ({ postView, setPostView }) => {
+}> = ({ setPostView }) => {
   function handleClick(e: any, viewType: postView): void {
     e.preventDefault();
     setPostView(viewType);
@@ -12,7 +11,7 @@ const PostViewToggle: React.FC<{
   return (
     <div>
       <button onClick={(e) => handleClick(e, "default")}>Default View</button>
-      <button onClick={(e) => handleClick(e, "grid")}>Grid View</button>
+      <button onClick={(e) => handleClick(e, "column")}>Column View</button>
     </div>
   );
 };

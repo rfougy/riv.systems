@@ -66,8 +66,8 @@ const Pagination: React.FC<{
             setCurrentPage(1);
           }}
         >
-          <ArrowIcon right />
-          <ArrowIcon right />
+          <ArrowIcon left />
+          <ArrowIcon left />
         </Button>
         <Button
           aria-label="Navigate to Previous Results Page"
@@ -77,7 +77,7 @@ const Pagination: React.FC<{
             handlePrevButtonClick();
           }}
         >
-          <ArrowIcon right />
+          <ArrowIcon left />
         </Button>
         <PageNumber>
           Page {currentPage} of {lastPage}
@@ -90,7 +90,7 @@ const Pagination: React.FC<{
             handleNextButtonClick();
           }}
         >
-          <ArrowIcon left />
+          <ArrowIcon right />
         </Button>
         <Button
           aria-label="Navigate to Last Results Page"
@@ -100,8 +100,8 @@ const Pagination: React.FC<{
             setCurrentPage(lastPage);
           }}
         >
-          <ArrowIcon left />
-          <ArrowIcon left />
+          <ArrowIcon right />
+          <ArrowIcon right />
         </Button>
       </PageNav>
       {/* <div>

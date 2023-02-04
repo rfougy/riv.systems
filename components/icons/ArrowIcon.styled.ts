@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Container = styled.div`
+export const ArrowIcon = styled.div`
   border: solid ${(props: any) => props.theme.primary};
   border-width: 0 0.075rem 0.075rem 0;
   padding: 0.125rem;
@@ -8,19 +8,19 @@ export const Container = styled.div`
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 
-  transform: ${({ left, right }: { left?: boolean; right?: boolean }) => {
-    if (left) return "rotate(-45deg);";
-    if (right) return "rotate(135deg);";
+  transform: ${({ right, left }: { right?: boolean; left?: boolean }) => {
+    if (right) return "rotate(-45deg);";
+    if (left) return "rotate(135deg);";
   }};
 
   -webkit-transform: ${({
-    left,
     right,
+    left,
   }: {
-    left?: boolean;
     right?: boolean;
+    left?: boolean;
   }) => {
-    if (left) return "rotate(-45deg);";
-    if (right) return "rotate(135deg);";
+    if (right) return "rotate(-45deg);";
+    if (left) return "rotate(135deg);";
   }};
 `;

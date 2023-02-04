@@ -45,3 +45,32 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
   alt="Alt Text for Image" 
   aspectRatio="3:4"
 />
+
+**Component: Slideshow...**
+
+<Slideshow aspectRatio="16:9">
+<Slide 
+  src="https://user-images.githubusercontent.com/77861258/208269441-cf37fdc2-d1d2-4da1-b0ec-6aeedf33f141.jpg" 
+  alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+/>
+<Slide 
+  src="https://user-images.githubusercontent.com/77861258/208269442-cad09bc2-b459-4c2b-9607-cf7349cd249b.jpg" 
+  alt="Lorem ipsum dolor sit amet." 
+/>
+<Slide 
+  src="https://user-images.githubusercontent.com/77861258/208269443-6ddebd21-bf2d-49f8-bdec-79230d501d1c.jpg" 
+  alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod." 
+=/>
+<Slide 
+  src="https://user-images.githubusercontent.com/77861258/208269441-cf37fdc2-d1d2-4da1-b0ec-6aeedf33f141.jpg" 
+  alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 
+/>
+<Slide 
+  src="https://user-images.githubusercontent.com/77861258/208269442-cad09bc2-b459-4c2b-9607-cf7349cd249b.jpg" 
+  alt="Lorem ipsum dolor sit amet." 
+/>
+<Slide 
+  src="https://user-images.githubusercontent.com/77861258/208269443-6ddebd21-bf2d-49f8-bdec-79230d501d1c.jpg" 
+  alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod." 
+=/>
+</Slideshow>

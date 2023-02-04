@@ -19,6 +19,8 @@ import {
   CoverImage,
   Header,
 } from "./PostPage.styled";
+import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
+import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
 
 const PostPage: React.FC<{ slug: string; content: any }> = ({
   slug,
@@ -85,6 +87,12 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
               },
               Image: {
                 component: NextImage,
+              },
+              Slideshow: {
+                component: Slideshow,
+              },
+              Slide: {
+                component: SlideDisplay,
               },
             },
           }}

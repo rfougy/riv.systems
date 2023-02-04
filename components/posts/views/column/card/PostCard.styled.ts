@@ -49,7 +49,7 @@ export const Metadata = styled.div`
  */
 export const Title = styled.h2`
   display: inline-block;
-  margin-top: 0;
+  margin: 0;
   max-height: 2.9rem;
   width: 100%;
 

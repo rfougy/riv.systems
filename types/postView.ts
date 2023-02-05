@@ -1,1 +1,1 @@
-export type postView = "default" | "column" | "grid";
+export type postView = "default" | "column";

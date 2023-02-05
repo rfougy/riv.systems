@@ -36,8 +36,8 @@ export const Button = styled.button`
   }
 
   @media(max-width: 40em) {
-    width: 1rem;
-    height: 1rem;
+    width: 0.9rem;
+    height: 0.9rem;
   }
 `;
 
@@ -45,5 +45,6 @@ export const List = styled.div`
   display: flex;
   flex-wrap: no-wrap;
   gap: 0.5rem;
-  margin-top: 0.5rem;
+
+  margin-bottom: 0.2rem;
 `;

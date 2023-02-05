@@ -11,6 +11,7 @@ import {
   Container,
   FilterSection,
   PageTitle,
+  TitleAndToggle,
   ViewSection,
 } from "../Results.styled";
 import { postView } from "../../../types/postView";
@@ -125,8 +126,12 @@ const ContentResults: React.FC<{
   return (
     <Container>
       <FilterSection>
-        <PageTitle>Content</PageTitle>
-        <PostViewToggle setPostView={setPostView} postView={postView} />
+        <TitleAndToggle>
+          <div>
+            <PageTitle>Content</PageTitle>
+          </div>
+          <PostViewToggle setPostView={setPostView} postView={postView} />
+        </TitleAndToggle>
         <FilterMenu
           sections={sections}
           categories={categories}

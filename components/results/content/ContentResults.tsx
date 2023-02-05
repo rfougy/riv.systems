@@ -126,7 +126,7 @@ const ContentResults: React.FC<{
     <Container>
       <FilterSection>
         <PageTitle>Content</PageTitle>
-        <PostViewToggle setPostView={setPostView} />
+        <PostViewToggle setPostView={setPostView} postView={postView} />
         <FilterMenu
           sections={sections}
           categories={categories}

@@ -13,8 +13,12 @@ import {
   Container,
   FilterSection,
   PageTitle,
+  TitleAndToggle,
   ViewSection,
 } from "../Results.styled";
+import { postView } from "../../../types/postView";
+import ColumnView from "../../posts/views/column/ColumnView";
+import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
 
 const SectionResults: React.FC<{
   section: sectionType | string;
@@ -23,6 +27,7 @@ const SectionResults: React.FC<{
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
   const [filteredContent, setFilteredContent] = useState<any>(content);
   const [renderedPostCards, setRenderedPostCards] = useState<any>();
+  const [postView, setPostView] = useState<postView>("default");
 
   const sectionAsTitle: string = capitalizeFirstChar(section);
 
@@ -49,6 +54,15 @@ const SectionResults: React.FC<{
     },
     []
   );
+
+  function renderPostView(): React.ReactElement {
+    switch (postView) {
+      case "column":
+        return <ColumnView content={renderedPostCards} />;
+      default:
+        return <DefaultView content={renderedPostCards} />;
+    }
+  }
 
   /**
    * @description filtering scenarios based on active section & category filters
@@ -83,7 +97,12 @@ const SectionResults: React.FC<{
   return (
     <Container>
       <FilterSection>
-        <PageTitle>{sectionAsTitle}</PageTitle>
+        <TitleAndToggle>
+          <div>
+            <PageTitle>{sectionAsTitle}</PageTitle>
+          </div>
+          <PostViewToggle setPostView={setPostView} postView={postView} />
+        </TitleAndToggle>
         <FilterMenu
           categories={categories}
           categoryFilters={categoryFilters}
@@ -91,7 +110,7 @@ const SectionResults: React.FC<{
         />
       </FilterSection>
       <ViewSection>
-        <DefaultView content={renderedPostCards} />
+        {renderPostView()}
         <Pagination
           contentToPaginate={filteredContent}
           paginationResetDeps={[categoryFilters, filteredContent, content]}

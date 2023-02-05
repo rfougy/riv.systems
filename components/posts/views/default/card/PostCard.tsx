@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { capitalizeFirstChar, dateToStr } from "../../../utils";
-import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
+import { capitalizeFirstChar, dateToStr } from "../../../../../utils";
+import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";
 
-import ArrowIcon from "../../icons/ArrowIcon";
+import ArrowIcon from "../../../../icons/ArrowIcon";
 
 import {
   Container,

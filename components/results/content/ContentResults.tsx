@@ -2,16 +2,21 @@ import { useEffect, useState } from "react";
 
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
-import PostGrid from "../../posts/grid/PostGrid";
+import DefaultView from "../../posts/views/default/DefaultView";
 
 import ICategoryObj from "../../../interfaces/ICategoryObj";
 import ISectionObj from "../../../interfaces/ISectionObj";
 
 import {
-  FilterAndGridContainer,
-  FilterContainer,
+  Container,
+  FilterSection,
   PageTitle,
+  TitleAndToggle,
+  ViewSection,
 } from "../Results.styled";
+import { postView } from "../../../types/postView";
+import ColumnView from "../../posts/views/column/ColumnView";
+import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
 
 const ContentResults: React.FC<{
   content: any;
@@ -20,6 +25,7 @@ const ContentResults: React.FC<{
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
   const [filteredContent, setFilteredContent] = useState<any>(content);
   const [renderedPostCards, setRenderedPostCards] = useState<any>();
+  const [postView, setPostView] = useState<postView>("default");
 
   const sections: ISectionObj[] = content.reduce(
     (list: ISectionObj[], singleContent: any) => {
@@ -62,6 +68,15 @@ const ContentResults: React.FC<{
     },
     []
   );
+
+  function renderPostView(): React.ReactElement {
+    switch (postView) {
+      case "column":
+        return <ColumnView content={renderedPostCards} />;
+      default:
+        return <DefaultView content={renderedPostCards} />;
+    }
+  }
 
   /**
    * @description filtering scenarios based on active section & category filters
@@ -109,9 +124,14 @@ const ContentResults: React.FC<{
   }, [categoryFilters, sectionFilters, content]);
 
   return (
-    <FilterAndGridContainer>
-      <FilterContainer>
-        <PageTitle>Content</PageTitle>
+    <Container>
+      <FilterSection>
+        <TitleAndToggle>
+          <div>
+            <PageTitle>Content</PageTitle>
+          </div>
+          <PostViewToggle setPostView={setPostView} postView={postView} />
+        </TitleAndToggle>
         <FilterMenu
           sections={sections}
           categories={categories}
@@ -120,9 +140,9 @@ const ContentResults: React.FC<{
           setSectionFilters={setSectionFilters}
           setCategoryFilters={setCategoryFilters}
         />
-      </FilterContainer>
-      <section>
-        <PostGrid content={renderedPostCards} />
+      </FilterSection>
+      <ViewSection>
+        {renderPostView()}
         <Pagination
           contentToPaginate={filteredContent}
           paginationResetDeps={[
@@ -134,8 +154,8 @@ const ContentResults: React.FC<{
           setRenderedPostCards={setRenderedPostCards}
           totalPostCards={filteredContent.length}
         />
-      </section>
-    </FilterAndGridContainer>
+      </ViewSection>
+    </Container>
   );
 };
 

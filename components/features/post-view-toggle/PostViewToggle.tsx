@@ -21,17 +21,29 @@ const PostViewToggle: React.FC<{
     <List>
       {/* @ts-ignore */}
       <Button
+        aria-label="Default View Button"
         isCurrView={postView === "default"}
         onClick={(e) => handleClick(e, "default")}
       >
-        <Image src={defaultViewIcon} alt="default view icon" />
+        <Image
+          src={defaultViewIcon}
+          alt="default view icon"
+          layout="fill"
+          objectFit="contain"
+        />
       </Button>
       {/* @ts-ignore */}
       <Button
+        aria-label="Column View Button"
         isCurrView={postView === "column"}
         onClick={(e) => handleClick(e, "column")}
       >
-        <Image src={columnViewIcon} alt="column view icon" />
+        <Image
+          src={columnViewIcon}
+          alt="column view icon"
+          layout="fill"
+          objectFit="contain"
+        />
       </Button>
     </List>
   );

@@ -18,6 +18,8 @@ import {
   Content,
   CoverImage,
   Header,
+  Excerpt,
+  Divider,
 } from "./PostPage.styled";
 import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
 import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
@@ -60,7 +62,9 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
           </Li>
         </Metadata>
         <Title>{title}</Title>
+        <Excerpt>{excerpt}</Excerpt>
       </Header>
+      <Divider />
       {section !== "refs" && (
         <CoverImage>
           <Image

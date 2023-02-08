@@ -65,21 +65,19 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
         <Excerpt>{excerpt}</Excerpt>
       </Header>
       <Divider />
-      {section !== "refs" && (
-        <CoverImage>
-          <Image
-            priority
-            src={coverImage}
-            alt={`Cover image for the blog post titled ${title}`}
-            width={800}
-            height={400}
-            objectFit="cover"
-            style={{ borderRadius: "2vh" }}
-            placeholder="blur"
-            blurDataURL={placeholderImage}
-          />
-        </CoverImage>
-      )}
+      <CoverImage>
+        <Image
+          priority
+          src={coverImage}
+          alt={`Cover image for the blog post titled ${title}`}
+          width={800}
+          height={400}
+          objectFit="cover"
+          style={{ borderRadius: "2vh" }}
+          placeholder="blur"
+          blurDataURL={placeholderImage}
+        />
+      </CoverImage>
       <Content>
         <Markdown
           options={{

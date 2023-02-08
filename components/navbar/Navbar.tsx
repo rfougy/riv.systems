@@ -3,7 +3,7 @@ import Link from "next/link";
 import { NextRouter, useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-import { sectionType } from "../../types/sectionType";
+import { sectionsList } from "../../constants/sectionsList";
 import { ITheme } from "../../interfaces/ITheme";
 
 import ThemeToggleButton from "../features/theme-toggle/ThemeToggleButton";
@@ -25,8 +25,6 @@ const logoTheme: any = {
     hidden: logoHiddenLight,
   },
 };
-
-const sectionsList: sectionType[] = ["works", "logs", "items", "refs"];
 
 const Navbar: React.FC<{ theme: ITheme; toggleTheme: () => void }> = ({
   theme,

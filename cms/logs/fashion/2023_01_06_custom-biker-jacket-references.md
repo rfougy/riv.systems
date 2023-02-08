@@ -1,8 +1,8 @@
 ---
 title: Custom Biker Jacket References
 datePublished: "2023-01-06"
-section: refs
-category: misc
+section: logs
+category: fashion
 excerpt: Since starting my journey of DIY through this biker jacket, I’ve amassed a collection of images as references and inspiration.
 coverImage: https://user-images.githubusercontent.com/77861258/211128031-dd249a04-9093-4736-850a-e915f08cc6dd.png
 ---

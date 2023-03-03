@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "analyze:bundle": "ANALYZE=true npm run build", 
+    "analyze:bundle": "ANALYZE=true npm run build",
     "start": "next start",
     "cache:posts": "node --loader ts-node/esm scripts/cachePosts.ts",
     "lint": "next lint",
@@ -32,6 +32,7 @@
     "sharp": "^0.31.3"
   },
   "devDependencies": {
+    "@emotion/babel-plugin": "^11.10.6",
     "@types/lodash": "^4.14.189",
     "@types/node": "18.11.9",
     "@types/react": "18.0.21",

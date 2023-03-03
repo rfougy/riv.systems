@@ -1,5 +1,5 @@
 import NextImage from "../../NextImage";
-import _ from "lodash";
+import isEqual from "lodash/isEqual";
 
 import { ISlide } from "../../../../interfaces/ISlide";
 
@@ -11,7 +11,7 @@ const SlideThumbnail: React.FC<{
   slideIndex: number;
   setCurrSlideIndex: (arg: number) => void;
 }> = ({ slide, currSlide, slideIndex, setCurrSlideIndex }) => {
-  const isCurrSlide: boolean = _.isEqual(slide, currSlide);
+  const isCurrSlide: boolean = isEqual(slide, currSlide);
 
   return (
     <ListItem>

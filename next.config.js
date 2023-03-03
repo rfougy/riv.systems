@@ -1,12 +1,17 @@
 /** @type {import('next').NextConfig} */
 
 const { withPlaiceholder } = require("@plaiceholder/next");
+
 const withPWA = require("next-pwa")({
   dest: "public",
   disable: process.env.NODE_ENV === "development",
 });
 
-const nextConfig = withPlaiceholder({
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
+
+const config = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
@@ -16,6 +21,6 @@ const nextConfig = withPlaiceholder({
   compiler: {
     removeConsole: process.env.NODE_ENV !== "development",
   },
-});
+};
 
-module.exports = withPWA(nextConfig);
+module.exports = withBundleAnalyzer(withPWA(withPlaiceholder(config)));

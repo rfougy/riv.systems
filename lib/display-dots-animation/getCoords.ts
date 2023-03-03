@@ -1,4 +1,4 @@
-import _ from "lodash";
+import groupBy from "lodash/groupBy";
 import "../../ext/string.extensions";
 
 import { displayDotsDictionary } from "../../dictionaries/displayDotsDictionary";
@@ -218,7 +218,7 @@ export function groupCoordsByChar(string: string) {
   });
 
   for (let key in groupedCoordsHashtable) {
-    groupedCoordsHashtable[key].allCoordsByRow = _.groupBy(
+    groupedCoordsHashtable[key].allCoordsByRow = groupBy(
       groupedCoordsHashtable[key].allCoords,
       (coord) => coord[0]
     );

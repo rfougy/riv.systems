@@ -1,4 +1,3 @@
-import _ from "lodash";
 import { useEffect } from "react";
 
 import DotWord from "./word/DotWord";

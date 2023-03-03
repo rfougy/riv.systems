@@ -10,21 +10,19 @@ import {
 } from "../styles/pages/DisplayDotsPage.styled";
 
 const Custom500: NextPage = () => {
-  return (
-    <>
-      <DisplayDotsCoordsProvider>
-        <Container>
-          <Margin>
-            <DisplayDotsAnime text={"500"} />
-          </Margin>
-          <Description>500 Error: A Server-side error occurred.</Description>
-          <Link href={`/content`} passHref>
-            <Button>RETURN TO SYSTEMS</Button>
-          </Link>
-        </Container>
-      </DisplayDotsCoordsProvider>
-    </>
-  );
+  return <>
+    <DisplayDotsCoordsProvider>
+      <Container>
+        <Margin>
+          <DisplayDotsAnime text={"500"} />
+        </Margin>
+        <Description>500 Error: A Server-side error occurred.</Description>
+        <Link href={`/content`} passHref legacyBehavior>
+          <Button>RETURN TO SYSTEMS</Button>
+        </Link>
+      </Container>
+    </DisplayDotsCoordsProvider>
+  </>;
 };
 
 export default Custom500;

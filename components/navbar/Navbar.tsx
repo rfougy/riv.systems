@@ -67,17 +67,15 @@ const Navbar: React.FC<{ theme: ITheme; toggleTheme: () => void }> = ({
     <Nav>
       <LogoContainer>
         <Link href={`/`} passHref>
-          <a>
-            <Image
-              src={logo}
-              alt="website logo"
-              onMouseOver={(): void => setLogo(logoActive)}
-              onMouseLeave={(): void => setLogo(logoHidden)}
-              onTouchStart={(): void => setLogo(logoActive)}
-              onTouchEnd={(): void => setLogo(logoHidden)}
-              onTouchCancel={(): void => setLogo(logoHidden)}
-            />
-          </a>
+          <Image
+            src={logo}
+            alt="website logo"
+            onMouseOver={(): void => setLogo(logoActive)}
+            onMouseLeave={(): void => setLogo(logoHidden)}
+            onTouchStart={(): void => setLogo(logoActive)}
+            onTouchEnd={(): void => setLogo(logoHidden)}
+            onTouchCancel={(): void => setLogo(logoHidden)}
+          />
         </Link>
         <ThemeToggleButton toggleTheme={toggleTheme} />
       </LogoContainer>

@@ -12,25 +12,23 @@ import {
 } from "../styles/pages/DisplayDotsPage.styled";
 
 const Home: NextPage = () => {
-  return (
-    <>
-      <DisplayDotsCoordsProvider>
-        <Container>
-          <Description>Hi, my name is Riviere, welcome to:</Description>
-          <Margin>
-            <DisplayDotsAnime text={"RIV.SYSTEMS"} />
-          </Margin>
-          <Description>
-            I created this website to document <br />
-            my projects, experiences and thoughts.
-          </Description>
-          <Link href={`/content`} passHref>
-            <Button>EXPLORE SYSTEMS</Button>
-          </Link>
-        </Container>
-      </DisplayDotsCoordsProvider>
-    </>
-  );
+  return <>
+    <DisplayDotsCoordsProvider>
+      <Container>
+        <Description>Hi, my name is Riviere, welcome to:</Description>
+        <Margin>
+          <DisplayDotsAnime text={"RIV.SYSTEMS"} />
+        </Margin>
+        <Description>
+          I created this website to document <br />
+          my projects, experiences and thoughts.
+        </Description>
+        <Link href={`/content`} passHref legacyBehavior>
+          <Button>EXPLORE SYSTEMS</Button>
+        </Link>
+      </Container>
+    </DisplayDotsCoordsProvider>
+  </>;
 };
 
 export default Home;

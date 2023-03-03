@@ -10,21 +10,19 @@ import {
 } from "../styles/pages/DisplayDotsPage.styled";
 
 const Custom404: NextPage = () => {
-  return (
-    <>
-      <DisplayDotsCoordsProvider>
-        <Container>
-          <Margin>
-            <DisplayDotsAnime text={"404"} />
-          </Margin>
-          <Description>404 Error: Page not found.</Description>
-          <Link href={`/content`} passHref>
-            <Button>RETURN TO SYSTEMS</Button>
-          </Link>
-        </Container>
-      </DisplayDotsCoordsProvider>
-    </>
-  );
+  return <>
+    <DisplayDotsCoordsProvider>
+      <Container>
+        <Margin>
+          <DisplayDotsAnime text={"404"} />
+        </Margin>
+        <Description>404 Error: Page not found.</Description>
+        <Link href={`/content`} passHref legacyBehavior>
+          <Button>RETURN TO SYSTEMS</Button>
+        </Link>
+      </Container>
+    </DisplayDotsCoordsProvider>
+  </>;
 };
 
 export default Custom404;

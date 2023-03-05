@@ -32,14 +32,17 @@ export const PageContainer = styled.div`
   margin: 2rem;
 
   cursor: crosshair;
+
   &:hover label {
     cursor: crosshair;
   }
+
   &:hover button,
   a,
   input {
     cursor: cell;
   }
+
   &:hover p {
     cursor: text;
   }

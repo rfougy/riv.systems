@@ -14,16 +14,10 @@ I can’t help think that the current state of meaningful content is a byproduct
 
 To me, most TikTok videos in circulation are meaningless content. To you it might be poorly styled outfit photos on Instagram or motivational posts your connections share on LinkedIn. You get the gist. A piece of content we don’t find meaning in seems absurd, something that shouldn’t be created in the first place.
 
-</div>
-
-<div>
 You can create meaningless content, in fact you _SHOULD_ create meaningless content. All too often do we convince ourselves that we’re not worthy of uploading content we’ve spend minutes, days, months on: “Will anyone care?”. If you’ve ever made content before, you know the feeling where your chest thumps moments before clicking the upload button, followed by obsessive check-ins on engagement. It’s a horrible toxic feeling, and should never be tolerated. Ever.
 
 I’ve felt the exact same way posting through Instagram years ago. What started as a passion project slowly turned into an anxiety-induced obligation — spending hours to commute, take outfit photos and edit a post — only to be let down by its engagement and figure out how to improve for the next round. Rinse and repeat. The passion got lost in the midst of numbers and ‘online success’, and I slowly drifted away from what initially gave me pure joy. Luckily for me the passion to create content has remained just as strong as before, but this time I’m going to do it my way. Whether deemed meaningful by none or many, I’m going to create what I like, go at my own pass, and partake in one of the most fulfilling hobbies I’ve ever experienced in this life.
 
-</div>
-
-<div>
 Whether meaningful or meaningless, if you’re making content because you want to, do it! If you feel that likes and comments are getting in the way of what you want to make, hide and disable them. At the end of the day you should create content because you simply want to, ‘cause there isn’t any other feeling than making what you want and seeing it manifest in this life.
 
 </div>

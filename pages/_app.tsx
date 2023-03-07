@@ -1,8 +1,6 @@
 import type { AppProps } from "next/app";
-import { NextRouter, useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Global as GlobalTheme, ThemeProvider, css } from "@emotion/react";
-import "../styles/globals.css";
 
 import Announcement from "../components/announcement/Announcment";
 import Navbar from "../components/navbar/Navbar";
@@ -17,13 +15,15 @@ import { ITheme } from "../interfaces/ITheme";
 import { ContentWrap, PageContainer } from "../styles/pages/App.styled";
 import { lightTheme, darkTheme } from "../styles/Themes";
 
+import "../styles/globals.css";
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
 
 const App = (props: any) => {
   const { Component, pageProps }: AppProps = props;
-  const { route }: NextRouter = useRouter();
+
+  console.log("PAGE PROPS: ", pageProps);
 
   const [currTheme, setTheme] = useState<ITheme>(lightTheme);
   const [announcementIsActive, setAnnouncementIsActive] =

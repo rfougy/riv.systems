@@ -33,6 +33,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       metaTagInputs: {
+        page: "500",
         title: "500 Error",
         description: "500 Error: A Server-side error occurred.",
       },

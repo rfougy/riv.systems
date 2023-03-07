@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { GetServerSideProps, GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 
 import DisplayDotsCoordsProvider from "../components/context/DisplayDotsCoordsContext";
@@ -35,10 +35,11 @@ const Home: NextPage = () => {
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   return {
     props: {
       metaTagInputs: {
+        page: "home",
         title: "RIV.SYSTEMS: Fashion, Web Development, Life Experiences",
         description:
           "Welcome to RIV.SYSTEMS, a personal portfolio and blog website featuring content on fashion, web development, design and more.",

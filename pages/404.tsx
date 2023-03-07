@@ -33,6 +33,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       metaTagInputs: {
+        page: "404",
         title: "404 Error",
         description: "404 Error: Page not found.",
       },

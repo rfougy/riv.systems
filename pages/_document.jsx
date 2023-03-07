@@ -29,7 +29,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>{metaDataInputs.title}</title>
+          {/* <title>{metaDataInputs.title}</title>
           <meta
             name="description"
             key="description"
@@ -63,7 +63,7 @@ class MyDocument extends Document {
             content="summary_large_image"
           />
           <PwaHead />
-          <Favicon />
+          <Favicon /> */}
         </Head>
         <body>
           <Main />

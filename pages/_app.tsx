@@ -24,7 +24,6 @@ const App = ({ Component, pageProps }: AppProps) => {
   const [currTheme, setTheme] = useState<ITheme>(lightTheme);
   const [announcementIsActive, setAnnouncementIsActive] =
     useState<boolean>(true);
-  const [hydrated, setHydrated] = useState<boolean>(false);
 
   // Home Page, 404 Page, 500 Page
   // @ts-ignore
@@ -97,39 +96,33 @@ const App = ({ Component, pageProps }: AppProps) => {
     setTheme(newTheme);
   }
 
-  /**
-   * @todo need to find an alternative to useEffect in order to retain SEO and Open Graph metadata populating in Page Source
-   */
-  // useEffect((): void => {
-  //   const themeInLocalStorage: string | null = localStorage.getItem("theme");
+  useEffect((): void => {
+    const themeInLocalStorage: string | null = localStorage.getItem("theme");
 
-  //   if (themeInLocalStorage) {
-  //     setTheme(JSON.parse(themeInLocalStorage));
-  //   }
-  // }, []);
+    if (themeInLocalStorage) {
+      setTheme(JSON.parse(themeInLocalStorage));
+    }
+  }, []);
 
-  // useEffect((): void => {
-  //   const announcementInLocalStorage: string | null =
-  //     localStorage.getItem("announcement");
+  useEffect((): void => {
+    const announcementInLocalStorage: string | null =
+      localStorage.getItem("announcement");
 
-  //   const announcementDate: string | undefined = announcementInLocalStorage
-  //     ? JSON.parse(announcementInLocalStorage).dateCreated
-  //     : undefined;
-  //   const newestAnnouncementDate: string = announcement.dateCreated;
+    const announcementDate: string | undefined = announcementInLocalStorage
+      ? JSON.parse(announcementInLocalStorage).dateCreated
+      : undefined;
+    const newestAnnouncementDate: string = announcement.dateCreated;
 
-  //   if (
-  //     announcementInLocalStorage &&
-  //     announcementDate === newestAnnouncementDate
-  //   ) {
-  //     setAnnouncementIsActive(false);
-  //   } else {
-  //     localStorage.removeItem("announcement");
-  //     setAnnouncementIsActive(true);
-  //   }
-  // }, []);
-
-  // useEffect((): void => setHydrated(true), []);
-  // if (!hydrated) return null;
+    if (
+      announcementInLocalStorage &&
+      announcementDate === newestAnnouncementDate
+    ) {
+      setAnnouncementIsActive(false);
+    } else {
+      localStorage.removeItem("announcement");
+      setAnnouncementIsActive(true);
+    }
+  }, []);
 
   return (
     <>

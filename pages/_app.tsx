@@ -97,36 +97,36 @@ const App = ({ Component, pageProps }: AppProps) => {
     setTheme(newTheme);
   }
 
-  useEffect((): void => {
-    const themeInLocalStorage: string | null = localStorage.getItem("theme");
+  // useEffect((): void => {
+  //   const themeInLocalStorage: string | null = localStorage.getItem("theme");
 
-    if (themeInLocalStorage) {
-      setTheme(JSON.parse(themeInLocalStorage));
-    }
-  }, []);
+  //   if (themeInLocalStorage) {
+  //     setTheme(JSON.parse(themeInLocalStorage));
+  //   }
+  // }, []);
 
-  useEffect((): void => {
-    const announcementInLocalStorage: string | null =
-      localStorage.getItem("announcement");
+  // useEffect((): void => {
+  //   const announcementInLocalStorage: string | null =
+  //     localStorage.getItem("announcement");
 
-    const announcementDate: string | undefined = announcementInLocalStorage
-      ? JSON.parse(announcementInLocalStorage).dateCreated
-      : undefined;
-    const newestAnnouncementDate: string = announcement.dateCreated;
+  //   const announcementDate: string | undefined = announcementInLocalStorage
+  //     ? JSON.parse(announcementInLocalStorage).dateCreated
+  //     : undefined;
+  //   const newestAnnouncementDate: string = announcement.dateCreated;
 
-    if (
-      announcementInLocalStorage &&
-      announcementDate === newestAnnouncementDate
-    ) {
-      setAnnouncementIsActive(false);
-    } else {
-      localStorage.removeItem("announcement");
-      setAnnouncementIsActive(true);
-    }
-  }, []);
+  //   if (
+  //     announcementInLocalStorage &&
+  //     announcementDate === newestAnnouncementDate
+  //   ) {
+  //     setAnnouncementIsActive(false);
+  //   } else {
+  //     localStorage.removeItem("announcement");
+  //     setAnnouncementIsActive(true);
+  //   }
+  // }, []);
 
-  useEffect((): void => setHydrated(true), []);
-  if (!hydrated) return null;
+  // useEffect((): void => setHydrated(true), []);
+  // if (!hydrated) return null;
 
   return (
     <>

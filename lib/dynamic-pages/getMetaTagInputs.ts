@@ -2,34 +2,31 @@ import IPost from "../../interfaces/IPost";
 import { IPostFrontMatter } from "../../interfaces/IPostFrontMatter";
 import { capitalizeFirstChar } from "../../utils";
 
-export function contentResultsPageMetaTagInputs(content: any) {
+export function contentResultsPageMetaTagInputs() {
+  const page: string = "content";
   const title: string = "Content";
   const description: string =
     "Browse all blog posts in RIV.SYSTEMS, from professional work to journal entries and miscellaneous content.";
 
-  return { description, title };
+  return { page, description, title };
 }
 
-export function categoryResultsPageMetaTagInputs(
-  content: any,
-  slug: string | string[]
-) {
+export function categoryResultsPageMetaTagInputs(slug: string | string[]) {
   const category: string = slug[1];
+  const page: string = category.replace(" ", "-");
   const title: string = capitalizeFirstChar(category);
   const description: string = `View all content related to ${title} in RIV.SYSTEMS.`;
 
-  return { description, title };
+  return { page, description, title };
 }
 
-export function sectionResultsPageMetaTagInputs(
-  content: any,
-  slug: string | string[]
-) {
+export function sectionResultsPageMetaTagInputs(slug: string | string[]) {
   const section: string = slug[0];
+  const page: string = section.replace(" ", "-");
   const title: string = capitalizeFirstChar(section);
   const description: string = `View all content related to ${title} in RIV.SYSTEMS.`;
 
-  return { description, title };
+  return { page, description, title };
 }
 
 export function postPageMetaTagInputs(content: any) {
@@ -39,8 +36,9 @@ export function postPageMetaTagInputs(content: any) {
     coverImage: image,
     title,
   }: IPostFrontMatter = frontmatter;
+  const page = title.replace(" ", "-");
 
-  return { description, image, title };
+  return { page, description, image, title };
 }
 
 export function getMetaTagInputs(
@@ -49,12 +47,12 @@ export function getMetaTagInputs(
 ) {
   switch (slug?.length) {
     case 1:
-      return sectionResultsPageMetaTagInputs(content, slug);
+      return sectionResultsPageMetaTagInputs(slug);
     case 2:
-      return categoryResultsPageMetaTagInputs(content, slug);
+      return categoryResultsPageMetaTagInputs(slug);
     case 3:
       return postPageMetaTagInputs(content);
     default:
-      return contentResultsPageMetaTagInputs(content);
+      return contentResultsPageMetaTagInputs();
   }
 }

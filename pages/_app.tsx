@@ -97,6 +97,9 @@ const App = ({ Component, pageProps }: AppProps) => {
     setTheme(newTheme);
   }
 
+  /**
+   * @todo need to find an alternative to useEffect in order to retain SEO and Open Graph metadata populating in Page Source
+   */
   // useEffect((): void => {
   //   const themeInLocalStorage: string | null = localStorage.getItem("theme");
 

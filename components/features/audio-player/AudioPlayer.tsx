@@ -9,7 +9,7 @@ export const AudioPlayer: React.FC = () => {
   const [howler, setHowler] = useState<Howl>();
   const [newHowlerCreated, setNewHowlerCreated] = useState<boolean>();
   const [currSongIndex, setCurrSongIndex] = useState<number>(0);
-  const [playing, setPlaying] = useState<boolean>(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   function initializeHowler(song: string): Howl {
     const howler = new Howl({
@@ -20,12 +20,12 @@ export const AudioPlayer: React.FC = () => {
 
   function handlePlay() {
     howler?.play();
-    setPlaying(true);
+    setIsPlaying(true);
   }
 
   function handlePause() {
     howler?.pause();
-    setPlaying(false);
+    setIsPlaying(false);
   }
 
   function handleNextSong(): void {
@@ -49,7 +49,7 @@ export const AudioPlayer: React.FC = () => {
   }
 
   /**
-   * @description create new howler initialization when the song changes
+   * @description create new howler initialization when a) the component first initialies, and b) the song changes
    */
   useEffect((): void => {
     const newHowler = initializeHowler(musicPlaylist[currSongIndex]);
@@ -57,16 +57,17 @@ export const AudioPlayer: React.FC = () => {
   }, [currSongIndex]);
 
   /**
-   * @description play the next/prev song autmatically given that the prev song was still playing
+   * @description automatically play the next/prev song given that the audio player was on play
    */
   useEffect(() => {
-    if (newHowlerCreated && howler && playing) howler.play();
-  }, [newHowlerCreated, howler, playing]);
+    if (newHowlerCreated && howler && isPlaying) howler.play();
+  }, [newHowlerCreated, howler, isPlaying]);
 
   return (
     <Container>
-      <div onClick={(): void => handlePlay()}>PLAY</div>
-      <div onClick={(): void => handlePause()}>PAUSE</div>
+      <div onClick={(): void => (isPlaying ? handlePause() : handlePlay())}>
+        {isPlaying ? "PAUSE" : "PLAY"}
+      </div>
       <div onClick={(): void => handleNextSong()}>SKIP FORWARD</div>
       <div onClick={(): void => handlePrevSong()}>SKIP BACKWARD</div>
     </Container>

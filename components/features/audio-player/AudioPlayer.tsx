@@ -1,22 +1,33 @@
-import React, { useEffect } from "react";
-import { Container } from "./AudioPlayer.styled";
-import useSWR from "swr";
+import React from "react";
+import { Howl } from "howler";
 
-async function fetchSoundCloudPlaylist() {
-  try {
-    const res = await fetch("https://www.example.com");
-    const data = await res.json();
-    return data;
-  } catch (err) {
-    console.error(err);
-    return "error";
-  }
-}
+import AudioSample01 from "../../../public/audio/music/audio-player-sample-1.mp3";
+import AudioSample02 from "../../../public/audio/music/audio-player-sample-2.mp3";
+import { Container } from "./AudioPlayer.styled";
 
 export const AudioPlayer: React.FC = () => {
-  const data = useSWR("playlist", fetchSoundCloudPlaylist);
+  const howler = new Howl({
+    src: [AudioSample01, AudioSample02],
+  });
 
-  useEffect(() => console.log(data), []);
-
-  return <Container>AudioPlayer</Container>;
+  return (
+    <Container>
+      <div
+        onClick={() => {
+          console.log("PLAYING");
+          howler.play();
+        }}
+      >
+        PLAY
+      </div>
+      <div
+        onClick={() => {
+          console.log("PAUSED");
+          howler.pause();
+        }}
+      >
+        PAUSE
+      </div>
+    </Container>
+  );
 };

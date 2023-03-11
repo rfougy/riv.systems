@@ -18,18 +18,18 @@ export const AudioPlayer: React.FC = () => {
     return howler;
   }
 
-  function handlePlay() {
+  function handlePlay(): void {
     howler?.play();
     setIsPlaying(true);
   }
 
-  function handlePause() {
+  function handlePause(): void {
     howler?.pause();
     setIsPlaying(false);
   }
 
   function handleNextSong(): void {
-    const nextSongIndex =
+    const nextSongIndex: number =
       currSongIndex !== musicPlaylist.length - 1 ? currSongIndex + 1 : 0;
 
     howler?.pause();
@@ -39,7 +39,7 @@ export const AudioPlayer: React.FC = () => {
   }
 
   function handlePrevSong(): void {
-    const prevSongIndex =
+    const prevSongIndex: number =
       currSongIndex !== 0 ? currSongIndex - 1 : musicPlaylist.length - 1;
 
     howler?.pause();
@@ -52,14 +52,14 @@ export const AudioPlayer: React.FC = () => {
    * @description create new howler initialization when a) the component first initialies, and b) the song changes
    */
   useEffect((): void => {
-    const newHowler = initializeHowler(musicPlaylist[currSongIndex]);
+    const newHowler: Howl = initializeHowler(musicPlaylist[currSongIndex]);
     setHowler(newHowler);
   }, [currSongIndex]);
 
   /**
    * @description automatically play the next/prev song given that the audio player was on play
    */
-  useEffect(() => {
+  useEffect((): void => {
     if (newHowlerCreated && howler && isPlaying) howler.play();
   }, [newHowlerCreated, howler, isPlaying]);
 

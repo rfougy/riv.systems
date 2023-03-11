@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Howl } from "howler";
 
-import AudioSample01 from "../../../public/audio/music/audio-player-sample-1.mp3";
-import AudioSample02 from "../../../public/audio/music/audio-player-sample-2.mp3";
-import { Container } from "./AudioPlayer.styled";
+import { musicPlaylist } from "../../../constants/musicPlaylist";
 
-const playlist = [AudioSample01, AudioSample02];
+import { Container } from "./AudioPlayer.styled";
 
 export const AudioPlayer: React.FC = () => {
   const [currSongIndex, setCurrSongIndex] = useState<number>(0);
-  const [howler, setHowler] = useState<Howl>(
-    initializeHowler(playlist[currSongIndex])
-  );
+
+  const howlerInit = initializeHowler(musicPlaylist[currSongIndex]);
+  const [howler, setHowler] = useState<Howl>(howlerInit);
 
   function initializeHowler(song: string): Howl {
     const howler = new Howl({
@@ -21,27 +19,41 @@ export const AudioPlayer: React.FC = () => {
     return howler;
   }
 
-  function handleNextSong() {
-    howler.pause();
-    setCurrSongIndex(currSongIndex + 1);
+  function handlePlay() {
+    howler?.play();
   }
 
-  function handlePrevSong() {
-    howler.pause();
-    setCurrSongIndex(currSongIndex - 1);
+  function handlePause() {
+    howler?.pause();
   }
 
-  useEffect(() => {
-    const newHowler = initializeHowler(playlist[currSongIndex]);
+  function handleNextSong(): void {
+    const nextSongIndex =
+      currSongIndex !== musicPlaylist.length - 1 ? currSongIndex + 1 : 0;
+
+    howler?.pause();
+    setCurrSongIndex(nextSongIndex);
+  }
+
+  function handlePrevSong(): void {
+    const prevSongIndex =
+      currSongIndex !== 0 ? currSongIndex - 1 : musicPlaylist.length - 1;
+
+    howler?.pause();
+    setCurrSongIndex(prevSongIndex);
+  }
+
+  useEffect((): void => {
+    const newHowler = initializeHowler(musicPlaylist[currSongIndex]);
     setHowler(newHowler);
   }, [currSongIndex]);
 
   return (
     <Container>
-      <div onClick={() => howler.play()}>PLAY</div>
-      <div onClick={() => howler.pause()}>PAUSE</div>
-      <div onClick={() => handleNextSong()}>SKIP FORWARD</div>
-      <div onClick={() => handlePrevSong()}>SKIP BACKWARD</div>
+      <div onClick={(): void => handlePlay()}>PLAY</div>
+      <div onClick={(): void => handlePause()}>PAUSE</div>
+      <div onClick={(): void => handleNextSong()}>SKIP FORWARD</div>
+      <div onClick={(): void => handlePrevSong()}>SKIP BACKWARD</div>
     </Container>
   );
 };

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { ITheme } from "../../../interfaces/ITheme";
+import { ITheme } from "../../../../interfaces/ITheme";
 
 export const Button = styled.button`
   all: unset;
@@ -9,25 +9,19 @@ export const Button = styled.button`
 
   img {
     -webkit-filter: ${({
-      isActive = true,
+      isCurrView,
       theme,
     }: {
-      isActive?: boolean;
+      isCurrView: boolean;
       theme: ITheme;
     }) =>
-      isActive
+      isCurrView
         ? theme.id === "light"
           ? "invert(0)"
           : "invert(1)"
         : "invert(0.5)"};
-    filter: ${({
-      isActive = true,
-      theme,
-    }: {
-      isActive?: boolean;
-      theme: ITheme;
-    }) =>
-      isActive
+    filter: ${({ isCurrView, theme }: { isCurrView: boolean; theme: ITheme }) =>
+      isCurrView
         ? theme.id === "light"
           ? "invert(0)"
           : "invert(1)"
@@ -39,5 +33,10 @@ export const Button = styled.button`
         filter: ${(props: any) =>
           props.theme.id === "light" ? "invert(0)" : "invert(1)"};
       }
+  }
+
+  @media(max-width: 40em) {
+    width: 0.9rem;
+    height: 0.9rem;
   }
 `;

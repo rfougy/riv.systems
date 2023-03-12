@@ -2,7 +2,7 @@
  * @description coordinates for characters, allowing them to be rendered as dots.
  * First index is y coordinate, second index is x cooordinate.
  */
-export const displayDotsDict = {
+export const displayDotsDictionary = {
   A: {
     width: 5,
     coordinates: [

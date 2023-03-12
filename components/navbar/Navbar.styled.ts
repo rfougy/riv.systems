@@ -18,13 +18,6 @@ export const LogoContainer = styled.div`
   }
 `;
 
-export const FeaturesContainer = styled.div`
-  display: flex;
-  align-items: center;
-  flex-wrap: no-wrap;
-  gap: 0.75rem;
-`;
-
 export const NavMenu = styled.ul`
   display: flex;
   gap: 0 2rem;

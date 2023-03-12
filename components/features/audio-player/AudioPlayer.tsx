@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { Howl } from "howler";
 
-import { musicPlaylist } from "../../../constants/musicPlaylist";
+import IconButton from "../../shared/icon-button/IconButton";
 
-import { Container } from "./AudioPlayer.styled";
+import { musicPlaylist } from "../../../constants/musicPlaylist";
+import { audioPlayerButtonDict } from "../../../dictionaries/audioPlayerButtonDict";
+
+import { List } from "./AudioPlayer.styled";
 
 export const AudioPlayer: React.FC = () => {
   const [howler, setHowler] = useState<Howl>();
   const [newHowlerCreated, setNewHowlerCreated] = useState<boolean>();
   const [currSongIndex, setCurrSongIndex] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
+
+  const { play, pause, nextSkip, prevSkip } = audioPlayerButtonDict;
 
   function initializeHowler(song: string): Howl {
     const howler = new Howl({
@@ -65,12 +70,25 @@ export const AudioPlayer: React.FC = () => {
   }, [newHowlerCreated, howler, isPlaying]);
 
   return (
-    <Container>
-      <div onClick={(): void => (isPlaying ? handlePause() : handlePlay())}>
-        {isPlaying ? "PAUSE" : "PLAY"}
-      </div>
-      <div onClick={(): void => handleNextSong()}>SKIP FORWARD</div>
-      <div onClick={(): void => handlePrevSong()}>SKIP BACKWARD</div>
-    </Container>
+    <List>
+      <IconButton
+        src={prevSkip.icon}
+        alt={prevSkip.alt}
+        ariaLabel={prevSkip.ariaLabel}
+        onClick={(): void => handlePrevSong()}
+      />
+      <IconButton
+        src={isPlaying ? pause.icon : play.icon}
+        alt={isPlaying ? play.alt : pause.icon}
+        ariaLabel={isPlaying ? play.ariaLabel : pause.ariaLabel}
+        onClick={() => (isPlaying ? handlePause() : handlePlay())}
+      />
+      <IconButton
+        src={nextSkip.icon}
+        alt={nextSkip.alt}
+        ariaLabel={nextSkip.ariaLabel}
+        onClick={(): void => handleNextSong()}
+      />
+    </List>
   );
 };

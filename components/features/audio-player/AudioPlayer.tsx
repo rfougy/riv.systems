@@ -52,7 +52,8 @@ export const AudioPlayer: React.FC = () => {
    * @description create new howler initialization when a) the component first initialies, and b) the song changes
    */
   useEffect((): void => {
-    const newHowler: Howl = initializeHowler(musicPlaylist[currSongIndex]);
+    const currSong = musicPlaylist[currSongIndex];
+    const newHowler: Howl = initializeHowler(currSong);
     setHowler(newHowler);
   }, [currSongIndex]);
 

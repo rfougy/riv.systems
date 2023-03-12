@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { postViewButtonDictionary } from "../../../../constants/postViewButtonDictionary";
+import { postViewButtonDict } from "../../../../dictionaries/postViewButtonDict";
 
 import { postView } from "../../../../types/postView";
 
@@ -11,8 +11,7 @@ const ToggleButton: React.FC<{
   postViewOption: postView;
   setPostView: (arg: postView) => void;
 }> = ({ isCurrView, postViewOption, setPostView }) => {
-  const { ariaLabel, imageAlt, icon } =
-    postViewButtonDictionary[postViewOption];
+  const { ariaLabel, imageAlt, icon } = postViewButtonDict[postViewOption];
 
   function handleClick(viewType: postView): void {
     setPostView(viewType);

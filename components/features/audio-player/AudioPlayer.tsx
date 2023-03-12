@@ -19,6 +19,7 @@ export const AudioPlayer: React.FC = () => {
   function initializeHowler(song: string): Howl {
     const howler = new Howl({
       src: [song],
+      html5: true,
     });
     return howler;
   }

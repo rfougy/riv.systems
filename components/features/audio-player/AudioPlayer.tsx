@@ -67,7 +67,10 @@ export const AudioPlayer: React.FC = () => {
    * @description automatically play the next/prev song given that the audio player was on play
    */
   useEffect((): void => {
-    if (newHowlerCreated && howler && isPlaying) howler.play();
+    if (newHowlerCreated && howler && isPlaying) {
+      howler.play();
+      setNewHowlerCreated(false);
+    }
   }, [newHowlerCreated, howler, isPlaying]);
 
   return (

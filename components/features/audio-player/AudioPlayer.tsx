@@ -16,6 +16,9 @@ export const AudioPlayer: React.FC = () => {
 
   const { play, pause, nextSkip, prevSkip } = audioPlayerButtonDict;
 
+  const firstSongIndex = 0;
+  const lastSongIndex = musicPlaylist.length - 1;
+
   function initializeHowler(song: string): Howl {
     const howler = new Howl({
       src: [song],
@@ -36,20 +39,22 @@ export const AudioPlayer: React.FC = () => {
 
   function handleNextSong(): void {
     const nextSongIndex: number =
-      currSongIndex !== musicPlaylist.length - 1 ? currSongIndex + 1 : 0;
+      currSongIndex !== lastSongIndex ? currSongIndex + 1 : firstSongIndex;
 
     howler?.pause();
-    setCurrSongIndex(nextSongIndex);
-    setHowler(undefined);
-    setNewHowlerCreated(true);
+    skipToDiffSong(nextSongIndex);
   }
 
   function handlePrevSong(): void {
     const prevSongIndex: number =
-      currSongIndex !== 0 ? currSongIndex - 1 : musicPlaylist.length - 1;
+      currSongIndex !== firstSongIndex ? currSongIndex - 1 : lastSongIndex;
 
     howler?.pause();
-    setCurrSongIndex(prevSongIndex);
+    skipToDiffSong(prevSongIndex);
+  }
+
+  function skipToDiffSong(songIndex: number) {
+    setCurrSongIndex(songIndex);
     setHowler(undefined);
     setNewHowlerCreated(true);
   }

@@ -1,9 +1,9 @@
-import { IPostViewButtonDictionary } from "../interfaces/IPostViewButtonDictionary";
+import { IPostViewButtonDict } from "../interfaces/IPostViewButtonDict";
 import columnViewIcon from "../public/assets/view-icon-column.svg";
 import defaultViewIcon from "../public/assets/view-icon-default.svg";
 import gridViewIcon from "../public/assets/view-icon-grid.svg";
 
-export const postViewButtonDictionary: IPostViewButtonDictionary = {
+export const postViewButtonDict: IPostViewButtonDict = {
   default: {
     icon: defaultViewIcon,
     ariaLabel: "Default View Button",

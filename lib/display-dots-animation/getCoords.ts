@@ -1,7 +1,7 @@
 import groupBy from "lodash/groupBy";
 import "../../ext/string.extensions";
 
-import { displayDotsDictionary } from "../../dictionaries/displayDotsDictionary";
+import { displayDotsDict } from "../../dictionaries/displayDotsDict";
 import { structuredClone } from "../../utils";
 
 import IAllCoords from "../../interfaces/IAllCoords";
@@ -14,9 +14,9 @@ let charStartingXCoord: number = 0;
 function getActiveCoordsForWord(word: string): number[][] {
   const charArr: string[] = word.split("");
   const dictionaryCharArr = charArr.map((char: string) => {
-    const displayDotsDictionaryClone = structuredClone(displayDotsDictionary);
+    const displayDotsDictClone = structuredClone(displayDotsDict);
     const dictionaryChar =
-      displayDotsDictionaryClone[char as keyof typeof displayDotsDictionary];
+      displayDotsDictClone[char as keyof typeof displayDotsDict];
 
     return dictionaryChar;
   });
@@ -159,9 +159,9 @@ function getStartEndXCoordsPerChar(string: string): number[][] {
   let startEndXCoord: number[];
 
   const startEndXCoordsPerChar = charArr.map((char): number[] => {
-    const displayDotsDictionaryClone = structuredClone(displayDotsDictionary);
+    const displayDotsDictClone = structuredClone(displayDotsDict);
     const dictionaryChar =
-      displayDotsDictionaryClone[char as keyof typeof displayDotsDictionary];
+      displayDotsDictClone[char as keyof typeof displayDotsDict];
     const dictionaryCharWidth = dictionaryChar.width - 1;
 
     endXCoord = startXCoord + dictionaryCharWidth;

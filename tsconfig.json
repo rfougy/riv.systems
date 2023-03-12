@@ -23,5 +23,5 @@
     "components/features/SearchResults",
     "scripts/cachePosts.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
 }

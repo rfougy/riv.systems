@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { ITheme } from "../../../../interfaces/ITheme";
+import { ITheme } from "../../../interfaces/ITheme";
 
 export const Button = styled.button`
   all: unset;
@@ -9,19 +9,25 @@ export const Button = styled.button`
 
   img {
     -webkit-filter: ${({
-      isCurrView,
+      isActive = true,
       theme,
     }: {
-      isCurrView: boolean;
+      isActive?: boolean;
       theme: ITheme;
     }) =>
-      isCurrView
+      isActive
         ? theme.id === "light"
           ? "invert(0)"
           : "invert(1)"
         : "invert(0.5)"};
-    filter: ${({ isCurrView, theme }: { isCurrView: boolean; theme: ITheme }) =>
-      isCurrView
+    filter: ${({
+      isActive = true,
+      theme,
+    }: {
+      isActive?: boolean;
+      theme: ITheme;
+    }) =>
+      isActive
         ? theme.id === "light"
           ? "invert(0)"
           : "invert(1)"

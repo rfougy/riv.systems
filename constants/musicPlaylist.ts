@@ -5,8 +5,9 @@ import track4 from "../public/audio/music/Lapalux_4EVA_ft.-Talvi.mp3";
 import track5 from "../public/audio/music/Moore-Kismet_Rumor-ft.-WYN.mp3";
 import track6 from "../public/audio/music/The-Glitch-Mob_All-The-People.mp3";
 import track7 from "../public/audio/music/The-Glitch-Mob_E-Motion.mp3";
+import { shuffleArr } from "../utils";
 
-export const musicPlaylist: string[] = [
+export const musicPlaylist: string[] = shuffleArr([
   track1,
   track2,
   track3,
@@ -14,4 +15,4 @@ export const musicPlaylist: string[] = [
   track5,
   track6,
   track7,
-];
+]);

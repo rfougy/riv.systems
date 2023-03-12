@@ -19,7 +19,6 @@ import "../styles/globals.css";
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
-import { AudioPlayer } from "../components/features/audio-player/AudioPlayer";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [currTheme, setTheme] = useState<ITheme>(lightTheme);
@@ -142,7 +141,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         )}
         <PageContainer>
           <Navbar toggleTheme={toggleTheme} theme={currTheme} />
-          <AudioPlayer />
           <ContentWrap isDisplayDotsPage={isDisplayDotsPage}>
             <Component {...pageProps} />
           </ContentWrap>

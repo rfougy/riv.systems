@@ -13,7 +13,15 @@ import logoHiddenLight from "../../public/assets/logo-hidden-light.svg";
 import logoActiveDark from "../../public/assets/logo-active-dark.svg";
 import logoHiddenDark from "../../public/assets/logo-hidden-dark.svg";
 
-import { Nav, NavMenu, MenuOption, A, LogoContainer } from "./Navbar.styled";
+import {
+  Nav,
+  NavMenu,
+  MenuOption,
+  A,
+  LogoContainer,
+  FeaturesContainer,
+} from "./Navbar.styled";
+import { AudioPlayer } from "../features/audio-player/AudioPlayer";
 
 const logoTheme: any = {
   light: {
@@ -79,7 +87,10 @@ const Navbar: React.FC<{ theme: ITheme; toggleTheme: () => void }> = ({
             />
           </a>
         </Link>
-        <ThemeToggleButton toggleTheme={toggleTheme} />
+        <FeaturesContainer>
+          <ThemeToggleButton toggleTheme={toggleTheme} />
+          <AudioPlayer />
+        </FeaturesContainer>
       </LogoContainer>
       <NavMenu onMouseLeave={(): void => setHoveredOption(activeOption)}>
         {sectionsList.map((section: string, index: number) => (

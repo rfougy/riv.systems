@@ -40,9 +40,4 @@ export const Button = styled.button`
           props.theme.id === "light" ? "invert(0)" : "invert(1)"};
       }
   }
-
-  @media(max-width: 40em) {
-    width: 0.9rem;
-    height: 0.9rem;
-  }
 `;

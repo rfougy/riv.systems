@@ -54,7 +54,7 @@ export const AudioPlayer: React.FC = () => {
   }
 
   /**
-   * @description create new howler initialization when a) the component first initialies, and b) the song changes
+   * @description create new howler initialization when a) the component first initializes, and b) the song changes
    */
   useEffect((): void => {
     const currSong = musicPlaylist[currSongIndex];
@@ -79,8 +79,8 @@ export const AudioPlayer: React.FC = () => {
       />
       <IconButton
         src={isPlaying ? pause.icon : play.icon}
-        alt={isPlaying ? play.alt : pause.icon}
-        ariaLabel={isPlaying ? play.ariaLabel : pause.ariaLabel}
+        alt={isPlaying ? pause.alt : play.icon}
+        ariaLabel={isPlaying ? pause.ariaLabel : play.ariaLabel}
         onClick={() => (isPlaying ? handlePause() : handlePlay())}
       />
       <IconButton

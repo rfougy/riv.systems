@@ -7,6 +7,7 @@ import { musicPlaylist } from "../../../constants/musicPlaylist";
 import { audioPlayerButtonDict } from "../../../dictionaries/audioPlayerButtonDict";
 
 import { List } from "./AudioPlayer.styled";
+import { shuffleArr } from "../../../utils";
 
 export const AudioPlayer: React.FC = () => {
   const [howler, setHowler] = useState<Howl>();
@@ -15,6 +16,7 @@ export const AudioPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   const { play, pause, nextSkip, prevSkip } = audioPlayerButtonDict;
+  const shuffledPlaylist: string[] = shuffleArr(musicPlaylist);
 
   function initializeHowler(song: string): Howl {
     const howler = new Howl({
@@ -36,7 +38,7 @@ export const AudioPlayer: React.FC = () => {
 
   function handleNextSong(): void {
     const nextSongIndex: number =
-      currSongIndex !== musicPlaylist.length - 1 ? currSongIndex + 1 : 0;
+      currSongIndex !== shuffledPlaylist.length - 1 ? currSongIndex + 1 : 0;
 
     howler?.pause();
     setCurrSongIndex(nextSongIndex);
@@ -46,7 +48,7 @@ export const AudioPlayer: React.FC = () => {
 
   function handlePrevSong(): void {
     const prevSongIndex: number =
-      currSongIndex !== 0 ? currSongIndex - 1 : musicPlaylist.length - 1;
+      currSongIndex !== 0 ? currSongIndex - 1 : shuffledPlaylist.length - 1;
 
     howler?.pause();
     setCurrSongIndex(prevSongIndex);
@@ -58,7 +60,7 @@ export const AudioPlayer: React.FC = () => {
    * @description create new howler initialization when a) the component first initializes, and b) the song changes
    */
   useEffect((): void => {
-    const currSong = musicPlaylist[currSongIndex];
+    const currSong = shuffledPlaylist[currSongIndex];
     const newHowler: Howl = initializeHowler(currSong);
     setHowler(newHowler);
   }, [currSongIndex]);

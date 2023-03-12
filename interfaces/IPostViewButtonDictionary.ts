@@ -1,4 +1,5 @@
-export interface IPostViewButtonDict {
+import { postView } from "./../types/postView";
+export interface IPostViewButtonDictionary {
   default: {
     icon: any;
     ariaLabel: string;

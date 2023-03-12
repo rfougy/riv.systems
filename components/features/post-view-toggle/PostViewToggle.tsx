@@ -13,7 +13,7 @@ const PostViewToggle: React.FC<{
       (option: any, index: number): React.ReactNode => (
         <ToggleButton
           key={index}
-          isActive={postView === option}
+          isCurrView={postView === option}
           postViewOption={option}
           setPostView={setPostView}
         />

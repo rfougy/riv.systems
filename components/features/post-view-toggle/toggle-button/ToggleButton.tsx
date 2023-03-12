@@ -1,27 +1,34 @@
-import { postViewButtonDict } from "../../../../dictionaries/postViewButtonDict";
+import Image from "next/image";
+
+import { postViewButtonDictionary } from "../../../../constants/postViewButtonDictionary";
 
 import { postView } from "../../../../types/postView";
-import IconButton from "../../../shared/icon-button/IconButton";
+
+import { Button } from "./ToggleButton.styled";
 
 const ToggleButton: React.FC<{
-  isActive: boolean;
+  isCurrView: boolean;
   postViewOption: postView;
   setPostView: (arg: postView) => void;
-}> = ({ isActive, postViewOption, setPostView }) => {
-  const { ariaLabel, imageAlt, icon } = postViewButtonDict[postViewOption];
+}> = ({ isCurrView, postViewOption, setPostView }) => {
+  const { ariaLabel, imageAlt, icon } =
+    postViewButtonDictionary[postViewOption];
 
   function handleClick(viewType: postView): void {
     setPostView(viewType);
   }
 
   return (
-    <IconButton
-      src={icon}
-      alt={imageAlt}
-      ariaLabel={ariaLabel}
-      isActive={isActive}
-      onClick={() => handleClick(postViewOption)}
-    />
+    <>
+      {/* @ts-ignore */}
+      <Button
+        aria-label={ariaLabel}
+        isCurrView={isCurrView}
+        onClick={() => handleClick(postViewOption)}
+      >
+        <Image src={icon} alt={imageAlt} layout="fill" objectFit="contain" />
+      </Button>
+    </>
   );
 };
 

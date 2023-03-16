@@ -7,7 +7,6 @@ import { musicPlaylist } from "../../../constants/musicPlaylist";
 import { audioPlayerButtonDict } from "../../../dictionaries/audioPlayerButtonDict";
 
 import { List } from "./AudioPlayer.styled";
-import { IMusicPlaylist } from "../../../interfaces/IMusicPlaylist";
 
 export const AudioPlayer: React.FC = () => {
   const [howler, setHowler] = useState<Howl>();

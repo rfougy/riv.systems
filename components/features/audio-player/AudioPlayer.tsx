@@ -7,6 +7,7 @@ import { musicPlaylist } from "../../../constants/musicPlaylist";
 import { audioPlayerButtonDict } from "../../../dictionaries/audioPlayerButtonDict";
 
 import { List } from "./AudioPlayer.styled";
+import { IMusicPlaylist } from "../../../interfaces/IMusicPlaylist";
 
 export const AudioPlayer: React.FC = () => {
   const [howler, setHowler] = useState<Howl>();
@@ -19,10 +20,16 @@ export const AudioPlayer: React.FC = () => {
   const firstSongIndex = 0;
   const lastSongIndex = musicPlaylist.length - 1;
 
-  function initializeHowler(song: string): Howl {
+  function initializeHowler(songIndex: number): Howl {
+    const song = musicPlaylist[songIndex].src;
     const howler = new Howl({
       src: [song],
       html5: true,
+      onend: () => {
+        currSongIndex !== lastSongIndex
+          ? skipToDiffSong(songIndex + 1)
+          : skipToDiffSong(firstSongIndex);
+      },
     });
     return howler;
   }
@@ -63,8 +70,7 @@ export const AudioPlayer: React.FC = () => {
    * @description create new howler initialization when a) the component first initializes, and b) the song changes
    */
   useEffect((): void => {
-    const currSong = musicPlaylist[currSongIndex].src;
-    const newHowler: Howl = initializeHowler(currSong);
+    const newHowler: Howl = initializeHowler(currSongIndex);
     setHowler(newHowler);
   }, [currSongIndex]);
 

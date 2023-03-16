@@ -1,6 +1,7 @@
+import { IMusicPlaylist } from './../interfaces/IMusicPlaylist';
 import { shuffleArr } from "../utils";
 
-export const musicPlaylist: any[] = shuffleArr([
+export const musicPlaylist: IMusicPlaylist[] = shuffleArr([
   {
     title: "Daze 22.00",
     artist: "Flume",

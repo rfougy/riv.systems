@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { capitalizeFirstChar, dateToStr } from "../../../../../utils";
+import { capitalizeFirstChar } from "../../../../../utils";
 import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";
 
 import ArrowIcon from "../../../../icons/ArrowIcon";
@@ -14,12 +14,15 @@ import {
   Text,
   Title,
 } from "./PostCard.styled";
+import useWindowWidthEventListener from "../../../../../hooks/useViewportWidthListener";
 
 const PostCard: React.FC<{
   path: string;
   frontmatter: any;
   forSearchResults?: boolean;
 }> = ({ path, frontmatter, forSearchResults }) => {
+  const isColumnView = useWindowWidthEventListener(640);
+
   const {
     title,
     datePublished,
@@ -28,6 +31,7 @@ const PostCard: React.FC<{
     coverImage,
     placeholderImage,
   }: IPostFrontMatter = frontmatter;
+
   const dateAsStr: string = datePublished.replace(/-/g, "/");
 
   return (
@@ -36,8 +40,8 @@ const PostCard: React.FC<{
         <Image
           src={coverImage}
           alt={`Cover image for post titled '${title}'`}
-          width={800}
-          height={400}
+          width={isColumnView ? 600 : 800}
+          height={isColumnView ? 800 : 400}
           objectFit="cover"
           placeholder="blur"
           blurDataURL={placeholderImage}

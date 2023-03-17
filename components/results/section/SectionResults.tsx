@@ -27,7 +27,7 @@ const SectionResults: React.FC<{
   const [categoryFilters, setCategoryFilters] = useState<ICategoryObj[]>([]);
   const [filteredContent, setFilteredContent] = useState<any>(content);
   const [renderedPostCards, setRenderedPostCards] = useState<any>();
-  const [postView, setPostView] = useState<postView>("default");
+  const [postView, setPostView] = useState<postView>("column");
 
   const sectionAsTitle: string = capitalizeFirstChar(section);
 

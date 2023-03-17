@@ -20,7 +20,7 @@ const CategoryResults: React.FC<{
   content: any;
 }> = ({ category, content }) => {
   const [renderedPostCards, setRenderedPostCards] = useState<any>();
-  const [postView, setPostView] = useState<postView>("default");
+  const [postView, setPostView] = useState<postView>("column");
 
   const categoryAsTitle: string = capitalizeFirstChar(category);
 

@@ -37,9 +37,10 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   const globalColors = css`
     body {
-      background-color: ${currTheme.secondary};
+      background: ${currTheme.secondaryGradient};
       transition: 100ms ease-in; // ease-in for theme toggling
     }
+
 
     body::-webkit-scrollbar {
       width: 0.75rem;

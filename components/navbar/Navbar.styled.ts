@@ -30,7 +30,7 @@ export const Nav = styled.nav`
   @media (max-width: 40em) {
     padding: 1rem;
     align-items: start;
-    border-width: 0.05rem;
+    border-width: 0.075rem;
   }
 `;
 

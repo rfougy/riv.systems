@@ -3,15 +3,12 @@ import Link from "next/link";
 import { NextRouter, useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
+import ThemeToggleButton from "../features/theme-toggle/ThemeToggleButton";
+import { AudioPlayer } from "../features/audio-player/AudioPlayer";
+
+import { logo } from "../../constants/logo";
 import { sectionsList } from "../../constants/sectionsList";
 import { ITheme } from "../../interfaces/ITheme";
-
-import ThemeToggleButton from "../features/theme-toggle/ThemeToggleButton";
-
-import logoActiveLight from "../../public/assets/logo-active-light.svg";
-import logoHiddenLight from "../../public/assets/logo-hidden-light.svg";
-import logoActiveDark from "../../public/assets/logo-active-dark.svg";
-import logoHiddenDark from "../../public/assets/logo-hidden-dark.svg";
 
 import {
   Nav,
@@ -22,28 +19,16 @@ import {
   FeaturesContainer,
   LogoAndButtonsContainer,
 } from "./Navbar.styled";
-import { AudioPlayer } from "../features/audio-player/AudioPlayer";
-
-const logoTheme: any = {
-  light: {
-    active: logoActiveDark,
-    hidden: logoHiddenDark,
-  },
-  dark: {
-    active: logoActiveLight,
-    hidden: logoHiddenLight,
-  },
-};
 
 const Navbar: React.FC<{ theme: ITheme; toggleTheme: () => void }> = ({
   theme,
   toggleTheme,
 }) => {
   const { asPath: path }: NextRouter = useRouter();
-  const logoActive: any = logoTheme[theme.id].active;
-  const logoHidden: any = logoTheme[theme.id].hidden;
+  const logoActive: any = logo[theme.id].active;
+  const logoHidden: any = logo[theme.id].hidden;
 
-  const [logo, setLogo] = useState<any>(logoHidden);
+  const [logoState, setLogoState] = useState<any>(logoHidden);
   const [hoveredOption, setHoveredOption] = useState<string | null>();
   const [activeOption, setActiveOption] = useState<string | null>();
 
@@ -70,7 +55,7 @@ const Navbar: React.FC<{ theme: ITheme; toggleTheme: () => void }> = ({
 
   useEffect((): void => setNavStates(), [path]);
 
-  useEffect((): void => setLogo(logoHidden), [logoHidden, theme]);
+  useEffect((): void => setLogoState(logoHidden), [logoHidden, theme]);
 
   return (
     <Nav>
@@ -79,13 +64,13 @@ const Navbar: React.FC<{ theme: ITheme; toggleTheme: () => void }> = ({
           <Link href={`/`} passHref>
             <a>
               <Image
-                src={logo}
+                src={logoState}
                 alt="website logo"
-                onMouseOver={(): void => setLogo(logoActive)}
-                onMouseLeave={(): void => setLogo(logoHidden)}
-                onTouchStart={(): void => setLogo(logoActive)}
-                onTouchEnd={(): void => setLogo(logoHidden)}
-                onTouchCancel={(): void => setLogo(logoHidden)}
+                onMouseOver={(): void => setLogoState(logoActive)}
+                onMouseLeave={(): void => setLogoState(logoHidden)}
+                onTouchStart={(): void => setLogoState(logoActive)}
+                onTouchEnd={(): void => setLogoState(logoHidden)}
+                onTouchCancel={(): void => setLogoState(logoHidden)}
               />
             </a>
           </Link>

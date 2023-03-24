@@ -68,8 +68,7 @@ export const NavMenu = styled.ul`
   justify-content: end;
 
   @media (max-width: 40em) {
-    align-items: end;
-    flex-direction: column;
+    gap: 1rem;
   }
 `;
 

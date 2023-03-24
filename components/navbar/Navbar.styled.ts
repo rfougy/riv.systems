@@ -11,6 +11,7 @@ export const Nav = styled.nav`
   height: 100%;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 
   background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(3.5px);
@@ -20,20 +21,35 @@ export const Nav = styled.nav`
       ? "0.1rem solid rgba(0, 0, 0, 1)"
       : "0.1rem solid rgba(255, 255, 255, 1)"};
 
+  cursor: crosshair;
+  &:hover button,
+  a {
+    cursor: cell;
+  }
+
   @media (max-width: 40em) {
     padding: 1rem;
+    align-items: start;
   }
 `;
 
-export const LogoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 3rem;
-  justify-content: space-between;
+export const Logo = styled.div`
   width: 10rem;
 
   @media (max-width: 40em) {
     width: 9.5rem;
+  }
+`;
+
+export const LogoAndButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+
+  @media (max-width: 40em) {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 `;
 

@@ -29,7 +29,7 @@ export const PageContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   min-height: 100%;
-  margin: 0 2rem 2rem 2rem;
+  margin: 0 2rem 1.25rem 2rem;
 
   cursor: crosshair;
 

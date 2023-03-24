@@ -18,8 +18,9 @@ import {
   NavMenu,
   MenuOption,
   A,
-  LogoContainer,
+  Logo,
   FeaturesContainer,
+  LogoAndButtonsContainer,
 } from "./Navbar.styled";
 import { AudioPlayer } from "../features/audio-player/AudioPlayer";
 
@@ -73,25 +74,27 @@ const Navbar: React.FC<{ theme: ITheme; toggleTheme: () => void }> = ({
 
   return (
     <Nav>
-      <LogoContainer>
-        <Link href={`/`} passHref>
-          <a>
-            <Image
-              src={logo}
-              alt="website logo"
-              onMouseOver={(): void => setLogo(logoActive)}
-              onMouseLeave={(): void => setLogo(logoHidden)}
-              onTouchStart={(): void => setLogo(logoActive)}
-              onTouchEnd={(): void => setLogo(logoHidden)}
-              onTouchCancel={(): void => setLogo(logoHidden)}
-            />
-          </a>
-        </Link>
+      <LogoAndButtonsContainer>
+        <Logo>
+          <Link href={`/`} passHref>
+            <a>
+              <Image
+                src={logo}
+                alt="website logo"
+                onMouseOver={(): void => setLogo(logoActive)}
+                onMouseLeave={(): void => setLogo(logoHidden)}
+                onTouchStart={(): void => setLogo(logoActive)}
+                onTouchEnd={(): void => setLogo(logoHidden)}
+                onTouchCancel={(): void => setLogo(logoHidden)}
+              />
+            </a>
+          </Link>
+        </Logo>
         <FeaturesContainer>
           <ThemeToggleButton toggleTheme={toggleTheme} />
           <AudioPlayer />
         </FeaturesContainer>
-      </LogoContainer>
+      </LogoAndButtonsContainer>
       <NavMenu onMouseLeave={(): void => setHoveredOption(activeOption)}>
         {sectionsList.map((section: string, index: number) => (
           <MenuOption

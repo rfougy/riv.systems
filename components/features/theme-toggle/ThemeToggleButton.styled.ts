@@ -2,7 +2,10 @@ import styled from "@emotion/styled";
 
 export const Container = styled.button`
   align-items: center;
-  background-color: ${(props: any) => props.theme.idle};
+  background-color: ${(props: any) =>
+    props.theme.id === "light"
+      ? "rgba(255, 255, 255, 0.3)"
+      : "rgba(0, 0, 0, 0.3)"};
   border: 0.1rem solid ${(props: any) => props.theme.primary};
   border-radius: 3vh;
   display: flex;

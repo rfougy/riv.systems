@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function useWindowWidthEventListener(width: number | string): boolean {
+function useViewportWidthEventListener(width: number | string): boolean {
   const [isColumnView, setIsColumnView] = useState<boolean>(false);
 
   function windowInColumnView(): void {
@@ -17,4 +17,4 @@ function useWindowWidthEventListener(width: number | string): boolean {
   return isColumnView;
 }
 
-export default useWindowWidthEventListener;
+export default useViewportWidthEventListener;

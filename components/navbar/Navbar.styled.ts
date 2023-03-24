@@ -5,7 +5,7 @@ export const Nav = styled.nav`
   position: -webkit-sticky;
   top: 0;
   z-index: 1;
-  padding: 1.25rem 2rem;
+  padding: 0.75rem 2rem;
 
   display: flex;
   height: 100%;
@@ -14,7 +14,7 @@ export const Nav = styled.nav`
   align-items: center;
 
   background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(2.5px);
   border-bottom: ${(props: any) =>
     props.theme.id === "light"

@@ -5,14 +5,23 @@ export const Nav = styled.nav`
   position: -webkit-sticky;
   top: 0;
   z-index: 1;
-  padding-top: 2rem;
+  padding: 1.25rem 2rem;
 
   display: flex;
   height: 100%;
+  width: 100%;
   justify-content: space-between;
 
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border-bottom: ${(props: any) =>
+    props.theme.id === "light"
+      ? "0.1rem solid rgba(0, 0, 0, 1)"
+      : "0.1rem solid rgba(255, 255, 255, 1)"};
+
   @media (max-width: 40em) {
-    padding-top: 1rem;
+    padding: 1rem;
   }
 `;
 

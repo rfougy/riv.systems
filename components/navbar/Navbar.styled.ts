@@ -14,7 +14,7 @@ export const Nav = styled.nav`
   align-items: center;
 
   background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(3.5px);
+  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(2.5px);
   border-bottom: ${(props: any) =>
     props.theme.id === "light"
@@ -30,6 +30,7 @@ export const Nav = styled.nav`
   @media (max-width: 40em) {
     padding: 1rem;
     align-items: start;
+    border-width: 0.05rem;
   }
 `;
 

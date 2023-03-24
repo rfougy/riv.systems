@@ -20,6 +20,7 @@ import {
   A,
   LogoContainer,
   FeaturesContainer,
+  StickyWrapper,
 } from "./Navbar.styled";
 import { AudioPlayer } from "../features/audio-player/AudioPlayer";
 

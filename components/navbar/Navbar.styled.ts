@@ -1,9 +1,19 @@
 import styled from "@emotion/styled";
 
 export const Nav = styled.nav`
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1;
+  padding-top: 2rem;
+
   display: flex;
   height: 100%;
   justify-content: space-between;
+
+  @media (max-width: 40em) {
+    padding-top: 1rem;
+  }
 `;
 
 export const LogoContainer = styled.div`

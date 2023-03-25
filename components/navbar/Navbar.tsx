@@ -2,6 +2,8 @@ import Link from "next/link";
 import { NextRouter, useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
+import NavLogo from "./nav-logo/NavLogo";
+
 import ThemeToggleButton from "../features/theme-toggle/ThemeToggleButton";
 import { AudioPlayer } from "../features/audio-player/AudioPlayer";
 
@@ -9,13 +11,13 @@ import { sectionsList } from "../../constants/sectionsList";
 
 import {
   Nav,
-  NavMenu,
+  // NavMenu,
   MenuOption,
   A,
   FeaturesContainer,
   LogoAndButtonsContainer,
 } from "./Navbar.styled";
-import NavLogo from "./nav-logo/NavLogo";
+import NavMenu from "./nav-menu/NavMenu";
 
 const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
   const { asPath: path }: NextRouter = useRouter();
@@ -55,7 +57,12 @@ const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
           <AudioPlayer />
         </FeaturesContainer>
       </LogoAndButtonsContainer>
-      <NavMenu onMouseLeave={(): void => setHoveredOption(activeOption)}>
+      <NavMenu
+        activeOption={activeOption}
+        hoveredOption={hoveredOption}
+        setHoveredOption={setHoveredOption}
+      />
+      {/* <NavMenu onMouseLeave={(): void => setHoveredOption(activeOption)}>
         {sectionsList.map((section: string, index: number) => (
           <MenuOption
             key={index}
@@ -87,7 +94,7 @@ const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
             </A>
           </Link>
         </MenuOption>
-      </NavMenu>
+      </NavMenu> */}
     </Nav>
   );
 };

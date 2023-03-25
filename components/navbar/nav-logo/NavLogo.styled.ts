@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { ITheme } from "../../interfaces/ITheme";
+import { ITheme } from "../../../interfaces/ITheme";
 
 export const Logo = styled.div`
   width: 10rem;

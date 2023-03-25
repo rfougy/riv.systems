@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { ITheme } from "../../interfaces/ITheme";
 
 export const Nav = styled.nav`
   position: sticky;

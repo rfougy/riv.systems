@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import useViewportWidthEventListener from "../../hooks/useViewportWidthListener";
+import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
 
-import { logo } from "../../constants/logo";
+import { logo } from "../../../constants/logo";
 
 import { Logo } from "./NavLogo.styled";
 

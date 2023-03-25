@@ -15,7 +15,7 @@ import {
   FeaturesContainer,
   LogoAndButtonsContainer,
 } from "./Navbar.styled";
-import NavLogo from "./NavLogo";
+import NavLogo from "./nav-logo/NavLogo";
 
 const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
   const { asPath: path }: NextRouter = useRouter();

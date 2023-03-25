@@ -31,6 +31,8 @@ export const Nav = styled.nav`
     padding: 1rem;
     align-items: start;
     border-width: 0.075rem;
+
+    backdrop-filter: blur(7.5px);
   }
 `;
 

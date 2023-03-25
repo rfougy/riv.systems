@@ -17,3 +17,11 @@ export const darkTheme: ITheme = {
   idle: "#1A1A1A",
   red: "#DD4F3F",
 };
+
+export const breakpoints = {
+  xs: 640,
+  sm: 960,
+  components: {
+    slideshow: { xs: 460, sm: 515, md: 570 },
+  },
+};

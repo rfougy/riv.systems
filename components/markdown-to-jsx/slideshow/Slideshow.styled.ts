@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { lightTheme } from "../../../styles/Themes";
+import { lightTheme } from "../../../styles/theme";
 import { aspectRatio } from "../../../types/aspectRatio";
 import { ArrowIcon } from "../../icons/ArrowIcon.styled";
 

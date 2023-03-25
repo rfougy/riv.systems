@@ -13,7 +13,7 @@ import { IAnnouncement } from "../interfaces/IAnnouncement";
 import { ITheme } from "../interfaces/ITheme";
 
 import { ContentWrap, PageContainer } from "../styles/pages/App.styled";
-import { lightTheme, darkTheme } from "../styles/Themes";
+import { lightTheme, darkTheme } from "../styles/theme";
 
 import "../styles/globals.css";
 import "@fontsource/roboto-mono/400.css";

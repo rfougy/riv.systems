@@ -19,14 +19,17 @@ export const darkTheme: ITheme = {
 };
 
 export const breakpoints = {
-  xxs: "460px",
-  xs: "640px",
-  sm: "960px",
+  xxs: "28.75em",
+  xs: "40em",
+  sm: "60em",
   components: {
     slideshow: {
-      xs: "460px",
-      sm: "515px",
-      md: "570px",
+      xs: "28.75em",
+      sm: "32.1875em",
+      md: "35.625em",
     },
+  },
+  useViewportWidth: {
+    xs: 640, // 640px / 40em
   },
 };

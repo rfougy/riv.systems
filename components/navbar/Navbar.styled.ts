@@ -29,7 +29,7 @@ export const Nav = styled.nav`
 
   @media (max-width: 40em) {
     padding: 1rem;
-    align-items: start;
+    align-items: center;
     border-width: 0.075rem;
 
     backdrop-filter: blur(6px);

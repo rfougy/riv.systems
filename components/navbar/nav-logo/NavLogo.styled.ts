@@ -12,8 +12,25 @@ export const Logo = styled.div`
       theme && theme.id === "light" ? "invert(0)" : "invert(1)"};
   }
 
+  a {
+    position: relative;
+    width: 10rem;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: 40em) {
+      width: 2.25rem;
+      height: 1.25rem;
+    }
+  }
+
+  width: 10rem;
+
   @media (max-width: 40em) {
     width: 2.25rem;
-    height: 1rem;
+    height: 1.25rem;
   }
 `;

@@ -22,7 +22,9 @@ const PostCard: React.FC<{
   frontmatter: any;
   forSearchResults?: boolean;
 }> = ({ path, frontmatter, forSearchResults }) => {
-  const isColumnView = useViewportWidthEventListener(breakpoints.xs);
+  const isColumnView = useViewportWidthEventListener(
+    breakpoints.useViewportWidth.xs
+  );
 
   const {
     title,

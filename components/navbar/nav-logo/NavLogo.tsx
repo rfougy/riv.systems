@@ -10,7 +10,7 @@ import { Logo } from "./NavLogo.styled";
 import { breakpoints } from "../../../styles/theme";
 
 const NavLogo: React.FC = () => {
-  const isVerticalView = useViewportWidthEventListener(breakpoints.xs);
+  const isVerticalView = useViewportWidthEventListener(breakpoints.useViewportWidth.xs);
 
   const [logoState, setLogoState] = useState<any>();
 

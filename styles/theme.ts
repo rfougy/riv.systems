@@ -29,4 +29,7 @@ export const breakpoints = {
       md: "35.625em",
     },
   },
+  useViewportWidth: {
+    xs: 640, // 640px / 40em
+  },
 };

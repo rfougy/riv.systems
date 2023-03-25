@@ -29,7 +29,7 @@ export const PageContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   min-height: 100%;
-  margin: 2rem;
+  margin: 0 2rem 1.25rem 2rem;
 
   cursor: crosshair;
 
@@ -48,6 +48,6 @@ export const PageContainer = styled.div`
   }
 
   @media (max-width: 40em) {
-    margin: 1rem;
+    margin: 0 1rem 1rem 1rem;
   }
 `;

@@ -1,48 +1,25 @@
-import Image from "next/image";
 import Link from "next/link";
 import { NextRouter, useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-import { sectionsList } from "../../constants/sectionsList";
-import { ITheme } from "../../interfaces/ITheme";
-
 import ThemeToggleButton from "../features/theme-toggle/ThemeToggleButton";
+import { AudioPlayer } from "../features/audio-player/AudioPlayer";
 
-import logoActiveLight from "../../public/assets/logo-active-light.svg";
-import logoHiddenLight from "../../public/assets/logo-hidden-light.svg";
-import logoActiveDark from "../../public/assets/logo-active-dark.svg";
-import logoHiddenDark from "../../public/assets/logo-hidden-dark.svg";
+import { sectionsList } from "../../constants/sectionsList";
 
 import {
   Nav,
   NavMenu,
   MenuOption,
   A,
-  LogoContainer,
   FeaturesContainer,
+  LogoAndButtonsContainer,
 } from "./Navbar.styled";
-import { AudioPlayer } from "../features/audio-player/AudioPlayer";
+import NavLogo from "./nav-logo/NavLogo";
 
-const logoTheme: any = {
-  light: {
-    active: logoActiveDark,
-    hidden: logoHiddenDark,
-  },
-  dark: {
-    active: logoActiveLight,
-    hidden: logoHiddenLight,
-  },
-};
-
-const Navbar: React.FC<{ theme: ITheme; toggleTheme: () => void }> = ({
-  theme,
-  toggleTheme,
-}) => {
+const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
   const { asPath: path }: NextRouter = useRouter();
-  const logoActive: any = logoTheme[theme.id].active;
-  const logoHidden: any = logoTheme[theme.id].hidden;
 
-  const [logo, setLogo] = useState<any>(logoHidden);
   const [hoveredOption, setHoveredOption] = useState<string | null>();
   const [activeOption, setActiveOption] = useState<string | null>();
 
@@ -69,29 +46,15 @@ const Navbar: React.FC<{ theme: ITheme; toggleTheme: () => void }> = ({
 
   useEffect((): void => setNavStates(), [path]);
 
-  useEffect((): void => setLogo(logoHidden), [logoHidden, theme]);
-
   return (
     <Nav>
-      <LogoContainer>
-        <Link href={`/`} passHref>
-          <a>
-            <Image
-              src={logo}
-              alt="website logo"
-              onMouseOver={(): void => setLogo(logoActive)}
-              onMouseLeave={(): void => setLogo(logoHidden)}
-              onTouchStart={(): void => setLogo(logoActive)}
-              onTouchEnd={(): void => setLogo(logoHidden)}
-              onTouchCancel={(): void => setLogo(logoHidden)}
-            />
-          </a>
-        </Link>
+      <LogoAndButtonsContainer>
+        <NavLogo />
         <FeaturesContainer>
           <ThemeToggleButton toggleTheme={toggleTheme} />
           <AudioPlayer />
         </FeaturesContainer>
-      </LogoContainer>
+      </LogoAndButtonsContainer>
       <NavMenu onMouseLeave={(): void => setHoveredOption(activeOption)}>
         {sectionsList.map((section: string, index: number) => (
           <MenuOption

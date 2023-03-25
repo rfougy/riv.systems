@@ -41,8 +41,7 @@ export const LogoAndButtonsContainer = styled.div`
   gap: 2rem;
 
   @media (max-width: 40em) {
-    flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 `;
 

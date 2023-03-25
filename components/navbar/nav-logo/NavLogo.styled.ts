@@ -13,6 +13,7 @@ export const Logo = styled.div`
   }
 
   @media (max-width: 40em) {
-    width: 9.5rem;
+    width: 2.25rem;
+    height: 1rem;
   }
 `;

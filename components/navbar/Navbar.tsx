@@ -8,7 +8,6 @@ import { AudioPlayer } from "../features/audio-player/AudioPlayer";
 
 import { logo } from "../../constants/logo";
 import { sectionsList } from "../../constants/sectionsList";
-import { ITheme } from "../../interfaces/ITheme";
 
 import {
   Nav,
@@ -20,10 +19,7 @@ import {
   LogoAndButtonsContainer,
 } from "./Navbar.styled";
 
-const Navbar: React.FC<{ theme: ITheme; toggleTheme: () => void }> = ({
-  theme,
-  toggleTheme,
-}) => {
+const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
   const { asPath: path }: NextRouter = useRouter();
   const logoActive: any = logo.long.active;
   const logoHidden: any = logo.long.hidden;
@@ -54,8 +50,6 @@ const Navbar: React.FC<{ theme: ITheme; toggleTheme: () => void }> = ({
   }
 
   useEffect((): void => setNavStates(), [path]);
-
-  useEffect((): void => setLogoState(logoHidden), [logoHidden, theme]);
 
   return (
     <Nav>

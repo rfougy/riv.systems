@@ -139,7 +139,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             announcement={announcement}
           />
         )}
-        <Navbar toggleTheme={toggleTheme} theme={currTheme} />
+        <Navbar toggleTheme={toggleTheme} />
         <PageContainer>
           <ContentWrap isDisplayDotsPage={isDisplayDotsPage}>
             <Component {...pageProps} />

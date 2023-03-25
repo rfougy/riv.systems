@@ -1,3 +1,4 @@
+import { breakpoints } from "./../../../styles/theme";
 import styled from "@emotion/styled";
 
 export const Container = styled.div`
@@ -85,7 +86,7 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 40em) {
+  @media (max-width: ${breakpoints.xs}) {
     display: grid;
     gap: 0 3rem;
     grid-template-columns: repeat(3, 1fr);

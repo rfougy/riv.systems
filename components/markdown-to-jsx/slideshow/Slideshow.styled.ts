@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { lightTheme } from "../../../styles/Themes";
+import { breakpoints, lightTheme } from "../../../styles/theme";
 import { aspectRatio } from "../../../types/aspectRatio";
 import { ArrowIcon } from "../../icons/ArrowIcon.styled";
 
@@ -59,13 +59,13 @@ export const List = styled.ol`
   margin: 0;
   padding: 0;
 
-  @media (max-width: 35.625em) {
+  @media (max-width: ${breakpoints.components.slideshow.md}) {
     grid-template-columns: repeat(4, 1fr);
   }
-  @media (max-width: 32.188em) {
+  @media (max-width: ${breakpoints.components.slideshow.sm}) {
     grid-template-columns: repeat(3, 1fr);
   }
-  @media (max-width: 28.75em) {
+  @media (max-width: ${breakpoints.components.slideshow.xs}) {
     grid-template-columns: repeat(5, 1fr);
   }
 `;
@@ -96,7 +96,7 @@ export const AltText = styled.p`
   -webkit-line-clamp: 3;
   overflow: hidden;
 
-  @media (max-width: 28.75em) {
+  @media (max-width: ${breakpoints.components.slideshow.xs}) {
     display: none;
   }
 `;
@@ -109,7 +109,7 @@ export const SubContainer = styled.div`
 
   margin-top: 0.75rem;
 
-  @media (max-width: 28.75em) {
+  @media (max-width: ${breakpoints.components.slideshow.xs}) {
     justify-content: center;
   }
 `;

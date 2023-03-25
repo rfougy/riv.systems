@@ -13,7 +13,7 @@ import { IAnnouncement } from "../interfaces/IAnnouncement";
 import { ITheme } from "../interfaces/ITheme";
 
 import { ContentWrap, PageContainer } from "../styles/pages/App.styled";
-import { lightTheme, darkTheme } from "../styles/Themes";
+import { lightTheme, darkTheme, breakpoints } from "../styles/theme";
 
 import "../styles/globals.css";
 import "@fontsource/roboto-mono/400.css";
@@ -45,7 +45,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       width: 0.75rem;
       height: 0;
 
-      @media (max-width: 40em) {
+      @media (max-width: ${breakpoints.xs}) {
         width: 0.5rem;
         height: 0;
       }

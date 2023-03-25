@@ -1,3 +1,4 @@
+import { breakpoints } from "./../../styles/theme";
 import styled from "@emotion/styled";
 
 export const Footer = styled.footer`
@@ -12,7 +13,7 @@ export const SocialsList = styled.ul`
   margin: 0 0 0 auto;
   padding: 0;
 
-  @media (max-width: 40em) {
+  @media (max-width: ${breakpoints.xs}) {
     margin: 0 auto;
   }
 `;

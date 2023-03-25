@@ -1,3 +1,4 @@
+import { breakpoints } from './../../../../styles/theme';
 import styled from "@emotion/styled";
 
 export const Thumbnail = styled.button`
@@ -10,7 +11,7 @@ export const Thumbnail = styled.button`
     opacity: 1;
   }
 
-  @media (max-width: 25em) {
+  @media (max-width: ${breakpoints.xxs}) {
     width: 2.5rem;
   }
 `;

@@ -1,3 +1,4 @@
+import { breakpoints } from "./../../styles/theme";
 import styled from "@emotion/styled";
 
 export const PageTitle = styled.h1`
@@ -12,7 +13,7 @@ export const Container = styled.div`
   display: flex;
   gap: 6rem;
 
-  @media (max-width: 40em) {
+  @media (max-width: ${breakpoints.xs}) {
     flex-direction: column;
     gap: 3rem;
     width: 100%;
@@ -37,7 +38,7 @@ export const TitleAndToggle = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  @media (max-width: 40em) {
+  @media (max-width: ${breakpoints.xs}) {
     flex-direction: row;
     align-items: end;
   }

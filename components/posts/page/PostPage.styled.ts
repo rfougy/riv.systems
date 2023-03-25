@@ -1,3 +1,4 @@
+import { breakpoints } from "./../../../styles/theme";
 import styled from "@emotion/styled";
 
 export const Header = styled.header``;
@@ -6,7 +7,7 @@ export const Title = styled.h1`
   font-size: 2rem;
   margin: 1rem 0 1.75rem 0;
 
-  @media (max-width: 40em) {
+  @media (max-width: ${breakpoints.xs}) {
     font-size: 1.75rem;
   }
 `;

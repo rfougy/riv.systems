@@ -32,7 +32,7 @@ export const Nav = styled.nav`
     align-items: start;
     border-width: 0.075rem;
 
-    backdrop-filter: blur(7.5px);
+    backdrop-filter: blur(6px);
   }
 `;
 

@@ -3,6 +3,8 @@ import Link from "next/link";
 import { NextRouter, useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
+import useViewportWidthEventListener from "../../hooks/useViewportWidthListener";
+
 import ThemeToggleButton from "../features/theme-toggle/ThemeToggleButton";
 import { AudioPlayer } from "../features/audio-player/AudioPlayer";
 
@@ -21,12 +23,14 @@ import {
 
 const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
   const { asPath: path }: NextRouter = useRouter();
-  const logoActive: any = logo.long.active;
-  const logoHidden: any = logo.long.hidden;
+  const isVerticalView = useViewportWidthEventListener(640);
 
-  const [logoState, setLogoState] = useState<any>(logoHidden);
+  const [logoState, setLogoState] = useState<any>();
   const [hoveredOption, setHoveredOption] = useState<string | null>();
   const [activeOption, setActiveOption] = useState<string | null>();
+
+  const logoHidden = isVerticalView ? logo.short.hidden : logo.long.hidden;
+  const logoActive = isVerticalView ? logo.short.active : logo.long.active;
 
   function setNavStates(): void {
     const parsedPath: string[] = path.split("/");
@@ -49,12 +53,12 @@ const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
     setActiveOption(activeMenuOption);
   }
 
+  useEffect(() => setLogoState(logoHidden), [logoHidden]);
   useEffect((): void => setNavStates(), [path]);
 
   return (
     <Nav>
       <LogoAndButtonsContainer>
-        {/* @ts-ignore */}
         <Logo>
           <Link href={`/`} passHref>
             <a>

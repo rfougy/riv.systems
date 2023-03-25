@@ -39,11 +39,11 @@ export const Logo = styled.div`
   width: 10rem;
 
   img {
-    -webkit-filter: ${({ theme }: { theme: ITheme }) =>
-      theme.id === "light" ? "invert(0)" : "invert(1)"};
+    -webkit-filter: ${({ theme }: { theme?: ITheme }) =>
+      theme && theme.id === "light" ? "invert(0)" : "invert(1)"};
 
-    filter: ${({ theme }: { theme: ITheme }) =>
-      theme.id === "light" ? "invert(0)" : "invert(1)"};
+    filter: ${({ theme }: { theme?: ITheme }) =>
+      theme && theme.id === "light" ? "invert(0)" : "invert(1)"};
   }
 
   @media (max-width: 40em) {

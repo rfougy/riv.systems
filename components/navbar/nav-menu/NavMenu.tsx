@@ -6,11 +6,35 @@ import { sectionsList } from "../../../constants/sectionsList";
 
 import { A, Container, MenuOption } from "./NavMenu.styled";
 
-const NavMenu: React.FC<{
-  activeOption: string | null | undefined;
-  hoveredOption: string | null | undefined;
-  setHoveredOption: (arg: string | null) => void;
-}> = ({ activeOption, hoveredOption, setHoveredOption }) => {
+const NavMenu: React.FC = () => {
+  const { asPath: path }: NextRouter = useRouter();
+
+  const [hoveredOption, setHoveredOption] = useState<string | null>();
+  const [activeOption, setActiveOption] = useState<string | null>();
+
+  function setNavStates(): void {
+    const parsedPath: string[] = path.split("/");
+    let activeMenuOption: string | null;
+
+    if (path === "/") {
+      activeMenuOption = null; // Home Page
+      setHoveredOption(activeMenuOption);
+      setActiveOption(activeMenuOption);
+      return;
+    }
+
+    if (parsedPath.length === 2) {
+      activeMenuOption = parsedPath[1]; // Content Page
+    } else {
+      activeMenuOption = parsedPath[2]; // Section Page
+    }
+
+    setHoveredOption(activeMenuOption);
+    setActiveOption(activeMenuOption);
+  }
+
+  useEffect((): void => setNavStates(), [path]);
+
   return (
     <Container
       onMouseLeave={(): void => setHoveredOption(activeOption as string | null)}

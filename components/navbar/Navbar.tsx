@@ -25,8 +25,8 @@ const Navbar: React.FC<{ theme: ITheme; toggleTheme: () => void }> = ({
   toggleTheme,
 }) => {
   const { asPath: path }: NextRouter = useRouter();
-  const logoActive: any = logo[theme.id].active;
-  const logoHidden: any = logo[theme.id].hidden;
+  const logoActive: any = logo.long.active;
+  const logoHidden: any = logo.long.hidden;
 
   const [logoState, setLogoState] = useState<any>(logoHidden);
   const [hoveredOption, setHoveredOption] = useState<string | null>();
@@ -60,6 +60,7 @@ const Navbar: React.FC<{ theme: ITheme; toggleTheme: () => void }> = ({
   return (
     <Nav>
       <LogoAndButtonsContainer>
+        {/* @ts-ignore */}
         <Logo>
           <Link href={`/`} passHref>
             <a>

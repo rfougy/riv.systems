@@ -12,4 +12,8 @@ export const logo: any = {
     active: logoActiveLight,
     hidden: logoHiddenLight,
   },
+  long: {
+    active: logoActiveDark,
+    hidden: logoHiddenDark,
+  },
 };

@@ -15,13 +15,14 @@ import {
   Title,
 } from "./PostCard.styled";
 import useViewportWidthEventListener from "../../../../../hooks/useViewportWidthListener";
+import { breakpoints } from "../../../../../styles/theme";
 
 const PostCard: React.FC<{
   path: string;
   frontmatter: any;
   forSearchResults?: boolean;
 }> = ({ path, frontmatter, forSearchResults }) => {
-  const isColumnView = useViewportWidthEventListener(640);
+  const isColumnView = useViewportWidthEventListener(breakpoints.xs);
 
   const {
     title,

@@ -7,9 +7,10 @@ import useViewportWidthEventListener from "../../../hooks/useViewportWidthListen
 import { logo } from "../../../constants/logo";
 
 import { Logo } from "./NavLogo.styled";
+import { breakpoints } from "../../../styles/theme";
 
 const NavLogo: React.FC = () => {
-  const isVerticalView = useViewportWidthEventListener(640);
+  const isVerticalView = useViewportWidthEventListener(breakpoints.xs);
 
   const [logoState, setLogoState] = useState<any>();
 

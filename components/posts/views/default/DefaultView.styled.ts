@@ -7,7 +7,7 @@ export const Grid = styled.section`
   align-items: start;
   grid-template-columns: repeat(3, 1fr);
 
-  @media (${breakpoints.sm}) {
+  @media (max-width: ${breakpoints.sm}) {
     grid-template-columns: repeat(2, 1fr);
   }
 

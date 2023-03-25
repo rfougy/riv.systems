@@ -1,3 +1,4 @@
+import { breakpoints } from "./../../../styles/theme";
 import styled from "@emotion/styled";
 
 export const Container = styled.div`
@@ -23,7 +24,7 @@ export const Button = styled.button`
     background: ${(props: any) => props.theme.highlight};
   }
 
-  @media (max-width: 40em) {
+  @media (max-width: ${breakpoints.xs}) {
     border: solid 0.075rem ${(props: any) => props.theme.primary};
   }
 `;

@@ -1,3 +1,4 @@
+import { breakpoints } from "./../theme";
 import styled from "@emotion/styled";
 
 /**
@@ -19,7 +20,7 @@ export const ContentWrap = styled.div`
 
   min-height: calc(100vh - (5rem + 3.375rem));
 
-  @media (max-width: 40em) {
+  @media (max-width: ${breakpoints.xs}) {
     min-height: calc(100vh - (6rem + 2.375rem));
   }
 `;
@@ -47,7 +48,7 @@ export const PageContainer = styled.div`
     cursor: text;
   }
 
-  @media (max-width: 40em) {
+  @media (max-width: ${breakpoints.xs}) {
     margin: 0 1rem 1rem 1rem;
   }
 `;

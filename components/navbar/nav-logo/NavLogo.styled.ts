@@ -1,3 +1,4 @@
+import { breakpoints } from "./../../../styles/theme";
 import styled from "@emotion/styled";
 import { ITheme } from "../../../interfaces/ITheme";
 
@@ -21,7 +22,7 @@ export const Logo = styled.div`
     flex-direction: column;
     justify-content: center;
 
-    @media (max-width: 40em) {
+    @media (max-width: ${breakpoints.xs}) {
       width: 2.25rem;
       height: 1.25rem;
     }
@@ -29,7 +30,7 @@ export const Logo = styled.div`
 
   width: 10rem;
 
-  @media (max-width: 40em) {
+  @media (max-width: ${breakpoints.xs}) {
     width: 2.25rem;
     height: 1.25rem;
   }

@@ -1,3 +1,4 @@
+import { breakpoints } from "./../../../styles/theme";
 import styled from "@emotion/styled";
 
 export const Container = styled.ul`
@@ -6,7 +7,7 @@ export const Container = styled.ul`
   height: 100%;
   justify-content: end;
 
-  @media (max-width: 40em) {
+  @media (max-width: ${breakpoints.xs}) {
     gap: 1rem;
   }
 `;

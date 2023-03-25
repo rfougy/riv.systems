@@ -1,3 +1,4 @@
+import { breakpoints } from "./../../styles/theme";
 import styled from "@emotion/styled";
 
 export const Nav = styled.nav`
@@ -27,7 +28,7 @@ export const Nav = styled.nav`
     cursor: cell;
   }
 
-  @media (max-width: 40em) {
+  @media (max-width: ${breakpoints.xs}) {
     padding: 1rem;
     align-items: center;
     border-width: 0.075rem;
@@ -42,7 +43,7 @@ export const LogoAndButtonsContainer = styled.div`
   justify-content: space-between;
   gap: 2rem;
 
-  @media (max-width: 40em) {
+  @media (max-width: ${breakpoints.xs}) {
     gap: 1rem;
   }
 `;

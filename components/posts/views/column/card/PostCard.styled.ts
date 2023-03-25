@@ -1,3 +1,4 @@
+import { breakpoints } from "./../../../../../styles/theme";
 import styled from "@emotion/styled";
 
 export const Container = styled.a`
@@ -19,7 +20,7 @@ export const Container = styled.a`
     background: ${(props: any) => props.theme.highlight};
   }
 
-  @media (max-width: 40em) {
+  @media (max-width: ${breakpoints.xs}) {
     border: solid 0.075rem;
     max-width: none;
   }
@@ -33,7 +34,7 @@ export const Text = styled.div`
   border-top: solid 0.1rem;
   padding: 1rem;
 
-  @media (max-width: 40em) {
+  @media (max-width: ${breakpoints.xs}) {
     border-top: solid 0.075rem;
   }
 `;

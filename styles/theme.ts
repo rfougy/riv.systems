@@ -19,9 +19,16 @@ export const darkTheme: ITheme = {
 };
 
 export const breakpoints = {
-  xs: 640,
-  sm: 960,
+  xxs: "460px", //25em
+  xs: "640px", // 40em
+  sm: "960px", //60em
   components: {
-    slideshow: { xs: 460, sm: 515, md: 570 },
+    slideshow: {
+      xs: "460px", //25rem
+      sm: "515px", //40rem
+      md: "570px", //60rem
+    },
   },
 };
+
+export const mediaRatios = {};

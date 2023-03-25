@@ -35,22 +35,6 @@ export const Nav = styled.nav`
   }
 `;
 
-export const Logo = styled.div`
-  width: 10rem;
-
-  img {
-    -webkit-filter: ${({ theme }: { theme?: ITheme }) =>
-      theme && theme.id === "light" ? "invert(0)" : "invert(1)"};
-
-    filter: ${({ theme }: { theme?: ITheme }) =>
-      theme && theme.id === "light" ? "invert(0)" : "invert(1)"};
-  }
-
-  @media (max-width: 40em) {
-    width: 9.5rem;
-  }
-`;
-
 export const LogoAndButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;

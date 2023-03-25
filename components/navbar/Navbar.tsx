@@ -1,14 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import { NextRouter, useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-import useViewportWidthEventListener from "../../hooks/useViewportWidthListener";
-
 import ThemeToggleButton from "../features/theme-toggle/ThemeToggleButton";
 import { AudioPlayer } from "../features/audio-player/AudioPlayer";
 
-import { logo } from "../../constants/logo";
 import { sectionsList } from "../../constants/sectionsList";
 
 import {
@@ -16,21 +12,16 @@ import {
   NavMenu,
   MenuOption,
   A,
-  Logo,
   FeaturesContainer,
   LogoAndButtonsContainer,
 } from "./Navbar.styled";
+import NavLogo from "./NavLogo";
 
 const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
   const { asPath: path }: NextRouter = useRouter();
-  const isVerticalView = useViewportWidthEventListener(640);
 
-  const [logoState, setLogoState] = useState<any>();
   const [hoveredOption, setHoveredOption] = useState<string | null>();
   const [activeOption, setActiveOption] = useState<string | null>();
-
-  const logoHidden = isVerticalView ? logo.short.hidden : logo.long.hidden;
-  const logoActive = isVerticalView ? logo.short.active : logo.long.active;
 
   function setNavStates(): void {
     const parsedPath: string[] = path.split("/");
@@ -53,27 +44,12 @@ const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
     setActiveOption(activeMenuOption);
   }
 
-  useEffect(() => setLogoState(logoHidden), [logoHidden]);
   useEffect((): void => setNavStates(), [path]);
 
   return (
     <Nav>
       <LogoAndButtonsContainer>
-        <Logo>
-          <Link href={`/`} passHref>
-            <a>
-              <Image
-                src={logoState}
-                alt="website logo"
-                onMouseOver={(): void => setLogoState(logoActive)}
-                onMouseLeave={(): void => setLogoState(logoHidden)}
-                onTouchStart={(): void => setLogoState(logoActive)}
-                onTouchEnd={(): void => setLogoState(logoHidden)}
-                onTouchCancel={(): void => setLogoState(logoHidden)}
-              />
-            </a>
-          </Link>
-        </Logo>
+        <NavLogo />
         <FeaturesContainer>
           <ThemeToggleButton toggleTheme={toggleTheme} />
           <AudioPlayer />

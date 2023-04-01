@@ -33,7 +33,6 @@ export const Container = styled.a`
   }
 
   @media (max-width: ${breakpoints.xs}) {
-    border: solid 0.075rem;
     max-width: none;
   }
 `;

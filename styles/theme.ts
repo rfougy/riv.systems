@@ -19,17 +19,17 @@ export const darkTheme: ITheme = {
 };
 
 export const breakpoints = {
-  xxs: "28.75em",
-  xs: "40em",
-  sm: "60em",
+  xxs: "28.75em", // 460px
+  xs: "40em", // 640px
+  sm: "60em", // 960px
   components: {
     slideshow: {
-      xs: "28.75em",
-      sm: "32.1875em",
-      md: "35.625em",
+      xs: "28.75em", // 460px
+      sm: "32.1875em", // 515px
+      md: "35.625em", // 570px
     },
   },
   useViewportWidth: {
-    xs: 640, // 640px / 40em
+    xs: 640, // 640px | 40em
   },
 };

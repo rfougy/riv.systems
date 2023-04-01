@@ -11,8 +11,10 @@ export const Container = styled.a`
   max-width: 18.75rem;
 
   margin: auto;
-  border: 0.1rem solid transparent;
+  border: solid transparent;
   border-radius: 2vh;
+  border-width: 0 0.075rem 0.1rem 0.075rem;
+
 
   background: padding-box,
     linear-gradient(

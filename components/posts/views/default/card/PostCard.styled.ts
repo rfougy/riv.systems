@@ -11,13 +11,25 @@ export const Container = styled.a`
   max-width: 18.75rem;
 
   margin: auto;
-  border: solid 0.1rem;
+  border: 0.075rem solid transparent;
   border-radius: 2vh;
 
-  background: ${(props: any) => props.theme.idle};
+  background: padding-box,
+    linear-gradient(
+        180deg,
+        ${(props: any) => props.theme.secondary} 55%,
+        ${(props: any) => props.theme.primary} 150%
+      )
+      border-box;
 
   &:hover {
-    background: ${(props: any) => props.theme.highlight};
+    background: padding-box,
+      linear-gradient(
+          180deg,
+          ${(props: any) => props.theme.secondary} 55%,
+          ${(props: any) => props.theme.primary} 100%
+        )
+        border-box;
   }
 
   @media (max-width: ${breakpoints.xs}) {
@@ -27,12 +39,8 @@ export const Container = styled.a`
 `;
 
 export const Text = styled.div`
-  border-top: solid 0.1rem;
   padding: 1rem;
-
-  @media (max-width: ${breakpoints.xs}) {
-    border-top: solid 0.075rem;
-  }
+  background: ${(props: any) => props.theme.secondary};
 `;
 
 export const Metadata = styled.div``;

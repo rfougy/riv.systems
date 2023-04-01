@@ -11,7 +11,7 @@ export const Container = styled.a`
   max-width: 18.75rem;
 
   margin: auto;
-  border: 0.075rem solid transparent;
+  border: 0.1rem solid transparent;
   border-radius: 2vh;
 
   background: padding-box,
@@ -21,6 +21,12 @@ export const Container = styled.a`
         ${(props: any) => props.theme.primary} 100%
       )
       border-box;
+
+  &:hover {
+    div {
+      background: ${(props: any) => props.theme.highlight};
+    }
+  }
 
   @media (max-width: ${breakpoints.xs}) {
     max-width: none;

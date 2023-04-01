@@ -11,18 +11,33 @@ export const Container = styled.a`
   max-width: 50rem;
 
   margin: auto;
-  border: solid 0.1rem;
+  border: solid 0.1rem transparent;
   border-radius: 2vh;
 
-  background: ${(props: any) => props.theme.idle};
+  background: padding-box,
+    linear-gradient(
+        180deg,
+        ${(props: any) => props.theme.secondary} 82.5%,
+        ${(props: any) => props.theme.primary} 100%
+      )
+      border-box;
 
   &:hover {
-    background: ${(props: any) => props.theme.highlight};
+    div {
+      background: ${(props: any) => props.theme.highlight};
+    }
   }
 
   @media (max-width: ${breakpoints.xs}) {
-    border: solid 0.075rem;
     max-width: none;
+
+    background: padding-box,
+      linear-gradient(
+          180deg,
+          ${(props: any) => props.theme.secondary} 87.5%,
+          ${(props: any) => props.theme.primary} 100%
+        )
+        border-box;
   }
 `;
 
@@ -30,13 +45,9 @@ export const Text = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-
-  border-top: solid 0.1rem;
   padding: 1rem;
 
-  @media (max-width: ${breakpoints.xs}) {
-    border-top: solid 0.075rem;
-  }
+  background: ${(props: any) => props.theme.secondary};
 `;
 
 export const Metadata = styled.div`

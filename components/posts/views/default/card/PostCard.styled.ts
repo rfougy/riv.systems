@@ -18,19 +18,9 @@ export const Container = styled.a`
     linear-gradient(
         180deg,
         ${(props: any) => props.theme.secondary} 55%,
-        ${(props: any) => props.theme.primary} 150%
+        ${(props: any) => props.theme.primary} 100%
       )
       border-box;
-
-  &:hover {
-    background: padding-box,
-      linear-gradient(
-          180deg,
-          ${(props: any) => props.theme.secondary} 55%,
-          ${(props: any) => props.theme.primary} 100%
-        )
-        border-box;
-  }
 
   @media (max-width: ${breakpoints.xs}) {
     max-width: none;

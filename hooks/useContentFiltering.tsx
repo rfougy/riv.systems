@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+
 import ISectionObj from "../interfaces/ISectionObj";
 import ICategoryObj from "../interfaces/ICategoryObj";
+
 import {
   getCategoriesForFilterMenu,
   getSectionsForFilterMenu,

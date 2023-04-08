@@ -89,11 +89,6 @@ const ContentResults: React.FC<{
     }
   }, [categoryFilters, sectionFilters, content]);
 
-  useEffect(() => {
-    console.log("categoryFilters: ", categoryFilters);
-    console.log("sectionFilters: ", sectionFilters);
-  }, [categoryFilters, sectionFilters]);
-
   return (
     <Container>
       <FilterSection>

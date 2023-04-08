@@ -14,9 +14,14 @@ import {
   TitleAndToggle,
   ViewSection,
 } from "../Results.styled";
+
 import { postView } from "../../../types/postView";
 import ColumnView from "../../posts/views/column/ColumnView";
 import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
+import {
+  getCategoriesForFilterMenu,
+  getSectionsForFilterMenu,
+} from "../../../lib/dynamic-pages/getSectionsAndCategories";
 
 const ContentResults: React.FC<{
   content: any;
@@ -27,47 +32,8 @@ const ContentResults: React.FC<{
   const [renderedPostCards, setRenderedPostCards] = useState<any>();
   const [postView, setPostView] = useState<postView>("default");
 
-  const sections: ISectionObj[] = content.reduce(
-    (list: ISectionObj[], singleContent: any) => {
-      const { section: contentSection }: { section: string } = singleContent;
-
-      const sectionObj: ISectionObj = {
-        section: contentSection,
-      };
-
-      const sectionInList: ISectionObj | undefined = list.find(
-        (item): boolean => item.section === sectionObj.section
-      );
-
-      if (!sectionInList) list.push(sectionObj);
-      return list;
-    },
-    []
-  );
-
-  const categories: ICategoryObj[] = content.reduce(
-    (list: ICategoryObj[], singleContent: any) => {
-      const {
-        category: categorySection,
-        section: contentSection,
-      }: { category: string; section: string } = singleContent;
-
-      const categoryObj: ICategoryObj = {
-        category: categorySection,
-        section: contentSection,
-      };
-
-      const categoryInList: ICategoryObj | undefined = list.find(
-        (item): boolean =>
-          item.category === categoryObj.category &&
-          item.section === categoryObj.section
-      );
-
-      if (!categoryInList) list.push(categoryObj);
-      return list;
-    },
-    []
-  );
+  const sections: ISectionObj[] = getSectionsForFilterMenu(content);
+  const categories: ICategoryObj[] = getCategoriesForFilterMenu(content);
 
   function renderPostView(): React.ReactElement {
     switch (postView) {
@@ -122,6 +88,11 @@ const ContentResults: React.FC<{
       return;
     }
   }, [categoryFilters, sectionFilters, content]);
+
+  useEffect(() => {
+    console.log("categoryFilters: ", categoryFilters);
+    console.log("sectionFilters: ", sectionFilters);
+  }, [categoryFilters, sectionFilters]);
 
   return (
     <Container>

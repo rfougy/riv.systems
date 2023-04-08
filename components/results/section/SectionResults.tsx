@@ -19,6 +19,7 @@ import {
 import { postView } from "../../../types/postView";
 import ColumnView from "../../posts/views/column/ColumnView";
 import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
+import { getCategoriesForFilterMenu } from "../../../lib/dynamic-pages/getSectionsAndCategories";
 
 const SectionResults: React.FC<{
   section: sectionType | string;
@@ -31,29 +32,7 @@ const SectionResults: React.FC<{
 
   const sectionAsTitle: string = capitalizeFirstChar(section);
 
-  const categories: ICategoryObj[] = content.reduce(
-    (list: ICategoryObj[], singleContent: any) => {
-      const {
-        category: categorySection,
-        section: contentSection,
-      }: { category: string; section: sectionType } = singleContent;
-
-      const categoryObj: ICategoryObj = {
-        category: categorySection,
-        section: contentSection,
-      };
-
-      const categoryInList: ICategoryObj | undefined = list.find(
-        (item): boolean =>
-          item.category === categoryObj.category &&
-          item.section === categoryObj.section
-      );
-
-      if (!categoryInList) list.push(categoryObj);
-      return list;
-    },
-    []
-  );
+  const categories: ICategoryObj[] = getCategoriesForFilterMenu(content);
 
   function renderPostView(): React.ReactElement {
     switch (postView) {

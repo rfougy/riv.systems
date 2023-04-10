@@ -35,8 +35,8 @@ export const musicPlaylist: IMusicPlaylist[] = shuffleArr([
   {
     title: "If You Crump Stand Up",
     artist: "edIT",
-    src: "https://user-images.githubusercontent.com/77861258/231020633-81c0fd7a-a321-4b3e-a733-d8bbf4363900.webm"
-  }
+    src: "https://user-images.githubusercontent.com/77861258/231020633-81c0fd7a-a321-4b3e-a733-d8bbf4363900.webm",
+  },
   {
     title: "Warrior",
     artist: "Eprom, G Jones",

@@ -32,4 +32,19 @@ export const musicPlaylist: IMusicPlaylist[] = shuffleArr([
     artist: "The Glitch Mob",
     src: "https://user-images.githubusercontent.com/77861258/225471782-dfc92beb-f3ce-4c05-99cd-541e09d757c2.webm",
   },
+  {
+    title: "If You Crump Stand Up",
+    artist: "edIT",
+    src: "https://user-images.githubusercontent.com/77861258/231020633-81c0fd7a-a321-4b3e-a733-d8bbf4363900.webm",
+  },
+  {
+    title: "Warrior",
+    artist: "Eprom, G Jones",
+    src: "https://user-images.githubusercontent.com/77861258/231020116-ba41a5be-5ddf-43e1-a75a-56717d692ee4.webm",
+  },
+  {
+    title: "Begin New",
+    artist: "Leotrix",
+    src: "https://user-images.githubusercontent.com/77861258/231020370-7e404f3c-6d88-423f-bef3-cd36e6d773b1.webm",
+  },
 ]);

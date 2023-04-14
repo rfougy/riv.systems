@@ -15,13 +15,7 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
   const [inactiveCoords, setInactiveCoords] = useState<number[][]>();
   const [animeEnded, setAnimeEnded] = useState<boolean>(false);
 
-  function displayDotsAnimeCallback(restart?: "restart"): void | string {
-    if (restart) {
-      setDeactivatedCoords([]);
-      setAnimeEnded(false);
-      return;
-    }
-
+  function displayDotsAnimeCallback(): void {
     if (inactiveCoords?.length) {
       const inactiveCoord: number[] | undefined = inactiveCoords?.pop();
 
@@ -35,6 +29,16 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
     setAnimeEnded(true);
   }
 
+  function startAnime(inactiveCoords: number[][]) {
+    setInactiveCoords(inactiveCoords);
+  }
+
+  function resetAnime(inactiveCoords: number[][]) {
+    setDeactivatedCoords([]);
+    setInactiveCoords(inactiveCoords);
+    setAnimeEnded(false);
+  }
+
   useInterval(animeEnded, displayDotsAnimeCallback, 12.5);
 
   return (
@@ -42,9 +46,8 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
       value={{
         deactivatedCoords,
         animeEnded,
-        setInactiveCoords,
-        setAnimeEnded,
-        displayDotsAnimeCallback,
+        startAnime,
+        resetAnime,
       }}
     >
       {children}

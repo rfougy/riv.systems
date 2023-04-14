@@ -22,8 +22,7 @@ const DisplayDotsAnime: React.FC<{
   text?: string;
   includeRestartButton?: boolean;
 }> = ({ text = "DISPLAY DOTS!", includeRestartButton }) => {
-  const { setInactiveCoords, displayDotsAnimeCallback, setAnimeEnded } =
-    useDisplayDotsCoordsContext();
+  const { resetAnime, startAnime } = useDisplayDotsCoordsContext();
 
   const upperCaseText: string = text.toUpperCase();
 
@@ -41,16 +40,15 @@ const DisplayDotsAnime: React.FC<{
     []
   );
 
-  function startAnimation() {
-    setInactiveCoords(shuffleArr(allInactiveCoords));
+  function start() {
+    startAnime(shuffleArr(allInactiveCoords));
   }
 
-  function resetAnimation() {
-    setInactiveCoords(shuffleArr(allInactiveCoords));
-    displayDotsAnimeCallback("restart");
+  function reset() {
+    resetAnime(shuffleArr(allInactiveCoords));
   }
 
-  useEffect((): void => startAnimation(), []);
+  useEffect((): void => start(), []);
 
   return (
     <Container>
@@ -60,7 +58,7 @@ const DisplayDotsAnime: React.FC<{
         ))}
       </DisplayDotsContainer>
       {includeRestartButton && (
-        <Button onClick={() => resetAnimation()}>
+        <Button onClick={() => reset()}>
           <RestartIcon />
         </Button>
       )}

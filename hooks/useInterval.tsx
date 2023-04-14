@@ -12,8 +12,6 @@ export function useInterval(
   const savedCallback: any = useRef();
   const savedStopTrigger: any = useRef();
 
-  console.log("stopTrigger: ", stopTrigger);
-
   useEffect(() => {
     savedCallback.current = callback;
     savedStopTrigger.current = stopTrigger;
@@ -21,11 +19,9 @@ export function useInterval(
 
   useEffect(() => {
     function tick() {
-      console.log("TRIGGER");
       savedCallback.current();
     }
     if (!stopTrigger) {
-      console.log("savedStopTrigger.current: ", savedStopTrigger.current);
       savedStopTrigger.current = stopTrigger;
       let id = setInterval(tick, delay);
       return () => clearInterval(id);

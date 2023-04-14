@@ -16,7 +16,6 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
   const [animeEnded, setAnimeEnded] = useState<boolean>(false);
 
   function displayDotsAnimeCallback(restart?: "restart"): void | string {
-    console.log("inactiveCoords?.length: ", inactiveCoords?.length);
     if (restart) {
       setDeactivatedCoords([]);
       setAnimeEnded(false);
@@ -42,6 +41,7 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
     <DisplayDotsCoordsContext.Provider
       value={{
         deactivatedCoords,
+        animeEnded,
         setInactiveCoords,
         setAnimeEnded,
         displayDotsAnimeCallback,

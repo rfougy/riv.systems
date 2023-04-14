@@ -7,7 +7,12 @@ import { Dot } from "./DotCell.styled";
 const DotCell: React.FC<{ coord: number[] }> = ({ coord }) => {
   const [isDeactivated, setIsDeactivated] = useState<boolean>(false);
 
-  const { deactivatedCoords: dCoords } = useDisplayDotsCoordsContext();
+  const { deactivatedCoords: dCoords, animeEnded } =
+    useDisplayDotsCoordsContext();
+
+  useEffect(() => {
+    if (!animeEnded) setIsDeactivated(false);
+  }, [animeEnded]);
 
   useEffect(() => {
     const latestDCoord: number[] | undefined = dCoords

@@ -11,12 +11,18 @@ import {
 } from "../../../lib/display-dots-animation/getCoords";
 import { shuffleArr } from "../../../utils";
 
-import { Container } from "./DisplayDotsAnime.styled";
+import {
+  Button,
+  Container,
+  DisplayDotsContainer,
+  RestartIcon,
+} from "./DisplayDotsAnime.styled";
 
-const DisplayDotsAnime: React.FC<{ text?: string }> = ({
-  text = "DISPLAY DOTS!",
-}) => {
-  const { setInactiveCoords, setInactiveCoordsIsInContext } =
+const DisplayDotsAnime: React.FC<{
+  text?: string;
+  includeRestartButton?: boolean;
+}> = ({ text = "DISPLAY DOTS!", includeRestartButton }) => {
+  const { setInactiveCoords, displayDotsAnimeCallback, setAnimeEnded } =
     useDisplayDotsCoordsContext();
 
   const upperCaseText: string = text.toUpperCase();
@@ -35,16 +41,29 @@ const DisplayDotsAnime: React.FC<{ text?: string }> = ({
     []
   );
 
-  useEffect((): void => {
+  function startAnimation() {
     setInactiveCoords(shuffleArr(allInactiveCoords));
-    setInactiveCoordsIsInContext(true);
-  }, []);
+  }
+
+  function resetAnimation() {
+    setInactiveCoords(shuffleArr(allInactiveCoords));
+    displayDotsAnimeCallback("restart");
+  }
+
+  useEffect((): void => startAnimation(), []);
 
   return (
     <Container>
-      {coordsByWordAndSpace.map((wordOrSpace: string, index: number) => (
-        <DotWord key={index} wordOrSpace={wordOrSpace} />
-      ))}
+      <DisplayDotsContainer>
+        {coordsByWordAndSpace.map((wordOrSpace: string, index: number) => (
+          <DotWord key={index} wordOrSpace={wordOrSpace} />
+        ))}
+      </DisplayDotsContainer>
+      {includeRestartButton && (
+        <Button onClick={() => resetAnimation()}>
+          <RestartIcon />
+        </Button>
+      )}
     </Container>
   );
 };

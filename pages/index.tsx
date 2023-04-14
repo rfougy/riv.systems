@@ -18,7 +18,10 @@ const Home: NextPage = () => {
         <Container>
           <Description>Hi, my name is Riviere, welcome to:</Description>
           <Margin>
-            <DisplayDotsAnime text={"RIV.SYSTEMS"} />
+            <DisplayDotsAnime
+              text={"RIV.SYSTEMS"}
+              includeRestartButton={true}
+            />
           </Margin>
           <Description>
             I created this website to document <br />

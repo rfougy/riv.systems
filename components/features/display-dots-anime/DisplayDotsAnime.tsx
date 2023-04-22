@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 import DotWord from "./word/DotWord";
 import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsContext";
@@ -26,12 +26,16 @@ const DisplayDotsAnime: React.FC<{
 
   const upperCaseText: string = text.toUpperCase();
 
-  const coordsByWordAndSpace: any = Object.values(
-    groupCoordsByWordAndSpace(upperCaseText)
+  const coordsByWordAndSpace: any = useMemo(
+    () => Object.values(groupCoordsByWordAndSpace(upperCaseText)),
+    [upperCaseText]
   );
-  const coordsByChar: IAllCoords[] = Object.values(
-    groupCoordsByChar(upperCaseText)
+
+  const coordsByChar: IAllCoords[] = useMemo(
+    () => Object.values(groupCoordsByChar(upperCaseText)),
+    [upperCaseText]
   );
+
   const allInactiveCoords: number[][] = coordsByChar.reduce(
     (inactiveCoordsList: number[][], coordGroup: IAllCoords) => {
       inactiveCoordsList.push(...coordGroup.inactiveCoords);

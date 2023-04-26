@@ -8,6 +8,19 @@ export const Button = styled.button`
   position: relative;
 
   img {
+    ${(props: any) =>
+      props.rotate &&
+      `animation: rotation 3s infinite linear; 
+      @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(-359deg);
+        }
+      }`}
+
+
     -webkit-filter: ${({
       isActive = true,
       isDisabled = false,
@@ -15,6 +28,7 @@ export const Button = styled.button`
     }: {
       isActive?: boolean;
       isDisabled?: boolean;
+      rotate?: boolean;
       theme: ITheme;
     }) =>
       isDisabled
@@ -32,6 +46,7 @@ export const Button = styled.button`
     }: {
       isActive?: boolean;
       isDisabled?: boolean;
+      rotate?: boolean;
       theme: ITheme;
     }) =>
       isDisabled

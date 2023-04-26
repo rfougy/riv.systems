@@ -8,8 +8,9 @@ const IconButton: React.FC<{
   ariaLabel: string;
   isActive?: boolean;
   isDisabled?: boolean;
+  rotate?: boolean;
   onClick: () => any | ((arg: any) => any);
-}> = ({ src, alt, ariaLabel, isActive, isDisabled, onClick }) => {
+}> = ({ src, alt, ariaLabel, isActive, isDisabled, rotate, onClick }) => {
   return (
     <>
       {/* @ts-ignore */}
@@ -17,6 +18,7 @@ const IconButton: React.FC<{
         aria-label={ariaLabel}
         isActive={isActive}
         isDisabled={isDisabled}
+        rotate={rotate}
         onClick={() => (isDisabled ? null : onClick())}
       >
         <Image src={src} alt={alt} layout="fill" objectFit="contain" />

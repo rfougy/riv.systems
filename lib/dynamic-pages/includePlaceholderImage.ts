@@ -10,9 +10,9 @@ export async function includePlaceholderImage(
 
   const contentIsForResultsPage = Array.isArray(content);
 
-  const nodeEnvIsDev = process.env.NODE_ENV === "development";
+  const developingOffline = process.env.DEVELOPING_OFFLINE === "true";
 
-  if (nodeEnvIsDev && contentIsForResultsPage) {
+  if (developingOffline && contentIsForResultsPage) {
     const contentWithPlaceholderImage = await Promise.all(
       content.map(async (singleContent: any) => {
         singleContent.frontmatter.coverImage = devPlaceholderImage;
@@ -22,7 +22,7 @@ export async function includePlaceholderImage(
     return contentWithPlaceholderImage;
   }
 
-  if (nodeEnvIsDev && !contentIsForResultsPage) {
+  if (developingOffline && !contentIsForResultsPage) {
     // @ts-ignore
     content.frontmatter.coverImage = devPlaceholderImage;
     return content;

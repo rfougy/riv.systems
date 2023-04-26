@@ -1,7 +1,8 @@
 import { useEffect, useMemo } from "react";
+import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsContext";
 
 import DotWord from "./word/DotWord";
-import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsContext";
+import IconButton from "../../shared/icon-button/IconButton";
 
 import IAllCoords from "../../../interfaces/IAllCoords";
 
@@ -10,12 +11,11 @@ import {
   groupCoordsByWordAndSpace,
 } from "../../../lib/display-dots-animation/getCoords";
 import { shuffleArr } from "../../../utils";
+import restartIcon from "../../../public/assets/icons/restart-icon.svg";
 
 import {
-  Button,
   Container,
   DisplayDotsContainer,
-  RestartIcon,
 } from "./DisplayDotsAnime.styled";
 
 const DisplayDotsAnime: React.FC<{
@@ -62,9 +62,12 @@ const DisplayDotsAnime: React.FC<{
         ))}
       </DisplayDotsContainer>
       {includeRestartButton && (
-        <Button onClick={() => reset()}>
-          <RestartIcon />
-        </Button>
+        <IconButton
+          src={restartIcon}
+          alt="restart icon"
+          ariaLabel="restart animation"
+          onClick={() => reset()}
+        />
       )}
     </Container>
   );

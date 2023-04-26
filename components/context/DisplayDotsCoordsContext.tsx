@@ -33,7 +33,7 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
     setInactiveCoords(inactiveCoords);
   }
 
-  function resetAnime(inactiveCoords: number[][]) {
+  function restartAnime(inactiveCoords: number[][]) {
     setDeactivatedCoords([]);
     setInactiveCoords(inactiveCoords);
     setAnimeEnded(false);
@@ -47,7 +47,7 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
         deactivatedCoords,
         animeEnded,
         startAnime,
-        resetAnime,
+        restartAnime,
       }}
     >
       {children}

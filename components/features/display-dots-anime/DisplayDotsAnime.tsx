@@ -13,16 +13,13 @@ import {
 import { shuffleArr } from "../../../utils";
 import restartIcon from "../../../public/assets/icons/restart-icon.svg";
 
-import {
-  Container,
-  DisplayDotsContainer,
-} from "./DisplayDotsAnime.styled";
+import { Container, DisplayDotsContainer } from "./DisplayDotsAnime.styled";
 
 const DisplayDotsAnime: React.FC<{
   text?: string;
   includeRestartButton?: boolean;
 }> = ({ text = "DISPLAY DOTS!", includeRestartButton }) => {
-  const { resetAnime, startAnime } = useDisplayDotsCoordsContext();
+  const { restartAnime, startAnime } = useDisplayDotsCoordsContext();
 
   const upperCaseText: string = text.toUpperCase();
 
@@ -48,8 +45,8 @@ const DisplayDotsAnime: React.FC<{
     startAnime(shuffleArr(allInactiveCoords));
   }
 
-  function reset() {
-    resetAnime(shuffleArr(allInactiveCoords));
+  function restart() {
+    restartAnime(shuffleArr(allInactiveCoords));
   }
 
   useEffect((): void => start(), []);
@@ -66,7 +63,7 @@ const DisplayDotsAnime: React.FC<{
           src={restartIcon}
           alt="restart icon"
           ariaLabel="restart animation"
-          onClick={() => reset()}
+          onClick={() => restart()}
         />
       )}
     </Container>

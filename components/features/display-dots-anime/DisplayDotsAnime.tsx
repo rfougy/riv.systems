@@ -65,6 +65,7 @@ const DisplayDotsAnime: React.FC<{
           alt="restart icon"
           ariaLabel="restart animation"
           isDisabled={!animeEnded}
+          rotate={animeEnded}
           onClick={() => restart()}
         />
       )}

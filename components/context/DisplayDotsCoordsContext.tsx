@@ -13,29 +13,41 @@ const DisplayDotsCoordsProvider: React.FC<{ children: React.ReactNode }> = ({
     number[][] | any[]
   >([]);
   const [inactiveCoords, setInactiveCoords] = useState<number[][]>();
-  const [inactiveCoordsInContext, setInactiveCoordsIsInContext] =
-    useState<boolean>(false);
+  const [animeEnded, setAnimeEnded] = useState<boolean>(false);
 
   function displayDotsAnimeCallback(): void {
-    if (inactiveCoordsInContext && inactiveCoords?.length) {
+    if (inactiveCoords?.length) {
       const inactiveCoord: number[] | undefined = inactiveCoords?.pop();
 
       deactivatedCoords.length
         ? setDeactivatedCoords((prev: number[][]) => [...prev, inactiveCoord])
         : setDeactivatedCoords([inactiveCoord]);
-    } else {
+
       return;
     }
+
+    setAnimeEnded(true);
   }
 
-  useInterval(displayDotsAnimeCallback, 12.5);
+  function startAnime(inactiveCoords: number[][]) {
+    setInactiveCoords(inactiveCoords);
+  }
+
+  function restartAnime(inactiveCoords: number[][]) {
+    setDeactivatedCoords([]);
+    setInactiveCoords(inactiveCoords);
+    setAnimeEnded(false);
+  }
+
+  useInterval(animeEnded, displayDotsAnimeCallback, 12.5);
 
   return (
     <DisplayDotsCoordsContext.Provider
       value={{
         deactivatedCoords,
-        setInactiveCoords,
-        setInactiveCoordsIsInContext,
+        animeEnded,
+        startAnime,
+        restartAnime,
       }}
     >
       {children}

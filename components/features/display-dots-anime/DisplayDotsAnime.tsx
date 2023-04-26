@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
+import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsContext";
 
 import DotWord from "./word/DotWord";
-import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsContext";
+import IconButton from "../../shared/icon-button/IconButton";
 
 import IAllCoords from "../../../interfaces/IAllCoords";
 
@@ -10,23 +11,29 @@ import {
   groupCoordsByWordAndSpace,
 } from "../../../lib/display-dots-animation/getCoords";
 import { shuffleArr } from "../../../utils";
+import restartIcon from "../../../public/assets/icons/restart-icon.svg";
 
-import { Container } from "./DisplayDotsAnime.styled";
+import { Container, DisplayDotsContainer } from "./DisplayDotsAnime.styled";
 
-const DisplayDotsAnime: React.FC<{ text?: string }> = ({
-  text = "DISPLAY DOTS!",
-}) => {
-  const { setInactiveCoords, setInactiveCoordsIsInContext } =
+const DisplayDotsAnime: React.FC<{
+  text?: string;
+  includeRestartButton?: boolean;
+}> = ({ text = "DISPLAY DOTS!", includeRestartButton }) => {
+  const { restartAnime, startAnime, animeEnded } =
     useDisplayDotsCoordsContext();
 
   const upperCaseText: string = text.toUpperCase();
 
-  const coordsByWordAndSpace: any = Object.values(
-    groupCoordsByWordAndSpace(upperCaseText)
+  const coordsByWordAndSpace: any = useMemo(
+    () => Object.values(groupCoordsByWordAndSpace(upperCaseText)),
+    [upperCaseText]
   );
-  const coordsByChar: IAllCoords[] = Object.values(
-    groupCoordsByChar(upperCaseText)
+
+  const coordsByChar: IAllCoords[] = useMemo(
+    () => Object.values(groupCoordsByChar(upperCaseText)),
+    [upperCaseText]
   );
+
   const allInactiveCoords: number[][] = coordsByChar.reduce(
     (inactiveCoordsList: number[][], coordGroup: IAllCoords) => {
       inactiveCoordsList.push(...coordGroup.inactiveCoords);
@@ -35,16 +42,32 @@ const DisplayDotsAnime: React.FC<{ text?: string }> = ({
     []
   );
 
-  useEffect((): void => {
-    setInactiveCoords(shuffleArr(allInactiveCoords));
-    setInactiveCoordsIsInContext(true);
-  }, []);
+  function start() {
+    startAnime(shuffleArr(allInactiveCoords));
+  }
+
+  function restart() {
+    restartAnime(shuffleArr(allInactiveCoords));
+  }
+
+  useEffect((): void => start(), []);
 
   return (
     <Container>
-      {coordsByWordAndSpace.map((wordOrSpace: string, index: number) => (
-        <DotWord key={index} wordOrSpace={wordOrSpace} />
-      ))}
+      <DisplayDotsContainer>
+        {coordsByWordAndSpace.map((wordOrSpace: string, index: number) => (
+          <DotWord key={index} wordOrSpace={wordOrSpace} />
+        ))}
+      </DisplayDotsContainer>
+      {includeRestartButton && (
+        <IconButton
+          src={restartIcon}
+          alt="restart icon"
+          ariaLabel="restart animation"
+          isDisabled={!animeEnded}
+          onClick={() => restart()}
+        />
+      )}
     </Container>
   );
 };

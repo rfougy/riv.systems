@@ -1,4 +1,6 @@
 import { getPlaiceholder } from "plaiceholder";
+
+import devPlaceholderImage from "../../public/assets/offline-placeholder.png";
 import IPost from "../../interfaces/IPost";
 
 export async function includePlaceholderImage(
@@ -7,6 +9,24 @@ export async function includePlaceholderImage(
   if (!content) return;
 
   const contentIsForResultsPage = Array.isArray(content);
+
+  const developingOffline = process.env.DEVELOPING_OFFLINE === "true";
+
+  if (developingOffline && contentIsForResultsPage) {
+    const contentWithPlaceholderImage = await Promise.all(
+      content.map(async (singleContent: any) => {
+        singleContent.frontmatter.coverImage = devPlaceholderImage;
+        return singleContent;
+      })
+    );
+    return contentWithPlaceholderImage;
+  }
+
+  if (developingOffline && !contentIsForResultsPage) {
+    // @ts-ignore
+    content.frontmatter.coverImage = devPlaceholderImage;
+    return content;
+  }
 
   if (contentIsForResultsPage) {
     const contentWithPlaceholderImage = await Promise.all(

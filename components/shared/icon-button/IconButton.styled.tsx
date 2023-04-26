@@ -10,24 +10,33 @@ export const Button = styled.button`
   img {
     -webkit-filter: ${({
       isActive = true,
+      isDisabled = false,
       theme,
     }: {
       isActive?: boolean;
+      isDisabled?: boolean;
       theme: ITheme;
     }) =>
-      isActive
+      isDisabled
+        ? "invert(0.5)"
+        : isActive
         ? theme.id === "light"
           ? "invert(0)"
           : "invert(1)"
         : "invert(0.5)"};
+
     filter: ${({
       isActive = true,
+      isDisabled = false,
       theme,
     }: {
       isActive?: boolean;
+      isDisabled?: boolean;
       theme: ITheme;
     }) =>
-      isActive
+      isDisabled
+        ? "invert(0.5)"
+        : isActive
         ? theme.id === "light"
           ? "invert(0)"
           : "invert(1)"
@@ -35,9 +44,17 @@ export const Button = styled.button`
 
       &:hover {
         "-webkit-filter": ${(props: any) =>
-          props.theme.id === "light" ? "invert(0)" : "invert(1)"};
+          props.isDisabled
+            ? "invert(0.5)"
+            : props.theme.id === "light"
+            ? "invert(0)"
+            : "invert(1)"};
         filter: ${(props: any) =>
-          props.theme.id === "light" ? "invert(0)" : "invert(1)"};
+          props.isDisabled
+            ? "invert(0.5)"
+            : props.theme.id === "light"
+            ? "invert(0)"
+            : "invert(1)"};
       }
   }
 `;

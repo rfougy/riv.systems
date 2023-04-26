@@ -7,15 +7,17 @@ const IconButton: React.FC<{
   alt: string;
   ariaLabel: string;
   isActive?: boolean;
+  isDisabled?: boolean;
   onClick: () => any | ((arg: any) => any);
-}> = ({ src, alt, ariaLabel, isActive, onClick }) => {
+}> = ({ src, alt, ariaLabel, isActive, isDisabled, onClick }) => {
   return (
     <>
       {/* @ts-ignore */}
       <Button
         aria-label={ariaLabel}
         isActive={isActive}
-        onClick={() => onClick()}
+        isDisabled={isDisabled}
+        onClick={() => (isDisabled ? null : onClick())}
       >
         <Image src={src} alt={alt} layout="fill" objectFit="contain" />
       </Button>

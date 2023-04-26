@@ -19,7 +19,8 @@ const DisplayDotsAnime: React.FC<{
   text?: string;
   includeRestartButton?: boolean;
 }> = ({ text = "DISPLAY DOTS!", includeRestartButton }) => {
-  const { restartAnime, startAnime } = useDisplayDotsCoordsContext();
+  const { restartAnime, startAnime, animeEnded } =
+    useDisplayDotsCoordsContext();
 
   const upperCaseText: string = text.toUpperCase();
 
@@ -63,6 +64,7 @@ const DisplayDotsAnime: React.FC<{
           src={restartIcon}
           alt="restart icon"
           ariaLabel="restart animation"
+          isDisabled={!animeEnded}
           onClick={() => restart()}
         />
       )}

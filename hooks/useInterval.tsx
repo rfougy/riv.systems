@@ -5,23 +5,22 @@ import { useEffect, useRef } from "react";
  * @see https://overreacted.io/making-setinterval-declarative-with-react-hooks/
  */
 export function useInterval(
-  stopTrigger: boolean,
+  animeEnded: boolean,
   callback: () => void | string,
   delay: number
 ) {
   const savedCallback: any = useRef();
 
-  useEffect(() => {
-    savedCallback.current = callback;
-  }, [callback, stopTrigger]);
+  function tick() {
+    savedCallback.current();
+  }
 
   useEffect(() => {
-    function tick() {
-      savedCallback.current();
-    }
-    if (!stopTrigger) {
-      let id = setInterval(tick, delay);
-      return () => clearInterval(id);
-    }
-  }, [stopTrigger, delay]);
+    savedCallback.current = callback;
+  }, [callback]);
+
+  useEffect(() => {
+    let id = setInterval(tick, delay);
+    return () => clearInterval(id);
+  }, [animeEnded, delay]);
 }

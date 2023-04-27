@@ -14,7 +14,7 @@ import {
 import { postView } from "../../../types/postView";
 import ColumnView from "../../posts/views/column/ColumnView";
 import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
-import { scrollToTop } from "../../../utils/scrollToTop";
+import useScrollToTop from "../../../hooks/useScrollToTop";
 
 const CategoryResults: React.FC<{
   category: string;
@@ -34,7 +34,7 @@ const CategoryResults: React.FC<{
     }
   }
 
-  useEffect(() => scrollToTop(), [postView]);
+  useScrollToTop([postView]);
 
   return (
     <CategoryResultsContainer>

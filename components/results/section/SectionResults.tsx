@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
@@ -19,7 +19,7 @@ import { postView } from "../../../types/postView";
 import ColumnView from "../../posts/views/column/ColumnView";
 import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
 import useContentFiltering from "../../../hooks/useContentFiltering";
-import { scrollToTop } from "../../../utils/scrollToTop";
+import useScrollToTop from "../../../hooks/useScrollToTop";
 
 const SectionResults: React.FC<{
   section: sectionType | string;
@@ -42,7 +42,7 @@ const SectionResults: React.FC<{
     }
   }
 
-  useEffect(() => scrollToTop(), [postView, filteredContent]);
+  useScrollToTop([postView, filteredContent]);
 
   return (
     <Container>

@@ -11,7 +11,10 @@ export const PageTitle = styled.h1`
 
 export const Container = styled.div`
   display: flex;
+  justify-content: space-between;
   gap: 6rem;
+  width: 100%;
+  max-width: 65rem;
 
   @media (max-width: ${breakpoints.xs}) {
     flex-direction: column;

@@ -16,6 +16,9 @@ export const Footer = styled.footer`
 
 export const SocialsList = styled.ul`
   list-style-type: none;
+
+  display: flex;
+  gap: 1.5rem;
   padding: 0;
 
   @media (max-width: ${breakpoints.xxs}) {
@@ -25,7 +28,6 @@ export const SocialsList = styled.ul`
 
 export const SocialsLink = styled.li`
   display: inline-block;
-  padding: 0 0.75rem;
 
   @media (max-width: ${breakpoints.xxs}) {
     margin: auto;

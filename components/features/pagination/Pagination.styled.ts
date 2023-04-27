@@ -19,6 +19,7 @@ export const Button = styled.button`
   flex-wrap: no-wrap;
   margin: 0 0.35rem;
   padding: 0.4rem 0.7rem;
+  opacity: ${(props: any) => (props.disabled ? "0.5" : "1")};
 
   &:hover {
     background: ${(props: any) => props.theme.highlight};

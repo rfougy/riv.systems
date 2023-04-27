@@ -33,7 +33,7 @@ const Announcement: React.FC<{
   const convertedDate: string = dateToNumericStr(announcement.dateCreated);
 
   function handleClose(): void {
-    localStorage.setItem("announcement", JSON.stringify(announcement));
+    sessionStorage.setItem("announcement", JSON.stringify(announcement));
     setAnnouncementIsActive(false);
   }
 

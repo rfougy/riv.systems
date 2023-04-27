@@ -92,34 +92,35 @@ const App = ({ Component, pageProps }: AppProps) => {
   function toggleTheme(): void {
     const newTheme: ITheme =
       currTheme.id === lightTheme.id ? darkTheme : lightTheme;
-    localStorage.setItem("theme", JSON.stringify(newTheme));
+    sessionStorage.setItem("theme", JSON.stringify(newTheme));
     setTheme(newTheme);
   }
 
   useEffect((): void => {
-    const themeInLocalStorage: string | null = localStorage.getItem("theme");
+    const themeInSessionStorage: string | null =
+      sessionStorage.getItem("theme");
 
-    if (themeInLocalStorage) {
-      setTheme(JSON.parse(themeInLocalStorage));
+    if (themeInSessionStorage) {
+      setTheme(JSON.parse(themeInSessionStorage));
     }
   }, []);
 
   useEffect((): void => {
-    const announcementInLocalStorage: string | null =
-      localStorage.getItem("announcement");
+    const announcementInSessionStorage: string | null =
+      sessionStorage.getItem("announcement");
 
-    const announcementDate: string | undefined = announcementInLocalStorage
-      ? JSON.parse(announcementInLocalStorage).dateCreated
+    const announcementDate: string | undefined = announcementInSessionStorage
+      ? JSON.parse(announcementInSessionStorage).dateCreated
       : undefined;
     const newestAnnouncementDate: string = announcement.dateCreated;
 
     if (
-      announcementInLocalStorage &&
+      announcementInSessionStorage &&
       announcementDate === newestAnnouncementDate
     ) {
       setAnnouncementIsActive(false);
     } else {
-      localStorage.removeItem("announcement");
+      sessionStorage.removeItem("announcement");
       setAnnouncementIsActive(true);
     }
   }, []);

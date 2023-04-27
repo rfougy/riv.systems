@@ -32,8 +32,15 @@ export const CategoryResultsContainer = styled.div`
 `;
 
 export const FilterSection = styled.section`
-  display: flex;
-  flex-direction: column;
+  @media (min-width: ${breakpoints.xs}) {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4.75rem;
+  }
 `;
 
 export const TitleAndToggle = styled.div`

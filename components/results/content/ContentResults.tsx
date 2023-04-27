@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
@@ -16,6 +16,7 @@ import { postView } from "../../../types/postView";
 import ColumnView from "../../posts/views/column/ColumnView";
 import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
 import useContentFiltering from "../../../hooks/useContentFiltering";
+import { scrollToTop } from "../../../utils/scrollToTop";
 
 const ContentResults: React.FC<{
   content: any;
@@ -41,6 +42,8 @@ const ContentResults: React.FC<{
         return <DefaultView content={renderedPostCards} />;
     }
   }
+
+  useEffect(() => scrollToTop(), [postView]);
 
   return (
     <Container>

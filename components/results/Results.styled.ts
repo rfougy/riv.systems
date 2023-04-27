@@ -14,7 +14,6 @@ export const Container = styled.div`
   justify-content: space-between;
   gap: 6rem;
   width: 100%;
-  max-width: 65rem;
 
   @media (max-width: ${breakpoints.xs}) {
     flex-direction: column;
@@ -24,6 +23,10 @@ export const Container = styled.div`
 `;
 
 export const ViewSection = styled.section``;
+
+export const EmptyContainer = styled.div`
+  width: 117px;
+`;
 
 export const CategoryResultsContainer = styled.div`
   display: flex;

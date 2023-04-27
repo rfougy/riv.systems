@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsContext";
 
 import DotWord from "./word/DotWord";
@@ -19,6 +19,9 @@ const DisplayDotsAnime: React.FC<{
   text?: string;
   includeRestartButton?: boolean;
 }> = ({ text = "DISPLAY DOTS!", includeRestartButton }) => {
+  const [restartButtonRotating, setRestartButtonRotating] =
+    useState<boolean>(false);
+
   const { restartAnime, startAnime, animeEnded } =
     useDisplayDotsCoordsContext();
 
@@ -51,6 +54,7 @@ const DisplayDotsAnime: React.FC<{
   }
 
   useEffect((): void => start(), []);
+  useEffect(() => setRestartButtonRotating(animeEnded), [animeEnded]);
 
   return (
     <Container>
@@ -65,7 +69,7 @@ const DisplayDotsAnime: React.FC<{
           alt="restart icon"
           ariaLabel="restart animation"
           isDisabled={!animeEnded}
-          rotate={animeEnded}
+          rotate={restartButtonRotating}
           onClick={() => restart()}
         />
       )}

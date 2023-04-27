@@ -43,7 +43,7 @@ const ContentResults: React.FC<{
     }
   }
 
-  useEffect(() => scrollToTop(), [postView]);
+  useEffect(() => scrollToTop(), [postView, filteredContent]);
 
   return (
     <Container>

@@ -2,14 +2,12 @@ import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import { Global as GlobalTheme, ThemeProvider, css } from "@emotion/react";
 
-import Announcement from "../components/announcement/Announcment";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import PwaHead from "../components/head/PwaHead";
 import Favicon from "../components/head/Favicon";
 import PageHead from "../components/head/PageHead";
 
-import { IAnnouncement } from "../interfaces/IAnnouncement";
 import { ITheme } from "../interfaces/ITheme";
 
 import { ContentWrap, PageContainer } from "../styles/pages/App.styled";
@@ -22,18 +20,10 @@ import "@fontsource/roboto-mono/700.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [currTheme, setTheme] = useState<ITheme>(lightTheme);
-  const [announcementIsActive, setAnnouncementIsActive] =
-    useState<boolean>(true);
 
   // Home Page, 404 Page, 500 Page
   // @ts-ignore
   const isDisplayDotsPage = pageProps.isDisplayDotsPage ? true : false;
-
-  const announcement: IAnnouncement = {
-    dateCreated: "2023-03-04",
-    text: "'On Meaningless Content' post is now online.",
-    link: "/content/logs/personal/2023-03-04_on-meaningless-content",
-  };
 
   const globalColors = css`
     body {
@@ -105,26 +95,6 @@ const App = ({ Component, pageProps }: AppProps) => {
     }
   }, []);
 
-  useEffect((): void => {
-    const announcementInSessionStorage: string | null =
-      sessionStorage.getItem("announcement");
-
-    const announcementDate: string | undefined = announcementInSessionStorage
-      ? JSON.parse(announcementInSessionStorage).dateCreated
-      : undefined;
-    const newestAnnouncementDate: string = announcement.dateCreated;
-
-    if (
-      announcementInSessionStorage &&
-      announcementDate === newestAnnouncementDate
-    ) {
-      setAnnouncementIsActive(false);
-    } else {
-      sessionStorage.removeItem("announcement");
-      setAnnouncementIsActive(true);
-    }
-  }, []);
-
   return (
     <>
       {/* @ts-ignore */}
@@ -133,13 +103,6 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Favicon />
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
-        {announcementIsActive && (
-          <Announcement
-            theme={currTheme}
-            setAnnouncementIsActive={setAnnouncementIsActive}
-            announcement={announcement}
-          />
-        )}
         <Navbar toggleTheme={toggleTheme} />
         <PageContainer>
           <ContentWrap isDisplayDotsPage={isDisplayDotsPage}>

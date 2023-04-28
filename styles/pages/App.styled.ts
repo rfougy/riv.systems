@@ -14,11 +14,13 @@ export const ContentWrap = styled.div`
   justify-content: ${({ isDisplayDotsPage }: { isDisplayDotsPage: boolean }) =>
     isDisplayDotsPage ? "center" : "start"};
 
-  padding: 2rem 0 4rem 0;
-
   margin: 0;
+  padding: ${({ isDisplayDotsPage }: { isDisplayDotsPage: boolean }) =>
+    isDisplayDotsPage ? "2rem 0" : "2rem 0 4rem 0"};
 
-  min-height: calc(100vh - (5rem + 3.375rem));
+  min-height: calc(
+    100vh - (2.75rem * 2)
+  ); // 100vh - navbar height - footer height
 
   @media (max-width: ${breakpoints.xs}) {
     min-height: calc(100vh - (6rem + 2.375rem));

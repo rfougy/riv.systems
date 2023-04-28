@@ -4,7 +4,9 @@ function useViewportWidthEventListener(width: number | string): boolean {
   const [isColumnView, setIsColumnView] = useState<boolean>(false);
 
   function windowInColumnView(): void {
-    window.innerWidth < width ? setIsColumnView(true) : setIsColumnView(false);
+    window.innerWidth < (width as number)
+      ? setIsColumnView(true)
+      : setIsColumnView(false);
   }
 
   useEffect(() => {

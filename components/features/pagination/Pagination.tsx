@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ArrowIcon from "../../icons/ArrowIcon";
 
 import { Button, Container, PageNav, PageNumber } from "./Pagination.styled";
+import { scrollToTop } from "../../../utils/scrollToTop";
 
 const Pagination: React.FC<{
   contentToPaginate: any[];
@@ -18,7 +19,9 @@ const Pagination: React.FC<{
   initialPostCardsPerPage = 6,
 }) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(initialPostCardsPerPage);
+  const [postCardsPerPage, setPostCardsPerPage] = useState<number>(
+    initialPostCardsPerPage
+  );
 
   // deducting the current PostCards for pagination
   const indexOfLastPostCard: number = currentPage * postCardsPerPage;
@@ -64,7 +67,7 @@ const Pagination: React.FC<{
           aria-label="Navigate to First Results Page"
           disabled={onFirstPage}
           onClick={(): void => {
-            window.scrollTo(0, 0);
+            scrollToTop();
             setCurrentPage(1);
           }}
         >
@@ -75,7 +78,7 @@ const Pagination: React.FC<{
           aria-label="Navigate to Previous Results Page"
           disabled={onFirstPage}
           onClick={(): void => {
-            window.scrollTo(0, 0);
+            scrollToTop();
             handlePrevButtonClick();
           }}
         >
@@ -88,7 +91,7 @@ const Pagination: React.FC<{
           aria-label="Navigate to Next Results Page"
           disabled={onLastPage}
           onClick={(): void => {
-            window.scrollTo(0, 0);
+            scrollToTop();
             handleNextButtonClick();
           }}
         >
@@ -98,7 +101,7 @@ const Pagination: React.FC<{
           aria-label="Navigate to Last Results Page"
           disabled={onLastPage}
           onClick={(): void => {
-            window.scrollTo(0, 0);
+            scrollToTop();
             setCurrentPage(lastPage);
           }}
         >

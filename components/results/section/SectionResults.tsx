@@ -10,6 +10,7 @@ import { sectionType } from "../../../types/sectionType";
 
 import {
   Container,
+  EmptyContainer,
   FilterSection,
   PageTitle,
   TitleAndToggle,
@@ -19,6 +20,8 @@ import { postView } from "../../../types/postView";
 import ColumnView from "../../posts/views/column/ColumnView";
 import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
 import useContentFiltering from "../../../hooks/useContentFiltering";
+import useScrollToTop from "../../../hooks/useScrollToTop";
+import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
 
 const SectionResults: React.FC<{
   section: sectionType | string;
@@ -26,6 +29,8 @@ const SectionResults: React.FC<{
 }> = ({ section, content }) => {
   const [renderedPostCards, setRenderedPostCards] = useState<any>();
   const [postView, setPostView] = useState<postView>("column");
+
+  const isVerticalView = useViewportWidthEventListener(960);
 
   const { filteredContent, categories, categoryFilters, setCategoryFilters } =
     useContentFiltering(content);
@@ -40,6 +45,8 @@ const SectionResults: React.FC<{
         return <DefaultView content={renderedPostCards} />;
     }
   }
+
+  useScrollToTop([postView, filteredContent]);
 
   return (
     <Container>
@@ -65,6 +72,7 @@ const SectionResults: React.FC<{
           totalPostCards={filteredContent.length}
         />
       </ViewSection>
+      {!isVerticalView && <EmptyContainer />}
     </Container>
   );
 };

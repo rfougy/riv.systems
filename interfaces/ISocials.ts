@@ -1,4 +1,5 @@
 export default interface ISocials {
   title: string;
-  url: string
+  url: string;
+  icon: any;
 }

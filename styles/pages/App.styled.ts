@@ -20,11 +20,7 @@ export const ContentWrap = styled.div`
 
   min-height: calc(
     100vh - (2.75rem * 2)
-  ); // 100vh - navbar height - footer height
-
-  @media (max-width: ${breakpoints.xs}) {
-    min-height: calc(100vh - (6rem + 2.375rem));
-  }
+  ); // 100vh - (navbar height + footer height)
 `;
 
 export const PageContainer = styled.div`

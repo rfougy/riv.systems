@@ -1,5 +1,5 @@
-import { breakpoints } from "./../../styles/theme";
 import styled from "@emotion/styled";
+import { breakpoints } from "../../styles/theme";
 
 export const Footer = styled.footer`
   display: flex;
@@ -8,9 +8,8 @@ export const Footer = styled.footer`
   justify-content: space-between;
 
   @media (max-width: ${breakpoints.xxs}) {
-    flex-direction: column;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1.5rem;
   }
 `;
 
@@ -20,16 +19,8 @@ export const SocialsList = styled.ul`
   display: flex;
   gap: 1.5rem;
   padding: 0;
-
-  @media (max-width: ${breakpoints.xxs}) {
-    margin: auto;
-  }
 `;
 
 export const SocialsLink = styled.li`
   display: inline-block;
-
-  @media (max-width: ${breakpoints.xxs}) {
-    margin: auto;
-  }
 `;

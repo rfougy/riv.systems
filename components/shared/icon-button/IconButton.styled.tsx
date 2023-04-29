@@ -3,8 +3,8 @@ import { ITheme } from "../../../interfaces/ITheme";
 
 export const Button = styled.button`
   all: unset;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: ${(props: any) => (props.width ? props.width : "0.75rem")};
+  height: ${(props: any) => (props.height ? props.height : "0.75rem")};
   position: relative;
 
   img {
@@ -28,6 +28,8 @@ export const Button = styled.button`
     }: {
       isActive?: boolean;
       isDisabled?: boolean;
+      height?: string;
+      width?: string;
       rotate?: boolean;
       theme: ITheme;
     }) =>

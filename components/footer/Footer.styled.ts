@@ -1,10 +1,16 @@
 import styled from "@emotion/styled";
+import { breakpoints } from "../../styles/theme";
 
 export const Footer = styled.footer`
   display: flex;
   height: 1.375rem
   width: 100%;
   justify-content: space-between;
+
+  @media (max-width: ${breakpoints.xxs}) {
+    justify-content: center;
+    gap: 1.5rem;
+  }
 `;
 
 export const SocialsList = styled.ul`
@@ -17,9 +23,4 @@ export const SocialsList = styled.ul`
 
 export const SocialsLink = styled.li`
   display: inline-block;
-
-  * {
-    height: 1rem;
-    width: 1rem;
-  }
 `;

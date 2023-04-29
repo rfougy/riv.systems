@@ -18,6 +18,8 @@ const Footer: React.FC = () => {
             src={sourceCodeIcon}
             alt="RIV.SYSTEMS source code"
             ariaLabel="RIV.SYSTEMS source code button"
+            height="1rem"
+            width="1rem"
           />
         </a>
       </SocialsLink>
@@ -29,6 +31,8 @@ const Footer: React.FC = () => {
                 src={social.icon}
                 alt={social.title}
                 ariaLabel={`${social.icon} button`}
+                height="1rem"
+                width="1rem"
               />
             </a>
           </SocialsLink>

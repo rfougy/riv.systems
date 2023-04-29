@@ -1,5 +1,7 @@
 import { socialsList } from "../../constants/socialsList";
 import ISocials from "../../interfaces/ISocials";
+import IconButton from "../shared/icon-button/IconButton";
+import sourceCodeIcon from "../../public/assets/icons/source-code-icon.svg";
 
 import { Footer as Foot, SocialsList, SocialsLink } from "./Footer.styled";
 
@@ -12,14 +14,22 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noreferrer"
         >
-          Source Code
+          <IconButton
+            src={sourceCodeIcon}
+            alt="RIV.SYSTEMS source code"
+            ariaLabel="RIV.SYSTEMS source code button"
+          />
         </a>
       </SocialsLink>
       <SocialsList>
         {socialsList.map((social: ISocials, index: number) => (
           <SocialsLink key={index}>
             <a href={social.url} target="_blank" rel="noreferrer">
-              {social.title}
+              <IconButton
+                src={social.icon}
+                alt={social.title}
+                ariaLabel={`${social.icon} button`}
+              />
             </a>
           </SocialsLink>
         ))}

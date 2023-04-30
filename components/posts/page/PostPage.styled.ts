@@ -54,6 +54,11 @@ export const Content = styled.div`
     line-height: 175%;
   }
 
+  h2 {
+    width: 100%;
+    text-align: left;
+  }
+
   iframe {
     aspect-ratio: 16 / 9;
     height: 100%;
@@ -67,7 +72,9 @@ export const Content = styled.div`
   }
 
   ul {
-    list-style-type: circle;
+    list-style-type: disc;
+    width: 100%;
+    margin-left: 20%;
   }
 `;
 

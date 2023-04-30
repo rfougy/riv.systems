@@ -24,6 +24,7 @@ import {
 } from "./PostPage.styled";
 import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
 import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
+import WorksGrid from "../works-grid/WorksGrid";
 
 const PostPage: React.FC<{ slug: string; content: any }> = ({
   slug,
@@ -36,10 +37,16 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
     coverImage,
     excerpt,
     placeholderImage,
+    worksLink,
+    worksRoles,
+    worksDuration,
+    worksTools,
   }: IPostFrontMatter = frontmatter;
   const section: string = slug[0];
   const category: string = slug[1];
   const dateAsStr: string = dateToStr(datePublished);
+
+  const isWorksPage: boolean = section === "works";
 
   return content ? (
     <Container>
@@ -65,6 +72,14 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
           </Metadata>
           <Title>{title}</Title>
           <Excerpt>{excerpt}</Excerpt>
+          {isWorksPage && (
+            <WorksGrid
+              link={worksLink as string}
+              roles={worksRoles as string[]}
+              duration={worksDuration as string[]}
+              tools={worksTools as string[]}
+            />
+          )}
           <Margin />
         </HeaderContainer>
       </Header>

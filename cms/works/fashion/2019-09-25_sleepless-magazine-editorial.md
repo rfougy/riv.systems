@@ -9,13 +9,22 @@ coverImage: https://user-images.githubusercontent.com/77861258/208268870-cb48a2a
 
 In the summer of 2019, I was asked by a fellow Bostonian to be featured in his magazine 'Sleepless'. During this time I was an avid reseller of Archive Fashion, and frankly had more articles of clothing than I can manage. It was from here where the lights clicked: "What if I used this opportunity to create an Archive Fashion editorial?" I decided to reach out to Layne, a friend who photographed for Bodega at the time, and from there we began to conceptualize the project.
 
+<br/>
+<br/>
+
 <Image 
   src="https://user-images.githubusercontent.com/77861258/208268117-3de250bc-2f2a-4898-bdd0-3d552e328f10.jpg" 
   alt="Photo from Sleepless Magazine Archive Fashion Editorial, featuring Comme des Garcons 1999 Patchwork Pants, TAKAHIROMIYASHITATheSoloist AW17 Monster Vest, and Undercover AW01 D.A.V.F.Crystal Bullet Belt"
   aspectRatio="3:4"
 />
 
+<br/>
+<br/>
+
 Photographed by Layne, modelled by Sang Chul Lee and styled by me, we headed to the streets of Chinatown in the heat of the summer, high energy being felt in the air and captured through the lens. The result was a unique and authentic take on the fashion genre, with a hint of punk and youthful spirit.
+
+<br/>
+<br/>
 
 - <Image 
     src="https://user-images.githubusercontent.com/77861258/208268413-41a4e3b6-3408-403e-bf31-5e31df9f33bc.png" 
@@ -28,7 +37,13 @@ Photographed by Layne, modelled by Sang Chul Lee and styled by me, we headed to 
     aspectRatio="4:3"
   />
 
+<br/>
+<br/>
+
 Below you can see the variety of shots taken outside of the feature:
+
+<br/>
+<br/>
 
 - <Image 
     src="https://user-images.githubusercontent.com/77861258/208268449-72fa0508-d7cd-4240-bc28-56c8abc0d536.jpg" 

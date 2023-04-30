@@ -52,8 +52,6 @@ export const Content = styled.div`
   p {
     width: 100%;
     line-height: 175%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
   }
 
   iframe {
@@ -66,7 +64,6 @@ export const Content = styled.div`
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
   }
 
   ul img {

@@ -45,8 +45,24 @@ export const CoverImage = styled.div``;
 export const Content = styled.div`
   margin-top: 2.125rem;
 
-  a {
-    font-size: 0.875rem;
+  article {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    width: 100%;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 1.25rem;
   }
 
   p {
@@ -54,27 +70,21 @@ export const Content = styled.div`
     line-height: 175%;
   }
 
-  h2 {
-    width: 100%;
-    text-align: left;
-  }
-
-  iframe {
-    aspect-ratio: 16 / 9;
-    height: 100%;
-    width: 100%;
-  }
-
-  article {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+  a {
+    font-size: 0.875rem;
   }
 
   ul {
     list-style-type: disc;
     width: 100%;
     margin-left: 20%;
+    line-height: 150%;
+  }
+
+  iframe {
+    aspect-ratio: 16 / 9;
+    height: 100%;
+    width: 100%;
   }
 `;
 

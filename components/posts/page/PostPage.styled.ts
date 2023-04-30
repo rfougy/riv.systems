@@ -66,8 +66,8 @@ export const Content = styled.div`
     flex-direction: column;
   }
 
-  ul img {
-    margin: 0.25rem 0;
+  ul {
+    list-style-type: circle;
   }
 `;
 

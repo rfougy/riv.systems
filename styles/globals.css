@@ -40,6 +40,11 @@ ul {
   margin: 0;
 }
 
+li {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
 /* Documentation: Breakpoints */
 
 /* Extra small devices (phones, 600px and down) */

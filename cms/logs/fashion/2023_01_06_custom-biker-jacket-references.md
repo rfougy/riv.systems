@@ -28,62 +28,73 @@ Since starting my journey of DIY through this biker jacket, I’ve amassed a [co
 <br/>
 <br/>
 
-- <Image 
+<Image 
     src="https://user-images.githubusercontent.com/77861258/211128148-14252895-4240-4e54-b588-cd77807857f8.png" 
     alt="Custom Punk Biker Jacket by Shiga" 
     aspectRatio="16:9"
-  />
-- <Image 
+/>
+<br/>
+<Image 
     src="https://user-images.githubusercontent.com/77861258/211128228-4b5a77c2-d338-4fef-bd9d-4cd929d84b6e.png" 
     alt="Custom Punk Biker Jacket by Shiga" 
     aspectRatio="16:9"
-  />
-- <Image 
+/>
+<br/>
+<Image 
     src="https://user-images.githubusercontent.com/77861258/211128251-13b5bd80-138d-4afe-aca4-29ac778113ea.png" 
     alt="Custom Biker Jacket by Yujiro Komatsu of Blackmeans"
     aspectRatio="4:3"
-  />
-- <Image 
+/>
+<br/>
+<Image 
     src="https://user-images.githubusercontent.com/77861258/211128294-196cd1b5-2a7e-4faf-aecb-7fdac6373e8b.png" 
     alt="Biker Jacket by Blackmeans"
     aspectRatio="16:9"
-  />
-- <Image 
+/>
+<br/>
+<Image 
     src="https://user-images.githubusercontent.com/77861258/211128335-7ca0a25d-7865-494e-b546-c4d470db0e04.png" 
     alt="Biker Jacket by Blackmeans"
     aspectRatio="16:9"
-  />
-- <Image 
+/>
+<br/>
+<Image 
     src="https://user-images.githubusercontent.com/77861258/211128357-94bd94e4-b306-435a-923a-a974b9bcd31d.png" 
     alt="Biker Jacket by Blackmeans"
     aspectRatio="16:9"
-  />
-- <Image 
+/>
+<br/>
+<Image 
     src="https://user-images.githubusercontent.com/77861258/211128371-d18f1016-55fc-4280-98d2-76dafb6acfa9.png" 
     alt="Biker Jacket by Blackmeans"
     aspectRatio="16:9"
-  />
-- <Image 
+/>
+<br/>
+<Image 
     src="https://user-images.githubusercontent.com/77861258/211128399-d64bf7f1-43e4-4250-ac2f-a85dd9237226.png" 
     alt="Custom Biker Jacket by Hikaru Iwanaga of Bounty Hunter"
     aspectRatio="16:9"
-  />
-- <Image 
+/>
+<br/>
+<Image 
     src="https://user-images.githubusercontent.com/77861258/211128424-8b65dd87-52bd-4915-b243-34dfed0a0035.png" 
     alt="Custom Biker Jacket by Hikaru Iwanaga of Bounty Hunter"
     aspectRatio="16:9"
-  />
-- <Image 
+/>
+<br/>
+<Image 
     src="https://user-images.githubusercontent.com/77861258/211128434-ee5db6be-d104-4bf2-b0c0-f121fcb78cd9.png" 
     alt="Custom Biker Jacket by Hikaru Iwanaga of Bounty Hunter"
     aspectRatio="16:9"
-  />
-- <Image
+/>
+<br/>
+<Image
     src="https://user-images.githubusercontent.com/77861258/211128455-a9b932d2-6d83-4f12-aa23-5a4a9cf59e57.png" 
     alt="Custom Biker Jacket by Hikaru Iwanaga of Bounty Hunter"
     aspectRatio="16:9"
-  />
-- <Image 
+/>
+<br/>
+<Image 
     src="https://user-images.githubusercontent.com/77861258/211128463-fcc35f8e-85ab-4f34-845f-ee85102725e6.png" 
     alt="Custom Biker Jacket by Hikaru Iwanaga of Bounty Hunter"
     aspectRatio="16:9"

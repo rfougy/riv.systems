@@ -19,7 +19,8 @@ import {
   CoverImage,
   Header,
   Excerpt,
-  Divider,
+  Margin,
+  HeaderContainer,
 } from "./PostPage.styled";
 import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
 import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
@@ -43,28 +44,30 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
   return content ? (
     <Container>
       <Header>
-        <Metadata>
-          <Inline>
-            <Link href={`/content/${section}`}>
-              {capitalizeFirstChar(section)}
-            </Link>
-          </Inline>
-          <Inline>
-            <ArrowIcon aria-label="Arrow Icon" />
-          </Inline>
-          <Inline>
-            <Link href={`/content/${section}/${category}`}>
-              {capitalizeFirstChar(category)}
-            </Link>
-          </Inline>
-          <Li>
-            <p>{dateAsStr}</p>
-          </Li>
-        </Metadata>
-        <Title>{title}</Title>
-        <Excerpt>{excerpt}</Excerpt>
+        <HeaderContainer>
+          <Metadata>
+            <Inline>
+              <Link href={`/content/${section}`}>
+                {capitalizeFirstChar(section)}
+              </Link>
+            </Inline>
+            <Inline>
+              <ArrowIcon aria-label="Arrow Icon" />
+            </Inline>
+            <Inline>
+              <Link href={`/content/${section}/${category}`}>
+                {capitalizeFirstChar(category)}
+              </Link>
+            </Inline>
+            <Li>
+              <p>{dateAsStr}</p>
+            </Li>
+          </Metadata>
+          <Title>{title}</Title>
+          <Excerpt>{excerpt}</Excerpt>
+          <Margin />
+        </HeaderContainer>
       </Header>
-      <Divider />
       <CoverImage>
         <Image
           priority

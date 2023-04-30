@@ -1,7 +1,28 @@
 import { breakpoints } from "./../../../styles/theme";
 import styled from "@emotion/styled";
 
-export const Header = styled.header``;
+export const Header = styled.header`
+  border: solid transparent;
+  border-radius: 3vh;
+  border-width: 0 0.05rem 0.1rem 0.05rem;
+
+  margin-bottom: 3rem;
+
+  background: padding-box,
+    linear-gradient(
+        180deg,
+        ${(props: any) => props.theme.secondary} 87.5%,
+        ${(props: any) => props.theme.primary} 100%
+      )
+      border-box;
+`;
+
+export const HeaderContainer = styled.div`
+  border-radius: 3vh;
+  padding: 1rem;
+
+  background: ${(props: any) => props.theme.secondary};
+`;
 
 export const Title = styled.h1`
   font-size: 2rem;
@@ -33,11 +54,8 @@ export const Li = styled.li`
   }
 `;
 
-export const Divider = styled.div`
-  height: 1px;
-  background: ${(props: any) => props.theme.primary};
-  margin: 2rem 0 3.5rem 0;
-  opacity: 0.5;
+export const Margin = styled.div`
+  margin-top: 1.75rem;
 `;
 
 export const CoverImage = styled.div``;

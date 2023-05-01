@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
-import DefaultView from "../../posts/views/default/DefaultView";
+import DefaultView from "../views/default/DefaultView";
 
 import {
   Container,
@@ -14,7 +14,7 @@ import {
 } from "../Results.styled";
 
 import { postView } from "../../../types/postView";
-import ColumnView from "../../posts/views/column/ColumnView";
+import ColumnView from "../views/column/ColumnView";
 import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
 import useContentFiltering from "../../../hooks/useContentFiltering";
 import useScrollToTop from "../../../hooks/useScrollToTop";

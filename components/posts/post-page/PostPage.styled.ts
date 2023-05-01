@@ -1,15 +1,10 @@
 import { breakpoints } from "../../../styles/theme";
 import styled from "@emotion/styled";
 
-export const Header = styled.header`
-  border-radius: 3vh;
-
-  background: ${(props: any) => props.theme.secondary};
-`;
+export const Header = styled.header``;
 
 export const Title = styled.h1`
   font-size: 2rem;
-  margin: 1rem 0 1.75rem 0;
 
   @media (max-width: ${breakpoints.xs}) {
     font-size: 1.75rem;
@@ -103,4 +98,11 @@ export const Divider = styled.div`
   background: ${(props: any) => props.theme.primary};
   margin: 2rem 0 3.5rem 0;
   opacity: 0.5;
+`;
+
+export const TitleAndLink = styled.div`
+  display: flex;
+  gap: 1rem;
+
+  margin: 1rem 0 1.75rem 0;
 `;

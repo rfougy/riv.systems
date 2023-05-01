@@ -24,7 +24,9 @@ import {
   Margin,
   Divider,
   Header,
+  TitleAndLink,
 } from "./PostPage.styled";
+import LinkButton from "../link-button/LinkButton";
 
 const PostPage: React.FC<{ slug: string; content: any }> = ({
   slug,
@@ -72,7 +74,10 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
             <p>{dateAsStr}</p>
           </Li>
         </Metadata>
-        <Title>{title}</Title>
+        <TitleAndLink>
+          <Title>{title}</Title>
+          {link && <LinkButton url={link} title={title} />}
+        </TitleAndLink>
         <Excerpt>{excerpt}</Excerpt>
         {isWorksPage && (
           <WorksGrid

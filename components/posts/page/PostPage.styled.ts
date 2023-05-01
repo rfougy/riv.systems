@@ -78,8 +78,10 @@ export const Content = styled.div`
   ul {
     list-style-type: disc;
     width: 100%;
-    margin-left: 20%;
     line-height: 150%;
+
+    margin-left: 20%;
+    padding-right: 20%;
   }
 
   iframe {

@@ -50,8 +50,8 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
 
   return content ? (
     <Container>
-      <Header>
-        <HeaderContainer>
+      <Header isWorksPage={isWorksPage}>
+        <HeaderContainer isWorksPage={isWorksPage}>
           <Metadata>
             <Inline>
               <Link href={`/content/${section}`}>

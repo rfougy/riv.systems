@@ -62,6 +62,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     h5,
     h6,
     p,
+    caption,
     li {
       color: ${currTheme.primary};
     }

@@ -16,7 +16,7 @@ const config = {
   swcMinify: true,
   images: {
     domains: ["i.pinimg.com", "user-images.githubusercontent.com"],
-    disableStaticImages: true,
+    // disableStaticImages: true,
   },
   // @see https://nextjs.org/docs/advanced-features/compiler#remove-console
   compiler: {
@@ -40,6 +40,12 @@ const config = {
           },
         },
       ],
+    });
+
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ["@svgr/webpack"],
     });
 
     return config;

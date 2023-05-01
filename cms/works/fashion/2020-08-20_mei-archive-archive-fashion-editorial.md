@@ -5,7 +5,7 @@ section: works
 category: fashion
 excerpt: Editorial content featuring Mei’s collection of high quality and hard-to-find garments.
 coverImage: https://user-images.githubusercontent.com/77861258/213831808-d75fab61-7769-44ef-ae66-65175d7c3cbd.jpg
-worksLink: undefined
+link: undefined
 worksRoles: ["Videgrapher", "Photographer", "Stylist"]
 worksDuration: ["August 2020", "present"]
 worksTools: ["Canon EOS Rebel t7", "After Effects", "Photoshop"]

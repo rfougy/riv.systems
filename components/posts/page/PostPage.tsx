@@ -39,7 +39,7 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
     coverImage,
     excerpt,
     placeholderImage,
-    worksLink = "",
+    link,
     worksRoles = [],
     worksDuration = [],
     worksTools = [],
@@ -76,7 +76,6 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
         <Excerpt>{excerpt}</Excerpt>
         {isWorksPage && (
           <WorksGrid
-            link={worksLink as string}
             roles={worksRoles as string[]}
             duration={worksDuration as string[]}
             tools={worksTools as string[]}

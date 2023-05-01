@@ -25,12 +25,16 @@ import {
 import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
 import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
 import WorksGrid from "../works-grid/WorksGrid";
+import { useEffect, useState } from "react";
 
 const PostPage: React.FC<{ slug: string; content: any }> = ({
   slug,
   content,
 }) => {
+  const [isWorksPage, setIsWorksPage] = useState<boolean>();
+
   const { frontmatter, postContent }: any = content;
+
   const {
     title,
     datePublished,
@@ -46,7 +50,7 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
   const category: string = slug[1];
   const dateAsStr: string = dateToStr(datePublished);
 
-  const isWorksPage: boolean = section === "works";
+  useEffect(() => setIsWorksPage(section === "works"), [section]);
 
   return content ? (
     <Container>

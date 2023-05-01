@@ -41,10 +41,10 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
     coverImage,
     excerpt,
     placeholderImage,
-    // worksLink,
-    // worksRoles,
-    // worksDuration,
-    // worksTools,
+    worksLink = "",
+    worksRoles = [],
+    worksDuration = [],
+    worksTools = [],
   }: IPostFrontMatter = frontmatter;
   const section: string = slug[0];
   const category: string = slug[1];
@@ -75,14 +75,14 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
         </Metadata>
         <Title>{title}</Title>
         <Excerpt>{excerpt}</Excerpt>
-        {/* {isWorksPage && (
+        {isWorksPage && (
           <WorksGrid
             link={worksLink as string}
             roles={worksRoles as string[]}
             duration={worksDuration as string[]}
             tools={worksTools as string[]}
           />
-        )} */}
+        )}
         <Margin />
       </Header>
       <Divider />

@@ -75,14 +75,14 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
         </Metadata>
         <Title>{title}</Title>
         <Excerpt>{excerpt}</Excerpt>
-        {isWorksPage && (
+        {/* {isWorksPage && (
           <WorksGrid
             link={worksLink as string}
             roles={worksRoles as string[]}
             duration={worksDuration as string[]}
             tools={worksTools as string[]}
           />
-        )}
+        )} */}
         <Margin />
       </Header>
       <Divider />

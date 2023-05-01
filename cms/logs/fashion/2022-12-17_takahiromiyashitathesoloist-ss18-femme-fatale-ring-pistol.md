@@ -9,20 +9,14 @@ coverImage: https://user-images.githubusercontent.com/77861258/208269368-449444e
 
 Made entirely of Sterling Silver, the Femme Fatale Protector Ring cannot be fully expressed by words alone, as nothing compares to seeing this piece in person. The ring is modeled after the Le Petit Protector Ring Gun, with which you could fire miniature bullets and give damage unto your enemies.
 
-<br/>
-<br/>
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/x3TWp29pdzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<br/>
-<br/>
-
+<div>
 On the backside is an engraving that spells out ‘Femme Fatale,’ a seductive women who brings disaster unto those who become involved with her. Certain parts of the ring are movable, such as the revolving cylinder and small mechanics seen on the inner side of the ring.
 
 I bought this gem at the Soloist flagship store in Tokyo. The interior design and atmosphere of the store can be its own post. Anyhow, I was lucky enough to acquire this ring as it was the last in stock, and with good reason. The sheer craftsmanship of this ring cannot be compared to what is produced as a whole in the fashion scene. Unfortunately I ended up selling the piece (and deeply regret it to this day, rip).
 
-<br/>
-<br/>
+</div>
 
 <Slideshow aspectRatio="3:4">
 <Slide 

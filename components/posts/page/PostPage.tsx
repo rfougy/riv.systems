@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "markdown-to-jsx";
@@ -7,9 +6,7 @@ import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
 import { capitalizeFirstChar, dateToStr } from "../../../utils";
 
 import NextImage from "../../markdown-to-jsx/NextImage";
-import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
-import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
-import WorksGrid from "../works-grid/WorksGrid";
+
 import ArrowIcon from "../../icons/ArrowIcon";
 
 import {
@@ -20,20 +17,18 @@ import {
   Title,
   Content,
   CoverImage,
-  Excerpt,
-  Margin,
-  Divider,
   Header,
+  Excerpt,
+  Divider,
 } from "./PostPage.styled";
+import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
+import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
 
 const PostPage: React.FC<{ slug: string; content: any }> = ({
   slug,
   content,
 }) => {
-  const [worksPostData, setWorksPostData] = useState<any>();
-
   const { frontmatter, postContent }: any = content;
-
   const {
     title,
     datePublished,
@@ -44,16 +39,6 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
   const section: string = slug[0];
   const category: string = slug[1];
   const dateAsStr: string = dateToStr(datePublished);
-
-  useEffect(() => {
-    section === "works" &&
-      setWorksPostData({
-        link: frontmatter.worksLink,
-        roles: frontmatter.worksRoles,
-        duration: frontmatter.worksDuration,
-        tools: frontmatter.worksTools,
-      });
-  }, [frontmatter, section]);
 
   return content ? (
     <Container>
@@ -78,15 +63,6 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
         </Metadata>
         <Title>{title}</Title>
         <Excerpt>{excerpt}</Excerpt>
-        {worksPostData && (
-          <WorksGrid
-            link={worksPostData.link as string}
-            roles={worksPostData.roles as string[]}
-            duration={worksPostData.duration as string[]}
-            tools={worksPostData.tools as string[]}
-          />
-        )}
-        <Margin />
       </Header>
       <Divider />
       <CoverImage>

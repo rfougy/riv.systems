@@ -1,6 +1,6 @@
 # riv.systems
 
-This project serves as a portfolio/blog hybrid site
+This project serves as a portfolio/blog hybrid site.
 
 ## GitHub CMS
 

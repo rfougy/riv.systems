@@ -6,8 +6,4 @@ export interface IPostFrontMatter {
   excerpt: string;
   category: string;
   section: string;
-  worksLink?: string;
-  worksRoles?: string[];
-  worksDuration?: string[];
-  worksTools?: string[];
 }

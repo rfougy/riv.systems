@@ -15,6 +15,7 @@ export const Container = styled.a`
   border-radius: 2vh;
   border-width: 0 0.075rem 0.1rem 0.075rem;
 
+
   background: padding-box,
     linear-gradient(
         180deg,

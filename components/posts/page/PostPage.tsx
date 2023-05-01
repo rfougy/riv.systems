@@ -30,8 +30,7 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
   slug,
   content,
 }) => {
-  const [worksPostData, setWorksPostData] = useState<any>();
-
+  const [isWorksPage, setIsWorksPage] = useState<boolean>();
   const { frontmatter, postContent }: any = content;
 
   const {
@@ -40,20 +39,17 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
     coverImage,
     excerpt,
     placeholderImage,
+    worksLink = "",
+    worksRoles = [],
+    worksDuration = [],
+    worksTools = [],
   }: IPostFrontMatter = frontmatter;
+
   const section: string = slug[0];
   const category: string = slug[1];
   const dateAsStr: string = dateToStr(datePublished);
 
-  useEffect(() => {
-    section === "works" &&
-      setWorksPostData({
-        link: frontmatter.worksLink,
-        roles: frontmatter.worksRoles,
-        duration: frontmatter.worksDuration,
-        tools: frontmatter.worksTools,
-      });
-  }, [frontmatter, section]);
+  useEffect(() => setIsWorksPage(section === "works"), [section]);
 
   return content ? (
     <Container>
@@ -78,12 +74,12 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
         </Metadata>
         <Title>{title}</Title>
         <Excerpt>{excerpt}</Excerpt>
-        {worksPostData && (
+        {isWorksPage && (
           <WorksGrid
-            link={worksPostData.link as string}
-            roles={worksPostData.roles as string[]}
-            duration={worksPostData.duration as string[]}
-            tools={worksPostData.tools as string[]}
+            link={worksLink as string}
+            roles={worksRoles as string[]}
+            duration={worksDuration as string[]}
+            tools={worksTools as string[]}
           />
         )}
         <Margin />

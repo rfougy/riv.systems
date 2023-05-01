@@ -1,7 +1,11 @@
 import { breakpoints } from "./../../../styles/theme";
 import styled from "@emotion/styled";
 
-export const Header = styled.header``;
+export const Header = styled.header`
+  border-radius: 3vh;
+
+  background: ${(props: any) => props.theme.secondary};
+`;
 
 export const Title = styled.h1`
   font-size: 2rem;
@@ -33,11 +37,8 @@ export const Li = styled.li`
   }
 `;
 
-export const Divider = styled.div`
-  height: 1px;
-  background: ${(props: any) => props.theme.primary};
-  margin: 2rem 0 3.5rem 0;
-  opacity: 0.5;
+export const Margin = styled.div`
+  margin-top: 1.75rem;
 `;
 
 export const CoverImage = styled.div``;
@@ -45,32 +46,48 @@ export const CoverImage = styled.div``;
 export const Content = styled.div`
   margin-top: 2.125rem;
 
-  a {
-    font-size: 0.875rem;
+  article {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    width: 100%;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 1.25rem;
   }
 
   p {
     width: 100%;
     line-height: 175%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+  }
+
+  a {
+    font-size: 0.875rem;
+  }
+
+  ul {
+    list-style-type: disc;
+    width: 100%;
+    line-height: 150%;
+
+    margin-left: 20%;
+    padding-right: 20%;
   }
 
   iframe {
     aspect-ratio: 16 / 9;
     height: 100%;
     width: 100%;
-  }
-
-  article {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-  }
-
-  ul img {
-    margin: 0.25rem 0;
   }
 `;
 
@@ -79,4 +96,11 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   max-width: 50rem;
+`;
+
+export const Divider = styled.div`
+  height: 1px;
+  background: ${(props: any) => props.theme.primary};
+  margin: 2rem 0 3.5rem 0;
+  opacity: 0.5;
 `;

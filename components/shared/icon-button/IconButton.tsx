@@ -12,6 +12,8 @@ const IconButton: React.FC<{
   isDisabled?: boolean;
   rotate?: boolean;
   onClick?: () => any | ((arg: any) => any);
+  onMouseOver?: () => any | ((arg: any) => any);
+  onMouseLeave?: () => any | ((arg: any) => any);
 }> = ({
   src,
   alt,
@@ -22,6 +24,8 @@ const IconButton: React.FC<{
   isDisabled,
   rotate,
   onClick,
+  onMouseOver,
+  onMouseLeave,
 }) => {
   return (
     <>
@@ -34,6 +38,8 @@ const IconButton: React.FC<{
         isActive={isActive}
         isDisabled={isDisabled}
         onClick={() => (!onClick || isDisabled ? null : onClick())}
+        onMouseOver={onMouseOver}
+        onMouseLeave={onMouseLeave}
       >
         <Image src={src} alt={alt} layout="fill" objectFit="contain" />
       </Button>

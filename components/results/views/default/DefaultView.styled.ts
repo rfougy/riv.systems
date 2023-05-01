@@ -1,4 +1,4 @@
-import { breakpoints } from "./../../../../styles/theme";
+import { breakpoints } from "../../../../styles/theme";
 import styled from "@emotion/styled";
 
 export const Grid = styled.section`

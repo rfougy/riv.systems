@@ -15,7 +15,7 @@ const WorksGrid: React.FC<{
     <Grid>
       <WorksGridItem title="duration" val={formattedDuration} />
       <WorksGridItem title="roles" val={formattedRoles} />
-      <WorksGridItem title="tools" val={formattedTools} />{" "}
+      <WorksGridItem title="tools" val={formattedTools} />
     </Grid>
   );
 };

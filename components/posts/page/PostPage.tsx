@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "markdown-to-jsx";
@@ -6,7 +7,9 @@ import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
 import { capitalizeFirstChar, dateToStr } from "../../../utils";
 
 import NextImage from "../../markdown-to-jsx/NextImage";
-
+import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
+import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
+import WorksGrid from "../works-grid/WorksGrid";
 import ArrowIcon from "../../icons/ArrowIcon";
 
 import {
@@ -22,16 +25,12 @@ import {
   Divider,
   Header,
 } from "./PostPage.styled";
-import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
-import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
-import WorksGrid from "../works-grid/WorksGrid";
-import { useEffect, useState } from "react";
 
 const PostPage: React.FC<{ slug: string; content: any }> = ({
   slug,
   content,
 }) => {
-  const [isWorksPage, setIsWorksPage] = useState<boolean>();
+  const [worksPostData, setWorksPostData] = useState<any>();
 
   const { frontmatter, postContent }: any = content;
 
@@ -41,16 +40,20 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
     coverImage,
     excerpt,
     placeholderImage,
-    worksLink = "",
-    worksRoles = [],
-    worksDuration = [],
-    worksTools = [],
   }: IPostFrontMatter = frontmatter;
   const section: string = slug[0];
   const category: string = slug[1];
   const dateAsStr: string = dateToStr(datePublished);
 
-  useEffect(() => setIsWorksPage(section === "works"), [section]);
+  useEffect(() => {
+    section === "works" &&
+      setWorksPostData({
+        link: frontmatter.worksLink,
+        roles: frontmatter.worksRoles,
+        duration: frontmatter.worksDuration,
+        tools: frontmatter.worksTools,
+      });
+  }, [frontmatter, section]);
 
   return content ? (
     <Container>
@@ -75,12 +78,12 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
         </Metadata>
         <Title>{title}</Title>
         <Excerpt>{excerpt}</Excerpt>
-        {isWorksPage && (
+        {worksPostData && (
           <WorksGrid
-            link={worksLink as string}
-            roles={worksRoles as string[]}
-            duration={worksDuration as string[]}
-            tools={worksTools as string[]}
+            link={worksPostData.link as string}
+            roles={worksPostData.roles as string[]}
+            duration={worksPostData.duration as string[]}
+            tools={worksPostData.tools as string[]}
           />
         )}
         <Margin />

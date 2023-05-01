@@ -1,10 +1,14 @@
 ---
 title: Sleepless Magazine Archive Fashion Editorial
-datePublished: "2019-09-25"
+datePublished: "2022-12-18"
 section: works
 category: fashion
 excerpt: The one and only Archive Fashion editorial shot in Boston's own Chinatown, featuring Undercover, Comme des Garcons, Number (N)ine and more.
 coverImage: https://user-images.githubusercontent.com/77861258/208268870-cb48a2a4-b28d-49ac-a6ba-8d26b1dabe9b.png
+worksLink: undefined
+worksRoles: ["Stylist", "Writer"]
+worksDuration: ["September 2019", "present"]
+worksTools: ["N/A"]
 ---
 
 In the summer of 2019, I was asked by a fellow Bostonian to be featured in his magazine 'Sleepless'. During this time I was an avid reseller of Archive Fashion, and frankly had more articles of clothing than I can manage. It was from here where the lights clicked: "What if I used this opportunity to create an Archive Fashion editorial?" I decided to reach out to Layne, a friend who photographed for Bodega at the time, and from there we began to conceptualize the project.

@@ -16,7 +16,6 @@ const config = {
   swcMinify: true,
   images: {
     domains: ["i.pinimg.com", "user-images.githubusercontent.com"],
-    // disableStaticImages: true,
   },
   // @see https://nextjs.org/docs/advanced-features/compiler#remove-console
   compiler: {

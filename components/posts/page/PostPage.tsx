@@ -41,10 +41,10 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
     coverImage,
     excerpt,
     placeholderImage,
-    worksLink,
-    worksRoles,
-    worksDuration,
-    worksTools,
+    // worksLink,
+    // worksRoles,
+    // worksDuration,
+    // worksTools,
   }: IPostFrontMatter = frontmatter;
   const section: string = slug[0];
   const category: string = slug[1];

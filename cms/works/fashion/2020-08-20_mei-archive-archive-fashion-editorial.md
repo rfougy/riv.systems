@@ -1,10 +1,14 @@
 ---
 title: Mei Archive 'Test Shots' Archive Fashion Editorial
-datePublished: "2020-08-20"
+datePublished: "2023-01-21"
 section: works
 category: fashion
 excerpt: Editorial content featuring Mei’s collection of high quality and hard-to-find garments.
 coverImage: https://user-images.githubusercontent.com/77861258/213831808-d75fab61-7769-44ef-ae66-65175d7c3cbd.jpg
+worksLink: undefined
+worksRoles: ["Videgrapher", "Photographer", "Stylist"]
+worksDuration: ["August 2020", "present"]
+worksTools: ["Canon EOS Rebel t7", "After Effects", "Photoshop"]
 ---
 
 Back when I was immersed in the Archive Fashion niche, I found myself connecting with likeminded enthusiasts both online and in the Greater Boston area. One such enthusiast was Eagle Li, co-founder of [Mei Archive](https://www.instagram.com/mei_archive/?hl=en), an Archive Fashion store and rental service.

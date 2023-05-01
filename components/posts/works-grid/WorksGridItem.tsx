@@ -6,7 +6,7 @@ const WorksGridItem: React.FC<{
 }> = ({ title, val }) => {
   return (
     <GridItem>
-      <Title>{title}</Title>
+      <Title>{title.toUpperCase()}</Title>
       <Value>{val}</Value>
     </GridItem>
   );

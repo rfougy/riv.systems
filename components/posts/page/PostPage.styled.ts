@@ -2,30 +2,6 @@ import { breakpoints } from "./../../../styles/theme";
 import styled from "@emotion/styled";
 
 export const Header = styled.header`
-  ${({ isWorksPage }: { isWorksPage: boolean }) =>
-    !isWorksPage &&
-    `
-      border: solid transparent;
-      border-radius: 3vh;
-      border-width: 0 0.05rem 0.1rem 0.05rem;
-      background: padding-box,
-        linear-gradient(
-            180deg,
-            ${(props: any) => props.theme.secondary} 87.5%,
-            ${(props: any) => props.theme.primary} 100%
-          )
-          border-box;
-          `};
-  margin-bottom: 3rem;
-`;
-
-export const HeaderContainer = styled.div`
-  ${({ isWorksPage }: { isWorksPage: boolean }) =>
-    !isWorksPage &&
-    `
-    padding: 1rem;
-`};
-
   border-radius: 3vh;
 
   background: ${(props: any) => props.theme.secondary};
@@ -118,4 +94,11 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   max-width: 50rem;
+`;
+
+export const Divider = styled.div`
+  height: 1px;
+  background: ${(props: any) => props.theme.primary};
+  margin: 2rem 0 3.5rem 0;
+  opacity: 0.5;
 `;

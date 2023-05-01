@@ -17,10 +17,10 @@ import {
   Title,
   Content,
   CoverImage,
-  Header,
   Excerpt,
   Margin,
-  HeaderContainer,
+  Divider,
+  Header,
 } from "./PostPage.styled";
 import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
 import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
@@ -50,39 +50,38 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
 
   return content ? (
     <Container>
-      <Header isWorksPage={isWorksPage}>
-        <HeaderContainer isWorksPage={isWorksPage}>
-          <Metadata>
-            <Inline>
-              <Link href={`/content/${section}`}>
-                {capitalizeFirstChar(section)}
-              </Link>
-            </Inline>
-            <Inline>
-              <ArrowIcon aria-label="Arrow Icon" />
-            </Inline>
-            <Inline>
-              <Link href={`/content/${section}/${category}`}>
-                {capitalizeFirstChar(category)}
-              </Link>
-            </Inline>
-            <Li>
-              <p>{dateAsStr}</p>
-            </Li>
-          </Metadata>
-          <Title>{title}</Title>
-          <Excerpt>{excerpt}</Excerpt>
-          {isWorksPage && (
-            <WorksGrid
-              link={worksLink as string}
-              roles={worksRoles as string[]}
-              duration={worksDuration as string[]}
-              tools={worksTools as string[]}
-            />
-          )}
-          <Margin />
-        </HeaderContainer>
+      <Header>
+        <Metadata>
+          <Inline>
+            <Link href={`/content/${section}`}>
+              {capitalizeFirstChar(section)}
+            </Link>
+          </Inline>
+          <Inline>
+            <ArrowIcon aria-label="Arrow Icon" />
+          </Inline>
+          <Inline>
+            <Link href={`/content/${section}/${category}`}>
+              {capitalizeFirstChar(category)}
+            </Link>
+          </Inline>
+          <Li>
+            <p>{dateAsStr}</p>
+          </Li>
+        </Metadata>
+        <Title>{title}</Title>
+        <Excerpt>{excerpt}</Excerpt>
+        {isWorksPage && (
+          <WorksGrid
+            link={worksLink as string}
+            roles={worksRoles as string[]}
+            duration={worksDuration as string[]}
+            tools={worksTools as string[]}
+          />
+        )}
+        <Margin />
       </Header>
+      <Divider />
       <CoverImage>
         <Image
           priority

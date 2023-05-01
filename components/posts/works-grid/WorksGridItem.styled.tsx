@@ -7,6 +7,7 @@ export const GridItem = styled.div`
 `;
 
 export const Title = styled.caption`
+  font-size: 0.75rem;
   font-weight: 500;
 `;
 

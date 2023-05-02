@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import IconButton from "../../shared/icon-button/IconButton";
-import linkIconV1 from "../../../public/assets/icons/link-icon-v1.svg";
+import linkIconV1 from "../../../public/assets/icons/link-icon.svg";
 
 import { Container } from "./LinkButton.styled";
 

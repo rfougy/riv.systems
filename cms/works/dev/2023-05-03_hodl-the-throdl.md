@@ -4,7 +4,7 @@ datePublished: "2023-05-03"
 section: works
 category: dev
 excerpt: Developing the platformer game's cryptocurrency, Web3 integration, and UI.
-coverImage: https://user-images.githubusercontent.com/77861258/235372607-f5b674ef-95f6-4acb-8e49-6dcf33cc3778.jpg
+coverImage: https://user-images.githubusercontent.com/77861258/236042787-557a5bbd-c7b4-47fd-852e-d3eba499b978.jpg
 link: https://github.com/Hodl-The-Throdl-Devs/platformer
 worksRoles: ["Fullstack Engineer", "UX Designer"]
 worksDuration: ["December 2021"]
@@ -32,3 +32,18 @@ A few of the core deliverables I contributed through this endeavor included:
 <br/>
 
 In addition to leading this effort,I had a significant role in enhancing the user experience of the application by sourcing all videogame assets, developing character animations and designing the webapp’s UI.
+
+<br/>
+<br/>
+
+<Image 
+    src="https://user-images.githubusercontent.com/77861258/236042855-6b326bca-d023-4fe8-a3a8-ac98300e3546.png"
+    alt="Hodl the Throdl Demo Image" 
+    aspectRatio="4:3"
+/>
+<br/>
+<Image
+    src="https://user-images.githubusercontent.com/77861258/236042878-b7889448-4660-488c-89ce-5b99e536aa06.png"
+    alt="Hodl the Throdl Demo Image" 
+    aspectRatio="4:3"
+/>

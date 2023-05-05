@@ -8,7 +8,7 @@ coverImage: https://user-images.githubusercontent.com/77861258/213831808-d75fab6
 link: https://vimeo.com/791349582
 worksTeamSize: 1
 worksRoles: ["Videgrapher", "Photographer", "Stylist"]
-worksDuration: ["August 2020", "present"]
+worksDuration: ["August 2020"]
 worksTools: ["Canon EOS Rebel t7", "After Effects", "Photoshop"]
 ---
 

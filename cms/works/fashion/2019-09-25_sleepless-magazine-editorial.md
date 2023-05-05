@@ -18,7 +18,7 @@ In the summer of 2019, I was asked by a fellow Bostonian to be featured in his m
 <Image 
   src="https://user-images.githubusercontent.com/77861258/208268117-3de250bc-2f2a-4898-bdd0-3d552e328f10.jpg" 
   alt="Photo from Sleepless Magazine Archive Fashion Editorial, featuring Comme des Garcons 1999 Patchwork Pants, TAKAHIROMIYASHITATheSoloist AW17 Monster Vest, and Undercover AW01 D.A.V.F.Crystal Bullet Belt"
-  apectRatio="3:4"
+  aspectRatio="3:4"
 />
 
 <br/>

@@ -42,9 +42,10 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
     excerpt,
     placeholderImage,
     link,
-    worksRoles = [],
-    worksDuration = [],
-    worksTools = [],
+    worksTeamSize,
+    worksRoles,
+    worksDuration,
+    worksTools,
   }: IPostFrontMatter = frontmatter;
 
   const section: string = slug[0];
@@ -81,6 +82,7 @@ const PostPage: React.FC<{ slug: string; content: any }> = ({
         <Excerpt>{excerpt}</Excerpt>
         {isWorksPage && (
           <WorksGrid
+            teamSize={worksTeamSize as number}
             roles={worksRoles as string[]}
             duration={worksDuration as string[]}
             tools={worksTools as string[]}

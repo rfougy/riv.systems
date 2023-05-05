@@ -2,10 +2,11 @@ import { Grid } from "./WorksGrid.styled";
 import WorksGridItem from "./WorksGridItem";
 
 const WorksGrid: React.FC<{
+  teamSize: number;
   roles: string[];
   duration: string[];
   tools: string[];
-}> = ({ roles, duration, tools }) => {
+}> = ({ teamSize, roles, duration, tools }) => {
   const formattedRoles = roles.join(", ");
   const formattedDuration = duration.join(" - ");
   const formattedTools = tools.join(", ");
@@ -13,6 +14,7 @@ const WorksGrid: React.FC<{
   return (
     <Grid>
       <WorksGridItem title="duration" val={formattedDuration} />
+      <WorksGridItem title="team size" val={teamSize} />
       <WorksGridItem title="roles" val={formattedRoles} />
       <WorksGridItem title="tools" val={formattedTools} />
     </Grid>

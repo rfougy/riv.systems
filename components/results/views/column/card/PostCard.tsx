@@ -14,18 +14,12 @@ import {
   Text,
   Title,
 } from "./PostCard.styled";
-import useViewportWidthEventListener from "../../../../../hooks/useViewportWidthListener";
-import { breakpoints } from "../../../../../styles/theme";
 
 const PostCard: React.FC<{
   path: string;
   frontmatter: any;
   forSearchResults?: boolean;
 }> = ({ path, frontmatter, forSearchResults }) => {
-  const isColumnView = useViewportWidthEventListener(
-    breakpoints.useViewportWidth.xs
-  );
-
   const {
     title,
     datePublished,
@@ -43,8 +37,8 @@ const PostCard: React.FC<{
         <Image
           src={coverImage}
           alt={`Cover image for post titled '${title}'`}
-          width={isColumnView ? 600 : 800}
-          height={isColumnView ? 800 : 400}
+          width={800}
+          height={400}
           objectFit="cover"
           placeholder="blur"
           blurDataURL={placeholderImage}

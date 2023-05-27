@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import Pagination from "../../features/pagination/Pagination";
 import DefaultView from "../views/default/DefaultView";

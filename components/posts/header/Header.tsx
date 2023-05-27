@@ -21,13 +21,9 @@ import { capitalizeFirstChar, dateToStr } from "../../../utils";
 import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
 
 const Header: React.FC<{
-  slug: string;
   frontmatter: IPostFrontMatter;
-}> = ({ slug, frontmatter }) => {
+}> = ({ frontmatter }) => {
   const [isWorksPage, setIsWorksPage] = useState<boolean>();
-
-  const section: string = slug[0];
-  const category: string = slug[1];
 
   const {
     title,
@@ -38,6 +34,8 @@ const Header: React.FC<{
     worksRoles,
     worksDuration,
     worksTools,
+    category,
+    section,
   } = frontmatter;
 
   const dateAsStr: string = dateToStr(datePublished);

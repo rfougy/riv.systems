@@ -10,16 +10,13 @@ import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDis
 import { Container, Content, CoverImage, Divider } from "./PostPage.styled";
 import Header from "../header/Header";
 
-const PostPage: React.FC<{ slug: string; content: any }> = ({
-  slug,
-  content,
-}) => {
+const PostPage: React.FC<{ content: any }> = ({ content }) => {
   const { frontmatter, postContent }: any = content;
   const { title, coverImage, placeholderImage }: IPostFrontMatter = frontmatter;
 
   return content ? (
     <Container>
-      <Header slug={slug} frontmatter={frontmatter} />
+      <Header frontmatter={frontmatter} />
       <Divider />
       <CoverImage>
         <Image

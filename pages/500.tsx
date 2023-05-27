@@ -1,31 +1,9 @@
 import { GetStaticProps, NextPage } from "next";
-import Link from "next/link";
-import DisplayDotsCoordsProvider from "../components/context/DisplayDotsCoordsContext";
-import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
-import {
-  Button,
-  Container,
-  Description,
-  Margin,
-} from "../styles/pages/DisplayDotsPage.styled";
+import NotFound from "../components/shared/not-found/NotFound";
 
-const Custom500: NextPage = () => {
-  return (
-    <>
-      <DisplayDotsCoordsProvider>
-        <Container>
-          <Margin>
-            <DisplayDotsAnime text={"500"} />
-          </Margin>
-          <Description>500 Error: A Server-side error occurred.</Description>
-          <Link href={`/content`} passHref>
-            <Button>RETURN TO SYSTEMS</Button>
-          </Link>
-        </Container>
-      </DisplayDotsCoordsProvider>
-    </>
-  );
-};
+const Custom500: NextPage = () => (
+  <NotFound title="500" copy="500 Error: A Server-side error occurred." />
+);
 
 export default Custom500;
 

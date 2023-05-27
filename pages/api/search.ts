@@ -7,7 +7,6 @@ import {
 } from "../../lib/cms/getCmsContent";
 
 /**
- * @deprecated currently not in use
  * @description used for search feature by referring to cache
  */
 const searchApiRoute = (req: NextApiRequest, res: NextApiResponse) => {

@@ -8,6 +8,7 @@ import {
   FeaturesContainer,
   LogoAndButtonsContainer,
 } from "./Navbar.styled";
+import Search from "../features/search/Search";
 
 const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
   return (
@@ -20,6 +21,7 @@ const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
         </FeaturesContainer>
       </LogoAndButtonsContainer>
       <NavMenu />
+      <Search />
     </Nav>
   );
 };

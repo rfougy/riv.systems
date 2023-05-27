@@ -1,9 +1,6 @@
 import PostCard from "../../results/views/default/card/PostCard";
 
-/**
- * @deprecated currently not in use
- */
-const SearchResults: React.FC<{ results: any }> = ({ results }) => {
+const SearchResults: React.FC<{ results: any[] }> = ({ results }) => {
   return (
     <>
       {results.length ? (

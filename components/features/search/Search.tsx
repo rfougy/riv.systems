@@ -2,9 +2,6 @@ import { useEffect, useState } from "react";
 
 import SearchResults from "./SearchResults";
 
-/**
- * @deprecated currently not in use
- */
 const Search: React.FC<{}> = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [searchResults, setSearchResults] = useState<any[]>([]);

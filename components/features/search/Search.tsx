@@ -31,7 +31,7 @@ const Search: React.FC<{}> = () => {
         <div>
           <form>
             <input
-              type="text"
+              type="search"
               name="search"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}

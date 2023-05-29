@@ -37,6 +37,7 @@ const InstantSearchCard: React.FC<{
           width={100}
           height={100}
           objectFit="cover"
+          style={{ borderRadius: "1rem" }}
         />
         <Text>
           <Title>{title}</Title>

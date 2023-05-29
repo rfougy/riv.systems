@@ -36,6 +36,8 @@ const Navbar: React.FC<{
           src={closeIcon}
           alt="close search button"
           ariaLabel="close search button"
+          height="1.25rem"
+          width="1.25rem"
           onClick={() => setSearchIconClicked(false)}
         />
       </>

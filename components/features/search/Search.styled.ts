@@ -5,3 +5,5 @@ export const Input = styled.input`
   cursor: cell;
   color: ${(props: any) => props.theme.primary};
 `;
+
+export const Form = styled.form``;

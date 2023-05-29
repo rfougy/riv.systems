@@ -44,9 +44,9 @@ const Navbar: React.FC<{
         <LogoAndButtonsContainer>
           <NavLogo />
           <FeaturesContainer>
+            <SearchButton setSearchIconClicked={setSearchIconClicked} />
             <ThemeToggleButton toggleTheme={toggleTheme} />
             <AudioPlayer />
-            <SearchButton setSearchIconClicked={setSearchIconClicked} />
           </FeaturesContainer>
         </LogoAndButtonsContainer>
         <NavMenu />

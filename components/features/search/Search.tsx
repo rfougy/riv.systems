@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
-import { Input } from "./Search.styled";
+import { Form, Input } from "./Search.styled";
 
 const Search: React.FC<{
   setSearchResults: Dispatch<SetStateAction<any[]>>;
@@ -31,23 +31,17 @@ const Search: React.FC<{
   }, [searchTerm]);
 
   return (
-    <div>
-      <div>
-        <div>
-          <form>
-            <Input
-              type="search"
-              name="search"
-              value={searchTerm}
-              onChange={(e) => handleChange(e)}
-              onKeyDown={(e) => disableEnterKey(e)}
-              placeholder="Search..."
-              autoFocus
-            />
-          </form>
-        </div>
-      </div>
-    </div>
+    <Form>
+      <Input
+        type="search"
+        name="search"
+        value={searchTerm}
+        onChange={(e) => handleChange(e)}
+        onKeyDown={(e) => disableEnterKey(e)}
+        placeholder="Search..."
+        autoFocus
+      />
+    </Form>
   );
 };
 

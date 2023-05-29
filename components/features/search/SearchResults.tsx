@@ -1,4 +1,4 @@
-import PostCard from "../../results/views/default/card/PostCard";
+import InstantSearchCard from "./instant-search-card/InstantSearchCard";
 
 const SearchResults: React.FC<{ results: any[] }> = ({ results }) => {
   return (
@@ -8,11 +8,10 @@ const SearchResults: React.FC<{ results: any[] }> = ({ results }) => {
           <div>
             <p>{results.length} results</p>
             {results.map((result: any, index: number) => (
-              <PostCard
+              <InstantSearchCard
                 key={index}
                 path={result.path}
                 frontmatter={result.frontmatter}
-                forSearchResults={true}
               />
             ))}
           </div>

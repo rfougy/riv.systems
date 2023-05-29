@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import SearchResults from "./SearchResults";
+import { Input } from "./Search.styled";
 
 const Search: React.FC<{}> = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -34,7 +35,7 @@ const Search: React.FC<{}> = () => {
       <div>
         <div>
           <form>
-            <input
+            <Input
               type="search"
               name="search"
               value={searchTerm}

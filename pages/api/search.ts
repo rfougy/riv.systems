@@ -5,6 +5,7 @@ import {
   getFileNamesInDirectory,
   getPosts,
 } from "../../lib/cms/getCmsContent";
+
 import { ICmsCategory } from "../../interfaces/lCmsCategories";
 
 const searchApiRoute = (req: NextApiRequest, res: NextApiResponse) => {
@@ -20,7 +21,6 @@ const searchApiRoute = (req: NextApiRequest, res: NextApiResponse) => {
         title: string;
         category: string;
         section: string;
-        excerpt: string;
       };
     }) =>
       title?.toLowerCase().indexOf(req.query.q as string) != -1 ||

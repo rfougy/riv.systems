@@ -16,6 +16,11 @@ const Search: React.FC<{}> = () => {
     }
   }
 
+  function disableEnterKey(e: any): void {
+    (e.keyCode === 13 || e.which === 13 || e.key === "Enter") &&
+      e.preventDefault();
+  }
+
   useEffect(() => {
     getSearchResults();
   }, [searchTerm]);
@@ -30,6 +35,7 @@ const Search: React.FC<{}> = () => {
               name="search"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyDown={(e) => disableEnterKey(e)}
               placeholder="Search..."
             />
           </form>

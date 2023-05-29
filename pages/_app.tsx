@@ -18,11 +18,14 @@ import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
 import SearchResults from "../components/features/search/search-results/SearchResults";
+import { useRouter } from "next/router";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [currTheme, setTheme] = useState<ITheme>(lightTheme);
   const [searchIconClicked, setSearchIconClicked] = useState<boolean>(false);
   const [searchResults, setSearchResults] = useState<any[]>([]);
+
+  const router = useRouter();
 
   // Home Page, 404 Page, 500 Page
   // @ts-ignore
@@ -98,6 +101,12 @@ const App = ({ Component, pageProps }: AppProps) => {
     if (themeInSessionStorage) {
       setTheme(JSON.parse(themeInSessionStorage));
     }
+  }, []);
+
+  useEffect(() => {
+    router.events.on("routeChangeStart", () => setSearchIconClicked(false));
+    return () =>
+      router.events.off("routeChangeStart", () => setSearchIconClicked(false));
   }, []);
 
   return (

@@ -10,13 +10,8 @@ const InstantSearchCard: React.FC<{
   path: string;
   frontmatter: any;
 }> = ({ path, frontmatter }) => {
-  const {
-    title,
-    datePublished,
-    category,
-    section,
-    coverImage,
-  }: IPostFrontMatter = frontmatter;
+  const { title, datePublished, coverImage }: IPostFrontMatter = frontmatter;
+
   const dateAsStr: string = dateToStr(datePublished);
 
   return (

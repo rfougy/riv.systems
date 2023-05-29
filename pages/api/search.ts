@@ -6,23 +6,12 @@ import {
   getPosts,
 } from "../../lib/cms/getCmsContent";
 
-/**
- * @description used for search feature by referring to cache
- */
 const searchApiRoute = (req: NextApiRequest, res: NextApiResponse) => {
-  let posts: any;
+  const sections: string[] = getFileNamesInDirectory();
+  const allCategories: any = getCategories(sections);
+  const allPosts: any = getPosts(allCategories);
 
-  if (process.env.NODE_ENV === "production") {
-    posts = require("../../cache/data");
-  } else {
-    const sections: string[] = getFileNamesInDirectory();
-    const allCategories: any = getCategories(sections);
-    const allPosts: any = getPosts(allCategories);
-
-    posts = allPosts;
-  }
-
-  const results = posts.filter(
+  const results = allPosts.filter(
     ({
       frontmatter: { title, category, section, excerpt },
     }: {

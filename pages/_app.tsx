@@ -17,9 +17,12 @@ import "../styles/globals.css";
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
+import SearchResults from "../components/features/search/SearchResults";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [currTheme, setTheme] = useState<ITheme>(lightTheme);
+  const [searchIconClicked, setSearchIconClicked] = useState<boolean>(false);
+  const [searchResults, setSearchResults] = useState<any[]>([]);
 
   // Home Page, 404 Page, 500 Page
   // @ts-ignore
@@ -105,10 +108,19 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Favicon />
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
-        <Navbar toggleTheme={toggleTheme} />
+        <Navbar
+          searchIconClicked={searchIconClicked}
+          setSearchIconClicked={setSearchIconClicked}
+          setSearchResults={setSearchResults}
+          toggleTheme={toggleTheme}
+        />
         <PageContainer>
           <ContentWrap isDisplayDotsPage={isDisplayDotsPage}>
-            <Component {...pageProps} />
+            {searchIconClicked ? (
+              <SearchResults results={searchResults} />
+            ) : (
+              <Component {...pageProps} />
+            )}
           </ContentWrap>
           <Footer />
         </PageContainer>

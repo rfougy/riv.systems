@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
-import SearchResults from "./SearchResults";
 import { Input } from "./Search.styled";
 
-const Search: React.FC<{}> = () => {
+const Search: React.FC<{
+  setSearchResults: Dispatch<SetStateAction<any[]>>;
+}> = ({ setSearchResults }) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [searchResults, setSearchResults] = useState<any[]>([]);
 
   async function getSearchResults() {
     if (searchTerm === "") {
@@ -46,7 +46,6 @@ const Search: React.FC<{}> = () => {
           </form>
         </div>
       </div>
-      <SearchResults results={searchResults} />
     </div>
   );
 };

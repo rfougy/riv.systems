@@ -46,10 +46,10 @@ const Navbar: React.FC<{
           <FeaturesContainer>
             <ThemeToggleButton toggleTheme={toggleTheme} />
             <AudioPlayer />
+            <SearchButton setSearchIconClicked={setSearchIconClicked} />
           </FeaturesContainer>
         </LogoAndButtonsContainer>
         <NavMenu />
-        <SearchButton setSearchIconClicked={setSearchIconClicked} />
       </>
     )}
   </Nav>

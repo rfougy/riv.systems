@@ -42,6 +42,7 @@ const Search: React.FC<{
               onChange={(e) => handleChange(e)}
               onKeyDown={(e) => disableEnterKey(e)}
               placeholder="Search..."
+              autoFocus
             />
           </form>
         </div>

@@ -17,7 +17,7 @@ import "../styles/globals.css";
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
-import SearchResults from "../components/features/search/SearchResults";
+import SearchResults from "../components/features/search/search-results/SearchResults";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [currTheme, setTheme] = useState<ITheme>(lightTheme);

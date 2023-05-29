@@ -10,7 +10,10 @@ export const Container = styled.a`
   width: 100%;
 
   margin: auto;
-  border-bottom: solid black 1px;
+  padding-bottom: 1rem;
+
+  border-bottom: solid 1px;
+  border-color: ${(props: any) => props.theme.primary};
 
   @media (max-width: ${breakpoints.xs}) {
     max-width: none;

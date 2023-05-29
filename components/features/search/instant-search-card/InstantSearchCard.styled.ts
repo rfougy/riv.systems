@@ -20,6 +20,15 @@ export const Container = styled.a`
   }
 `;
 
+export const ImageContainer = styled.div`
+  position: relative;
+
+  height: 6.25rem;
+  width: 6.25rem;
+  min-width: 6.25rem;
+  min-height: 6.25rem;
+`;
+
 export const Text = styled.div`
   padding: 1rem;
   background: ${(props: any) => props.theme.secondary};

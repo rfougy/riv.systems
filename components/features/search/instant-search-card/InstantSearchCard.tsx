@@ -1,19 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { capitalizeFirstChar, dateToStr } from "../../../../utils";
+import { dateToStr } from "../../../../utils";
 import { IPostFrontMatter } from "../../../../interfaces/IPostFrontMatter";
 
-import ArrowIcon from "../../../icons/ArrowIcon";
-
-import {
-  Container,
-  Info,
-  InfoContainer,
-  Metadata,
-  Text,
-  Title,
-} from "./InstantSearchCard.styled";
+import { Container, Info, Text, Title } from "./InstantSearchCard.styled";
 
 const InstantSearchCard: React.FC<{
   path: string;

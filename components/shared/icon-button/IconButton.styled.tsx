@@ -9,7 +9,7 @@ export const Button = styled.button`
 
   img {
     ${(props: any) =>
-      props.rotate &&
+      props.rotate === "true" &&
       `animation: rotation 3s infinite linear; 
       @keyframes rotation {
         from {
@@ -30,7 +30,7 @@ export const Button = styled.button`
       isDisabled?: boolean;
       height?: string;
       width?: string;
-      rotate?: boolean;
+      rotate?: "true" | "false";
       theme: ITheme;
     }) =>
       isDisabled
@@ -48,7 +48,7 @@ export const Button = styled.button`
     }: {
       isActive?: boolean;
       isDisabled?: boolean;
-      rotate?: boolean;
+      rotate?: "true" | "false";
       theme: ITheme;
     }) =>
       isDisabled

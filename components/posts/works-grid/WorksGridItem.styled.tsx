@@ -6,7 +6,7 @@ export const GridItem = styled.div`
   align-items: start;
 `;
 
-export const Title = styled.caption`
+export const Title = styled.h3`
   font-size: 0.75rem;
   font-weight: 500;
 `;

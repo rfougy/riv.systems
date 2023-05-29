@@ -7,16 +7,18 @@ const WorksGrid: React.FC<{
   duration: string[];
   tools: string[];
 }> = ({ teamSize, roles, duration, tools }) => {
-  const formattedRoles = roles.join(", ");
-  const formattedDuration = duration.join(" - ");
-  const formattedTools = tools.join(", ");
+  const formatted = {
+    duration: duration.join(" - "),
+    roles: roles.join(", "),
+    tools: tools.join(", "),
+  };
 
   return (
     <Grid>
-      <WorksGridItem title="duration" val={formattedDuration} />
+      <WorksGridItem title="duration" val={formatted.duration} />
       <WorksGridItem title="team size" val={teamSize} />
-      <WorksGridItem title="roles" val={formattedRoles} />
-      <WorksGridItem title="tools" val={formattedTools} />
+      <WorksGridItem title="roles" val={formatted.roles} />
+      <WorksGridItem title="tools" val={formatted.tools} />
     </Grid>
   );
 };

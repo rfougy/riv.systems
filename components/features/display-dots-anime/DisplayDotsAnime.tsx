@@ -69,7 +69,7 @@ const DisplayDotsAnime: React.FC<{
           alt="restart icon"
           ariaLabel="restart animation"
           isDisabled={!animeEnded}
-          rotate={restartButtonRotating}
+          rotate={restartButtonRotating.toString() as "true" | "false"}
           onClick={() => restart()}
         />
       )}

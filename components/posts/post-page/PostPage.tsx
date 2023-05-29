@@ -1,95 +1,22 @@
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import Markdown from "markdown-to-jsx";
 
 import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
-import { capitalizeFirstChar, dateToStr } from "../../../utils";
 
 import NextImage from "../../markdown-to-jsx/NextImage";
 import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
 import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
-import WorksGrid from "../works-grid/WorksGrid";
-import ArrowIcon from "../../icons/ArrowIcon";
 
-import {
-  Inline,
-  Metadata,
-  Li,
-  Container,
-  Title,
-  Content,
-  CoverImage,
-  Excerpt,
-  Margin,
-  Divider,
-  Header,
-  TitleAndLink,
-} from "./PostPage.styled";
-import LinkButton from "../link-button/LinkButton";
+import { Container, Content, CoverImage, Divider } from "./PostPage.styled";
+import Header from "../header/Header";
 
-const PostPage: React.FC<{ slug: string; content: any }> = ({
-  slug,
-  content,
-}) => {
-  const [isWorksPage, setIsWorksPage] = useState<boolean>();
+const PostPage: React.FC<{ content: any }> = ({ content }) => {
   const { frontmatter, postContent }: any = content;
-
-  const {
-    title,
-    datePublished,
-    coverImage,
-    excerpt,
-    placeholderImage,
-    link,
-    worksTeamSize,
-    worksRoles,
-    worksDuration,
-    worksTools,
-  }: IPostFrontMatter = frontmatter;
-
-  const section: string = slug[0];
-  const category: string = slug[1];
-  const dateAsStr: string = dateToStr(datePublished);
-
-  useEffect(() => setIsWorksPage(section === "works"), [section]);
+  const { title, coverImage, placeholderImage }: IPostFrontMatter = frontmatter;
 
   return content ? (
     <Container>
-      <Header>
-        <Metadata>
-          <Inline>
-            <Link href={`/content/${section}`}>
-              {capitalizeFirstChar(section)}
-            </Link>
-          </Inline>
-          <Inline>
-            <ArrowIcon aria-label="Arrow Icon" />
-          </Inline>
-          <Inline>
-            <Link href={`/content/${section}/${category}`}>
-              {capitalizeFirstChar(category)}
-            </Link>
-          </Inline>
-          <Li>
-            <p>{dateAsStr}</p>
-          </Li>
-        </Metadata>
-        <TitleAndLink>
-          <Title>{title}</Title>
-          {link && <LinkButton url={link} title={title} />}
-        </TitleAndLink>
-        <Excerpt>{excerpt}</Excerpt>
-        {isWorksPage && (
-          <WorksGrid
-            teamSize={worksTeamSize as number}
-            roles={worksRoles as string[]}
-            duration={worksDuration as string[]}
-            tools={worksTools as string[]}
-          />
-        )}
-        <Margin />
-      </Header>
+      <Header frontmatter={frontmatter} />
       <Divider />
       <CoverImage>
         <Image

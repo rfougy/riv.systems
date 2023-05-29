@@ -16,10 +16,10 @@ import {
 import { postView } from "../../../types/postView";
 import ColumnView from "../views/column/ColumnView";
 import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
+
 import useContentFiltering from "../../../hooks/useContentFiltering";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
-import { breakpoints } from "../../../styles/theme";
 
 const ContentResults: React.FC<{
   content: any;

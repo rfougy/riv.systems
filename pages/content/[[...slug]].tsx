@@ -31,7 +31,7 @@ const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
   if (slug?.length === 2)
     return <CategoryResults category={slug[1]} content={content} />;
 
-  if (slug?.length === 3) return <PostPage slug={slug} content={content} />;
+  if (slug?.length === 3) return <PostPage content={content} />;
 
   return null;
 };

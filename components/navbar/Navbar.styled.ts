@@ -42,6 +42,7 @@ export const LogoAndButtonsContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   gap: 2rem;
+  height: 1.344rem;
 
   @media (max-width: ${breakpoints.xs}) {
     gap: 1rem;

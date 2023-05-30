@@ -28,7 +28,8 @@ const InstantSearchCard: React.FC<{
             src={coverImage}
             alt={`Cover image for post titled '${title}'`}
             objectFit="cover"
-            layout="fill"
+            height={100}
+            width={100}
             style={{ borderRadius: "1rem" }}
           />
         </ImageContainer>

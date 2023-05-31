@@ -7,27 +7,23 @@ import Footer from "../components/footer/Footer";
 import PwaHead from "../components/head/PwaHead";
 import Favicon from "../components/head/Favicon";
 import PageHead from "../components/head/PageHead";
+import AppComponentWrapper from "../components/app/ComponentWrapper";
+
+import SearchProvider from "../context/SearchContext";
 
 import { ITheme } from "../interfaces/ITheme";
 
-import { ContentWrap, PageContainer } from "../styles/pages/App.styled";
+import { PageContainer } from "../styles/pages/App.styled";
 import { lightTheme, darkTheme, breakpoints } from "../styles/theme";
 
 import "../styles/globals.css";
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
-import SearchResults from "../components/features/search/search-results/SearchResults";
-import { useRouter } from "next/router";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [currTheme, setTheme] = useState<ITheme>(lightTheme);
-  const [searchIconClicked, setSearchIconClicked] = useState<boolean>(false);
-  const [searchResults, setSearchResults] = useState<any[]>([]);
 
-  const router = useRouter();
-
-  // Home Page, 404 Page, 500 Page
   // @ts-ignore
   const isDisplayDotsPage = pageProps.isDisplayDotsPage ? true : false;
 
@@ -103,12 +99,6 @@ const App = ({ Component, pageProps }: AppProps) => {
     }
   }, []);
 
-  useEffect(() => {
-    router.events.on("routeChangeStart", () => setSearchIconClicked(false));
-    return () =>
-      router.events.off("routeChangeStart", () => setSearchIconClicked(false));
-  }, []);
-
   return (
     <>
       {/* @ts-ignore */}
@@ -117,22 +107,15 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Favicon />
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
-        <Navbar
-          searchIconClicked={searchIconClicked}
-          setSearchIconClicked={setSearchIconClicked}
-          setSearchResults={setSearchResults}
-          toggleTheme={toggleTheme}
-        />
-        <PageContainer>
-          <ContentWrap isDisplayDotsPage={isDisplayDotsPage}>
-            {searchIconClicked ? (
-              <SearchResults results={searchResults} />
-            ) : (
+        <SearchProvider>
+          <Navbar toggleTheme={toggleTheme} />
+          <PageContainer>
+            <AppComponentWrapper isDisplayDotsPage={isDisplayDotsPage}>
               <Component {...pageProps} />
-            )}
-          </ContentWrap>
-          <Footer />
-        </PageContainer>
+            </AppComponentWrapper>
+            <Footer />
+          </PageContainer>
+        </SearchProvider>
       </ThemeProvider>
     </>
   );

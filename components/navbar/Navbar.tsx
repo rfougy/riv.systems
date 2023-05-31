@@ -1,13 +1,13 @@
-import { Dispatch, SetStateAction } from "react";
-
 import NavMenu from "./nav-menu/NavMenu";
 import NavLogo from "./nav-logo/NavLogo";
 
 import Search from "../features/search/Search";
 import ThemeToggleButton from "../features/theme-toggle/ThemeToggleButton";
 import SearchButton from "../features/search/search-button/SearchButton";
-import IconButton from "../shared/icon-button/IconButton";
 import { AudioPlayer } from "../features/audio-player/AudioPlayer";
+import IconButton from "../shared/icon-button/IconButton";
+
+import { useSearchContext } from "../../context/SearchContext";
 
 import {
   Nav,
@@ -18,43 +18,40 @@ import {
 import closeIcon from "../../public/assets/icons/close-icon.svg";
 
 const Navbar: React.FC<{
-  searchIconClicked: boolean;
-  setSearchIconClicked: Dispatch<SetStateAction<boolean>>;
-  setSearchResults: Dispatch<SetStateAction<any[]>>;
   toggleTheme: () => void;
-}> = ({
-  searchIconClicked,
-  setSearchIconClicked,
-  setSearchResults,
-  toggleTheme,
-}) => (
-  <Nav>
-    {searchIconClicked ? (
-      <>
-        <Search setSearchResults={setSearchResults} />
-        <IconButton
-          src={closeIcon}
-          alt="close search button"
-          ariaLabel="close search button"
-          height="1.25rem"
-          width="1.25rem"
-          onClick={() => setSearchIconClicked(false)}
-        />
-      </>
-    ) : (
-      <>
-        <LogoAndButtonsContainer>
-          <NavLogo />
-          <FeaturesContainer>
-            <ThemeToggleButton toggleTheme={toggleTheme} />
-            <AudioPlayer />
-            <SearchButton setSearchIconClicked={setSearchIconClicked} />
-          </FeaturesContainer>
-        </LogoAndButtonsContainer>
-        <NavMenu />
-      </>
-    )}
-  </Nav>
-);
+}> = ({ toggleTheme }) => {
+  const { searchIconClicked, setSearchIconClicked, setSearchResults } =
+    useSearchContext();
+
+  return (
+    <Nav>
+      {searchIconClicked ? (
+        <>
+          <Search setSearchResults={setSearchResults} />
+          <IconButton
+            src={closeIcon}
+            alt="close search button"
+            ariaLabel="close search button"
+            height="1.25rem"
+            width="1.25rem"
+            onClick={() => setSearchIconClicked(false)}
+          />
+        </>
+      ) : (
+        <>
+          <LogoAndButtonsContainer>
+            <NavLogo />
+            <FeaturesContainer>
+              <ThemeToggleButton toggleTheme={toggleTheme} />
+              <AudioPlayer />
+              <SearchButton setSearchIconClicked={setSearchIconClicked} />
+            </FeaturesContainer>
+          </LogoAndButtonsContainer>
+          <NavMenu />
+        </>
+      )}
+    </Nav>
+  );
+};
 
 export default Navbar;

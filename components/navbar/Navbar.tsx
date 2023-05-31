@@ -20,12 +20,12 @@ import closeIcon from "../../public/assets/icons/close-icon.svg";
 const Navbar: React.FC<{
   toggleTheme: () => void;
 }> = ({ toggleTheme }) => {
-  const { searchIconClicked, setSearchIconClicked, setSearchResults } =
+  const { searchActivated, setSearchActivated, setSearchResults } =
     useSearchContext();
 
   return (
     <Nav>
-      {searchIconClicked ? (
+      {searchActivated ? (
         <>
           <Search setSearchResults={setSearchResults} />
           <IconButton
@@ -34,7 +34,7 @@ const Navbar: React.FC<{
             ariaLabel="close search button"
             height="1.25rem"
             width="1.25rem"
-            onClick={() => setSearchIconClicked(false)}
+            onClick={() => setSearchActivated(false)}
           />
         </>
       ) : (
@@ -44,7 +44,7 @@ const Navbar: React.FC<{
             <FeaturesContainer>
               <ThemeToggleButton toggleTheme={toggleTheme} />
               <AudioPlayer />
-              <SearchButton setSearchIconClicked={setSearchIconClicked} />
+              <SearchButton setSearchActivated={setSearchActivated} />
             </FeaturesContainer>
           </LogoAndButtonsContainer>
           <NavMenu />

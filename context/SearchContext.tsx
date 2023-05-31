@@ -7,23 +7,23 @@ export const useSearchContext = () => useContext(SearchContext);
 const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [searchIconClicked, setSearchIconClicked] = useState<boolean>(false);
+  const [searchActivated, setSearchActivated] = useState<boolean>(false);
   const [searchResults, setSearchResults] = useState<any[]>([]);
 
   const router = useRouter();
 
   useEffect(() => {
-    router.events.on("routeChangeStart", () => setSearchIconClicked(false));
+    router.events.on("routeChangeStart", () => setSearchActivated(false));
     return () =>
-      router.events.off("routeChangeStart", () => setSearchIconClicked(false));
+      router.events.off("routeChangeStart", () => setSearchActivated(false));
   }, []);
 
   return (
     <SearchContext.Provider
       value={{
-        searchIconClicked,
+        searchActivated,
         searchResults,
-        setSearchIconClicked,
+        setSearchActivated,
         setSearchResults,
       }}
     >

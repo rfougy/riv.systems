@@ -8,11 +8,11 @@ const AppComponentWrapper: React.FC<{
   isDisplayDotsPage: boolean;
   children: React.ReactNode;
 }> = ({ isDisplayDotsPage, children }) => {
-  const { searchIconClicked, searchResults } = useSearchContext();
+  const { searchActivated, searchResults } = useSearchContext();
 
   return (
     <ContentWrap isDisplayDotsPage={isDisplayDotsPage}>
-      {searchIconClicked ? <SearchResults results={searchResults} /> : children}
+      {searchActivated ? <SearchResults results={searchResults} /> : children}
     </ContentWrap>
   );
 };

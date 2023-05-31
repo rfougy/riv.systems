@@ -1,7 +1,7 @@
 import type { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 
-import DisplayDotsCoordsProvider from "../components/context/DisplayDotsCoordsContext";
+import DisplayDotsCoordsProvider from "../context/DisplayDotsCoordsContext";
 import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
 
 import {

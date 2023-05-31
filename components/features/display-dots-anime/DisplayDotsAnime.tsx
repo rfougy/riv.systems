@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsContext";
+import { useDisplayDotsCoordsContext } from "../../../context/DisplayDotsCoordsContext";
 
 import DotWord from "./word/DotWord";
 import IconButton from "../../shared/icon-button/IconButton";

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import DisplayDotsCoordsProvider from "../../context/DisplayDotsCoordsContext";
+import DisplayDotsCoordsProvider from "../../../context/DisplayDotsCoordsContext";
 
 import DisplayDotsAnime from "../../features/display-dots-anime/DisplayDotsAnime";
 

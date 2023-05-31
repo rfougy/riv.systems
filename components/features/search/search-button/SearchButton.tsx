@@ -3,10 +3,10 @@ import searchIcon from "../../../../public/assets/icons/search-icon.svg";
 import { Dispatch, SetStateAction } from "react";
 
 const SearchButton: React.FC<{
-  setSearchIconClicked: Dispatch<SetStateAction<boolean>>;
-}> = ({ setSearchIconClicked }) => {
+  setSearchActivated: Dispatch<SetStateAction<boolean>>;
+}> = ({ setSearchActivated }) => {
   function handleClick() {
-    setSearchIconClicked(true);
+    setSearchActivated(true);
   }
 
   return (

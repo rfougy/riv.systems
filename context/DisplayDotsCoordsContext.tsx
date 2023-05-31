@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext } from "react";
 
-import { useInterval } from "../../hooks/useInterval";
+import { useInterval } from "../hooks/useInterval";
 
 export const DisplayDotsCoordsContext = createContext<any | null>(null);
 export const useDisplayDotsCoordsContext = () =>

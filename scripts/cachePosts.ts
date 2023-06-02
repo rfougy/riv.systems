@@ -4,7 +4,9 @@ const { getAllPosts } = require("../lib/cms/getCmsContent.ts");
 function createCacheForPostData() {
   const posts = getAllPosts();
 
-  return `module.exports = ${JSON.stringify(posts)}`;
+  return `const cachedPosts = ${JSON.stringify(
+    posts
+  )}; module.exports = cachedPosts`;
 }
 
 try {

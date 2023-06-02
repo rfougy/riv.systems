@@ -5,7 +5,7 @@ import { Container } from "./SearchResults.styled";
 const SearchResults: React.FC = () => {
   const { searchTerm, searchResults: results } = useSearchContext();
 
-  if (results.length)
+  if (searchTerm.length && results.length)
     return (
       <Container>
         {results.map((result: any, index: number) => (

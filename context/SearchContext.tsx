@@ -1,8 +1,5 @@
 import { useRouter } from "next/router";
 import React, { createContext, useState, useContext, useEffect } from "react";
-import { getAllPosts } from "../lib/cms/getCmsContent";
-
-import cachedPosts from "../cache/data";
 
 export const SearchContext = createContext<any | null>(null);
 export const useSearchContext = () => useContext(SearchContext);
@@ -29,10 +26,6 @@ const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
   useEffect(() => {
     getSearchResults();
   }, [searchTerm]);
-
-  useEffect(() => {
-    console.log("cachedPosts: ", cachedPosts);
-  }, []);
 
   useEffect(() => {
     router.events.on("routeChangeStart", () => setSearchActivated(false));

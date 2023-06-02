@@ -6,7 +6,7 @@ function createCacheForPostData() {
 
   return `const cachedPosts = ${JSON.stringify(
     posts
-  )}; module.exports = cachedPosts`;
+  )}; export default cachedPosts`;
 }
 
 try {

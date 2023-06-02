@@ -1,9 +1,12 @@
+import { useSearchContext } from "../../../../context/SearchContext";
 import InstantSearchCard from "../instant-search-card/InstantSearchCard";
 import { Container } from "./SearchResults.styled";
 
-const SearchResults: React.FC<{ results: any[] }> = ({ results }) => (
-  <>
-    {results.length ? (
+const SearchResults: React.FC = () => {
+  const { searchTerm, searchResults: results } = useSearchContext();
+
+  if (results.length)
+    return (
       <Container>
         {results.map((result: any, index: number) => (
           <InstantSearchCard
@@ -13,10 +16,11 @@ const SearchResults: React.FC<{ results: any[] }> = ({ results }) => (
           />
         ))}
       </Container>
-    ) : (
-      <></>
-    )}
-  </>
-);
+    );
+
+  if (searchTerm.length && !results.length) return <p>No results found...</p>;
+
+  return <></>;
+};
 
 export default SearchResults;

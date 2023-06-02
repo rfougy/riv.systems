@@ -80,3 +80,11 @@ export function getPosts(categories: ICmsCategory[]) {
 
   return posts;
 }
+
+export function getAllPosts() {
+  const sections: string[] = getFileNamesInDirectory();
+  const allCategories: ICmsCategory[] = getCategories(sections);
+  const allPosts: any[] = getPosts(allCategories);
+
+  return allPosts;
+}

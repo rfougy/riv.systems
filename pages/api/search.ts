@@ -1,17 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import {
-  getCategories,
-  getFileNamesInDirectory,
-  getPosts,
-} from "../../lib/cms/getCmsContent";
-
-import { ICmsCategory } from "../../interfaces/lCmsCategories";
+import { getAllPosts } from "../../lib/cms/getCmsContent";
 
 const searchApiRoute = (req: NextApiRequest, res: NextApiResponse) => {
-  const sections: string[] = getFileNamesInDirectory();
-  const allCategories: ICmsCategory[] = getCategories(sections);
-  const allPosts: any[] = getPosts(allCategories);
+  const allPosts: any[] = getAllPosts();
 
   const results = allPosts.filter(
     ({

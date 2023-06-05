@@ -31,7 +31,7 @@ const PostCard: React.FC<{
   const dateAsStr: string = dateToStr(datePublished);
 
   return (
-    <Link legacyBehavior href={path} passHref>
+    <Link href={path}>
       <Container>
         <Image
           src={coverImage}

@@ -23,7 +23,7 @@ const NavLogo: React.FC = () => {
 
   return (
     <Logo>
-      <Link legacyBehavior href={`/`} passHref>
+      <Link href={`/`}>
         <a>
           <Image
             src={logoSrc}

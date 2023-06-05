@@ -50,7 +50,7 @@ const Announcement: React.FC<{
         Latest Update ({convertedDate}): {announcement.text}{" "}
         {announcement.link && (
           <span>
-            <Link legacyBehavior href={announcement.link} passHref>
+            <Link href={announcement.link}>
               <StyledLink>Click here</StyledLink>
             </Link>
           </span>

@@ -1,5 +1,5 @@
 import Image from "next/legacy/image";
-import { default as NextLink } from "next/link";
+import Link from "next/link";
 
 import closeIconDark from "../../public/assets/close-icon-dark.svg";
 import closeIconLight from "../../public/assets/close-icon-light.svg";
@@ -12,7 +12,7 @@ import { dateToNumericStr } from "../../utils/dateToNumericStr";
 import {
   CloseIconContainer,
   Container,
-  Link,
+  StyledLink,
   Text,
 } from "./Announcement.styled";
 
@@ -50,9 +50,9 @@ const Announcement: React.FC<{
         Latest Update ({convertedDate}): {announcement.text}{" "}
         {announcement.link && (
           <span>
-            <NextLink href={announcement.link} passHref>
-              <Link>Click here</Link>
-            </NextLink>
+            <Link legacyBehavior href={announcement.link} passHref>
+              <StyledLink>Click here</StyledLink>
+            </Link>
           </span>
         )}
       </Text>

@@ -23,7 +23,7 @@ const NotFound: React.FC<{ title: string; copy: string }> = ({
           <DisplayDotsAnime text={title} />
         </Margin>
         <Description>{copy}</Description>
-        <Link href={`/content`} passHref>
+        <Link legacyBehavior href={`/content`} passHref>
           <Button>RETURN TO SYSTEMS</Button>
         </Link>
       </Container>

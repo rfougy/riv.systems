@@ -44,7 +44,7 @@ const NavMenu: React.FC = () => {
           key={index}
           onMouseOver={(): void => setHoveredOption(section)}
         >
-          <Link href={`/content/${section}`} passHref>
+          <Link legacyBehavior href={`/content/${section}`} passHref>
             <A
               isActiveOption={section === activeOption}
               isHoveredOption={section === hoveredOption}
@@ -59,7 +59,7 @@ const NavMenu: React.FC = () => {
         </MenuOption>
       ))}
       <MenuOption onMouseOver={(): void => setHoveredOption("content")}>
-        <Link href={`/content`} passHref>
+        <Link legacyBehavior href={`/content`} passHref>
           <A
             isActiveOption={"content" === activeOption}
             isHoveredOption={"content" === hoveredOption}

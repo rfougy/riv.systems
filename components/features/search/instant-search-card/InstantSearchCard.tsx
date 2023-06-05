@@ -21,7 +21,7 @@ const InstantSearchCard: React.FC<{
   const dateAsStr: string = dateToStr(datePublished);
 
   return (
-    <Link href={path}>
+    <Link href={path} legacyBehavior>
       <Container>
         <ImageContainer>
           <Image

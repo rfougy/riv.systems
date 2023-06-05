@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { getWidthHeightFromAspectRatio } from "../../utils/getWidthHeightFromAspectRatio";
 
 const NextImage: React.FC<{

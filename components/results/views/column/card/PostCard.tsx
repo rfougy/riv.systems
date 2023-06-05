@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 import { capitalizeFirstChar } from "../../../../../utils";
 import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";

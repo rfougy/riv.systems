@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Markdown from "markdown-to-jsx";
 
 import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";

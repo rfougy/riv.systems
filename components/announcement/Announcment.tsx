@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { default as NextLink } from "next/link";
 
 import closeIconDark from "../../public/assets/close-icon-dark.svg";

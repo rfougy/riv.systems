@@ -28,7 +28,7 @@ export const Text = styled.p`
   text-align: center;
 `;
 
-export const StyledLink = styled.a`
+export const StyledLink = styled.p`
   color: ${(props: any) => props.theme.secondary};
   cursor: cell;
   font-weight: 500;

@@ -1,7 +1,7 @@
 import { breakpoints } from "../../../../../styles/theme";
 import styled from "@emotion/styled";
 
-export const Container = styled.a`
+export const Container = styled.div`
   overflow: hidden;
   text-decoration: none;
 

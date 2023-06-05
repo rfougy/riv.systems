@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import { sectionsList } from "../../../constants/sectionsList";
 
-import { A, Container, MenuOption } from "./NavMenu.styled";
+import { Text, Container, MenuOption } from "./NavMenu.styled";
 
 const NavMenu: React.FC = () => {
   const { asPath: path }: NextRouter = useRouter();
@@ -45,7 +45,7 @@ const NavMenu: React.FC = () => {
           onMouseOver={(): void => setHoveredOption(section)}
         >
           <Link legacyBehavior href={`/content/${section}`} passHref>
-            <A
+            <Text
               isActiveOption={section === activeOption}
               isHoveredOption={section === hoveredOption}
               hoverIsActive={typeof hoveredOption === "string"}
@@ -54,20 +54,20 @@ const NavMenu: React.FC = () => {
               {section === activeOption
                 ? "./" + section.toUpperCase()
                 : "/" + section.toUpperCase()}
-            </A>
+            </Text>
           </Link>
         </MenuOption>
       ))}
       <MenuOption onMouseOver={(): void => setHoveredOption("content")}>
         <Link legacyBehavior href={`/content`} passHref>
-          <A
+          <Text
             isActiveOption={"content" === activeOption}
             isHoveredOption={"content" === hoveredOption}
             hoverIsActive={typeof hoveredOption === "string"}
             userInHomePage={!activeOption}
           >
             {"content" === activeOption ? "./" + "ALL" : "/" + "ALL"}
-          </A>
+          </Text>
         </Link>
       </MenuOption>
     </Container>

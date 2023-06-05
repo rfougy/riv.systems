@@ -16,7 +16,7 @@ export const MenuOption = styled.li`
   display: flex;
 `;
 
-export const A = styled.a`
+export const Text = styled.p`
   font-weight: ${({
     isActiveOption,
     isHoveredOption,

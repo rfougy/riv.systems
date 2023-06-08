@@ -18,8 +18,7 @@ import {
 const PostCard: React.FC<{
   path: string;
   frontmatter: any;
-  forSearchResults?: boolean;
-}> = ({ path, frontmatter, forSearchResults }) => {
+}> = ({ path, frontmatter }) => {
   const {
     title,
     datePublished,

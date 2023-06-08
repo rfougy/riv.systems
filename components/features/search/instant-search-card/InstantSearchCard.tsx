@@ -32,9 +32,9 @@ const InstantSearchCard: React.FC<{
             style={{
               borderRadius: "1rem",
               maxWidth: "100%",
-              height: "auto",
-              objectFit: "cover"
-            }} />
+              objectFit: "cover",
+            }}
+          />
         </ImageContainer>
         <Text>
           <Title>{title}</Title>

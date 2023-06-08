@@ -58,7 +58,9 @@ export const Text = styled.p`
 
     return 0.5;
   }};
+
   text-decoration: none;
+  margin: 0;
 
   &:hover {
     font-weight: 700;

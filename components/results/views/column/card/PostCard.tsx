@@ -43,9 +43,9 @@ const PostCard: React.FC<{
           blurDataURL={placeholderImage}
           style={{
             maxWidth: "100%",
-            height: "auto",
-            objectFit: "cover"
-          }} />
+            objectFit: "cover",
+          }}
+        />
         <Text>
           <Title>{title}</Title>
           <Metadata>

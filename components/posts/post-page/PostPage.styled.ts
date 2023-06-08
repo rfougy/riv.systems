@@ -53,6 +53,7 @@ export const Content = styled.div`
 
 export const Container = styled.div`
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   max-width: 50rem;

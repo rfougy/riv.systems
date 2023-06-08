@@ -36,15 +36,15 @@ const PostCard: React.FC<{
         <Image
           src={coverImage}
           alt={`Cover image for post titled '${title}'`}
-          width={300}
+          width={650}
           height={150}
           placeholder="blur"
           blurDataURL={placeholderImage}
           style={{
             maxWidth: "100%",
-            height: "auto",
-            objectFit: "cover"
-          }} />
+            objectFit: "cover",
+          }}
+        />
         <Text>
           <Title>{title}</Title>
           <Metadata>

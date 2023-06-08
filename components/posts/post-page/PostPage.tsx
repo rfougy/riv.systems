@@ -29,10 +29,9 @@ const PostPage: React.FC<{ content: any }> = ({ content }) => {
           blurDataURL={placeholderImage}
           style={{
             borderRadius: "2vh",
-            maxWidth: "100%",
-            height: "auto",
-            objectFit: "cover"
-          }} />
+            objectFit: "cover",
+          }}
+        />
       </CoverImage>
       <Content>
         <Markdown

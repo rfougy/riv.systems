@@ -31,6 +31,7 @@ export const Content = styled.div`
   }
 
   a {
+    text-decoration: underline;
     font-size: 0.875rem;
   }
 

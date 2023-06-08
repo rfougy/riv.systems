@@ -46,7 +46,7 @@ const Header: React.FC<{
     <Container>
       <Metadata>
         <Inline>
-          <Link legacyBehavior href={`/content/${section}`}>
+          <Link href={`/content/${section}`}>
             {capitalizeFirstChar(section)}
           </Link>
         </Inline>
@@ -54,7 +54,7 @@ const Header: React.FC<{
           <ArrowIcon aria-label="Arrow Icon" />
         </Inline>
         <Inline>
-          <Link legacyBehavior href={`/content/${section}/${category}`}>
+          <Link href={`/content/${section}/${category}`}>
             {capitalizeFirstChar(category)}
           </Link>
         </Inline>

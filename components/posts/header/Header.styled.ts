@@ -23,6 +23,10 @@ export const Metadata = styled.ul`
 export const Inline = styled.li`
   display: inline-block;
   margin-right: 0.5rem;
+
+  a {
+    text-decoration: underline;
+  }
 `;
 
 export const Li = styled.li`

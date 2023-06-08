@@ -32,7 +32,7 @@ const PostCard: React.FC<{
   const dateAsStr: string = datePublished.replace(/-/g, "/");
 
   return (
-    <Link href={path} legacyBehavior>
+    <Link href={path}>
       <Container>
         <Image
           src={coverImage}

@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { getWidthHeightFromAspectRatio } from "../../utils/getWidthHeightFromAspectRatio";
 
 const NextImage: React.FC<{
@@ -23,9 +23,12 @@ const NextImage: React.FC<{
       alt={alt}
       width={width}
       height={height}
-      objectFit="cover"
-      style={{ borderRadius: isSlideThumbnail ? "50%" : "2vh" }}
-    />
+      style={{
+        borderRadius: isSlideThumbnail ? "50%" : "2vh",
+        maxWidth: "100%",
+        height: "auto",
+        objectFit: "cover"
+      }} />
   );
 };
 

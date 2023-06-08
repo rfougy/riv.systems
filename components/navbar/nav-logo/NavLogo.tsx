@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -33,7 +33,10 @@ const NavLogo: React.FC = () => {
           onTouchStart={(): void => setLogoSrc(logoActive)}
           onTouchEnd={(): void => setLogoSrc(logoHidden)}
           onTouchCancel={(): void => setLogoSrc(logoHidden)}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
 
       </Link>
     </Logo>

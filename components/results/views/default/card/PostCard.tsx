@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import { capitalizeFirstChar, dateToStr } from "../../../../../utils";
 import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";
@@ -38,10 +38,13 @@ const PostCard: React.FC<{
           alt={`Cover image for post titled '${title}'`}
           width={300}
           height={150}
-          objectFit="cover"
           placeholder="blur"
           blurDataURL={placeholderImage}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
         <Text>
           <Title>{title}</Title>
           <Metadata>

@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Markdown from "markdown-to-jsx";
 
 import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
@@ -25,11 +25,14 @@ const PostPage: React.FC<{ content: any }> = ({ content }) => {
           alt={`Cover image for the blog post titled ${title}`}
           width={800}
           height={400}
-          objectFit="cover"
-          style={{ borderRadius: "2vh" }}
           placeholder="blur"
           blurDataURL={placeholderImage}
-        />
+          style={{
+            borderRadius: "2vh",
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "cover"
+          }} />
       </CoverImage>
       <Content>
         <Markdown

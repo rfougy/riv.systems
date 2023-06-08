@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 import closeIconDark from "../../public/assets/close-icon-dark.svg";
@@ -44,7 +44,10 @@ const Announcement: React.FC<{
           src={closeIcon}
           alt="announcement close icon"
           onClick={() => handleClose()}
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </CloseIconContainer>
       <Text>
         Latest Update ({convertedDate}): {announcement.text}{" "}

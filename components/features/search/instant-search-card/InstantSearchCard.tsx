@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import { dateToStr } from "../../../../utils";
 import { IPostFrontMatter } from "../../../../interfaces/IPostFrontMatter";
@@ -27,11 +27,14 @@ const InstantSearchCard: React.FC<{
           <Image
             src={coverImage}
             alt={`Cover image for post titled '${title}'`}
-            objectFit="cover"
             height={100}
             width={100}
-            style={{ borderRadius: "1rem" }}
-          />
+            style={{
+              borderRadius: "1rem",
+              maxWidth: "100%",
+              height: "auto",
+              objectFit: "cover"
+            }} />
         </ImageContainer>
         <Text>
           <Title>{title}</Title>

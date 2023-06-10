@@ -1,6 +1,10 @@
 import styled from "@emotion/styled";
 
-export const CoverImage = styled.div``;
+export const CoverImage = styled.div`
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+`;
 
 export const Content = styled.div`
   margin-top: 2.125rem;

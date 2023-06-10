@@ -16,6 +16,7 @@ const config = {
   swcMinify: true,
   images: {
     domains: ["i.pinimg.com", "user-images.githubusercontent.com"],
+    minimumCacheTTL: 60,
   },
   // @see https://nextjs.org/docs/advanced-features/compiler#remove-console
   compiler: {

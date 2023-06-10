@@ -40,6 +40,7 @@ const PostCard: React.FC<{
           height={400}
           placeholder="blur"
           blurDataURL={placeholderImage}
+          sizes="(max-width: 640px) 100vw, (max-width: 960px) 66vw, 50vw"
           style={{
             maxWidth: "100%",
             objectFit: "cover",

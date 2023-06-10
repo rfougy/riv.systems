@@ -20,6 +20,7 @@ const NextImage: React.FC<{
       src={src}
       alt={alt}
       fill
+      sizes="(max-width: 900px) 100vw, (max-width: 1600px) 50vw"
       style={{
         borderRadius: isSlideThumbnail ? "50%" : "2vh",
         objectFit: "cover",

@@ -24,7 +24,6 @@ const NavLogo: React.FC = () => {
   return (
     <Logo>
       <Link href={`/`}>
-
         <Image
           src={logoSrc}
           alt="website logo"
@@ -33,11 +32,12 @@ const NavLogo: React.FC = () => {
           onTouchStart={(): void => setLogoSrc(logoActive)}
           onTouchEnd={(): void => setLogoSrc(logoHidden)}
           onTouchCancel={(): void => setLogoSrc(logoHidden)}
+          sizes="(max-width: 640px) 20vw, (max-width: 1200px) 25vw, 25vw"
           style={{
             maxWidth: "100%",
-            height: "auto"
-          }} />
-
+            height: "auto",
+          }}
+        />
       </Link>
     </Logo>
   );

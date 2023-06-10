@@ -46,8 +46,9 @@ const Announcement: React.FC<{
           onClick={() => handleClose()}
           style={{
             maxWidth: "100%",
-            height: "auto"
-          }} />
+            height: "auto",
+          }}
+        />
       </CloseIconContainer>
       <Text>
         Latest Update ({convertedDate}): {announcement.text}{" "}

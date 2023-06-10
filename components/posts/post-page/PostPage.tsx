@@ -26,6 +26,7 @@ const PostPage: React.FC<{ content: any }> = ({ content }) => {
           fill
           placeholder="blur"
           blurDataURL={placeholderImage}
+          sizes="(max-width: 900px) 100vw, (max-width: 1600px) 50vw"
           style={{
             borderRadius: "2vh",
             objectFit: "cover",

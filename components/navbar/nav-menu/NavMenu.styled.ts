@@ -16,7 +16,7 @@ export const MenuOption = styled.li`
   display: flex;
 `;
 
-export const A = styled.a`
+export const Text = styled.p`
   font-weight: ${({
     isActiveOption,
     isHoveredOption,
@@ -58,7 +58,9 @@ export const A = styled.a`
 
     return 0.5;
   }};
+
   text-decoration: none;
+  margin: 0;
 
   &:hover {
     font-weight: 700;

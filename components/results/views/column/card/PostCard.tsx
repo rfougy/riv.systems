@@ -18,8 +18,7 @@ import {
 const PostCard: React.FC<{
   path: string;
   frontmatter: any;
-  forSearchResults?: boolean;
-}> = ({ path, frontmatter, forSearchResults }) => {
+}> = ({ path, frontmatter }) => {
   const {
     title,
     datePublished,
@@ -32,16 +31,19 @@ const PostCard: React.FC<{
   const dateAsStr: string = datePublished.replace(/-/g, "/");
 
   return (
-    <Link href={path} passHref>
+    <Link href={path}>
       <Container>
         <Image
           src={coverImage}
           alt={`Cover image for post titled '${title}'`}
           width={800}
           height={400}
-          objectFit="cover"
           placeholder="blur"
           blurDataURL={placeholderImage}
+          style={{
+            maxWidth: "100%",
+            objectFit: "cover",
+          }}
         />
         <Text>
           <Title>{title}</Title>

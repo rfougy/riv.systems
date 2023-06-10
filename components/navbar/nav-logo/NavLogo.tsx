@@ -23,18 +23,21 @@ const NavLogo: React.FC = () => {
 
   return (
     <Logo>
-      <Link href={`/`} passHref>
-        <a>
-          <Image
-            src={logoSrc}
-            alt="website logo"
-            onMouseOver={(): void => setLogoSrc(logoActive)}
-            onMouseLeave={(): void => setLogoSrc(logoHidden)}
-            onTouchStart={(): void => setLogoSrc(logoActive)}
-            onTouchEnd={(): void => setLogoSrc(logoHidden)}
-            onTouchCancel={(): void => setLogoSrc(logoHidden)}
-          />
-        </a>
+      <Link href={`/`}>
+
+        <Image
+          src={logoSrc}
+          alt="website logo"
+          onMouseOver={(): void => setLogoSrc(logoActive)}
+          onMouseLeave={(): void => setLogoSrc(logoHidden)}
+          onTouchStart={(): void => setLogoSrc(logoActive)}
+          onTouchEnd={(): void => setLogoSrc(logoHidden)}
+          onTouchCancel={(): void => setLogoSrc(logoHidden)}
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
+
       </Link>
     </Logo>
   );

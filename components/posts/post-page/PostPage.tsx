@@ -3,7 +3,7 @@ import Markdown from "markdown-to-jsx";
 
 import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
 
-import NextImage from "../../markdown-to-jsx/NextImage";
+import NextImage from "../../markdown-to-jsx/next-image/NextImage";
 import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
 import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
 
@@ -23,12 +23,13 @@ const PostPage: React.FC<{ content: any }> = ({ content }) => {
           priority
           src={coverImage}
           alt={`Cover image for the blog post titled ${title}`}
-          width={800}
-          height={400}
-          objectFit="cover"
-          style={{ borderRadius: "2vh" }}
+          fill
           placeholder="blur"
           blurDataURL={placeholderImage}
+          style={{
+            borderRadius: "2vh",
+            objectFit: "cover",
+          }}
         />
       </CoverImage>
       <Content>

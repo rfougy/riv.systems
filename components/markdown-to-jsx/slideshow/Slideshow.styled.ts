@@ -46,7 +46,7 @@ export const NavArrowIcon = styled(ArrowIcon)`
   margin: ${({ right, left }: { right?: boolean; left?: boolean }) => {
     if (right) return "0 0.25rem 0 0";
     if (left) return "0 0 0 0.25rem";
-  }};
+  }};x
 
   border-color: ${lightTheme.secondary};
 `;

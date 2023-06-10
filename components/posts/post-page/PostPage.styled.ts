@@ -1,6 +1,10 @@
 import styled from "@emotion/styled";
 
-export const CoverImage = styled.div``;
+export const CoverImage = styled.div`
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+`;
 
 export const Content = styled.div`
   margin-top: 2.125rem;
@@ -31,6 +35,7 @@ export const Content = styled.div`
   }
 
   a {
+    text-decoration: underline;
     font-size: 0.875rem;
   }
 
@@ -52,6 +57,7 @@ export const Content = styled.div`
 
 export const Container = styled.div`
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   max-width: 50rem;

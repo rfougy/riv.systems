@@ -1,4 +1,4 @@
-import NextImage from "../../NextImage";
+import NextImage from "../../next-image/NextImage";
 import isEqual from "lodash/isEqual";
 
 import { ISlide } from "../../../../interfaces/ISlide";

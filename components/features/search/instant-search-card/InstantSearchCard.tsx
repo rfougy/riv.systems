@@ -21,16 +21,19 @@ const InstantSearchCard: React.FC<{
   const dateAsStr: string = dateToStr(datePublished);
 
   return (
-    <Link href={path} passHref>
+    <Link href={path}>
       <Container>
         <ImageContainer>
           <Image
             src={coverImage}
             alt={`Cover image for post titled '${title}'`}
-            objectFit="cover"
             height={100}
             width={100}
-            style={{ borderRadius: "1rem" }}
+            style={{
+              borderRadius: "1rem",
+              maxWidth: "100%",
+              objectFit: "cover",
+            }}
           />
         </ImageContainer>
         <Text>

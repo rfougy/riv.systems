@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getWidthHeightFromAspectRatio } from "../../utils/getWidthHeightFromAspectRatio";
+import { Container } from "./NextImage.styled";
 
 const NextImage: React.FC<{
   src: string;
@@ -13,20 +13,19 @@ const NextImage: React.FC<{
   aspectRatio = "3:4",
   isSlideThumbnail,
   priority = false,
-}) => {
-  const { width, height } = getWidthHeightFromAspectRatio(aspectRatio);
-
-  return (
+}) => (
+  <Container aspectRatio={aspectRatio}>
     <Image
       priority={priority}
       src={src}
       alt={alt}
-      width={width}
-      height={height}
-      objectFit="cover"
-      style={{ borderRadius: isSlideThumbnail ? "50%" : "2vh" }}
+      fill
+      style={{
+        borderRadius: isSlideThumbnail ? "50%" : "2vh",
+        objectFit: "cover",
+      }}
     />
-  );
-};
+  </Container>
+);
 
 export default NextImage;

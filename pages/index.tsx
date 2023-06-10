@@ -27,7 +27,7 @@ const Home: NextPage = () => {
             I created this website to document <br />
             my projects, experiences and thoughts.
           </Description>
-          <Link href={`/content`} passHref>
+          <Link href={`/content`}>
             <Button>EXPLORE SYSTEMS</Button>
           </Link>
         </Container>

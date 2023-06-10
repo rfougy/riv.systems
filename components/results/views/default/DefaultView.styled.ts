@@ -18,4 +18,8 @@ export const Grid = styled.section`
 
 export const GridItem = styled.div`
   display: flex;
+
+  a {
+    width: 100%;
+  }
 `;

@@ -29,6 +29,7 @@ p {
 }
 
 a {
+  text-decoration: none;
   color: inherit;
   font-size: 0.75rem;
   font-weight: 400;

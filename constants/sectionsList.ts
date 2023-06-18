@@ -1,3 +1,3 @@
 import { sectionType } from "../types/sectionType";
 
-export const sectionsList: sectionType[] = ["works", "blog"];
+export const sectionsList: sectionType[] = ["blog", "works"];

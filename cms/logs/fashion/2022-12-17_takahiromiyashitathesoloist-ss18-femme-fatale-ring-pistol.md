@@ -1,7 +1,7 @@
 ---
 title: "Takahiromiyashita The Soloist: SS18 'Femme Fatale' Ring Pistol"
 datePublished: "2022-12-17"
-section: logs
+section: blog
 category: fashion
 excerpt: An informal review of one of my favorite pieces that I've had the pleasure to own. Fashion kills.
 coverImage: https://user-images.githubusercontent.com/77861258/208269368-449444ef-6ca7-4bfb-8702-4fb0e9761fdb.jpg

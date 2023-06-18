@@ -1,7 +1,7 @@
 ---
 title: "On Creating Meaningless Content"
 datePublished: "2023-03-04"
-section: logs
+section: blog
 category: personal
 excerpt: My take on the defining meaningless content and why we should make it more often.
 coverImage: https://user-images.githubusercontent.com/77861258/208271929-cfc03d67-4089-4ad1-91a3-1deb3e30b57d.jpg

@@ -7,13 +7,28 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: row;
+
+  height: 8rem;
   width: 100%;
 
   margin: auto;
-  padding-bottom: 1rem;
+  border: solid transparent;
+  border-radius: 2vh;
+  border-width: 0.075rem 0.1rem 0.075rem 0;
 
-  border-bottom: solid 1px;
-  border-color: ${(props: any) => props.theme.primary};
+  background: padding-box,
+    linear-gradient(
+        90deg,
+        ${(props: any) => props.theme.secondary} 25%,
+        ${(props: any) => props.theme.primary} 100%
+      )
+      border-box;
+
+  &:hover {
+    div {
+      background: ${(props: any) => props.theme.highlight};
+    }
+  }
 
   @media (max-width: ${breakpoints.xs}) {
     max-width: none;
@@ -23,14 +38,18 @@ export const Container = styled.div`
 export const ImageContainer = styled.div`
   position: relative;
 
-  min-width: 10.25rem;
-  min-height: 10.25rem;
+  min-width: 8rem;
+  min-height: 8rem;
 `;
 
 export const Text = styled.div`
   padding: 1rem;
+  width: 100%;
+
   background: ${(props: any) => props.theme.secondary};
 `;
+
+export const Metadata = styled.div``;
 
 /**
  * @description webkit portion allows for ellipsis after reaching two lines of text

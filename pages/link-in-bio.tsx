@@ -1,10 +1,18 @@
 import { GetStaticProps, NextPage } from "next";
-import React from "react";
-import { getContentByDynamicPage } from "../lib/dynamic-pages/getContentByDynamicPage";
-import { includePlaceholderImage } from "../lib/dynamic-pages/includePlaceholderImage";
+
 import IPostData from "../interfaces/IPostData";
 
+import findFeaturedPosts from "../utils/link-in-bio/findFeaturedPosts";
+import { getContentByDynamicPage } from "../lib/dynamic-pages/getContentByDynamicPage";
+import { includePlaceholderImage } from "../lib/dynamic-pages/includePlaceholderImage";
+
 const LinkInBio: NextPage<{ posts: IPostData[] }> = ({ posts }) => {
+  const featuredPosts: IPostData[] = findFeaturedPosts(posts, [
+    "On Creating Meaningless Content",
+    "Custom Biker Jacket References",
+    "Sleepless Magazine Archive Fashion Editorial",
+  ]);
+
   return <>TEST</>;
 };
 

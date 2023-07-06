@@ -18,8 +18,9 @@ import {
 import closeIcon from "../../public/assets/icons/close-icon.svg";
 
 const Navbar: React.FC<{
+  isLinkInBioPage: boolean;
   toggleTheme: () => void;
-}> = ({ toggleTheme }) => {
+}> = ({ isLinkInBioPage, toggleTheme }) => {
   const { searchActivated, setSearchActivated, setSearchResults } =
     useSearchContext();
 

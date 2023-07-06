@@ -41,6 +41,7 @@ export const getStaticProps: GetStaticProps = async () => {
           "Discover Riv's social media platforms, latest content, and more.",
       },
       isDisplayDotsPage: true,
+      isLinkInBioPage: true,
     },
   };
 };

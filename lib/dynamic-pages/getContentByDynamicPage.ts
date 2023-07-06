@@ -22,7 +22,7 @@ export function sortPostsByDate(posts: any) {
 /**
  * @todo for content for category page, title and section are mismatched. This is temporary fix and needs more concrete solution.
  */
-export function getContentByDynamicPage(slug: string | string[] | undefined) {
+export function getContentByDynamicPage(slug?: string | string[]) {
   if (!slug) {
     const sections: string[] = getFileNamesInDirectory();
     const allCategories: ICmsCategory[] = getCategories(sections);

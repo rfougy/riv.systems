@@ -1,9 +1,8 @@
 import { useSearchContext } from "../../context/SearchContext";
 
-import DefaultNavLayout from "./layouts/default/DefaultNavLayout";
-import SearchNavLayout from "./layouts/search/SearchNavLayout";
-
-import { Nav } from "./Navbar.styled";
+import DefaultLayout from "./layouts/default/DefaultLayout";
+import LinkInBioLayout from "./layouts/link-in-bio/LinkInBioLayout";
+import SearchLayout from "./layouts/search/SearchLayout";
 
 const Navbar: React.FC<{
   isLinkInBioPage: boolean;
@@ -14,21 +13,19 @@ const Navbar: React.FC<{
 
   if (searchActivated)
     return (
-      <Nav>
-        <SearchNavLayout
-          setSearchActivated={setSearchActivated}
-          setSearchResults={setSearchResults}
-        />
-      </Nav>
+      <SearchLayout
+        setSearchActivated={setSearchActivated}
+        setSearchResults={setSearchResults}
+      />
     );
 
+  if (isLinkInBioPage) return <LinkInBioLayout toggleTheme={toggleTheme} />;
+
   return (
-    <Nav>
-      <DefaultNavLayout
-        toggleTheme={toggleTheme}
-        setSearchActivated={setSearchActivated}
-      />
-    </Nav>
+    <DefaultLayout
+      toggleTheme={toggleTheme}
+      setSearchActivated={setSearchActivated}
+    />
   );
 };
 

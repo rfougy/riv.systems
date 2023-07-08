@@ -8,7 +8,7 @@ const LinkInBioLayout: React.FC<{
   toggleTheme: () => void;
 }> = ({ toggleTheme }) => (
   <NavContainer>
-    <ThemeToggleButton toggleTheme={toggleTheme} />
+    <ThemeToggleButton forLinkInBioLayout={true} toggleTheme={toggleTheme} />
     <Link href={`/`}>
       <Button>
         Go To Website

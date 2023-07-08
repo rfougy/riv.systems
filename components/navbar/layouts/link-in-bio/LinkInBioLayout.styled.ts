@@ -8,9 +8,9 @@ export const Button = styled.button`
   display: flex;
   flex-wrap: no-wrap;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.35rem;
 
-  padding: 0.25rem 0.75rem;
+  padding: 0.15rem 0.75rem;
   color: ${(props: any) => props.theme.primary};
   background-color: ${(props: any) =>
     props.theme.id === "light" ? props.theme.secondary : "none"};

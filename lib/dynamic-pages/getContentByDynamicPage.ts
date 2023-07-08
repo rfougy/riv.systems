@@ -5,7 +5,7 @@ import {
   getCategories,
   getPosts,
   getFileContents,
-  getFileNamesInDirectory,
+  getAllPosts,
 } from "../cms/getCmsContent";
 
 import { ICmsCategory } from "../../interfaces/lCmsCategories";
@@ -24,9 +24,7 @@ export function sortPostsByDate(posts: any) {
  */
 export function getContentByDynamicPage(slug: string | string[] | undefined) {
   if (!slug) {
-    const sections: string[] = getFileNamesInDirectory();
-    const allCategories: ICmsCategory[] = getCategories(sections);
-    const allPosts: any = getPosts(allCategories);
+    const allPosts: any = getAllPosts();
 
     const allPostsSorted = sortPostsByDate(allPosts);
 

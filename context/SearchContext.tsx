@@ -8,9 +8,24 @@ const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [searchActivated, setSearchActivated] = useState<boolean>(false);
+  const [searchTerm, setSearchTerm] = useState<string>("");
   const [searchResults, setSearchResults] = useState<any[]>([]);
 
   const router = useRouter();
+
+  async function getSearchResults() {
+    if (searchTerm === "") {
+      setSearchResults([]);
+    } else {
+      const res = await fetch(`/api/search?q=${searchTerm}`);
+      const { results } = await res.json();
+      setSearchResults(results);
+    }
+  }
+
+  useEffect(() => {
+    getSearchResults();
+  }, [searchTerm]);
 
   useEffect(() => {
     router.events.on("routeChangeStart", () => setSearchActivated(false));
@@ -22,9 +37,10 @@ const SearchProvider: React.FC<{ children: React.ReactNode }> = ({
     <SearchContext.Provider
       value={{
         searchActivated,
+        searchTerm,
         searchResults,
         setSearchActivated,
-        setSearchResults,
+        setSearchTerm,
       }}
     >
       {children}

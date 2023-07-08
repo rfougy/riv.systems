@@ -1,16 +1,8 @@
 const fs = require("fs");
-const {
-  getCategories,
-  getFileNamesInDirectory,
-  getPosts,
-} = require("../lib/cms/getCmsContent.ts");
+const { getAllPosts } = require("../lib/cms/getCmsContent.ts");
 
 function createCacheForPostData() {
-  const sections: string[] = getFileNamesInDirectory();
-  const allCategories: any = getCategories(sections);
-  const allPosts: any = getPosts(allCategories);
-
-  const posts = allPosts;
+  const posts = getAllPosts();
 
   return `module.exports = ${JSON.stringify(posts)}`;
 }

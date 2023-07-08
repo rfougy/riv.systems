@@ -20,14 +20,14 @@ import closeIcon from "../../public/assets/icons/close-icon.svg";
 const Navbar: React.FC<{
   toggleTheme: () => void;
 }> = ({ toggleTheme }) => {
-  const { searchActivated, setSearchActivated, setSearchResults } =
+  const { searchActivated, setSearchActivated } =
     useSearchContext();
 
   return (
     <Nav>
       {searchActivated ? (
         <>
-          <Search setSearchResults={setSearchResults} />
+          <Search />
           <IconButton
             src={closeIcon}
             alt="close search button"

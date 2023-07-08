@@ -1,7 +1,7 @@
 import { breakpoints } from "./../../styles/theme";
 import styled from "@emotion/styled";
 
-export const Nav = styled.nav`
+export const NavContainer = styled.nav`
   position: sticky;
   position: -webkit-sticky;
   top: 0;

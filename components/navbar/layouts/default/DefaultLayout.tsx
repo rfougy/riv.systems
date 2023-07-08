@@ -10,13 +10,13 @@ import {
   LogoAndButtonsContainer,
   FeaturesContainer,
 } from "./DefaultLayout.styled";
-import { Nav } from "../../Navbar.styled";
+import { NavContainer } from "../../Navbar.styled";
 
 const DefaultLayout: React.FC<{
   toggleTheme: () => void;
   setSearchActivated: Dispatch<SetStateAction<boolean>>;
 }> = ({ toggleTheme, setSearchActivated }) => (
-  <Nav>
+  <NavContainer>
     <LogoAndButtonsContainer>
       <NavLogo />
       <FeaturesContainer>
@@ -26,7 +26,7 @@ const DefaultLayout: React.FC<{
       </FeaturesContainer>
     </LogoAndButtonsContainer>
     <NavMenu />
-  </Nav>
+  </NavContainer>
 );
 
 export default DefaultLayout;

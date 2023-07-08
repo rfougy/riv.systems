@@ -7,14 +7,21 @@ import IPostData from "../interfaces/IPostData";
 import findFeaturedPosts from "../utils/link-in-bio/findFeaturedPosts";
 import { getContentByDynamicPage } from "../lib/dynamic-pages/getContentByDynamicPage";
 import { includePlaceholderImage } from "../lib/dynamic-pages/includePlaceholderImage";
-import { Container } from "../styles/pages/LinkInBio.styled";
+import { Container, Margin } from "../styles/pages/LinkInBio.styled";
+import DisplayDotsCoordsProvider from "../context/DisplayDotsCoordsContext";
+import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
 
 const LinkInBio: NextPage<{ featuredPosts: IPostData[] }> = ({
   featuredPosts,
 }) => (
-  <Container>
-    <FeaturedPosts posts={featuredPosts} />
-  </Container>
+  <DisplayDotsCoordsProvider>
+    <Margin>
+      <DisplayDotsAnime text={"RIV.LINKS"} />
+    </Margin>
+    <Container>
+      <FeaturedPosts posts={featuredPosts} />
+    </Container>
+  </DisplayDotsCoordsProvider>
 );
 
 export default LinkInBio;

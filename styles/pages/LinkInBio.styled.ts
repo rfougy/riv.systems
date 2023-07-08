@@ -6,6 +6,9 @@ export const Container = styled.section`
   justify-content: center;
 
   gap: 1rem;
-  width: 100%;
   max-width: 30rem;
+`;
+
+export const Margin = styled.div`
+  margin: 5rem 0;
 `;

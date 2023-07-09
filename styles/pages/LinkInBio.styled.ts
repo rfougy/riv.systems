@@ -2,13 +2,16 @@ import styled from "@emotion/styled";
 
 export const Container = styled.section`
   display: flex;
-  flex-wrap: column;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
-  gap: 1rem;
+  gap: 2rem;
   max-width: 30rem;
 `;
 
-export const Margin = styled.div`
-  margin: 5rem 0;
+export const Header = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
 `;

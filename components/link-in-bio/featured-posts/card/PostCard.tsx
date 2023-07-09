@@ -3,16 +3,14 @@ import Image from "next/image";
 
 import { capitalizeFirstChar } from "../../../../utils";
 
-import ArrowIcon from "../../../icons/ArrowIcon";
 import {
   Container,
   ImageContainer,
-  Info,
-  InfoContainer,
-  Metadata,
+  Category,
   Text,
   Title,
 } from "./PostCard.styled";
+
 import IPostData from "../../../../interfaces/IPostData";
 
 const PostCard: React.FC<{
@@ -20,17 +18,8 @@ const PostCard: React.FC<{
 }> = ({ post }) => {
   const {
     path,
-    frontmatter: {
-      title,
-      datePublished,
-      category,
-      section,
-      coverImage,
-      placeholderImage,
-    },
+    frontmatter: { title, category, coverImage, placeholderImage },
   } = post;
-
-  const dateAsStr: string = datePublished.replace(/-/g, "/");
 
   return (
     <Link href={path}>
@@ -39,8 +28,8 @@ const PostCard: React.FC<{
           <Image
             src={coverImage}
             alt={`Cover image for post titled '${title}'`}
-            width={128}
-            height={128}
+            width={112}
+            height={112}
             placeholder="blur"
             blurDataURL={placeholderImage}
             style={{
@@ -51,16 +40,7 @@ const PostCard: React.FC<{
         </ImageContainer>
         <Text>
           <Title>{title}</Title>
-          <Metadata>
-            <InfoContainer>
-              <Info>{capitalizeFirstChar(section)}</Info>
-              <Info>
-                <ArrowIcon aria-label="Arrow Icon" right />
-              </Info>
-              <Info>{capitalizeFirstChar(category)}</Info>
-            </InfoContainer>
-            <Info>{dateAsStr}</Info>
-          </Metadata>
+          <Category>{capitalizeFirstChar(category)}</Category>
         </Text>
       </Container>
     </Link>

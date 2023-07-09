@@ -1,24 +1,29 @@
 import { GetStaticProps, NextPage } from "next";
 
+import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
 import FeaturedPosts from "../components/link-in-bio/featured-posts/FeaturedPosts";
+
+import DisplayDotsCoordsProvider from "../context/DisplayDotsCoordsContext";
 
 import IPostData from "../interfaces/IPostData";
 
 import findFeaturedPosts from "../utils/link-in-bio/findFeaturedPosts";
 import { getContentByDynamicPage } from "../lib/dynamic-pages/getContentByDynamicPage";
 import { includePlaceholderImage } from "../lib/dynamic-pages/includePlaceholderImage";
-import { Container, Margin } from "../styles/pages/LinkInBio.styled";
-import DisplayDotsCoordsProvider from "../context/DisplayDotsCoordsContext";
-import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
+
+import { Container, Header } from "../styles/pages/LinkInBio.styled";
+import SocialsList from "../components/socials/socials-list/SocialsList";
+import { socialsList } from "../constants/socialsList";
 
 const LinkInBio: NextPage<{ featuredPosts: IPostData[] }> = ({
   featuredPosts,
 }) => (
   <DisplayDotsCoordsProvider>
-    <Margin>
-      <DisplayDotsAnime text={"RIV.LINKS"} />
-    </Margin>
     <Container>
+      <Header>
+        <DisplayDotsAnime text={"RIV.LINKS"} />
+        <SocialsList socials={socialsList} />
+      </Header>
       <FeaturedPosts posts={featuredPosts} />
     </Container>
   </DisplayDotsCoordsProvider>

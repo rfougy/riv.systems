@@ -5,5 +5,7 @@ export const List = styled.ul`
 
   display: flex;
   gap: 1.5rem;
+
+  height: fit-content;
   padding: 0;
 `;

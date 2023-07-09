@@ -9,12 +9,13 @@ import PwaHead from "../components/head/PwaHead";
 import Favicon from "../components/head/Favicon";
 import PageHead from "../components/head/PageHead";
 import AppComponentWrapper from "../components/app/ComponentWrapper";
+import AnimatedBackground from "../components/features/animated-background/AnimatedBackground";
 
 import SearchProvider from "../context/SearchContext";
 
 import { ITheme } from "../interfaces/ITheme";
 
-import { PageContainer, VantaContainer } from "../styles/pages/App.styled";
+import { PageContainer } from "../styles/pages/App.styled";
 import { lightTheme, darkTheme, breakpoints } from "../styles/theme";
 
 import "../styles/globals.css";
@@ -22,14 +23,11 @@ import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
 
-import useVanta from "../hooks/vanta/useVanta";
-import useThreeScript from "../hooks/vanta/useThreeScript";
-
 const App = ({ Component, pageProps }: AppProps) => {
   const [currTheme, setTheme] = useState<ITheme>(lightTheme);
 
-  useThreeScript();
-  const vantaRef = useVanta();
+  // useThreeScript();
+  // const vantaRef = useVanta();
 
   // @ts-ignore
   const { isDisplayDotsPage, isLinkInBioPage } = pageProps;
@@ -115,15 +113,20 @@ const App = ({ Component, pageProps }: AppProps) => {
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
         <SearchProvider>
-          <Navbar isLinkInBioPage={isLinkInBioPage} toggleTheme={toggleTheme} />
-          <VantaContainer ref={vantaRef}>
+          {!isLinkInBioPage && (
+            <Navbar
+              isLinkInBioPage={isLinkInBioPage}
+              toggleTheme={toggleTheme}
+            />
+          )}
+          <AnimatedBackground activateAnime={isLinkInBioPage}>
             <PageContainer>
               <AppComponentWrapper isDisplayDotsPage={isDisplayDotsPage}>
                 <Component {...pageProps} />
               </AppComponentWrapper>
               {!isLinkInBioPage && <Footer />}
             </PageContainer>
-          </VantaContainer>
+          </AnimatedBackground>
         </SearchProvider>
       </ThemeProvider>
     </>

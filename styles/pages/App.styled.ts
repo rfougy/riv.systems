@@ -28,7 +28,8 @@ export const PageContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   min-height: 100%;
-  margin: 0 2rem 1.25rem 2rem;
+  margin: ${({ isLinkInBioPage }: { isLinkInBioPage: boolean }) =>
+    isLinkInBioPage ? "0" : "0 2rem 1.25rem 2rem"};
 
   cursor: crosshair;
 

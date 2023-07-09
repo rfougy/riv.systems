@@ -16,24 +16,27 @@ import SocialsList from "../components/socials/socials-list/SocialsList";
 import { socialsList } from "../constants/socialsList";
 import Link from "next/link";
 import ArrowIcon from "../components/icons/ArrowIcon";
+import AnimatedBackground from "../components/features/animated-background/AnimatedBackground";
 
 const LinkInBio: NextPage<{ featuredPosts: IPostData[] }> = ({
   featuredPosts,
 }) => (
   <DisplayDotsCoordsProvider>
-    <Container>
-      <Header>
-        <DisplayDotsAnime text={"RIV.LINKS"} />
-        <SocialsList socials={socialsList} />
-      </Header>
-      <FeaturedPosts posts={featuredPosts} />
-      <Link href={`/`}>
-        <Button>
-          Go To Website
-          <ArrowIcon right />
-        </Button>
-      </Link>
-    </Container>
+    <AnimatedBackground activateAnime={true}>
+      <Container>
+        <Header>
+          <DisplayDotsAnime text={"RIV.LINKS"} />
+          <SocialsList socials={socialsList} />
+        </Header>
+        <FeaturedPosts posts={featuredPosts} />
+        <Link href={`/`}>
+          <Button>
+            Go To Website
+            <ArrowIcon right />
+          </Button>
+        </Link>
+      </Container>
+    </AnimatedBackground>
   </DisplayDotsCoordsProvider>
 );
 

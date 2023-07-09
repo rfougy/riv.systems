@@ -5,10 +5,9 @@ import { Box } from "./AnimatedBackground.styled";
 
 const AnimatedBackground: React.FC<{
   children: React.ReactNode;
-  activateAnime?: boolean;
-}> = ({ children, activateAnime }) => {
+}> = ({ children }) => {
   useThreeScript();
-  const vantaRef = useVanta(activateAnime);
+  const vantaRef = useVanta();
 
   return <Box ref={vantaRef}>{children}</Box>;
 };

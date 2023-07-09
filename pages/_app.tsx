@@ -9,7 +9,6 @@ import PwaHead from "../components/head/PwaHead";
 import Favicon from "../components/head/Favicon";
 import PageHead from "../components/head/PageHead";
 import AppComponentWrapper from "../components/app/ComponentWrapper";
-import AnimatedBackground from "../components/features/animated-background/AnimatedBackground";
 
 import SearchProvider from "../context/SearchContext";
 
@@ -116,14 +115,12 @@ const App = ({ Component, pageProps }: AppProps) => {
               toggleTheme={toggleTheme}
             />
           )}
-          <AnimatedBackground activateAnime={isLinkInBioPage}>
-            <PageContainer>
-              <AppComponentWrapper isDisplayDotsPage={isDisplayDotsPage}>
-                <Component {...pageProps} />
-              </AppComponentWrapper>
-              {!isLinkInBioPage && <Footer />}
-            </PageContainer>
-          </AnimatedBackground>
+          <PageContainer isLinkInBioPage>
+            <AppComponentWrapper isDisplayDotsPage={isDisplayDotsPage}>
+              <Component {...pageProps} />
+            </AppComponentWrapper>
+            {!isLinkInBioPage && <Footer />}
+          </PageContainer>
         </SearchProvider>
       </ThemeProvider>
     </>

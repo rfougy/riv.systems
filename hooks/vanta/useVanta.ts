@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import NET from "vanta/dist/vanta.net.min";
+import FOG from "vanta/dist/vanta.fog.min";
 import * as THREE from "three";
 
 export default function useVanta() {
@@ -10,12 +10,21 @@ export default function useVanta() {
   useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(
-        NET({
+        FOG({
           el: vantaRef.current,
           THREE,
-          color: 0x14b679,
-          backgroundColor: 0x15173c,
-          maxDistance: 34.0,
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          highlightColor: 0xb0b0b0,
+          midtoneColor: 0xc9c9c9,
+          lowlightColor: 0x999999,
+          baseColor: 0xe7e7e7,
+          blurFactor: 0.9,
+          speed: 0.0,
+          zoom: 0.2,
         })
       );
     }

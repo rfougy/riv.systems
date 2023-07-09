@@ -7,7 +7,8 @@ export const Container = styled.section`
 
   padding: 1rem;
 
-  border: solid ${(props: any) => props.theme.highlight};
+  background-color: rgba(0, 0, 0, 0.2);
+  border: solid rgba(255, 255, 255, 0.5) 0.1rem;
   border-radius: 2vh;
 `;
 

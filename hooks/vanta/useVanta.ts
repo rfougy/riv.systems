@@ -19,13 +19,13 @@ export default function useVanta(activateHook?: boolean) {
             gyroControls: false,
             minHeight: 200.0,
             minWidth: 200.0,
-            highlightColor: 0xb0b0b0,
-            midtoneColor: 0xc9c9c9,
-            lowlightColor: 0x999999,
-            baseColor: 0xe7e7e7,
+            highlightColor: 0x767676,
+            midtoneColor: 0x5b5b5b,
+            lowlightColor: 0x3a3a3a,
+            baseColor: 0x212121,
             blurFactor: 0.9,
             speed: 0.0,
-            zoom: 0.2,
+            zoom: 0.4,
           })
         )
       : setVantaEffect(null);

@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { ArrowIcon } from "../../components/icons/ArrowIcon.styled";
+import { darkTheme } from "../theme";
 
 export const Container = styled.section`
   display: flex;
@@ -18,7 +19,7 @@ export const Header = styled.div`
 `;
 
 export const Button = styled.button`
-  border: 0.1rem solid ${(props: any) => props.theme.primary};
+  border: 0.1rem solid ${darkTheme.primary};
   border-radius: 5rem;
 
   display: flex;
@@ -27,20 +28,15 @@ export const Button = styled.button`
   gap: 0.35rem;
 
   padding: 0.5rem 1rem;
-  color: ${(props: any) => props.theme.primary};
-  background-color: ${(props: any) =>
-    props.theme.id === "light" ? props.theme.secondary : "none"};
+  color: ${darkTheme.primary};
+  background-color: rgba(16, 16, 16, 0.5);
 
   &:hover {
-    color: ${(props: any) =>
-      props.theme.id === "light" ? props.theme.secondary : "none"};
-    background-color: ${(props: any) =>
-      props.theme.id === "light" ? props.theme.primary : "#2D2D2D"};
+    color: "none";
+    background-color: #2d2d2d;
 
     ${ArrowIcon} {
-      border: solid
-        ${(props: any) =>
-          props.theme.id === "light" ? props.theme.secondary : ""};
+      border: solid;
       border-width: 0 0.075rem 0.075rem 0;
       padding: 0.125rem;
 

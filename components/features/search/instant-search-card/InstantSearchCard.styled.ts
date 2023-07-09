@@ -23,8 +23,8 @@ export const Container = styled.div`
 export const ImageContainer = styled.div`
   position: relative;
 
-  min-width: 10.25rem;
-  min-height: 10.25rem;
+  min-width: 6.25rem;
+  min-height: 6.25rem;
 `;
 
 export const Text = styled.div`

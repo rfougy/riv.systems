@@ -1,12 +1,11 @@
 import React from "react";
-import Link from "next/link";
 
 import DisplayDotsCoordsProvider from "../../../context/DisplayDotsCoordsContext";
 
 import DisplayDotsAnime from "../../features/display-dots-anime/DisplayDotsAnime";
+import Button from "../button/Button";
 
 import {
-  Button,
   Container,
   Description,
   Margin,
@@ -23,9 +22,7 @@ const NotFound: React.FC<{ title: string; copy: string }> = ({
           <DisplayDotsAnime text={title} />
         </Margin>
         <Description>{copy}</Description>
-        <Link href={`/content`}>
-          <Button>RETURN TO SYSTEMS</Button>
-        </Link>
+        <Button href={`/content`}>RETURN TO SYSTEMS</Button>
       </Container>
     </DisplayDotsCoordsProvider>
   </>

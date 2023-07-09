@@ -5,7 +5,7 @@ import LinkInBioLayout from "./layouts/link-in-bio/LinkInBioLayout";
 import SearchLayout from "./layouts/search/SearchLayout";
 
 const Navbar: React.FC<{
-  isLinkInBioPage: boolean;
+  isLinkInBioPage?: boolean;
   toggleTheme: () => void;
 }> = ({ isLinkInBioPage, toggleTheme }) => {
   const { searchActivated, setSearchActivated, setSearchResults } =

@@ -1,5 +1,6 @@
 import type { AppProps } from "next/app";
-import { useEffect, useState } from "react";
+
+import { useEffect, useRef, useState } from "react";
 import { Global as GlobalTheme, ThemeProvider, css } from "@emotion/react";
 
 import Navbar from "../components/navbar/Navbar";
@@ -13,13 +14,16 @@ import SearchProvider from "../context/SearchContext";
 
 import { ITheme } from "../interfaces/ITheme";
 
-import { PageContainer } from "../styles/pages/App.styled";
+import { PageContainer, VantaContainer } from "../styles/pages/App.styled";
 import { lightTheme, darkTheme, breakpoints } from "../styles/theme";
 
 import "../styles/globals.css";
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
+
+import NET from "vanta/dist/vanta.net.min";
+import * as THREE from "three";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [currTheme, setTheme] = useState<ITheme>(lightTheme);
@@ -99,6 +103,43 @@ const App = ({ Component, pageProps }: AppProps) => {
     }
   }, []);
 
+  ////////
+
+  const [vantaEffect, setVantaEffect] = useState<any>(null);
+  const vantaRef = useRef(null);
+
+  useEffect(() => {
+    const threeScript = document.createElement("script");
+    threeScript.setAttribute("id", "threeScript");
+    threeScript.setAttribute(
+      "src",
+      "https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
+    );
+    document.getElementsByTagName("head")[0].appendChild(threeScript);
+    return () => {
+      if (threeScript) {
+        threeScript.remove();
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(
+        NET({
+          el: vantaRef.current,
+          THREE,
+          color: 0x14b679,
+          backgroundColor: 0x15173c,
+          maxDistance: 34.0,
+        })
+      );
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destory();
+    };
+  }, [vantaEffect]);
+
   return (
     <>
       {/* @ts-ignore */}
@@ -109,12 +150,14 @@ const App = ({ Component, pageProps }: AppProps) => {
         <GlobalTheme styles={globalColors} />
         <SearchProvider>
           <Navbar isLinkInBioPage={isLinkInBioPage} toggleTheme={toggleTheme} />
-          <PageContainer>
-            <AppComponentWrapper isDisplayDotsPage={isDisplayDotsPage}>
-              <Component {...pageProps} />
-            </AppComponentWrapper>
-            {!isLinkInBioPage && <Footer />}
-          </PageContainer>
+          <VantaContainer ref={vantaRef}>
+            <PageContainer>
+              <AppComponentWrapper isDisplayDotsPage={isDisplayDotsPage}>
+                <Component {...pageProps} />
+              </AppComponentWrapper>
+              {!isLinkInBioPage && <Footer />}
+            </PageContainer>
+          </VantaContainer>
         </SearchProvider>
       </ThemeProvider>
     </>

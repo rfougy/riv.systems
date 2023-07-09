@@ -23,6 +23,11 @@ export const ContentWrap = styled.div`
   ); // 100vh - (navbar height + footer height)
 `;
 
+export const VantaContainer = styled.div`
+  height: 100vh;
+  width: 100vw;
+`;
+
 export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;

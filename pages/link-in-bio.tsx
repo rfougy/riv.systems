@@ -22,7 +22,7 @@ const LinkInBio: NextPage<{ featuredPosts: IPostData[] }> = ({
   featuredPosts,
 }) => (
   <DisplayDotsCoordsProvider>
-    <AnimatedBackground activateAnime={true}>
+    <AnimatedBackground>
       <Container>
         <Header>
           <DisplayDotsAnime text={"RIV.LINKS"} />

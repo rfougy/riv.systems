@@ -1,56 +1,31 @@
-import NavMenu from "./nav-menu/NavMenu";
-import NavLogo from "./nav-logo/NavLogo";
-
-import Search from "../features/search/Search";
-import ThemeToggleButton from "../features/theme-toggle/ThemeToggleButton";
-import SearchButton from "../features/search/search-button/SearchButton";
-import { AudioPlayer } from "../features/audio-player/AudioPlayer";
-import IconButton from "../shared/icon-button/IconButton";
-
 import { useSearchContext } from "../../context/SearchContext";
 
-import {
-  Nav,
-  FeaturesContainer,
-  LogoAndButtonsContainer,
-} from "./Navbar.styled";
-
-import closeIcon from "../../public/assets/icons/close-icon.svg";
+import DefaultLayout from "./layouts/default/DefaultLayout";
+import LinkInBioLayout from "./layouts/link-in-bio/LinkInBioLayout";
+import SearchLayout from "./layouts/search/SearchLayout";
 
 const Navbar: React.FC<{
+  isLinkInBioPage?: boolean;
   toggleTheme: () => void;
-}> = ({ toggleTheme }) => {
+}> = ({ isLinkInBioPage, toggleTheme }) => {
   const { searchActivated, setSearchActivated, setSearchResults } =
     useSearchContext();
 
+  if (searchActivated)
+    return (
+      <SearchLayout
+        setSearchActivated={setSearchActivated}
+        setSearchResults={setSearchResults}
+      />
+    );
+
+  if (isLinkInBioPage) return <LinkInBioLayout toggleTheme={toggleTheme} />;
+
   return (
-    <Nav>
-      {searchActivated ? (
-        <>
-          <Search setSearchResults={setSearchResults} />
-          <IconButton
-            src={closeIcon}
-            alt="close search button"
-            ariaLabel="close search button"
-            height="1.25rem"
-            width="1.25rem"
-            onClick={() => setSearchActivated(false)}
-          />
-        </>
-      ) : (
-        <>
-          <LogoAndButtonsContainer>
-            <NavLogo />
-            <FeaturesContainer>
-              <ThemeToggleButton toggleTheme={toggleTheme} />
-              <AudioPlayer />
-              <SearchButton setSearchActivated={setSearchActivated} />
-            </FeaturesContainer>
-          </LogoAndButtonsContainer>
-          <NavMenu />
-        </>
-      )}
-    </Nav>
+    <DefaultLayout
+      toggleTheme={toggleTheme}
+      setSearchActivated={setSearchActivated}
+    />
   );
 };
 

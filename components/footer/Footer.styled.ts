@@ -12,15 +12,3 @@ export const Footer = styled.footer`
     gap: 1.5rem;
   }
 `;
-
-export const SocialsList = styled.ul`
-  list-style-type: none;
-
-  display: flex;
-  gap: 1.5rem;
-  padding: 0;
-`;
-
-export const SocialsLink = styled.li`
-  display: inline-block;
-`;

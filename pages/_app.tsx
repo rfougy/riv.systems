@@ -25,7 +25,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   const [currTheme, setTheme] = useState<ITheme>(lightTheme);
 
   // @ts-ignore
-  const isDisplayDotsPage = pageProps.isDisplayDotsPage ? true : false;
+  const { isDisplayDotsPage, isLinkInBioPage } = pageProps;
 
   const globalColors = css`
     body {
@@ -108,12 +108,12 @@ const App = ({ Component, pageProps }: AppProps) => {
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
         <SearchProvider>
-          <Navbar toggleTheme={toggleTheme} />
+          <Navbar isLinkInBioPage={isLinkInBioPage} toggleTheme={toggleTheme} />
           <PageContainer>
             <AppComponentWrapper isDisplayDotsPage={isDisplayDotsPage}>
               <Component {...pageProps} />
             </AppComponentWrapper>
-            <Footer />
+            {!isLinkInBioPage && <Footer />}
           </PageContainer>
         </SearchProvider>
       </ThemeProvider>

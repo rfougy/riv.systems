@@ -109,14 +109,12 @@ const App = ({ Component, pageProps }: AppProps) => {
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
         <SearchProvider>
-          {!isLinkInBioPage && (
-            <Navbar
-              isLinkInBioPage={isLinkInBioPage}
-              toggleTheme={toggleTheme}
-            />
-          )}
+          {!isLinkInBioPage && <Navbar toggleTheme={toggleTheme} />}
           <PageContainer isLinkInBioPage>
-            <AppComponentWrapper isDisplayDotsPage={isDisplayDotsPage}>
+            <AppComponentWrapper
+              isDisplayDotsPage={isDisplayDotsPage}
+              isLinkInBioPage={isLinkInBioPage}
+            >
               <Component {...pageProps} />
             </AppComponentWrapper>
             {!isLinkInBioPage && <Footer />}

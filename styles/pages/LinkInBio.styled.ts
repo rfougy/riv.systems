@@ -9,6 +9,7 @@ export const Container = styled.section`
 
   gap: 2rem;
   max-width: 30rem;
+  margin: 0 1rem;
 `;
 
 export const Header = styled.div`

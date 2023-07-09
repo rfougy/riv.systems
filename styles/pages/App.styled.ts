@@ -15,8 +15,14 @@ export const ContentWrap = styled.div`
     isDisplayDotsPage ? "center" : "start"};
 
   margin: 0;
-  padding: ${({ isDisplayDotsPage }: { isDisplayDotsPage: boolean }) =>
-    isDisplayDotsPage ? "2rem 0" : "2rem 0 4rem 0"};
+  padding: ${({
+    isDisplayDotsPage,
+    isLinkInBioPage,
+  }: {
+    isDisplayDotsPage: boolean;
+    isLinkInBioPage: boolean;
+  }) =>
+    isLinkInBioPage ? "0" : isDisplayDotsPage ? "2rem 0" : "2rem 0 4rem 0"};
 
   min-height: calc(
     100vh - (2.75rem * 2)

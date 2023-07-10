@@ -1,6 +1,9 @@
 import { breakpoints } from "./../theme";
 import styled from "@emotion/styled";
 
+const navbarHeight = "2.75rem";
+const footerHeight = "2.75rem";
+
 /**
  * @description ContentWrap calculates the height based off the height of navbar and footer.
  * @see https://stackoverflow.com/a/37370197
@@ -24,16 +27,14 @@ export const ContentWrap = styled.div`
   }) =>
     isLinkInBioPage ? "0" : isDisplayDotsPage ? "2rem 0" : "2rem 0 4rem 0"};
 
-  min-height: calc(
-    100vh - (2.75rem * 2)
-  ); // 100vh - (navbar height + footer height)
+  min-height: calc(100dvh - (${navbarHeight} + ${footerHeight}));
 `;
 
 export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  min-height: 100%;
+
   margin: ${({ isLinkInBioPage }: { isLinkInBioPage: boolean }) =>
     isLinkInBioPage ? "0" : "0 2rem 1.25rem 2rem"};
 

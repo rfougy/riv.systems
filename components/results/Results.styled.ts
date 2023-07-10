@@ -9,7 +9,7 @@ export const PageTitle = styled.h1`
   margin: 0;
 `;
 
-export const Container = styled.div`
+export const Box = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 6rem;
@@ -24,11 +24,11 @@ export const Container = styled.div`
 
 export const ViewSection = styled.section``;
 
-export const EmptyContainer = styled.div`
+export const EmptyBox = styled.div`
   width: 117px;
 `;
 
-export const CategoryResultsContainer = styled.div`
+export const CategoryResultsBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3rem;

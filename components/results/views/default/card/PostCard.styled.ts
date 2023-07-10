@@ -1,7 +1,7 @@
 import { breakpoints } from "../../../../../styles/theme";
 import styled from "@emotion/styled";
 
-export const Container = styled.div`
+export const Box = styled.div`
   overflow: hidden;
   text-decoration: none;
 
@@ -57,7 +57,7 @@ export const Title = styled.h2`
   overflow: hidden;
 `;
 
-export const InfoContainer = styled.div`
+export const InfoBox = styled.div`
   display: flex;
   margin: 0;
 `;

@@ -1,7 +1,7 @@
 import { breakpoints } from "../../../../styles/theme";
 import styled from "@emotion/styled";
 
-export const Container = styled.div`
+export const Box = styled.div`
   overflow: hidden;
   text-decoration: none;
 
@@ -20,7 +20,7 @@ export const Container = styled.div`
   }
 `;
 
-export const ImageContainer = styled.div`
+export const ImageBox = styled.div`
   position: relative;
 
   min-width: 6.25rem;
@@ -48,7 +48,7 @@ export const Title = styled.h2`
   overflow: hidden;
 `;
 
-export const InfoContainer = styled.div`
+export const InfoBox = styled.div`
   display: flex;
   margin: 0;
 `;

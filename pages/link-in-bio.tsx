@@ -11,7 +11,7 @@ import findFeaturedPosts from "../utils/link-in-bio/findFeaturedPosts";
 import { getContentByDynamicPage } from "../lib/dynamic-pages/getContentByDynamicPage";
 import { includePlaceholderImage } from "../lib/dynamic-pages/includePlaceholderImage";
 
-import { Container, Header, Button } from "../styles/pages/LinkInBio.styled";
+import { Box, Header, Button } from "../styles/pages/LinkInBio.styled";
 import SocialsList from "../components/socials/socials-list/SocialsList";
 import { socialsList } from "../constants/socialsList";
 import Link from "next/link";
@@ -23,7 +23,7 @@ const LinkInBio: NextPage<{ featuredPosts: IPostData[] }> = ({
 }) => (
   <DisplayDotsCoordsProvider>
     <AnimatedBackground>
-      <Container>
+      <Box>
         <Header>
           <DisplayDotsAnime text={"RIV.LINKS"} />
           <SocialsList socials={socialsList} />
@@ -35,7 +35,7 @@ const LinkInBio: NextPage<{ featuredPosts: IPostData[] }> = ({
             <ArrowIcon right />
           </Button>
         </Link>
-      </Container>
+      </Box>
     </AnimatedBackground>
   </DisplayDotsCoordsProvider>
 );

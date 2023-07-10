@@ -82,7 +82,7 @@ export const Navigation = styled.div`
   width: 100%;
 `;
 
-export const Container = styled.div`
+export const Box = styled.div`
   position: relative;
 `;
 
@@ -101,7 +101,7 @@ export const AltText = styled.p`
   }
 `;
 
-export const SubContainer = styled.div`
+export const SubBox = styled.div`
   display: flex;
   flex-wrap: no-wrap;
   justify-content: space-between;

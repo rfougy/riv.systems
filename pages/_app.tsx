@@ -14,7 +14,7 @@ import SearchProvider from "../context/SearchContext";
 
 import { ITheme } from "../interfaces/ITheme";
 
-import { PageContainer } from "../styles/pages/App.styled";
+import { PageBox } from "../styles/pages/App.styled";
 import { lightTheme, darkTheme, breakpoints } from "../styles/theme";
 
 import "../styles/globals.css";
@@ -110,7 +110,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <GlobalTheme styles={globalColors} />
         <SearchProvider>
           {!isLinkInBioPage && <Navbar toggleTheme={toggleTheme} />}
-          <PageContainer isLinkInBioPage={isLinkInBioPage}>
+          <PageBox isLinkInBioPage={isLinkInBioPage}>
             <AppComponentWrapper
               isDisplayDotsPage={isDisplayDotsPage}
               isLinkInBioPage={isLinkInBioPage}
@@ -118,7 +118,7 @@ const App = ({ Component, pageProps }: AppProps) => {
               <Component {...pageProps} />
             </AppComponentWrapper>
             {!isLinkInBioPage && <Footer />}
-          </PageContainer>
+          </PageBox>
         </SearchProvider>
       </ThemeProvider>
     </>

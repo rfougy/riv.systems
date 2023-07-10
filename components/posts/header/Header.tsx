@@ -8,7 +8,7 @@ import {
   Title,
   Excerpt,
   Margin,
-  Container,
+  Box,
   TitleAndLink,
 } from "./Header.styled";
 
@@ -43,7 +43,7 @@ const Header: React.FC<{
   useEffect(() => setIsWorksPage(section === "works"), [section]);
 
   return (
-    <Container>
+    <Box>
       <Metadata>
         <Inline>
           <Link href={`/content/${section}`}>
@@ -76,7 +76,7 @@ const Header: React.FC<{
         />
       )}
       <Margin />
-    </Container>
+    </Box>
   );
 };
 

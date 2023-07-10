@@ -9,12 +9,7 @@ import { IAnnouncement } from "../../interfaces/IAnnouncement";
 
 import { dateToNumericStr } from "../../utils/dateToNumericStr";
 
-import {
-  CloseIconContainer,
-  Container,
-  StyledLink,
-  Text,
-} from "./Announcement.styled";
+import { CloseIconBox, Box, StyledLink, Text } from "./Announcement.styled";
 
 const closeIconTheme: any = {
   dark: closeIconDark,
@@ -38,17 +33,18 @@ const Announcement: React.FC<{
   }
 
   return (
-    <Container>
-      <CloseIconContainer>
+    <Box>
+      <CloseIconBox>
         <Image
           src={closeIcon}
           alt="announcement close icon"
           onClick={() => handleClose()}
           style={{
             maxWidth: "100%",
-            height: "auto"
-          }} />
-      </CloseIconContainer>
+            height: "auto",
+          }}
+        />
+      </CloseIconBox>
       <Text>
         Latest Update ({convertedDate}): {announcement.text}{" "}
         {announcement.link && (
@@ -59,7 +55,7 @@ const Announcement: React.FC<{
           </span>
         )}
       </Text>
-    </Container>
+    </Box>
   );
 };
 

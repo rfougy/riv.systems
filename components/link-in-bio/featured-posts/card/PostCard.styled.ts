@@ -1,7 +1,7 @@
 import { breakpoints } from "../../../../styles/theme";
 import styled from "@emotion/styled";
 
-export const ImageContainer = styled.div`
+export const ImageBox = styled.div`
   position: relative;
 
   min-height: 6.5rem;
@@ -51,7 +51,7 @@ export const Category = styled.div`
   padding: 0.15rem 0.75rem;
 `;
 
-export const Container = styled.div`
+export const Box = styled.div`
   overflow: hidden;
   text-decoration: none;
 

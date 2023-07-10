@@ -1,7 +1,7 @@
 import { breakpoints } from "./../../../styles/theme";
 import styled from "@emotion/styled";
 
-export const Container = styled.ul`
+export const Box = styled.ul`
   display: flex;
   gap: 0 2rem;
   height: 100%;

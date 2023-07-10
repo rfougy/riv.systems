@@ -6,14 +6,7 @@ import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";
 
 import ArrowIcon from "../../../../icons/ArrowIcon";
 
-import {
-  Container,
-  Info,
-  InfoContainer,
-  Metadata,
-  Text,
-  Title,
-} from "./PostCard.styled";
+import { Box, Info, InfoBox, Metadata, Text, Title } from "./PostCard.styled";
 
 const PostCard: React.FC<{
   path: string;
@@ -31,7 +24,7 @@ const PostCard: React.FC<{
 
   return (
     <Link href={path}>
-      <Container>
+      <Box>
         <Image
           src={coverImage}
           alt={`Cover image for post titled '${title}'`}
@@ -47,17 +40,17 @@ const PostCard: React.FC<{
         <Text>
           <Title>{title}</Title>
           <Metadata>
-            <InfoContainer>
+            <InfoBox>
               <Info>{capitalizeFirstChar(section)}</Info>
               <Info>
                 <ArrowIcon aria-label="Arrow Icon" right />
               </Info>
               <Info>{capitalizeFirstChar(category)}</Info>
-            </InfoContainer>
+            </InfoBox>
             <Info>{dateAsStr}</Info>
           </Metadata>
         </Text>
-      </Container>
+      </Box>
     </Link>
   );
 };

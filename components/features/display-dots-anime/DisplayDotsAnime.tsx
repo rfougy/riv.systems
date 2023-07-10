@@ -13,7 +13,7 @@ import {
 import { shuffleArr } from "../../../utils";
 import restartIcon from "../../../public/assets/icons/restart-icon.svg";
 
-import { Container, DisplayDotsContainer } from "./DisplayDotsAnime.styled";
+import { Box, DisplayDotsBox } from "./DisplayDotsAnime.styled";
 
 const DisplayDotsAnime: React.FC<{
   text?: string;
@@ -57,12 +57,12 @@ const DisplayDotsAnime: React.FC<{
   useEffect(() => setRestartButtonRotating(animeEnded), [animeEnded]);
 
   return (
-    <Container>
-      <DisplayDotsContainer>
+    <Box>
+      <DisplayDotsBox>
         {coordsByWordAndSpace.map((wordOrSpace: string, index: number) => (
           <DotWord key={index} wordOrSpace={wordOrSpace} />
         ))}
-      </DisplayDotsContainer>
+      </DisplayDotsBox>
       {includeRestartButton && (
         <IconButton
           src={restartIcon}
@@ -73,7 +73,7 @@ const DisplayDotsAnime: React.FC<{
           onClick={() => restart()}
         />
       )}
-    </Container>
+    </Box>
   );
 };
 

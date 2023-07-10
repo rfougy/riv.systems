@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import ArrowIcon from "../../icons/ArrowIcon";
 
-import { Button, Container, PageNav, PageNumber } from "./Pagination.styled";
+import { Button, Box, PageNav, PageNumber } from "./Pagination.styled";
 import { scrollToTop } from "../../../utils/scrollToTop";
 
 const Pagination: React.FC<{
@@ -61,7 +61,7 @@ const Pagination: React.FC<{
   );
 
   return (
-    <Container>
+    <Box>
       <PageNav>
         <Button
           aria-label="Navigate to First Results Page"
@@ -113,7 +113,7 @@ const Pagination: React.FC<{
         <Button onClick={() => setPostCardsPerPage(1)}>1 item per page</Button>
         <Button onClick={() => setPostCardsPerPage(2)}>2 items per page</Button>
       </div> */}
-    </Container>
+    </Box>
   );
 };
 

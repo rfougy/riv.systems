@@ -7,7 +7,7 @@ import NextImage from "../../markdown-to-jsx/next-image/NextImage";
 import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
 import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
 
-import { Container, Content, CoverImage, Divider } from "./PostPage.styled";
+import { Box, Content, CoverImage, Divider } from "./PostPage.styled";
 import Header from "../header/Header";
 
 const PostPage: React.FC<{ content: any }> = ({ content }) => {
@@ -15,7 +15,7 @@ const PostPage: React.FC<{ content: any }> = ({ content }) => {
   const { title, coverImage, placeholderImage }: IPostFrontMatter = frontmatter;
 
   return content ? (
-    <Container>
+    <Box>
       <Header frontmatter={frontmatter} />
       <Divider />
       <CoverImage>
@@ -56,7 +56,7 @@ const PostPage: React.FC<{ content: any }> = ({ content }) => {
           {postContent}
         </Markdown>
       </Content>
-    </Container>
+    </Box>
   ) : (
     <div>Error: No content available...</div>
   );

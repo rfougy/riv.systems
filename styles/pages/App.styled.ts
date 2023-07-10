@@ -55,6 +55,7 @@ export const PageContainer = styled.div`
   }
 
   @media (max-width: ${breakpoints.xs}) {
-    padding: 0 1rem 1rem 1rem;
+    padding: ${({ isLinkInBioPage }: { isLinkInBioPage: boolean }) =>
+      isLinkInBioPage ? "0" : "0 1rem 1rem 1rem"};
   }
 `;

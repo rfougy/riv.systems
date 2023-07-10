@@ -35,7 +35,7 @@ export const PageContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
 
-  margin: ${({ isLinkInBioPage }: { isLinkInBioPage: boolean }) =>
+  padding: ${({ isLinkInBioPage }: { isLinkInBioPage: boolean }) =>
     isLinkInBioPage ? "0" : "0 2rem 1.25rem 2rem"};
 
   cursor: crosshair;
@@ -55,6 +55,6 @@ export const PageContainer = styled.div`
   }
 
   @media (max-width: ${breakpoints.xs}) {
-    margin: 0 1rem 1rem 1rem;
+    padding: 0 1rem 1rem 1rem;
   }
 `;

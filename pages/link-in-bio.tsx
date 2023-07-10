@@ -16,13 +16,13 @@ import SocialsList from "../components/socials/socials-list/SocialsList";
 import { socialsList } from "../constants/socialsList";
 import Link from "next/link";
 import ArrowIcon from "../components/icons/ArrowIcon";
-import AnimatedBackground from "../components/features/animated-background/AnimatedBackground";
+import Vanta from "../components/features/vanta/Vanta";
 
 const LinkInBio: NextPage<{ featuredPosts: IPostData[] }> = ({
   featuredPosts,
 }) => (
   <DisplayDotsCoordsProvider>
-    <AnimatedBackground>
+    <Vanta>
       <Box>
         <Header>
           <DisplayDotsAnime text={"RIV.LINKS"} />
@@ -36,7 +36,7 @@ const LinkInBio: NextPage<{ featuredPosts: IPostData[] }> = ({
           </Button>
         </Link>
       </Box>
-    </AnimatedBackground>
+    </Vanta>
   </DisplayDotsCoordsProvider>
 );
 

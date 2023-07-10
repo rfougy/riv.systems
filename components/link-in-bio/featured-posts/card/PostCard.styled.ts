@@ -4,8 +4,8 @@ import styled from "@emotion/styled";
 export const ImageContainer = styled.div`
   position: relative;
 
-  min-height: 7rem;
-  min-width: 7rem;
+  min-height: 6.5rem;
+  min-width: 6.5rem;
 `;
 
 export const Text = styled.div`
@@ -13,7 +13,7 @@ export const Text = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  height: 7rem;
+  height: 6.5rem;
   width: 100%;
   padding: 0.75rem;
 
@@ -39,6 +39,8 @@ export const Title = styled.h2`
 export const Category = styled.div`
   cursor: cell !important;
 
+  font-size: 0.625rem;
+
   color: ${(props: any) => props.theme.primary};
   background-color: ${(props: any) => props.theme.highlight};
 
@@ -56,7 +58,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
 
-  height: 7rem;
+  height: 6.5rem;
   width: 100%;
 
   margin: auto;

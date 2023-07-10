@@ -18,13 +18,13 @@ export default function useVanta() {
           gyroControls: false,
           minHeight: 200.0,
           minWidth: 200.0,
-          highlightColor: 0x767676,
+          highlightColor: 0xcbcbd7,
           midtoneColor: 0x5b5b5b,
           lowlightColor: 0x6e6e6e,
           baseColor: 0x212121,
           blurFactor: 0.9,
-          speed: 0.0,
-          zoom: 0.4,
+          speed: 1,
+          zoom: 0.2,
         })
       );
 

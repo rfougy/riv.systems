@@ -31,7 +31,7 @@ const LinkInBio: NextPage<{ featuredPosts: IPostData[] }> = ({
         <FeaturedPosts posts={featuredPosts} />
         <Link href={`/`}>
           <Button>
-            Go To Website
+            GO TO WEBSITE
             <ArrowIcon right />
           </Button>
         </Link>

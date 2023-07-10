@@ -32,6 +32,8 @@ export const Button = styled.button`
   color: ${darkTheme.primary};
   background-color: rgba(16, 16, 16, 0.5);
 
+  font-size: 0.75rem;
+
   &:hover {
     color: "none";
     background-color: #2d2d2d;

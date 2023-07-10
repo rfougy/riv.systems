@@ -8,7 +8,7 @@ export const Container = styled.section`
   padding: 1rem;
 
   background-color: rgba(0, 0, 0, 0.2);
-  border: solid #ffffff 0.1rem;
+  border: solid rgba(255, 255, 255, 0.33) 0.1rem;
   border-radius: 2vh;
 `;
 

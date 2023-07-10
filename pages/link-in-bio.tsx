@@ -11,21 +11,32 @@ import findFeaturedPosts from "../utils/link-in-bio/findFeaturedPosts";
 import { getContentByDynamicPage } from "../lib/dynamic-pages/getContentByDynamicPage";
 import { includePlaceholderImage } from "../lib/dynamic-pages/includePlaceholderImage";
 
-import { Container, Header } from "../styles/pages/LinkInBio.styled";
+import { Container, Header, Button } from "../styles/pages/LinkInBio.styled";
 import SocialsList from "../components/socials/socials-list/SocialsList";
 import { socialsList } from "../constants/socialsList";
+import Link from "next/link";
+import ArrowIcon from "../components/icons/ArrowIcon";
+import AnimatedBackground from "../components/features/animated-background/AnimatedBackground";
 
 const LinkInBio: NextPage<{ featuredPosts: IPostData[] }> = ({
   featuredPosts,
 }) => (
   <DisplayDotsCoordsProvider>
-    <Container>
-      <Header>
-        <DisplayDotsAnime text={"RIV.LINKS"} />
-        <SocialsList socials={socialsList} />
-      </Header>
-      <FeaturedPosts posts={featuredPosts} />
-    </Container>
+    <AnimatedBackground>
+      <Container>
+        <Header>
+          <DisplayDotsAnime text={"RIV.LINKS"} />
+          <SocialsList socials={socialsList} />
+        </Header>
+        <FeaturedPosts posts={featuredPosts} />
+        <Link href={`/`}>
+          <Button>
+            GO TO WEBSITE
+            <ArrowIcon right />
+          </Button>
+        </Link>
+      </Container>
+    </AnimatedBackground>
   </DisplayDotsCoordsProvider>
 );
 

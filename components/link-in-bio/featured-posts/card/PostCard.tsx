@@ -28,8 +28,8 @@ const PostCard: React.FC<{
           <Image
             src={coverImage}
             alt={`Cover image for post titled '${title}'`}
-            width={112}
-            height={112}
+            width={104}
+            height={104}
             placeholder="blur"
             blurDataURL={placeholderImage}
             style={{

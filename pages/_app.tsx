@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+
 import { useEffect, useState } from "react";
 import { Global as GlobalTheme, ThemeProvider, css } from "@emotion/react";
 
@@ -22,7 +23,7 @@ import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const [currTheme, setTheme] = useState<ITheme>(lightTheme);
+  const [currTheme, setTheme] = useState<ITheme>(darkTheme);
 
   // @ts-ignore
   const { isDisplayDotsPage, isLinkInBioPage } = pageProps;
@@ -108,9 +109,12 @@ const App = ({ Component, pageProps }: AppProps) => {
       <ThemeProvider theme={currTheme}>
         <GlobalTheme styles={globalColors} />
         <SearchProvider>
-          <Navbar isLinkInBioPage={isLinkInBioPage} toggleTheme={toggleTheme} />
-          <PageContainer>
-            <AppComponentWrapper isDisplayDotsPage={isDisplayDotsPage}>
+          {!isLinkInBioPage && <Navbar toggleTheme={toggleTheme} />}
+          <PageContainer isLinkInBioPage={isLinkInBioPage}>
+            <AppComponentWrapper
+              isDisplayDotsPage={isDisplayDotsPage}
+              isLinkInBioPage={isLinkInBioPage}
+            >
               <Component {...pageProps} />
             </AppComponentWrapper>
             {!isLinkInBioPage && <Footer />}

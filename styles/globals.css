@@ -3,6 +3,10 @@
   font-family: "Roboto Mono", sans-serif;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   overflow: auto;
   margin: 0;

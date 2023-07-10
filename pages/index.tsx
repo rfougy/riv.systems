@@ -5,7 +5,7 @@ import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayD
 import Button from "../components/shared/button/Button";
 
 import {
-  Container,
+  Box,
   Description,
   Margin,
 } from "../styles/pages/DisplayDotsPage.styled";
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   return (
     <>
       <DisplayDotsCoordsProvider>
-        <Container>
+        <Box>
           <Description>Hi, my name is Riviere, welcome to:</Description>
           <Margin>
             <DisplayDotsAnime
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
             my projects, experiences and thoughts.
           </Description>
           <Button href={`/content`}>EXPLORE SYSTEMS</Button>
-        </Container>
+        </Box>
       </DisplayDotsCoordsProvider>
     </>
   );

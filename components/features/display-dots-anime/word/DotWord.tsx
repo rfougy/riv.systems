@@ -1,14 +1,14 @@
 import DotChar from "../char/DotChar";
 
-import { Container } from "./DotWord.styled";
+import { Box } from "./DotWord.styled";
 
 const DotWord: React.FC<{ wordOrSpace: any }> = ({ wordOrSpace }) => {
   return (
-    <Container>
+    <Box>
       {wordOrSpace.map((char: any, index: number) => (
         <DotChar key={index} char={char} />
       ))}
-    </Container>
+    </Box>
   );
 };
 

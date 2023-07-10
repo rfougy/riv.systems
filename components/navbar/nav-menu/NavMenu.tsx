@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import { sectionsList } from "../../../constants/sectionsList";
 
-import { Text, Container, MenuOption } from "./NavMenu.styled";
+import { Text, Box, MenuOption } from "./NavMenu.styled";
 
 const NavMenu: React.FC = () => {
   const { asPath: path }: NextRouter = useRouter();
@@ -36,7 +36,7 @@ const NavMenu: React.FC = () => {
   useEffect((): void => setNavStates(), [path]);
 
   return (
-    <Container
+    <Box
       onMouseLeave={(): void => setHoveredOption(activeOption as string | null)}
     >
       {sectionsList.map((section: string, index: number) => (
@@ -70,7 +70,7 @@ const NavMenu: React.FC = () => {
           </Text>
         </Link>
       </MenuOption>
-    </Container>
+    </Box>
   );
 };
 

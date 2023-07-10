@@ -3,13 +3,7 @@ import Image from "next/image";
 
 import { capitalizeFirstChar } from "../../../../utils";
 
-import {
-  Container,
-  ImageContainer,
-  Category,
-  Text,
-  Title,
-} from "./PostCard.styled";
+import { Box, ImageBox, Category, Text, Title } from "./PostCard.styled";
 
 import IPostData from "../../../../interfaces/IPostData";
 
@@ -23,8 +17,8 @@ const PostCard: React.FC<{
 
   return (
     <Link href={path}>
-      <Container>
-        <ImageContainer>
+      <Box>
+        <ImageBox>
           <Image
             src={coverImage}
             alt={`Cover image for post titled '${title}'`}
@@ -37,12 +31,12 @@ const PostCard: React.FC<{
               objectFit: "cover",
             }}
           />
-        </ImageContainer>
+        </ImageBox>
         <Text>
           <Title>{title}</Title>
           <Category>{capitalizeFirstChar(category)}</Category>
         </Text>
-      </Container>
+      </Box>
     </Link>
   );
 };

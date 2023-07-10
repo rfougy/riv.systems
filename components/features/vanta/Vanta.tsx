@@ -1,9 +1,9 @@
 import useThreeScript from "../../../hooks/vanta/useThreeScript";
 import useVanta from "../../../hooks/vanta/useVanta";
 
-import { Box } from "./AnimatedBackground.styled";
+import { Box } from "./Vanta.styled";
 
-const AnimatedBackground: React.FC<{
+const Vanta: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
   useThreeScript();
@@ -12,4 +12,4 @@ const AnimatedBackground: React.FC<{
   return <Box ref={vantaRef}>{children}</Box>;
 };
 
-export default AnimatedBackground;
+export default Vanta;

@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { ArrowIcon } from "../../components/icons/ArrowIcon.styled";
 import { darkTheme } from "../theme";
 
-export const Container = styled.section`
+export const Box = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;

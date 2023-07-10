@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Container } from "./NextImage.styled";
+import { Box } from "./NextImage.styled";
 
 const NextImage: React.FC<{
   src: string;
@@ -14,7 +14,7 @@ const NextImage: React.FC<{
   isSlideThumbnail,
   priority = false,
 }) => (
-  <Container aspectRatio={aspectRatio}>
+  <Box aspectRatio={aspectRatio}>
     <Image
       priority={priority}
       src={src}
@@ -25,7 +25,7 @@ const NextImage: React.FC<{
         objectFit: "cover",
       }}
     />
-  </Container>
+  </Box>
 );
 
 export default NextImage;

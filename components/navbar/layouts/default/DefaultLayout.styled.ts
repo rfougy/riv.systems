@@ -1,7 +1,7 @@
 import { breakpoints } from "../../../../styles/theme";
 import styled from "@emotion/styled";
 
-export const LogoAndButtonsContainer = styled.div`
+export const LogoAndButtonsBox = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,7 +13,7 @@ export const LogoAndButtonsContainer = styled.div`
   }
 `;
 
-export const FeaturesContainer = styled.div`
+export const FeaturesBox = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: no-wrap;

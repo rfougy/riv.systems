@@ -9,7 +9,7 @@ import {
   Checkbox,
   FilterOption,
   Label,
-  Container,
+  Box,
   Form,
   FilterSet,
   SectionTitle,
@@ -91,7 +91,7 @@ const FilterMenu: React.FC<{
   }
 
   return (
-    <Container>
+    <Box>
       {nestedFilteringOptions ? (
         // Filter for Sections and Categories
         <Form>
@@ -206,7 +206,7 @@ const FilterMenu: React.FC<{
           })}
         </Form>
       )}
-    </Container>
+    </Box>
   );
 };
 

@@ -1,13 +1,13 @@
 import Link from "next/link";
 import ThemeToggleButton from "../../../features/theme-toggle/ThemeToggleButton";
 import ArrowIcon from "../../../icons/ArrowIcon";
-import { NavContainer } from "../../Navbar.styled";
+import { NavBox } from "../../Navbar.styled";
 import { Button } from "./LinkInBioLayout.styled";
 
 const LinkInBioLayout: React.FC<{
   toggleTheme: () => void;
 }> = ({ toggleTheme }) => (
-  <NavContainer>
+  <NavBox>
     <ThemeToggleButton forLinkInBioLayout={true} toggleTheme={toggleTheme} />
     <Link href={`/`}>
       <Button>
@@ -15,7 +15,7 @@ const LinkInBioLayout: React.FC<{
         <ArrowIcon right />
       </Button>
     </Link>
-  </NavContainer>
+  </NavBox>
 );
 
 export default LinkInBioLayout;

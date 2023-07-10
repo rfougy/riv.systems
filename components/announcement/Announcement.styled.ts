@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Container = styled.div`
+export const Box = styled.div`
   align-items: center;
   background-color: ${(props: any) => props.theme.primary};
   display: flex;
@@ -8,7 +8,7 @@ export const Container = styled.div`
   padding: 0.5rem 0.5rem;
 `;
 
-export const CloseIconContainer = styled.button`
+export const CloseIconBox = styled.button`
   background: none;
   border: none;
   cursor: cell;

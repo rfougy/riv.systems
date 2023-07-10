@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Container = styled.button`
+export const Box = styled.button`
   align-items: center;
   background-color: ${(props: any) =>
     props.theme.id === "light"

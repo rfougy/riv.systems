@@ -1,7 +1,7 @@
 import { breakpoints } from "../../../styles/theme";
 import styled from "@emotion/styled";
 
-export const Container = styled.header``;
+export const Box = styled.header``;
 
 export const Title = styled.h1`
   font-size: 2rem;

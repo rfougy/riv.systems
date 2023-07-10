@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import IconButton from "../../shared/icon-button/IconButton";
 import linkIconV1 from "../../../public/assets/icons/link-icon.svg";
 
-import { Container } from "./LinkButton.styled";
+import { Box } from "./LinkButton.styled";
 
 const LinkButton: React.FC<{ url: string; title: string }> = ({
   url,
@@ -12,7 +12,7 @@ const LinkButton: React.FC<{ url: string; title: string }> = ({
   const [onHover, setOnHover] = useState<boolean>(false);
 
   return (
-    <Container>
+    <Box>
       <a href={url} target="_blank" rel="noreferrer">
         <IconButton
           src={linkIconV1}
@@ -25,7 +25,7 @@ const LinkButton: React.FC<{ url: string; title: string }> = ({
           onMouseLeave={() => setOnHover(false)}
         />
       </a>
-    </Container>
+    </Box>
   );
 };
 

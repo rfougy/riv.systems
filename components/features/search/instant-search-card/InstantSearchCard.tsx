@@ -4,13 +4,7 @@ import Image from "next/image";
 import { dateToStr } from "../../../../utils";
 import { IPostFrontMatter } from "../../../../interfaces/IPostFrontMatter";
 
-import {
-  Container,
-  ImageContainer,
-  Info,
-  Text,
-  Title,
-} from "./InstantSearchCard.styled";
+import { Box, ImageBox, Info, Text, Title } from "./InstantSearchCard.styled";
 
 const InstantSearchCard: React.FC<{
   path: string;
@@ -22,8 +16,8 @@ const InstantSearchCard: React.FC<{
 
   return (
     <Link href={path}>
-      <Container>
-        <ImageContainer>
+      <Box>
+        <ImageBox>
           <Image
             src={coverImage}
             alt={`Cover image for post titled '${title}'`}
@@ -35,12 +29,12 @@ const InstantSearchCard: React.FC<{
               objectFit: "cover",
             }}
           />
-        </ImageContainer>
+        </ImageBox>
         <Text>
           <Title>{title}</Title>
           <Info>{dateAsStr}</Info>
         </Text>
-      </Container>
+      </Box>
     </Link>
   );
 };

@@ -1,10 +1,10 @@
 import InstantSearchCard from "../instant-search-card/InstantSearchCard";
-import { Container } from "./SearchResults.styled";
+import { Box } from "./SearchResults.styled";
 
 const SearchResults: React.FC<{ results: any[] }> = ({ results }) => (
   <>
     {results.length ? (
-      <Container>
+      <Box>
         {results.map((result: any, index: number) => (
           <InstantSearchCard
             key={index}
@@ -12,7 +12,7 @@ const SearchResults: React.FC<{ results: any[] }> = ({ results }) => (
             frontmatter={result.frontmatter}
           />
         ))}
-      </Container>
+      </Box>
     ) : (
       <></>
     )}

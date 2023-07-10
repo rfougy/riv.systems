@@ -30,7 +30,7 @@ export const ContentWrap = styled.div`
   min-height: calc(100dvh - (${navbarHeight} + ${footerHeight}));
 `;
 
-export const PageContainer = styled.div`
+export const PageBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;

@@ -1,6 +1,6 @@
 import { useTheme } from "@emotion/react";
 
-import { Circle, Container, Title } from "./ThemeToggleButton.styled";
+import { Circle, Box, Title } from "./ThemeToggleButton.styled";
 
 const ThemeToggleButton: React.FC<{
   toggleTheme: () => void;
@@ -10,13 +10,10 @@ const ThemeToggleButton: React.FC<{
   const themeInitial: string = themeTitle.split("")[0].toUpperCase();
 
   return (
-    <Container
-      aria-label="Color Theme Toggle"
-      onClick={(): void => toggleTheme()}
-    >
-      <Circle forLinkInBioLayout/>
+    <Box aria-label="Color Theme Toggle" onClick={(): void => toggleTheme()}>
+      <Circle forLinkInBioLayout />
       <Title>{themeInitial}</Title>
-    </Container>
+    </Box>
   );
 };
 

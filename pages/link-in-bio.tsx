@@ -11,19 +11,19 @@ import findFeaturedPosts from "../utils/link-in-bio/findFeaturedPosts";
 import { getContentByDynamicPage } from "../lib/dynamic-pages/getContentByDynamicPage";
 import { includePlaceholderImage } from "../lib/dynamic-pages/includePlaceholderImage";
 
-import { Container, Header, Button } from "../styles/pages/LinkInBio.styled";
+import { Box, Header, Button } from "../styles/pages/LinkInBio.styled";
 import SocialsList from "../components/socials/socials-list/SocialsList";
 import { socialsList } from "../constants/socialsList";
 import Link from "next/link";
 import ArrowIcon from "../components/icons/ArrowIcon";
-import AnimatedBackground from "../components/features/animated-background/AnimatedBackground";
+import Vanta from "../components/features/vanta/Vanta";
 
 const LinkInBio: NextPage<{ featuredPosts: IPostData[] }> = ({
   featuredPosts,
 }) => (
   <DisplayDotsCoordsProvider>
-    <AnimatedBackground>
-      <Container>
+    <Vanta>
+      <Box>
         <Header>
           <DisplayDotsAnime text={"RIV.LINKS"} />
           <SocialsList socials={socialsList} />
@@ -35,8 +35,8 @@ const LinkInBio: NextPage<{ featuredPosts: IPostData[] }> = ({
             <ArrowIcon right />
           </Button>
         </Link>
-      </Container>
-    </AnimatedBackground>
+      </Box>
+    </Vanta>
   </DisplayDotsCoordsProvider>
 );
 

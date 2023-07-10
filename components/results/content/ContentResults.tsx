@@ -5,8 +5,8 @@ import Pagination from "../../features/pagination/Pagination";
 import DefaultView from "../views/default/DefaultView";
 
 import {
-  Container,
-  EmptyContainer,
+  Box,
+  EmptyBox,
   FilterSection,
   PageTitle,
   TitleAndToggle,
@@ -51,7 +51,7 @@ const ContentResults: React.FC<{
   useScrollToTop([postView, filteredContent]);
 
   return (
-    <Container>
+    <Box>
       <FilterSection>
         <TitleAndToggle>
           <div>
@@ -82,8 +82,8 @@ const ContentResults: React.FC<{
           totalPostCards={filteredContent.length}
         />
       </ViewSection>
-      {!isVerticalView && <EmptyContainer />}
-    </Container>
+      {!isVerticalView && <EmptyBox />}
+    </Box>
   );
 };
 

@@ -55,7 +55,7 @@ export const Content = styled.div`
   }
 `;
 
-export const Container = styled.div`
+export const Box = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;

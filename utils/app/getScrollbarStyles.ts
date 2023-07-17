@@ -1,15 +1,8 @@
-import { SerializedStyles, css } from "@emotion/react";
-
 import { ITheme } from "../../interfaces/ITheme";
 import { breakpoints } from "../../styles/theme";
 
-export function getGlobalColors(currTheme: ITheme): SerializedStyles {
-  return css`
-    body {
-      background-color: ${currTheme.secondary};
-      transition: 100ms ease-in; // ease-in for theme toggling
-    }
-
+export function getScrollbarStyles(currTheme: ITheme): string {
+  return `
     body::-webkit-scrollbar {
       width: 0.75rem;
       height: 0;
@@ -32,31 +25,6 @@ export function getGlobalColors(currTheme: ITheme): SerializedStyles {
       border-top: 0.1rem solid ${currTheme.primary};
 
       opacity: 0.5;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    caption,
-    li {
-      color: ${currTheme.primary};
-    }
-
-    a {
-      color: ${currTheme.primary};
-    }
-
-    button {
-      color: ${currTheme.primary};
-      background-color: ${currTheme.secondary};
-    }
-
-    label {
-      color: ${currTheme.primary};
     }
   `;
 }

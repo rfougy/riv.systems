@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 
 import { useEffect, useState } from "react";
-import { Global as GlobalTheme, ThemeProvider, css } from "@emotion/react";
+import { Global as GlobalTheme, ThemeProvider } from "@emotion/react";
 
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
@@ -12,6 +12,8 @@ import AppComponentWrapper from "../components/app/ComponentWrapper";
 
 import SearchProvider from "../context/SearchContext";
 
+import { getGlobalEmotionStyles } from "../utils/app/getGlobalEmotionStyles";
+
 import { ITheme } from "../interfaces/ITheme";
 
 import { PageBox } from "../styles/pages/App.styled";
@@ -21,7 +23,6 @@ import "../styles/globals.css";
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
-import { getGlobalColors } from "../utils/app/getGlobalColors";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [currTheme, setTheme] = useState<ITheme>(darkTheme);
@@ -29,7 +30,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   // @ts-ignore
   const { isDisplayDotsPage, isLinkInBioPage } = pageProps;
 
-  const globalColors = getGlobalColors(currTheme);
+  const globalColors = getGlobalEmotionStyles(currTheme);
 
   function toggleTheme(): void {
     const newTheme: ITheme =

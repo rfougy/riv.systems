@@ -7,7 +7,7 @@ import closeIconLight from "../../public/assets/close-icon-light.svg";
 import { ITheme } from "../../interfaces/ITheme";
 import { IAnnouncement } from "../../interfaces/IAnnouncement";
 
-import { dateToNumericStr } from "../../utils/dateToNumericStr";
+import { dateToNumericStr } from "../../utils/common/dateToNumericStr";
 
 import { CloseIconBox, Box, StyledLink, Text } from "./Announcement.styled";
 

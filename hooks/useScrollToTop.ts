@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import useViewportWidthEventListener from "./useViewportWidthListener";
 import { breakpoints } from "../styles/theme";
-import { scrollToTop } from "../utils/scrollToTop";
+import { scrollToTop } from "../utils/common/scrollToTop";
 
 function useScrollToTop(dependencyArr: any[]): boolean {
   const isVerticalView = useViewportWidthEventListener(

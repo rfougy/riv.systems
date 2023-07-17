@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { dateToStr } from "../../../../utils";
+import { dateToStr } from "../../../../utils/common/dateToStr";
 import { IPostFrontMatter } from "../../../../interfaces/IPostFrontMatter";
 
 import { Box, ImageBox, Info, Text, Title } from "./InstantSearchCard.styled";

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ArrowIcon from "../../icons/ArrowIcon";
 
 import { Button, Box, PageNav, PageNumber } from "./Pagination.styled";
-import { scrollToTop } from "../../../utils/scrollToTop";
+import { scrollToTop } from "../../../utils/common/scrollToTop";
 
 const Pagination: React.FC<{
   contentToPaginate: any[];

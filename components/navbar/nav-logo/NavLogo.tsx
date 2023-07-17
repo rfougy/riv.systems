@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
 
-import { logo } from "../../../constants/logo";
+import { logo } from "../../../constants/dictionaries/logo";
 
 import { Logo } from "./NavLogo.styled";
 import { breakpoints } from "../../../styles/theme";

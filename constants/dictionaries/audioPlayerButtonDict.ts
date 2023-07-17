@@ -1,9 +1,9 @@
-import { IAudioPlayerButtonDict } from "../interfaces/IAudioPlayerButtonDict";
+import { IAudioPlayerButtonDict } from "../../interfaces/IAudioPlayerButtonDict";
 
-import playIcon from "../public/assets/audio-player/audio-play-icon.svg";
-import pauseIcon from "../public/assets/audio-player/audio-pause-icon.svg";
-import nextSkipIcon from "../public/assets/audio-player/audio-next-skip-icon.svg";
-import prevSkipIcon from "../public/assets/audio-player/audio-prev-skip-icon.svg";
+import playIcon from "../../public/assets/audio-player/audio-play-icon.svg";
+import pauseIcon from "../../public/assets/audio-player/audio-pause-icon.svg";
+import nextSkipIcon from "../../public/assets/audio-player/audio-next-skip-icon.svg";
+import prevSkipIcon from "../../public/assets/audio-player/audio-prev-skip-icon.svg";
 
 export const audioPlayerButtonDict: IAudioPlayerButtonDict = {
   play: {

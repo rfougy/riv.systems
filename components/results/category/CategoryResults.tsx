@@ -3,7 +3,7 @@ import { useState } from "react";
 import Pagination from "../../features/pagination/Pagination";
 import DefaultView from "../views/default/DefaultView";
 
-import { capitalizeFirstChar } from "../../../utils";
+import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
 
 import {
   CategoryResultsBox,

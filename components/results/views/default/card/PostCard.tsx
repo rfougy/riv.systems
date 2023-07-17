@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { capitalizeFirstChar, dateToStr } from "../../../../../utils";
+import { capitalizeFirstChar } from "../../../../../utils/capitalizeFirstChar";
+import { dateToStr } from "../../../../../utils/dateToStr";
+
 import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";
 
 import ArrowIcon from "../../../../icons/ArrowIcon";

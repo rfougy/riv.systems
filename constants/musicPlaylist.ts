@@ -1,5 +1,5 @@
-import { IMusicPlaylist } from './../interfaces/IMusicPlaylist';
-import { shuffleArr } from "../utils";
+import { IMusicPlaylist } from "./../interfaces/IMusicPlaylist";
+import { shuffleArr } from "../utils/shuffleArr";
 
 export const musicPlaylist: IMusicPlaylist[] = shuffleArr([
   {

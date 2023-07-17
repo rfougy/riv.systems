@@ -10,7 +10,7 @@ import {
   groupCoordsByChar,
   groupCoordsByWordAndSpace,
 } from "../../../lib/display-dots-animation/getCoords";
-import { shuffleArr } from "../../../utils";
+import { shuffleArr } from "../../../utils/shuffleArr";
 import restartIcon from "../../../public/assets/icons/restart-icon.svg";
 
 import { Box, DisplayDotsBox } from "./DisplayDotsAnime.styled";

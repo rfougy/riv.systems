@@ -1,6 +1,6 @@
 import IPost from "../../interfaces/IPost";
 import { IPostFrontMatter } from "../../interfaces/IPostFrontMatter";
-import { capitalizeFirstChar } from "../../utils";
+import { capitalizeFirstChar } from "../../utils/capitalizeFirstChar";
 
 export function contentResultsPageMetaTagInputs() {
   const page: string = "content";

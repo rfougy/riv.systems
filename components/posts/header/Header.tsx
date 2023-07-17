@@ -16,7 +16,8 @@ import ArrowIcon from "../../icons/ArrowIcon";
 import LinkButton from "../link-button/LinkButton";
 import WorksGrid from "../works-grid/WorksGrid";
 
-import { capitalizeFirstChar, dateToStr } from "../../../utils";
+import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
+import { dateToStr } from "../../../utils/dateToStr";
 
 import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
 

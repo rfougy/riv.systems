@@ -4,7 +4,7 @@ import { Howl } from "howler";
 import IconButton from "../../shared/icon-button/IconButton";
 
 import { musicPlaylist } from "../../../constants/musicPlaylist";
-import { audioPlayerButtonDict } from "../../../dictionaries/audioPlayerButtonDict";
+import { audioPlayerButtonDict } from "../../../constants/dictionaries/audioPlayerButtonDict";
 
 import { List } from "./AudioPlayer.styled";
 

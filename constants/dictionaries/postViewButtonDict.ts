@@ -1,7 +1,7 @@
-import { IPostViewButtonDict } from "../interfaces/IPostViewButtonDict";
-import columnViewIcon from "../public/assets/view-icon-column.svg";
-import defaultViewIcon from "../public/assets/view-icon-default.svg";
-import gridViewIcon from "../public/assets/view-icon-grid.svg";
+import { IPostViewButtonDict } from "../../interfaces/IPostViewButtonDict";
+import columnViewIcon from "../../public/assets/view-icon-column.svg";
+import defaultViewIcon from "../../public/assets/view-icon-default.svg";
+import gridViewIcon from "../../public/assets/view-icon-grid.svg";
 
 export const postViewButtonDict: IPostViewButtonDict = {
   default: {

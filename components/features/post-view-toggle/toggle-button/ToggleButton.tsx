@@ -1,4 +1,4 @@
-import { postViewButtonDict } from "../../../../dictionaries/postViewButtonDict";
+import { postViewButtonDict } from "../../../../constants/dictionaries/postViewButtonDict";
 
 import { postView } from "../../../../types/postView";
 import IconButton from "../../../shared/icon-button/IconButton";

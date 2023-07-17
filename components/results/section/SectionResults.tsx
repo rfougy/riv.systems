@@ -4,7 +4,7 @@ import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
 import DefaultView from "../views/default/DefaultView";
 
-import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
+import { capitalizeFirstChar } from "../../../utils/common/capitalizeFirstChar";
 
 import { sectionType } from "../../../types/sectionType";
 

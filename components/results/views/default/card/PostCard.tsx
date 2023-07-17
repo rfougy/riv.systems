@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { capitalizeFirstChar } from "../../../../../utils/capitalizeFirstChar";
-import { dateToStr } from "../../../../../utils/dateToStr";
+import { capitalizeFirstChar } from "../../../../../utils/common/capitalizeFirstChar";
+import { dateToStr } from "../../../../../utils/common/dateToStr";
 
 import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";
 

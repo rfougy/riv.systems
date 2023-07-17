@@ -1,7 +1,7 @@
 import filterByCategory from "../../../lib/filter/filterByCategory";
 import filterBySection from "../../../lib/filter/filterBySection";
-import { capitalizeFirstChar } from "../../../utils/capitalizeFirstChar";
-import { sortInAlphabeticOrder } from "../../../utils/sortInAlphabeticOrder";
+import { capitalizeFirstChar } from "../../../utils/common/capitalizeFirstChar";
+import { sortInAlphabeticOrder } from "../../../utils/common/sortInAlphabeticOrder";
 
 import ISectionObj from "../../../interfaces/ISectionObj";
 import ICategoryObj from "../../../interfaces/ICategoryObj";

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { capitalizeFirstChar } from "../../../../utils/capitalizeFirstChar";
+import { capitalizeFirstChar } from "../../../../utils/common/capitalizeFirstChar";
 
 import { Box, ImageBox, Category, Text, Title } from "./PostCard.styled";
 

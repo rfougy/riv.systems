@@ -1,10 +1,12 @@
+import { newsletterGroups } from "../../types/newsletterGroups";
+
 /**
  * @see https://developers.mailerlite.com/docs/subscribers.html#create-upsert-subscriber
  */
 export interface IMailerLiteSubscriber {
   email: string;
   fields?: any;
-  groups?: ("youtube" | "website" | "instagram")[];
+  groups?: newsletterGroups[];
   status?: "active" | "unsubscribed" | "unconfirmed" | "bounced" | "junk";
   subscribed_at?: string;
   ip_address?: string;

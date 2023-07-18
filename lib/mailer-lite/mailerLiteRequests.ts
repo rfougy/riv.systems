@@ -1,4 +1,5 @@
 import MailerLite from "@mailerlite/mailerlite-nodejs";
+
 import { IMailerLiteSubscriber } from "../../interfaces/mailer-lite/IMailerLiteSubscriber";
 
 const mailerlite = new MailerLite({

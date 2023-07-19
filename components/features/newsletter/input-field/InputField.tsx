@@ -2,7 +2,9 @@ import { useState } from "react";
 
 import { Form, Input } from "./InputField.styled";
 
-const InputField: React.FC = () => {
+const InputField: React.FC<{ handleSubmit: (val: string) => void }> = ({
+  handleSubmit,
+}) => {
   const [inputVal, setInputVal] = useState<string>("");
 
   function handleChange(e: any) {
@@ -10,8 +12,13 @@ const InputField: React.FC = () => {
   }
 
   function disableEnterKey(e: any): void {
-    (e.keyCode === 13 || e.which === 13 || e.key === "Enter") &&
+    const enterKeyPressed =
+      e.keyCode === 13 || e.which === 13 || e.key === "Enter";
+
+    if (enterKeyPressed) {
       e.preventDefault();
+      handleSubmit(inputVal);
+    }
   }
 
   return (

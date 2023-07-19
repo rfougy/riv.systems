@@ -1,14 +1,12 @@
-import { useState } from "react";
+import { Form, Input } from "./EmailField.styled";
 
-import { Form, Input } from "./InputField.styled";
-
-const InputField: React.FC<{ handleSubmit: (val: string) => void }> = ({
-  handleSubmit,
-}) => {
-  const [inputVal, setInputVal] = useState<string>("");
-
+const EmailField: React.FC<{
+  email: string;
+  setEmail: (val: string) => void;
+  handleSubmit: () => void;
+}> = ({ email, setEmail, handleSubmit }) => {
   function handleChange(e: any) {
-    setInputVal(e.target.value.toLowerCase());
+    setEmail(e.target.value.toLowerCase());
   }
 
   function disableEnterKey(e: any): void {
@@ -17,7 +15,7 @@ const InputField: React.FC<{ handleSubmit: (val: string) => void }> = ({
 
     if (enterKeyPressed) {
       e.preventDefault();
-      handleSubmit(inputVal);
+      handleSubmit();
     }
   }
 
@@ -26,7 +24,7 @@ const InputField: React.FC<{ handleSubmit: (val: string) => void }> = ({
       <Input
         type="search"
         name="subscribe-to-newsletter"
-        value={inputVal}
+        value={email}
         onChange={(e) => handleChange(e)}
         onKeyDown={(e) => disableEnterKey(e)}
         placeholder="Subscribe to Newsletter"
@@ -36,4 +34,4 @@ const InputField: React.FC<{ handleSubmit: (val: string) => void }> = ({
   );
 };
 
-export default InputField;
+export default EmailField;

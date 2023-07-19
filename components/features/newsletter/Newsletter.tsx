@@ -1,15 +1,21 @@
-import InputField from "./input-field/InputField";
+import { useState } from "react";
+import { Box } from "./Newsletter.styled";
+import EmailField from "./email-field/EmailField";
+import SubscribeButton from "./subscribe-button/SubscribeButton";
 
 const Newsletter: React.FC = () => {
+  const [email, setEmail] = useState<string>("");
+
   /**
    * @todo add email validation(?)
    */
-  function subscribe(email: string) {}
+  function subscribe() {}
 
   return (
-    <div>
-      <InputField handleSubmit={subscribe} />
-    </div>
+    <Box>
+      <EmailField email={email} setEmail={setEmail} handleSubmit={subscribe} />
+      <SubscribeButton handleSubmit={subscribe} />
+    </Box>
   );
 };
 

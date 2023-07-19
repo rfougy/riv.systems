@@ -1,15 +1,23 @@
 import { useState } from "react";
-import { Box } from "./Newsletter.styled";
+
 import EmailField from "./email-field/EmailField";
 import SubscribeButton from "./subscribe-button/SubscribeButton";
 
+import { newsletterGroups } from "../../../types/newsletterGroups";
+
+import { Box } from "./Newsletter.styled";
+
 const Newsletter: React.FC = () => {
   const [email, setEmail] = useState<string>("");
+  const [newsletterGroups, setNewsletterGroups] =
+    useState<newsletterGroups[]>();
 
   /**
    * @todo add email validation(?)
    */
-  function subscribe() {}
+  function subscribe() {
+    setEmail("");
+  }
 
   return (
     <Box>

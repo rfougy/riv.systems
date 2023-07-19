@@ -28,7 +28,6 @@ const EmailField: React.FC<{
         onChange={(e) => handleChange(e)}
         onKeyDown={(e) => disableEnterKey(e)}
         placeholder="Subscribe to Newsletter"
-        autoFocus
       />
     </Form>
   );

@@ -5,6 +5,7 @@ import sourceCodeIcon from "../../public/assets/icons/source-code-icon.svg";
 import { Footer as Foot } from "./Footer.styled";
 import ISocials from "../../interfaces/ISocials";
 import SocialsIcon from "../socials/socials-icon/SocialsIcon";
+import Newsletter from "../features/newsletter/Newsletter";
 
 const Footer: React.FC = () => {
   const sourceCodeData: ISocials = {
@@ -15,7 +16,8 @@ const Footer: React.FC = () => {
 
   return (
     <Foot>
-      <SocialsIcon social={sourceCodeData} />
+      {/* <SocialsIcon social={sourceCodeData} /> */}
+      <Newsletter />
       <SocialsList socials={socialsList} />
     </Foot>
   );

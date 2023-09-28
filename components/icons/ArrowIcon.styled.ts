@@ -21,8 +21,8 @@ export const ArrowIcon = styled.div`
   }) => {
     if (right) return "rotate(-45deg);";
     if (left) return "rotate(135deg);";
-    if (top) return "rotate(0deg);";
-    if (bottom) return "rotate(90deg);";
+    if (top) return "rotate(45deg);";
+    if (bottom) return "rotate(-135deg);";
   }};
 
   -webkit-transform: ${({
@@ -38,7 +38,7 @@ export const ArrowIcon = styled.div`
   }) => {
     if (right) return "rotate(-45deg);";
     if (left) return "rotate(135deg);";
-    if (top) return "rotate(0deg);";
-    if (bottom) return "rotate(90deg);";
+    if (top) return "rotate(45deg);";
+    if (bottom) return "rotate(-135deg);";
   }};
 `;

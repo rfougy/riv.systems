@@ -18,3 +18,10 @@ export const Grid = styled.section`
     grid-template-columns: repeat(1, 1fr);
   }
 `;
+
+export const Divider = styled.div`
+  height: 1px;
+  background: ${(props: any) => props.theme.primary};
+  margin: 1.25rem 0 0.5rem 0;
+  opacity: 0.25;
+`;

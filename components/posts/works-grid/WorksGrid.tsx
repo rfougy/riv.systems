@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box, Grid } from "./WorksGrid.styled";
+import { Box, Divider, Grid } from "./WorksGrid.styled";
 import WorksGridItem from "./works-grid-item/WorksGridItem";
 import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
 import { breakpoints } from "../../../styles/theme";
@@ -29,6 +29,8 @@ const WorksGrid: React.FC<{
     <>
       {expanded ? (
         <Box>
+          <Toggler expanded={expanded} setExpanded={setExpanded} />
+          <Divider />
           <Grid>
             <WorksGridItem title="duration" val={formatted.duration} />
             <WorksGridItem title="team size" val={teamSize} />

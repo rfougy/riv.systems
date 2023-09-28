@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { Box, Toggler, Grid, Title, Inline } from "./WorksGrid.styled";
-import WorksGridItem from "./WorksGridItem";
+import { Box, Grid } from "./WorksGrid.styled";
+import WorksGridItem from "./works-grid-item/WorksGridItem";
 import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
 import { breakpoints } from "../../../styles/theme";
-import ArrowIcon from "../../icons/ArrowIcon";
+import Toggler from "./toggler/Toggler";
 
 const WorksGrid: React.FC<{
   teamSize: number;
@@ -38,16 +38,7 @@ const WorksGrid: React.FC<{
         </Box>
       ) : (
         <Box>
-          <Toggler onClick={() => setExpanded((prev) => !prev)}>
-            <Title>VIEW PROJECT DETAILS</Title>
-            <Inline>
-              <ArrowIcon
-                aria-label="Arrow Icon"
-                top={!expanded}
-                bottom={expanded}
-              />
-            </Inline>
-          </Toggler>
+          <Toggler expanded={expanded} setExpanded={setExpanded} />
         </Box>
       )}
     </>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CollapsedGrid, Grid } from "./WorksGrid.styled";
+import { Box, Toggler, Grid, Title } from "./WorksGrid.styled";
 import WorksGridItem from "./WorksGridItem";
 import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
 import { breakpoints } from "../../../styles/theme";
@@ -27,14 +27,21 @@ const WorksGrid: React.FC<{
   return (
     <>
       {expandGrid ? (
-        <Grid>
-          <WorksGridItem title="duration" val={formatted.duration} />
-          <WorksGridItem title="team size" val={teamSize} />
-          <WorksGridItem title="roles" val={formatted.roles} />
-          <WorksGridItem title="tools" val={formatted.tools} />
-        </Grid>
+        <Box>
+          <Grid>
+            <WorksGridItem title="duration" val={formatted.duration} />
+            <WorksGridItem title="team size" val={teamSize} />
+            <WorksGridItem title="roles" val={formatted.roles} />
+            <WorksGridItem title="tools" val={formatted.tools} />
+          </Grid>
+        </Box>
       ) : (
-        <CollapsedGrid></CollapsedGrid>
+        <Box>
+          <Toggler>
+            <Title>VIEW PROJECT DETAILS</Title>
+            <Title>O</Title>
+          </Toggler>
+        </Box>
       )}
     </>
   );

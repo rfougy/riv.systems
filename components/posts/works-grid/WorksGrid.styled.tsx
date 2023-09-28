@@ -33,3 +33,9 @@ export const Title = styled.h3`
 
   margin: 0;
 `;
+
+export const Inline = styled.div`
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: auto;
+`;

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { useDisplayDotsCoordsContext } from "../../context/DisplayDotsCoordsContext";
+import { useDisplayDotsCoordsContext } from "../../../context/DisplayDotsCoordsContext";
 
 import DotWord from "./word/DotWord";
 import IconButton from "../../shared/icon-button/IconButton";
@@ -10,10 +10,10 @@ import {
   groupCoordsByChar,
   groupCoordsByWordAndSpace,
 } from "../../../lib/display-dots-animation/getCoords";
-import { shuffleArr } from "../../../utils";
+import { shuffleArr } from "../../../utils/common/shuffleArr";
 import restartIcon from "../../../public/assets/icons/restart-icon.svg";
 
-import { Container, DisplayDotsContainer } from "./DisplayDotsAnime.styled";
+import { Box, DisplayDotsBox } from "./DisplayDotsAnime.styled";
 
 const DisplayDotsAnime: React.FC<{
   text?: string;
@@ -57,23 +57,23 @@ const DisplayDotsAnime: React.FC<{
   useEffect(() => setRestartButtonRotating(animeEnded), [animeEnded]);
 
   return (
-    <Container>
-      <DisplayDotsContainer>
+    <Box>
+      <DisplayDotsBox>
         {coordsByWordAndSpace.map((wordOrSpace: string, index: number) => (
           <DotWord key={index} wordOrSpace={wordOrSpace} />
         ))}
-      </DisplayDotsContainer>
+      </DisplayDotsBox>
       {includeRestartButton && (
         <IconButton
           src={restartIcon}
           alt="restart icon"
           ariaLabel="restart animation"
           isDisabled={!animeEnded}
-          rotate={restartButtonRotating}
+          rotate={restartButtonRotating.toString() as "true" | "false"}
           onClick={() => restart()}
         />
       )}
-    </Container>
+    </Box>
   );
 };
 

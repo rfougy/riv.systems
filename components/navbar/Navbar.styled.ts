@@ -1,7 +1,7 @@
 import { breakpoints } from "./../../styles/theme";
 import styled from "@emotion/styled";
 
-export const Nav = styled.nav`
+export const NavBox = styled.nav`
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -35,22 +35,4 @@ export const Nav = styled.nav`
 
     backdrop-filter: blur(6px);
   }
-`;
-
-export const LogoAndButtonsContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 2rem;
-
-  @media (max-width: ${breakpoints.xs}) {
-    gap: 1rem;
-  }
-`;
-
-export const FeaturesContainer = styled.div`
-  display: flex;
-  align-items: center;
-  flex-wrap: no-wrap;
-  gap: 0.75rem;
 `;

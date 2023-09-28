@@ -1,21 +1,20 @@
 import type { GetStaticProps, NextPage } from "next";
-import Link from "next/link";
 
-import DisplayDotsCoordsProvider from "../components/context/DisplayDotsCoordsContext";
+import DisplayDotsCoordsProvider from "../context/DisplayDotsCoordsContext";
 import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
+import Button from "../components/shared/button/Button";
 
 import {
-  Container,
+  Box,
   Description,
   Margin,
-  Button,
 } from "../styles/pages/DisplayDotsPage.styled";
 
 const Home: NextPage = () => {
   return (
     <>
       <DisplayDotsCoordsProvider>
-        <Container>
+        <Box>
           <Description>Hi, my name is Riviere, welcome to:</Description>
           <Margin>
             <DisplayDotsAnime
@@ -27,10 +26,8 @@ const Home: NextPage = () => {
             I created this website to document <br />
             my projects, experiences and thoughts.
           </Description>
-          <Link href={`/content`} passHref>
-            <Button>EXPLORE SYSTEMS</Button>
-          </Link>
-        </Container>
+          <Button href={`/content`}>EXPLORE SYSTEMS</Button>
+        </Box>
       </DisplayDotsCoordsProvider>
     </>
   );

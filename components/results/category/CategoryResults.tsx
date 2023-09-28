@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import Pagination from "../../features/pagination/Pagination";
 import DefaultView from "../views/default/DefaultView";
 
-import { capitalizeFirstChar } from "../../../utils";
+import { capitalizeFirstChar } from "../../../utils/common/capitalizeFirstChar";
 
 import {
-  CategoryResultsContainer,
+  CategoryResultsBox,
   PageTitle,
   TitleAndToggle,
   ViewSection,
@@ -37,7 +37,7 @@ const CategoryResults: React.FC<{
   useScrollToTop([postView]);
 
   return (
-    <CategoryResultsContainer>
+    <CategoryResultsBox>
       <TitleAndToggle>
         <div>
           <PageTitle>Category: {categoryAsTitle}</PageTitle>
@@ -54,7 +54,7 @@ const CategoryResults: React.FC<{
           totalPostCards={content.length}
         />
       </ViewSection>
-    </CategoryResultsContainer>
+    </CategoryResultsBox>
   );
 };
 

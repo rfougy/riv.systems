@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Container = styled.button`
+export const Box = styled.button`
   align-items: center;
   background-color: ${(props: any) =>
     props.theme.id === "light"
@@ -20,9 +20,12 @@ export const Container = styled.button`
 export const Circle = styled.div`
   background: ${(props: any) => props.theme.red};
   border-radius: 50%;
-  height: 0.75rem;
   margin: 0.1rem;
-  width: 0.75rem;
+
+  height: ${({ forLinkInBioLayout }: { forLinkInBioLayout?: boolean }) =>
+    forLinkInBioLayout ? "1rem" : "0.75rem"};
+  width: ${({ forLinkInBioLayout }: { forLinkInBioLayout?: boolean }) =>
+    forLinkInBioLayout ? "1rem" : "0.75rem"};
 `;
 
 export const Title = styled.h6`

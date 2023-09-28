@@ -1,25 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { capitalizeFirstChar, dateToStr } from "../../../../../utils";
+import { capitalizeFirstChar } from "../../../../../utils/common/capitalizeFirstChar";
+import { dateToStr } from "../../../../../utils/common/dateToStr";
+
 import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";
 
 import ArrowIcon from "../../../../icons/ArrowIcon";
 
-import {
-  Container,
-  Info,
-  InfoContainer,
-  Metadata,
-  Text,
-  Title,
-} from "./PostCard.styled";
+import { Box, Info, InfoBox, Metadata, Text, Title } from "./PostCard.styled";
 
 const PostCard: React.FC<{
   path: string;
   frontmatter: any;
-  forSearchResults?: boolean;
-}> = ({ path, frontmatter, forSearchResults }) => {
+}> = ({ path, frontmatter }) => {
   const {
     title,
     datePublished,
@@ -31,31 +25,34 @@ const PostCard: React.FC<{
   const dateAsStr: string = dateToStr(datePublished);
 
   return (
-    <Link href={path} passHref>
-      <Container>
+    <Link href={path}>
+      <Box>
         <Image
           src={coverImage}
           alt={`Cover image for post titled '${title}'`}
-          width={300}
+          width={650}
           height={150}
-          objectFit="cover"
           placeholder="blur"
           blurDataURL={placeholderImage}
+          style={{
+            maxWidth: "100%",
+            objectFit: "cover",
+          }}
         />
         <Text>
           <Title>{title}</Title>
           <Metadata>
-            <InfoContainer>
+            <InfoBox>
               <Info>{capitalizeFirstChar(section)}</Info>
               <Info>
                 <ArrowIcon aria-label="Arrow Icon" right />
               </Info>
               <Info>{capitalizeFirstChar(category)}</Info>
-            </InfoContainer>
+            </InfoBox>
             <Info>{dateAsStr}</Info>
           </Metadata>
         </Text>
-      </Container>
+      </Box>
     </Link>
   );
 };

@@ -1,31 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { capitalizeFirstChar } from "../../../../../utils";
+import { capitalizeFirstChar } from "../../../../../utils/common/capitalizeFirstChar";
 import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";
 
 import ArrowIcon from "../../../../icons/ArrowIcon";
 
-import {
-  Container,
-  Info,
-  InfoContainer,
-  Metadata,
-  Text,
-  Title,
-} from "./PostCard.styled";
-import useViewportWidthEventListener from "../../../../../hooks/useViewportWidthListener";
-import { breakpoints } from "../../../../../styles/theme";
+import { Box, Info, InfoBox, Metadata, Text, Title } from "./PostCard.styled";
 
 const PostCard: React.FC<{
   path: string;
   frontmatter: any;
-  forSearchResults?: boolean;
-}> = ({ path, frontmatter, forSearchResults }) => {
-  const isColumnView = useViewportWidthEventListener(
-    breakpoints.useViewportWidth.xs
-  );
-
+}> = ({ path, frontmatter }) => {
   const {
     title,
     datePublished,
@@ -38,31 +24,34 @@ const PostCard: React.FC<{
   const dateAsStr: string = datePublished.replace(/-/g, "/");
 
   return (
-    <Link href={path} passHref>
-      <Container>
+    <Link href={path}>
+      <Box>
         <Image
           src={coverImage}
           alt={`Cover image for post titled '${title}'`}
-          width={isColumnView ? 600 : 800}
-          height={isColumnView ? 800 : 400}
-          objectFit="cover"
+          width={800}
+          height={400}
           placeholder="blur"
           blurDataURL={placeholderImage}
+          style={{
+            maxWidth: "100%",
+            objectFit: "cover",
+          }}
         />
         <Text>
           <Title>{title}</Title>
           <Metadata>
-            <InfoContainer>
+            <InfoBox>
               <Info>{capitalizeFirstChar(section)}</Info>
               <Info>
                 <ArrowIcon aria-label="Arrow Icon" right />
               </Info>
               <Info>{capitalizeFirstChar(category)}</Info>
-            </InfoContainer>
+            </InfoBox>
             <Info>{dateAsStr}</Info>
           </Metadata>
         </Text>
-      </Container>
+      </Box>
     </Link>
   );
 };

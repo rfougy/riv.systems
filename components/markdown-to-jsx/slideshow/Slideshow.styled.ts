@@ -46,7 +46,7 @@ export const NavArrowIcon = styled(ArrowIcon)`
   margin: ${({ right, left }: { right?: boolean; left?: boolean }) => {
     if (right) return "0 0.25rem 0 0";
     if (left) return "0 0 0 0.25rem";
-  }};
+  }};x
 
   border-color: ${lightTheme.secondary};
 `;
@@ -82,7 +82,7 @@ export const Navigation = styled.div`
   width: 100%;
 `;
 
-export const Container = styled.div`
+export const Box = styled.div`
   position: relative;
 `;
 
@@ -101,7 +101,7 @@ export const AltText = styled.p`
   }
 `;
 
-export const SubContainer = styled.div`
+export const SubBox = styled.div`
   display: flex;
   flex-wrap: no-wrap;
   justify-content: space-between;

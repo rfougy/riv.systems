@@ -1,26 +1,31 @@
-import NavMenu from "./nav-menu/NavMenu";
-import NavLogo from "./nav-logo/NavLogo";
-import ThemeToggleButton from "../features/theme-toggle/ThemeToggleButton";
-import { AudioPlayer } from "../features/audio-player/AudioPlayer";
+import { useSearchContext } from "../../context/SearchContext";
 
-import {
-  Nav,
-  FeaturesContainer,
-  LogoAndButtonsContainer,
-} from "./Navbar.styled";
+import DefaultLayout from "./layouts/default/DefaultLayout";
+import LinkInBioLayout from "./layouts/link-in-bio/LinkInBioLayout";
+import SearchLayout from "./layouts/search/SearchLayout";
 
-const Navbar: React.FC<{ toggleTheme: () => void }> = ({ toggleTheme }) => {
+const Navbar: React.FC<{
+  isLinkInBioPage?: boolean;
+  toggleTheme: () => void;
+}> = ({ isLinkInBioPage, toggleTheme }) => {
+  const { searchActivated, setSearchActivated, setSearchResults } =
+    useSearchContext();
+
+  if (searchActivated)
+    return (
+      <SearchLayout
+        setSearchActivated={setSearchActivated}
+        setSearchResults={setSearchResults}
+      />
+    );
+
+  if (isLinkInBioPage) return <LinkInBioLayout toggleTheme={toggleTheme} />;
+
   return (
-    <Nav>
-      <LogoAndButtonsContainer>
-        <NavLogo />
-        <FeaturesContainer>
-          <ThemeToggleButton toggleTheme={toggleTheme} />
-          <AudioPlayer />
-        </FeaturesContainer>
-      </LogoAndButtonsContainer>
-      <NavMenu />
-    </Nav>
+    <DefaultLayout
+      toggleTheme={toggleTheme}
+      setSearchActivated={setSearchActivated}
+    />
   );
 };
 

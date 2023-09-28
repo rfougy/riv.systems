@@ -1,7 +1,7 @@
 import { breakpoints } from "./../../../styles/theme";
 import styled from "@emotion/styled";
 
-export const Container = styled.div`
+export const Box = styled.div`
   margin-top: 4rem;
 `;
 

@@ -10,7 +10,7 @@ const IconButton: React.FC<{
   width?: string;
   isActive?: boolean;
   isDisabled?: boolean;
-  rotate?: boolean;
+  rotate?: "true" | "false";
   onClick?: () => any | ((arg: any) => any);
   onMouseOver?: () => any | ((arg: any) => any);
   onMouseLeave?: () => any | ((arg: any) => any);
@@ -27,24 +27,29 @@ const IconButton: React.FC<{
   onMouseOver,
   onMouseLeave,
 }) => {
-  return (
-    <>
-      {/* @ts-ignore */}
-      <Button
-        aria-label={ariaLabel}
-        height={height}
-        width={width}
-        rotate={rotate}
-        isActive={isActive}
-        isDisabled={isDisabled}
-        onClick={() => (!onClick || isDisabled ? null : onClick())}
-        onMouseOver={onMouseOver}
-        onMouseLeave={onMouseLeave}
-      >
-        <Image src={src} alt={alt} layout="fill" objectFit="contain" />
-      </Button>
-    </>
-  );
+  return <>
+    {/* @ts-ignore */}
+    <Button
+      aria-label={ariaLabel}
+      height={height}
+      width={width}
+      rotate={rotate}
+      isActive={isActive}
+      isDisabled={isDisabled}
+      onClick={() => (!onClick || isDisabled ? null : onClick())}
+      onMouseOver={onMouseOver}
+      onMouseLeave={onMouseLeave}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: "contain"
+        }} />
+    </Button>
+  </>;
 };
 
 export default IconButton;

@@ -1,6 +1,7 @@
 import filterByCategory from "../../../lib/filter/filterByCategory";
 import filterBySection from "../../../lib/filter/filterBySection";
-import { capitalizeFirstChar, sortInAlphabeticOrder } from "../../../utils";
+import { capitalizeFirstChar } from "../../../utils/common/capitalizeFirstChar";
+import { sortInAlphabeticOrder } from "../../../utils/common/sortInAlphabeticOrder";
 
 import ISectionObj from "../../../interfaces/ISectionObj";
 import ICategoryObj from "../../../interfaces/ICategoryObj";
@@ -9,7 +10,7 @@ import {
   Checkbox,
   FilterOption,
   Label,
-  Container,
+  Box,
   Form,
   FilterSet,
   SectionTitle,
@@ -91,7 +92,7 @@ const FilterMenu: React.FC<{
   }
 
   return (
-    <Container>
+    <Box>
       {nestedFilteringOptions ? (
         // Filter for Sections and Categories
         <Form>
@@ -206,7 +207,7 @@ const FilterMenu: React.FC<{
           })}
         </Form>
       )}
-    </Container>
+    </Box>
   );
 };
 

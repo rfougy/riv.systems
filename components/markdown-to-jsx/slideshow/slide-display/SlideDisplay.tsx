@@ -1,6 +1,6 @@
 import { ISlide } from "../../../../interfaces/ISlide";
 import { aspectRatio } from "../../../../types/aspectRatio";
-import NextImage from "../../NextImage";
+import NextImage from "../../next-image/NextImage";
 
 const SlideDisplay: React.FC<{ slide: ISlide; aspectRatio: aspectRatio }> = ({
   slide,

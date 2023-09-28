@@ -6,38 +6,26 @@ import {
   getPosts,
 } from "../../lib/cms/getCmsContent";
 
-/**
- * @deprecated currently not in use
- * @description used for search feature by referring to cache
- */
+import { ICmsCategory } from "../../interfaces/lCmsCategories";
+
 const searchApiRoute = (req: NextApiRequest, res: NextApiResponse) => {
-  let posts: any;
+  const sections: string[] = getFileNamesInDirectory();
+  const allCategories: ICmsCategory[] = getCategories(sections);
+  const allPosts: any[] = getPosts(allCategories);
 
-  if (process.env.NODE_ENV === "production") {
-    posts = require("../../cache/data");
-  } else {
-    const sections: string[] = getFileNamesInDirectory();
-    const allCategories: any = getCategories(sections);
-    const allPosts: any = getPosts(allCategories);
-
-    posts = allPosts;
-  }
-
-  const results = posts.filter(
+  const results = allPosts.filter(
     ({
-      frontmatter: { title, category, section, excerpt },
+      frontmatter: { title, category, section },
     }: {
       frontmatter: {
         title: string;
         category: string;
         section: string;
-        excerpt: string;
       };
     }) =>
       title?.toLowerCase().indexOf(req.query.q as string) != -1 ||
       category.toLowerCase().indexOf(req.query.q as string) != -1 ||
-      section.toLowerCase().indexOf(req.query.q as string) != -1 ||
-      excerpt.toLowerCase().indexOf(req.query.q as string) != -1
+      section.toLowerCase().indexOf(req.query.q as string) != -1
   );
 
   res.status(200).json({ results });

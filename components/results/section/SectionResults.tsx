@@ -4,13 +4,13 @@ import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
 import DefaultView from "../views/default/DefaultView";
 
-import { capitalizeFirstChar } from "../../../utils";
+import { capitalizeFirstChar } from "../../../utils/common/capitalizeFirstChar";
 
 import { sectionType } from "../../../types/sectionType";
 
 import {
-  Container,
-  EmptyContainer,
+  Box,
+  EmptyBox,
   FilterSection,
   PageTitle,
   TitleAndToggle,
@@ -49,7 +49,7 @@ const SectionResults: React.FC<{
   useScrollToTop([postView, filteredContent]);
 
   return (
-    <Container>
+    <Box>
       <FilterSection>
         <TitleAndToggle>
           <div>
@@ -72,8 +72,8 @@ const SectionResults: React.FC<{
           totalPostCards={filteredContent.length}
         />
       </ViewSection>
-      {!isVerticalView && <EmptyContainer />}
-    </Container>
+      {!isVerticalView && <EmptyBox />}
+    </Box>
   );
 };
 

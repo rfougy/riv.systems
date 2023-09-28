@@ -1,13 +1,11 @@
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
-import SearchResults from "./SearchResults";
+import { Form, Input } from "./Search.styled";
 
-/**
- * @deprecated currently not in use
- */
-const Search: React.FC<{}> = () => {
+const Search: React.FC<{
+  setSearchResults: Dispatch<SetStateAction<any[]>>;
+}> = ({ setSearchResults }) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [searchResults, setSearchResults] = useState<any[]>([]);
 
   async function getSearchResults() {
     if (searchTerm === "") {
@@ -19,27 +17,31 @@ const Search: React.FC<{}> = () => {
     }
   }
 
+  function handleChange(e: any) {
+    setSearchTerm(e.target.value.toLowerCase());
+  }
+
+  function disableEnterKey(e: any): void {
+    (e.keyCode === 13 || e.which === 13 || e.key === "Enter") &&
+      e.preventDefault();
+  }
+
   useEffect(() => {
     getSearchResults();
   }, [searchTerm]);
 
   return (
-    <div>
-      <div>
-        <div>
-          <form>
-            <input
-              type="search"
-              name="search"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Search..."
-            />
-          </form>
-        </div>
-      </div>
-      <SearchResults results={searchResults} />
-    </div>
+    <Form>
+      <Input
+        type="search"
+        name="search"
+        value={searchTerm}
+        onChange={(e) => handleChange(e)}
+        onKeyDown={(e) => disableEnterKey(e)}
+        placeholder="Search..."
+        autoFocus
+      />
+    </Form>
   );
 };
 

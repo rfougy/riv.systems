@@ -4,35 +4,40 @@ import { useEffect, useState } from "react";
 
 import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
 
-import { logo } from "../../../constants/logo";
+import { logo } from "../../../constants/dictionaries/logo";
 
 import { Logo } from "./NavLogo.styled";
 import { breakpoints } from "../../../styles/theme";
 
 const NavLogo: React.FC = () => {
-  const isVerticalView = useViewportWidthEventListener(breakpoints.useViewportWidth.xs);
+  const [logoSrc, setLogoSrc] = useState<any>(logo.short.hidden);
 
-  const [logoState, setLogoState] = useState<any>();
+  const isVerticalView = useViewportWidthEventListener(
+    breakpoints.useViewportWidth.xs
+  );
 
   const logoHidden = isVerticalView ? logo.short.hidden : logo.long.hidden;
   const logoActive = isVerticalView ? logo.short.active : logo.long.active;
 
-  useEffect(() => setLogoState(logoHidden), [logoHidden]);
+  useEffect(() => setLogoSrc(logoHidden), [logoHidden]);
 
   return (
     <Logo>
-      <Link href={`/`} passHref>
-        <a>
-          <Image
-            src={logoState}
-            alt="website logo"
-            onMouseOver={(): void => setLogoState(logoActive)}
-            onMouseLeave={(): void => setLogoState(logoHidden)}
-            onTouchStart={(): void => setLogoState(logoActive)}
-            onTouchEnd={(): void => setLogoState(logoHidden)}
-            onTouchCancel={(): void => setLogoState(logoHidden)}
-          />
-        </a>
+      <Link href={`/`}>
+
+        <Image
+          src={logoSrc}
+          alt="website logo"
+          onMouseOver={(): void => setLogoSrc(logoActive)}
+          onMouseLeave={(): void => setLogoSrc(logoHidden)}
+          onTouchStart={(): void => setLogoSrc(logoActive)}
+          onTouchEnd={(): void => setLogoSrc(logoHidden)}
+          onTouchCancel={(): void => setLogoSrc(logoHidden)}
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
+
       </Link>
     </Logo>
   );

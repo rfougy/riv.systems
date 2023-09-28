@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { default as NextLink } from "next/link";
+import Link from "next/link";
 
 import closeIconDark from "../../public/assets/close-icon-dark.svg";
 import closeIconLight from "../../public/assets/close-icon-light.svg";
@@ -7,14 +7,9 @@ import closeIconLight from "../../public/assets/close-icon-light.svg";
 import { ITheme } from "../../interfaces/ITheme";
 import { IAnnouncement } from "../../interfaces/IAnnouncement";
 
-import { dateToNumericStr } from "../../utils/dateToNumericStr";
+import { dateToNumericStr } from "../../utils/common/dateToNumericStr";
 
-import {
-  CloseIconContainer,
-  Container,
-  Link,
-  Text,
-} from "./Announcement.styled";
+import { CloseIconBox, Box, StyledLink, Text } from "./Announcement.styled";
 
 const closeIconTheme: any = {
   dark: closeIconDark,
@@ -38,25 +33,29 @@ const Announcement: React.FC<{
   }
 
   return (
-    <Container>
-      <CloseIconContainer>
+    <Box>
+      <CloseIconBox>
         <Image
           src={closeIcon}
           alt="announcement close icon"
           onClick={() => handleClose()}
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+          }}
         />
-      </CloseIconContainer>
+      </CloseIconBox>
       <Text>
         Latest Update ({convertedDate}): {announcement.text}{" "}
         {announcement.link && (
           <span>
-            <NextLink href={announcement.link} passHref>
-              <Link>Click here</Link>
-            </NextLink>
+            <Link href={announcement.link}>
+              <StyledLink>Click here</StyledLink>
+            </Link>
           </span>
         )}
       </Text>
-    </Container>
+    </Box>
   );
 };
 

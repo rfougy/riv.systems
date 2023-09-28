@@ -7,9 +7,9 @@ import {
   Button,
   Navigation,
   List,
-  Container,
+  Box,
   AltText,
-  SubContainer,
+  SubBox,
   NavArrowIcon,
 } from "./Slideshow.styled";
 
@@ -44,7 +44,7 @@ const Slideshow: React.FC<{ children: any[]; aspectRatio: aspectRatio }> = ({
   useEffect(() => setCurrSlide(slides[currSlideIndex]), [currSlideIndex]);
 
   return (
-    <Container>
+    <Box>
       <SlideDisplay
         key={currSlide.key}
         slide={currSlide}
@@ -58,7 +58,7 @@ const Slideshow: React.FC<{ children: any[]; aspectRatio: aspectRatio }> = ({
           <NavArrowIcon right />
         </Button>
       </Navigation>
-      <SubContainer>
+      <SubBox>
         <AltText>{currSlide.alt}</AltText>
         <List>
           {slides.map((slide: ISlide, index: number) => (
@@ -71,8 +71,8 @@ const Slideshow: React.FC<{ children: any[]; aspectRatio: aspectRatio }> = ({
             />
           ))}
         </List>
-      </SubContainer>
-    </Container>
+      </SubBox>
+    </Box>
   );
 };
 

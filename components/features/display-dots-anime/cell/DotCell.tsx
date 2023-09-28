@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { useDisplayDotsCoordsContext } from "../../../context/DisplayDotsCoordsContext";
+import { useDisplayDotsCoordsContext } from "../../../../context/DisplayDotsCoordsContext";
 
 import { Dot } from "./DotCell.styled";
 

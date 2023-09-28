@@ -1,8 +1,8 @@
 import groupBy from "lodash/groupBy";
 import "../../ext/string.extensions";
 
-import { displayDotsDict } from "../../dictionaries/displayDotsDict";
-import { structuredClone } from "../../utils";
+import { displayDotsDict } from "../../constants/dictionaries/displayDotsDict";
+import { structuredClone } from "../../utils/common/structuredClone";
 
 import IAllCoords from "../../interfaces/IAllCoords";
 

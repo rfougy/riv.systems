@@ -11,7 +11,7 @@ const WorksGrid: React.FC<{
   duration: string[];
   tools: string[];
 }> = ({ teamSize, roles, duration, tools }) => {
-  const [expandGrid, setExpandGrid] = useState<boolean>();
+  const [expanded, setExpanded] = useState<boolean>();
 
   const isVerticalView = useViewportWidthEventListener(
     breakpoints.useViewportWidth.xs
@@ -23,11 +23,11 @@ const WorksGrid: React.FC<{
     tools: tools.join(", "),
   };
 
-  useEffect(() => setExpandGrid(!isVerticalView), [isVerticalView]);
+  useEffect(() => setExpanded(!isVerticalView), [isVerticalView]);
 
   return (
     <>
-      {expandGrid ? (
+      {expanded ? (
         <Box>
           <Grid>
             <WorksGridItem title="duration" val={formatted.duration} />
@@ -38,10 +38,14 @@ const WorksGrid: React.FC<{
         </Box>
       ) : (
         <Box>
-          <Toggler onClick={() => setExpandGrid((prev) => !prev)}>
+          <Toggler onClick={() => setExpanded((prev) => !prev)}>
             <Title>VIEW PROJECT DETAILS</Title>
             <Inline>
-              <ArrowIcon aria-label="Arrow Icon" />
+              <ArrowIcon
+                aria-label="Arrow Icon"
+                top={!expanded}
+                bottom={expanded}
+              />
             </Inline>
           </Toggler>
         </Box>

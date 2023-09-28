@@ -6,12 +6,6 @@ export const Box = styled.button`
   display: flex;
   justify-content: space-between;
   width: 100%;
-
-  &:hover {
-    h3 {
-      text-decoration: underline;
-    }
-  }
 `;
 
 export const Title = styled.h3`

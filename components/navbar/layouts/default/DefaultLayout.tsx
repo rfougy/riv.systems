@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 
 import NavMenu from "../../nav-menu/NavMenu";
-import { AudioPlayer } from "../../../features/audio-player/AudioPlayer";
+import { AudioControls } from "../../../features/audio-player/audio-controls/AudioControls";
 import ThemeToggleButton from "../../../features/theme-toggle/ThemeToggleButton";
 import NavLogo from "../../nav-logo/NavLogo";
 
@@ -17,7 +17,7 @@ const DefaultLayout: React.FC<{
       <NavLogo />
       <FeaturesBox>
         <ThemeToggleButton toggleTheme={toggleTheme} />
-        <AudioPlayer />
+        <AudioControls />
       </FeaturesBox>
     </LogoAndButtonsBox>
     <NavMenu />

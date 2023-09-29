@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { breakpoints } from "../../../styles/theme";
+import { breakpoints } from "../../../../styles/theme";
 
 export const List = styled.div`
   display: flex;

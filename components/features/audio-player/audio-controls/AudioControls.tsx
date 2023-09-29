@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { Howl } from "howler";
 
-import IconButton from "../../shared/icon-button/IconButton";
+import IconButton from "../../../shared/icon-button/IconButton";
 
-import { musicPlaylist } from "../../../constants/musicPlaylist";
-import { audioPlayerButtonDict } from "../../../constants/dictionaries/audioPlayerButtonDict";
+import { musicPlaylist } from "../../../../constants/musicPlaylist";
+import { audioControlsButtonDict } from "../../../../constants/dictionaries/audioControlsButtonDict";
 
-import { List } from "./AudioPlayer.styled";
+import { List } from "./AudioControls.styled";
 
-export const AudioPlayer: React.FC = () => {
+export const AudioControls: React.FC = () => {
   const [howler, setHowler] = useState<Howl>();
   const [newHowlerCreated, setNewHowlerCreated] = useState<boolean>();
   const [currSongIndex, setCurrSongIndex] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
-  const { play, pause, nextSkip, prevSkip } = audioPlayerButtonDict;
+  const { play, pause, nextSkip, prevSkip } = audioControlsButtonDict;
 
   const firstSongIndex = 0;
   const lastSongIndex = musicPlaylist.length - 1;

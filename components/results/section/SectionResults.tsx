@@ -22,6 +22,7 @@ import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
 import useContentFiltering from "../../../hooks/useContentFiltering";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
+import { breakpoints } from "../../../styles/theme";
 
 const SectionResults: React.FC<{
   section: sectionType | string;
@@ -31,6 +32,9 @@ const SectionResults: React.FC<{
   const [postView, setPostView] = useState<postView>("column");
 
   const isVerticalView = useViewportWidthEventListener(960);
+  const renderPostViewOptions = !useViewportWidthEventListener(
+    breakpoints.useViewportWidth.xs
+  );
 
   const { filteredContent, categories, categoryFilters, setCategoryFilters } =
     useContentFiltering(content);
@@ -55,7 +59,9 @@ const SectionResults: React.FC<{
           <div>
             <PageTitle>{sectionAsTitle}</PageTitle>
           </div>
-          <PostViewToggle setPostView={setPostView} postView={postView} />
+          {renderPostViewOptions && (
+            <PostViewToggle setPostView={setPostView} postView={postView} />
+          )}
         </TitleAndToggle>
         <FilterMenu
           categories={categories}

@@ -15,6 +15,8 @@ import { postView } from "../../../types/postView";
 import ColumnView from "../views/column/ColumnView";
 import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
 import useScrollToTop from "../../../hooks/useScrollToTop";
+import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
+import { breakpoints } from "../../../styles/theme";
 
 const CategoryResults: React.FC<{
   category: string;
@@ -23,6 +25,9 @@ const CategoryResults: React.FC<{
   const [renderedPostCards, setRenderedPostCards] = useState<any>();
   const [postView, setPostView] = useState<postView>("column");
 
+  const renderPostViewOptions = !useViewportWidthEventListener(
+    breakpoints.useViewportWidth.xs
+  );
   const categoryAsTitle: string = capitalizeFirstChar(category);
 
   function renderPostView(): React.ReactElement {
@@ -42,7 +47,9 @@ const CategoryResults: React.FC<{
         <div>
           <PageTitle>Category: {categoryAsTitle}</PageTitle>
         </div>
-        <PostViewToggle setPostView={setPostView} postView={postView} />
+        {renderPostViewOptions && (
+          <PostViewToggle setPostView={setPostView} postView={postView} />
+        )}
       </TitleAndToggle>
 
       <ViewSection>

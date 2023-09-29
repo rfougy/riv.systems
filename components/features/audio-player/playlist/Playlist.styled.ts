@@ -30,10 +30,18 @@ export const Dropdown = styled.ul`
   position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.6rem;
 
   width: max-content;
   top: 3.75rem;
+  padding: 0.6rem;
+
+  background-color: ${(props: any) =>
+    props.theme.id === "light"
+      ? "rgba(255, 255, 255, 0.75)"
+      : "rgba(0, 0, 0, 0.75)"};
+  border: 0.1rem solid ${(props: any) => props.theme.primary};
+  border-radius: 1rem;
 
   @media (max-width: ${breakpoints.xs}) {
     gap: 1rem;

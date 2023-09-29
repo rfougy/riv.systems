@@ -1,8 +1,9 @@
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import { Dispatch, SetStateAction, useRef, useState } from "react";
 import { Box, Dropdown, PlaylistOption, Title } from "./Playlist.styled";
 import ArrowIcon from "../../../icons/ArrowIcon";
 import { IPlaylist } from "../../../../interfaces/audio-player/IPlaylist";
 import { IAllPlaylists } from "../../../../interfaces/audio-player/IAllPlaylists";
+import useOutsideClick from "../../../../hooks/useOutsideClick";
 
 const Playlist: React.FC<{
   musicPlaylist: IAllPlaylists;
@@ -13,6 +14,8 @@ const Playlist: React.FC<{
 
   const dropdownRef = useRef<HTMLUListElement | null>(null);
 
+  useOutsideClick(dropdownRef, () => setDropdownOpened(false));
+
   const playlists: IPlaylist[] = Object.values(musicPlaylist).filter(
     (playlist) => playlist.title !== selectedPlaylist.title
   );
@@ -21,22 +24,6 @@ const Playlist: React.FC<{
     setSelectedPlaylist(playlist);
     setDropdownOpened(false);
   }
-
-  function handleClickOutside(event: MouseEvent) {
-    if (
-      dropdownRef.current &&
-      !dropdownRef.current.contains(event.target as Node)
-    )
-      setDropdownOpened(false);
-  }
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   return (
     <>

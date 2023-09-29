@@ -8,19 +8,37 @@ export const ArrowIcon = styled.div`
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 
-  transform: ${({ right, left }: { right?: boolean; left?: boolean }) => {
+  transform: ${({
+    right,
+    left,
+    top,
+    bottom,
+  }: {
+    right?: boolean;
+    left?: boolean;
+    top?: boolean;
+    bottom?: boolean;
+  }) => {
     if (right) return "rotate(-45deg);";
     if (left) return "rotate(135deg);";
+    if (top) return "rotate(45deg);";
+    if (bottom) return "rotate(-135deg);";
   }};
 
   -webkit-transform: ${({
     right,
     left,
+    top,
+    bottom,
   }: {
     right?: boolean;
     left?: boolean;
+    top?: boolean;
+    bottom?: boolean;
   }) => {
     if (right) return "rotate(-45deg);";
     if (left) return "rotate(135deg);";
+    if (top) return "rotate(45deg);";
+    if (bottom) return "rotate(-135deg);";
   }};
 `;

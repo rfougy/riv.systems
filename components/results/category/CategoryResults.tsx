@@ -5,16 +5,11 @@ import DefaultView from "../views/default/DefaultView";
 
 import { capitalizeFirstChar } from "../../../utils/common/capitalizeFirstChar";
 
-import {
-  CategoryResultsBox,
-  PageTitle,
-  TitleAndToggle,
-  ViewSection,
-} from "../Results.styled";
+import { CategoryResultsBox, ViewSection } from "../Results.styled";
 import { postView } from "../../../types/postView";
 import ColumnView from "../views/column/ColumnView";
-import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
 import useScrollToTop from "../../../hooks/useScrollToTop";
+import TitleAndToggler from "../../shared/title-and-toggle/TitleAndToggler";
 
 const CategoryResults: React.FC<{
   category: string;
@@ -38,13 +33,11 @@ const CategoryResults: React.FC<{
 
   return (
     <CategoryResultsBox>
-      <TitleAndToggle>
-        <div>
-          <PageTitle>Category: {categoryAsTitle}</PageTitle>
-        </div>
-        <PostViewToggle setPostView={setPostView} postView={postView} />
-      </TitleAndToggle>
-
+      <TitleAndToggler
+        title={`Category: ${categoryAsTitle}`}
+        postView={postView}
+        setPostView={setPostView}
+      />
       <ViewSection>
         {renderPostView()}
         <Pagination

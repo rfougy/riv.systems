@@ -47,4 +47,19 @@ export const musicPlaylist: IMusicPlaylist[] = shuffleArr([
     artist: "Leotrix",
     src: "https://user-images.githubusercontent.com/77861258/231020370-7e404f3c-6d88-423f-bef3-cd36e6d773b1.webm",
   },
+  {
+    title: "Bias",
+    artist: "Floating Points",
+    src: "https://github.com/rfougy/riv.systems/assets/77861258/88756e67-69ff-4192-a0a5-64fcf4a4af4b",
+  },
+  {
+    title: "Sleepr",
+    artist: "Drone & Deft",
+    src: "https://github.com/rfougy/riv.systems/assets/77861258/7c9a716a-21e7-4b53-bd47-896a79d7da13",
+  },
+  {
+    title: "Thought Tracing",
+    artist: "G Jones",
+    src: "https://github.com/rfougy/riv.systems/assets/77861258/4abb2b66-1572-4059-af42-e028dc877b53",
+  },
 ]);

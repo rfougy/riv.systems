@@ -4,22 +4,15 @@ import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
 import DefaultView from "../views/default/DefaultView";
 
-import {
-  Box,
-  EmptyBox,
-  FilterSection,
-  PageTitle,
-  TitleAndToggle,
-  ViewSection,
-} from "../Results.styled";
+import { Box, EmptyBox, FilterSection, ViewSection } from "../Results.styled";
 
 import { postView } from "../../../types/postView";
 import ColumnView from "../views/column/ColumnView";
-import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
 
 import useContentFiltering from "../../../hooks/useContentFiltering";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
+import TitleAndToggler from "../../shared/title-and-toggle/TitleAndToggler";
 
 const ContentResults: React.FC<{
   content: any;
@@ -53,12 +46,12 @@ const ContentResults: React.FC<{
   return (
     <Box>
       <FilterSection>
-        <TitleAndToggle>
-          <div>
-            <PageTitle>Content</PageTitle>
-          </div>
-          <PostViewToggle setPostView={setPostView} postView={postView} />
-        </TitleAndToggle>
+        <TitleAndToggler
+          title="Content"
+          isContentResultsPage
+          postView={postView}
+          setPostView={setPostView}
+        />
         <FilterMenu
           sections={sections}
           categories={categories}

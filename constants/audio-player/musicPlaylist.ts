@@ -1,6 +1,6 @@
 import { IAllPlaylists } from "../../interfaces/audio-player/IAllPlaylists";
 import { electronicPlaylist } from "./electronicPlaylist";
-import { japaneseRockPlaylist } from "./japanesePlaylist";
+import { japaneseRockPlaylist } from "./japaneseRockPlaylist";
 import { rockPlaylist } from "./rockPlaylist";
 
 export const musicPlaylist: IAllPlaylists = {

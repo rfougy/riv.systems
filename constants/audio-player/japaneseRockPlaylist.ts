@@ -18,11 +18,6 @@ export const japaneseRockPlaylist: ISong[] = shuffleArr([
     src: "",
   },
   {
-    title: "Sleep under star",
-    artist: "Age Factory",
-    src: "",
-  },
-  {
     title: "first death",
     artist: "TK from Ling tosite sigure",
     src: "",

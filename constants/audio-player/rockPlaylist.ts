@@ -18,11 +18,6 @@ export const rockPlaylist: ISong[] = shuffleArr([
     src: "",
   },
   {
-    title: "This House Is a Circus",
-    artist: "Arctic Monkeys",
-    src: "",
-  },
-  {
     title: "Laterus",
     artist: "TOOL",
     src: "",

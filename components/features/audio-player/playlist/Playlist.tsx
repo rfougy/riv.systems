@@ -32,7 +32,7 @@ const Playlist: React.FC<{
         <Dropdown>
           {playlists.map((playlist: IPlaylist, index) => (
             <PlaylistOption key={index}>
-              <h1>{playlist.title}</h1>
+              <Title>{playlist.title}</Title>
             </PlaylistOption>
           ))}
         </Dropdown>

@@ -7,6 +7,7 @@ import { audioControlsButtonDict } from "../../../../constants/dictionaries/audi
 
 import { List } from "./AudioControls.styled";
 import { IPlaylist } from "../../../../interfaces/audio-player/IPlaylist";
+import { getAudioControlsDict } from "../../../../utils/audio-player/getAudioControlsDict";
 
 export const AudioControls: React.FC<{ selectedPlaylist: IPlaylist }> = ({
   selectedPlaylist,
@@ -22,10 +23,14 @@ export const AudioControls: React.FC<{ selectedPlaylist: IPlaylist }> = ({
   const { play, pause, nextSkip, prevSkip } = audioControlsButtonDict;
   const { playlist } = selectedPlaylist;
 
-  const firstSongIndex = 0;
-  const lastSongIndex = playlist.length - 1;
-  const isFirstSong = currSongIndex === firstSongIndex;
-  const isLastSong = currSongIndex === lastSongIndex;
+  const {
+    firstSongIndex,
+    nextSongIndex,
+    prevSongIndex,
+    isFirstSong,
+    isLastSong,
+  } = getAudioControlsDict(currSongIndex, playlist);
+
   const isNewPlaylist = currPlaylist !== selectedPlaylist.title;
 
   function initializeHowler(songIndex: number): Howl {
@@ -49,17 +54,11 @@ export const AudioControls: React.FC<{ selectedPlaylist: IPlaylist }> = ({
   }
 
   function handleNextSong(): void {
-    const nextSongIndex: number =
-      currSongIndex !== lastSongIndex ? currSongIndex + 1 : firstSongIndex;
-
     howler?.pause();
     skipToDiffSong(nextSongIndex);
   }
 
   function handlePrevSong(): void {
-    const prevSongIndex: number =
-      currSongIndex !== firstSongIndex ? currSongIndex - 1 : lastSongIndex;
-
     howler?.pause();
     skipToDiffSong(prevSongIndex);
   }
@@ -90,11 +89,17 @@ export const AudioControls: React.FC<{ selectedPlaylist: IPlaylist }> = ({
     }
   }, [howlerInit, howler, isPlaying]);
 
+  /**
+   * @description set new song and playlist
+   */
   useEffect((): void => {
     setCurrPlaylist(selectedPlaylist.title);
     setCurrSongIndex(0);
   }, [selectedPlaylist]);
 
+  /**
+   * @description change current song on playlist change
+   */
   useEffect(() => {
     if (isNewPlaylist) {
       howler?.unload();

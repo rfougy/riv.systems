@@ -17,7 +17,7 @@ const AudioPlayer: React.FC = () => {
         selectedPlaylist={selectedPlaylist}
         setSelectedPlaylist={setSelectedPlaylist}
       />
-      <AudioControls />
+      <AudioControls selectedPlaylist={selectedPlaylist} />
     </Box>
   );
 };

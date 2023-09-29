@@ -3,24 +3,28 @@ import { Howl } from "howler";
 
 import IconButton from "../../../shared/icon-button/IconButton";
 
-import { electronicPlaylist } from "../../../../constants/audio-player/electronicPlaylist";
 import { audioControlsButtonDict } from "../../../../constants/dictionaries/audioControlsButtonDict";
 
 import { List } from "./AudioControls.styled";
+import { IPlaylist } from "../../../../interfaces/audio-player/IPlaylist";
 
-export const AudioControls: React.FC = () => {
+export const AudioControls: React.FC<{ selectedPlaylist: IPlaylist }> = ({
+  selectedPlaylist,
+}) => {
   const [howler, setHowler] = useState<Howl>();
   const [newHowlerCreated, setNewHowlerCreated] = useState<boolean>();
   const [currSongIndex, setCurrSongIndex] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   const { play, pause, nextSkip, prevSkip } = audioControlsButtonDict;
+  const { playlist } = selectedPlaylist;
 
   const firstSongIndex = 0;
-  const lastSongIndex = electronicPlaylist.length - 1;
+  const lastSongIndex = playlist.length - 1;
+  const isFirstSong = currSongIndex === firstSongIndex;
 
   function initializeHowler(songIndex: number): Howl {
-    const song = electronicPlaylist[songIndex].src;
+    const song = playlist[songIndex].src;
     const howler = new Howl({
       src: [song],
       html5: true,
@@ -89,6 +93,7 @@ export const AudioControls: React.FC = () => {
         src={prevSkip.icon}
         alt={prevSkip.alt}
         ariaLabel={prevSkip.ariaLabel}
+        isDisabled={isFirstSong}
         onClick={(): void => handlePrevSong()}
       />
       <IconButton

@@ -12,7 +12,10 @@ export const AudioControls: React.FC<{ selectedPlaylist: IPlaylist }> = ({
   selectedPlaylist,
 }) => {
   const [howler, setHowler] = useState<Howl>();
-  const [newHowlerCreated, setNewHowlerCreated] = useState<boolean>();
+  const [howlerInit, setHowlerInit] = useState<boolean>();
+  const [currPlaylist, setCurrPlaylist] = useState<string>(
+    selectedPlaylist.title
+  );
   const [currSongIndex, setCurrSongIndex] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
@@ -22,17 +25,15 @@ export const AudioControls: React.FC<{ selectedPlaylist: IPlaylist }> = ({
   const firstSongIndex = 0;
   const lastSongIndex = playlist.length - 1;
   const isFirstSong = currSongIndex === firstSongIndex;
+  const isLastSong = currSongIndex === lastSongIndex;
+  const isNewPlaylist = currPlaylist !== selectedPlaylist.title;
 
   function initializeHowler(songIndex: number): Howl {
     const song = playlist[songIndex].src;
     const howler = new Howl({
       src: [song],
       html5: true,
-      onend: () => {
-        currSongIndex !== lastSongIndex
-          ? skipToDiffSong(songIndex + 1)
-          : skipToDiffSong(firstSongIndex);
-      },
+      onend: () => skipToDiffSong(!isLastSong ? songIndex + 1 : firstSongIndex),
     });
     return howler;
   }
@@ -66,26 +67,40 @@ export const AudioControls: React.FC<{ selectedPlaylist: IPlaylist }> = ({
   function skipToDiffSong(songIndex: number) {
     setCurrSongIndex(songIndex);
     setHowler(undefined);
-    setNewHowlerCreated(true);
+    setHowlerInit(true);
   }
 
   /**
    * @description create new howler initialization when a) the component first initializes, and b) the song changes
    */
   useEffect((): void => {
-    const newHowler: Howl = initializeHowler(currSongIndex);
-    setHowler(newHowler);
-  }, [currSongIndex]);
+    if (!isNewPlaylist) {
+      const newHowler: Howl = initializeHowler(currSongIndex);
+      setHowler(newHowler);
+    }
+  }, [currSongIndex, currPlaylist]);
 
   /**
    * @description automatically play the next/prev song given that the audio player was on play
    */
   useEffect((): void => {
-    if (newHowlerCreated && howler && isPlaying) {
+    if (howlerInit && howler && isPlaying) {
       howler.play();
-      setNewHowlerCreated(false);
+      setHowlerInit(false);
     }
-  }, [newHowlerCreated, howler, isPlaying]);
+  }, [howlerInit, howler, isPlaying]);
+
+  useEffect((): void => {
+    setCurrPlaylist(selectedPlaylist.title);
+    setCurrSongIndex(0);
+  }, [selectedPlaylist]);
+
+  useEffect(() => {
+    if (isNewPlaylist) {
+      howler?.unload();
+      skipToDiffSong(0);
+    }
+  }, [isNewPlaylist]);
 
   return (
     <List>

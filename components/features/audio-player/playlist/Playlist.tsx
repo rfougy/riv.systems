@@ -19,7 +19,9 @@ const Playlist: React.FC<{
 
   const dropdownRef = useRef<HTMLUListElement | null>(null);
 
-  useOutsideClick(dropdownRef, () => setDropdownOpened(false));
+  const clickedOutside = useOutsideClick(dropdownRef, () =>
+    setDropdownOpened(false)
+  );
 
   const playlists: IPlaylist[] = Object.values(musicPlaylist).filter(
     (playlist) => playlist.title !== selectedPlaylist.title
@@ -30,11 +32,15 @@ const Playlist: React.FC<{
     setDropdownOpened(false);
   }
 
+  function handleDropdownButtonClick() {
+    clickedOutside ? null : setDropdownOpened((prev) => !prev);
+  }
+
   return (
     <>
       <DropdownButton
         aria-label="Color Theme Toggle"
-        onClick={() => setDropdownOpened((prev) => !prev)}
+        onClick={() => handleDropdownButtonClick()}
       >
         <Title>{selectedPlaylist.title}</Title>
         <ArrowIcon

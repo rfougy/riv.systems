@@ -12,7 +12,11 @@ const AudioPlayer: React.FC = () => {
 
   return (
     <Box>
-      <Playlist />
+      <Playlist
+        musicPlaylist={musicPlaylist}
+        selectedPlaylist={selectedPlaylist}
+        setSelectedPlaylist={setSelectedPlaylist}
+      />
       <AudioControls />
     </Box>
   );

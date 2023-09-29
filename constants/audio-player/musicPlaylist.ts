@@ -32,7 +32,7 @@ export const musicPlaylist: IAllPlaylists = {
     ],
   },
   chainsaw: {
-    title: "ROCK",
+    title: "CHAINSAW",
     playlist: [
       {
         title: "Rumor ft. WYN",

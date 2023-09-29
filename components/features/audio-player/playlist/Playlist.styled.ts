@@ -22,3 +22,16 @@ export const Title = styled.h6`
   background-color: none;
   margin: 0;
 `;
+
+// Dropdown
+
+export const Dropdown = styled.ul`
+  position: absolute;
+  width: max-content;
+  z-index: 0;
+`;
+
+export const PlaylistOption = styled.li`
+  all: unset;
+  width: 100%;
+`;

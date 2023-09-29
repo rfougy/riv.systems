@@ -1,10 +1,45 @@
 import { ISong } from "../../interfaces/audio-player/ISong";
 import { shuffleArr } from "../../utils/common/shuffleArr";
 
-export const japanesePlaylist: ISong[] = shuffleArr([
+export const japaneseRockPlaylist: ISong[] = shuffleArr([
   {
-    title: "Daze 22.00",
-    artist: "Flume",
-    src: "https://user-images.githubusercontent.com/77861258/225471651-848a88fa-4396-4d58-9860-1c2dada37b18.webm",
+    title: "FightSong",
+    artist: "Eve",
+    src: "",
+  },
+  {
+    title: "Kaikai Kitan",
+    artist: "Eve",
+    src: "",
+  },
+  {
+    title: "グッドバイ",
+    artist: "Toe",
+    src: "",
+  },
+  {
+    title: "Sleep under star",
+    artist: "Age Factory",
+    src: "",
+  },
+  {
+    title: "first death",
+    artist: "TK from Ling tosite sigure",
+    src: "",
+  },
+  {
+    title: "VIVID VICE",
+    artist: "Who-ya Extended",
+    src: "",
+  },
+  {
+    title: "Beautiful Circus",
+    artist: "Ling tosite sigure",
+    src: "",
+  },
+  {
+    title: "abnormalize",
+    artist: "Ling tosite sigure",
+    src: "",
   },
 ]);

@@ -3,8 +3,43 @@ import { shuffleArr } from "../../utils/common/shuffleArr";
 
 export const rockPlaylist: ISong[] = shuffleArr([
   {
-    title: "Daze 22.00",
-    artist: "Flume",
-    src: "https://user-images.githubusercontent.com/77861258/225471651-848a88fa-4396-4d58-9860-1c2dada37b18.webm",
+    title: "Jigsaw Falling Into Place",
+    artist: "Radiohead",
+    src: "",
+  },
+  {
+    title: "Everything In Its Right Place",
+    artist: "Radiohead",
+    src: "",
+  },
+  {
+    title: "Every Day Is Exactly The Same",
+    artist: "Nine Inch Nails",
+    src: "",
+  },
+  {
+    title: "This House Is a Circus",
+    artist: "Arctic Monkeys",
+    src: "",
+  },
+  {
+    title: "Laterus",
+    artist: "TOOL",
+    src: "",
+  },
+  {
+    title: "Cashout",
+    artist: "Fugazi",
+    src: "",
+  },
+  {
+    title: "Epic Problem",
+    artist: "Fugazi",
+    src: "",
+  },
+  {
+    title: "The Outsider",
+    artist: "A Perfect Circle",
+    src: "",
   },
 ]);

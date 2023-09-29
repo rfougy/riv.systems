@@ -3,5 +3,5 @@ import { IPlaylist } from "./IPlaylist";
 export interface IAllPlaylists {
   electronic: IPlaylist;
   rock: IPlaylist;
-  japanese: IPlaylist;
+  japaneseRock: IPlaylist;
 }

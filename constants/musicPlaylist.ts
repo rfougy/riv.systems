@@ -47,7 +47,6 @@ export const musicPlaylist: IMusicPlaylist[] = shuffleArr([
     artist: "Leotrix",
     src: "https://user-images.githubusercontent.com/77861258/231020370-7e404f3c-6d88-423f-bef3-cd36e6d773b1.webm",
   },
-
   {
     title: "Bias",
     artist: "Floating Points",

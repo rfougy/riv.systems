@@ -1,5 +1,10 @@
 import { Dispatch, SetStateAction, useRef, useState } from "react";
-import { Box, Dropdown, PlaylistOption, Title } from "./Playlist.styled";
+import {
+  DropdownButton,
+  Dropdown,
+  PlaylistOption,
+  Title,
+} from "./Playlist.styled";
 import ArrowIcon from "../../../icons/ArrowIcon";
 import { IPlaylist } from "../../../../interfaces/audio-player/IPlaylist";
 import { IAllPlaylists } from "../../../../interfaces/audio-player/IAllPlaylists";
@@ -27,7 +32,7 @@ const Playlist: React.FC<{
 
   return (
     <>
-      <Box
+      <DropdownButton
         aria-label="Color Theme Toggle"
         onClick={() => setDropdownOpened((prev) => !prev)}
       >
@@ -37,7 +42,7 @@ const Playlist: React.FC<{
           top={!dropdownOpened}
           bottom={dropdownOpened}
         />
-      </Box>
+      </DropdownButton>
       {dropdownOpened && (
         <Dropdown ref={dropdownRef}>
           {playlists.map((playlist: IPlaylist, index) => (

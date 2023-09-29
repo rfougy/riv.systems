@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { breakpoints } from "../../../../styles/theme";
 
-export const Box = styled.button`
+export const DropdownButton = styled.button`
   align-items: center;
   background-color: ${(props: any) =>
     props.theme.id === "light"
@@ -19,6 +19,10 @@ export const Box = styled.button`
 
   @media (max-width: ${breakpoints.xs}) {
     display: none;
+  }
+
+  &:hover {
+    background-color: ${(props: any) => props.theme.highlight};
   }
 `;
 
@@ -42,10 +46,11 @@ export const Dropdown = styled.ul`
 
   background-color: ${(props: any) =>
     props.theme.id === "light"
-      ? "rgba(255, 255, 255, 0.75)"
-      : "rgba(0, 0, 0, 0.75)"};
+      ? "rgba(255, 255, 255, 0.5)"
+      : "rgba(0, 0, 0, 0.5)"};
+
   border: 0.1rem solid ${(props: any) => props.theme.primary};
-  border-radius: 1rem;
+  border-radius: 0 1rem 1rem 1rem;
 
   @media (max-width: ${breakpoints.xs}) {
     display: none;
@@ -56,20 +61,26 @@ export const Dropdown = styled.ul`
 
 export const PlaylistOption = styled.button`
   all: unset;
+
+  display: flex;
+  flex-wrap: no-wrap;
   align-items: center;
+
+  width: max-content;
+  padding: 0.1rem 0.6rem;
+
   background-color: ${(props: any) =>
     props.theme.id === "light"
       ? "rgba(255, 255, 255, 0.3)"
       : "rgba(0, 0, 0, 0.3)"};
   border: 0.1rem solid ${(props: any) => props.theme.primary};
   border-radius: 3vh;
-  display: flex;
-  flex-wrap: no-wrap;
-  padding: 0;
-  width: max-content;
-  padding: 0.1rem 0.6rem;
 
   h6 {
     font-size: 0.563rem;
+  }
+
+  &:hover {
+    background-color: ${(props: any) => props.theme.highlight};
   }
 `;

@@ -4,12 +4,7 @@ import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
 import DefaultView from "../views/default/DefaultView";
 
-import {
-  Box,
-  EmptyBox,
-  FilterSection,
-  ViewSection,
-} from "../Results.styled";
+import { Box, EmptyBox, FilterSection, ViewSection } from "../Results.styled";
 
 import { postView } from "../../../types/postView";
 import ColumnView from "../views/column/ColumnView";
@@ -53,6 +48,7 @@ const ContentResults: React.FC<{
       <FilterSection>
         <TitleAndToggler
           title="Content"
+          isContentResultsPage
           postView={postView}
           setPostView={setPostView}
         />

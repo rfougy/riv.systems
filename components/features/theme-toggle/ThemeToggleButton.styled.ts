@@ -22,10 +22,8 @@ export const Circle = styled.div`
   border-radius: 50%;
   margin: 0.1rem;
 
-  height: ${({ forLinkInBioLayout }: { forLinkInBioLayout?: boolean }) =>
-    forLinkInBioLayout ? "1rem" : "0.75rem"};
-  width: ${({ forLinkInBioLayout }: { forLinkInBioLayout?: boolean }) =>
-    forLinkInBioLayout ? "1rem" : "0.75rem"};
+  height: 0.75rem;
+  width: 0.75rem;
 `;
 
 export const Title = styled.h6`

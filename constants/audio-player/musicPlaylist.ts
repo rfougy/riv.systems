@@ -1,4 +1,5 @@
 import { IAllPlaylists } from "../../interfaces/audio-player/IAllPlaylists";
+import { shuffleArr } from "../../utils/common/shuffleArr";
 import { electronicPlaylist } from "./electronicPlaylist";
 import { japaneseRockPlaylist } from "./japaneseRockPlaylist";
 import { rockPlaylist } from "./rockPlaylist";
@@ -15,5 +16,13 @@ export const musicPlaylist: IAllPlaylists = {
   japaneseRock: {
     title: "J-ROCK",
     playlist: japaneseRockPlaylist,
+  },
+  random: {
+    title: "RANDOM",
+    playlist: shuffleArr([
+      ...electronicPlaylist,
+      ...rockPlaylist,
+      ...japaneseRockPlaylist,
+    ]),
   },
 };

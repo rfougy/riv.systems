@@ -1,13 +1,11 @@
 import { Dispatch, SetStateAction } from "react";
 
 import NavMenu from "../../nav-menu/NavMenu";
-import { AudioControls } from "../../../features/audio-player/audio-controls/AudioControls";
 import ThemeToggleButton from "../../../features/theme-toggle/ThemeToggleButton";
 import NavLogo from "../../nav-logo/NavLogo";
 
 import { LogoAndButtonsBox, FeaturesBox } from "./DefaultLayout.styled";
 import { NavBox } from "../../Navbar.styled";
-import Playlist from "../../../features/audio-player/playlist/Playlist";
 import AudioPlayer from "../../../features/audio-player/AudioPlayer";
 
 const DefaultLayout: React.FC<{

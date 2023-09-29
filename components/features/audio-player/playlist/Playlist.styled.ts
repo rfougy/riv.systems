@@ -16,6 +16,10 @@ export const Box = styled.button`
   gap: 0.6rem;
   width: max-content;
   padding: 0.1rem 0.6rem;
+
+  @media (max-width: ${breakpoints.xs}) {
+    display: none;
+  }
 `;
 
 export const Title = styled.h6`
@@ -44,12 +48,13 @@ export const Dropdown = styled.ul`
   border-radius: 1rem;
 
   @media (max-width: ${breakpoints.xs}) {
+    display: none;
     gap: 1rem;
     top: 4.5rem;
   }
 `;
 
-export const PlaylistOption = styled.li`
+export const PlaylistOption = styled.button`
   all: unset;
   align-items: center;
   background-color: ${(props: any) =>
@@ -63,4 +68,8 @@ export const PlaylistOption = styled.li`
   padding: 0;
   width: max-content;
   padding: 0.1rem 0.6rem;
+
+  h6 {
+    font-size: 0.563rem;
+  }
 `;

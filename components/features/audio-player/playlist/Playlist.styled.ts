@@ -81,6 +81,9 @@ export const PlaylistOption = styled.button`
   }
 
   &:hover {
-    background-color: ${(props: any) => props.theme.highlight};
+    background-color: ${(props: any) =>
+      props.theme.id === "light"
+        ? "rgba(255, 255, 255, 0.75)"
+        : "rgba(0, 0, 0, 0.75)"};
   }
 `;

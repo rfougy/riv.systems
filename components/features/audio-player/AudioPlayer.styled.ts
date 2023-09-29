@@ -1,12 +1,8 @@
 import styled from "@emotion/styled";
-import { breakpoints } from "../../../styles/theme";
 
-export const List = styled.div`
+export const Box = styled.div`
   display: flex;
+  align-items: center;
   flex-wrap: no-wrap;
-  gap: 0.5rem;
-
-  @media (max-width: ${breakpoints.xs}) {
-    display: none;
-  }
+  gap: 0.75rem;
 `;

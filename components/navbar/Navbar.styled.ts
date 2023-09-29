@@ -23,6 +23,7 @@ export const NavBox = styled.nav`
       : "0.1rem solid rgba(255, 255, 255, 1)"};
 
   cursor: crosshair;
+
   &:hover button,
   a {
     cursor: cell;

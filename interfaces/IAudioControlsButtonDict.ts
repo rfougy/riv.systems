@@ -1,4 +1,4 @@
-export interface IAudioPlayerButtonDict {
+export interface IAudioControlsButtonDict {
   play: {
     icon: any;
     ariaLabel: string;

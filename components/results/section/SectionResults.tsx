@@ -8,20 +8,13 @@ import { capitalizeFirstChar } from "../../../utils/common/capitalizeFirstChar";
 
 import { sectionType } from "../../../types/sectionType";
 
-import {
-  Box,
-  EmptyBox,
-  FilterSection,
-  PageTitle,
-  TitleAndToggle,
-  ViewSection,
-} from "../Results.styled";
+import { Box, EmptyBox, FilterSection, ViewSection } from "../Results.styled";
 import { postView } from "../../../types/postView";
 import ColumnView from "../views/column/ColumnView";
-import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
 import useContentFiltering from "../../../hooks/useContentFiltering";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
+import TitleAndToggler from "../../shared/title-and-toggle/TitleAndToggler";
 
 const SectionResults: React.FC<{
   section: sectionType | string;
@@ -51,12 +44,11 @@ const SectionResults: React.FC<{
   return (
     <Box>
       <FilterSection>
-        <TitleAndToggle>
-          <div>
-            <PageTitle>{sectionAsTitle}</PageTitle>
-          </div>
-          <PostViewToggle setPostView={setPostView} postView={postView} />
-        </TitleAndToggle>
+        <TitleAndToggler
+          title={sectionAsTitle}
+          postView={postView}
+          setPostView={setPostView}
+        />
         <FilterMenu
           categories={categories}
           categoryFilters={categoryFilters}

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Howl } from "howler";
 
 import IconButton from "../../../shared/icon-button/IconButton";
 
-import { musicPlaylist } from "../../../../constants/musicPlaylist";
+import { electronicPlaylist } from "../../../../constants/audio-player/electronicPlaylist";
 import { audioControlsButtonDict } from "../../../../constants/dictionaries/audioControlsButtonDict";
 
 import { List } from "./AudioControls.styled";
@@ -17,10 +17,10 @@ export const AudioControls: React.FC = () => {
   const { play, pause, nextSkip, prevSkip } = audioControlsButtonDict;
 
   const firstSongIndex = 0;
-  const lastSongIndex = musicPlaylist.length - 1;
+  const lastSongIndex = electronicPlaylist.length - 1;
 
   function initializeHowler(songIndex: number): Howl {
-    const song = musicPlaylist[songIndex].src;
+    const song = electronicPlaylist[songIndex].src;
     const howler = new Howl({
       src: [song],
       html5: true,

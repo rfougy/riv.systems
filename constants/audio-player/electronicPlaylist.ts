@@ -1,7 +1,7 @@
-import { IMusicPlaylist } from "./../interfaces/IMusicPlaylist";
-import { shuffleArr } from "../utils/common/shuffleArr";
+import { ISong } from "../../interfaces/audio-player/ISong";
+import { shuffleArr } from "../../utils/common/shuffleArr";
 
-export const musicPlaylist: IMusicPlaylist[] = shuffleArr([
+export const electronicPlaylist: ISong[] = shuffleArr([
   {
     title: "Daze 22.00",
     artist: "Flume",

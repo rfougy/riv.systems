@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { Box, Title } from "./Playlist.styled";
 import ArrowIcon from "../../../icons/ArrowIcon";
-import { useState } from "react";
 
 const Playlist: React.FC = () => {
   const [dropdownOpened, setDropdownOpened] = useState<boolean>(false);

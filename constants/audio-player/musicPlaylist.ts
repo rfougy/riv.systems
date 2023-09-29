@@ -13,7 +13,7 @@ export const musicPlaylist: IAllPlaylists = {
     playlist: rockPlaylist,
   },
   japaneseRock: {
-    title: "JAPANESE ROCK",
+    title: "J-ROCK",
     playlist: japaneseRockPlaylist,
   },
 };

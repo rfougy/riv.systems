@@ -8,19 +8,16 @@ import {
   Box,
   EmptyBox,
   FilterSection,
-  PageTitle,
-  TitleAndToggle,
   ViewSection,
 } from "../Results.styled";
 
 import { postView } from "../../../types/postView";
 import ColumnView from "../views/column/ColumnView";
-import PostViewToggle from "../../features/post-view-toggle/PostViewToggle";
 
 import useContentFiltering from "../../../hooks/useContentFiltering";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
-import { breakpoints } from "../../../styles/theme";
+import TitleAndToggler from "../../shared/title-and-toggle/TitleAndToggler";
 
 const ContentResults: React.FC<{
   content: any;
@@ -29,9 +26,6 @@ const ContentResults: React.FC<{
   const [postView, setPostView] = useState<postView>("default");
 
   const isVerticalView = useViewportWidthEventListener(960);
-  const renderPostViewOptions = !useViewportWidthEventListener(
-    breakpoints.useViewportWidth.xs
-  );
 
   const {
     filteredContent,
@@ -57,14 +51,11 @@ const ContentResults: React.FC<{
   return (
     <Box>
       <FilterSection>
-        <TitleAndToggle>
-          <div>
-            <PageTitle>Content</PageTitle>
-          </div>
-          {renderPostViewOptions && (
-            <PostViewToggle setPostView={setPostView} postView={postView} />
-          )}
-        </TitleAndToggle>
+        <TitleAndToggler
+          title="Content"
+          postView={postView}
+          setPostView={setPostView}
+        />
         <FilterMenu
           sections={sections}
           categories={categories}

@@ -15,7 +15,10 @@ import HighlightToggler from "../../features/text-highlight/HighlightToggler";
 
 const PostPage: React.FC<{ content: any }> = ({ content }) => {
   const { frontmatter, postContent }: any = content;
-  const { title, coverImage, placeholderImage }: IPostFrontMatter = frontmatter;
+  const { title, coverImage, placeholderImage, section }: IPostFrontMatter =
+    frontmatter;
+
+  const isWorksPage = section === "works";
 
   return content ? (
     <TextHighlightProvider>
@@ -64,7 +67,7 @@ const PostPage: React.FC<{ content: any }> = ({ content }) => {
           </Markdown>
         </Content>
       </Box>
-      <HighlightToggler />
+      {isWorksPage && <HighlightToggler />}
     </TextHighlightProvider>
   ) : (
     <div>Error: No content available...</div>

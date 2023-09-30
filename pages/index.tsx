@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           <Description>
             I created this website to share
             <br />
-            my work, projects and experiences.
+            my works, projects and experiences.
           </Description>
           <Button href={`/content`}>EXPLORE SYSTEMS</Button>
         </Box>

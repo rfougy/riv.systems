@@ -19,7 +19,7 @@ export const Button = styled.button`
   border: 0.1rem solid ${lightTheme.primary};
   border-radius: 3rem;
 
-  background-color: yellow;
+  background-color: ${lightTheme.yellow};
 `;
 
 export const Toggle = styled.div`

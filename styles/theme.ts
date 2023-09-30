@@ -7,6 +7,7 @@ export const lightTheme: ITheme = {
   highlight: "#e0e0e0",
   idle: "#ffffff",
   red: "#DD4F3F",
+  yellow: "#E4D00A",
 };
 
 export const darkTheme: ITheme = {
@@ -16,6 +17,7 @@ export const darkTheme: ITheme = {
   highlight: "#2F2F2F",
   idle: "#1A1A1A",
   red: "#DD4F3F",
+  yellow: "#E4D00A",
 };
 
 export const breakpoints = {

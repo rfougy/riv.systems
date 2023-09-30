@@ -6,7 +6,7 @@ function getBorderAndTextStyles(props: any): string {
     ? props.theme.primary
     : props.highlighted
     ? props.theme.primary
-    : props.theme.secondary;
+    : props.theme.primary;
 }
 
 export const Button = styled.button`

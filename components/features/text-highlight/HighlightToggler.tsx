@@ -1,5 +1,5 @@
 import { useTextHighlightContext } from "../../../context/TextHighlightContext";
-import { Toggle, Circle, Title, Box } from "./HighlightToggler.styled";
+import { Toggle, Circle, Title, Button } from "./HighlightToggler.styled";
 
 const HighlightToggler: React.FC = () => {
   const { highlighted, setHighlighted } = useTextHighlightContext();
@@ -11,16 +11,12 @@ const HighlightToggler: React.FC = () => {
   const title = highlighted ? "DISABLE HIGHLIGHTS" : "HIGHLIGHT KEY TEXT";
 
   return (
-    <Box>
+    <Button onClick={(): void => handleToggle()}>
       <Title>{title}</Title>
-      <Toggle
-        aria-label="Color Theme Toggle"
-        highlighted={highlighted}
-        onClick={(): void => handleToggle()}
-      >
+      <Toggle aria-label="Color Theme Toggle" highlighted={highlighted}>
         <Circle />
       </Toggle>
-    </Box>
+    </Button>
   );
 };
 

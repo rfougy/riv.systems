@@ -1,7 +1,9 @@
 import styled from "@emotion/styled";
 import { lightTheme } from "../../../styles/theme";
 
-export const Box = styled.div`
+export const Button = styled.button`
+  all: unset;
+
   position: sticky;
   position: -webkit-sticky;
   bottom: 2rem;
@@ -12,7 +14,7 @@ export const Box = styled.div`
   align-items: center;
   gap: 1rem;
 
-  padding: 0.5rem;
+  padding: 0.25rem;
   margin-top: 2rem;
   border: 0.1rem solid ${lightTheme.primary};
   border-radius: 3rem;
@@ -20,7 +22,7 @@ export const Box = styled.div`
   background-color: yellow;
 `;
 
-export const Toggle = styled.button`
+export const Toggle = styled.div`
   display: flex;
 
   flex-direction: ${({ highlighted }: { highlighted: boolean }) =>

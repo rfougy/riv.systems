@@ -16,7 +16,7 @@ export const Button = styled.button`
   position: -webkit-sticky;
   bottom: 2rem;
   right: 100vw;
-  z-index: 10;
+  z-index: 1;
 
   display: flex;
   flex-wrap: no-wrap;

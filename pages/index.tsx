@@ -39,6 +39,7 @@ const Home: NextPage = () => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
+
   return {
     props: {
       metaTagInputs: {

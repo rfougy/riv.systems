@@ -16,6 +16,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/roboto-mono": "^4.5.8",
+    "@mailerlite/mailerlite-nodejs": "^1.1.0",
     "@next/bundle-analyzer": "^13.2.3",
     "@plaiceholder/next": "^2.5.0",
     "fs": "^0.0.1-security",

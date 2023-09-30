@@ -11,8 +11,10 @@ const HighlightToggler: React.FC = () => {
   const title = highlighted ? "DISABLE HIGHLIGHTS" : "HIGHLIGHT KEY TEXT";
 
   return (
-    <Button onClick={(): void => handleToggle()}>
-      <Title>{title}</Title>
+    // @ts-ignore
+    <Button highlighted={highlighted} onClick={(): void => handleToggle()}>
+      {/* @ts-ignore */}
+      <Title highlighted={highlighted}>{title}</Title>
       <Toggle aria-label="Color Theme Toggle" highlighted={highlighted}>
         <Circle />
       </Toggle>

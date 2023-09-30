@@ -17,7 +17,7 @@ export const darkTheme: ITheme = {
   highlight: "#2F2F2F",
   idle: "#1A1A1A",
   red: "#DD4F3F",
-  yellow: "rgba(228, 208, 10, 0.5)",
+  yellow: "rgba(228, 208, 10, 0.675)",
 };
 
 export const breakpoints = {

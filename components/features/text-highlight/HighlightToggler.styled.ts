@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { breakpoints, lightTheme } from "../../../styles/theme";
+import { breakpoints } from "../../../styles/theme";
 
 function getBorderAndTextStyles(props: any): string {
   return props.theme.id === "light"
@@ -55,7 +55,11 @@ export const Toggle = styled.div`
   width: 2.5rem;
 
   background-color: ${(props: any) =>
-    props.highlighted ? props.theme.yellow : props.theme.secondary};
+    props.highlighted
+      ? props.theme.yellow
+      : props.theme.id === "light"
+      ? "rgba(0, 0, 0, 0.25)"
+      : "rgba(0, 0, 0, 0.25)"};
   border: 0.1rem solid ${(props: any) => getBorderAndTextStyles(props)};
   border-radius: 3rem;
 `;

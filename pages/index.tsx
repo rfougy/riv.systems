@@ -15,7 +15,9 @@ const Home: NextPage = () => {
     <>
       <DisplayDotsCoordsProvider>
         <Box>
-          <Description>Hi, my name is Riviere, welcome to:</Description>
+          <Description isIntroText>
+            Hi, my name is Riviere, welcome to:
+          </Description>
           <Margin>
             <DisplayDotsAnime
               text={"RIV.SYSTEMS"}
@@ -23,8 +25,9 @@ const Home: NextPage = () => {
             />
           </Margin>
           <Description>
-            I created this website to document <br />
-            my projects, experiences and thoughts.
+            I created this website to share
+            <br />
+            my works, projects and experiences.
           </Description>
           <Button href={`/content`}>EXPLORE SYSTEMS</Button>
         </Box>

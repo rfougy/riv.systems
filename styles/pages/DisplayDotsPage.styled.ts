@@ -13,6 +13,11 @@ export const Box = styled.div`
 
 export const Description = styled.p`
   text-align: center;
+  ${({ isIntroText }: { isIntroText?: boolean }) =>
+    isIntroText &&
+    `
+    margin-top: 0;
+    `}
 `;
 
 export const Margin = styled.div`

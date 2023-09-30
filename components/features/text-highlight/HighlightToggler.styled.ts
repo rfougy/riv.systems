@@ -36,7 +36,7 @@ export const Toggle = styled.div`
 
   background-color: ${lightTheme.secondary};
   border: 0.1rem solid ${lightTheme.primary};
-  border-radius: 3vh;
+  border-radius: 3rem;
 `;
 
 export const Circle = styled.div`

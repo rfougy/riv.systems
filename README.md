@@ -10,6 +10,7 @@ RIV.SYSTEMS is a Portfolio / Blog Hybrid Progressive Web App, built with scalabi
 - Search
 - Filtering, Pagination, Views
 - Music Player
+- Text Highlighter
 - Progressive Web App Capabilities
 - Dynamic Open Graph and Meta Tags
 

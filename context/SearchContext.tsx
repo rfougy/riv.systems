@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import React, { createContext, useState, useContext, useEffect } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 
 export const SearchContext = createContext<any | null>(null);
 export const useSearchContext = () => useContext(SearchContext);

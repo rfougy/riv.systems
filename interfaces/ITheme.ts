@@ -5,4 +5,5 @@ export interface ITheme {
   highlight: string;
   idle: string;
   red: string;
+  yellow: string;
 }

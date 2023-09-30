@@ -13,13 +13,13 @@ worksTools:
   ["React", "Redux", "PostgreSQL", "Express", "Solidity", "Web3", "KaboomJS"]
 ---
 
-"Hodl the Throdl!" is a game where players collect coins and turn them into cryptocurrency via a local blockchain. After logging in, players navigate levels to gather coins, avoid obstacles and enemies, and earn credit for the coins collected. Players can convert coins to HODL coins, disburse funds to their MetaMask account, and buy characters for in-game use.
+"Hodl the Throdl!" is <mark>a game where players collect coins and turn them into cryptocurrency via a local blockchain</mark>. After logging in, players navigate levels to gather coins, avoid obstacles and enemies, and earn credit for the coins collected. Players can <mark>convert coins to HODL coins, disburse funds to their MetaMask account, and buy characters for in-game use</mark>.
 
 <br/>
 
 ## Features
 
-For this project, I assumed the responsibility of spearheading the development of the game's cryptocurrency and integrating the app with Web3. This undertaking was indeed challenging, as it required me to navigate a steep learning curve and accomplish it within a few weeks. Nevertheless, I found the challenge deeply engrossing and immersive, as it compelled me to achieve mastery over the workings of this emerging technology.
+For this project, I assumed the responsibility of <mark>spearheading the development of the game's cryptocurrency and integrating the app with Web3</mark>. This undertaking was indeed challenging, as it required me to navigate a steep learning curve and accomplish it <mark>within a 3 weeks</mark>. Nevertheless, I found the challenge deeply engrossing and immersive, as it compelled me to achieve <mark>mastery over the workings of this emerging technology</mark>.
 
 A few of the core deliverables I contributed through this endeavor included:
 
@@ -32,7 +32,7 @@ A few of the core deliverables I contributed through this endeavor included:
 
 <br/>
 
-In addition to leading this effort,I had a significant role in enhancing the user experience of the application by sourcing all videogame assets, developing character animations and designing the webapp’s UI.
+In addition to leading this effort,I had a significant role in enhancing the user experience of the application by <mark>sourcing all videogame assets, developing character animations and designing the webapp’s UI</mark>.
 
 <br/>
 <br/>

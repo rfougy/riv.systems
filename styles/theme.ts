@@ -24,6 +24,7 @@ export const breakpoints = {
   xxs: "28.75em", // 460px
   xs: "40em", // 640px
   sm: "60em", // 960px
+  md: "80rem", // 1280px
   components: {
     slideshow: {
       xs: "28.75em", // 460px

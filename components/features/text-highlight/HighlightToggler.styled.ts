@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { lightTheme } from "../../../styles/theme";
+import { breakpoints, lightTheme } from "../../../styles/theme";
 
 function getBorderAndTextStyles(props: any): string {
   return props.theme.id === "light"
@@ -15,12 +15,13 @@ export const Button = styled.button`
   position: sticky;
   position: -webkit-sticky;
   bottom: 2rem;
+  right: 100vw;
   z-index: 10;
 
   display: flex;
   flex-wrap: no-wrap;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 
   padding: 0.25rem;
   margin-top: 2rem;
@@ -35,6 +36,10 @@ export const Button = styled.button`
       : props.theme.yellow};
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(2.5px);
+
+  @media (max-width: ${breakpoints.md}) {
+    right: 0;
+  }
 `;
 
 export const Toggle = styled.div`
@@ -68,4 +73,5 @@ export const Title = styled.h6`
   color: ${(props: any) => getBorderAndTextStyles(props)};
   background-color: none;
   margin: 0;
+  padding: 0 0 0 0.5rem;
 `;

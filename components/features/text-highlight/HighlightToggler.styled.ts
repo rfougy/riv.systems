@@ -54,8 +54,8 @@ export const Toggle = styled.div`
   padding: 0;
   width: 2.5rem;
 
-  background-color: ${({ highlighted }: { highlighted: boolean }) =>
-    highlighted ? lightTheme.yellow : lightTheme.secondary};
+  background-color: ${(props: any) =>
+    props.highlighted ? props.theme.yellow : props.theme.secondary};
   border: 0.1rem solid ${(props: any) => getBorderAndTextStyles(props)};
   border-radius: 3rem;
 `;
@@ -65,7 +65,7 @@ export const Circle = styled.div`
   width: 0.75rem;
   margin: 0.1rem;
 
-  background: ${lightTheme.primary};
+  background: ${(props: any) => props.theme.primary};
   border-radius: 50%;
 `;
 

@@ -8,7 +8,7 @@ const HighlightToggler: React.FC = () => {
     setHighlighted((prev: boolean) => !prev);
   }
 
-  const title = highlighted ? "DOWNPLAY" : "HIGHLIGHT";
+  const title = highlighted ? "DOWNPLAY TEXT" : "HIGHLIGHT TEXT";
 
   return (
     // @ts-ignore

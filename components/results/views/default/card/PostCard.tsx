@@ -40,8 +40,8 @@ const PostCard: React.FC<{
 
   return (
     <Link href={path}>
-      <Category>{capitalizeFirstChar(category)}</Category>
       <Box>
+        <Category>{capitalizeFirstChar(category)}</Category>
         <Image
           src={coverImage}
           alt={`Cover image for post titled '${title}'`}

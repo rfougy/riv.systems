@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 export const Box = styled.div`
   overflow: hidden;
   text-decoration: none;
+  position: relative;
 
   display: flex;
   flex-direction: column;

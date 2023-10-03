@@ -39,7 +39,22 @@ export const Text = styled.div`
   background: ${(props: any) => props.theme.secondary};
 `;
 
+export const MetadataContainer = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+`;
+
 export const Metadata = styled.div``;
+
+export const Duration = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  align-items: end;
+
+  background-color: ${(props: any) => props.theme.highlight};
+`;
 
 /**
  * @description webkit portion allows for ellipsis after reaching two lines of text

@@ -8,7 +8,17 @@ import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";
 
 import ArrowIcon from "../../../../icons/ArrowIcon";
 
-import { Box, Info, InfoBox, Metadata, Text, Title } from "./PostCard.styled";
+import {
+  Box,
+  Duration,
+  Info,
+  InfoBox,
+  Metadata,
+  MetadataContainer,
+  Text,
+  Title,
+} from "./PostCard.styled";
+import { dateToNumericStr } from "../../../../../utils/common/dateToNumericStr";
 
 const PostCard: React.FC<{
   path: string;
@@ -21,8 +31,10 @@ const PostCard: React.FC<{
     section,
     coverImage,
     placeholderImage,
+    worksDuration,
   }: IPostFrontMatter = frontmatter;
-  const dateAsStr: string = dateToStr(datePublished);
+  const dateAsStr: string = dateToNumericStr(datePublished);
+  const formattedDuration = worksDuration && worksDuration.join(" - ");
 
   return (
     <Link href={path}>
@@ -41,16 +53,24 @@ const PostCard: React.FC<{
         />
         <Text>
           <Title>{title}</Title>
-          <Metadata>
-            <InfoBox>
-              <Info>{capitalizeFirstChar(section)}</Info>
-              <Info>
-                <ArrowIcon aria-label="Arrow Icon" right />
-              </Info>
-              <Info>{capitalizeFirstChar(category)}</Info>
-            </InfoBox>
-            <Info>{dateAsStr}</Info>
-          </Metadata>
+          <MetadataContainer>
+            <Metadata>
+              <InfoBox>
+                <Info>{capitalizeFirstChar(section)}</Info>
+                <Info>
+                  <ArrowIcon aria-label="Arrow Icon" right />
+                </Info>
+                <Info>{capitalizeFirstChar(category)}</Info>
+              </InfoBox>
+              <Info>{dateAsStr}</Info>
+            </Metadata>
+            {worksDuration && (
+              <Duration>
+                <Info>Duration:</Info>
+                <Info>{formattedDuration}</Info>
+              </Duration>
+            )}
+          </MetadataContainer>
         </Text>
       </Box>
     </Link>

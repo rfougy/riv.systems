@@ -71,7 +71,7 @@ export const Info = styled.div`
   cursor: cell !important;
 `;
 
-export const Category = styled.div`
+export const Category = styled.span`
   position: absolute;
   display: flex;
 

@@ -38,6 +38,13 @@ export const Box = styled.div`
 export const Text = styled.div`
   padding: 1rem;
   background: ${(props: any) => props.theme.secondary};
+
+  @media (max-width: ${breakpoints.xs}) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
 `;
 
 export const MetadataContainer = styled.div`
@@ -49,6 +56,10 @@ export const MetadataContainer = styled.div`
 export const Metadata = styled.div`
   padding: ${({ hasWorksDuration }: { hasWorksDuration?: boolean }) =>
     hasWorksDuration ? "0" : "1rem 0 0 0"};
+
+  @media (max-width: ${breakpoints.xs}) {
+    padding: 0;
+  }
 `;
 
 /**
@@ -65,10 +76,19 @@ export const Title = styled.h2`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+
+  @media (max-width: ${breakpoints.xs}) {
+    height: auto;
+    margin: 0;
+  }
 `;
 
 export const Info = styled.div`
   cursor: cell !important;
+
+  @media (max-width: ${breakpoints.xs}) {
+    min-width: max-content;
+  }
 `;
 
 export const Category = styled.span`

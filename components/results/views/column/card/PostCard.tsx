@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { capitalizeFirstChar } from "../../../../../utils/common/capitalizeFirstChar";
 import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";
 
-import ArrowIcon from "../../../../icons/ArrowIcon";
+import { Box, Category, Info, Metadata, Text, Title } from "./PostCard.styled";
 
-import { Box, Info, InfoBox, Metadata, Text, Title } from "./PostCard.styled";
+import { capitalizeFirstChar } from "../../../../../utils/common/capitalizeFirstChar";
+import { formatAndStylizeDate } from "../../../../../utils/common/formatAndStylizeDate";
 
 const PostCard: React.FC<{
   path: string;
@@ -16,16 +16,20 @@ const PostCard: React.FC<{
     title,
     datePublished,
     category,
-    section,
     coverImage,
     placeholderImage,
+    worksDuration,
   }: IPostFrontMatter = frontmatter;
 
-  const dateAsStr: string = datePublished.replace(/-/g, "/");
+  const stylizedDate: string = formatAndStylizeDate(datePublished);
+
+  const formattedDuration = worksDuration && worksDuration.join(" - ");
+  const hasWorksDuration = worksDuration ? true : false;
 
   return (
     <Link href={path}>
       <Box>
+        <Category>{capitalizeFirstChar(category)}</Category>
         <Image
           src={coverImage}
           alt={`Cover image for post titled '${title}'`}
@@ -41,14 +45,8 @@ const PostCard: React.FC<{
         <Text>
           <Title>{title}</Title>
           <Metadata>
-            <InfoBox>
-              <Info>{capitalizeFirstChar(section)}</Info>
-              <Info>
-                <ArrowIcon aria-label="Arrow Icon" right />
-              </Info>
-              <Info>{capitalizeFirstChar(category)}</Info>
-            </InfoBox>
-            <Info>{dateAsStr}</Info>
+            {hasWorksDuration && <Info>Worked: {formattedDuration}</Info>}
+            <Info>Posted: {stylizedDate}</Info>
           </Metadata>
         </Text>
       </Box>

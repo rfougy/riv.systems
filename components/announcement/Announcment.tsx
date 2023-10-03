@@ -7,7 +7,7 @@ import closeIconLight from "../../public/assets/close-icon-light.svg";
 import { ITheme } from "../../interfaces/ITheme";
 import { IAnnouncement } from "../../interfaces/IAnnouncement";
 
-import { dateToNumericStr } from "../../utils/common/dateToNumericStr";
+import { formatAndStylizeDate } from "../../utils/common/formatAndStylizeDate";
 
 import { CloseIconBox, Box, StyledLink, Text } from "./Announcement.styled";
 
@@ -25,7 +25,7 @@ const Announcement: React.FC<{
   theme: ITheme;
 }> = ({ announcement, setAnnouncementIsActive, theme }) => {
   const closeIcon = closeIconTheme[theme.id];
-  const convertedDate: string = dateToNumericStr(announcement.dateCreated);
+  const convertedDate: string = formatAndStylizeDate(announcement.dateCreated);
 
   function handleClose(): void {
     sessionStorage.setItem("announcement", JSON.stringify(announcement));

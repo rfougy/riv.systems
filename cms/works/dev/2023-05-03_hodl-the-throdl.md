@@ -8,7 +8,7 @@ coverImage: https://user-images.githubusercontent.com/77861258/236042787-557a5bb
 link: https://github.com/Hodl-The-Throdl-Devs/platformer
 worksTeamSize: 4
 worksRoles: ["Fullstack Engineer", "UX Designer"]
-worksDuration: ["December 2021"]
+worksDuration: ["12.21"]
 worksTools:
   ["React", "Redux", "PostgreSQL", "Express", "Solidity", "Web3", "KaboomJS"]
 ---

@@ -1,9 +1,10 @@
-import { breakpoints } from "../../../../../styles/theme";
+import { breakpoints, lightTheme } from "../../../../../styles/theme";
 import styled from "@emotion/styled";
 
 export const Box = styled.div`
   overflow: hidden;
   text-decoration: none;
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -55,15 +56,22 @@ export const Text = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  padding: 1rem;
 
+  padding: 1rem;
   background: ${(props: any) => props.theme.secondary};
+`;
+
+export const MetadataContainer = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 `;
 
 export const Metadata = styled.div`
   display: flex;
   flex-direction: column;
   align-items: end;
+  justify-content: center;
 `;
 
 /**
@@ -82,14 +90,23 @@ export const Title = styled.h2`
   overflow: hidden;
 `;
 
-export const InfoBox = styled.div`
-  display: flex;
-  margin: 0;
+export const Info = styled.div`
+  min-width: max-content;
+  cursor: cell !important;
 `;
 
-export const Info = styled.div`
+export const Category = styled.span`
+  position: absolute;
   display: flex;
-  align-items: center;
-  margin: 0 0.5rem 0 0;
+
+  margin: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+
   cursor: cell !important;
+  color: ${lightTheme.secondary};
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(2.5px);
 `;

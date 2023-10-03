@@ -51,23 +51,6 @@ export const Metadata = styled.div`
     hasWorksDuration ? "0" : "1rem 0 0 0"};
 `;
 
-export const Duration = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: no-wrap;
-  align-items: end;
-
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-
-  background-color: ${(props: any) => props.theme.highlight};
-
-  div {
-    margin: 0;
-    text-align: right;
-  }
-`;
-
 /**
  * @description webkit portion allows for ellipsis after reaching two lines of text
  * @see https://chipcullen.com/truncating-type-at-more-than-one-line/
@@ -82,20 +65,6 @@ export const Title = styled.h2`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-`;
-
-export const InfoBox = styled.div`
-  position: absolute;
-  margin: 0.5rem;
-
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
-
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(2.5px);
-
-  display: flex;
 `;
 
 export const Info = styled.div`

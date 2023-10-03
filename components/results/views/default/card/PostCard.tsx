@@ -5,14 +5,10 @@ import { capitalizeFirstChar } from "../../../../../utils/common/capitalizeFirst
 
 import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";
 
-import ArrowIcon from "../../../../icons/ArrowIcon";
-
 import {
   Box,
   Category,
-  Duration,
   Info,
-  InfoBox,
   Metadata,
   MetadataContainer,
   Text,
@@ -28,7 +24,6 @@ const PostCard: React.FC<{
     title,
     datePublished,
     category,
-    section,
     coverImage,
     placeholderImage,
     worksDuration,

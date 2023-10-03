@@ -9,6 +9,7 @@ import ArrowIcon from "../../../../icons/ArrowIcon";
 
 import {
   Box,
+  Category,
   Duration,
   Info,
   InfoBox,
@@ -33,10 +34,13 @@ const PostCard: React.FC<{
     worksDuration,
   }: IPostFrontMatter = frontmatter;
   const dateAsStr: string = dateToNumericStr(datePublished);
+
   const formattedDuration = worksDuration && worksDuration.join(" - ");
+  const hasWorksDuration = worksDuration ? true : false;
 
   return (
     <Link href={path}>
+      <Category>{capitalizeFirstChar(category)}</Category>
       <Box>
         <Image
           src={coverImage}
@@ -53,22 +57,10 @@ const PostCard: React.FC<{
         <Text>
           <Title>{title}</Title>
           <MetadataContainer>
-            <Metadata>
-              <InfoBox>
-                <Info>{capitalizeFirstChar(section)}</Info>
-                <Info>
-                  <ArrowIcon aria-label="Arrow Icon" right />
-                </Info>
-                <Info>{capitalizeFirstChar(category)}</Info>
-              </InfoBox>
-              <Info>{dateAsStr}</Info>
+            <Metadata hasWorksDuration={hasWorksDuration}>
+              {hasWorksDuration && <Info>Duration: {formattedDuration}</Info>}
+              <Info>Published: {dateAsStr}</Info>
             </Metadata>
-            {worksDuration && (
-              <Duration>
-                <Info>Duration:</Info>
-                <Info>{formattedDuration}</Info>
-              </Duration>
-            )}
           </MetadataContainer>
         </Text>
       </Box>

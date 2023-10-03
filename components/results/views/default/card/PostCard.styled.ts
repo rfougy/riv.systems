@@ -1,4 +1,4 @@
-import { breakpoints } from "../../../../../styles/theme";
+import { breakpoints, lightTheme } from "../../../../../styles/theme";
 import styled from "@emotion/styled";
 
 export const Box = styled.div`
@@ -45,7 +45,10 @@ export const MetadataContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const Metadata = styled.div``;
+export const Metadata = styled.div`
+  padding: ${({ hasWorksDuration }: { hasWorksDuration?: boolean }) =>
+    hasWorksDuration ? "0" : "1rem 0 0 0"};
+`;
 
 export const Duration = styled.div`
   display: flex;
@@ -53,7 +56,15 @@ export const Duration = styled.div`
   flex-wrap: no-wrap;
   align-items: end;
 
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+
   background-color: ${(props: any) => props.theme.highlight};
+
+  div {
+    margin: 0;
+    text-align: right;
+  }
 `;
 
 /**
@@ -73,13 +84,35 @@ export const Title = styled.h2`
 `;
 
 export const InfoBox = styled.div`
+  position: absolute;
+  margin: 0.5rem;
+
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(2.5px);
+
   display: flex;
-  margin: 0;
 `;
 
 export const Info = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 0 0.5rem 0 0;
   cursor: cell !important;
+`;
+
+export const Category = styled.div`
+  position: absolute;
+  display: flex;
+
+  margin: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+
+  cursor: cell !important;
+  color: ${lightTheme.secondary};
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(2.5px);
 `;

@@ -28,7 +28,7 @@ const PostCard: React.FC<{
     placeholderImage,
     worksDuration,
   }: IPostFrontMatter = frontmatter;
-  const dateAsStr: string = formatAndStylizeDate(datePublished);
+  const stylizedDate: string = formatAndStylizeDate(datePublished);
 
   const formattedDuration = worksDuration && worksDuration.join(" - ");
   const hasWorksDuration = worksDuration ? true : false;
@@ -54,7 +54,7 @@ const PostCard: React.FC<{
           <MetadataContainer>
             <Metadata hasWorksDuration={hasWorksDuration}>
               {hasWorksDuration && <Info>Span: {formattedDuration}</Info>}
-              <Info>Posted: {dateAsStr}</Info>
+              <Info>Posted: {stylizedDate}</Info>
             </Metadata>
           </MetadataContainer>
         </Text>

@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { capitalizeFirstChar } from "../../../../../utils/common/capitalizeFirstChar";
-
 import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";
 
 import {
@@ -14,6 +12,8 @@ import {
   Text,
   Title,
 } from "./PostCard.styled";
+
+import { capitalizeFirstChar } from "../../../../../utils/common/capitalizeFirstChar";
 import { formatAndStylizeDate } from "../../../../../utils/common/formatAndStylizeDate";
 
 const PostCard: React.FC<{
@@ -53,7 +53,7 @@ const PostCard: React.FC<{
           <Title>{title}</Title>
           <MetadataContainer>
             <Metadata hasWorksDuration={hasWorksDuration}>
-              {hasWorksDuration && <Info>Span: {formattedDuration}</Info>}
+              {hasWorksDuration && <Info>Worked: {formattedDuration}</Info>}
               <Info>Posted: {stylizedDate}</Info>
             </Metadata>
           </MetadataContainer>

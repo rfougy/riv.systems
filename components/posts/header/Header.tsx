@@ -17,9 +17,9 @@ import LinkButton from "../link-button/LinkButton";
 import WorksGrid from "../works-grid/WorksGrid";
 
 import { capitalizeFirstChar } from "../../../utils/common/capitalizeFirstChar";
-import { dateToStr } from "../../../utils/common/dateToStr";
 
 import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
+import { dateToNumericStr } from "../../../utils/common/dateToNumericStr";
 
 const Header: React.FC<{
   frontmatter: IPostFrontMatter;
@@ -39,7 +39,7 @@ const Header: React.FC<{
     section,
   } = frontmatter;
 
-  const dateAsStr: string = dateToStr(datePublished);
+  const dateAsStr: string = dateToNumericStr(datePublished);
 
   useEffect(() => setIsWorksPage(section === "works"), [section]);
 

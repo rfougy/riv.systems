@@ -7,7 +7,7 @@ excerpt: The one and only Archive Fashion editorial shot in Boston's own Chinato
 coverImage: https://user-images.githubusercontent.com/77861258/208268870-cb48a2a4-b28d-49ac-a6ba-8d26b1dabe9b.png
 worksTeamSize: 3
 worksRoles: ["Stylist", "Writer"]
-worksDuration: ["09.2019"]
+worksDuration: ["09.19"]
 worksTools: ["N/A"]
 ---
 

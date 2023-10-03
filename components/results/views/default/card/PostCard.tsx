@@ -18,7 +18,7 @@ import {
   Text,
   Title,
 } from "./PostCard.styled";
-import { dateToNumericStr } from "../../../../../utils/common/dateToNumericStr";
+import { formatAndStylizeDate } from "../../../../../utils/common/formatAndStylizeDate";
 
 const PostCard: React.FC<{
   path: string;
@@ -33,7 +33,7 @@ const PostCard: React.FC<{
     placeholderImage,
     worksDuration,
   }: IPostFrontMatter = frontmatter;
-  const dateAsStr: string = dateToNumericStr(datePublished);
+  const dateAsStr: string = formatAndStylizeDate(datePublished);
 
   const formattedDuration = worksDuration && worksDuration.join(" - ");
   const hasWorksDuration = worksDuration ? true : false;
@@ -58,8 +58,8 @@ const PostCard: React.FC<{
           <Title>{title}</Title>
           <MetadataContainer>
             <Metadata hasWorksDuration={hasWorksDuration}>
-              {hasWorksDuration && <Info>Duration: {formattedDuration}</Info>}
-              <Info>Published: {dateAsStr}</Info>
+              {hasWorksDuration && <Info>Span: {formattedDuration}</Info>}
+              <Info>Posted: {dateAsStr}</Info>
             </Metadata>
           </MetadataContainer>
         </Text>

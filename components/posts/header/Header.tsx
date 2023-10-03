@@ -19,7 +19,7 @@ import WorksGrid from "../works-grid/WorksGrid";
 import { capitalizeFirstChar } from "../../../utils/common/capitalizeFirstChar";
 
 import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
-import { dateToNumericStr } from "../../../utils/common/dateToNumericStr";
+import { formatAndStylizeDate } from "../../../utils/common/formatAndStylizeDate";
 
 const Header: React.FC<{
   frontmatter: IPostFrontMatter;
@@ -39,7 +39,7 @@ const Header: React.FC<{
     section,
   } = frontmatter;
 
-  const dateAsStr: string = dateToNumericStr(datePublished);
+  const dateAsStr: string = formatAndStylizeDate(datePublished);
 
   useEffect(() => setIsWorksPage(section === "works"), [section]);
 

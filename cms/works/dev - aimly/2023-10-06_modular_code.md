@@ -48,14 +48,38 @@ As soon I was onboarded into the engineering team in the fall of 2022, my first 
 This informed my decision to implement a simple yet dynamic approach where the steps involved in the Event Creation were conditionally rendered based on the step the user was currently in:
 
 <code>
-const DynamicFormStep: React.FC<IFormStepProps> = (componentProps) => {
-  const { formStep } = componentProps;
-
-const formStepComponent = getFormStepDict({
-...componentProps,
-})[formStep].component;
-
-return formStepComponent;
+export const getFormStepDict = (componentProps?: IFormStepProps) => {
+  return {
+    1: {
+      step: 1,
+      title: "fundraiserType",
+      formFields: "fundraiserType",
+      component:
+        componentProps &&
+        FundraiserType({ ...(componentProps as IFormStepProps) }),
+    },
+    2: {
+      step: 2,
+      title: "enterEventCode",
+      formFields: undefined,
+      component:
+        componentProps &&
+        EnterEventCode({ ...(componentProps as IFormStepProps) }),
+    },
+		// ...
+    6: {
+      step: 6,
+      title: "contactNameAndNumber",
+      formFields: ["firstName", "lastName", "phone"],
+      component:
+        componentProps &&
+        ContactNameAndNumber({
+          ...(componentProps as IFormStepProps),
+        }),
+    },
+    // etc...
+  };
+};
 </code>
 
 Note: At this time I didn’t take into consideration of how this particular feature could scale over time. Upon revisiting the evolution of this feature, I realize that I should have probed both the project manager and UX designer to gauge future possibilities and edge cases. Regardless, I think that the feature matured fairly well, as we will see later in this article.

@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import hljs from "highlight.js";
+import { Box } from "./CodeSnippet.styled";
 
 const CodeSnippet: React.FC<{ children: any }> = ({ children }) => {
   useEffect(() => {
@@ -8,9 +9,11 @@ const CodeSnippet: React.FC<{ children: any }> = ({ children }) => {
   }, []);
 
   return (
-    <pre>
-      <code>{`${children}`}</code>
-    </pre>
+    <Box>
+      <pre>
+        <code>{`${children}`}</code>
+      </pre>
+    </Box>
   );
 };
 

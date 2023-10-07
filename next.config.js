@@ -15,7 +15,11 @@ const config = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["i.pinimg.com", "user-images.githubusercontent.com"],
+    domains: [
+      "i.pinimg.com",
+      "user-images.githubusercontent.com",
+      "github.com",
+    ],
   },
   // @see https://nextjs.org/docs/advanced-features/compiler#remove-console
   compiler: {

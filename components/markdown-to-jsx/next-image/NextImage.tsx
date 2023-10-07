@@ -4,7 +4,7 @@ import { Box } from "./NextImage.styled";
 const NextImage: React.FC<{
   src: string;
   alt?: string | undefined;
-  aspectRatio?: "16:9" | "9:16" | "4:3" | "3:4" | "1:1";
+  aspectRatio?: string; // Ex. 1:1, 16:9
   isSlideThumbnail?: boolean;
   priority?: boolean;
 }> = ({

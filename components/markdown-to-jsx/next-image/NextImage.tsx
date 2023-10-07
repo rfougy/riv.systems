@@ -22,7 +22,7 @@ const NextImage: React.FC<{
       fill
       style={{
         borderRadius: isSlideThumbnail ? "50%" : "2vh",
-        objectFit: "contain",
+        objectFit: "cover",
       }}
     />
   </Box>

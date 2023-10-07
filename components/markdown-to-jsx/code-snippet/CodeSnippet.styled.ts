@@ -11,7 +11,7 @@ export const Box = styled.div`
   }
 
   code {
-    background-color: white;
+    background-color: grey;
   }
 
   @media (max-width: ${breakpoints.xs}) {

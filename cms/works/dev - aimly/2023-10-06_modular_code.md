@@ -39,7 +39,7 @@ As soon I was onboarded into the engineering team in the fall of 2022, my first 
 
 <Image
     src="https://github.com/rfougy/riv.systems/assets/77861258/865d8f66-c033-44ff-92a0-44381b66bd53"
-    alt="Hodl the Throdl Demo Image" 
+    alt="Initial Event Creation User Chart" 
     aspectRatio="300:73"
 />
 
@@ -47,40 +47,11 @@ As soon I was onboarded into the engineering team in the fall of 2022, my first 
 
 This informed my decision to implement a simple yet dynamic approach where the steps involved in the Event Creation were conditionally rendered based on the step the user was currently in:
 
-<code>
-export const getFormStepDict = (componentProps?: IFormStepProps) => {
-  return {
-    1: {
-      step: 1,
-      title: "fundraiserType",
-      formFields: "fundraiserType",
-      component:
-        componentProps &&
-        FundraiserType({ ...(componentProps as IFormStepProps) }),
-    },
-    2: {
-      step: 2,
-      title: "enterEventCode",
-      formFields: undefined,
-      component:
-        componentProps &&
-        EnterEventCode({ ...(componentProps as IFormStepProps) }),
-    },
-		// ...
-    6: {
-      step: 6,
-      title: "contactNameAndNumber",
-      formFields: ["firstName", "lastName", "phone"],
-      component:
-        componentProps &&
-        ContactNameAndNumber({
-          ...(componentProps as IFormStepProps),
-        }),
-    },
-    // etc...
-  };
-};
-</code>
+<Image
+    src="https://github.com/rfougy/riv.systems/assets/77861258/51f33f31-fe05-433d-adeb-340c7bd7bb38"
+    alt="code snippet of CreateNewEvent.tsx" 
+    aspectRatio="909:1969"
+/>
 
 Note: At this time I didn’t take into consideration of how this particular feature could scale over time. Upon revisiting the evolution of this feature, I realize that I should have probed both the project manager and UX designer to gauge future possibilities and edge cases. Regardless, I think that the feature matured fairly well, as we will see later in this article.
 
@@ -92,7 +63,7 @@ In spring of 2023, Aimly’s UX Lead had proposed a considerable change to the E
 
 <Image
     src="https://github.com/rfougy/riv.systems/assets/77861258/ba9dded9-e6c5-4f8e-a79d-f6414d65cbe5"
-    alt="Hodl the Throdl Demo Image" 
+    alt="Updated Event Creation User Flow Chart" 
     aspectRatio="500:151"
 />
 
@@ -102,11 +73,24 @@ As we were using Material UI as our primary means of styling, I was inevitably i
 
 _(image with screenshot of component that outlines parts of shared components)_
 
-_(code snippet)_
+<Image
+    src="https://github.com/rfougy/riv.systems/assets/77861258/0d61c2b7-d14c-491d-9c88-f44cb64daf76"
+    alt="code snippet of FormContainer.tsx" 
+    aspectRatio="871:1096"
+/>
+<Image
+    src="https://github.com/rfougy/riv.systems/assets/77861258/f1bd6e3e-c514-42b4-8d5c-4a131c5fec19"
+    alt="code snippet of FormHeader.tsx" 
+    aspectRatio="871:1387"
+/>
 
 In addition, I abstracted the logic for rendering a given form step into its own dedicated component. Doing so reduced the Event Creation page file’s lines of code significantly, all the while remaining straightforward for the engineering team:
 
-_(code snippet)_
+<Image
+    src="https://github.com/rfougy/riv.systems/assets/77861258/243c78f3-573d-45b7-8def-eabfcac1005d"
+    alt="code snippet of DynamicFormStep.tsx" 
+    aspectRatio="928:849"
+/>
 
 This refactoring effort did not require considerable investment of time and proved to pay off dividends, most notably for this next major iteration.
 
@@ -118,7 +102,7 @@ Come Summer of 2023, Aimly began to rollout their ‘Join a Team’ initiative, 
 
 <Image
     src="https://github.com/rfougy/riv.systems/assets/77861258/b2c5cc8c-dc79-4e27-9721-7d358580b6e4"
-    alt="Hodl the Throdl Demo Image" 
+    alt="Event Creation User Flow Updates via Join a Team Initiative" 
     aspectRatio="300:181"
 />
 
@@ -128,7 +112,16 @@ Although traversal between steps such as skips was relatively easy to implement 
 
 To consolidate the metadata and make the steps more modular for these requirements, I expanded off the concept of the DynamicFormStep component through the creation of a dictionary to store all form steps:
 
-_(code snippet)_
+<Image
+    src="https://github.com/rfougy/riv.systems/assets/77861258/e736e27c-b5ff-4e7e-bb97-b9e3dceeb14f"
+    alt="code snippet of getFormStepDict.ts" 
+    aspectRatio="145:164"
+/>
+<Image
+    src="https://github.com/rfougy/riv.systems/assets/77861258/8e6536c7-dda3-4b5d-aae5-c7450d218c2f"
+    alt="code snippet of DynamicFormStep.tsx" 
+    aspectRatio="435:223"
+/>
 
 From validating the form fields of each step to automatically navigating the user to the last step they last visited via page reload, this modular approach proved to be dynamic and malleable across various applications.
 

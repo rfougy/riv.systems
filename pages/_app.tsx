@@ -20,7 +20,6 @@ import { PageBox } from "../styles/pages/App.styled";
 import { lightTheme, darkTheme } from "../styles/theme";
 
 import "../styles/globals.css";
-import "highlight.js/styles/default.css";
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";

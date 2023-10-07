@@ -6,7 +6,6 @@ import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
 import NextImage from "../../markdown-to-jsx/next-image/NextImage";
 import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
 import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
-import CodeSnippet from "../../markdown-to-jsx/code-snippet/CodeSnippet";
 import HighlightedText from "../../features/text-highlight/HighlightedText";
 
 import { Box, Content, CoverImage, Divider } from "./PostPage.styled";
@@ -46,9 +45,6 @@ const PostPage: React.FC<{ content: any }> = ({ content }) => {
               wrapper: "article",
               forceBlock: true,
               overrides: {
-                code: {
-                  component: CodeSnippet,
-                },
                 mark: {
                   component: HighlightedText,
                 },

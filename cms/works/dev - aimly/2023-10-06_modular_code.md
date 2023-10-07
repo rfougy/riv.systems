@@ -4,7 +4,7 @@ datePublished: "2023-10-06"
 section: works
 category: dev - aimly
 excerpt: placeholder...
-coverImage: https://user-images.githubusercontent.com/77861258/235372607-f5b674ef-95f6-4acb-8e49-6dcf33cc3778.jpg
+coverImage: https://github.com/rfougy/riv.systems/assets/77861258/7da956d0-5b8b-42b3-9769-56a5a7d12dd7
 link: https://www.goaimly.com/create-new-event/
 worksTeamSize: 3
 worksRoles: ["Frontend Engineer"]
@@ -14,11 +14,21 @@ worksTools: ["NextJS", "Typescript", "Redux", "Material UI", "Jest", "Cypress"]
 
 Ever since I began creating web applications in 2021, I’ve had an inclination to create what I understand as ‘modular code’: code that practices the separation of concerns, whether it be functions, components, or otherwise. However, it was only when time (and money) became a part of the equation that I began to truly understand its magnitude of importance.
 
-My first and long lasting experiences with modular design was through leading the frontend development of Aimly’s Event Creation feature. As a virtual fundraising platform, it was imperative that Aimly prioritized and refined its Event Creation flow, which guides the user through several steps to help them create their own fundraising event.
+My first and long lasting experiences with modular design was through leading the frontend development of [Aimly’s Event Creation feature](https://www.goaimly.com/create-new-event?page=1). As a virtual fundraising platform, it was imperative that Aimly prioritized and refined its Event Creation flow, which <mark>guides the user through several steps to help them create their own fundraising event</mark>.
 
-_(GIF of Aimly Event Creation flow as it currently stands, fast speed)_
+<br/>
+<br/>
 
-From user flows with complex conditional logic to form validation and data persistence, it comes as no surprise that the feature saw several major iterations over time. And with each iteration I found myself discovering new patterns and finding opportunities for modularity, all of which benefitted both the business and its engineering team in the long run.
+<Image
+    src="https://github.com/rfougy/riv.systems/assets/77861258/5cc9fc24-4e52-4797-9ff2-e4bac18f6566"
+    alt="Event Creation GIF" 
+    aspectRatio="600:323"
+/>
+
+<br/>
+<br/>
+
+From user flows with complex conditional logic to form validation and data persistence, it comes as no surprise that <mark>the feature saw several major iterations over time</mark>. And with each iteration <mark>I found myself discovering new patterns and finding opportunities for modularity</mark>, all of which benefitted both the business and its engineering team in the long run.
 
 Before we continue, a few notes:
 
@@ -33,7 +43,7 @@ With all of that now said, let’s jump right into it.
 
 ## Creating the MVP Feature
 
-As soon I was onboarded into the engineering team in the fall of 2022, my first task was to implement the Event Creation MVP on the frontend. During this time the user flow and wireframes were simple and straightforward:
+As soon I was onboarded into the engineering team in the fall of 2022, <mark>my first task was to implement the Event Creation MVP on the frontend</mark>. During this time the user flow and wireframes were simple and straightforward:
 
 <br/>
 
@@ -45,7 +55,7 @@ As soon I was onboarded into the engineering team in the fall of 2022, my first 
 
 <br/>
 
-This informed my decision to implement a simple yet dynamic approach where the steps involved in the Event Creation were conditionally rendered based on the step the user was currently in:
+This informed my decision to implement a simple yet dynamic approach where the steps involved in the Event Creation were <mark>conditionally rendered based on the step the user was currently in</mark>:
 
 <Image
     src="https://github.com/rfougy/riv.systems/assets/77861258/51f33f31-fe05-433d-adeb-340c7bd7bb38"
@@ -57,7 +67,7 @@ Note: At this time I didn’t take into consideration of how this particular fea
 
 ## Utilizing Shared Components
 
-In spring of 2023, Aimly’s UX Lead had proposed a considerable change to the Event Creation flow, where the then three form steps were split into nine:
+In spring of 2023, Aimly’s UX Lead had proposed a considerable change to the Event Creation flow, where <mark>the then three form steps were split into nine</mark>:
 
 <br/>
 
@@ -69,9 +79,17 @@ In spring of 2023, Aimly’s UX Lead had proposed a considerable change to the E
 
 <br/>
 
-As we were using Material UI as our primary means of styling, I was inevitably inspired to consolidate a modest chunk of code into shared components. Below are a few examples:
+As we were using Material UI as our primary means of styling, I was inevitably inspired to <mark>consolidate a modest chunk of code into shared components</mark>. Below are a few examples:
 
-_(image with screenshot of component that outlines parts of shared components)_
+<br/>
+
+<Image
+    src="https://github.com/rfougy/riv.systems/assets/77861258/132c6df3-db1c-47ae-9ef6-f18c345dedbc"
+    alt="visual breakdown of shared components for event creation form step" 
+    aspectRatio="444:295"
+/>
+
+<br/>
 
 <Image
     src="https://github.com/rfougy/riv.systems/assets/77861258/0d61c2b7-d14c-491d-9c88-f44cb64daf76"
@@ -84,7 +102,7 @@ _(image with screenshot of component that outlines parts of shared components)_
     aspectRatio="871:1387"
 />
 
-In addition, I abstracted the logic for rendering a given form step into its own dedicated component. Doing so reduced the Event Creation page file’s lines of code significantly, all the while remaining straightforward for the engineering team:
+In addition, I abstracted the logic for rendering a given form step into its own dedicated component. Doing so <mark>reduced the Event Creation page file’s lines of code significantly, all the while remaining straightforward for the engineering team</mark>:
 
 <Image
     src="https://github.com/rfougy/riv.systems/assets/77861258/243c78f3-573d-45b7-8def-eabfcac1005d"
@@ -96,7 +114,7 @@ This refactoring effort did not require considerable investment of time and prov
 
 ## Complex User Flows
 
-Come Summer of 2023, Aimly began to rollout their ‘Join a Team’ initiative, where a user could not only create an event, but also invite team members to create events and have a goal that the entire team would all connect to (you can view an example [here](https://goaimly.com/example-store)). This new approach to Event Creation required both new and current steps to only display given certain user flows:
+Come Summer of 2023, Aimly began to rollout their <mark>‘Join a Team’ initiative</mark>, where a user could not only create an event, but also invite team members to create events and have a goal that the entire team would all connect to (you can view an example [here](https://goaimly.com/example-store)). This new approach to Event Creation <mark>required both new and current steps to only display given certain user flows</mark>:
 
 <br/>
 
@@ -110,7 +128,7 @@ Come Summer of 2023, Aimly began to rollout their ‘Join a Team’ initiative, 
 
 Although traversal between steps such as skips was relatively easy to implement (via the use of query params), the effort had a high likelihood of convoluting the codebase. Most if not all steps required validation, and the metadata pertaining to each step was required for both analytics and rendering.
 
-To consolidate the metadata and make the steps more modular for these requirements, I expanded off the concept of the DynamicFormStep component through the creation of a dictionary to store all form steps:
+To consolidate the metadata and make the steps more modular for these requirements, I expanded off the concept of the DynamicFormStep component through <mark>the creation of a dictionary to store all form steps</mark>:
 
 <Image
     src="https://github.com/rfougy/riv.systems/assets/77861258/e736e27c-b5ff-4e7e-bb97-b9e3dceeb14f"
@@ -123,8 +141,4 @@ To consolidate the metadata and make the steps more modular for these requiremen
     aspectRatio="435:223"
 />
 
-From validating the form fields of each step to automatically navigating the user to the last step they last visited via page reload, this modular approach proved to be dynamic and malleable across various applications.
-
----
-
-_(summary)_
+From validating the form fields of each step to automatically navigating the user to the last step they last visited via page reload, <mark>this modular approach proved to be dynamic and malleable across various applications</mark>.

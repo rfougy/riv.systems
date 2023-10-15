@@ -32,6 +32,13 @@ export const Box = styled.div`
 
   @media (max-width: ${breakpoints.xs}) {
     max-width: none;
+    background: padding-box,
+      linear-gradient(
+          180deg,
+          ${(props: any) => props.theme.secondary} 70%,
+          ${(props: any) => props.theme.primary} 100%
+        )
+        border-box;
   }
 `;
 
@@ -51,6 +58,7 @@ export const MetadataContainer = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  min-width: max-content;
 `;
 
 export const Metadata = styled.div`
@@ -70,7 +78,6 @@ export const Title = styled.h2`
   display: inline-block;
   margin-top: 0;
   height: 2.9rem;
-  width: 100%;
 
   display: -webkit-box;
   -webkit-box-orient: vertical;

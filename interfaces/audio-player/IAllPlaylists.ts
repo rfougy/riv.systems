@@ -4,5 +4,5 @@ export interface IAllPlaylists {
   electronic: IPlaylist;
   rock: IPlaylist;
   japaneseRock: IPlaylist;
-  random: IPlaylist;
+  shuffled: IPlaylist;
 }

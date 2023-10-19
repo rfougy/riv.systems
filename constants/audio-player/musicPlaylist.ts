@@ -17,8 +17,8 @@ export const musicPlaylist: IAllPlaylists = {
     title: "J-ROCK",
     playlist: japaneseRockPlaylist,
   },
-  random: {
-    title: "RANDOM",
+  shuffled: {
+    title: "SHUFFLED",
     playlist: shuffleArr([
       ...electronicPlaylist,
       ...rockPlaylist,

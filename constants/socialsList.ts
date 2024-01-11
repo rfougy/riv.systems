@@ -23,7 +23,7 @@ export const socialsList: ISocials[] = [
   },
   {
     title: "Email",
-    url: "mailto:hi@riv.systems",
+    url: "mailto:rivierefougy@gmail.com",
     icon: emailIcon,
   },
 ];

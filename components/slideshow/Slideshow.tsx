@@ -26,11 +26,7 @@ interface SlideImage {
   alt: string;
 }
 
-interface SlideshowProps {
-  images: SlideImage[];
-}
-
-export default function Slideshow({ images }: SlideshowProps) {
+const Slideshow: React.FC<{ slides: SlideImage[] }> = ({ slides }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   return (
@@ -49,7 +45,7 @@ export default function Slideshow({ images }: SlideshowProps) {
           slidesPerView={1}
           spaceBetween={30}
         >
-          {images.map((image, index) => (
+          {slides.map((image, index) => (
             <SwiperSlide key={index}>
               <SlideImage src={image.src} alt={image.alt} />
             </SwiperSlide>
@@ -69,7 +65,7 @@ export default function Slideshow({ images }: SlideshowProps) {
         slidesPerView={4}
         spaceBetween={10}
       >
-        {images.map((image, index) => (
+        {slides.map((image, index) => (
           <SwiperSlide key={index}>
             <ThumbImage src={image.src} alt={`Thumbnail for ${image.alt}`} />
           </SwiperSlide>
@@ -77,4 +73,6 @@ export default function Slideshow({ images }: SlideshowProps) {
       </ThumbsSwiper>
     </SlideshowContainer>
   );
-}
+};
+
+export default Slideshow;

@@ -18,12 +18,10 @@ import {
   ThumbsSwiper,
 } from "./Slideshow.styled";
 
-interface SlideImage {
+const Slideshow: React.FC<{ slides: {
   src: string;
   alt: string;
-}
-
-const Slideshow: React.FC<{ slides: SlideImage[] }> = ({ slides }) => {
+}[] }> = ({ slides }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   return (
@@ -31,14 +29,14 @@ const Slideshow: React.FC<{ slides: SlideImage[] }> = ({ slides }) => {
       <MainSwiperContainer>
         <StyledSwiper
           modules={[Navigation, Thumbs]}
-          navigation={true}
-          loop={true}
+          navigation
+          loop
+          slidesPerView={1}
+          spaceBetween={30}
           thumbs={{
             swiper:
               thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
           }}
-          slidesPerView={1}
-          spaceBetween={30}
           style={{
             // @ts-ignore
             "--swiper-navigation-color": "#000000",
@@ -52,10 +50,11 @@ const Slideshow: React.FC<{ slides: SlideImage[] }> = ({ slides }) => {
         </StyledSwiper>
       </MainSwiperContainer>
       <ThumbsSwiper
-        onSwiper={setThumbsSwiper}
         modules={[Thumbs]}
+        onSwiper={setThumbsSwiper}
+        loop
         watchSlidesProgress
-        slidesPerView={4}
+        slidesPerView={5}
         spaceBetween={10}
       >
         {slides.map((image, index) => (

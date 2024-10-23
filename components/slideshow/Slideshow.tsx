@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { Swiper as SwiperType } from "swiper";
 
 import "swiper/css";
@@ -12,8 +11,6 @@ import "swiper/css/thumbs";
 
 import {
   MainSwiperContainer,
-  NextButton,
-  PrevButton,
   SlideImage,
   SlideshowContainer,
   StyledSwiper,
@@ -34,16 +31,18 @@ const Slideshow: React.FC<{ slides: SlideImage[] }> = ({ slides }) => {
       <MainSwiperContainer>
         <StyledSwiper
           modules={[Navigation, Thumbs]}
-          navigation={{
-            prevEl: ".swiper-button-prev",
-            nextEl: ".swiper-button-next",
-          }}
+          navigation={true}
+          loop={true}
           thumbs={{
             swiper:
               thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
           }}
           slidesPerView={1}
           spaceBetween={30}
+          style={{
+            // @ts-ignore
+            "--swiper-navigation-color": "#000000",
+          }}
         >
           {slides.map((image, index) => (
             <SwiperSlide key={index}>
@@ -51,12 +50,6 @@ const Slideshow: React.FC<{ slides: SlideImage[] }> = ({ slides }) => {
             </SwiperSlide>
           ))}
         </StyledSwiper>
-        <PrevButton className="swiper-button-prev">
-          <ChevronLeft size={24} color="var(--primary-color)" />
-        </PrevButton>
-        <NextButton className="swiper-button-next">
-          <ChevronRight size={24} color="var(--primary-color)" />
-        </NextButton>
       </MainSwiperContainer>
       <ThumbsSwiper
         onSwiper={setThumbsSwiper}

@@ -45,14 +45,6 @@ export const NavigationButton = styled.button`
   }
 `;
 
-export const PrevButton = styled(NavigationButton)`
-  left: 1rem;
-`;
-
-export const NextButton = styled(NavigationButton)`
-  right: 1rem;
-`;
-
 export const ThumbsSwiper = styled(Swiper)`
   .swiper-slide {
     aspect-ratio: 16 / 9;

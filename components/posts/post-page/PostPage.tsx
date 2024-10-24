@@ -56,9 +56,6 @@ const PostPage: React.FC<{ content: any }> = ({ content }) => {
                 Slideshow: {
                   component: Slideshow,
                 },
-                // Slide: {
-                //   component: SlideDisplay,
-                // },
               },
             }}
           >

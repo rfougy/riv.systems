@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
@@ -18,11 +18,17 @@ import {
   ThumbsSwiper,
 } from "./Slideshow.styled";
 
-const Slideshow: React.FC<{ slides: {
+type Slide = {
   src: string;
   alt: string;
-}[] }> = ({ slides }) => {
+};
+
+const Slideshow: React.FC<{
+  slides: string; // stringified JSON, expected type Slide
+}> = ({ slides }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+
+  const parsedSlides: Slide[] = useMemo(() => JSON.parse(slides), [slides]);
 
   return (
     <SlideshowContainer>
@@ -42,7 +48,7 @@ const Slideshow: React.FC<{ slides: {
             "--swiper-navigation-color": "#000000",
           }}
         >
-          {slides.map((image, index) => (
+          {parsedSlides.map((image: Slide, index: number) => (
             <SwiperSlide key={index}>
               <SlideImage src={image.src} alt={image.alt} />
             </SwiperSlide>
@@ -57,7 +63,7 @@ const Slideshow: React.FC<{ slides: {
         slidesPerView={5}
         spaceBetween={10}
       >
-        {slides.map((image, index) => (
+        {parsedSlides.map((image: Slide, index: number) => (
           <SwiperSlide key={index}>
             <ThumbImage src={image.src} alt={`Thumbnail for ${image.alt}`} />
           </SwiperSlide>

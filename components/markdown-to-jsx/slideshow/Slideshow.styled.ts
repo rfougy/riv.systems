@@ -1,115 +1,47 @@
 import styled from "@emotion/styled";
-import { breakpoints, lightTheme } from "../../../styles/theme";
-import { aspectRatio } from "../../../types/aspectRatio";
-import { ArrowIcon } from "../../icons/ArrowIcon.styled";
+import { Swiper } from "swiper/react";
+import { breakpoints } from "../../../styles/theme";
 
-export const Button = styled.button`
-  all: unset;
+export const SlideshowContainer = styled.div`
+  width: calc(100vw - 2.5rem);
+  max-width: 50rem;
+  margin: 0 auto;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @media (max-width: ${breakpoints.xs}) {
+    width: calc(100vw - 2rem);
+  }
+`;
 
-  height: 2rem;
-  width: 2rem;
+export const MainSwiperContainer = styled.div`
+  position: relative;
+  margin-bottom: 1rem;
+`;
 
-  margin: ${({ aspectRatio = "4:3" }: { aspectRatio?: aspectRatio }) => {
-    switch (aspectRatio) {
-      case "16:9":
-        return "27.75% 0";
-      case "9:16":
-        return "95% 0";
-      case "4:3":
-        return "37.5% 0";
-      case "3:4":
-        return "70% 0";
-      case "1:1":
-        return "50% 0";
-      default:
-        return "0";
-    }
-  }};
+export const StyledSwiper = styled(Swiper)``;
 
-  background-color: ${lightTheme.primary};
-  border-radius: 50%;
-  opacity: 0.75;
+export const SlideImage = styled.img`
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+`;
+
+export const ThumbsSwiper = styled(Swiper)`
+  .swiper-slide {
+    aspect-ratio: 16 / 9;
+    cursor: pointer;
+  }
+`;
+
+export const ThumbImage = styled.img`
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  opacity: 0.5;
+  transition: opacity 0.2s;
 
   &:hover {
     opacity: 1;
-  }
-`;
-
-export const NavArrowIcon = styled(ArrowIcon)`
-  position: relative;
-  width: 0.75rem;
-  height: 0.75rem;
-  margin: ${({ right, left }: { right?: boolean; left?: boolean }) => {
-    if (right) return "0 0.25rem 0 0";
-    if (left) return "0 0 0 0.25rem";
-  }};x
-
-  border-color: ${lightTheme.secondary};
-`;
-
-export const List = styled.ol`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0.25em 0.5em;
-
-  margin: 0;
-  padding: 0;
-
-  @media (max-width: ${breakpoints.components.slideshow.md}) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  @media (max-width: ${breakpoints.components.slideshow.sm}) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media (max-width: ${breakpoints.components.slideshow.xs}) {
-    grid-template-columns: repeat(5, 1fr);
-  }
-`;
-
-export const Navigation = styled.div`
-  display: flex;
-  flex-wrap: no-wrap;
-  justify-content: space-between;
-
-  position: absolute;
-  top: 0;
-
-  padding: 0 1.5em;
-  width: 100%;
-`;
-
-export const Box = styled.div`
-  position: relative;
-`;
-
-export const AltText = styled.p`
-  display: inline-block;
-
-  margin: 0;
-
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-
-  @media (max-width: ${breakpoints.components.slideshow.xs}) {
-    display: none;
-  }
-`;
-
-export const SubBox = styled.div`
-  display: flex;
-  flex-wrap: no-wrap;
-  justify-content: space-between;
-  gap: 2em;
-
-  margin-top: 0.75rem;
-
-  @media (max-width: ${breakpoints.components.slideshow.xs}) {
-    justify-content: center;
   }
 `;

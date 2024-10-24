@@ -17,7 +17,21 @@ export const MainSwiperContainer = styled.div`
   margin-bottom: 1rem;
 `;
 
-export const StyledSwiper = styled(Swiper)``;
+export const StyledSwiper = styled(Swiper)`
+  .swiper-slide {
+    cursor: grab;
+    &:hover {
+      cursor: grab;
+    }
+    &:active {
+      cursor: grabbing;
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    cursor: cell;
+  }
+`;
 
 export const SlideImage = styled.img`
   object-fit: cover;
@@ -31,7 +45,7 @@ export const ThumbsSwiper = styled(Swiper)`
     aspect-ratio: 1 / 1;
     max-width: 5rem;
     max-height: 5rem;
-    cursor: pointer;
+    cursor: cell;
   }
 `;
 
@@ -46,6 +60,7 @@ export const ThumbImage = styled.img<{
   transition: opacity 0.2s;
 
   &:hover {
+    cursor: cell;
     opacity: 1; /* Maintain hover effect */
   }
 `;

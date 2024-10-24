@@ -15,7 +15,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@fontsource/roboto-mono": "^4.5.8",
+    "@fontsource/roboto-mono": "^4.5.10",
     "@next/bundle-analyzer": "^13.2.3",
     "@plaiceholder/next": "^2.5.0",
     "fs": "^0.0.1-security",
@@ -30,6 +30,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.32.6",
+    "swiper": "^11.1.14",
     "three": "^0.154.0",
     "vanta": "^0.5.24"
   },

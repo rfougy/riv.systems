@@ -5,13 +5,12 @@ import { IPostFrontMatter } from "../../../interfaces/IPostFrontMatter";
 
 import NextImage from "../../markdown-to-jsx/next-image/NextImage";
 import Slideshow from "../../markdown-to-jsx/slideshow/Slideshow";
-import SlideDisplay from "../../markdown-to-jsx/slideshow/slide-display/SlideDisplay";
 import HighlightedText from "../../features/text-highlight/HighlightedText";
-
-import { Box, Content, CoverImage, Divider } from "./PostPage.styled";
+import HighlightToggler from "../../features/text-highlight/HighlightToggler";
 import Header from "../header/Header";
 import TextHighlightProvider from "../../../context/TextHighlightContext";
-import HighlightToggler from "../../features/text-highlight/HighlightToggler";
+
+import { Box, Content, CoverImage, Divider } from "./PostPage.styled";
 
 const PostPage: React.FC<{ content: any }> = ({ content }) => {
   const { frontmatter, postContent }: any = content;
@@ -56,9 +55,6 @@ const PostPage: React.FC<{ content: any }> = ({ content }) => {
                 },
                 Slideshow: {
                   component: Slideshow,
-                },
-                Slide: {
-                  component: SlideDisplay,
                 },
               },
             }}

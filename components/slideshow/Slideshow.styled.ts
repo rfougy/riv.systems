@@ -1,10 +1,15 @@
 import styled from "@emotion/styled";
 import { Swiper } from "swiper/react";
+import { breakpoints } from "../../styles/theme";
 
 export const SlideshowContainer = styled.div`
-  width: 100%;
-  max-width: 48rem;
+  width: calc(100vw - 2.5rem);
+  max-width: 50rem;
   margin: 0 auto;
+
+  @media (max-width: ${breakpoints.xs}) {
+    width: calc(100vw - 2rem);
+  }
 `;
 
 export const MainSwiperContainer = styled.div`

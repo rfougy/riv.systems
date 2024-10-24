@@ -77,7 +77,7 @@ Lorem ipsum odor amet, consectetuer adipiscing elit. Quam habitasse orci commodo
 <br/>
 <br/>
 
-<Slideshow aspectRatio="4 / 3" slides='[
+<Slideshow aspectRatio="3 / 4" slides='[
   { "src": "/blog/fashion/2024-10-28-adidas-trip/5-4.webp", "alt": "Adidas Tour" },
   { "src": "/blog/fashion/2024-10-28-adidas-trip/5-1.webp", "alt": "Adidas Tour" },
   { "src": "/blog/fashion/2024-10-28-adidas-trip/5-2.webp", "alt": "Adidas Tour" }

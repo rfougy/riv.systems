@@ -24,8 +24,9 @@ type Slide = {
 };
 
 const Slideshow: React.FC<{
+  aspectRatio?: string
   slides: string; // stringified JSON, expected type Slide
-}> = ({ slides }) => {
+}> = ({ aspectRatio = "16 / 9", slides }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   const parsedSlides: Slide[] = useMemo(() => JSON.parse(slides), [slides]);
@@ -46,6 +47,7 @@ const Slideshow: React.FC<{
           style={{
             // @ts-ignore
             "--swiper-navigation-color": "#000000",
+            "aspect-ratio": aspectRatio,
           }}
         >
           {parsedSlides.map((image: Slide, index: number) => (

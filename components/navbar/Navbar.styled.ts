@@ -5,7 +5,7 @@ export const NavBox = styled.nav`
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  z-index: 1;
+  z-index: 999;
   padding: 0.75rem 2rem;
 
   display: flex;

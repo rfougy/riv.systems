@@ -64,7 +64,7 @@ const Slideshow: React.FC<{
           onSwiper={setThumbsSwiper}
           loop
           watchSlidesProgress
-          slidesPerView={5}
+          slidesPerView={parsedSlides.length <= 5 ? parsedSlides.length : 5}
           spaceBetween={10}
         >
           {parsedSlides.map((image: Slide, index: number) => (

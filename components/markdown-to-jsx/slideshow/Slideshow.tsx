@@ -45,7 +45,7 @@ const Slideshow: React.FC<{
             swiper:
               thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
           }}
-          onSlideChange={(swiper) => setCurrSlideIdx(swiper.activeIndex)}
+          onSlideChange={(swiper: SwiperType) => setCurrSlideIdx(swiper.activeIndex)}
           style={{
             // @ts-ignore
             "--swiper-navigation-color": "#000000",

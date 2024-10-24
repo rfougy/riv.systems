@@ -33,15 +33,17 @@ export const ThumbsSwiper = styled(Swiper)`
   }
 `;
 
-export const ThumbImage = styled.img`
+export const ThumbImage = styled.img<{
+  isActive: boolean;
+}>`
   object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
-  opacity: 0.5;
+  opacity: ${({ isActive }) => (isActive ? 1 : 0.5)};
   transition: opacity 0.2s;
 
   &:hover {
-    opacity: 1;
+    opacity: 1; /* Maintain hover effect */
   }
 `;

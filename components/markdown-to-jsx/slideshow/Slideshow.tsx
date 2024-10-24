@@ -29,6 +29,7 @@ const Slideshow: React.FC<{
   hideThumbnails?: boolean;
 }> = ({ aspectRatio = "16 / 9", slides, hideThumbnails = false }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+  const [currSlideIdx, setCurrSlideIdx] = useState<number | undefined>();
 
   const parsedSlides: Slide[] = useMemo(() => JSON.parse(slides), [slides]);
 
@@ -38,13 +39,13 @@ const Slideshow: React.FC<{
         <StyledSwiper
           modules={[Navigation, Thumbs]}
           navigation
-          loop
           slidesPerView={1}
           spaceBetween={30}
           thumbs={{
             swiper:
               thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
           }}
+          onSlideChange={(swiper) => setCurrSlideIdx(swiper.activeIndex)}
           style={{
             // @ts-ignore
             "--swiper-navigation-color": "#000000",
@@ -69,7 +70,7 @@ const Slideshow: React.FC<{
         >
           {parsedSlides.map((image: Slide, index: number) => (
             <SwiperSlide key={index}>
-              <ThumbImage src={image.src} alt={`Thumbnail for ${image.alt}`} />
+              <ThumbImage src={image.src} alt={`Thumbnail for ${image.alt}`} isActive={index === currSlideIdx} />
             </SwiperSlide>
           ))}
         </ThumbsSwiper>

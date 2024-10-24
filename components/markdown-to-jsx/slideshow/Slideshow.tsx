@@ -29,7 +29,7 @@ const Slideshow: React.FC<{
   hideThumbnails?: boolean;
 }> = ({ aspectRatio = "16 / 9", slides, hideThumbnails = false }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
-  const [currSlideIdx, setCurrSlideIdx] = useState<number | undefined>();
+  const [currSlideIdx, setCurrSlideIdx] = useState<number | undefined>(0);
 
   const parsedSlides: Slide[] = useMemo(() => JSON.parse(slides), [slides]);
 
@@ -63,14 +63,17 @@ const Slideshow: React.FC<{
         <ThumbsSwiper
           modules={[Thumbs]}
           onSwiper={setThumbsSwiper}
-          loop
           watchSlidesProgress
           slidesPerView={parsedSlides.length <= 5 ? parsedSlides.length : 5}
           spaceBetween={10}
         >
           {parsedSlides.map((image: Slide, index: number) => (
             <SwiperSlide key={index}>
-              <ThumbImage src={image.src} alt={`Thumbnail for ${image.alt}`} isActive={index === currSlideIdx} />
+              <ThumbImage
+                src={image.src}
+                alt={`Thumbnail for ${image.alt}`}
+                isActive={index === currSlideIdx}
+              />
             </SwiperSlide>
           ))}
         </ThumbsSwiper>

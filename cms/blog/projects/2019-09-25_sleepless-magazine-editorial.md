@@ -30,17 +30,10 @@ Photographed by Layne, modelled by Sang Chul Lee and styled by me, we headed to 
 <br/>
 <br/>
 
-<Image 
-    src="https://user-images.githubusercontent.com/77861258/208268413-41a4e3b6-3408-403e-bf31-5e31df9f33bc.png" 
-    alt="Photo from Sleepless Magazine Archive Fashion Editorial" 
-    aspectRatio="4:3"
-/>
-<br/>
-<Image 
-    src="https://user-images.githubusercontent.com/77861258/208268414-3ea18e63-6d9a-4985-9eb1-565a105da0fc.png" 
-    alt="Photo from Sleepless Magazine Archive Fashion Editorial" 
-    aspectRatio="4:3"
-  />
+<Slideshow aspectRatio="4 / 3" hideThumbnails slides='[
+  { "src": "https://user-images.githubusercontent.com/77861258/208268413-41a4e3b6-3408-403e-bf31-5e31df9f33bc.png", "alt": "Photo from Sleepless Magazine Archive Fashion Editorial" },
+  { "src": "https://user-images.githubusercontent.com/77861258/208268414-3ea18e63-6d9a-4985-9eb1-565a105da0fc.png", "alt": "Photo from Sleepless Magazine Archive Fashion Editorial" }
+]' />
 
 <br/>
 <br/>

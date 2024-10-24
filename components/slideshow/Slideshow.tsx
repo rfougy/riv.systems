@@ -24,9 +24,10 @@ type Slide = {
 };
 
 const Slideshow: React.FC<{
-  aspectRatio?: string
+  aspectRatio?: string;
   slides: string; // stringified JSON, expected type Slide
-}> = ({ aspectRatio = "16 / 9", slides }) => {
+  hideThumbnails?: boolean;
+}> = ({ aspectRatio = "16 / 9", slides, hideThumbnails = false }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   const parsedSlides: Slide[] = useMemo(() => JSON.parse(slides), [slides]);
@@ -57,20 +58,22 @@ const Slideshow: React.FC<{
           ))}
         </StyledSwiper>
       </MainSwiperContainer>
-      <ThumbsSwiper
-        modules={[Thumbs]}
-        onSwiper={setThumbsSwiper}
-        loop
-        watchSlidesProgress
-        slidesPerView={5}
-        spaceBetween={10}
-      >
-        {parsedSlides.map((image: Slide, index: number) => (
-          <SwiperSlide key={index}>
-            <ThumbImage src={image.src} alt={`Thumbnail for ${image.alt}`} />
-          </SwiperSlide>
-        ))}
-      </ThumbsSwiper>
+      {!hideThumbnails && (
+        <ThumbsSwiper
+          modules={[Thumbs]}
+          onSwiper={setThumbsSwiper}
+          loop
+          watchSlidesProgress
+          slidesPerView={5}
+          spaceBetween={10}
+        >
+          {parsedSlides.map((image: Slide, index: number) => (
+            <SwiperSlide key={index}>
+              <ThumbImage src={image.src} alt={`Thumbnail for ${image.alt}`} />
+            </SwiperSlide>
+          ))}
+        </ThumbsSwiper>
+      )}
     </SlideshowContainer>
   );
 };

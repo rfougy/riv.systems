@@ -63,7 +63,6 @@ After Makerlab, we took a tour across the Adidas campus. This included impressiv
 
 <Slideshow aspectRatio="4 / 3" navArrowColor="#ffffff" slides='[
   { "src": "/blog/fashion/2024-10-28-adidas-trip/4-1.webp", "alt": "Adidas Headquarters" },
-  { "src": "/blog/fashion/2024-10-28-adidas-trip/4-2.webp", "alt": "Adidas Headquarters" },
   { "src": "/blog/fashion/2024-10-28-adidas-trip/5-4.webp", "alt": "Adidas Tour" },
   { "src": "/blog/fashion/2024-10-28-adidas-trip/5-1.webp", "alt": "Adidas Tour" },
   { "src": "/blog/fashion/2024-10-28-adidas-trip/5-2.webp", "alt": "Adidas Tour" }

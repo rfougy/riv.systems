@@ -26,8 +26,14 @@ type Slide = {
 const Slideshow: React.FC<{
   aspectRatio?: string;
   slides: string; // stringified JSON, expected type Slide
+  navArrowColor?: string;
   hideThumbnails?: boolean;
-}> = ({ aspectRatio = "16 / 9", slides, hideThumbnails = false }) => {
+}> = ({
+  aspectRatio = "16 / 9",
+  slides,
+  hideThumbnails = false,
+  navArrowColor = "#000000",
+}) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
   const [currSlideIdx, setCurrSlideIdx] = useState<number | undefined>(0);
 
@@ -50,8 +56,8 @@ const Slideshow: React.FC<{
           }
           style={{
             // @ts-ignore
-            "--swiper-navigation-color": "#000000",
-            "aspect-ratio": aspectRatio,
+            "--swiper-navigation-color": navArrowColor,
+            aspectRatio: aspectRatio,
           }}
         >
           {parsedSlides.map((image: Slide, index: number) => (

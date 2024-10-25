@@ -71,7 +71,7 @@ After Makerlab, we took a tour across the adidas campus. This included impressiv
 <br/>
 <br/>
 
-Last but not least was a tour of the adidas Archive. Apparently, only a select few are allowed to enter, including the brand’s own employees. Their archivist Sandra brought us on a journey through the archives, showcasing everything from pivotal sneakers to the original models that inspired the newly released silhouettes. The archive tour lasted for about an hour—too little time in my opinion. Just imagine what’s hidden in these aisles of white boxes, stored in a temperature-controlled, sanitized space. I hope that our team can dig even deeper in the near future.
+Last but not least was a tour of the adidas Archive. Apparently, only a select few are allowed to enter, including the brand’s own employees. Sandra (Senior Manager History Management) brought us on a journey through the archives, showcasing everything from pivotal sneakers to the original models that inspired the newly released silhouettes. The archive tour lasted for about an hour—too little time in my opinion. Just imagine what’s hidden in these aisles of white boxes, stored in a temperature-controlled, sanitized space. I hope that our team can dig even deeper in the near future.
 
 <br/>
 <br/>

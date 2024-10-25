@@ -42,7 +42,7 @@ Around 8AM the next morning, our group was en route to Herzogenaurach, the city 
 
 Our group split into several smaller groups, with my group starting at Makerlab. [This article](https://www.shanemachir.com/adidas-makerlab) I stumbled upon describes Makerlab pretty well: “The adidas Makerlab was opened in 2016 to tap into the creative potential of all employees. For designers it’s a place where they can have access to the tools they need to innovate and craft their designs. Those outside of design come to expand their perspectives and benefit from learning creative processes that they can apply to their work.”
 
-Leaders from the Adidas design team gave us a rundown on their new silhouettes and how they fit into Adidas footwear as a whole (no pun intended). Quick side note: I decided not to share the images of these silhouettes in this blog post, as they’ll be featured in content by ARCHIVE.pdf very soon.
+Ilka (VP of Footwear Design) and Maja (Senior Director of Product Marketing) gave us a rundown on their new silhouettes and how they fit into Adidas footwear as a whole (no pun intended). Quick side note: I decided not to share the images of these silhouettes in this blog post, as they’ll be featured in content by ARCHIVE.pdf very soon.
 
 <br/>
 <br/>

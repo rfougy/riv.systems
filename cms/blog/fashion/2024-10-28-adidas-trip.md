@@ -3,11 +3,9 @@ title: "Visiting Adidas HQ and Archive"
 datePublished: "2024-10-28"
 section: blog
 category: fashion
-excerpt: The rare opportunity to have an all-expenses coverd trip to Germany and visit Adidas HQ.
+excerpt: Who would have ever thought an opportunity like this could be possible?
 coverImage: "/blog/fashion/2024-10-28-adidas-trip/7-1.webp"
 ---
-
-Who would have ever thought an opportunity like this could be possible?
 
 The team and I at ARCHIVE.pdf have [worked with Adidas](https://www.instagram.com/stories/highlights/18008854915814606/) over the past 1-2 years, promoting their silhouettes and even covering their Y-3 show during Paris Fashion Week. Earlier this year, Adidas reached out to have us fly across the globe to Germany and visit their headquarters and archive—all expenses covered. I couldn’t attend due to personal matters, but man, I never believed lightening could strike twice until now.
 
@@ -32,7 +30,7 @@ Around 8AM the next morning, our group was en route to Herzogenaurach, the city 
 <br/>
 <br/>
 
-<Slideshow aspectRatio="4 / 3" slides='[
+<Slideshow aspectRatio="4 / 3" navArrowColor="#ffffff" slides='[
   { "src": "/blog/fashion/2024-10-28-adidas-trip/2-2.webp", "alt": "Adidas Headquarters" },
   { "src": "/blog/fashion/2024-10-28-adidas-trip/2-4.webp", "alt": "Adidas Headquarters" },
   { "src": "/blog/fashion/2024-10-28-adidas-trip/2-3.webp", "alt": "Adidas Headquarters" },
@@ -49,7 +47,7 @@ High-level leaders from the Adidas design team gave us a rundown on their new si
 <br/>
 <br/>
 
-<Slideshow aspectRatio="4 / 3" slides='[
+<Slideshow aspectRatio="4 / 3" navArrowColor="#ffffff" slides='[
   { "src": "/blog/fashion/2024-10-28-adidas-trip/3-1.webp", "alt": "Adidas Makerlab" },
   { "src": "/blog/fashion/2024-10-28-adidas-trip/3-2.webp", "alt": "Adidas Makerlab" },
   { "src": "/blog/fashion/2024-10-28-adidas-trip/3-3.webp", "alt": "Adidas Makerlab" }
@@ -63,7 +61,7 @@ After Makerlab, we took a tour across the Adidas campus. This included impressiv
 <br/>
 <br/>
 
-<Slideshow aspectRatio="4 / 3" slides='[
+<Slideshow aspectRatio="4 / 3" navArrowColor="#ffffff" slides='[
   { "src": "/blog/fashion/2024-10-28-adidas-trip/4-1.webp", "alt": "Adidas Headquarters" },
   { "src": "/blog/fashion/2024-10-28-adidas-trip/4-2.webp", "alt": "Adidas Headquarters" },
   { "src": "/blog/fashion/2024-10-28-adidas-trip/5-4.webp", "alt": "Adidas Tour" },

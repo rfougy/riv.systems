@@ -57,7 +57,7 @@ const Slideshow: React.FC<{
           style={{
             // @ts-ignore
             "--swiper-navigation-color": navArrowColor,
-            "aspect-ratio": aspectRatio,
+            aspectRatio: aspectRatio,
           }}
         >
           {parsedSlides.map((image: Slide, index: number) => (

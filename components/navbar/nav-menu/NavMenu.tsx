@@ -3,8 +3,10 @@ import { NextRouter, useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 import { sectionsList } from "../../../constants/sectionsList";
+import externalLinkIcon from "../../../public/assets/icons/external-link-icon.svg";
 
-import { Text, Box, MenuOption } from "./NavMenu.styled";
+import { Text, Box, MenuOption, PhotosBox } from "./NavMenu.styled";
+import Image from "next/image";
 
 const NavMenu: React.FC = () => {
   const { asPath: path }: NextRouter = useRouter();
@@ -15,13 +17,6 @@ const NavMenu: React.FC = () => {
   function setNavStates(): void {
     const parsedPath: string[] = path.split("/");
     let activeMenuOption: string | null;
-
-    if (path === "/") {
-      activeMenuOption = null; // Home Page
-      setHoveredOption(activeMenuOption);
-      setActiveOption(activeMenuOption);
-      return;
-    }
 
     if (parsedPath.length === 2) {
       activeMenuOption = parsedPath[1]; // Content Page
@@ -58,18 +53,18 @@ const NavMenu: React.FC = () => {
           </Link>
         </MenuOption>
       ))}
-      <MenuOption onMouseOver={(): void => setHoveredOption("content")}>
-        <Link href={`/content`}>
-          <Text
-            isActiveOption={"content" === activeOption}
-            isHoveredOption={"content" === hoveredOption}
-            hoverIsActive={typeof hoveredOption === "string"}
-            userInHomePage={!activeOption}
-          >
-            {"content" === activeOption ? "./" + "ALL" : "/" + "ALL"}
-          </Text>
-        </Link>
-      </MenuOption>
+      <a href="https://riv-photos.tumblr.com/" target="_blank" rel="noreferrer">
+        <PhotosBox>
+          <Text isPhotosOption>PHOTOS</Text>
+          <Image
+            src={externalLinkIcon}
+            alt={"external link icon"}
+            height={10}
+            width={10}
+            sizes="100vw"
+          />
+        </PhotosBox>
+      </a>
     </Box>
   );
 };

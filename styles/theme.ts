@@ -21,8 +21,10 @@ export const darkTheme: ITheme = {
 };
 
 export const breakpoints = {
+  xxxs: "22.5em", // 360px
   xxs: "28.75em", // 460px
   xs: "40em", // 640px
+  xsm: "50em", // 800px
   sm: "60em", // 960px
   md: "80rem", // 1280px
   components: {

@@ -51,6 +51,9 @@ const NavMenu: React.FC = () => {
           </Link>
         </MenuOption>
       ))}
+      <a href="https://riv-photos.tumblr.com/" target="_blank" rel="noreferrer">
+        <Text>PHOTOS</Text>
+      </a>
     </Box>
   );
 };

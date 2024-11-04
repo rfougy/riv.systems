@@ -2,6 +2,7 @@ import ISocials from "../interfaces/ISocials";
 
 import githubIcon from "../public/assets/icons/socials/github-icon.svg";
 import instagramIcon from "../public/assets/icons/socials/instagram-icon.svg";
+import tumblrIcon from "../public/assets/icons/socials/tumblr-icon.svg";
 import linkedinIcon from "../public/assets/icons/socials/linkedin-icon.svg";
 import emailIcon from "../public/assets/icons/socials/send-icon.svg";
 
@@ -20,6 +21,11 @@ export const socialsList: ISocials[] = [
     title: "Instagram",
     url: "https://www.instagram.com/riv.ig/",
     icon: instagramIcon,
+  },
+  {
+    title: "Tumblr",
+    url: "https://riv-photos.tumblr.com/",
+    icon: tumblrIcon,
   },
   {
     title: "Email",

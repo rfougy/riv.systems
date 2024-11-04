@@ -6,7 +6,7 @@ export const NavBox = styled.nav`
   position: -webkit-sticky;
   top: 0;
   z-index: 999;
-  padding: 0rem 2rem;
+  padding: 0.75rem 2rem;
 
   display: flex;
   height: 100%;
@@ -30,7 +30,7 @@ export const NavBox = styled.nav`
   }
 
   @media (max-width: ${breakpoints.xs}) {
-    padding: 0 1rem;
+    padding: 1rem;
     align-items: center;
     border-width: 0.075rem;
 

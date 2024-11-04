@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 export const Box = styled.ul`
   display: flex;
   gap: 0 2rem;
-  height: 3rem;
+  height: 100%;
   justify-content: end;
 
   @media (max-width: ${breakpoints.xs}) {
@@ -15,16 +15,12 @@ export const Box = styled.ul`
 export const MenuOption = styled.li`
   display: flex;
 
-  a {
-    display: flex;
-    align-items: center;
-  }
-
   &:nth-last-child(2)::after {
     content: "";
     display: inline-block;
     width: 0.1rem;
     background-color: ${(props: any) => props.theme.primary};
+    opacity: 0.5;
     margin-left: 2rem;
   }
 
@@ -32,8 +28,9 @@ export const MenuOption = styled.li`
     &:nth-last-child(2)::after {
       content: "";
       display: inline-block;
-      width: 0.1rem;
+      width: 1px;
       background-color: ${(props: any) => props.theme.primary};
+      opacity: 0.5;
       margin-left: 1rem;
     }
   }

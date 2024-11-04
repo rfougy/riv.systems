@@ -7,7 +7,6 @@ export const LogoAndButtonsBox = styled.div`
   justify-content: space-between;
   gap: 2rem;
   height: 1.344rem;
-  margin: 0.75rem 0rem;
 
   @media (max-width: ${breakpoints.xs}) {
     gap: 1rem;

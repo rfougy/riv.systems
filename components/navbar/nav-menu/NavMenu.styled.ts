@@ -32,7 +32,7 @@ export const MenuOption = styled.li`
     &:nth-last-child(2)::after {
       content: "";
       display: inline-block;
-      width: 0.1rem;
+      width: 0.075rem;
       background-color: ${(props: any) => props.theme.primary};
       margin-left: 1rem;
     }

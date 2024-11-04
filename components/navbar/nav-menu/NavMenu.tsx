@@ -16,13 +16,6 @@ const NavMenu: React.FC = () => {
     const parsedPath: string[] = path.split("/");
     let activeMenuOption: string | null;
 
-    if (path === "/") {
-      activeMenuOption = null; // Home Page
-      setHoveredOption(activeMenuOption);
-      setActiveOption(activeMenuOption);
-      return;
-    }
-
     if (parsedPath.length === 2) {
       activeMenuOption = parsedPath[1]; // Content Page
     } else {
@@ -58,18 +51,6 @@ const NavMenu: React.FC = () => {
           </Link>
         </MenuOption>
       ))}
-      <MenuOption onMouseOver={(): void => setHoveredOption("content")}>
-        <Link href={`/content`}>
-          <Text
-            isActiveOption={"content" === activeOption}
-            isHoveredOption={"content" === hoveredOption}
-            hoverIsActive={typeof hoveredOption === "string"}
-            userInHomePage={!activeOption}
-          >
-            {"content" === activeOption ? "./" + "ALL" : "/" + "ALL"}
-          </Text>
-        </Link>
-      </MenuOption>
     </Box>
   );
 };

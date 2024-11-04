@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { breakpoints } from "../../../styles/theme";
 
 export const Box = styled.button`
   align-items: center;
@@ -15,6 +16,10 @@ export const Box = styled.button`
   justify-content: space-between;
   padding: 0;
   width: 2.5rem;
+
+  @media (max-width: ${breakpoints.xxxs}) {
+    display: none;
+  }
 `;
 
 export const Circle = styled.div`

@@ -17,7 +17,7 @@ export const DropdownButton = styled.button`
   width: max-content;
   padding: 0.1rem 0.6rem;
 
-  @media (max-width: ${breakpoints.xs}) {
+  @media (max-width: ${breakpoints.xsm}) {
     display: none;
   }
 
@@ -52,7 +52,7 @@ export const Dropdown = styled.ul`
   border: 0.1rem solid ${(props: any) => props.theme.primary};
   border-radius: 0 1rem 1rem 1rem;
 
-  @media (max-width: ${breakpoints.xs}) {
+  @media (max-width: ${breakpoints.xsm}) {
     display: none;
     gap: 1rem;
     top: 4.5rem;

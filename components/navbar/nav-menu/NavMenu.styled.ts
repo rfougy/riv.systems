@@ -18,7 +18,7 @@ export const MenuOption = styled.li`
   &:nth-last-child(2)::after {
     content: "";
     display: inline-block;
-    width: 1px;
+    width: 0.1rem;
     background-color: ${(props: any) => props.theme.primary};
     opacity: 0.5;
     margin-left: 2rem;

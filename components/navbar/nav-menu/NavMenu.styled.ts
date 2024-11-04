@@ -60,12 +60,14 @@ export const Text = styled.p`
     isHoveredOption,
     hoverIsActive,
     userInHomePage,
+    isPhotosOption,
     optionIsLogo,
   }: {
     isActiveOption?: boolean;
     isHoveredOption?: boolean;
     hoverIsActive?: boolean;
     userInHomePage?: boolean;
+    isPhotosOption?: boolean;
     optionIsLogo?: boolean;
   }) => {
     if (
@@ -73,7 +75,12 @@ export const Text = styled.p`
       (userInHomePage && hoverIsActive)
     )
       return 0.5;
-    if ((isActiveOption && isHoveredOption) || userInHomePage || optionIsLogo)
+    if (
+      (isActiveOption && isHoveredOption) ||
+      userInHomePage ||
+      optionIsLogo ||
+      isPhotosOption
+    )
       return 1;
 
     return 0.5;
@@ -84,6 +91,25 @@ export const Text = styled.p`
 
   &:hover {
     font-weight: 700;
+    opacity: 1;
+  }
+`;
+
+export const PhotosBox = styled.li`
+  display: flex;
+  gap: 0 0.5rem;
+  height: 100%;
+  justify-content: end;
+  align-items: center;
+
+  opacity: 0.5;
+
+  img {
+    filter: invert(0.5);
+    -webkit-filter: invert(0.5);
+  }
+
+  &:hover {
     opacity: 1;
   }
 `;

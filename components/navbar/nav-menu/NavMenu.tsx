@@ -3,8 +3,10 @@ import { NextRouter, useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 import { sectionsList } from "../../../constants/sectionsList";
+import externalLinkIcon from "../../../public/assets/icons/external-link-icon.svg";
 
-import { Text, Box, MenuOption } from "./NavMenu.styled";
+import { Text, Box, MenuOption, PhotosBox } from "./NavMenu.styled";
+import Image from "next/image";
 
 const NavMenu: React.FC = () => {
   const { asPath: path }: NextRouter = useRouter();
@@ -52,7 +54,16 @@ const NavMenu: React.FC = () => {
         </MenuOption>
       ))}
       <a href="https://riv-photos.tumblr.com/" target="_blank" rel="noreferrer">
-        <Text>PHOTOS</Text>
+        <PhotosBox>
+          <Text isPhotosOption>PHOTOS</Text>
+          <Image
+            src={externalLinkIcon}
+            alt={"external link icon"}
+            height={10}
+            width={10}
+            sizes="100vw"
+          />
+        </PhotosBox>
       </a>
     </Box>
   );

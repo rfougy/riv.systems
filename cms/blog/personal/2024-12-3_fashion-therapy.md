@@ -17,7 +17,7 @@ To answer this question, I decided to refer to the internet's favorite online th
 
 **Also, when you're browsing, do you notice a pattern in the types of clothing or styles you're drawn to? Do they reflect how you’re feeling in the moment, or do they represent something you aspire to?**
 
-I'm sure that a part of the reason is because of our innate need for a dopamine rush, where buying leads to the rush which leads to more buying, and the cycle continues. But even with that said, I love clothing beyond the rush, I especially enjoy being able to express my inner self outwardly in the public eye in as accurate of a way as possible. 
+I'm sure that a part of the reason is because of our innate need for a dopamine rush, where buying leads to the rush which leads to more buying, and the cycle continues. But even with that said, I love clothing beyond the rush, I especially enjoy being able to express my inner self outwardly in the public eye in as accurate of a way as possible.
 
 A recent example of my personal style is buying an ear cuff with a long pendant, worn with a white button up shirt, thick black wool blazer, wool pants and leather dress shoes. The ear cuff makes me feel like I'm expressing my feminine qualities, making me comfortably vulnerable. There are times when I feel uncomfortable wearing it, and avoid eye contact with passerbys. Perhaps clothing is a way for me to rebel against this world, and it acts as both an armor and an interface.
 
@@ -47,7 +47,7 @@ Perhaps I perceive clothing not only as a means of protecting myself from the wo
 
 **It sounds like clothing has become so much more than just fabric or a shield—it’s a companion of sorts, something that helps you navigate a world that sometimes feels overwhelming or unsafe. That contrast between your traumatic experience and how intentional you are now with your style feels really significant. Back then, those borrowed clothes seemed to strip you of agency, shaping perceptions of you in a way you couldn’t control. Now, it’s as if your clothing allows you to take that control back, to speak without speaking.**
 
-It's not only that clothing as a means to regain a sense of agency in the world, but also something that resonates with my profoundly in terms of the stories, intentional designs, and artistic values expressed through them. The designers and community behind these clothes reassure me that I'm not alone in this world. 
+It's not only that clothing as a means to regain a sense of agency in the world, but also something that resonates with my profoundly in terms of the stories, intentional designs, and artistic values expressed through them. The designers and community behind these clothes reassure me that I'm not alone in this world.
 
 **That connection you feel to the designers and the stories behind the clothes sounds so grounding—it’s like they’re threads tying you to a community, reminding you that others are out there creating, expressing, and facing the world in their own ways. It’s a powerful thing to carry with you when the fear of death or vulnerability looms large.**
 

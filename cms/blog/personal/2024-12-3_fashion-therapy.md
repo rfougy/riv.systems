@@ -47,7 +47,7 @@ Perhaps I perceive clothing not only as a means of protecting myself from the wo
 
 **ChatGPT: It sounds like clothing has become so much more than just fabric or a shield—it’s a companion of sorts, something that helps you navigate a world that sometimes feels overwhelming or unsafe. That contrast between your traumatic experience and how intentional you are now with your style feels really significant. Back then, those borrowed clothes seemed to strip you of agency, shaping perceptions of you in a way you couldn’t control. Now, it’s as if your clothing allows you to take that control back, to speak without speaking.**
 
-Riv: It's not only that clothing as a means to regain a sense of agency in the world, but also something that resonates with me profoundly in terms of the stories, intentional designs, and artistic values expressed through them. The designers and communities behind these clothes reassure me that I'm not alone in this world.
+Riv: It's not only that I wear clothing to regain a sense of agency in the world, they also resonate with me profoundly in terms of the stories, intentional designs, and artistic values expressed through them. The designers and communities behind these clothes reassure me that I'm not alone in this world.
 
 **ChatGPT: That connection you feel to the designers and the stories behind the clothes sounds so grounding—it’s like they’re threads tying you to a community, reminding you that others are out there creating, expressing, and facing the world in their own ways. It’s a powerful thing to carry with you when the fear of death or vulnerability looms large.**
 

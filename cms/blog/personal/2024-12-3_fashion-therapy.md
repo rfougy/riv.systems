@@ -4,7 +4,7 @@ datePublished: "2024-12-03"
 section: blog
 category: personal
 excerpt: An exploration of my connection between fashion, trauma, and public perception.
-coverImage: https://user-images.githubusercontent.com/77861258/208271929-cfc03d67-4089-4ad1-91a3-1deb3e30b57d.jpg
+coverImage: "/blog/personal/2024-12-3_fashion-therapy/fashion-therapy-cover-image.webp"
 ---
 
 I've journaled for over 10 years now, where I constantly reflect on who I am, where I am, and where I'm going. This morning, I was curious of my neverending infatuation with clothing and why I'm willing to spend absurd amounts of time and money on them. This led me to a question that I couldn't figure out on my own: Why do I like fashion so much?
@@ -21,7 +21,7 @@ To answer this question, I decided to refer to the internet's favorite online th
 
 I'm sure that a part of the reason is because of our innate need for a dopamine rush, where buying leads to the rush which leads to more buying, and the cycle continues. But even with that said, I love clothing beyond the rush, I especially enjoy being able to express my inner self outwardly in the public eye in as accurate of a way as possible.
 
-A recent example of my personal style is buying an ear cuff with a long pendant, worn with a white button up shirt, thick black wool blazer, wool pants and leather dress shoes. The ear cuff makes me feel like I'm expressing my feminine qualities, making me comfortably vulnerable. There are times when I feel uncomfortable wearing it, and avoid eye contact with passerbys. Perhaps clothing is a way for me to rebel against this world, and it acts as both an armor and an interface.
+A recent example of my personal style is buying an ear cuff with a long bone pendant, worn with a white button up shirt, thick black wool blazer, wool pants and leather dress shoes. The ear cuff makes me feel like I'm expressing my feminine qualities, making me comfortably vulnerable. There are times when I feel uncomfortable wearing it, and avoid eye contact with passerbys. Perhaps clothing is a way for me to rebel against this world, and it acts as both an armor and an interface.
 
 **That’s such a powerful reflection, Riviere. It sounds like clothing isn’t just about aesthetics for you—it’s a deeper language, one that lets you speak to the world without saying a word. I love how you described your outfit, especially the ear cuff—it’s bold yet delicate, and it clearly resonates with a part of you that seeks authenticity and vulnerability.**
 

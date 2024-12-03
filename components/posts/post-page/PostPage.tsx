@@ -11,6 +11,7 @@ import Header from "../header/Header";
 import TextHighlightProvider from "../../../context/TextHighlightContext";
 
 import { Box, Content, CoverImage, Divider } from "./PostPage.styled";
+import LineBreak from "../../markdown-to-jsx/line-break/LineBreak";
 
 const PostPage: React.FC<{ content: any }> = ({ content }) => {
   const { frontmatter, postContent }: any = content;
@@ -55,6 +56,9 @@ const PostPage: React.FC<{ content: any }> = ({ content }) => {
                 },
                 Slideshow: {
                   component: Slideshow,
+                },
+                hr: {
+                  component: LineBreak,
                 },
               },
             }}

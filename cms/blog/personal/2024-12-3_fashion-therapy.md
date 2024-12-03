@@ -1,17 +1,19 @@
 ---
-title: "Fashion Therapy: My Relationship with Personal Style"
+title: "AI Fashion Therapy: Why Do I Like Fashion So Much?"
 datePublished: "2024-12-03"
 section: blog
 category: personal
-excerpt: My take on the defining meaningless content and why we should make it more often.
+excerpt: An exploration of my connection between fashion, trauma, and public perception.
 coverImage: https://user-images.githubusercontent.com/77861258/208271929-cfc03d67-4089-4ad1-91a3-1deb3e30b57d.jpg
 ---
 
-I've journaled for 10 years, where I constantly reflect on where I am, who I am, and where I'm going. This morning, I was curious of my neverending infatuation with clothing and why I'm willing to spend absurd amounts of money on them. This led to a question that I couldn't figure out on my own: Why do I like fashion so much?
+I've journaled for over 10 years now, where I constantly reflect on who I am, where I am, and where I'm going. This morning, I was curious of my neverending infatuation with clothing and why I'm willing to spend absurd amounts of time and money on them. This led me to a question that I couldn't figure out on my own: Why do I like fashion so much?
 
 To answer this question, I decided to refer to the internet's favorite online therapist: ChatGPT.
 
 ---
+
+## Fashion & Trauma
 
 **Let's dive into it. You mentioned that you browse clothing online daily and sometimes feel that pull to go for expensive pieces impulsively. I wonder, what do you think draws you to fashion so strongly? Is it about expressing yourself, finding connection, or maybe something else entirely?**
 
@@ -56,6 +58,10 @@ It's not only that clothing as a means to regain a sense of agency in the world,
 I would say it's less about immortality or permanence as a means of countering the fear of death, but rather stimulates my innate desire to express my creative self to the utmost while I'm still alive. I want to embrace life and battle against death through the creations I make.
 
 **That’s beautifully put, Riviere—fashion as a way to embrace life, to pour your essence into the present moment. It’s like each piece you wear or create becomes a small act of defiance, a way to say, “I’m here, I’m alive, and this is who I am.”**
+
+---
+
+## Personal Style & Public Perception
 
 A thought just came to mind. I've realized that I enjoy going out into the city simply for the sake of wearing my clothes, and I don't understand why.
 

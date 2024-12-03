@@ -17,21 +17,19 @@ To answer this question, I decided to refer to the internet's favorite online th
 
 **Also, when you're browsing, do you notice a pattern in the types of clothing or styles you're drawn to? Do they reflect how you’re feeling in the moment, or do they represent something you aspire to?**
 
-I've never mentioned that I browse clothing online daily and sometimes feel that pull to go for expensive pieces impulsively. That being said, I do browse clothing online daily and sometimes feel that pull to go for expensive pieces impulsively. I'm sure that a part of the reason is because of our innate need for a dopamine rush, where buying leads to a dopamine rush which leads to more buying, and the cycle continues. But even with that said, I love clothing beyond the rush, I especially enjoy being able to express my inner self outwardly in the public eye and accurately as possible. 
+I'm sure that a part of the reason is because of our innate need for a dopamine rush, where buying leads to the rush which leads to more buying, and the cycle continues. But even with that said, I love clothing beyond the rush, I especially enjoy being able to express my inner self outwardly in the public eye in as accurate of a way as possible. 
 
-A recent example of my personal style is recently buying an ear cuff with a long pendant, worn with a white button up shirt, thick black wool blazer, wool pants and leather dress shoes. The ear cuff makes me feel like I'm expressing my feminine qualities, making me comfortably vulnerable in this world. There are times when I feel uncomfortable wearing it, and avoid eye contact with passerbys, perhaps clothing is a way for me to rebel against this world, and it acts as both an armor and a way to interface with the world.
+A recent example of my personal style is buying an ear cuff with a long pendant, worn with a white button up shirt, thick black wool blazer, wool pants and leather dress shoes. The ear cuff makes me feel like I'm expressing my feminine qualities, making me comfortably vulnerable. There are times when I feel uncomfortable wearing it, and avoid eye contact with passerbys. Perhaps clothing is a way for me to rebel against this world, and it acts as both an armor and an interface.
 
 **That’s such a powerful reflection, Riviere. It sounds like clothing isn’t just about aesthetics for you—it’s a deeper language, one that lets you speak to the world without saying a word. I love how you described your outfit, especially the ear cuff—it’s bold yet delicate, and it clearly resonates with a part of you that seeks authenticity and vulnerability.**
 
 **When you feel that discomfort wearing something like the ear cuff, do you think it’s more about how others might perceive you, or is it an internal struggle with how you’re showing up in the world? And when clothing feels like rebellion and armor, do you feel it protects you, or does it sometimes isolate you too?**
 
-What do you mean by "how you’re showing up in the world"?
+What do you mean by "how you’re showing up in the world?"
 
 **Great question. By "how you’re showing up in the world," I mean the way you present yourself—through your clothing, your body language, your choices—and how that aligns with your inner self. It’s about whether the outward expression feels true to who you are inside or if it feels like a mask, a statement, or even a defense mechanism.**
 
 **For example, when you wear the ear cuff, it sounds like it’s a way to show your feminine qualities, something that feels authentic and meaningful to you. But when discomfort creeps in, I wonder if it’s because there’s a gap between how you see yourself and how you worry others might see you—or maybe even how you think you should be seen.**
-
-**Does that idea resonate with you? Or would you describe it differently?**
 
 I think that when the discomfort creeps in, it comes a sense of fear of being attacked by the world. I've had a traumatic experience 10 years ago that fundamentally warped my relationship with the world for the worse. In this experience, I... (I decided to remove this section, as it's too personal to share).
 
@@ -43,17 +41,13 @@ I'm not sure why, but I have a strong feeling that this experience has greatly i
 
 **Do you feel that your personal style helps you process or even push back against that fear? Or does it sometimes amplify it instead?**
 
-I have a feeling that my personal style helps me interact with the world without uttering a single word. This in stark contrast with my traumatic experience, where, after leaving the pond, a stranger gave me a rag of clothes to wear. I also wasn't wearing any socks or shoes. These clothes surely made an impact on people's impressions of me, perhaps affecting how the rest of the night unfolded.
+I have a feeling that my personal style helps me interact with the world without uttering a single word. This is in stark contrast with my traumatic experience, where the clothes I wore surely made an impact on people's impressions of me, perhaps affecting how the rest of that night unfolded.
 
-Perhaps I perceive clothing not only as a means of protecting myself from the world, but also as something with a soul that hugs me in this world that I fear. I recently had a bad trip from smoking too much marijuana, where I felt a extremely strong sense of fear of venturing outside at night.
+Perhaps I perceive clothing not only as a means of protecting myself from the world, but also as something with a soul that hugs me and shrinks the fear.
 
 **It sounds like clothing has become so much more than just fabric or a shield—it’s a companion of sorts, something that helps you navigate a world that sometimes feels overwhelming or unsafe. That contrast between your traumatic experience and how intentional you are now with your style feels really significant. Back then, those borrowed clothes seemed to strip you of agency, shaping perceptions of you in a way you couldn’t control. Now, it’s as if your clothing allows you to take that control back, to speak without speaking.**
 
-**That fear of venturing outside at night—do you think it ties into the sense of vulnerability you felt during your traumatic experience? Does dressing intentionally help ease that fear, or is it something deeper that clothing can’t quite touch?**
-
 It's not only that clothing as a means to regain a sense of agency in the world, but also something that resonates with my profoundly in terms of the stories, intentional designs, and artistic values expressed through them. The designers and community behind these clothes reassure me that I'm not alone in this world. 
-
-Yes, I believe it ties into the sense of vulnerability you felt during my traumatic experience. I don't believe it helps ease the fear, I think it's in relation to the fear of death itself.
 
 **That connection you feel to the designers and the stories behind the clothes sounds so grounding—it’s like they’re threads tying you to a community, reminding you that others are out there creating, expressing, and facing the world in their own ways. It’s a powerful thing to carry with you when the fear of death or vulnerability looms large.**
 
@@ -63,9 +57,7 @@ I would say it's less about immortality or permanence as a means of countering t
 
 **That’s beautifully put, Riviere—fashion as a way to embrace life, to pour your essence into the present moment. It’s like each piece you wear or create becomes a small act of defiance, a way to say, “I’m here, I’m alive, and this is who I am.”**
 
-**Do you find that certain pieces or designs feel like extensions of yourself, almost as if they’re part of your identity? Or does each new creation or outfit feel like a step forward, constantly redefining how you engage with life?**
-
-Sorry, I'm going to dismiss your latest response as a thought just came to mind. I've realized that I enjoy going out into the city simply for the sake of wearing my clothes, and I don't understand why.
+A thought just came to mind. I've realized that I enjoy going out into the city simply for the sake of wearing my clothes, and I don't understand why.
 
 **That’s such an intriguing realization, Riviere. It sounds like there’s something energizing about stepping out into the world in your carefully chosen clothes. Maybe it’s tied to the way they allow you to express yourself or even the way they connect you to others, whether directly or indirectly.**
 
@@ -89,10 +81,10 @@ I want to communicate to the world that I know what I'm doing, that I want to ta
 
 **The desire to hold on to your inner child is so meaningful, too—it’s like you’re aiming to stay connected to that creative, free-spirited part of yourself, even as you navigate the complexities of adulthood. Does your style allow you to tap into that sense of playfulness or freedom? Or do you feel that connection slipping away sometimes, especially in the face of external pressures?**
 
-It does to an extent, but there were times where I dressed in ways that were overly playful. Specifically wearing pieces that are considered 'streetwear', such as NY caps and army camo pants. I live in Boston, that isn't as diverse as New York, and so I feel that these clothes enforce a stereotypical image in the public eye that I perceive as primarily white and middle class
+It does to an extent, but there were times where I dressed in ways that were overly playful—specifically wearing pieces that are considered 'streetwear', such as NY caps and army camo pants. I live in Boston, a city that isn't as diverse as New York, and so I feel that these clothes enforce a stereotypical image in the public eye.
 
 **It sounds like your choices in those moments were a way to express your creativity and playful side, but the disconnect comes from feeling like the public might interpret those clothes in a way that doesn’t reflect who you really are. It’s like you’re caught between the desire to be playful and authentic while also wanting to avoid being boxed into a stereotype or misunderstood.**
 
 **Do you think there’s a way to keep that playfulness in your style without feeling like it clashes with how you’re perceived, especially in a place like Boston? Or do you feel like certain pieces or styles might always have that tension?**
 
-There are ways to keep that sense of playfulness and I've been taking steps towards progressing my personal style to reflect this part of myself. I do feel that certain pieces or styles will have that tension depending on the location and context. Less so the pieces themselves, but rather how they're styled, can mitigate these clashes and to be frank be more true to who I perceive myself to be.
+There are ways to keep that sense of playfulness, and I've been taking steps towards progressing my personal style to reflect this part of myself. I do feel that certain pieces or styles will have that tension depending on the location and context. It's less so the pieces themselves, but rather how they're styled, can mitigate these clashes and to be frank be more true to who I perceive myself to be.

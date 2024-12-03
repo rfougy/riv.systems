@@ -59,7 +59,7 @@ Riv: I would say it's less about immortality or permanence as a means of combati
 
 ---
 
-## Personal Style & Public Perception
+## Personal Style & The Public Eye
 
 Riv: A thought just came to mind. I've realized that sometimes I enjoy going out into the city simply for the sake of wearing my clothes, and I don't understand why.
 

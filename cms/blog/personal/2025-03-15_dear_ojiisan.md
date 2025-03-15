@@ -9,9 +9,9 @@ coverImage: "/blog/personal/2025-03-15_dear_ojiisan/dear-ojiisan_cover.webp"
 
 Dear Ojiisan,
 
-Before taking the flight to Paris, I took a look at the photo of you, Okaasan, and Michi more than usual. That photo was taken by me—I was about 10 years old, in a restaurant in Paris. You have the goofiest smile on, holding your fork and knife up high, ready to chow down.
+Before my flight to Paris, I found myself glancing at the photo of you, Okaasan, and Michi. That photo was taken by me—I was about 10 years old—in a restaurant in Paris. You had the goofiest smile on, with your fork and knife held up high, ready to chow down. What makes this photo special to me is that you'd never smile whenever photos were taken of you.
 
-I was about to go to Paris for Paris Fashion Week, yet all I could think about was whether or not I'd understand you a little but more by being in this city. I think it's safe to say that perhaps your main source of inspiration is Paris...
+I was about to fly to Paris for Paris Fashion Week, yet all I could think about was whether or not I'd be able understand you a little bit more by being in this city. I think it's safe to say now that Paris is your main source of inspiration...
 
 <br/>
 <br/>
@@ -25,9 +25,9 @@ I was about to go to Paris for Paris Fashion Week, yet all I could think about w
 <br/>
 <br/>
 
-The green benches broken in over the decades.
-The decaying wooden doors down narrow side streets.
-The abundance of people wearing scarves and smoking cigarettes while sitting at the outside spaces of cafes.
+Green wooden benches broken in over the course of decades.
+Decaying doors scattered down narrow alleyways.
+Strangers wearing scarves and smoking cigarettes, sitting at the outdoor seating of cafes and restaurants.
 
 <br/>
 <br/>
@@ -41,12 +41,9 @@ The abundance of people wearing scarves and smoking cigarettes while sitting at 
 <br/>
 <br/>
 
-Moss on concrete,
-antique statues,
-rusted metal,
-all only possible with the passing of time.
+Moss on concrete, antique statues, rusted metal—only possible by the passing of time.
 
-All of these things and more remind me of you; your personal style, your sense of curation in ornaments and architecture, the houses and stores you've built from scratch.
+All of these things and more remind me of you: your personal style, your sense of curation for your boutique, the houses and stores you've built from scratch.
 
 <br/>
 <br/>
@@ -60,7 +57,9 @@ All of these things and more remind me of you; your personal style, your sense o
 <br/>
 <br/>
 
-I miss you, I wish you were here so I could tell you about everything that's happened over the years and the things i've been trying so hard to build. I wish we could nerd over clotheswhile smoking cigarettes in front of a cafe in Paris.
+I miss you. I wish you were here so I could tell you about everything that's happened over the years and the things i've been trying so hard to build. 
+
+I wish we could nerd out over clothes, while smoking cigarettes and drinking coffee, in front of a cafe in Paris.
 
 <br/>
 <br/>

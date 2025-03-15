@@ -3,7 +3,7 @@ title: "Dear Ojiisan: A Letter from Paris"
 datePublished: "2025-03-15"
 section: blog
 category: personal
-excerpt: An exploration of my connection between fashion, trauma, and public perception.
+excerpt: Your inspirations scattered on every walk around the corner.
 coverImage: "/blog/personal/2025-03-15_dear_ojiisan/dear-ojiisan_cover.webp"
 ---
 
@@ -18,7 +18,7 @@ I was about to go to Paris for Paris Fashion Week, yet all I could think about w
 
 <Image 
     src="/blog/personal/2025-03-15_dear_ojiisan/dear-ojiisan_4.webp" 
-    alt="Sightseeing in Nuremberg, Germany" 
+    alt="Green bench in Square du Temple - Elie Wiesel" 
     aspectRatio="9:16"
 />
 
@@ -34,7 +34,7 @@ The abundance of people wearing scarves and smoking cigarettes while sitting at 
 
 <Image 
     src="/blog/personal/2025-03-15_dear_ojiisan/dear-ojiisan_7.webp" 
-    alt="Sightseeing in Nuremberg, Germany" 
+    alt="One of many gated walkways in Paris" 
     aspectRatio="9:16"
 />
 
@@ -53,7 +53,7 @@ All of these things and more remind me of you; your personal style, your sense o
 
 <Image 
     src="/blog/personal/2025-03-15_dear_ojiisan/dear-ojiisan_3.webp" 
-    alt="Sightseeing in Nuremberg, Germany" 
+    alt="Small animal house in a pond in Square du Temple - Elie Wiesel" 
     aspectRatio="4:3"
 />
 
@@ -67,6 +67,6 @@ I miss you, I wish you were here so I could tell you about everything that's hap
 
 <Image 
     src="/blog/personal/2025-03-15_dear_ojiisan/dear-ojiisan_6.webp" 
-    alt="Sightseeing in Nuremberg, Germany" 
+    alt="Cofee table in Le Marais" 
     aspectRatio="3:4"
 />

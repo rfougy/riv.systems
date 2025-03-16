@@ -4,7 +4,7 @@ datePublished: "2024-10-25"
 section: blog
 category: fashion
 excerpt: Who would have ever thought an opportunity like this could be possible?
-coverImage: "/blog/fashion/2024-10-25-adidas-trip/7-1.webp"
+coverImage: "/blog/fashion/adidas-trip/7-1.webp"
 ---
 
 The team and I at ARCHIVE.pdf have [worked with adidas](https://www.instagram.com/stories/highlights/18008854915814606/) over the past 1-2 years, promoting their silhouettes and even covering their Y-3 show during Paris Fashion Week. Earlier this year, adidas reached out to have us fly across the globe to Germany and visit their headquarters and archive—all expenses covered. I couldn’t attend due to personal matters, but man, I never believed lightning could strike twice until now.
@@ -15,7 +15,7 @@ Johnny, our Business Lead, and I arrived in the city of Nürnberg, Germany on a 
 <br/>
 
 <Image 
-    src="/blog/fashion/2024-10-25-adidas-trip/1-1.webp" 
+    src="/blog/fashion/adidas-trip/1-1.webp" 
     alt="Sightseeing in Nuremberg, Germany" 
     aspectRatio="9:16"
 />
@@ -31,10 +31,10 @@ Around 8AM the next morning, our group was en route to Herzogenaurach, the city 
 <br/>
 
 <Slideshow aspectRatio="4 / 3" navArrowColor="#ffffff" slides='[
-  { "src": "/blog/fashion/2024-10-25-adidas-trip/2-2.webp", "alt": "adidas Headquarters" },
-  { "src": "/blog/fashion/2024-10-25-adidas-trip/2-4.webp", "alt": "adidas Headquarters" },
-  { "src": "/blog/fashion/2024-10-25-adidas-trip/2-3.webp", "alt": "adidas Headquarters" },
-  { "src": "/blog/fashion/2024-10-25-adidas-trip/2-1.webp", "alt": "adidas Headquarters" }
+  { "src": "/blog/fashion/adidas-trip/2-2.webp", "alt": "adidas Headquarters" },
+  { "src": "/blog/fashion/adidas-trip/2-4.webp", "alt": "adidas Headquarters" },
+  { "src": "/blog/fashion/adidas-trip/2-3.webp", "alt": "adidas Headquarters" },
+  { "src": "/blog/fashion/adidas-trip/2-1.webp", "alt": "adidas Headquarters" }
 ]' />
 
 <br/>
@@ -48,9 +48,9 @@ Ilka (VP of Footwear Design) and Maja (Senior Director of Product Marketing) gav
 <br/>
 
 <Slideshow aspectRatio="4 / 3" navArrowColor="#ffffff" slides='[
-  { "src": "/blog/fashion/2024-10-25-adidas-trip/3-1.webp", "alt": "adidas Makerlab" },
-  { "src": "/blog/fashion/2024-10-25-adidas-trip/3-2.webp", "alt": "adidas Makerlab" },
-  { "src": "/blog/fashion/2024-10-25-adidas-trip/3-3.webp", "alt": "adidas Makerlab" }
+  { "src": "/blog/fashion/adidas-trip/3-1.webp", "alt": "adidas Makerlab" },
+  { "src": "/blog/fashion/adidas-trip/3-2.webp", "alt": "adidas Makerlab" },
+  { "src": "/blog/fashion/adidas-trip/3-3.webp", "alt": "adidas Makerlab" }
 ]' />
 
 <br/>
@@ -62,10 +62,10 @@ After Makerlab, we took a tour across the adidas campus. This included impressiv
 <br/>
 
 <Slideshow aspectRatio="4 / 3" navArrowColor="#ffffff" slides='[
-  { "src": "/blog/fashion/2024-10-25-adidas-trip/4-1.webp", "alt": "adidas Headquarters" },
-  { "src": "/blog/fashion/2024-10-25-adidas-trip/5-4.webp", "alt": "adidas Tour" },
-  { "src": "/blog/fashion/2024-10-25-adidas-trip/5-1.webp", "alt": "adidas Tour" },
-  { "src": "/blog/fashion/2024-10-25-adidas-trip/5-2.webp", "alt": "adidas Tour" }
+  { "src": "/blog/fashion/adidas-trip/4-1.webp", "alt": "adidas Headquarters" },
+  { "src": "/blog/fashion/adidas-trip/5-4.webp", "alt": "adidas Tour" },
+  { "src": "/blog/fashion/adidas-trip/5-1.webp", "alt": "adidas Tour" },
+  { "src": "/blog/fashion/adidas-trip/5-2.webp", "alt": "adidas Tour" }
 ]' />
 
 <br/>
@@ -77,7 +77,7 @@ Last but not least was a tour of the adidas Archive. Apparently, only a select f
 <br/>
 
 <Image 
-    src="/blog/fashion/2024-10-25-adidas-trip/6-1.webp" 
+    src="/blog/fashion/adidas-trip/6-1.webp" 
     alt="adidas Tour" 
     aspectRatio="4:3"
 />
@@ -93,7 +93,7 @@ Since the very beginning, ARCHIVE.pdf has been strictly comprised of volunteers:
 <br/>
 
 <Image 
-    src="/blog/fashion/2024-10-25-adidas-trip/7-1.webp" 
+    src="/blog/fashion/adidas-trip/7-1.webp" 
     alt="adidas Tour" 
     aspectRatio="9:16"
 />

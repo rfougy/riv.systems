@@ -4,7 +4,7 @@ datePublished: "2024-12-03"
 section: blog
 category: personal
 excerpt: An exploration of my connection between fashion, trauma, and public perception.
-coverImage: "/blog/personal/2024-12-3_fashion-therapy/fashion-therapy-cover-image.webp"
+coverImage: "/blog/personal/fashion-therapy/fashion-therapy-cover-image.webp"
 ---
 
 I've journaled for over 10 years now, where I constantly reflect on who I am, where I am, and where I'm going. This morning, I was curious of my never-ending infatuation with clothing and why I'm willing to spend absurd amounts of time and money on them. This led me to a question that I couldn't figure out on my own: Why do I like fashion so much?

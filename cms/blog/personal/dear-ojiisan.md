@@ -4,7 +4,7 @@ datePublished: "2025-03-16"
 section: blog
 category: personal
 excerpt: Your inspirations, scattered around every corner.
-coverImage: "/blog/personal/2025-03-16_dear_ojiisan/dear-ojiisan_cover.webp"
+coverImage: "/blog/personal/dear-ojiisan/dear-ojiisan_cover.webp"
 ---
 
 Dear Ojiisan,
@@ -17,7 +17,7 @@ I was about to fly to Paris for Paris Fashion Week, yet all I could think about 
 <br/>
 
 <Image 
-    src="/blog/personal/2025-03-16_dear_ojiisan/dear-ojiisan_4.webp" 
+    src="/blog/personal/dear-ojiisan/dear-ojiisan_4.webp" 
     alt="Green bench in Square du Temple - Elie Wiesel" 
     aspectRatio="2:3"
 />
@@ -33,7 +33,7 @@ Moss on concrete, antique statues, rusted metal—only possible by the passing o
 <br/>
 
 <Image 
-    src="/blog/personal/2025-03-16_dear_ojiisan/dear-ojiisan_7.webp" 
+    src="/blog/personal/dear-ojiisan/dear-ojiisan_7.webp" 
     alt="One of many gated walkways in Paris" 
     aspectRatio="2:3"
 />
@@ -47,7 +47,7 @@ All of these things and more remind me of you: your personal style, your sense o
 <br/>
 
 <Image 
-    src="/blog/personal/2025-03-16_dear_ojiisan/dear-ojiisan_3.webp" 
+    src="/blog/personal/dear-ojiisan/dear-ojiisan_3.webp" 
     alt="Small animal house in a pond in Square du Temple - Elie Wiesel" 
     aspectRatio="3:2"
 />
@@ -63,7 +63,7 @@ I wish we could nerd out over clothes, while we drink coffee amd smoke cigarette
 <br/>
 
 <Image 
-    src="/blog/personal/2025-03-16_dear_ojiisan/dear-ojiisan_6.webp" 
+    src="/blog/personal/dear-ojiisan/dear-ojiisan_6.webp" 
     alt="Cofee table in Le Marais" 
     aspectRatio="2:3"
 />

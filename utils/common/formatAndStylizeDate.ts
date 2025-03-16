@@ -7,7 +7,6 @@ export function formatAndStylizeDate(date: string): string {
 
 function dateToLocalString(date: string): string {
   return new Date(date.replace(/-/g, "/")).toLocaleString("en-US", {
-    timeZone: "America/New_York",
     year: "numeric",
     month: "numeric",
     day: "numeric",

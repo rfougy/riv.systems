@@ -9,7 +9,7 @@ export function useInterval(
   callback: () => void | string,
   delay: number
 ) {
-  const savedCallback: any = useRef();
+  const savedCallback = useRef<() => void | string>(() => {});
 
   function tick() {
     savedCallback.current();

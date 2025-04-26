@@ -3,7 +3,7 @@ title: "How to Free Yourself from Personal Style"
 datePublished: "2025-04-28"
 section: blog
 category: fashion
-excerpt: Exploring the caveats of personal style and how to take back control.
+excerpt: Exploring the caveats of personal style and how you can take back control.
 coverImage: "/blog/fashion/freedom-from-personal-style/personal-style_cover.webp"
 ---
 

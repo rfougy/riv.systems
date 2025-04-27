@@ -104,7 +104,7 @@ Reject your fear of missing out—instead, accept the habit of waiting and conte
 
 <br/>
 
-The explosion of micro-trends have granted the new generation with the power to shape-shift on command. Countless identities are available through the swipe of a fingertip, ready to replicate through pre-packaged curations of clothing—outfits of pure symbolic potency—derived and detached from their cultural origins. The youth now have an overabundance of styles to sift through in the bins of days gone by, expediting their journeys to identity. Perhaps those who hold the title “The Lost Generation” should be reconsidered.
+The explosion of micro-trends have granted the new generation with the power to shape-shift on command. Countless personas are available through the swipe of a fingertip, ready to replicate through pre-packaged curations of clothing—outfits of pure symbolic potency—derived and detached from their cultural origins. The youth now have an overabundance of styles to sift through in the bins of days gone by, expediting their journeys to identity. Perhaps those who hold the title “The Lost Generation” should be reconsidered.
 
 Despite its dispersion throughout fashion discourse and digital content, personal style is a positive catalyst for the sanitization of fashion fodder. However, personal style can never, and should never, be considered a tool for self-actualization. No matter how well your choice of jacket reflects your personality, or how your style progression over the years gives you the feeling that you’re one step closer to being ‘complete’, you’re not your wardrobe. You’re not the outfits you wear on your social media accounts. You’re not your fucking khakis.
 

@@ -1,6 +1,6 @@
 ---
 title: "How to Free Yourself from Personal Style"
-datePublished: "2025-04-28"
+datePublished: "2025-04-27"
 section: blog
 category: fashion
 excerpt: Exploring the caveats of personal style and how you can take back control.
@@ -15,7 +15,7 @@ Fast forward to the present day, the means of expressing one’s self are infini
 
 Everyone has their own definitions of personal style—funnily enough, this reveals a definition of its own: style that is personal to you. Within the context of fashion, however, the community has associated the term with an aspiration to express one’s “true self” to the world. But what happens when that same community numbs itself through lethal injections of micro-trends and looks to personal style as the cure?
 
-Where trends perpetuate the vicious spirals of desire, personal style inspires the opposite: mindful consumption, reflection, intention. One could proudly tout that this is a trend in the right direction—if only the elixir weren’t quenched by an insatiable thirst for more. We’ve misled ourselves into believing that the goal of personal style is something akin to self-actualization, with each piece of clothing we purchase bringing us one step closer. In reality, it’s a never-ending quest because we are ever-changing.
+Where trends perpetuate the vicious spirals of desire, personal style can inspire the opposite: mindful consumption, reflection, intention. One could proudly tout that this is a trend in the right direction—if only we weren't cursed by the insatiable thirst for more. We’ve misled ourselves into believing that the goal of personal style is something akin to self-actualization, with each piece of clothing we purchase bringing us one step closer. In reality, it’s a never-ending quest because we are ever-changing.
 
 Many embark on the journey of personal style oblivious to the tragedy that has already befallen them, others embrace its paradoxical nature in all of its beauty, and fewer break free from this cycle that repeats itself like an snake eating its own tail. And with economic uncertainty polluting the air we breathe, the winding of this road has become evermore contorted.
 
@@ -39,7 +39,7 @@ If the eyes are the windows to the soul, appearance opens the door to one’s so
 
 ---
 
-Most people start their journeys into personal style from the mainstream, and gradually flow into the downstream of subcultures; as they gain experience through exploration and experimentation, the layers of the fashion onion begin to peel away, revealing the cultural phenomenon as ripe to its core. After a certain point in one’s style progression, however, there will be diminishing returns:
+Most people start their journeys into personal style from the mainstream, and gradually flow into the downstream of subcultures; as they gain experience through exploration and experimentation, the layers of the fashion onion begin to peel away, revealing the cultural phenomenon as ripe to its core. After a certain point in one’s style progression, however, there may be diminishing returns:
 
 <br/>
 <br/>
@@ -104,7 +104,7 @@ Reject your fear of missing out—instead, accept the habit of waiting and conte
 
 <br/>
 
-The explosion of micro-trends have granted the new generation with the power to shape-shift on command. Countless identities are available through the swipe of a fingertip, ready to replicate through pre-packaged curations of clothing—outfits of pure symbolic potency—derived and detached from their cultural origins. The youth now have an overabundance of styles to sift through in the bins of days gone by, expediting their journeys to identity. Perhaps those who hold the title “The Lost Generation” should be reconsidered.
+The explosion of micro-trends have granted the new generation with the power to shape-shift on command. Countless personas are available through the swipe of a fingertip, ready to replicate through pre-packaged curations of clothing—outfits of pure symbolic potency—derived and detached from their cultural origins. The youth now have an overabundance of styles to sift through in the bins of days gone by, expediting their journeys to identity. Perhaps those who hold the title “The Lost Generation” should be reconsidered.
 
 Despite its dispersion throughout fashion discourse and digital content, personal style is a positive catalyst for the sanitization of fashion fodder. However, personal style can never, and should never, be considered a tool for self-actualization. No matter how well your choice of jacket reflects your personality, or how your style progression over the years gives you the feeling that you’re one step closer to being ‘complete’, you’re not your wardrobe. You’re not the outfits you wear on your social media accounts. You’re not your fucking khakis.
 

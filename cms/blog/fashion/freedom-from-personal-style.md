@@ -39,7 +39,7 @@ If the eyes are the windows to the soul, appearance opens the door to one’s so
 
 ---
 
-Most people start their journeys into personal style from the mainstream, and gradually flow into the downstream of subcultures; as they gain experience through exploration and experimentation, the layers of the fashion onion begin to peel away, revealing the cultural phenomenon as ripe to its core. After a certain point in one’s style progression, however, there will be diminishing returns:
+Most people start their journeys into personal style from the mainstream, and gradually flow into the downstream of subcultures; as they gain experience through exploration and experimentation, the layers of the fashion onion begin to peel away, revealing the cultural phenomenon as ripe to its core. After a certain point in one’s style progression, however, there may be diminishing returns:
 
 <br/>
 <br/>

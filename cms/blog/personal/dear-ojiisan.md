@@ -57,7 +57,7 @@ All of these things and more remind me of you: your personal style, your sense o
 
 I miss you. I wish you were still here so I could tell you about everything that's happened since you left and the things I've been trying so hard to build.
 
-I wish we could nerd out over clothes, while we drink coffee amd smoke cigarettes, in front of a café in Paris.
+I wish we could nerd out over clothes, while we drink coffee and smoke cigarettes, in front of a café in Paris.
 
 <br/>
 <br/>

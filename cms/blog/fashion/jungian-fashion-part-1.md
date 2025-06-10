@@ -11,6 +11,8 @@ Seldom do we delve into the depths of our souls, where the gates to the divine a
 
 Along the journey of self-discovery, we often confront the darkest of qualities that we’ve neglected over the years. But when we push onward, we begin to realize that these exact qualities are what make up our very being. Such thoughts permeated my mind when I stepped, small and steady, into The Old Slaughterhouse of Poznan, Poland.
 
+Echoes of the abandoned factory carried a peculiar stench of hollow drywall, while metal rods that peeked through the rubble remained stained in a faded shade of red. Pigeon feathers flocked down the concrete ground, with death’s breath brushing them about, forming whispers that pranced atop fragile footprints made of dust.
+
 <br/>
 <br/>
 
@@ -27,8 +29,6 @@ Along the journey of self-discovery, we often confront the darkest of qualities 
 
 <br/>
 <br/>
-
-Echoes of the abandoned factory carried a peculiar stench of hollow drywall, while metal rods that peeked through the rubble remained stained in a faded shade of red. Pigeon feathers flocked down the concrete ground, with death’s breath brushing them about, forming whispers that pranced atop fragile footprints made of dust.
 
 I could imagine plump carcasses hanging from hooks that swayed throughout this facility—ripe for a salivated plucking. And yet, despite the horror from a now distant past, the slaughterhouse evoked a deep catharsis similar to entering Antwerp’s Cathedral of Our Lady. The mix of repulsion and fascination gave off a bittersweet sensation, as if I was on the cusp of discovering something profound about myself. We can recognize this same sensation through experiencing art, music, film, and perhaps most peculiarly, fashion.
 

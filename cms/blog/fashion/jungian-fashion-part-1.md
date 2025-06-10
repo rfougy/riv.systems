@@ -9,7 +9,7 @@ coverImage: "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_6.webp"
 
 Seldom do we delve into the depths of our souls, where the gates to the divine await us all.
 
-Along the journey of self-discovery, we often confront the darkest of qualities that we’ve neglected over the years. But when we push onward, we begin to realize that these exact qualities are what make up our very being. Such thoughts permeated my mind when I stepped, small and steady, into The Old Slaughterhouse of Poznan, Poland.
+Along the journey of self-discovery, we often confront the darkest of qualities that we’ve neglected over the years. But when we push onward, we begin to realize that these exact qualities are what make up our very being. Such thoughts permeated my mind when I stepped, slow and steady, into The Old Slaughterhouse of Poznan, Poland.
 
 Echoes of the abandoned factory carried a peculiar stench of hollow drywall, while metal rods that peeked through the rubble remained stained in a faded shade of red. Pigeon feathers flocked down the concrete ground, with death’s breath brushing them about, forming whispers that pranced atop fragile footprints made of dust.
 

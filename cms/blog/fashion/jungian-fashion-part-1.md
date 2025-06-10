@@ -14,7 +14,7 @@ Along the journey of self-discovery, we often confront the darkest of qualities 
 <br/>
 <br/>
 
-<Slideshow aspectRatio="4 / 3" navArrowColor="#ffffff" slides='[
+<Slideshow aspectRatio="55 / 36" navArrowColor="#ffffff" slides='[
   { "src": "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_1.webp", "alt": "Photo of the Old Slaughterhouse in Poznan, Poland" },
   { "src": "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_2.webp", "alt": "Photo of the Old Slaughterhouse in Poznan, Poland" },
   { "src": "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_3.webp", "alt": "Photo of the Old Slaughterhouse in Poznan, Poland" },

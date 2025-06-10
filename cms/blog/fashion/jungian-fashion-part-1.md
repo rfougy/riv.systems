@@ -3,7 +3,7 @@ title: "Jungian Fashion, Part 1: Transgressive Art as Projections of the Shadow"
 datePublished: "2025-06-12"
 section: blog
 category: fashion
-excerpt: Exploring how our darkest qualites are projected onto art and how we should respond.
+excerpt: Discovering our darkest qualities through art, and how we can come to terms with them.
 coverImage: "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_6.webp"
 ---
 

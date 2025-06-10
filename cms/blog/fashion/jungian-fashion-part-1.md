@@ -34,7 +34,7 @@ I could imagine plump carcasses hanging from hooks that swayed throughout this f
 
 ---
 
-Those familiar with artisanal fashion can draw parallels in philosophical inquiries between The Old Slaughterhouse and designer Carol Christian Poell. During his formative years, Poell’s adoptive father exposed him to leather-crafting through their family business; as such, his creative trajectory deviated from traditional paths in fashion, aligning him more closely with that of an industrial designer: “The most important thing to have as a fashion designer is your own point of view. I prefer the approach of an industrial designer focusing on single tailored pieces, fabric analysis and how texture relates to form.” However, despite his claims that “aesthetics takes second place” in his work, artistic interpretations are not only inevitable, but necessary. In fact, Poell’s artistic expressions of the confrontation of opposing forces can be surmised through his presentations and design motifs.
+Those familiar with artisanal fashion can draw parallels in philosophical inquiries between The Old Slaughterhouse and designer Carol Christian Poell. During his formative years, Poell’s adoptive father exposed him to leather-crafting through their family business; as such, his creative trajectory deviated from traditional paths in fashion, aligning him more closely [with that of an industrial designer](https://www.instagram.com/p/C0UYWiSM3qL/?hl=en&img_index=1): “The most important thing to have as a fashion designer is your own point of view. I prefer the approach of an industrial designer focusing on single tailored pieces, fabric analysis and how texture relates to form.” However, despite his claims that [“aesthetics takes second place”](https://akaibu.co/blogs/library/carol-christian-poell-interview-by-domus-in-2009) in his work, artistic interpretations are not only inevitable, but necessary. In fact, Poell’s artistic expressions of the confrontation of opposing forces can be surmised through his presentations and design motifs.
 
 For his Spring/Summer 2001 presentation, Poell invited industry professionals into a chilling space mirroring the presentation’s title: Three Refrigerated Cells. In the center of the first cell was an assortment of shirts, trousers and jackets, all of which hung above complementary footwear, forming a harmonious circle.
 
@@ -65,11 +65,17 @@ Spectators paced around the offerings, taking note of their materials and constr
 <br/>
 
 _Sacred animals are manufactured into livestock,_
+<br/>
 _slaughtered and dismembered,_
+<br/>
 _ripped of their souls along with their skin,_
+<br/>
 _dyed black,_
+<br/>
 _stitched back into wearable monstrosities,_
+<br/>
 _repackaged as harmless commodities,_
+<br/>
 _purchased and worn for the occasional social outing._
 
 If the first cell represented fantasy, and the second reality, the third was identity. In it sat a chair for the attendees, and facing the chair was a rectangular mirror, where they confronted the notion that we are all an essential step in this lifeless cycle. “I wanted people to look into the mirror, I wanted to ask them: Can you deal with it? How do you deal with it?”

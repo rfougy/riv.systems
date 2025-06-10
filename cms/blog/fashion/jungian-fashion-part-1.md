@@ -4,10 +4,10 @@ datePublished: "2025-06-12"
 section: blog
 category: fashion
 excerpt: Exploring how our darkest qualites are projected onto art and how we should respond.
-coverImage: "/blog/fashion/jungian-fashion-part-1/jungian-fashion-part-1_1.webp"
+coverImage: "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_6.webp"
 ---
 
-Seldom do we delve into the depths of our souls, where the gates to the divine await us all. 
+Seldom do we delve into the depths of our souls, where the gates to the divine await us all.
 
 Along the journey of self-discovery, we often confront the darkest of qualities that we’ve neglected over the years. But when we push onward, we begin to realize that these exact qualities are what make up our very being. Such thoughts permeated my mind when I stepped, small and steady, into The Old Slaughterhouse of Poznan, Poland.
 
@@ -15,10 +15,14 @@ Along the journey of self-discovery, we often confront the darkest of qualities 
 <br/>
 
 <Slideshow aspectRatio="4 / 3" navArrowColor="#ffffff" slides='[
-  { "src": "/blog/fashion/adidas-trip/2-2.webp", "alt": "adidas Headquarters" },
-  { "src": "/blog/fashion/adidas-trip/2-4.webp", "alt": "adidas Headquarters" },
-  { "src": "/blog/fashion/adidas-trip/2-3.webp", "alt": "adidas Headquarters" },
-  { "src": "/blog/fashion/adidas-trip/2-1.webp", "alt": "adidas Headquarters" }
+  { "src": "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_1.webp", "alt": "Photo of the Old Slaughterhouse in Poznan, Poland" },
+  { "src": "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_2.webp", "alt": "Photo of the Old Slaughterhouse in Poznan, Poland" },
+  { "src": "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_3.webp", "alt": "Photo of the Old Slaughterhouse in Poznan, Poland" },
+  { "src": "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_4.webp", "alt": "Photo of the Old Slaughterhouse in Poznan, Poland" },
+  { "src": "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_5.webp", "alt": "Photo of the Old Slaughterhouse in Poznan, Poland" },
+  { "src": "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_6.webp", "alt": "Photo of the Old Slaughterhouse in Poznan, Poland" },
+  { "src": "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_7.webp", "alt": "Photo of the Old Slaughterhouse in Poznan, Poland" },
+  { "src": "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_8.webp", "alt": "Photo of the Old Slaughterhouse in Poznan, Poland" }
 ]' />
 
 <br/>
@@ -32,15 +36,15 @@ I could imagine plump carcasses hanging from hooks that swayed throughout this f
 
 Those familiar with artisanal fashion can draw parallels in philosophical inquiries between The Old Slaughterhouse and designer Carol Christian Poell. During his formative years, Poell’s adoptive father exposed him to leather-crafting through their family business; as such, his creative trajectory deviated from traditional paths in fashion, aligning him more closely with that of an industrial designer: “The most important thing to have as a fashion designer is your own point of view. I prefer the approach of an industrial designer focusing on single tailored pieces, fabric analysis and how texture relates to form.” However, despite his claims that “aesthetics takes second place” in his work, artistic interpretations are not only inevitable, but necessary. In fact, Poell’s artistic expressions of the confrontation of opposing forces can be surmised through his presentations and design motifs.
 
-For his Spring/Summer 2001 presentation, Poell invited industry professionals into a chilling space mirroring the presentation’s title: Three Refrigerated Cells. In the center of the first cell was an assortment of shirts, trousers and jackets, all of which hung above complementary footwear, forming a harmonious circle. 
+For his Spring/Summer 2001 presentation, Poell invited industry professionals into a chilling space mirroring the presentation’s title: Three Refrigerated Cells. In the center of the first cell was an assortment of shirts, trousers and jackets, all of which hung above complementary footwear, forming a harmonious circle.
 
 <br/>
 <br/>
 
 <Image 
-    src="/blog/fashion/adidas-trip/6-1.webp" 
-    alt="adidas Tour" 
-    aspectRatio="4:3"
+    src="/blog/fashion/jungian-fashion-part-1/three-refrigerated-cells_1.png" 
+    alt="Photo of Three Refrigerated Cells SS01 Presentation by Carol Christian Poell" 
+    aspectRatio="16:9"
 />
 
 <br/>
@@ -52,21 +56,21 @@ Spectators paced around the offerings, taking note of their materials and constr
 <br/>
 
 <Image 
-    src="/blog/fashion/adidas-trip/6-1.webp" 
-    alt="adidas Tour" 
-    aspectRatio="4:3"
+    src="/blog/fashion/jungian-fashion-part-1/three-refrigerated-cells_2.png" 
+    alt="Photo of Three Refrigerated Cells SS01 Presentation by Carol Christian Poell" 
+    aspectRatio="3:4"
 />
 
 <br/>
 <br/>
 
-*Sacred animals are manufactured into livestock,*
-*slaughtered and dismembered,*
-*ripped of their souls along with their skin,*
-*dyed black,*
-*stitched back into wearable monstrosities,*
-*repackaged as harmless commodities,*
-*purchased and worn for the occasional social outing.*
+_Sacred animals are manufactured into livestock,_
+_slaughtered and dismembered,_
+_ripped of their souls along with their skin,_
+_dyed black,_
+_stitched back into wearable monstrosities,_
+_repackaged as harmless commodities,_
+_purchased and worn for the occasional social outing._
 
 If the first cell represented fantasy, and the second reality, the third was identity. In it sat a chair for the attendees, and facing the chair was a rectangular mirror, where they confronted the notion that we are all an essential step in this lifeless cycle. “I wanted people to look into the mirror, I wanted to ask them: Can you deal with it? How do you deal with it?”
 
@@ -74,9 +78,9 @@ If the first cell represented fantasy, and the second reality, the third was ide
 <br/>
 
 <Image 
-    src="/blog/fashion/adidas-trip/6-1.webp" 
-    alt="adidas Tour" 
-    aspectRatio="4:3"
+    src="/blog/fashion/jungian-fashion-part-1/three-refrigerated-cells_3.webp" 
+    alt="Photo of Three Refrigerated Cells SS01 Presentation by Carol Christian Poell" 
+    aspectRatio="3:4"
 />
 
 <br/>
@@ -88,9 +92,9 @@ The theme of confrontation reveals itself throughout all facets of Poell’s epo
 <br/>
 
 <Image 
-    src="/blog/fashion/adidas-trip/6-1.webp" 
-    alt="adidas Tour" 
-    aspectRatio="4:3"
+    src="/blog/fashion/jungian-fashion-part-1/carol-christian-poll-design-motifs_1.webp" 
+    alt="Various items from Carol Christian Poell" 
+    aspectRatio="2:1"
 />
 
 <br/>

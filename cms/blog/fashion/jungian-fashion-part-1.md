@@ -4,7 +4,7 @@ datePublished: "2025-06-12"
 section: blog
 category: fashion
 excerpt: Discovering our darkest qualities through art, and how we can come to terms with them.
-coverImage: "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_6.webp"
+coverImage: "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_2.webp"
 ---
 
 Seldom do we delve into the depths of our souls, where the gates to the divine await us all.

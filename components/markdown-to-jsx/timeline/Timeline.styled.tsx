@@ -31,13 +31,17 @@ export const TimelineDot = styled.div<{ isCaseStudy?: string }>`
   border: 0.25rem solid #ffffff;
 `;
 
+export const EventContainer = styled.div<{ isCaseStudy?: string }>`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
 export const EventTitle = styled.h3<{ isCaseStudy?: string }>`
-  display: inline-block;
   font-size: ${(props) => (props.isCaseStudy ? "1.125rem" : "1rem")};
   font-weight: ${(props) => (props.isCaseStudy ? "600" : "400")};
   color: #000000;
   margin: 0;
-  width: fit-content;
 
   &:hover {
     text-decoration: underline;
@@ -73,32 +77,30 @@ export const YearSeparator = styled.div`
 `;
 
 export const YearTitle = styled.h3`
+  position: absolute;
+  left: -10rem;
+  top: -2.5rem;
   font-size: 1.25rem;
   font-weight: 700;
   color: #000000;
   margin: 0;
-  position: absolute;
-  left: -10rem;
-  top: -2.5rem;
 `;
 
-export const EventDetails = styled.div`
+export const CaseStudyButton = styled.button`
   display: flex;
-  gap: 0 0.5rem;
-  height: 100%;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
   align-items: center;
-
-  img {
-    filter: invert(0.5);
-    -webkit-filter: invert(0.5);
-  }
+  width: fit-content;
+  background-color: ${(props: any) =>
+    props.theme.id === "light"
+      ? "rgba(255, 255, 255, 0.3)"
+      : "rgba(0, 0, 0, 0.3)"};
+  border: 0.1rem solid ${(props: any) => props.theme.primary};
+  border-radius: 3vh;
+  padding: 0.1rem 0.5rem;
 
   &:hover {
-    text-decoration: underline;
-    cursor: cell;
-    img {
-      filter: invert(0);
-      -webkit-filter: invert(0);
-    }
+    background: ${(props: any) => props.theme.highlight};
   }
 `;

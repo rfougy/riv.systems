@@ -1,7 +1,8 @@
 import { IEvent } from "../../../interfaces/timeline/IEvent";
 import {
+  CaseStudyButton,
+  EventContainer,
   EventDate,
-  EventDetails,
   EventTitle,
   TimelineContainer,
   TimelineDot,
@@ -56,7 +57,7 @@ const Timeline: React.FC<{
       <TimelineItem key={i}>
         <TimelineDot isCaseStudy={caseStudy} />
         <EventDate>{formatDate(date)}</EventDate>
-        <div className="flex flex-col flex-nowrap">
+        <EventContainer>
           {link ? (
             <a href={link} target="_blank" rel="noreferrer">
               <EventTitle isCaseStudy={caseStudy}>
@@ -74,8 +75,8 @@ const Timeline: React.FC<{
           ) : (
             <EventTitle isCaseStudy={caseStudy}>{title}</EventTitle>
           )}
-          {caseStudy && <button />}
-        </div>
+          {caseStudy && <CaseStudyButton>Learn More</CaseStudyButton>}
+        </EventContainer>
       </TimelineItem>
     );
   });

@@ -10,7 +10,7 @@ export const TimelineLine = styled.div`
   left: 8.5rem;
   top: 0;
   bottom: 0;
-  width: 2px;
+  width: 0.1rem;
   background-color: #000000;
 `;
 
@@ -29,6 +29,8 @@ export const TimelineDot = styled.div<{ isCaseStudy?: string }>`
   background-color: ${(props) => (props.isCaseStudy ? "#1f2937" : "#6b7280")};
   border-radius: 50%;
   border: 0.25rem solid #ffffff;
+  box-shadow: ${(props) =>
+    props.isCaseStudy ? "0 0 0 0.1rem #000000" : "none"};
 `;
 
 export const EventContainer = styled.div<{ isCaseStudy?: string }>`

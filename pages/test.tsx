@@ -25,7 +25,7 @@ const TimelineDemo = () => {
     {
       title:
         "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.",
-      date: new Date("2023-09-05"),
+      date: new Date("2024-09-05"),
       isMajorEvent: false,
     },
   ];

@@ -2,12 +2,12 @@ import styled from "@emotion/styled";
 
 export const TimelineContainer = styled.div`
   position: relative;
-  padding-left: 2rem;
+  padding-left: 10rem;
 `;
 
 export const TimelineLine = styled.div`
   position: absolute;
-  left: 0.5rem;
+  left: 8.5rem;
   top: 0;
   bottom: 0;
   width: 2px;
@@ -28,8 +28,7 @@ export const TimelineDot = styled.div<{ isMajor?: boolean }>`
   height: ${(props) => (props.isMajor ? "1rem" : "0.75rem")};
   background-color: ${(props) => (props.isMajor ? "#1f2937" : "#6b7280")};
   border-radius: 50%;
-  border: 2px solid #ffffff;
-  box-shadow: 0 0 0 3px #e5e7eb;
+  border: 0.25rem solid #ffffff;
 `;
 
 export const EventTitle = styled.h3<{ isMajor?: boolean }>`
@@ -44,6 +43,12 @@ export const EventDate = styled.p`
   font-size: 0.875rem;
   color: #6b7280;
   margin: 0;
+  position: absolute;
+  left: -10rem;
+  top: 0.125rem;
+  width: 8rem;
+  text-align: right;
+  padding-right: 1rem;
 `;
 
 export const EventLink = styled.a`
@@ -53,4 +58,20 @@ export const EventLink = styled.a`
   &:hover {
     text-decoration: underline;
   }
+`;
+
+export const YearSeparator = styled.div`
+  position: relative;
+  margin: 3rem 0 2rem 0;
+  padding-left: 1.5rem;
+`;
+
+export const YearTitle = styled.h3`
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  position: absolute;
+  left: -10rem;
+  top: -2.5rem;
 `;

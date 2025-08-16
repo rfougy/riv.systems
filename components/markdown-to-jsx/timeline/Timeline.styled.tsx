@@ -20,16 +20,16 @@ export const Event = styled.div`
   padding-left: 1.5rem;
 `;
 
-export const Dot = styled.div`
+export const Dot = styled.div<{ isCaseStudy?: string; theme?: any }>`
   position: absolute;
-  left: ${(props: any) => (props.isCaseStudy ? "-1.95rem" : "-1.8rem")};
+  left: ${(props) => (props.isCaseStudy ? "-1.95rem" : "-1.8rem")};
   top: 0.125rem;
-  width: ${(props: any) => (props.isCaseStudy ? "1rem" : "0.75rem")};
-  height: ${(props: any) => (props.isCaseStudy ? "1rem" : "0.75rem")};
-  background-color: ${(props: any) => props.theme.primary};
+  width: ${(props) => (props.isCaseStudy ? "1rem" : "0.75rem")};
+  height: ${(props) => (props.isCaseStudy ? "1rem" : "0.75rem")};
+  background-color: ${(props) => props.theme.primary};
   border-radius: 50%;
-  border: 0.25rem solid ${(props: any) => props.theme.secondary};
-  box-shadow: ${(props: any) =>
+  border: 0.25rem solid ${(props) => props.theme.secondary};
+  box-shadow: ${(props) =>
     props.isCaseStudy ? `0 0 0 0.1rem ${props.theme.primary}` : "none"};
 `;
 
@@ -39,15 +39,19 @@ export const Summary = styled.div`
   gap: 1rem;
 `;
 
-export const Title = styled.h3`
-  font-size: ${(props: any) => (props.isCaseStudy ? "1.125rem" : "1rem")};
-  font-weight: ${(props: any) => (props.isCaseStudy ? "600" : "400")};
-  color: ${(props: any) => props.theme.primary};
+export const Title = styled.h3<{
+  isCaseStudy?: string;
+  link?: string;
+  theme?: any;
+}>`
+  font-size: ${(props) => (props.isCaseStudy ? "1.125rem" : "1rem")};
+  font-weight: ${(props) => (props.isCaseStudy ? "600" : "400")};
+  color: ${(props) => props.theme.primary};
   margin: 0;
 
   &:hover {
-    text-decoration: ${(props: any) => (props.link ? "underline" : "none")};
-    cursor: ${(props: any) => props.link && "cell"};
+    text-decoration: ${(props) => (props.link ? "underline" : "none")};
+    cursor: ${(props) => (props.link ? "pointer" : "default")};
   }
 `;
 

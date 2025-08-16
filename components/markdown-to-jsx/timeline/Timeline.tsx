@@ -33,23 +33,21 @@ const Timeline: React.FC<{
 
   sortedEvents.forEach(({ date, title, link, caseStudy }, i) => {
     const eventYear = date.getFullYear();
+    const isNewYear = currYear !== null && eventYear !== currYear;
 
-    // Add year separator if this is a new year
-    if (currYear !== null && eventYear !== currYear) {
+    if (isNewYear)
       timelineItems.push(
         <YearSeparator key={`year-${eventYear}`}>
           <Year>{eventYear}</Year>
         </YearSeparator>
       );
-    }
 
-    if (currYear === null) {
+    if (currYear === null)
       timelineItems.push(
         <YearSeparator key={`year-${eventYear}`}>
           <Year>{eventYear}</Year>
         </YearSeparator>
       );
-    }
 
     currYear = eventYear;
 
@@ -82,8 +80,8 @@ const Timeline: React.FC<{
   });
 
   return (
-    <div className="max-w-4xl mx-auto p-6 flex flex-col gap-8">
-      <h2 className="text-2xl font-bold text-gray-900 mb-8">Timeline</h2>
+    <div className="flex flex-col gap-8">
+      <h2 className="font-bold mb-8">Timeline</h2>
       <Box>
         <Line />
         {timelineItems}

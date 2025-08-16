@@ -1,15 +1,15 @@
 import { IEvent } from "../../../interfaces/timeline/IEvent";
 import {
   CaseStudyButton,
-  EventContainer,
-  EventDate,
-  EventTitle,
-  TimelineContainer,
-  TimelineDot,
-  TimelineItem,
-  TimelineLine,
+  Summary,
+  Date,
+  Title,
+  Box,
+  Dot,
+  Event,
+  Line,
   YearSeparator,
-  YearTitle,
+  Year,
 } from "./Timeline.styled";
 import externalLinkIcon from "../../../public/assets/icons/external-link-icon.svg";
 import Image from "next/image";
@@ -38,7 +38,7 @@ const Timeline: React.FC<{
     if (currYear !== null && eventYear !== currYear) {
       timelineItems.push(
         <YearSeparator key={`year-${eventYear}`}>
-          <YearTitle>{eventYear}</YearTitle>
+          <Year>{eventYear}</Year>
         </YearSeparator>
       );
     }
@@ -46,7 +46,7 @@ const Timeline: React.FC<{
     if (currYear === null) {
       timelineItems.push(
         <YearSeparator key={`year-${eventYear}`}>
-          <YearTitle>{eventYear}</YearTitle>
+          <Year>{eventYear}</Year>
         </YearSeparator>
       );
     }
@@ -54,13 +54,13 @@ const Timeline: React.FC<{
     currYear = eventYear;
 
     timelineItems.push(
-      <TimelineItem key={i}>
-        <TimelineDot isCaseStudy={caseStudy} />
-        <EventDate>{formatDate(date)}</EventDate>
-        <EventContainer>
+      <Event key={i}>
+        <Dot isCaseStudy={caseStudy} />
+        <Date>{formatDate(date)}</Date>
+        <Summary>
           {link ? (
             <a href={link} target="_blank" rel="noreferrer">
-              <EventTitle isCaseStudy={caseStudy}>
+              <Title isCaseStudy={caseStudy}>
                 {title}{" "}
                 <Image
                   src={externalLinkIcon}
@@ -70,24 +70,24 @@ const Timeline: React.FC<{
                   sizes="100vw"
                   className="inline ml-1 align-baseline"
                 />
-              </EventTitle>
+              </Title>
             </a>
           ) : (
-            <EventTitle isCaseStudy={caseStudy}>{title}</EventTitle>
+            <Title isCaseStudy={caseStudy}>{title}</Title>
           )}
           {caseStudy && <CaseStudyButton>Learn More</CaseStudyButton>}
-        </EventContainer>
-      </TimelineItem>
+        </Summary>
+      </Event>
     );
   });
 
   return (
     <div className="max-w-4xl mx-auto p-6 flex flex-col gap-8">
       <h2 className="text-2xl font-bold text-gray-900 mb-8">Timeline</h2>
-      <TimelineContainer>
-        <TimelineLine />
+      <Box>
+        <Line />
         {timelineItems}
-      </TimelineContainer>
+      </Box>
     </div>
   );
 };

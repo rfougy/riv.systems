@@ -1,11 +1,11 @@
 import styled from "@emotion/styled";
 
-export const TimelineContainer = styled.div`
+export const Box = styled.div`
   position: relative;
   padding-left: 10rem;
 `;
 
-export const TimelineLine = styled.div`
+export const Line = styled.div`
   position: absolute;
   left: 8.5rem;
   top: 0;
@@ -14,13 +14,13 @@ export const TimelineLine = styled.div`
   background-color: #000000;
 `;
 
-export const TimelineItem = styled.div`
+export const Event = styled.div`
   position: relative;
   margin-bottom: 2rem;
   padding-left: 1.5rem;
 `;
 
-export const TimelineDot = styled.div<{ isCaseStudy?: string }>`
+export const Dot = styled.div<{ isCaseStudy?: string }>`
   position: absolute;
   left: ${(props) => (props.isCaseStudy ? "-1.95rem" : "-1.8rem")};
   top: 0.125rem;
@@ -33,13 +33,13 @@ export const TimelineDot = styled.div<{ isCaseStudy?: string }>`
     props.isCaseStudy ? "0 0 0 0.1rem #000000" : "none"};
 `;
 
-export const EventContainer = styled.div<{ isCaseStudy?: string }>`
+export const Summary = styled.div<{ isCaseStudy?: string }>`
   display: flex;
   flex-direction: column;
   gap: 1rem;
 `;
 
-export const EventTitle = styled.h3<{ isCaseStudy?: string }>`
+export const Title = styled.h3<{ isCaseStudy?: string }>`
   font-size: ${(props) => (props.isCaseStudy ? "1.125rem" : "1rem")};
   font-weight: ${(props) => (props.isCaseStudy ? "600" : "400")};
   color: #000000;
@@ -51,7 +51,7 @@ export const EventTitle = styled.h3<{ isCaseStudy?: string }>`
   }
 `;
 
-export const EventDate = styled.p`
+export const Date = styled.p`
   font-size: 0.875rem;
   color: #6b7280;
   margin: 0;
@@ -63,22 +63,13 @@ export const EventDate = styled.p`
   padding-right: 1rem;
 `;
 
-export const EventLink = styled.a`
-  color: inherit;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
 export const YearSeparator = styled.div`
   position: relative;
   margin: 3rem 0 2rem 0;
   padding-left: 1.5rem;
 `;
 
-export const YearTitle = styled.h3`
+export const Year = styled.h3`
   position: absolute;
   left: -10rem;
   top: -2.5rem;

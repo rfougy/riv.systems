@@ -57,8 +57,8 @@ const Timeline: React.FC<{
         <Date>{formatDate(date)}</Date>
         <Summary>
           {link ? (
-            <a href={link} target="_blank" rel="noreferrer">
-              <Title isCaseStudy={caseStudy}>
+            <a href={link} target="_blank" rel="noreferrer" className="w-fit">
+              <Title isCaseStudy={caseStudy} link={link}>
                 {title}{" "}
                 <Image
                   src={externalLinkIcon}

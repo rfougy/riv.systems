@@ -1,6 +1,5 @@
 import { IEvent } from "../../../interfaces/timeline/IEvent";
 import {
-  CaseStudyButton,
   Summary,
   Date,
   Title,

@@ -8,8 +8,8 @@ export const Box = styled.div`
 export const Line = styled.div`
   position: absolute;
   left: 8.5rem;
-  top: 0;
-  bottom: 0;
+  top: 0.5rem;
+  bottom: 0.5rem;
   width: 0.1rem;
   background-color: ${(props: any) => props.theme.primary};
 `;
@@ -23,7 +23,7 @@ export const Event = styled.div`
 export const Dot = styled.div<{ isCaseStudy?: string; theme?: any }>`
   position: absolute;
   left: ${(props) => (props.isCaseStudy ? "-1.95rem" : "-1.8rem")};
-  top: 0.125rem;
+  top: 0.25rem;
   width: ${(props) => (props.isCaseStudy ? "1rem" : "0.75rem")};
   height: ${(props) => (props.isCaseStudy ? "1rem" : "0.75rem")};
   background-color: ${(props) => props.theme.primary};
@@ -62,7 +62,6 @@ export const Date = styled.p`
   margin: 0;
   position: absolute;
   left: -10rem;
-  top: 0.125rem;
   width: 8rem;
   text-align: right;
   padding-right: 1rem;

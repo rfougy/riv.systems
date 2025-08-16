@@ -30,7 +30,7 @@ const Timeline: React.FC<{
   const timelineItems: React.ReactElement[] = [];
   let currYear: number | null = null;
 
-  sortedEvents.forEach(({ date, title, link, isMajorEvent }, i) => {
+  sortedEvents.forEach(({ date, title, link, caseStudy }, i) => {
     const eventYear = date.getFullYear();
 
     // Add year separator if this is a new year
@@ -54,24 +54,28 @@ const Timeline: React.FC<{
 
     timelineItems.push(
       <TimelineItem key={i}>
-        <TimelineDot isMajor={isMajorEvent} />
+        <TimelineDot isCaseStudy={caseStudy} />
         <EventDate>{formatDate(date)}</EventDate>
-        {link ? (
-          <a href={link} target="_blank" rel="noreferrer">
-            <EventDetails>
-              <EventTitle isMajor={isMajorEvent}>{title}</EventTitle>
-              <Image
-                src={externalLinkIcon}
-                alt={"external link icon"}
-                height={12}
-                width={12}
-                sizes="100vw"
-              />
-            </EventDetails>
-          </a>
-        ) : (
-          <EventTitle isMajor={isMajorEvent}>{title}</EventTitle>
-        )}
+        <div className="flex flex-col flex-nowrap">
+          {link ? (
+            <a href={link} target="_blank" rel="noreferrer">
+              <EventTitle isCaseStudy={caseStudy}>
+                {title}{" "}
+                <Image
+                  src={externalLinkIcon}
+                  alt={"external link icon"}
+                  height={12}
+                  width={12}
+                  sizes="100vw"
+                  className="inline ml-1 align-baseline"
+                />
+              </EventTitle>
+            </a>
+          ) : (
+            <EventTitle isCaseStudy={caseStudy}>{title}</EventTitle>
+          )}
+          {caseStudy && <button />}
+        </div>
       </TimelineItem>
     );
   });

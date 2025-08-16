@@ -20,23 +20,29 @@ export const TimelineItem = styled.div`
   padding-left: 1.5rem;
 `;
 
-export const TimelineDot = styled.div<{ isMajor?: boolean }>`
+export const TimelineDot = styled.div<{ isCaseStudy?: string }>`
   position: absolute;
-  left: ${(props) => (props.isMajor ? "-1.95rem" : "-1.8rem")};
+  left: ${(props) => (props.isCaseStudy ? "-1.95rem" : "-1.8rem")};
   top: 0.125rem;
-  width: ${(props) => (props.isMajor ? "1rem" : "0.75rem")};
-  height: ${(props) => (props.isMajor ? "1rem" : "0.75rem")};
-  background-color: ${(props) => (props.isMajor ? "#1f2937" : "#6b7280")};
+  width: ${(props) => (props.isCaseStudy ? "1rem" : "0.75rem")};
+  height: ${(props) => (props.isCaseStudy ? "1rem" : "0.75rem")};
+  background-color: ${(props) => (props.isCaseStudy ? "#1f2937" : "#6b7280")};
   border-radius: 50%;
   border: 0.25rem solid #ffffff;
 `;
 
-export const EventTitle = styled.h3<{ isMajor?: boolean }>`
-  font-size: ${(props) => (props.isMajor ? "1.125rem" : "1rem")};
-  font-weight: ${(props) => (props.isMajor ? "600" : "400")};
+export const EventTitle = styled.h3<{ isCaseStudy?: string }>`
+  display: inline-block;
+  font-size: ${(props) => (props.isCaseStudy ? "1.125rem" : "1rem")};
+  font-weight: ${(props) => (props.isCaseStudy ? "600" : "400")};
   color: #000000;
   margin: 0;
   width: fit-content;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: cell;
+  }
 `;
 
 export const EventDate = styled.p`

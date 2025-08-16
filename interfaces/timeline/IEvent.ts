@@ -3,4 +3,5 @@ export interface IEvent {
   title: string;
   link?: string;
   isMajorEvent?: boolean;
+  caseStudy?: string;
 }

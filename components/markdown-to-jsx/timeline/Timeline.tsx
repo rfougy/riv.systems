@@ -73,7 +73,7 @@ const Timeline: React.FC<{
           ) : (
             <Title isCaseStudy={caseStudy}>{title}</Title>
           )}
-          {caseStudy && <CaseStudyButton>Learn More</CaseStudyButton>}
+          {/* {caseStudy && <CaseStudyButton>Learn More</CaseStudyButton>} */}
         </Summary>
       </Event>
     );

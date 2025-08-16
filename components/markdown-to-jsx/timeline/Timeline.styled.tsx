@@ -51,7 +51,7 @@ export const Title = styled.h3<{
 
   &:hover {
     text-decoration: ${(props) => (props.link ? "underline" : "none")};
-    cursor: ${(props) => (props.link ? "pointer" : "default")};
+    cursor: ${(props) => props.link && "cell"};
   }
 `;
 

@@ -33,10 +33,10 @@ export const TimelineDot = styled.div<{ isMajor?: boolean }>`
 
 export const EventTitle = styled.h3<{ isMajor?: boolean }>`
   font-size: ${(props) => (props.isMajor ? "1.125rem" : "1rem")};
-  font-weight: ${(props) => (props.isMajor ? "600" : "500")};
-  color: #1f2937;
-  margin: 0 0 0.25rem 0;
-  line-height: 1.4;
+  font-weight: ${(props) => (props.isMajor ? "600" : "400")};
+  color: #000000;
+  margin: 0;
+  width: fit-content;
 `;
 
 export const EventDate = styled.p`
@@ -74,4 +74,25 @@ export const YearTitle = styled.h3`
   position: absolute;
   left: -10rem;
   top: -2.5rem;
+`;
+
+export const EventDetails = styled.div`
+  display: flex;
+  gap: 0 0.5rem;
+  height: 100%;
+  align-items: center;
+
+  img {
+    filter: invert(0.5);
+    -webkit-filter: invert(0.5);
+  }
+
+  &:hover {
+    text-decoration: underline;
+    cursor: cell;
+    img {
+      filter: invert(0);
+      -webkit-filter: invert(0);
+    }
+  }
 `;

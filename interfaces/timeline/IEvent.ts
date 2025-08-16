@@ -1,6 +1,6 @@
 export interface IEvent {
-  title: string;
   date: Date;
+  title: string;
   link?: string;
   isMajorEvent?: boolean;
 }

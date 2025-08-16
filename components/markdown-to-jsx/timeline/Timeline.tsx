@@ -1,6 +1,7 @@
 import { IEvent } from "../../../interfaces/timeline/IEvent";
 import {
   EventDate,
+  EventDetails,
   EventTitle,
   TimelineContainer,
   TimelineDot,
@@ -9,6 +10,8 @@ import {
   YearSeparator,
   YearTitle,
 } from "./Timeline.styled";
+import externalLinkIcon from "../../../public/assets/icons/external-link-icon.svg";
+import Image from "next/image";
 
 const Timeline: React.FC<{
   events: IEvent[];
@@ -27,8 +30,8 @@ const Timeline: React.FC<{
   const timelineItems: React.ReactElement[] = [];
   let currYear: number | null = null;
 
-  sortedEvents.forEach((event, i) => {
-    const eventYear = event.date.getFullYear();
+  sortedEvents.forEach(({ date, title, link, isMajorEvent }, i) => {
+    const eventYear = date.getFullYear();
 
     // Add year separator if this is a new year
     if (currYear !== null && eventYear !== currYear) {
@@ -51,9 +54,24 @@ const Timeline: React.FC<{
 
     timelineItems.push(
       <TimelineItem key={i}>
-        <TimelineDot isMajor={event.isMajorEvent} />
-        <EventDate>{formatDate(event.date)}</EventDate>
-        <EventTitle isMajor={event.isMajorEvent}>{event.title}</EventTitle>
+        <TimelineDot isMajor={isMajorEvent} />
+        <EventDate>{formatDate(date)}</EventDate>
+        {link ? (
+          <a href={link} target="_blank" rel="noreferrer">
+            <EventDetails>
+              <EventTitle isMajor={isMajorEvent}>{title}</EventTitle>
+              <Image
+                src={externalLinkIcon}
+                alt={"external link icon"}
+                height={12}
+                width={12}
+                sizes="100vw"
+              />
+            </EventDetails>
+          </a>
+        ) : (
+          <EventTitle isMajor={isMajorEvent}>{title}</EventTitle>
+        )}
       </TimelineItem>
     );
   });

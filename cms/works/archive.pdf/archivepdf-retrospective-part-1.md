@@ -8,7 +8,7 @@ coverImage: "/works/archive.pdf/archivepdf-retrospective-part-1/archivepdf-retro
 link: https://beta.archivepdf.net/
 worksTeamSize: 20
 worksRoles: ["Founder", "CEO"]
-worksDuration: ["09.19", "08.25"]
+worksDuration: ["02.19", "08.25"]
 worksTools: ["Various"]
 ---
 
@@ -36,13 +36,8 @@ From building and leading a team, to understanding and providing value for a uni
     "title": "Announcement of ARCHIVE.pdf"
   },
   {
-    "date": "2019-04-04",
-    "title": "GoFundMe Announcement Post for Takahiro Miyashita EYESCREAM Magazine Translations",
-    "link": "https://www.instagram.com/p/Bv2OXuVgTms"
-  },
-  {
     "date": "2019-06-20",
-    "title": "Completion and Release of Takahiro Miyashita EYESCREAM Magazine Translations",
+    "title": "First Japanese-to-English translations of Takahiro Miyashita EYESCREAM Magazine feature — funded by the fashion community.",
     "link": "https://www.instagram.com/p/By8fxOAgCKu/"
   },
   {
@@ -51,116 +46,107 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2019-11-13",
-    "title": "Last Orgy Translations Release"
+    "title": "Japanese-to-English translations for Last Orgy 2 & 3 with Archived Dreams"
   },
   {
     "date": "2020-06-26",
-    "title": "ARCHIVE.pdf creates first website"
+    "title": "Creation of first website created with Wix"
   },
   {
     "date": "2020-07-17",
-    "title": "A.PDF begins featuring submissions such as editorials, student designer works"
+    "title": "ARCHIVE.pdf begins featuring community submissions including editorials and work by independent designers"
   },
   {
     "date": "2020-10-31",
-    "title": "A.PDF Reaches 10K Followers"
+    "title": "ARCHIVE.pdf Reaches 10K Instagram followers"
   },
   {
     "date": "2020-11-13",
-    "title": "A.PDF begins offering more descriptive IG Posts write-ups"
+    "title": "ARCHIVE.pdf begins offering informative Instagram content"
   },
   {
     "date": "2020-11-17",
-    "title": "First writing submission by Johnny",
+    "title": "First write-up submission by John Chen",
     "link": "https://www.instagram.com/p/CHstcMJgkbC"
   },
   {
     "date": "2020-11-20",
-    "title": "First Member Isabelle Davis publishes post with written caption",
+    "title": "First member, Isabelle Davis, joins the team & publishes post with written caption",
     "link": "https://www.instagram.com/p/CH0gpyDAg8u"
   },
   {
     "date": "2021-02-16",
-    "title": "A.PDF announces Blog section of website, + story flyer asking for writer contributors"
+    "title": "New blog section added to website"
   },
   {
     "date": "2021-02-19",
-    "title": "First article, interviewing Kev The World",
+    "title": "First article published on website",
     "link": "https://www.instagram.com/p/CLe3e7bARX-"
   },
   {
     "date": "2021-04-14",
-    "title": "CDG x Otomo Giveaway",
+    "title": "First community giveaway event",
     "link": "https://www.instagram.com/p/CNpxlKPAiVd"
   },
   {
     "date": "2021-05-28",
-    "title": "ARCHIVE.pdf begins using the three bar titles",
+    "title": "ARCHIVE.pdf begins incorporating the three bar titles for its Instagram posts",
     "link": "https://www.instagram.com/p/CPbF-vkDxBi"
   },
   {
     "date": "2021-06-01",
-    "title": "ARCHIVE.pdf redesigns website"
+    "title": "Complete redesign of website"
   },
   {
     "date": "2021-06-28",
-    "title": "ARCHIVE.pdf reaches 20K Followers, poster giveaway",
+    "title": "ARCHIVE.pdf reaches 20K Instagram followers, with a poster giveaway in celebration of milestone",
     "link": "https://www.instagram.com/p/CQq5v3WD4kj"
   },
   {
     "date": "2021-08-24",
-    "title": "A.PDF launches Discord Community Server"
+    "title": "Launch of Discord community server"
   },
   {
     "date": "2021-09-16",
-    "title": "ARCHIVE.pdf reaches 30K Followers + giveaway",
+    "title": "ARCHIVE.pdf reaches 30K Followers, with giveaway in celebration of milestone",
     "link": "https://www.instagram.com/p/CUDNHWOLTnF"
   },
   {
     "date": "2022-01-13",
-    "title": "First Outfit Showcase w/ Polo Zheng",
+    "title": "First Outfit Showcase Instagram post",
     "link": "https://www.instagram.com/p/CYrde9xuoq3"
   },
   {
     "date": "2022-03-21",
-    "title": "First large project, focused on Sk8thing, including article, scan release, and product releases"
-  },
-  {
-    "date": "2022-07-21",
-    "title": "ARCHIVE.pdf offering Instagram Story Sales"
+    "title": "First large-scale project focused on Japanese designer Sk8thing, including article, scan release, and product releases"
   },
   {
     "date": "2022-09-14",
-    "title": "First Interview with a fashion industry professional, Eugene Rabkin",
+    "title": "First interview with a fashion industry professional",
     "link": "https://www.instagram.com/p/CifmjFgOmHS"
   },
   {
     "date": "2022-10-21",
-    "title": "First original content at PFW",
+    "title": "First original content produced at Paris Fashion Week",
     "link": "https://www.instagram.com/p/Cj-32wMvtvo/"
   },
   {
     "date": "2022-10-22",
-    "title": "First original photography, at Seoul Fashion Week",
+    "title": "First original photography at Seoul Fashion Week",
     "link": "https://www.instagram.com/p/CkLyb89Lu0b"
   },
   {
     "date": "2023-05-05",
-    "title": "Interview with designer Kie Eizelganger",
+    "title": "Interview with designer Kié Einzelgänger",
     "link": "https://www.instagram.com/p/Cr3kVk1OH87"
   },
   {
     "date": "2023-09-15",
-    "title": "First paid promotion, from Adidas"
-  },
-  {
-    "date": "2023-09-18",
-    "title": "Interview with Suzume Uchida",
-    "link": "https://www.instagram.com/p/CxVu1EkO7cD"
+    "title": "Promotion, for adidas"
   },
   {
     "date": "2023-09-22",
-    "title": "Paid promotion for Gucci Sabato De Sarno Debut"
+    "title": "Promotion and coverage for Gucci for Sabato De Sarno debut runway show"
   },
   {
     "date": "2023-10-27",
@@ -169,12 +155,12 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2023-11-22",
-    "title": "ARCHIVE.pdf reaches 100K Followers",
+    "title": "ARCHIVE.pdf reaches 100K Instagram followers",
     "link": "https://www.instagram.com/p/Cz9Pra2O72Y"
   },
   {
     "date": "2024-02-05",
-    "title": "ARCHIVE.pdf releases Beta Website",
+    "title": "ARCHIVE.pdf releases beta website created by Design Director George Reyes and the developer team",
     "link": "https://www.instagram.com/p/C2-ggOtrNVs/"
   },
   {
@@ -184,33 +170,33 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2024-03-22",
-    "title": "Second promo for adidas"
+    "title": "Second promotion for adidas"
   },
   {
     "date": "2024-04-10",
-    "title": "First paid promo for Y-3",
+    "title": "First promotion for Y-3",
     "link": "https://www.instagram.com/p/C5lkgiFO1xb"
   },
   {
     "date": "2024-05-07",
-    "title": "Beginning of partnership with Reversible"
+    "title": "Partnership with Reversible"
   },
   {
     "date": "2024-06-14",
-    "title": "A.PDF Zine and PFW Pop-Up"
+    "title": "ARCHIVE.pdf Zine and Paris Fashion Week pop-up event"
   },
   {
     "date": "2024-08-02",
-    "title": "Editorial w/ Thian",
+    "title": "First original editorial, photographed by Thian Benton Fieulaine",
     "link": "https://www.instagram.com/p/C-LKa_iuB7T"
   },
   {
     "date": "2024-08-15",
-    "title": "Second promo with Y-3"
+    "title": "Second promotion for Y-3"
   },
   {
     "date": "2024-09-02",
-    "title": "First archival materials provided by official designer, Shinichiro Arakawa"
+    "title": "First set of archival materials provided by designer Shinichiro Arakawa"
   },
   {
     "date": "2024-09-16",
@@ -224,56 +210,56 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2024-11-01",
-    "title": "Third promo for adidas"
+    "title": "Third promotion for adidas"
   },
   {
     "date": "2025-01-31",
-    "title": "Promo for Polimoda",
+    "title": "Exhibition coverage for Polimoda",
     "link": "https://www.instagram.com/p/DFf6busuYqd"
   },
   {
     "date": "2025-02-14",
-    "title": "First Collaborative Post with Karlo Steel",
+    "title": "First collaborative post with fashion stylist and Atelier founder Karlo Steel",
     "link": "https://www.instagram.com/p/DGD5DEou9cj"
   },
   {
     "date": "2025-03-21",
-    "title": "Showroom Coverage of Dries Van Noten",
+    "title": "Showroom coverage of Dries Van Noten",
     "link": "https://www.instagram.com/p/DHd5aqpuq1s"
   },
   {
     "date": "2025-04-02",
-    "title": "ARCHIVE.pdf Launches Substack",
+    "title": "ARCHIVE.pdf launches Substack",
     "link": "https://www.instagram.com/p/DH8zui_uhEy"
   },
   {
     "date": "2025-04-11",
-    "title": "Exhibition Coverage for Alaia",
+    "title": "Exhibition coverage for Azzedine Alaïa Foundation",
     "link": "https://www.instagram.com/p/DIT-X27R6xg"
   },
   {
     "date": "2025-04-14",
-    "title": "Runway Coverage of CDG",
+    "title": "Runway coverage of Comme des Garçons",
     "link": "https://www.instagram.com/p/DIbsxsBuwb-"
   },
   {
     "date": "2025-04-16",
-    "title": "Backstage Coverage of Junya",
+    "title": "Backstage coverage of Junya Watanabe",
     "link": "https://www.instagram.com/p/DIg27nsubDB"
   },
   {
     "date": "2025-04-18",
-    "title": "Backstage Coverage of Kei Ninomiya",
+    "title": "Backstage coverage of Noir Kei Ninomiya",
     "link": "https://www.instagram.com/p/DImAYbvuVQ_"
   },
   {
     "date": "2025-05-07",
-    "title": "Behind the Scenes and Backstage Coverage for Ann Demeulemeester",
+    "title": "Behind-the-scenes and backstage coverage for Ann Demeulemeester",
     "link": "https://www.instagram.com/p/DJW7h8GRlqZ"
   },
   {
     "date": "2025-05-12",
-    "title": "Archives release and interview of beauty:beast"
+    "title": "Archives release and interview with beauty:beast"
   },
   {
     "date": "2025-06-06",
@@ -282,12 +268,12 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2025-07-07",
-    "title": "Promo Coverage for adidas PFW event",
+    "title": "Coverage for adidas activation at Paris Fashion Week",
     "link": "https://www.instagram.com/p/DL0A6hnsslB/"
   },
   {
     "date": "2025-07-14",
-    "title": "Backstage Coverage of Juun.J",
+    "title": "Backstage coverage of Juun.J",
     "link": "https://www.instagram.com/p/DMGDZujx6yn"
   }
 ]'/>

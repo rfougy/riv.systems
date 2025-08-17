@@ -33,7 +33,8 @@ From building and leading a team, to understanding and providing value for a uni
 <Timeline events=<Timeline events='[
   {
     "date": "2019-02-05",
-    "title": "Announcement of ARCHIVE.pdf"
+    "title": "Announcement of ARCHIVE.pdf",
+    "link": "https://www.instagram.com/p/Btg-JN2AKaj"
   },
   {
     "date": "2019-06-20",
@@ -50,11 +51,13 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2020-06-26",
-    "title": "Creation of first website created with Wix"
+    "title": "Creation of first website created with Wix",
+    "link": "https://web.archive.org/web/20201219120020/http://archivepdf.net/"
   },
   {
     "date": "2020-07-17",
-    "title": "ARCHIVE.pdf begins featuring community submissions including editorials and work by independent designers"
+    "title": "ARCHIVE.pdf begins featuring community submissions including editorials and work by independent designers",
+    "link": "https://www.instagram.com/p/CDmdNmxATUm"
   },
   {
     "date": "2020-10-31",
@@ -118,7 +121,8 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2022-03-21",
-    "title": "First large-scale project focused on Japanese designer Sk8thing, including article, scan release, and product releases"
+    "title": "First large-scale project focused on Japanese designer Sk8thing, including article, scan release, and product releases",
+    "link": "https://www.instagram.com/p/CbkydfduShc"
   },
   {
     "date": "2022-09-14",
@@ -142,11 +146,13 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2023-09-15",
-    "title": "Promotion, for adidas"
+    "title": "Promotion of the Gazelle, Superstar & Samba for adidas",
+    "link": "https://www.instagram.com/p/CxTILkauIKT"
   },
   {
     "date": "2023-09-22",
-    "title": "Promotion and coverage for Gucci for Sabato De Sarno debut runway show"
+    "title": "Promotion and coverage for Gucci for Sabato De Sarno debut runway show",
+    "link": "https://www.instagram.com/p/Cxltg8vuQcD"
   },
   {
     "date": "2023-10-27",
@@ -170,20 +176,23 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2024-03-22",
-    "title": "Second promotion for adidas"
+    "title": "Promotion of the SL72 for adidas",
+    "link": "https://www.instagram.com/p/C40rFewuBLH"
   },
   {
     "date": "2024-04-10",
-    "title": "First promotion for Y-3",
+    "title": "Promotion for the Y-3 Atelier collection",
     "link": "https://www.instagram.com/p/C5lkgiFO1xb"
   },
   {
     "date": "2024-05-07",
-    "title": "Partnership with Reversible"
+    "title": "Partnership with Reversible",
+    "link": "https://www.instagram.com/p/C6rFxrnucEL"
   },
   {
     "date": "2024-06-14",
-    "title": "ARCHIVE.pdf Zine and Paris Fashion Week pop-up event"
+    "title": "ARCHIVE.pdf Zine and Paris Fashion Week pop-up event",
+    "link": "https://www.instagram.com/stories/highlights/17868479988120109"
   },
   {
     "date": "2024-08-02",
@@ -192,11 +201,13 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2024-08-15",
-    "title": "Second promotion for Y-3"
+    "title": "Promotion for Y-3 AW24 collection campaign",
+    "link": "https://www.instagram.com/p/C-sYlNdOiw4"
   },
   {
     "date": "2024-09-02",
-    "title": "First set of archival materials provided by designer Shinichiro Arakawa"
+    "title": "First set of archival materials provided by designer Shinichiro Arakawa",
+    "link": "https://www.instagram.com/p/C_a7I0zOJMk"
   },
   {
     "date": "2024-09-16",
@@ -210,7 +221,8 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2024-11-01",
-    "title": "Third promotion for adidas"
+    "title": "Promotion of the Low Profile for adidas",
+    "link": "https://www.instagram.com/reel/DB1evYSqaNQ/"
   },
   {
     "date": "2025-01-31",
@@ -259,7 +271,8 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2025-05-12",
-    "title": "Archives release and interview with beauty:beast"
+    "title": "Archives release and interview with beauty:beast",
+    "link": "https://www.instagram.com/p/DJj5bqrR422"
   },
   {
     "date": "2025-06-06",
@@ -275,5 +288,10 @@ From building and leading a team, to understanding and providing value for a uni
     "date": "2025-07-14",
     "title": "Backstage coverage of Juun.J",
     "link": "https://www.instagram.com/p/DMGDZujx6yn"
+  },
+  {
+    "date": "2025-07-23",
+    "title": "Promotion of Superstar for adidas",
+    "link": "https://www.instagram.com/p/DMdMmMmR85_"
   }
 ]'/>

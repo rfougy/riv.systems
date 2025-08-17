@@ -44,7 +44,7 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2019-10-23",
-    "title": "ARCHIVE.pdf begins having more descriptive instagram content"
+    "title": "ARCHIVE.pdf begins having more descriptive Instagram content"
   },
   {
     "date": "2019-11-13",
@@ -53,7 +53,7 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2020-06-26",
-    "title": "Creation of first website created with Wix",
+    "title": "Creation of first website",
     "link": "https://web.archive.org/web/20201219120020/http://archivepdf.net/",
     "caseStudy": "placeholder"
   },
@@ -64,7 +64,7 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2020-10-31",
-    "title": "ARCHIVE.pdf Reaches 10K Instagram followers",
+    "title": "ARCHIVE.pdf reaches 10K Instagram followers",
     "caseStudy": "placeholder"
   },
   {
@@ -124,12 +124,12 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2022-10-22",
-    "title": "First original photography at Seoul Fashion Week",
+    "title": "First original streetstyle photography at Seoul Fashion Week",
     "link": "https://www.instagram.com/p/CkLyb89Lu0b"
   },
   {
     "date": "2023-09-15",
-    "title": "First business opportunity — promotion of the Gazelle, Superstar & Samba for adidas",
+    "title": "First business opportunity — promotion of the Gazelle, Superstar and Samba for adidas",
     "link": "https://www.instagram.com/p/CxTILkauIKT",
     "caseStudy": "placeholder"
   },
@@ -172,12 +172,13 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2024-05-07",
-    "title": "Partnership with Reversible",
-    "link": "https://www.instagram.com/p/C6rFxrnucEL"
+    "title": "Beginning of partnership with Reversible",
+    "link": "https://www.instagram.com/p/C6rFxrnucEL",
+    "caseStudy": "placeholder"
   },
   {
     "date": "2024-06-14",
-    "title": "ARCHIVE.pdf Zine and Paris Fashion Week pop-up event",
+    "title": "ARCHIVE.pdf zine and Paris Fashion Week pop-up event",
     "link": "https://www.instagram.com/stories/highlights/17868479988120109",
     "caseStudy": "placeholder"
   },
@@ -229,7 +230,8 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2025-04-02",
     "title": "ARCHIVE.pdf launches Substack",
-    "link": "https://www.instagram.com/p/DH8zui_uhEy"
+    "link": "https://substack.com/@archivepdf",
+    "caseStudy": "placeholder"
   },
   {
     "date": "2025-04-11",
@@ -253,7 +255,7 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2025-06-06",
-    "title": "First post for partnership with Grailed",
+    "title": "Beginning of partnership with Grailed",
     "link": "https://www.instagram.com/p/DKkLltcx7_o",
     "caseStudy": "placeholder"
   },

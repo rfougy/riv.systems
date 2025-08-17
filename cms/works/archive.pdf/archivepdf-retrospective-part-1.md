@@ -5,7 +5,7 @@ section: works
 category: archive.pdf
 excerpt: Placeholder.
 coverImage: "/works/archive.pdf/archivepdf-retrospective-part-1/archivepdf-retrospective-part-1_cover.png"
-link: https://beta.archivepdf.net/
+link: https://www.archivepdf.net/
 worksTeamSize: 20
 worksRoles: ["Founder", "CEO"]
 worksDuration: ["02.19", "08.25"]
@@ -39,7 +39,7 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2019-06-20",
     "title": "First Japanese-to-English translations of Takahiro Miyashita EYESCREAM Magazine feature — funded by the fashion community.",
-    "link": "https://www.instagram.com/p/By8fxOAgCKu/"
+    "link": "https://www.archivepdf.net/scans/number-(n)ine/truth-of-number-(n)ine"
   },
   {
     "date": "2019-10-23",
@@ -47,7 +47,8 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2019-11-13",
-    "title": "Japanese-to-English translations for Last Orgy 2 & 3 with Archived Dreams"
+    "title": "Japanese-to-English translations for Last Orgy 2 & 3 with Archived Dreams",
+    "link": "https://www.archivepdf.net/scans/takarajima"
   },
   {
     "date": "2020-06-26",
@@ -79,7 +80,8 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2021-02-16",
-    "title": "New blog section added to website"
+    "title": "New blog section added to website",
+    "link": "https://web.archive.org/web/20210422175711/https://www.archivepdf.net/blog"
   },
   {
     "date": "2021-02-19",
@@ -98,7 +100,8 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2021-06-01",
-    "title": "Complete redesign of website"
+    "title": "Complete redesign of website",
+    "link": "https://web.archive.org/web/20210619021115/https://archivepdf.net/"
   },
   {
     "date": "2021-06-28",
@@ -127,7 +130,7 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2022-09-14",
     "title": "First interview with a fashion industry professional",
-    "link": "https://www.instagram.com/p/CifmjFgOmHS"
+    "link": "https://www.archivepdf.net/articles/enter-the-style-zeitgeist-an-interview-with-eugene-rabkin"
   },
   {
     "date": "2022-10-21",
@@ -140,9 +143,9 @@ From building and leading a team, to understanding and providing value for a uni
     "link": "https://www.instagram.com/p/CkLyb89Lu0b"
   },
   {
-    "date": "2023-05-05",
+    "date": "2023-02-23",
     "title": "Interview with designer Kié Einzelgänger",
-    "link": "https://www.instagram.com/p/Cr3kVk1OH87"
+    "link": "https://www.archivepdf.net/articles/paving-your-own-path-an-interview-with-kie-einzelganger"
   },
   {
     "date": "2023-09-15",
@@ -157,7 +160,7 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2023-10-27",
     "title": "Interview with designer Alexandre Plokhov",
-    "link": "https://www.instagram.com/p/Cy6HtSKuLe4"
+    "link": "https://www.archivepdf.net/articles/alexandre-plokhov-interview"
   },
   {
     "date": "2023-11-22",
@@ -172,7 +175,7 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2024-03-01",
     "title": "Interview with Al Abayan",
-    "link": "https://www.instagram.com/p/C3-3aHDuUem"
+    "link": "https://www.archivepdf.net/articles/uncovering-number-nine-interview-with-al-abayan"
   },
   {
     "date": "2024-03-22",
@@ -207,17 +210,17 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2024-09-02",
     "title": "First set of archival materials provided by designer Shinichiro Arakawa",
-    "link": "https://www.instagram.com/p/C_a7I0zOJMk"
+    "link": "https://www.archivepdf.net/archives/shinichiro-arakawa"
   },
   {
     "date": "2024-09-16",
     "title": "Interview with Alan Bilzerian",
-    "link": "https://www.instagram.com/p/C_-_SQIuhJe"
+    "link": "https://www.archivepdf.net/articles/alan-bilzerian-interview"
   },
   {
     "date": "2024-10-28",
     "title": "First backstage photography and feature, for Ann Demeulemeester",
-    "link": "https://www.instagram.com/p/DBrHQ_Qu8oZ"
+    "link": "https://www.archivepdf.net/articles/ann-demeulemeester-ss25-backstage"
   },
   {
     "date": "2024-11-01",
@@ -227,7 +230,7 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2025-01-31",
     "title": "Exhibition coverage for Polimoda",
-    "link": "https://www.instagram.com/p/DFf6busuYqd"
+    "link": "https://www.archivepdf.net/articles/polimoda-an-archive-event-two-and-the-anti-museum-horizon"
   },
   {
     "date": "2025-02-14",
@@ -237,7 +240,7 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2025-03-21",
     "title": "Showroom coverage of Dries Van Noten",
-    "link": "https://www.instagram.com/p/DHd5aqpuq1s"
+    "link": "https://www.archivepdf.net/articles/behind-the-curtain-dries-van-noten-aw-25-showroom"
   },
   {
     "date": "2025-04-02",
@@ -247,7 +250,7 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2025-04-11",
     "title": "Exhibition coverage for Azzedine Alaïa Foundation",
-    "link": "https://www.instagram.com/p/DIT-X27R6xg"
+    "link": "https://www.archivepdf.net/articles/mugler-and-alaia-two-decades-of-artistic-affinities"
   },
   {
     "date": "2025-04-14",
@@ -267,12 +270,12 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2025-05-07",
     "title": "Behind-the-scenes and backstage coverage for Ann Demeulemeester",
-    "link": "https://www.instagram.com/p/DJW7h8GRlqZ"
+    "link": "https://www.archivepdf.net/articles/ann-demeulemeester-aw-2025-backstage-and-runway-coverage"
   },
   {
     "date": "2025-05-12",
     "title": "Archives release and interview with beauty:beast",
-    "link": "https://www.instagram.com/p/DJj5bqrR422"
+    "link": "https://www.archivepdf.net/articles/takao-yamashita-entering-the-belly-of-the-beauty-beast"
   },
   {
     "date": "2025-06-06",

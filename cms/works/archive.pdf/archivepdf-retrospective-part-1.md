@@ -34,7 +34,8 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2019-02-05",
     "title": "Announcement of ARCHIVE.pdf",
-    "link": "https://www.instagram.com/p/Btg-JN2AKaj"
+    "link": "https://www.instagram.com/p/Btg-JN2AKaj",
+    "caseStudy": "placeholder"
   },
   {
     "date": "2019-06-20",
@@ -53,7 +54,8 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2020-06-26",
     "title": "Creation of first website created with Wix",
-    "link": "https://web.archive.org/web/20201219120020/http://archivepdf.net/"
+    "link": "https://web.archive.org/web/20201219120020/http://archivepdf.net/",
+    "caseStudy": "placeholder"
   },
   {
     "date": "2020-07-17",
@@ -62,16 +64,12 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2020-10-31",
-    "title": "ARCHIVE.pdf Reaches 10K Instagram followers"
+    "title": "ARCHIVE.pdf Reaches 10K Instagram followers",
+    "caseStudy": "placeholder"
   },
   {
     "date": "2020-11-13",
     "title": "ARCHIVE.pdf begins offering informative Instagram content"
-  },
-  {
-    "date": "2020-11-17",
-    "title": "First write-up submission by John Chen",
-    "link": "https://www.instagram.com/p/CHstcMJgkbC"
   },
   {
     "date": "2020-11-20",
@@ -86,7 +84,8 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2021-02-19",
     "title": "First article published on website",
-    "link": "https://www.instagram.com/p/CLe3e7bARX-"
+    "link": "https://www.instagram.com/p/CLe3e7bARX-",
+    "caseStudy": "placeholder"
   },
   {
     "date": "2021-04-14",
@@ -104,28 +103,14 @@ From building and leading a team, to understanding and providing value for a uni
     "link": "https://web.archive.org/web/20210619021115/https://archivepdf.net/"
   },
   {
-    "date": "2021-06-28",
-    "title": "ARCHIVE.pdf reaches 20K Instagram followers, with a poster giveaway in celebration of milestone",
-    "link": "https://www.instagram.com/p/CQq5v3WD4kj"
-  },
-  {
     "date": "2021-08-24",
     "title": "Launch of Discord community server"
   },
   {
-    "date": "2021-09-16",
-    "title": "ARCHIVE.pdf reaches 30K Followers, with giveaway in celebration of milestone",
-    "link": "https://www.instagram.com/p/CUDNHWOLTnF"
-  },
-  {
-    "date": "2022-01-13",
-    "title": "First Outfit Showcase Instagram post",
-    "link": "https://www.instagram.com/p/CYrde9xuoq3"
-  },
-  {
     "date": "2022-03-21",
     "title": "First large-scale project focused on Japanese designer Sk8thing, including article, scan release, and product releases",
-    "link": "https://www.instagram.com/p/CbkydfduShc"
+    "link": "https://www.instagram.com/p/CbkydfduShc",
+    "caseStudy": "placeholder"
   },
   {
     "date": "2022-09-14",
@@ -143,14 +128,10 @@ From building and leading a team, to understanding and providing value for a uni
     "link": "https://www.instagram.com/p/CkLyb89Lu0b"
   },
   {
-    "date": "2023-02-23",
-    "title": "Interview with designer Kié Einzelgänger",
-    "link": "https://www.archivepdf.net/articles/paving-your-own-path-an-interview-with-kie-einzelganger"
-  },
-  {
     "date": "2023-09-15",
-    "title": "Promotion of the Gazelle, Superstar & Samba for adidas",
-    "link": "https://www.instagram.com/p/CxTILkauIKT"
+    "title": "First business opportunity — promotion of the Gazelle, Superstar & Samba for adidas",
+    "link": "https://www.instagram.com/p/CxTILkauIKT",
+    "caseStudy": "placeholder"
   },
   {
     "date": "2023-09-22",
@@ -165,12 +146,14 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2023-11-22",
     "title": "ARCHIVE.pdf reaches 100K Instagram followers",
-    "link": "https://www.instagram.com/p/Cz9Pra2O72Y"
+    "link": "https://www.instagram.com/p/Cz9Pra2O72Y",
+    "caseStudy": "placeholder"
   },
   {
     "date": "2024-02-05",
-    "title": "ARCHIVE.pdf releases beta website created by Design Director George Reyes and the developer team",
-    "link": "https://www.instagram.com/p/C2-ggOtrNVs/"
+    "title": "ARCHIVE.pdf releases its Progressive Web App",
+    "link": "https://www.instagram.com/p/C2-ggOtrNVs/",
+    "caseStudy": "placeholder"
   },
   {
     "date": "2024-03-01",
@@ -195,11 +178,12 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2024-06-14",
     "title": "ARCHIVE.pdf Zine and Paris Fashion Week pop-up event",
-    "link": "https://www.instagram.com/stories/highlights/17868479988120109"
+    "link": "https://www.instagram.com/stories/highlights/17868479988120109",
+    "caseStudy": "placeholder"
   },
   {
     "date": "2024-08-02",
-    "title": "First original editorial, photographed by Thian Benton Fieulaine",
+    "title": "First original ARCHIVE.pdf editorial",
     "link": "https://www.instagram.com/p/C-LKa_iuB7T"
   },
   {
@@ -254,18 +238,8 @@ From building and leading a team, to understanding and providing value for a uni
   },
   {
     "date": "2025-04-14",
-    "title": "Runway coverage of Comme des Garçons",
-    "link": "https://www.instagram.com/p/DIbsxsBuwb-"
-  },
-  {
-    "date": "2025-04-16",
-    "title": "Backstage coverage of Junya Watanabe",
-    "link": "https://www.instagram.com/p/DIg27nsubDB"
-  },
-  {
-    "date": "2025-04-18",
-    "title": "Backstage coverage of Noir Kei Ninomiya",
-    "link": "https://www.instagram.com/p/DImAYbvuVQ_"
+    "title": "Runway and backstage coverage of Comme des Garçons, Junya Watanabe and Noir Kei Ninomiya",
+    "link": "https://www.archivepdf.net/articles/beyond-monumentalism-comme-des-garcons-junya-watanabe-noir-kei-ninomiya-aw-2025"
   },
   {
     "date": "2025-05-07",
@@ -280,7 +254,8 @@ From building and leading a team, to understanding and providing value for a uni
   {
     "date": "2025-06-06",
     "title": "First post for partnership with Grailed",
-    "link": "https://www.instagram.com/p/DKkLltcx7_o"
+    "link": "https://www.instagram.com/p/DKkLltcx7_o",
+    "caseStudy": "placeholder"
   },
   {
     "date": "2025-07-07",

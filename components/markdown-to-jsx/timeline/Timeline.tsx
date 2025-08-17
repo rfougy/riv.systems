@@ -1,7 +1,7 @@
 import { IEvent } from "../../../interfaces/timeline/IEvent";
 import {
   Summary,
-  Date,
+  DateText,
   Title,
   Box,
   Dot,
@@ -12,13 +12,23 @@ import {
 } from "./Timeline.styled";
 import externalLinkIcon from "../../../public/assets/icons/external-link-icon.svg";
 import Image from "next/image";
+import { useMemo } from "react";
 
 const Timeline: React.FC<{
-  events: IEvent[];
+  events: string;
 }> = ({ events }) => {
-  const sortedEvents = [...events].sort(
-    (a, b) => a.date.getTime() - b.date.getTime()
-  );
+  const parsedEvents: IEvent[] = useMemo(() => {
+    return JSON.parse(events).map((event: any) => ({
+      ...event,
+      date: new Date(event.date),
+    }));
+  }, [events]);
+
+  const sortedEvents = useMemo(() => {
+    return parsedEvents.sort((a, b) => {
+      return new Date(a.date).getTime() - new Date(b.date).getTime();
+    });
+  }, [parsedEvents]);
 
   function formatDate(date: Date) {
     const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -53,7 +63,7 @@ const Timeline: React.FC<{
     timelineItems.push(
       <Event key={i}>
         <Dot isCaseStudy={caseStudy} />
-        <Date>{formatDate(date)}</Date>
+        <DateText>{formatDate(date)}</DateText>
         <Summary>
           {link ? (
             <a href={link} target="_blank" rel="noreferrer" className="w-fit">

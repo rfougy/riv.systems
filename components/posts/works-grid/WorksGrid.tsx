@@ -18,9 +18,9 @@ const WorksGrid: React.FC<{
   );
 
   const formatted = {
-    duration: duration.join(" - "),
-    roles: roles.join(", "),
-    tools: tools.join(", "),
+    duration: (roles && duration.join(" - ")) || "—",
+    roles: (roles && roles.join(", ")) || "—",
+    tools: (tools && tools.join(", ")) || "—",
   };
 
   useEffect(() => setExpanded(!isVerticalView), [isVerticalView]);

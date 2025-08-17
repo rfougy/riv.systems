@@ -12,6 +12,7 @@ import TextHighlightProvider from "../../../context/TextHighlightContext";
 
 import { Box, Content, CoverImage, Divider } from "./PostPage.styled";
 import LineBreak from "../../markdown-to-jsx/line-break/LineBreak";
+import Timeline from "../../markdown-to-jsx/timeline/Timeline";
 
 const PostPage: React.FC<{ content: any }> = ({ content }) => {
   const { frontmatter, postContent }: any = content;
@@ -56,6 +57,9 @@ const PostPage: React.FC<{ content: any }> = ({ content }) => {
                 },
                 Slideshow: {
                   component: Slideshow,
+                },
+                Timeline: {
+                  component: Timeline,
                 },
                 hr: {
                   component: LineBreak,

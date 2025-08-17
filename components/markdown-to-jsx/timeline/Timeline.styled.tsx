@@ -55,7 +55,7 @@ export const Title = styled.h3<{
   }
 `;
 
-export const Date = styled.p`
+export const DateText = styled.p`
   font-size: 0.875rem;
   color: ${(props: any) => props.theme.primary};
   opacity: 0.5;

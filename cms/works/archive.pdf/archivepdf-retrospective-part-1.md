@@ -1,30 +1,30 @@
 ---
-title: "ARCHIVE.pdf Retrospective, Part 1: Overview & Timeline"
+title: "ARCHIVE.pdf Retrospective: Overview & Timeline"
 datePublished: "2025-08-18"
 section: works
 category: archive.pdf
-excerpt: Placeholder.
+excerpt: Looking back on the journey of ARCHIVE.pdf, from scanning books in the basement to Paris Fashion Week and beyond.
 coverImage: "/works/archive.pdf/archivepdf-retrospective-part-1/archivepdf-retrospective-part-1_cover.png"
 link: https://www.archivepdf.net/
 worksTeamSize: 20
-worksRoles: ["Founder", "CEO"]
+worksRoles: ["Founder", "CEO", "CTO"]
 worksDuration: ["02.19", "08.25"]
 worksTools: ["Various"]
 ---
 
-Out of all the creative endeavors I’ve pursued, ARCHIVE.pdf has by far been the most pivotal. Who would’ve thought that scanning fashion books in my mom’s basement would evolve into a company that <mark>brought real value to the fashion community at large</mark>?
+Out of all the creative endeavors I’ve pursued, ARCHIVE.pdf has been the most pivotal. Who would’ve thought that scanning fashion books in my mom’s basement would evolve into a company that <mark>brings real value to the fashion community at large</mark>?
 
 During the late 2010s, I was obsessed with the world of _archival fashion_: ["...any fashion that is not from the current season, but has come to describe contemporary fashion from – broad and niche – collective mythologies"](https://www.gq-magazine.co.uk/article/what-is-archival-fashion). Grailed was still a relatively new platform at the time, and through it I immersed myself in the niche by reselling brands such as Undercover and Number (N)ine.
 
-One day, while sourcing for clothing online to resell, I stumbled upon a book by Undercover called “Labyrinth of Undercover,” a 25-year retrospective of the brand’s collections. The contents were nothing short of astounding, but what surprised me even more was the fact that none of the images from the book were available online. It was here where <mark>the idea of sharing PDF files of rare fashion books</mark> surfaced, hence the name of the company: ARCHIVE.pdf.
+One day, while searching online for clothing to resell, I stumbled upon a book by Undercover called [“Labyrinth of Undercover,”](https://www.archivepdf.net/scans/undercover/labyrinth-of-undercover) a 25-year retrospective of the brand’s collections. The contents were nothing short of astounding, but what surprised me even more was the fact that none of the images from the book were available online. It was here where <mark>the idea of sharing PDF files of rare fashion books</mark> surfaced, hence the name of the company: [ARCHIVE.pdf](https://www.archivepdf.net/).
 
-With each new scan came a growing number of enthusiasts who expressed their enthusiasm, and before long many wanted to contribute their own scans too. Eventually I created an Instagram account that served as another platform to share the images we’ve scanned. This gradually <mark>evolved into a digital magazine</mark>, with each post featuring rare scans and informative captions.
+With each new scan came a growing number of supporters who expressed their enthusiasm, and before long many wanted to contribute their own scans too. Eventually I created an [Instagram account](https://www.instagram.com/archivepdf/) that served as another platform to share the images we’ve scanned. This gradually <mark>evolved into a digital magazine</mark>, with each post featuring rare scans and informative captions.
 
 Our first team member, Isabelle, joined the then solo venture in 2020, followed by Johnny, Khan, and many more. Within the blink of an eye, <mark>the team grew from 1 to 20</mark>, the content and projects we created became more ambitious, and before we knew it we found ourselves <mark>attracting business partners and opportunities: adidas, Gucci, Y-3, Grailed</mark>. We now attend <mark>Paris Fashion Week year after year</mark>, providing coverage for the very brands that inspired the creation of this company.
 
-Although I’ve recently made the decision to step down from my position at ARCHIVE.pdf in pursuit of something new, I’m extremely proud that it can keep going with a team who truly love fashion. The foundations are set, the company’s full potential is still yet to be realized, and I’m excited to see what’s in store.
+Although I’ve recently made the decision to leave ARCHIVE.pdf in pursuit of something new, I’m extremely proud that it can keep going with a team who truly love fashion. The foundations are set, the company’s full potential is still yet to be realized, and I’m excited to see what’s in store.
 
-From building and leading a team, to understanding and providing value for a unique industry and community, the experiences I’ve gained and accomplishments I achieved will stay with me for the rest of my life. I’m forever grateful.
+From building and leading a team, to understanding and providing value for a unique industry and community, the experiences I’ve gained and the accomplishments I achieved will stay with me for the rest of my life. I’m forever grateful.
 
 ---
 

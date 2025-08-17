@@ -9,6 +9,7 @@ import {
   Line,
   YearSeparator,
   Year,
+  Hyperlink,
 } from "./Timeline.styled";
 import externalLinkIcon from "../../../public/assets/icons/external-link-icon.svg";
 import Image from "next/image";
@@ -66,7 +67,12 @@ const Timeline: React.FC<{
         <DateText>{formatDate(date)}</DateText>
         <Summary>
           {link ? (
-            <a href={link} target="_blank" rel="noreferrer" className="w-fit">
+            <Hyperlink
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+              className="w-fit"
+            >
               <Title isCaseStudy={caseStudy} link={link}>
                 {title}{" "}
                 <Image
@@ -78,7 +84,7 @@ const Timeline: React.FC<{
                   className="inline ml-1 align-baseline"
                 />
               </Title>
-            </a>
+            </Hyperlink>
           ) : (
             <Title isCaseStudy={caseStudy}>{title}</Title>
           )}
@@ -89,13 +95,10 @@ const Timeline: React.FC<{
   });
 
   return (
-    <div className="flex flex-col gap-8">
-      <h2 className="font-bold mb-8">Timeline</h2>
-      <Box>
-        <Line />
-        {timelineItems}
-      </Box>
-    </div>
+    <Box>
+      <Line />
+      {timelineItems}
+    </Box>
   );
 };
 

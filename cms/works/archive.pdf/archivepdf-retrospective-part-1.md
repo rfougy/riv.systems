@@ -4,7 +4,7 @@ datePublished: "2025-08-18"
 section: works
 category: archive.pdf
 excerpt: Placeholder.
-coverImage: "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_2.webp"
+coverImage: "/works/archive.pdf/archivepdf-retrospective-part-1/archivepdf-retrospective-part-1_cover.png"
 link: https://beta.archivepdf.net/
 worksTeamSize: 20
 worksRoles: ["Founder", "CEO"]
@@ -29,9 +29,6 @@ From building and leading a team, to understanding and providing value for a uni
 ---
 
 ## Timeline
-
-<br/>
-<br/>
 
 <Timeline events=<Timeline events='[
   {

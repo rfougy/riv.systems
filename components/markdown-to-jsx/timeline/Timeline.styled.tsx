@@ -2,14 +2,14 @@ import styled from "@emotion/styled";
 
 export const Box = styled.div`
   position: relative;
-  padding-left: 10rem;
+  padding-left: 5.76rem;
 `;
 
 export const Line = styled.div`
   position: absolute;
-  left: 8.5rem;
-  top: 0.5rem;
-  bottom: 0.5rem;
+  left: 4.275rem;
+  top: 6rem;
+  bottom: 2.5rem;
   width: 0.1rem;
   background-color: ${(props: any) => props.theme.primary};
 `;
@@ -17,7 +17,6 @@ export const Line = styled.div`
 export const Event = styled.div`
   position: relative;
   margin-bottom: 2rem;
-  padding-left: 1.5rem;
 `;
 
 export const Dot = styled.div<{ isCaseStudy?: string; theme?: any }>`
@@ -48,6 +47,12 @@ export const Title = styled.h3<{
   font-weight: ${(props) => (props.isCaseStudy ? "600" : "400")};
   color: ${(props) => props.theme.primary};
   margin: 0;
+  text-decoration: none;
+
+  img {
+    filter: invert(0.5);
+    -webkit-filter: invert(0.5);
+  }
 
   &:hover {
     text-decoration: ${(props) => (props.link ? "underline" : "none")};
@@ -56,28 +61,28 @@ export const Title = styled.h3<{
 `;
 
 export const DateText = styled.p`
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: ${(props: any) => props.theme.primary};
   opacity: 0.5;
   margin: 0;
   position: absolute;
-  left: -10rem;
-  width: 8rem;
-  text-align: right;
-  padding-right: 1rem;
+  left: -5.75rem;
+  top: -0.25rem;
+  max-width: min-content;
+  text-align: left;
 `;
 
 export const YearSeparator = styled.div`
   position: relative;
-  margin: 3rem 0 2rem 0;
+  margin: 4rem 0 5rem 0;
   padding-left: 1.5rem;
 `;
 
 export const Year = styled.h3`
   position: absolute;
-  left: -10rem;
+  left: -5.75rem;
   top: -2.5rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 700;
   color: ${(props: any) => props.theme.primary};
   margin: 0;
@@ -100,4 +105,8 @@ export const CaseStudyButton = styled.button`
   &:hover {
     background: ${(props: any) => props.theme.highlight};
   }
+`;
+
+export const Hyperlink = styled.a`
+  text-decoration: none !important;
 `;

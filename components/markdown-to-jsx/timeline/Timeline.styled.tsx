@@ -22,7 +22,7 @@ export const Event = styled.div`
 export const Dot = styled.div<{ isCaseStudy?: string; theme?: any }>`
   position: absolute;
   left: ${(props) => (props.isCaseStudy ? "-1.95rem" : "-1.8rem")};
-  top: 0.25rem;
+  top: ${(props) => (props.isCaseStudy ? "0.25rem" : "0.4rem")};
   width: ${(props) => (props.isCaseStudy ? "1rem" : "0.75rem")};
   height: ${(props) => (props.isCaseStudy ? "1rem" : "0.75rem")};
   background-color: ${(props) => props.theme.primary};
@@ -38,12 +38,11 @@ export const Summary = styled.div`
   gap: 1rem;
 `;
 
-export const Title = styled.h3<{
+export const Title = styled.p<{
   isCaseStudy?: string;
   link?: string;
   theme?: any;
 }>`
-  font-size: ${(props) => (props.isCaseStudy ? "1.125rem" : "1rem")};
   font-weight: ${(props) => (props.isCaseStudy ? "600" : "400")};
   color: ${(props) => props.theme.primary};
   margin: 0;
@@ -61,13 +60,12 @@ export const Title = styled.h3<{
 `;
 
 export const DateText = styled.p`
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: ${(props: any) => props.theme.primary};
   opacity: 0.5;
   margin: 0;
   position: absolute;
-  left: -5.75rem;
-  top: -0.25rem;
+  left: -5.5rem;
   max-width: min-content;
   text-align: left;
 `;

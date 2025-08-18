@@ -25,7 +25,7 @@ import "@fontsource/roboto-mono/500.css";
 import "@fontsource/roboto-mono/700.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const [currTheme, setTheme] = useState<ITheme>(darkTheme);
+  const [currTheme, setTheme] = useState<ITheme>(lightTheme);
 
   // @ts-ignore
   const { isDisplayDotsPage, isLinkInBioPage } = pageProps;

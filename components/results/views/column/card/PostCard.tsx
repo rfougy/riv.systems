@@ -26,10 +26,15 @@ const PostCard: React.FC<{
   const formattedDuration = worksDuration && worksDuration.join(" - ");
   const hasWorksDuration = worksDuration ? true : false;
 
+  const categoryCapitalized =
+    category === "archive.pdf"
+      ? category.replace(/^[^.]+/, (match) => match.toUpperCase())
+      : capitalizeFirstChar(category);
+
   return (
     <Link href={path}>
       <Box>
-        <Category>{capitalizeFirstChar(category)}</Category>
+        <Category>{categoryCapitalized}</Category>
         <Image
           src={coverImage}
           alt={`Cover image for post titled '${title}'`}

@@ -18,7 +18,10 @@ const CategoryResults: React.FC<{
   const [renderedPostCards, setRenderedPostCards] = useState<any>();
   const [postView, setPostView] = useState<postView>("column");
 
-  const categoryAsTitle: string = capitalizeFirstChar(category);
+  const categoryAsTitle: string =
+    category === "archive.pdf"
+      ? category.replace(/^[^.]+/, (match) => match.toUpperCase())
+      : capitalizeFirstChar(category);
 
   function renderPostView(): React.ReactElement {
     switch (postView) {

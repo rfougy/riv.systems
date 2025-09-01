@@ -41,6 +41,11 @@ const Header: React.FC<{
 
   const dateAsStr: string = formatAndStylizeDate(datePublished);
 
+  const categoryCapitalized =
+    category === "archive.pdf"
+      ? category.replace(/^[^.]+/, (match) => match.toUpperCase())
+      : capitalizeFirstChar(category);
+
   useEffect(() => setIsWorksPage(section === "works"), [section]);
 
   return (
@@ -56,7 +61,7 @@ const Header: React.FC<{
         </Inline>
         <Inline>
           <Link href={`/content/${section}/${category}`}>
-            {capitalizeFirstChar(category)}
+            {categoryCapitalized}
           </Link>
         </Inline>
         <Li>

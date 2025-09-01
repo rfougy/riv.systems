@@ -15,6 +15,11 @@ const PostCard: React.FC<{
     frontmatter: { title, category, coverImage, placeholderImage },
   } = post;
 
+  const categoryCapitalized =
+    category === "archive.pdf"
+      ? category.replace(/^[^.]+/, (match) => match.toUpperCase())
+      : capitalizeFirstChar(category);
+
   return (
     <Link href={path}>
       <Box>
@@ -34,7 +39,7 @@ const PostCard: React.FC<{
         </ImageBox>
         <Text>
           <Title>{title}</Title>
-          <Category>{capitalizeFirstChar(category)}</Category>
+          <Category>{categoryCapitalized}</Category>
         </Text>
       </Box>
     </Link>

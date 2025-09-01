@@ -142,6 +142,13 @@ const FilterMenu: React.FC<{
                               category.section === categoryObj.section
                           );
 
+                        const categoryLabelCapitalized =
+                          categoryLabel === "archive.pdf"
+                            ? categoryLabel.replace(/^[^.]+/, (match) =>
+                                match.toUpperCase()
+                              )
+                            : capitalizeFirstChar(categoryLabel);
+
                         return (
                           <FilterOption isCategoryFilter key={index}>
                             <input
@@ -160,7 +167,7 @@ const FilterMenu: React.FC<{
                                 )
                               }
                             />
-                            <Label>{capitalizeFirstChar(categoryLabel)}</Label>
+                            <Label>{categoryLabelCapitalized}</Label>
                           </FilterOption>
                         );
                       }

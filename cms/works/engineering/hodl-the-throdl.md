@@ -2,7 +2,7 @@
 title: Hodl The Throdl! Blockchain App
 datePublished: "2023-05-03"
 section: works
-category: dev
+category: engineering
 excerpt: Developing the platformer game's cryptocurrency, Web3 integration, and UI.
 coverImage: https://user-images.githubusercontent.com/77861258/236042787-557a5bbd-c7b4-47fd-852e-d3eba499b978.jpg
 link: https://github.com/Hodl-The-Throdl-Devs/platformer

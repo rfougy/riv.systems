@@ -38,7 +38,7 @@ export const Summary = styled.div`
   gap: 1rem;
 `;
 
-export const Title = styled.p<{
+export const Title = styled.span<{
   isCaseStudy?: string;
   link?: string;
   theme?: any;
@@ -55,7 +55,7 @@ export const Title = styled.p<{
 
   &:hover {
     text-decoration: ${(props) => (props.link ? "underline" : "none")};
-    cursor: ${(props) => props.link && "cell"};
+    cursor: ${(props) => (props.link ? "cell" : "crosshair")};
   }
 `;
 

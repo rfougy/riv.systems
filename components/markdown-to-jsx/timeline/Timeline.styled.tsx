@@ -47,6 +47,7 @@ export const Title = styled.span<{
   color: ${(props) => props.theme.primary};
   margin: 0;
   text-decoration: none;
+  font-size: 0.875rem;
 
   img {
     filter: invert(0.5);

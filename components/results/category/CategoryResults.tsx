@@ -10,6 +10,7 @@ import { postView } from "../../../types/postView";
 import ColumnView from "../views/column/ColumnView";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import TitleAndToggler from "../../shared/title-and-toggle/TitleAndToggler";
+import GalleryView from "../views/gallery/GalleryView";
 
 const CategoryResults: React.FC<{
   category: string;
@@ -27,6 +28,8 @@ const CategoryResults: React.FC<{
     switch (postView) {
       case "column":
         return <ColumnView content={renderedPostCards} />;
+      case "gallery":
+        return <GalleryView content={renderedPostCards} />;
       default:
         return <DefaultView content={renderedPostCards} />;
     }

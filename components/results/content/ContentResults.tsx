@@ -13,6 +13,7 @@ import useContentFiltering from "../../../hooks/useContentFiltering";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
 import TitleAndToggler from "../../shared/title-and-toggle/TitleAndToggler";
+import GalleryView from "../views/gallery/GalleryView";
 
 const ContentResults: React.FC<{
   content: any;
@@ -36,6 +37,8 @@ const ContentResults: React.FC<{
     switch (postView) {
       case "column":
         return <ColumnView content={renderedPostCards} />;
+      case "gallery":
+        return <GalleryView content={renderedPostCards} />;
       default:
         return <DefaultView content={renderedPostCards} />;
     }

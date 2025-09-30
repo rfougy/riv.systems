@@ -14,4 +14,9 @@ export const postViewButtonDict: IPostViewButtonDict = {
     ariaLabel: "Column View Button",
     imageAlt: "Column View Icon",
   },
+  gallery: {
+    icon: gridViewIcon,
+    ariaLabel: "Gallery View Button",
+    imageAlt: "Gallery View Icon",
+  },
 };

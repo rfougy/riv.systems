@@ -3,38 +3,17 @@ import Image from "next/image";
 
 import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";
 
-import { Box, Category, Info, Metadata, Text, Title } from "./PostCard.styled";
-
-import { capitalizeFirstChar } from "../../../../../utils/common/capitalizeFirstChar";
-import { formatAndStylizeDate } from "../../../../../utils/common/formatAndStylizeDate";
+import { Box } from "./PostCard.styled";
 
 const PostCard: React.FC<{
   path: string;
   frontmatter: any;
 }> = ({ path, frontmatter }) => {
-  const {
-    title,
-    datePublished,
-    category,
-    coverImage,
-    placeholderImage,
-    worksDuration,
-  }: IPostFrontMatter = frontmatter;
-
-  const stylizedDate: string = formatAndStylizeDate(datePublished);
-
-  const formattedDuration = worksDuration && worksDuration.join(" - ");
-  const hasWorksDuration = worksDuration ? true : false;
-
-  const categoryCapitalized =
-    category === "archive.pdf"
-      ? category.replace(/^[^.]+/, (match) => match.toUpperCase())
-      : capitalizeFirstChar(category);
+  const { title, coverImage, placeholderImage }: IPostFrontMatter = frontmatter;
 
   return (
     <Link href={path}>
       <Box>
-        <Category>{categoryCapitalized}</Category>
         <Image
           src={coverImage}
           alt={`Cover image for post titled '${title}'`}
@@ -47,13 +26,6 @@ const PostCard: React.FC<{
             objectFit: "cover",
           }}
         />
-        <Text>
-          <Title>{title}</Title>
-          <Metadata>
-            {hasWorksDuration && <Info>Worked: {formattedDuration}</Info>}
-            <Info>Posted: {stylizedDate}</Info>
-          </Metadata>
-        </Text>
       </Box>
     </Link>
   );

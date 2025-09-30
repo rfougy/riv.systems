@@ -1,4 +1,4 @@
-import { breakpoints, lightTheme } from "../../../../../styles/theme";
+import { breakpoints } from "../../../../../styles/theme";
 import styled from "@emotion/styled";
 
 export const Box = styled.div`
@@ -52,61 +52,8 @@ export const Box = styled.div`
   }
 `;
 
-export const Text = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-
-  padding: 1rem;
-  background: ${(props: any) => props.theme.secondary};
-`;
-
 export const MetadataContainer = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-`;
-
-export const Metadata = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  justify-content: center;
-`;
-
-/**
- * @description webkit portion allows for ellipsis after reaching two lines of text
- * @see https://chipcullen.com/truncating-type-at-more-than-one-line/
- */
-export const Title = styled.h2`
-  display: inline-block;
-  margin: 0;
-  max-height: 2.9rem;
-  width: 100%;
-
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-`;
-
-export const Info = styled.div`
-  min-width: max-content;
-  cursor: cell !important;
-`;
-
-export const Category = styled.span`
-  position: absolute;
-  display: flex;
-
-  margin: 1rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
-
-  cursor: cell !important;
-  color: ${lightTheme.secondary};
-
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(2.5px);
 `;

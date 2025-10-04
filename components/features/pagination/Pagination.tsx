@@ -18,10 +18,6 @@ const Pagination: React.FC<{
   totalPostCards,
   initialPostCardsPerPage = 6,
 }) => {
-  console.log("contentToPaginate: ", contentToPaginate);
-  console.log("totalPostCards: ", totalPostCards);
-  console.log("initialPostCardsPerPage: ", initialPostCardsPerPage);
-
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [postCardsPerPage, setPostCardsPerPage] = useState<number>(
     initialPostCardsPerPage

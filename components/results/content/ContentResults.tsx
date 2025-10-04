@@ -17,9 +17,10 @@ import GalleryView from "../views/gallery/GalleryView";
 
 const ContentResults: React.FC<{
   content: any;
-}> = ({ content }) => {
+  defaultView?: postView;
+}> = ({ content, defaultView = "default" }) => {
   const [renderedPostCards, setRenderedPostCards] = useState<any>();
-  const [postView, setPostView] = useState<postView>("default");
+  const [postView, setPostView] = useState<postView>(defaultView);
 
   const isVerticalView = useViewportWidthEventListener(960);
 

@@ -5,6 +5,14 @@ section: blog
 category: personal
 excerpt: Your inspirations, scattered around every corner.
 coverImage: "/blog/personal/dear-ojiisan/dear-ojiisan_cover.webp"
+imageGallery:
+  [
+    "/blog/personal/dear-ojiisan/dear-ojiisan_cover.webp",
+    "/blog/personal/dear-ojiisan/dear-ojiisan_4.webp",
+    "/blog/personal/dear-ojiisan/dear-ojiisan_7.webp",
+    "/blog/personal/dear-ojiisan/dear-ojiisan_3.webp",
+    "/blog/personal/dear-ojiisan/dear-ojiisan_6.webp",
+  ]
 ---
 
 Dear Ojiisan,

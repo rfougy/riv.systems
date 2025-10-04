@@ -9,12 +9,9 @@ const GalleryView: React.FC<{
     <List>
       {content.map((singleContent: any, index: number) => {
         const { path, frontmatter } = singleContent;
+        const hasImageGallery = frontmatter.imageGallery;
 
-        return (
-          <Item key={index}>
-            <PostCard path={path} frontmatter={frontmatter} />
-          </Item>
-        );
+        return <PostCard key={index} path={path} frontmatter={frontmatter} />;
       })}
     </List>
   ) : (

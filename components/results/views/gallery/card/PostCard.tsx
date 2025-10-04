@@ -8,14 +8,17 @@ import { Box } from "./PostCard.styled";
 const PostCard: React.FC<{
   path: string;
   frontmatter: any;
-}> = ({ path, frontmatter }) => {
+  galleryCoverImage?: string;
+}> = ({ path, frontmatter, galleryCoverImage }) => {
   const { title, coverImage, placeholderImage }: IPostFrontMatter = frontmatter;
+
+  console.log("galleryCoverImage: ", galleryCoverImage);
 
   return (
     <Link href={path}>
       <Box>
         <Image
-          src={coverImage}
+          src={galleryCoverImage ? galleryCoverImage : coverImage}
           alt={`Cover image for post titled '${title}'`}
           width={800}
           height={400}

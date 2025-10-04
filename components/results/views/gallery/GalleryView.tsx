@@ -1,21 +1,39 @@
 import PostCard from "./card/PostCard";
-
-import { List, Item } from "./GalleryView.styled";
+import { List } from "./GalleryView.styled";
 
 const GalleryView: React.FC<{
   content: any;
 }> = ({ content }) => {
-  return content ? (
-    <List>
-      {content.map((singleContent: any, index: number) => {
-        const { path, frontmatter } = singleContent;
-        const hasImageGallery = frontmatter.imageGallery;
+  if (!content) {
+    return <div>Error: No content available...</div>;
+  }
 
-        return <PostCard key={index} path={path} frontmatter={frontmatter} />;
-      })}
+  const galleryItems = content.flatMap((singleContent: any) => {
+    const { path, frontmatter } = singleContent;
+
+    if (!frontmatter.imageGallery) {
+      return [];
+    }
+
+    return frontmatter.imageGallery.map((image: string, index: number) => ({
+      key: `${path}-${index}`,
+      path,
+      frontmatter,
+      galleryCoverImage: image,
+    }));
+  });
+
+  return (
+    <List>
+      {galleryItems.map((item: any) => (
+        <PostCard
+          key={item.key}
+          path={item.path}
+          frontmatter={item.frontmatter}
+          galleryCoverImage={item.galleryCoverImage}
+        />
+      ))}
     </List>
-  ) : (
-    <div>Error: No content available...</div>
   );
 };
 

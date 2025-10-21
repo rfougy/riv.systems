@@ -23,9 +23,7 @@ After our first meeting with the store’s founder Jonathan Meizler, we agreed o
 
 ## Design Process
 
-We began by sending the pdf logo to title of work, who then produced the CAD model.
-
-After approval, the CAD served as the basis for the wax model and subsequent mold for producing the first sample. The body of the ring followed title of work’s existing signet form, while the logo was laser-engraved onto the face.
+We began by sending the pdf logo to title of work, who then produced the CAD model. After approval, the CAD served as the basis for the wax model and subsequent mold for producing the first sample. The body of the ring followed title of work’s existing signet form, while the logo was laser-engraved onto the face.
 
 <br/>
 <br/>

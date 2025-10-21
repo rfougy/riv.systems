@@ -6,12 +6,12 @@ category: archive.pdf
 excerpt: Case study into the design process and marketing campaign for ARCHIVE.pdf's first collaborative product.
 coverImage: "/works/archive.pdf/artifact-ring/artifact-ring-product-photos_2.webp"
 # link: https://www.archivepdf.net/
-worksTeamSize: 20
+worksTeamSize: 2
 worksRoles: ["Creative Director", "Photographer", "Videographer"]
-worksDuration: ["02.19", "08.25"]
+worksDuration: ["04.25", "10.25"]
 worksTools:
   [
-    "Fujifilm X-H2S, Fujinon XF80mmF2.8 R LM OIS WR Macro, Adobe Photoshop, Adobe Premiere Pro",
+    "Fujifilm X-H2S, Fujinon XF 80mm F2.8 Macro Lens, Adobe Photoshop, Adobe Premiere Pro",
   ]
 ---
 

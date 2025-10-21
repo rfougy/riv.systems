@@ -17,7 +17,9 @@ worksTools:
 
 Since ARCHIVE.pdf’s founding in 2019, its team has always carried a desire to create meaningful products. Earlier this year, an opportunity to realize this desire surfaced when our Chief Creative Officer, Noel, introduced us to [title of work](https://titleofwork.com/). Based in New York’s Lower East Side, title of work is composed of a small, dedicated team of jewelry artisans — all of their products are handmade. What better store could there be to realize this desire to make quality product?
 
-After our first meeting with the store’s founder Jonathan Meizler, we agreed on a set of products that would sit at the intersection of jewelry and archiving. One of these was the ‘Artifact Ring’ — a signet ring incorporating ARCHIVE.pdf’s “pdf” mark. This ring in particular was something that I’ve envisioned since the company early years. Because of this, I took on the role of collaborating with title of work on the ring’s design and marketing campaign, with support from Noel.
+After our first meeting with the store’s founder Jonathan Meizler, we agreed on a set of <mark>products that would sit at the intersection of jewelry and archiving</mark>. One of these was the <mark>‘Artifact Ring’ — a signet ring incorporating ARCHIVE.pdf’s “pdf” mark</mark>. This ring in particular was something that I’ve envisioned since the company early years. Because of this, I took on the <mark>role of collaborating with title of work on the ring’s design and marketing campaign</mark>, with support from Noel.
+
+---
 
 ## Design Process
 
@@ -37,15 +39,15 @@ After approval, the CAD served as the basis for the wax model and subsequent mol
 <br/>
 <br/>
 
-Upon receiving the sample, it was clear that there was a visual tension between the face and the body. The body of the ring was well-considered and “felt human” — soft curvatures, smooth transitions between face and closure. By contrast, the laser engraving was precise to an almost uncanny degree. To resolve this contrast, I explored ways to unify the two sides into one, creating a more cohesive design rather than two opposing visual languages.
+Upon receiving the sample, it was clear that there was a <mark>visual tension between the face and the body</mark>. The body of the ring was well-considered and “felt human” — soft curvatures, smooth transitions between face and closure. By contrast, the laser engraving was precise to an almost uncanny degree. To resolve this contrast, <mark>I explored ways to unify the two sides into one</mark>, creating a more cohesive design rather than two opposing visual languages.
 
-The solution was to design a denture on the face to mimic the impression of a wax seal, resulting in a more organic quality. After discussions with Jonathan, he worked with his team in incorporating deceivingly subtle details: a slightly off-center stamping effect, subtle striations reminiscent of fingerprints, and a smooth yet uneven surface. These changes came together to form a nuanced Version 2.
+The solution was to design <mark>a denture on the face to mimic the impression of a wax seal</mark>, resulting in a more organic quality. After discussions with Jonathan, he worked with his team in incorporating deceivingly subtle details: a slightly off-center stamping effect, subtle striations reminiscent of fingerprints, and a smooth yet uneven surface. These changes came together to form a nuanced Version 2.
 
 ## Marketing Campaign
 
-Over time, personal possessions begin to take on lives of their own, representing memories and meaning for their owners. My goal was to translate this perspective through the marketing campaign, expressing both the humanity and the memories of ARCHIVE.pdf embodied in the Artifact Ring.
+Over time, personal possessions begin to take on lives of their own, representing memories and meaning for their owners. My goal was to translate this perspective through the marketing campaign, <mark>expressing both the humanity and the memories of ARCHIVE.pdf embodied in the Artifact Ring</mark>.
 
-The campaign was split into three posts: future, past, and present. The first was a video capturing the Artifact Ring in natural, post-apocalyptic settings.
+The campaign was <mark>split into three posts: future, past, and present</mark>. The first was a video capturing the Artifact Ring in natural, post-apocalyptic settings.
 
 <br/>
 <br/>
@@ -133,5 +135,7 @@ The final post announced the release of the ring through clean, modern product p
 
 <br/>
 <br/>
+
+---
 
 I’m extremely grateful to have created this ring in collaboration with Jonathan and title of work. Having little to no restraints on creative freedom allows one to push into unexplored territories, resulting in works that can resonate with real people.

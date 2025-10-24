@@ -52,7 +52,7 @@ const NextImage: React.FC<{
         aspectRatio={aspectRatio}
         onClick={handleImageClick}
         style={{
-          cursor: isBelowMinWidth || isSlideThumbnail ? "default" : "pointer",
+          cursor: isBelowMinWidth || isSlideThumbnail ? "crosshair" : "cell",
         }}
       >
         <Image

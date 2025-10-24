@@ -50,8 +50,14 @@ export const CloseButton = styled.button`
   right: 0;
   background: none;
   border: none;
-  color: white;
-  font-size: 24px;
+  padding: 8px;
   cursor: pointer;
   z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover {
+    opacity: 0.8;
+  }
 `;

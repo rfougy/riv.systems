@@ -105,7 +105,7 @@ const Slideshow: React.FC<{
                 src={image.src}
                 alt={image.alt}
                 onClick={handleSlideClick}
-                style={{ cursor: isBelowMinWidth ? "default" : "pointer" }}
+                style={{ cursor: isBelowMinWidth ? "crosshair" : "cell" }}
               />
             </SwiperSlide>
           ))}

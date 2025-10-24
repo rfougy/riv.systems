@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { ModalOverlay, ModalContent, CloseButton } from "./Modal.styled";
+import CloseIcon from "./icons/CloseIcon";
 
 const Modal: React.FC<{
   children: React.ReactNode;
@@ -22,7 +23,9 @@ const Modal: React.FC<{
       }
     >
       <ModalContent aspectRatio={aspectRatio}>
-        <CloseButton onClick={onClose}>×</CloseButton>
+        <CloseButton onClick={onClose}>
+          <CloseIcon />
+        </CloseButton>
         {children}
       </ModalContent>
     </ModalOverlay>

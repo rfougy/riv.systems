@@ -4,7 +4,7 @@ import React, { useMemo, useState } from "react";
 import { SwiperSlide } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
-import SlideshowModal from "./SlideshowModal";
+import Modal from "../../shared/modal/Modal";
 import useViewportWidthListener from "../../../hooks/useViewportWidthListener";
 import { breakpoints } from "../../../styles/theme";
 
@@ -41,26 +41,43 @@ const Slideshow: React.FC<{
   const [currSlideIdx, setCurrSlideIdx] = useState<number | undefined>(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const isVerticalView = useViewportWidthListener(
+  const isBelowMinWidth = useViewportWidthListener(
     breakpoints.useViewportWidth.xs
   );
 
   const parsedSlides: Slide[] = useMemo(() => JSON.parse(slides), [slides]);
 
   function handleSlideClick() {
-    if (!isVerticalView) setIsModalOpen(true);
+    if (!isBelowMinWidth) setIsModalOpen(true);
   }
 
   return (
     <SlideshowContainer>
       {isModalOpen && (
-        <SlideshowModal
-          slides={parsedSlides}
-          initialSlide={currSlideIdx || 0}
+        <Modal
           onClose={() => setIsModalOpen(false)}
-          navArrowColor={navArrowColor}
-          aspectRatio={aspectRatio}
-        />
+          aspectRatio={aspectRatio.replace(":", "/")}
+        >
+          <StyledSwiper
+            modules={[Navigation, Thumbs]}
+            navigation
+            loop
+            slidesPerView={1}
+            spaceBetween={30}
+            initialSlide={currSlideIdx || 0}
+            style={{
+              // @ts-ignore
+              "--swiper-navigation-color": navArrowColor,
+              height: "100%",
+            }}
+          >
+            {parsedSlides.map((image: Slide, index: number) => (
+              <SwiperSlide key={index}>
+                <SlideImage src={image.src} alt={image.alt} />
+              </SwiperSlide>
+            ))}
+          </StyledSwiper>
+        </Modal>
       )}
       <MainSwiperContainer>
         <StyledSwiper
@@ -88,7 +105,7 @@ const Slideshow: React.FC<{
                 src={image.src}
                 alt={image.alt}
                 onClick={handleSlideClick}
-                style={{ cursor: isVerticalView ? "default" : "pointer" }}
+                style={{ cursor: isBelowMinWidth ? "default" : "pointer" }}
               />
             </SwiperSlide>
           ))}

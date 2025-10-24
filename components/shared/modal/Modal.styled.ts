@@ -45,18 +45,18 @@ export const ModalContent = styled.div<{ aspectRatio?: string }>`
 `;
 
 export const CloseButton = styled.button`
-  position: absolute;
-  top: -40px;
-  right: 0;
+  position: fixed;
+  top: 12px;
+  right: 32px;
   background: none;
   border: none;
-  padding: 8px;
   cursor: pointer;
+  padding: 0;
   z-index: 1001;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   &:hover {
     opacity: 0.8;
   }

@@ -23,7 +23,21 @@ After our first meeting with the store’s founder Jonathan Meizler, we agreed o
 
 ## Design Process
 
-We began by sending the pdf logo to title of work, who then produced the CAD model. After approval, the CAD served as the basis for the wax model and subsequent mold for producing the first sample. The body of the ring followed title of work’s existing signet form, while the logo was engraved onto the face.
+We began by sending the pdf logo to title of work, who then produced the CAD model.
+
+<br/>
+<br/>
+
+<Image 
+    src="/works/archive.pdf/artifact-ring/artifact-ring-v1-cad.png"
+    alt="First CAD of the Artifact Ring" 
+    aspectRatio="16:9"
+/>
+
+<br/>
+<br/>
+
+After approval, the CAD served as the basis for the wax model and subsequent mold for producing the first sample. The body of the ring followed title of work’s existing signet form, while the logo was engraved onto the face.
 
 <br/>
 <br/>
@@ -40,6 +54,18 @@ We began by sending the pdf logo to title of work, who then produced the CAD mod
 Upon receiving the sample, it was clear that there was a <mark>visual tension between the face and the body</mark>. The body of the ring was well-considered and “felt human” — soft curvatures, smooth transitions between face and closure. By contrast, the engraving was precise to an almost uncanny degree. To resolve this contrast, <mark>I explored ways to unify the two sides into one</mark>, creating a more cohesive design rather than two opposing visual languages.
 
 The solution was to design <mark>a denture on the face to mimic the impression of a wax seal</mark>, resulting in a more organic quality. After discussions with Jonathan, he worked with his team in incorporating deceivingly subtle details: a slightly off-center stamping effect, subtle striations reminiscent of fingerprints, and a smooth yet uneven surface. These changes came together to form a nuanced Version 2.
+
+<br/>
+<br/>
+
+<Image 
+    src="/works/archive.pdf/artifact-ring/artifact-ring-v2-cad.png"
+    alt="Second CAD of the Artifact Ring" 
+    aspectRatio="16:9"
+/>
+
+<br/>
+<br/>
 
 ## Marketing Campaign
 

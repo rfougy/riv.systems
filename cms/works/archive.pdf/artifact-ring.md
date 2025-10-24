@@ -5,7 +5,7 @@ section: works
 category: archive.pdf
 excerpt: Case study into the design process and marketing campaign for ARCHIVE.pdf's first collaborative product.
 coverImage: "/works/archive.pdf/artifact-ring/artifact-ring-product-photos_2.webp"
-# link: https://www.archivepdf.net/
+link: https://titleofwork.com/products/pdf-sterling-signet-ring-144
 worksTeamSize: 2
 worksRoles: ["Creative Director", "Photographer", "Videographer"]
 worksDuration: ["04.25", "10.25"]

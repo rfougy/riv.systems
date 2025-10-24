@@ -15,7 +15,7 @@ worksTools:
   ]
 ---
 
-Since ARCHIVE.pdf’s founding in 2019, its team has always carried a desire to create meaningful products. Earlier this year, an opportunity to realize this desire surfaced when our Chief Creative Officer, Noel, introduced us to [title of work](https://titleofwork.com/). Based in New York’s Lower East Side, title of work is composed of a small, dedicated team of jewelry artisans — all of their products are handmade. What better store could there be to realize this desire to make quality products?
+Since [ARCHIVE.pdf](https://www.archivepdf.net/)’s founding in 2019, its team has always carried a desire to create meaningful products. Earlier this year, an opportunity to realize this desire surfaced when our Chief Creative Officer, Noel, introduced us to [title of work](https://titleofwork.com/). Based in New York’s Lower East Side, title of work is composed of a small, dedicated team of jewelry artisans — all of their products are handmade. What better store could there be to realize this desire to make quality products?
 
 After our first meeting with the store’s founder Jonathan Meizler, we agreed on a set of <mark>products that would sit at the intersection of jewelry and the process of archiving</mark>. One of these was the <mark>‘Artifact Ring’ — a signet ring incorporating ARCHIVE.pdf’s “pdf” mark</mark>. This ring in particular was something that I’ve envisioned since the company's early years. Because of this, I took on the <mark>role of collaborating with title of work on the ring’s design and marketing campaign</mark>, with support and feedback from Noel.
 

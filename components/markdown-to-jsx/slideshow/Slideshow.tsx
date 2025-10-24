@@ -45,6 +45,7 @@ const Slideshow: React.FC<{
         <StyledSwiper
           modules={[Navigation, Thumbs]}
           navigation
+          loop
           slidesPerView={1}
           spaceBetween={30}
           thumbs={{

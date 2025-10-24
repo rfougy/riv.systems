@@ -146,7 +146,7 @@ To evoke the feeling of nostalgia, I photographed these images in a 1990s street
 <br/>
 <br/>
 
-The final post announced the release of the ring through clean, modern product photography, grounding the campaign back into the present.
+The final post announced the [release of the ring](https://www.instagram.com/p/DQMql_oEaBi/) through clean, modern product photography, grounding the campaign back into the present.
 
 <br/>
 <br/>

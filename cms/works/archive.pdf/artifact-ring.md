@@ -71,7 +71,7 @@ The solution was to design <mark>a denture on the face to mimic the impression o
 
 Over time, personal possessions begin to take on lives of their own, representing memories and meaning for their owners. My goal was to translate this perspective through the marketing campaign, <mark>expressing both the humanity and the memories of ARCHIVE.pdf embodied in the Artifact Ring</mark>.
 
-The campaign was <mark>split into three posts: future, past, and present</mark>. The first was a video capturing the Artifact Ring in natural, post-apocalyptic settings.
+The campaign was <mark>split into three posts: future, past, and present</mark>. The first was a [video](https://www.instagram.com/p/DQHnpUMDWSM/) capturing the Artifact Ring in natural, post-apocalyptic settings.
 
 <br/>
 <br/>
@@ -85,7 +85,7 @@ The campaign was <mark>split into three posts: future, past, and present</mark>.
 <br/>
 <br/>
 
-The second was a series of photos featuring the ARCHIVE.pdf community — team members, contributors, friends and family — highlighting the humanity that the ring represents.
+The second was a [series of photos](https://www.instagram.com/p/DQKOEUzEWg2/) featuring the ARCHIVE.pdf community — team members, contributors, friends and family — highlighting the humanity that the ring represents.
 
 <br/>
 <br/>

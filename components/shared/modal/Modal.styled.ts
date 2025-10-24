@@ -46,8 +46,8 @@ export const ModalContent = styled.div<{ aspectRatio?: string }>`
 
 export const CloseButton = styled.button`
   position: fixed;
-  top: 12px;
-  right: 32px;
+  top: 0.75rem;
+  right: 2rem;
   background: none;
   border: none;
   cursor: pointer;

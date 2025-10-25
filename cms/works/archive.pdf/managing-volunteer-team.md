@@ -22,7 +22,7 @@ Another special quality of volunteer-based teams is their <mark>ability to attra
 
 ## Challenges
 
-Of course, volunteer-based teams don’t come without their challenges. The most common is <mark>taking account the varying levels of commitment and fluctuating schedules</mark>. Because members are offering their spare time to volunteer, this time can vary from individual to individual. As such, it’s critical to stay aware of each member’s bandwidth in order to manage effectively and reach goals on a weekly basis.
+Of course, volunteer-based teams don’t come without their challenges. The most common is <mark>taking into account the varying levels of commitment and fluctuating schedules</mark>. Because members are offering their spare time to volunteer, this time can vary from individual to individual. As such, it’s critical to stay aware of each member’s bandwidth in order to manage effectively and reach goals on a weekly basis.
 
 The other challenge is member turnover. Although the majority of members have stayed for several years, <mark>there are inevitable moments when others are unable to continue and new members join in their place</mark>. This is only natural—without financial compensation as a retention factor, competing priorities like job changes, family obligations, or educational pursuits can make it difficult to maintain volunteer commitments.
 
@@ -32,7 +32,7 @@ The following approaches can be found in traditional work environments, however 
 
 ### Heightened Attention to Individual Needs
 
-As mentioned earlier, people who volunteer are rare, and so <mark>it's essential to work as closely and meaningfully with them as possible</mark>. This means understanding their individual bandwidths and priorities. Instead of assuming that their contributions will remain consistent over time, it's crucial to check in with members regularly about their availability. <mark>Flexibility is also a key quality for management</mark>, requiring preparations to adjust timelines, redistribute work, and pivot plans based on team member availability.
+As mentioned earlier, people who volunteer are rare, and so <mark>it's essential to work as closely and meaningfully with them as possible</mark>. This includes having frequent one-on-one calls, direct collaborations on projects and goals, and having genuine rapport. Of course, their individual bandwidths and priorities also need to be kept in mind. Instead of assuming that their availability will stay the same over a long period of time, it's crucial to check in with members regularly about their availability. <mark>Flexibility is also a key quality in terms of management</mark>, where preparations should be made to adjust timelines, redistribute work, and pivot plans when availabilites shift.
 
 ### Celebrate Individual and Team Accomplishments
 
@@ -40,4 +40,4 @@ Foster <mark>a positive environment where managers and members alike acknowledge
 
 ---
 
-Managing and being a part of a volunteer-based team is an experience like no other. The intrinsic motivations of every member, most of whom are passion-driven, creates a community of people who come together to create work with genuine meaning and impact. I hope that managers in traditional work settings can draw from these principles — or better yet, experience them firsthand — and apply them to their own teams, shifting dynamics for the better.
+Managing and being a part of a volunteer-based team is an experience like no other. The intrinsic motivations of every member, most of whom are passion-driven, creates a community of people who create work with genuine meaning and impact. I hope that managers in traditional work settings can draw from these principles — or better yet, experience them firsthand — and apply them to their own teams, changing team dynamics for the better.

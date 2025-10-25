@@ -13,8 +13,11 @@ import TextHighlightProvider from "../../../context/TextHighlightContext";
 import { Box, Content, CoverImage, Divider } from "./PostPage.styled";
 import LineBreak from "../../markdown-to-jsx/line-break/LineBreak";
 import Timeline from "../../markdown-to-jsx/timeline/Timeline";
+import PageNav from "../page-nav/PageNav";
 
-const PostPage: React.FC<{ content: any }> = ({ content }) => {
+const PostPage: React.FC<{
+  content: any;
+}> = ({ content }) => {
   const { frontmatter, postContent }: any = content;
   const { title, coverImage, placeholderImage, section }: IPostFrontMatter =
     frontmatter;
@@ -70,6 +73,7 @@ const PostPage: React.FC<{ content: any }> = ({ content }) => {
             {postContent}
           </Markdown>
         </Content>
+        <PageNav currPost={content} posts={content.allPostsSorted} />
       </Box>
       {isWorksPage && <HighlightToggler />}
     </TextHighlightProvider>

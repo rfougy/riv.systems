@@ -3,7 +3,7 @@ title: "Artifact Ring: Design Process and Marketing Campaign"
 datePublished: "2025-10-25"
 section: works
 category: archive.pdf
-excerpt: Case study into the design process and marketing campaign for ARCHIVE.pdf's first collaborative product.
+excerpt: A case study exploring the design process and marketing campaign for ARCHIVE.pdf's first collaborative product.
 coverImage: "/works/archive.pdf/artifact-ring/artifact-ring-product-photos_2.webp"
 link: https://titleofwork.com/products/pdf-sterling-signet-ring-144
 worksTeamSize: 2

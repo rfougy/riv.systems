@@ -5,7 +5,7 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 4rem 0;
+  margin-top: 4rem;
 `;
 
 export const NavButton = styled.a`
@@ -16,7 +16,7 @@ export const NavButton = styled.a`
   color: ${(props: any) => props.theme.primary};
 
   &:hover {
-    opacity: 0.7;
+    opacity: 0.5;
   }
 
   &.previous {

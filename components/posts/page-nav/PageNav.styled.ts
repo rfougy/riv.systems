@@ -16,7 +16,7 @@ export const NavButton = styled.a`
   color: ${(props: any) => props.theme.primary};
 
   &:hover {
-    opacity: 0.5;
+    text-decoration: underline;
   }
 `;
 

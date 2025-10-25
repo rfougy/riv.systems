@@ -29,6 +29,10 @@ export const Content = styled.div`
     font-size: 1.25rem;
   }
 
+  h3 {
+    font-weight: bold;
+  }
+
   p {
     width: 100%;
     line-height: 175%;

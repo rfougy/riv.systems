@@ -18,7 +18,7 @@ Since its founding in 2019, ARCHIVE.pdf has been pursued as a community-driven p
 
 Unlike salaried teams, where financial compensation serves as the baseline motivator, volunteer-based teams lack this entirely. Because of this, <mark>the motivations behind joining, staying, and engaging within the team are almost always intrinsic</mark>. This can range from the desire to advance one’s career and skills, to wanting to make a meaningful impact within the community, to simply pursue a passion for the niche, or all of the above.
 
-Another special quality of volunteer-based teams is their <mark>ability to attract genuinely passionate and unique individuals</mark>. Volunteering one's free time to a project, on top of day-to-day responsibilities and obligations, is a commitment most people aren't willing to make. And when a team is comprised entirely of such driven individuals, it creates a synergy and camaraderie that simply can't be replicated in traditional work environments.
+Another special quality of volunteer-based teams is their <mark>ability to attract passionate and unique individuals</mark>. Volunteering one's free time to a project, on top of day-to-day responsibilities and obligations, is a commitment most people aren't willing to make. And when a team is comprised entirely of such driven individuals, it creates a synergy and camaraderie that simply can't be replicated in traditional work environments.
 
 ## Challenges
 
@@ -32,7 +32,7 @@ The following approaches can be found in traditional work environments, however 
 
 ### Heightened Attention to Individual Needs
 
-As mentioned earlier, people who volunteer are rare, and so <mark>it's essential to work as closely and meaningfully with them as possible</mark>. This includes having frequent one-on-one calls, direct collaborations on projects and goals, and having genuine rapport. Of course, their individual bandwidths and priorities also need to be kept in mind. Instead of assuming that their availability will stay the same over a long period of time, it's crucial to check in with members regularly about their availability. <mark>Flexibility is also a key quality in terms of management</mark>, where preparations should be made to adjust timelines, redistribute work, and pivot plans when availabilites shift.
+As mentioned earlier, people who volunteer are rare, and so <mark>it's essential to work as closely and meaningfully with them as possible</mark>. This includes having frequent one-on-one calls, direct collaborations on projects and goals, and having real rapport. Of course, their individual bandwidths and priorities also need to be kept in mind. Instead of assuming that their availability will stay the same over a long period of time, it's crucial to check in with members regularly about their availability. <mark>Flexibility is also a key quality in terms of management</mark>, where preparations should be made to adjust timelines, redistribute work, and pivot plans when availabilites shift.
 
 ### Celebrate Individual and Team Accomplishments
 

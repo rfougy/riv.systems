@@ -30,7 +30,7 @@ const PageNav: React.FC<{
           <NavButton as="div" className="previous">
             <ArrowIcon left />
             <PostTitle>
-              {isMobileView ? "Previous" : prevPost.frontmatter.title}
+              {isMobileView ? "Previous Post" : prevPost.frontmatter.title}
             </PostTitle>
           </NavButton>
         </Link>
@@ -39,7 +39,7 @@ const PageNav: React.FC<{
         <Link href={nextPost.path}>
           <NavButton as="div" className="next">
             <PostTitle>
-              {isMobileView ? "Next" : nextPost.frontmatter.title}
+              {isMobileView ? "Next Post" : nextPost.frontmatter.title}
             </PostTitle>
             <ArrowIcon right />
           </NavButton>

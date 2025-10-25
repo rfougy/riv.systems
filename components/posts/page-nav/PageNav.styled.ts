@@ -18,14 +18,6 @@ export const NavButton = styled.a`
   &:hover {
     opacity: 0.5;
   }
-
-  &.previous {
-    margin-right: auto;
-  }
-
-  &.next {
-    margin-left: auto;
-  }
 `;
 
 export const PostTitle = styled.span`

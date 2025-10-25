@@ -1,6 +1,6 @@
 ---
 title: "Artifact Ring: Design Process and Marketing Campaign"
-datePublished: "2025-10-29"
+datePublished: "2025-10-25"
 section: works
 category: archive.pdf
 excerpt: Case study into the design process and marketing campaign for ARCHIVE.pdf's first collaborative product.

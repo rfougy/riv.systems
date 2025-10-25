@@ -20,8 +20,6 @@ Unlike salaried teams, where financial compensation serves as the baseline motiv
 
 Another special quality of volunteer-based teams is their <mark>ability to attract passionate and unique individuals</mark>. Volunteering one's free time to a project, on top of day-to-day responsibilities and obligations, is a commitment most people aren't willing to make. And when a team is comprised entirely of such driven individuals, it creates a synergy and camaraderie that simply can't be replicated in traditional work environments.
 
-## Challenges
-
 Of course, volunteer-based teams don’t come without their challenges. The most common is <mark>taking into account the varying levels of commitment and fluctuating schedules</mark>. Because members are offering their spare time to volunteer, this time can vary from individual to individual. As such, it’s critical to stay aware of each member’s bandwidth in order to manage effectively and reach goals on a weekly basis.
 
 The other challenge is member turnover. Although the majority of members have stayed for several years, <mark>there are inevitable moments when others are unable to continue and new members join in their place</mark>. This is only natural—without financial compensation as a retention factor, competing priorities like job changes, family obligations, or educational pursuits can make it difficult to maintain volunteer commitments.

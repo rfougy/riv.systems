@@ -156,10 +156,3 @@ The final post announced the [release of the ring](https://www.instagram.com/p/D
   { "src": "/works/archive.pdf/artifact-ring/artifact-ring-product-photos_2.webp", "alt": "Product photo of Artifact Ring" },
   { "src": "/works/archive.pdf/artifact-ring/artifact-ring-product-photos_3.webp", "alt": "Product photo of Artifact Ring" }
 ]' />
-
-<br/>
-<br/>
-
----
-
-I’m extremely grateful to have created this ring in collaboration with Jonathan and title of work. Having little to no restraints on creative freedom allows one to push into unexplored territories, resulting in works that can resonate with real people.

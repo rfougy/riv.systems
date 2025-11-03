@@ -40,7 +40,7 @@ worksTools:
 <br/>
 <br/>
 
-## Problem Statement and Proposal
+## Problem Statement & Planning
 
 CJ’s Ventures Waste Management service consists of a team of 3 dispatchers and 7 truck drivers. They receive 35 phone calls a day on average and own 450 containers. Each driver would have multiple routes, with an average of 5 routes a day, with actions including dropping off, picking up, and swapping out receptacles.
 

@@ -1,6 +1,6 @@
 ---
 title: CJ's Ventures Progressive Web App
-datePublished: "2025-11-05"
+datePublished: "2025-11-03"
 section: works
 category: engineering
 excerpt: A waste management company was spending tens of thousands yearly on software that didn't satisfy. Here's what we built instead.

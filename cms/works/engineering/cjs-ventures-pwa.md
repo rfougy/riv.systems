@@ -46,11 +46,15 @@ CJ’s Ventures Waste Management service consists of a team of 3 dispatchers and
 
 At the time, CJ’s Ventures used AMCS’ application for their waste management operations. However, <mark>AMCS did not meet their needs</mark> for the following reasons:
 
-- **Operational Costs:** AMCS charged $25,000 a year to use their application, as well as additional costs for extra maintenance services which amounted to $3,000 annually.
-- **Scalability Concerns**: There was a concern that the application would not scale, both in terms of technical capabilities and growing costs from increased usage.
-- **Unnecessary Features:** The AMCS application came with a host of features, many of which weren’t unnecessary for CJ’s Ventures.
-- **Complex UI:** The application was not user friendly and was over-engineered.
-- **Lack of Accessibility:** The reliability of the application across devices proved to be a challenge.
+**• Operational Costs:** AMCS charged $25,000 a year to use their application, as well as additional costs for extra maintenance services which amounted to $3,000 annually.
+<br/>
+**• Scalability Concerns**: There was a concern that the application would not scale, both in terms of technical capabilities and growing costs from increased usage.
+<br/>
+**• Unnecessary Features:** The AMCS application came with a host of features, many of which weren’t unnecessary for CJ’s Ventures.
+<br/>
+**• Complex UI:** The application was not user friendly and was over-engineered.
+<br/>
+**• Lack of Accessibility:** The reliability of the application across devices proved to be a challenge.
 
 After learning about the AMCS application and our client’s needs, <mark>I created a technical specification</mark> outlining the core features to be implemented, primary user flows, security measures, testing and logging procedures, software architecture, milestones, and more.
 

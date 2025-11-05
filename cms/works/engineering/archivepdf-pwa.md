@@ -5,6 +5,7 @@ section: works
 category: engineering
 excerpt: What started as a Wix site became a full-fledged PWA, built entirely by volunteers tackling everything from CMS setup to slashing server costs and more.
 coverImage: "/works/engineering/archivepdf-pwa/apdf-pwa_cover.png"
+link: https://www.archivepdf.net/
 worksTeamSize: 5
 worksRoles: ["Product Manager", "Fullstack Engineer"]
 worksDuration: ["11.21", "08.25"]

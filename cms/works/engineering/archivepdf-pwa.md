@@ -50,12 +50,36 @@ Over time, we customized Strapi’s default configurations to meet ARCHIVE.pdf�
 
 As with any content-heavy platform, it was imperative for ARCHIVE.pdf to have a recommendations system that kept users engaged with the app. As such, I created an algorithm to recommend a total of 3 content pages based on shared hashtags and recency.
 
+<br/>
+<br/>
+
+<Image 
+    src="/works/engineering/archivepdf-pwa/apdf-pwa_recommender.png" 
+    alt="Code snippet of recommendations algorithm" 
+    aspectRatio="1858:1656"
+/>
+
+<br/>
+<br/>
+
 The algorithm accepts two inputs: data from the current content page and data from all similar content (e.g., all articles, all scans). The current page’s hashtags are extracted and used for ranking all similar content by the number of shared hashtags. The top 3 content pages with the most hashtags shared are selected as recommendations. However, if there are less than 3 content pages selected, any remaining slots are filled with the most recently published content. This fallback mechanism guarantees users always have relevant options to explore.
 
 ### Reducing Operational Costs
 
-Although the majority of ARCHIVE.pdf’s audience was still visiting the old website, the public announcement of the PWA beta drove a significant influx of traffic that increased monthly operational costs. The app was exceeding Vercel’s Pro Plan tier limits for [Fast Origin Transfers](https://vercel.com/docs/manage-cdn-usage#fast-origin-transfer) and [ISR Reads](https://vercel.com/docs/incremental-static-regeneration/limits-and-pricing#isr-reads-and-writes-price), while AWS S3 costs were also rising.
+Although the majority of ARCHIVE.pdf’s audience was still visiting the old website, the announcements of the PWA beta from last January drove a significant influx of traffic that increased monthly operational costs. The app was exceeding Vercel’s Pro Plan tier limits for [Fast Origin Transfers](https://vercel.com/docs/manage-cdn-usage#fast-origin-transfer) and [ISR Reads](https://vercel.com/docs/incremental-static-regeneration/limits-and-pricing#isr-reads-and-writes-price), while AWS S3 costs were also rising.
 
 To resolve this, I refactored our data fetching methods by using [Strapi’s REST API parameters](https://docs.strapi.io/cms/api/rest/parameters) to reduce response payload sizes. This optimization shrunk the app’s bundle size since most pages were statically generated at build time, and most importantly reduced both Fast Origin Transfers and ISR reads by 80%.
+
+<br/>
+<br/>
+
+<Image 
+    src="/works/engineering/archivepdf-pwa/apdf-pwa_fot.png" 
+    alt="Screenshot of Fast Origin Transfer usage over the past year" 
+    aspectRatio="2456:1136"
+/>
+
+<br/>
+<br/>
 
 As for storage costs, I decided for us to switch to [Backblaze](https://www.backblaze.com/) due to its affordability. I implemented a migration strategy with fallback logic where, if a file hadn't yet been migrated to Backblaze, the app would automatically fetch it from S3, ensuring zero downtime during the transition.

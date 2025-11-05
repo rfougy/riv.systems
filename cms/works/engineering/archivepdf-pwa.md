@@ -25,13 +25,13 @@ worksTools:
   ]
 ---
 
-[ARCHIVE.pdf’s Progressive Web App](https://www.archivepdf.net/) was a natural progression from the company’s prior website built on Wix, opening up unlimited possibilities for domain-specific features and user experiences. The app was built by a team of volunteer developers since 2021, making the project an even greater achievement when compared to traditional teams.
+[ARCHIVE.pdf’s Progressive Web App](https://www.archivepdf.net/) was a natural progression from the company’s prior website built on Wix, opening up unlimited possibilities for domain-specific features and user experiences. The app was <mark>built by a team of volunteer developers</mark> since 2021, making the project an even greater achievement when compared to traditional teams.
 
 ## Key Contributions
 
 ### Strapi CMS
 
-One of the first and most critical decisions was selecting a Content Management System (CMS) to manage the company’s content and integrate it into the app. We chose [Strapi](https://strapi.io/), an open-source CMS that gave us a generous amount of ownership and flexibility for creating our own custom solutions. The CMS was deployed on [DigitalOcean](https://www.digitalocean.com/) App Platform and is connected to a PostgreSQL database on DigitalOcean, with automatic deployments triggered by commits to the monorepo's production branch.
+One of the first and most critical decisions was selecting a Content Management System (CMS) to manage the company’s content and integrate it into the app. <mark>We chose [Strapi](https://strapi.io/), an open-source CMS</mark> that gave us a generous amount of ownership and flexibility for creating our own custom solutions. The CMS was deployed on [DigitalOcean](https://www.digitalocean.com/) App Platform and is connected to a PostgreSQL database on DigitalOcean, with automatic deployments triggered by commits to the monorepo's production branch.
 
 <br/>
 <br/>
@@ -44,11 +44,11 @@ One of the first and most critical decisions was selecting a Content Management 
 <br/>
 <br/>
 
-Over time, we customized Strapi’s default configurations to meet ARCHIVE.pdf’s needs. This ranged from integrating AWS S3 (and later Backblaze) for file storage, to live page previews for article and scan drafts, and configuring webhooks to trigger frontend deployments whenever content changes were published in Strapi.
+Over time, <mark>we customized Strapi’s default configurations to meet ARCHIVE.pdf’s needs</mark>. This ranged from integrating AWS S3 (and later Backblaze) for file storage, to live page previews for article and scan drafts, and configuring webhooks to trigger frontend deployments whenever content changes were published in Strapi.
 
 ### Recommendations Algorithm
 
-As with any content-heavy platform, it was imperative for ARCHIVE.pdf to have a recommendations system that kept users engaged with the app. As such, I created an algorithm to recommend a total of 3 content pages based on shared hashtags and recency.
+As with any content-heavy platform, it was imperative for ARCHIVE.pdf to have a recommendations system that kept users engaged with the app. As such, I <mark>created an algorithm to recommend a total of 3 content pages based on shared hashtags and recency</mark>.
 
 <br/>
 <br/>
@@ -68,7 +68,7 @@ The algorithm accepts two inputs: data from the current content page and data fr
 
 Although the majority of ARCHIVE.pdf’s audience was still visiting the old website, the announcements of the PWA beta from last January drove a significant influx of traffic that increased monthly operational costs. The app was exceeding Vercel’s Pro Plan tier limits for [Fast Origin Transfers](https://vercel.com/docs/manage-cdn-usage#fast-origin-transfer) and [ISR Reads](https://vercel.com/docs/incremental-static-regeneration/limits-and-pricing#isr-reads-and-writes-price), while AWS S3 costs were also rising.
 
-To resolve this, I refactored our data fetching methods by using [Strapi’s REST API parameters](https://docs.strapi.io/cms/api/rest/parameters) to reduce response payload sizes. This optimization shrunk the app’s bundle size since most pages were statically generated at build time, and most importantly reduced both Fast Origin Transfers and ISR reads by 80%.
+To resolve this, I <mark>refactored our data fetching methods by using [Strapi’s REST API parameters](https://docs.strapi.io/cms/api/rest/parameters) to reduce response payload sizes</mark>. This optimization shrunk the app’s bundle size since most pages were statically generated at build time, and most importantly reduced both Fast Origin Transfers and ISR reads by 80%.
 
 <br/>
 <br/>

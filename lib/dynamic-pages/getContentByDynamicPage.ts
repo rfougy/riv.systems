@@ -24,12 +24,7 @@ export function sortPostsByDate(posts: any) {
  */
 export function getContentByDynamicPage(slug?: string | string[]) {
   if (!slug) {
-    const sections: string[] = getFileNamesInDirectory();
-    const allCategories: ICmsCategory[] = getCategories(sections);
-    const allPosts: any = getPosts(allCategories);
-
-    const allPostsSorted = sortPostsByDate(allPosts);
-
+    const allPostsSorted = getAllPostsSorted();
     return allPostsSorted;
   }
 
@@ -77,6 +72,23 @@ export function getContentByDynamicPage(slug?: string | string[]) {
 
     const { data: frontmatter, content: postContent } = matter(markDownContent);
 
-    return { frontmatter, postContent };
+    const allPostsSorted = getAllPostsSorted();
+
+    return {
+      frontmatter,
+      path: "/content/" + (slug as string[]).join("/"),
+      postContent,
+      allPostsSorted,
+    };
   }
+}
+
+function getAllPostsSorted() {
+  const sections: string[] = getFileNamesInDirectory();
+  const allCategories: ICmsCategory[] = getCategories(sections);
+  const allPosts: any = getPosts(allCategories);
+
+  const allPostsSorted = sortPostsByDate(allPosts);
+
+  return allPostsSorted;
 }

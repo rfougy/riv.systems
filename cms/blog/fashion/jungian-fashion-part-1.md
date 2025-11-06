@@ -50,7 +50,7 @@ For his Spring/Summer 2001 presentation, Poell invited industry professionals in
 <br/>
 <br/>
 
-For his Spring/Summer 2001 presentation, Poell invited industry professionals into a chilling space mirroring the presentation’s title: Three Refrigerated Cells. In the center of the first cell was an assortment of garments — shirts, trousers and jackets — all of which hung above complementary footwear, forming a harmonious circle. Spectators paced around the offerings, taking note of their materials and construction—it’s only natural that their reactions of admiration were predictable and their expectations of the next cell pre-conditioned. But as they moved forward, the second cell revealed itself as an inconvenient truth to the first.
+Spectators paced around the offerings, taking note of their materials and construction—it’s only natural that their reactions of admiration were predictable and their expectations of the next cell pre-conditioned. But as they moved forward, the second cell revealed itself as an inconvenient truth to the first.
 
 Although a perfect circle remained, what hung were not clothes to gaze upon, but carcasses wrapped in gauze, the very flesh from which the clothes were made.
 
@@ -80,7 +80,9 @@ _repackaged as harmless commodities,_
 <br/>
 _purchased and worn for the occasional social outing._
 
-If the first cell represented fantasy, and the second reality, the third was identity. In it sat a chair for the attendees, and facing the chair was a rectangular mirror, where they confronted the notion that we are all an essential step in this lifeless cycle. “I wanted people to look into the mirror, I wanted to ask them: Can you deal with it? How do you deal with it?”
+If the first cell represented fantasy, and the second reality, the third was identity. In it sat a chair for the attendees, and facing the chair was a rectangular mirror, where they confronted the notion that we are all an essential step in this lifeless cycle. 
+
+“I wanted people to look into the mirror, I wanted to ask them: Can you deal with it? How do you deal with it?” — Carol Christian Poell
 
 <br/>
 <br/>

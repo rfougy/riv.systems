@@ -10,6 +10,7 @@ import { postView } from "../../../types/postView";
 import ColumnView from "../views/column/ColumnView";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import TitleAndToggler from "../../shared/title-and-toggle/TitleAndToggler";
+import GalleryView from "../views/gallery/GalleryView";
 
 const CategoryResults: React.FC<{
   category: string;

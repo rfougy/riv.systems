@@ -28,6 +28,18 @@ export function getContentByDynamicPage(slug?: string | string[]) {
     return allPostsSorted;
   }
 
+  if (Array.isArray(slug) && slug[0] === "photos") {
+    const sections: string[] = getFileNamesInDirectory();
+    const allCategories: ICmsCategory[] = getCategories(sections);
+    const allPosts: any = getPosts(allCategories);
+    
+    const postsWithGallery = allPosts.filter((post: any) => 
+      post.frontmatter.imageGallery && post.frontmatter.imageGallery.length > 0
+    );
+    
+    return sortPostsByDate(postsWithGallery);
+  }
+
   if (slug?.length === 1) {
     const section: string | string[] = slug;
     // @ts-ignore

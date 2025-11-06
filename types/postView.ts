@@ -1,1 +1,1 @@
-export type postView = "default" | "column";
+export type postView = "default" | "column" | "gallery";

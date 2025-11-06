@@ -15,6 +15,7 @@ import useContentFiltering from "../../../hooks/useContentFiltering";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
 import TitleAndToggler from "../../shared/title-and-toggle/TitleAndToggler";
+import GalleryView from "../views/gallery/GalleryView";
 
 const SectionResults: React.FC<{
   section: sectionType | string;

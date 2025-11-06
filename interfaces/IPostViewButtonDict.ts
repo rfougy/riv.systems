@@ -9,4 +9,9 @@ export interface IPostViewButtonDict {
     ariaLabel: string;
     imageAlt: string;
   };
+  gallery: {
+    icon: any;
+    ariaLabel: string;
+    imageAlt: string;
+  };
 }

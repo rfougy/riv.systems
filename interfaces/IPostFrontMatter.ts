@@ -11,4 +11,5 @@ export interface IPostFrontMatter {
   worksRoles?: string[];
   worksDuration?: string[];
   worksTools?: string[];
+  imageGallery?: string[];
 }

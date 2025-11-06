@@ -5,6 +5,15 @@ section: blog
 category: fashion
 excerpt: Discovering our darkest qualities through art, and how we can come to terms with them.
 coverImage: "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_2.webp"
+imageGallery:
+  - path: "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_1.webp"
+    aspectRatio: "55/36"
+  - path: "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_2.webp"
+    aspectRatio: "55/36"
+  - path: "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_6.webp"
+    aspectRatio: "55/36"
+  - path: "/blog/fashion/jungian-fashion-part-1/old-slaughterhouse_8.webp"
+    aspectRatio: "55/36"
 ---
 
 Seldom do we delve into the depths of our souls, where the gates to the divine await us all.
@@ -80,7 +89,7 @@ _repackaged as harmless commodities,_
 <br/>
 _purchased and worn for the occasional social outing._
 
-If the first cell represented fantasy, and the second reality, the third was identity. In it sat a chair for the attendees, and facing the chair was a rectangular mirror, where they confronted the notion that we are all an essential step in this lifeless cycle. 
+If the first cell represented fantasy, and the second reality, the third was identity. In it sat a chair for the attendees, and facing the chair was a rectangular mirror, where they confronted the notion that we are all an essential step in this lifeless cycle.
 
 “I wanted people to look into the mirror, I wanted to ask them: Can you deal with it? How do you deal with it?” — Carol Christian Poell
 

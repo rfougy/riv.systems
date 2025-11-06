@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
@@ -13,12 +13,16 @@ import useContentFiltering from "../../../hooks/useContentFiltering";
 import useScrollToTop from "../../../hooks/useScrollToTop";
 import useViewportWidthEventListener from "../../../hooks/useViewportWidthListener";
 import TitleAndToggler from "../../shared/title-and-toggle/TitleAndToggler";
+import GalleryView from "../views/gallery/GalleryView";
 
 const ContentResults: React.FC<{
   content: any;
-}> = ({ content }) => {
+  isGalleryView?: boolean;
+}> = ({ content, isGalleryView }) => {
   const [renderedPostCards, setRenderedPostCards] = useState<any>();
-  const [postView, setPostView] = useState<postView>("default");
+  const [postView, setPostView] = useState<postView>(
+    isGalleryView ? "gallery" : "default"
+  );
 
   const isVerticalView = useViewportWidthEventListener(960);
 
@@ -36,6 +40,8 @@ const ContentResults: React.FC<{
     switch (postView) {
       case "column":
         return <ColumnView content={renderedPostCards} />;
+      case "gallery":
+        return <GalleryView content={renderedPostCards} />;
       default:
         return <DefaultView content={renderedPostCards} />;
     }
@@ -43,11 +49,16 @@ const ContentResults: React.FC<{
 
   useScrollToTop([postView, filteredContent]);
 
+  useEffect(
+    () => setPostView(isGalleryView ? "gallery" : "default"),
+    [isGalleryView]
+  );
+
   return (
     <Box>
       <FilterSection>
         <TitleAndToggler
-          title="Content"
+          title={isGalleryView ? "Photos" : "Content"}
           isContentResultsPage
           postView={postView}
           setPostView={setPostView}

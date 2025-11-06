@@ -25,6 +25,9 @@ const DynamicPage: NextPage<{ slug: string; content?: string }> = ({
 }) => {
   if (!slug) return <ContentResults content={content} />;
 
+  if (slug?.length === 1 && slug[0] === "photos")
+    return <ContentResults content={content} isGalleryView />;
+
   if (slug?.length === 1)
     return <SectionResults section={slug[0]} content={content} />;
 

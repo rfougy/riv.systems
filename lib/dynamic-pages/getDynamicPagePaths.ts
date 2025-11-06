@@ -11,7 +11,10 @@ export function getDynamicPagePaths() {
   const allCategories: ICmsCategory[] = getCategories(sections);
   const allPosts = getPosts(allCategories);
 
-  const pathToContentResults = [{ params: { slug: [] } }];
+  const pathToContentResults = [
+    { params: { slug: [] } },
+    { params: { slug: ["photos"] } }
+  ];
 
   const pathToSectionResults = sections.map((section: string) => ({
     params: {

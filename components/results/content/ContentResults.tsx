@@ -53,7 +53,7 @@ const ContentResults: React.FC<{
     <Box>
       <FilterSection>
         <TitleAndToggler
-          title="Content"
+          title={isGalleryView ? "Photos" : "Content"}
           isContentResultsPage
           postView={postView}
           setPostView={setPostView}

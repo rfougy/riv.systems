@@ -14,26 +14,6 @@ export const Box = styled.ul`
 
 export const MenuOption = styled.li`
   display: flex;
-
-  &:nth-last-child(2)::after {
-    content: "";
-    display: inline-block;
-    width: 0.1rem;
-    background-color: ${(props: any) => props.theme.primary};
-    opacity: 0.5;
-    margin-left: 2rem;
-  }
-
-  @media (max-width: ${breakpoints.xs}) {
-    &:nth-last-child(2)::after {
-      content: "";
-      display: inline-block;
-      width: 0.075rem;
-      background-color: ${(props: any) => props.theme.primary};
-      opacity: 0.5;
-      margin-left: 1rem;
-    }
-  }
 `;
 
 export const Text = styled.p`

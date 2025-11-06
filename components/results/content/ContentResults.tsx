@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import FilterMenu from "../../features/filter/FilterMenu";
 import Pagination from "../../features/pagination/Pagination";
@@ -48,6 +48,11 @@ const ContentResults: React.FC<{
   }
 
   useScrollToTop([postView, filteredContent]);
+
+  useEffect(
+    () => setPostView(isGalleryView ? "gallery" : "default"),
+    [isGalleryView]
+  );
 
   return (
     <Box>

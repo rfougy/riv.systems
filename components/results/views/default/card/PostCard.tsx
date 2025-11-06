@@ -57,10 +57,7 @@ const PostCard: React.FC<{
         <Text>
           <Title>{title}</Title>
           <MetadataContainer>
-            <Metadata hasWorksDuration={hasWorksDuration}>
-              {hasWorksDuration && <Info>Worked: {formattedDuration}</Info>}
-              <Info>Posted: {stylizedDate}</Info>
-            </Metadata>
+            <Info>{stylizedDate}</Info>
           </MetadataContainer>
         </Text>
       </Box>

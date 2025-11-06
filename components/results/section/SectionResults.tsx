@@ -35,8 +35,6 @@ const SectionResults: React.FC<{
     switch (postView) {
       case "column":
         return <ColumnView content={renderedPostCards} />;
-      case "gallery":
-        return <GalleryView content={renderedPostCards} />;
       default:
         return <DefaultView content={renderedPostCards} />;
     }

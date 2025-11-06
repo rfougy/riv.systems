@@ -1,1 +1,1 @@
-export const postViewOptions = ["default", "column", "gallery"];
+export const postViewOptions = ["default", "column"];

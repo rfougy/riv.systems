@@ -5,12 +5,6 @@ section: blog
 category: fashion
 excerpt: Who would have ever thought an opportunity like this could be possible?
 coverImage: "/blog/fashion/adidas-trip/7-1.webp"
-imageGallery:
-  [
-    "/blog/fashion/adidas-trip/1-1.webp",
-    "/blog/fashion/adidas-trip/2-2.webp",
-    "/blog/fashion/adidas-trip/2-4.webp",
-  ]
 ---
 
 The team and I at ARCHIVE.pdf have [worked with adidas](https://www.instagram.com/stories/highlights/18008854915814606/) over the past 1-2 years, promoting their silhouettes and even covering their Y-3 show during Paris Fashion Week. Earlier this year, adidas reached out to have us fly across the globe to Germany and visit their headquarters and archive—all expenses covered. I couldn’t attend due to personal matters, but man, I never believed lightning could strike twice until now.

@@ -8,15 +8,15 @@ import { Box } from "./PostCard.styled";
 const PostCard: React.FC<{
   path: string;
   frontmatter: any;
-  galleryCoverImage?: string;
+  galleryCoverImage?: { path: string; aspectRatio: string };
 }> = ({ path, frontmatter, galleryCoverImage }) => {
   const { title, coverImage, placeholderImage }: IPostFrontMatter = frontmatter;
 
   return (
     <Link href={path}>
-      <Box aspectRatio={"2/1"}>
+      <Box aspectRatio={galleryCoverImage?.aspectRatio}>
         <Image
-          src={galleryCoverImage ? galleryCoverImage : coverImage}
+          src={galleryCoverImage ? galleryCoverImage.path : coverImage}
           alt={`Cover image for post titled '${title}'`}
           width={800}
           height={400}

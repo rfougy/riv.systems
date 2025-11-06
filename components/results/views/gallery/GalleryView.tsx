@@ -11,16 +11,16 @@ const GalleryView: React.FC<{
   const galleryItems = content.flatMap((singleContent: any) => {
     const { path, frontmatter } = singleContent;
 
-    if (!frontmatter.imageGallery) {
-      return [];
-    }
+    if (!frontmatter.imageGallery) return [];
 
-    return frontmatter.imageGallery.map((image: string, index: number) => ({
-      key: `${path}-${index}`,
-      path,
-      frontmatter,
-      galleryCoverImage: image,
-    }));
+    return frontmatter.imageGallery.map(
+      (image: { path: string; aspectRatio: string }, index: number) => ({
+        key: `${path}-${index}`,
+        path,
+        frontmatter,
+        image,
+      })
+    );
   });
 
   return (
@@ -30,7 +30,7 @@ const GalleryView: React.FC<{
           key={item.key}
           path={item.path}
           frontmatter={item.frontmatter}
-          galleryCoverImage={item.galleryCoverImage}
+          galleryCoverImage={item.image}
         />
       ))}
     </List>

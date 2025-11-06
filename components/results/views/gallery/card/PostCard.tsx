@@ -12,11 +12,9 @@ const PostCard: React.FC<{
 }> = ({ path, frontmatter, galleryCoverImage }) => {
   const { title, coverImage, placeholderImage }: IPostFrontMatter = frontmatter;
 
-  console.log("galleryCoverImage: ", galleryCoverImage);
-
   return (
     <Link href={path}>
-      <Box>
+      <Box aspectRatio={"2/1"}>
         <Image
           src={galleryCoverImage ? galleryCoverImage : coverImage}
           alt={`Cover image for post titled '${title}'`}
@@ -25,7 +23,8 @@ const PostCard: React.FC<{
           placeholder="blur"
           blurDataURL={placeholderImage}
           style={{
-            maxWidth: "100%",
+            width: "100%",
+            height: "100%",
             objectFit: "cover",
           }}
         />

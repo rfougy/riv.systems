@@ -1,6 +1,10 @@
 import styled from "@emotion/styled";
 
-export const Box = styled.div`
+interface BoxProps {
+  aspectRatio?: string;
+}
+
+export const Box = styled.div<BoxProps>`
   overflow: hidden;
   text-decoration: none;
   position: relative;
@@ -9,10 +13,11 @@ export const Box = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 50rem;
+  aspect-ratio: ${({ aspectRatio }) => aspectRatio || "1/1"};
 
   margin: auto;
   border: solid transparent;
-  border-radius: 2vh;
+  border-radius: 2rem;
   border-width: 0 0.075rem 0.1rem 0.075rem;
 
   &:hover {

@@ -6,24 +6,14 @@ category: personal
 excerpt: Your inspirations, scattered around every corner.
 coverImage: "/blog/personal/dear-ojiisan/dear-ojiisan_cover.webp"
 imageGallery:
-  [
-    {
-      path: "/blog/personal/dear-ojiisan/dear-ojiisan_4.webp",
-      aspectRatio: "2/3",
-    },
-    {
-      path: "/blog/personal/dear-ojiisan/dear-ojiisan_7.webp",
-      aspectRatio: "2/3",
-    },
-    {
-      path: "/blog/personal/dear-ojiisan/dear-ojiisan_3.webp",
-      aspectRatio: "3/2",
-    },
-    {
-      path: "/blog/personal/dear-ojiisan/dear-ojiisan_6.webp",
-      aspectRatio: "2/3",
-    },
-  ]
+  - path: "/blog/personal/dear-ojiisan/dear-ojiisan_4.webp"
+    aspectRatio: "2/3"
+  - path: "/blog/personal/dear-ojiisan/dear-ojiisan_7.webp"
+    aspectRatio: "2/3"
+  - path: "/blog/personal/dear-ojiisan/dear-ojiisan_3.webp"
+    aspectRatio: "3/2"
+  - path: "/blog/personal/dear-ojiisan/dear-ojiisan_6.webp"
+    aspectRatio: "2/3"
 ---
 
 Dear Ojiisan,

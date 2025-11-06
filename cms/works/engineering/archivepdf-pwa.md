@@ -82,4 +82,13 @@ To resolve this, I <mark>refactored our data fetching methods by using [Strapiâ€
 <br/>
 <br/>
 
+<Image 
+    src="/works/engineering/archivepdf-pwa/apdf-pwa_isr.png" 
+    alt="Screenshot of ISR Reads usage over the past year" 
+    aspectRatio="2456:1136"
+/>
+
+<br/>
+<br/>
+
 As for storage costs, I decided for us to switch to [Backblaze](https://www.backblaze.com/) due to its affordability. I implemented a migration strategy with fallback logic where, if a file hadn't yet been migrated to Backblaze, the app would automatically fetch it from S3, ensuring zero downtime during the transition.

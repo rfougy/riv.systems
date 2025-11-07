@@ -21,7 +21,7 @@ const ContentResults: React.FC<{
 }> = ({ content, isGalleryView }) => {
   const [renderedPostCards, setRenderedPostCards] = useState<any>();
   const [postView, setPostView] = useState<postView>(
-    isGalleryView ? "gallery" : "default"
+    isGalleryView ? "gallery" : "column"
   );
 
   const isVerticalView = useViewportWidthEventListener(960);
@@ -50,7 +50,7 @@ const ContentResults: React.FC<{
   useScrollToTop([postView, filteredContent]);
 
   useEffect(
-    () => setPostView(isGalleryView ? "gallery" : "default"),
+    () => setPostView(isGalleryView ? "gallery" : "column"),
     [isGalleryView]
   );
 
@@ -59,7 +59,6 @@ const ContentResults: React.FC<{
       <FilterSection>
         <TitleAndToggler
           title={isGalleryView ? "Photos" : "Content"}
-          isContentResultsPage
           postView={postView}
           setPostView={setPostView}
         />

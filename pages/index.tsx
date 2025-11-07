@@ -6,6 +6,7 @@ import DisplayDotsCoordsProvider from "../context/DisplayDotsCoordsContext";
 import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
 import useOutsideClick from "../hooks/useOutsideClick";
 import { sectionsList } from "../constants/sectionsList";
+import ArrowIcon from "../components/icons/ArrowIcon";
 
 import {
   Box,
@@ -42,8 +43,13 @@ const Home: NextPage = () => {
             my works, projects and experiences.
           </Description>
           <DropdownWrapper ref={dropdownRef}>
-            <HomeButton $isOpen={isOpen} onClick={() => setIsOpen((prev) => !prev)}>
+            <HomeButton
+              $isOpen={isOpen}
+              onClick={() => setIsOpen((prev) => !prev)}
+              style={{ display: "flex", alignItems: "center", gap: "0.5rem", justifyContent: "center" }}
+            >
               EXPLORE
+              <ArrowIcon bottom={isOpen} top={!isOpen} />
             </HomeButton>
             {isOpen && (
               <Dropdown>

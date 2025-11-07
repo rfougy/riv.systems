@@ -5,8 +5,9 @@ const ArrowIcon: React.FC<{
   left?: boolean;
   top?: boolean;
   bottom?: boolean;
-}> = ({ right, left, top, bottom }) => (
-  <Icon right={right} left={left} top={top} bottom={bottom} />
+  color?: string;
+}> = ({ right, left, top, bottom, color }) => (
+  <Icon right={right} left={left} top={top} bottom={bottom} color={color} />
 );
 
 export default ArrowIcon;

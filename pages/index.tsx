@@ -1,11 +1,14 @@
 import type { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
+import { useTheme } from "@emotion/react";
 
 import DisplayDotsCoordsProvider from "../context/DisplayDotsCoordsContext";
 import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
 import useOutsideClick from "../hooks/useOutsideClick";
 import { sectionsList } from "../constants/sectionsList";
+import ArrowIcon from "../components/icons/ArrowIcon";
+import { ITheme } from "../interfaces/ITheme";
 
 import {
   Box,
@@ -20,6 +23,14 @@ import {
 
 const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
+  
+  const theme = useTheme() as ITheme;
+  
+  const isLightTheme = theme.id === "light";
+  const arrowColor = isLightTheme && (isHovered || isOpen) ? theme.secondary : theme.primary;
+  
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   useOutsideClick(dropdownRef, () => setIsOpen(false));
 
@@ -42,8 +53,15 @@ const Home: NextPage = () => {
             my works, projects and experiences.
           </Description>
           <DropdownWrapper ref={dropdownRef}>
-            <HomeButton $isOpen={isOpen} onClick={() => setIsOpen((prev) => !prev)}>
+            <HomeButton
+              $isOpen={isOpen}
+              onClick={() => setIsOpen((prev) => !prev)}
+              style={{ display: "flex", alignItems: "center", gap: "0.5rem", justifyContent: "center" }}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
               EXPLORE
+              <ArrowIcon bottom={isOpen} top={!isOpen} color={arrowColor} />
             </HomeButton>
             {isOpen && (
               <Dropdown>

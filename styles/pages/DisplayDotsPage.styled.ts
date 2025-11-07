@@ -27,6 +27,7 @@ export const Margin = styled.div`
 export const Button = styled.button<{$isOpen?: boolean}>`
   border: 0.1rem solid ${(props: any) => props.theme.primary};
   border-radius: 1rem;
+  width: 10rem;
 
   padding: 0.5rem 1rem;
   margin-top: 1rem;

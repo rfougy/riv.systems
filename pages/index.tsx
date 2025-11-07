@@ -43,11 +43,10 @@ const Home: NextPage = () => {
           </Description>
           <DropdownWrapper ref={dropdownRef}>
             <HomeButton $isOpen={isOpen} onClick={() => setIsOpen((prev) => !prev)}>
-              EXPLORE SYSTEMS
+              EXPLORE
             </HomeButton>
             {isOpen && (
               <Dropdown>
-                <Divider />
                 {sectionsList.map((section, index) => (
                   <React.Fragment key={section}>
                     <Link href={`/content/${section}`} passHref>

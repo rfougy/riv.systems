@@ -46,7 +46,7 @@ const Header: React.FC<{
       ? category.replace(/^[^.]+/, (match) => match.toUpperCase())
       : capitalizeFirstChar(category);
 
-  useEffect(() => setIsWorksPage(section === "works"), [section]);
+  useEffect(() => setIsWorksPage(section === "portfolio"), [section]);
 
   return (
     <Box>

@@ -50,8 +50,7 @@ const PostCard: React.FC<{
         <Text>
           <Title>{title}</Title>
           <Metadata>
-            {hasWorksDuration && <Info>Worked: {formattedDuration}</Info>}
-            <Info>Posted: {stylizedDate}</Info>
+            <Info>{stylizedDate}</Info>
           </Metadata>
         </Text>
       </Box>

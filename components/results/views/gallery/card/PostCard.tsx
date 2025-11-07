@@ -1,20 +1,59 @@
-import Link from "next/link";
 import Image from "next/image";
 
 import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";
 
-import { Box } from "./PostCard.styled";
+import { Box, ModalBox } from "./PostCard.styled";
+import useViewportWidthEventListener from "../../../../../hooks/useViewportWidthListener";
+import { useState } from "react";
+import { breakpoints } from "../../../../../styles/theme";
+import Modal from "../../../../shared/modal/Modal";
 
 const PostCard: React.FC<{
   path: string;
   frontmatter: any;
   galleryCoverImage?: { path: string; aspectRatio: string };
 }> = ({ path, frontmatter, galleryCoverImage }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const { title, coverImage, placeholderImage }: IPostFrontMatter = frontmatter;
 
+  const isBelowMinWidth = useViewportWidthEventListener(
+    breakpoints.useViewportWidth.xs
+  );
+
+  function handleImageClick() {
+    if (!isBelowMinWidth) setIsModalOpen(true);
+  }
+
   return (
-    <Link href={path}>
-      <Box aspectRatio={galleryCoverImage?.aspectRatio}>
+    <>
+      {isModalOpen && (
+        <Modal
+          onClose={() => setIsModalOpen(false)}
+          aspectRatio={galleryCoverImage?.aspectRatio}
+        >
+          <ModalBox aspectRatio={galleryCoverImage?.aspectRatio}>
+            <Image
+              src={galleryCoverImage ? galleryCoverImage.path : coverImage}
+              alt={`Cover image for post titled '${title}'`}
+              fill
+              placeholder="blur"
+              blurDataURL={placeholderImage}
+              style={{
+                borderRadius: "2vh",
+                objectFit: "cover",
+              }}
+            />
+          </ModalBox>
+        </Modal>
+      )}
+      <Box
+        aspectRatio={galleryCoverImage?.aspectRatio}
+        onClick={handleImageClick}
+        style={{
+          cursor: isBelowMinWidth ? "crosshair" : "cell",
+        }}
+      >
         <Image
           src={galleryCoverImage ? galleryCoverImage.path : coverImage}
           alt={`Cover image for post titled '${title}'`}
@@ -29,7 +68,7 @@ const PostCard: React.FC<{
           }}
         />
       </Box>
-    </Link>
+    </>
   );
 };
 

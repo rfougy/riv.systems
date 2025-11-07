@@ -27,6 +27,13 @@ export const Box = styled.div<BoxProps>`
   }
 `;
 
+export const ModalBox = styled.div<BoxProps>`
+  position: relative;
+  width: 100%;
+
+  aspect-ratio: ${({ aspectRatio }) => aspectRatio || "1/1"};
+`;
+
 export const MetadataContainer = styled.div`
   display: flex;
   flex-wrap: nowrap;

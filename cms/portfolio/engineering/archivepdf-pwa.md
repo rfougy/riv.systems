@@ -1,10 +1,10 @@
 ---
 title: ARCHIVE.pdf Progressive Web App
 datePublished: "2025-11-05"
-section: works
+section: portfolio
 category: engineering
 excerpt: What started as a Wix site became a full-fledged PWA, built entirely by volunteers tackling everything from CMS setup to slashing server costs and more.
-coverImage: "/works/engineering/archivepdf-pwa/apdf-pwa_cover.png"
+coverImage: "/portfolio/engineering/archivepdf-pwa/apdf-pwa_cover.png"
 link: https://www.archivepdf.net/
 worksTeamSize: 5
 worksRoles: ["Product Manager", "Fullstack Engineer"]
@@ -37,8 +37,8 @@ One of the first and most critical decisions was selecting a Content Management 
 <br/>
 
 <Slideshow hideThumbnails aspectRatio="34 / 20" navArrowColor="#000000" slides='[
-  { "src": "/works/engineering/archivepdf-pwa/apdf-pwa_strapi-1.png", "alt": "Screenshot of ARCHIVE.pdf Strapi" },
-  { "src": "/works/engineering/archivepdf-pwa/apdf-pwa_strapi-2.png", "alt": "Screenshot of ARCHIVE.pdf Strapi" }
+  { "src": "/portfolio/engineering/archivepdf-pwa/apdf-pwa_strapi-1.png", "alt": "Screenshot of ARCHIVE.pdf Strapi" },
+  { "src": "/portfolio/engineering/archivepdf-pwa/apdf-pwa_strapi-2.png", "alt": "Screenshot of ARCHIVE.pdf Strapi" }
 ]' />
 
 <br/>
@@ -54,7 +54,7 @@ As with any content-heavy platform, it was imperative for ARCHIVE.pdf to have a 
 <br/>
 
 <Image 
-    src="/works/engineering/archivepdf-pwa/apdf-pwa_recommender.png" 
+    src="/portfolio/engineering/archivepdf-pwa/apdf-pwa_recommender.png" 
     alt="Code snippet of recommendations algorithm" 
     aspectRatio="1858:1656"
 />
@@ -74,7 +74,7 @@ To resolve this, I <mark>refactored our data fetching methods by using [Strapiâ€
 <br/>
 
 <Image 
-    src="/works/engineering/archivepdf-pwa/apdf-pwa_fot.png" 
+    src="/portfolio/engineering/archivepdf-pwa/apdf-pwa_fot.png" 
     alt="Screenshot of Fast Origin Transfer usage over the past year" 
     aspectRatio="2456:1136"
 />
@@ -83,7 +83,7 @@ To resolve this, I <mark>refactored our data fetching methods by using [Strapiâ€
 <br/>
 
 <Image 
-    src="/works/engineering/archivepdf-pwa/apdf-pwa_isr.png" 
+    src="/portfolio/engineering/archivepdf-pwa/apdf-pwa_isr.png" 
     alt="Screenshot of ISR Reads usage over the past year" 
     aspectRatio="2456:1136"
 />

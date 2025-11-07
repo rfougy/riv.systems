@@ -1,7 +1,7 @@
 ---
 title: Aimly
 datePublished: "2023-04-30"
-section: works
+section: portfolio
 category: engineering
 excerpt: Laid the foundations of the company’s platform, from developing core features to establishing styling standards and more.
 coverImage: https://user-images.githubusercontent.com/77861258/235372607-f5b674ef-95f6-4acb-8e49-6dcf33cc3778.jpg

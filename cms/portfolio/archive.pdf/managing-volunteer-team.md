@@ -1,10 +1,10 @@
 ---
 title: "On Managing Volunteer-Based Teams"
 datePublished: "2025-10-25"
-section: works
+section: portfolio
 category: archive.pdf
 excerpt: An overview of volunteer-based teams from my time at ARCHIVE.pdf, and how managing them differs from traditional teams.
-coverImage: "/works/archive.pdf/managing-volunteer-team/managing-volunteer-team-cover.png"
+coverImage: "/portfolio/archive.pdf/managing-volunteer-team/managing-volunteer-team-cover.png"
 link: https://www.archivepdf.net/
 worksTeamSize: 20
 worksRoles: ["Founder", "CEO", "CTO"]
@@ -12,7 +12,7 @@ worksDuration: ["02.19", "08.25"]
 worksTools: ["Various"]
 ---
 
-Since its founding in 2019, [ARCHIVE.pdf](https://www.archivepdf.net/) has been pursued as a community-driven passion project. The company’s values and mission resonated within the fashion community, with fellow enthusiasts offering to volunteer and work together to realize its vision. By 2023, we had grown into <mark>a fully remote, volunteer-based team of 20</mark> — leaders, content creators, writers, developers — and together we were able to [achieve milestones that even well-funded, salaried teams could only dream of](https://riv.systems/content/works/archive.pdf/archivepdf-retrospective-part-1).
+Since its founding in 2019, [ARCHIVE.pdf](https://www.archivepdf.net/) has been pursued as a community-driven passion project. The company’s values and mission resonated within the fashion community, with fellow enthusiasts offering to volunteer and work together to realize its vision. By 2023, we had grown into <mark>a fully remote, volunteer-based team of 20</mark> — leaders, content creators, writers, developers — and together we were able to [achieve milestones that even well-funded, salaried teams could only dream of](https://riv.systems/content/portfolio/archive.pdf/archivepdf-retrospective-part-1).
 
 ## What Makes a Volunteer-Based Team Different
 

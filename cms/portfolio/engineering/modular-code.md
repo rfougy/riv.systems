@@ -1,7 +1,7 @@
 ---
 title: Modular Code - Iterating the Frontend Architecture for Aimly’s Event Creation Feature
 datePublished: "2023-10-06"
-section: works
+section: portfolio
 category: engineering
 excerpt: How I evolved an evergrowing feature through abstraction and foresight.
 coverImage: https://github.com/rfougy/riv.systems/assets/77861258/7da956d0-5b8b-42b3-9769-56a5a7d12dd7

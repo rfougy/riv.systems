@@ -1,10 +1,10 @@
 ---
 title: "ARCHIVE.pdf Retrospective: Overview & Timeline"
 datePublished: "2025-08-18"
-section: works
+section: portfolio
 category: archive.pdf
 excerpt: Looking back on the journey of ARCHIVE.pdf, from scanning books in the basement to Paris Fashion Week and beyond.
-coverImage: "/works/archive.pdf/archivepdf-retrospective-part-1/archivepdf-retrospective-part-1_cover.png"
+coverImage: "/portfolio/archive.pdf/archivepdf-retrospective-part-1/archivepdf-retrospective-part-1_cover.png"
 link: https://www.archivepdf.net/
 worksTeamSize: 20
 worksRoles: ["Founder", "CEO", "CTO"]

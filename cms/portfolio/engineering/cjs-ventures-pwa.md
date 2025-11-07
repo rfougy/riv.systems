@@ -1,10 +1,10 @@
 ---
 title: CJ's Ventures Progressive Web App
 datePublished: "2025-11-03"
-section: works
+section: portfolio
 category: engineering
 excerpt: A waste management company was spending tens of thousands yearly on software that didn't satisfy. Here's what we built instead.
-coverImage: "/works/engineering/cjs-ventures-pwa/cjs-ventures-pwa-cover.png"
+coverImage: "/portfolio/engineering/cjs-ventures-pwa/cjs-ventures-pwa-cover.png"
 worksTeamSize: 2
 worksRoles: ["Fullstack Engineer", "Scrum Master"]
 worksDuration: ["08.24", "Present"]
@@ -31,10 +31,10 @@ worksTools:
 <br/>
 
 <Slideshow hideThumbnails aspectRatio="34 / 20" navArrowColor="#000000" slides='[
-  { "src": "/works/engineering/cjs-ventures-pwa/cjv-app_tasks.png", "alt": "Screenshot of CJ&apos;s Ventures App" },
-  { "src": "/works/engineering/cjs-ventures-pwa/cjv-app_tasks-details.png", "alt": "Screenshot of CJ&apos;s Ventures App" },
-  { "src": "/works/engineering/cjs-ventures-pwa/cjv-app_calendar.png", "alt": "Screenshot of CJ&apos;s Ventures App" },
-  { "src": "/works/engineering/cjs-ventures-pwa/cjv-app_invoices.png", "alt": "Screenshot of CJ&apos;s Ventures App" }
+  { "src": "/portfolio/engineering/cjs-ventures-pwa/cjv-app_tasks.png", "alt": "Screenshot of CJ&apos;s Ventures App" },
+  { "src": "/portfolio/engineering/cjs-ventures-pwa/cjv-app_tasks-details.png", "alt": "Screenshot of CJ&apos;s Ventures App" },
+  { "src": "/portfolio/engineering/cjs-ventures-pwa/cjv-app_calendar.png", "alt": "Screenshot of CJ&apos;s Ventures App" },
+  { "src": "/portfolio/engineering/cjs-ventures-pwa/cjv-app_invoices.png", "alt": "Screenshot of CJ&apos;s Ventures App" }
 ]' />
 
 <br/>

@@ -22,7 +22,7 @@ const PostPage: React.FC<{
   const { title, coverImage, placeholderImage, section }: IPostFrontMatter =
     frontmatter;
 
-  const isWorksPage = section === "works";
+  const isPortfolioPage = section === "portfolio";
 
   return content ? (
     <TextHighlightProvider>
@@ -75,7 +75,7 @@ const PostPage: React.FC<{
         </Content>
         <PageNav currPost={content} posts={content.allPostsSorted} />
       </Box>
-      {isWorksPage && <HighlightToggler />}
+      {isPortfolioPage && <HighlightToggler />}
     </TextHighlightProvider>
   ) : (
     <div>Error: No content available...</div>

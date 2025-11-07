@@ -1,1 +1,1 @@
-export type sectionType = "works" | "photos" | "blog";
+export type sectionType = "portfolio" | "blog" | "photos";

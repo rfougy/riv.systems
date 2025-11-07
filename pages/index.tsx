@@ -1,16 +1,28 @@
 import type { GetStaticProps, NextPage } from "next";
+import Link from "next/link";
+import React, { useRef, useState } from "react";
 
 import DisplayDotsCoordsProvider from "../context/DisplayDotsCoordsContext";
 import DisplayDotsAnime from "../components/features/display-dots-anime/DisplayDotsAnime";
-import Button from "../components/shared/button/Button";
+import useOutsideClick from "../hooks/useOutsideClick";
+import { sectionsList } from "../constants/sectionsList";
 
 import {
   Box,
   Description,
   Margin,
+  Button as HomeButton,
+  DropdownWrapper,
+  Dropdown,
+  DropdownItem,
+  Divider,
 } from "../styles/pages/DisplayDotsPage.styled";
 
 const Home: NextPage = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+  useOutsideClick(dropdownRef, () => setIsOpen(false));
+
   return (
     <>
       <DisplayDotsCoordsProvider>
@@ -29,7 +41,25 @@ const Home: NextPage = () => {
             <br />
             my works, projects and experiences.
           </Description>
-          <Button href={`/content`}>EXPLORE SYSTEMS</Button>
+          <DropdownWrapper ref={dropdownRef}>
+            <HomeButton $isOpen={isOpen} onClick={() => setIsOpen((prev) => !prev)}>
+              EXPLORE
+            </HomeButton>
+            {isOpen && (
+              <Dropdown>
+                {sectionsList.map((section, index) => (
+                  <React.Fragment key={section}>
+                    <Link href={`/content/${section}`} passHref>
+                      <DropdownItem onClick={() => setIsOpen(false)}>
+                        {section.toUpperCase()}
+                      </DropdownItem>
+                    </Link>
+                    {index < sectionsList.length - 1 && <Divider />}
+                  </React.Fragment>
+                ))}
+              </Dropdown>
+            )}
+          </DropdownWrapper>
         </Box>
       </DisplayDotsCoordsProvider>
     </>

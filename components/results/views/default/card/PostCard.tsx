@@ -7,7 +7,6 @@ import {
   Box,
   Category,
   Info,
-  Metadata,
   MetadataContainer,
   Text,
   Title,

@@ -1,3 +1,20 @@
+/**
+ * Display Dots Animation - Coordinate Calculation Module
+ * 
+ * This module provides functions for converting text strings into coordinate-based
+ * dot matrix representations. It handles:
+ * - Character positioning and spacing
+ * - Active and inactive coordinate calculation
+ * - Gap detection between characters and words
+ * - Coordinate grouping by character, word, and space
+ * 
+ * The coordinate system uses [y, x] format where:
+ * - y: Row coordinate (0 = top row)
+ * - x: Column coordinate (0 = leftmost column)
+ * 
+ * @module lib/display-dots-animation/getCoords
+ */
+
 import groupBy from "lodash/groupBy";
 import "../../ext/string.extensions";
 
@@ -9,7 +26,17 @@ import IAllCoords from "../../interfaces/IAllCoords";
 let charStartingXCoord: number = 0;
 
 /**
- * @todo create tests and add descriptions + examples
+ * Calculates active coordinates for a single word by positioning each character
+ * horizontally and offsetting coordinates based on character width.
+ * 
+ * @param word - The word to process (should be uppercase)
+ * @returns Array of coordinate arrays for active dots in the word
+ * 
+ * @example
+ * getActiveCoordsForWord("HI")
+ * // Returns coordinates for 'H' and 'I' positioned side by side
+ * // [[0,0], [0,3], [1,0], [1,3], ...] (H coordinates)
+ * // [[0,5], [0,6], [0,7], [1,6], ...] (I coordinates offset by H's width)
  */
 function getActiveCoordsForWord(word: string): number[][] {
   const charArr: string[] = word.split("");
@@ -43,6 +70,23 @@ function getActiveCoordsForWord(word: string): number[][] {
   return activeCoords;
 }
 
+/**
+ * Calculates all coordinates (active and inactive) for a given string.
+ * Active coordinates form the visible text, while inactive coordinates
+ * represent empty spaces and gaps that will be animated.
+ * 
+ * @param string - The text string to process (automatically uppercased)
+ * @returns Object containing allCoords, activeCoords, and inactiveCoords
+ * 
+ * @example
+ * getAllCoords("HI")
+ * // Returns:
+ * // {
+ * //   allCoords: [[0,0], [0,1], [0,2], [0,3], [0,4], [0,5], ...],
+ * //   activeCoords: [[0,0], [0,3], [1,0], [1,3], ...],
+ * //   inactiveCoords: [[0,1], [0,2], [0,4], ...]
+ * // }
+ */
 function getAllCoords(string: string): IAllCoords {
   const wordsArr: string[] = string.toUpperCase().split(" ");
 
@@ -116,7 +160,17 @@ function getAllCoords(string: string): IAllCoords {
 }
 
 /**
- * @description finds gap coords where the starting coord of a given row doesn't have xCoord of 0
+ * Finds gap coordinates preceding a coordinate where the starting coordinate
+ * of a given row doesn't have xCoord of 0. These are the empty dots before
+ * the first character in a row.
+ * 
+ * @param currCoord - The current coordinate [y, x]
+ * @returns Array of gap coordinates from x=0 to x=currCoord[1]-1
+ * 
+ * @example
+ * getPrecGapCoordsHelper([2, 5])
+ * // Returns: [[2, 4], [2, 3], [2, 2], [2, 1], [2, 0]]
+ * // (all coordinates on row 2 from x=0 to x=4)
  */
 function getPrecGapCoordsHelper(currCoord: number[]) {
   const gapCoords: number[][] = [];
@@ -131,6 +185,24 @@ function getPrecGapCoordsHelper(currCoord: number[]) {
   return gapCoords;
 }
 
+/**
+ * Finds gap coordinates proceeding (after) a coordinate. These are the empty
+ * dots between characters or at the end of rows.
+ * 
+ * @param currCoord - The current coordinate [y, x]
+ * @param largerXCoord - The larger X coordinate to fill up to
+ * @param isMaxXCoord - If true, fills to maxXCoord; if false, fills to largerXCoord-1
+ * @returns Array of gap coordinates between currCoord and largerXCoord
+ * 
+ * @example
+ * getProcGapCoordsHelper([2, 2], 5, false)
+ * // Returns: [[2, 3], [2, 4]]
+ * // (coordinates on row 2 from x=3 to x=4)
+ * 
+ * getProcGapCoordsHelper([2, 2], 10, true)
+ * // Returns: [[2, 3], [2, 4], [2, 5], [2, 6], [2, 7], [2, 8], [2, 9], [2, 10]]
+ * // (coordinates on row 2 from x=3 to x=10)
+ */
 function getProcGapCoordsHelper(
   currCoord: number[],
   largerXCoord: number,
@@ -151,6 +223,19 @@ function getProcGapCoordsHelper(
   return gapCoords;
 }
 
+/**
+ * Calculates the start and end X coordinates for each character in a string.
+ * Used to determine the X-coordinate range for grouping coordinates by character.
+ * 
+ * @param string - The text string to process
+ * @returns Array of [startX, endX] coordinate pairs, one for each character
+ * 
+ * @example
+ * getStartEndXCoordsPerChar("HI")
+ * // Returns: [[0, 4], [5, 8]]
+ * // 'H' spans from x=0 to x=4 (width 5)
+ * // 'I' spans from x=5 to x=8 (width 4, accounting for spacing)
+ */
 function getStartEndXCoordsPerChar(string: string): number[][] {
   const charArr = string.split("");
 
@@ -174,6 +259,27 @@ function getStartEndXCoordsPerChar(string: string): number[][] {
   return startEndXCoordsPerChar;
 }
 
+/**
+ * Groups coordinates by individual character. Each character gets its own
+ * coordinate group including active dots, inactive dots, and row groupings.
+ * 
+ * @param string - The text string to process
+ * @returns Hashtable where keys are character X-coordinate ranges (e.g., "0-4")
+ *          and values contain allCoords, allCoordsByRow, activeCoords, and inactiveCoords
+ * 
+ * @example
+ * groupCoordsByChar("HI")
+ * // Returns:
+ * // {
+ * //   "0-4": {
+ * //     allCoords: [[0,0], [0,1], [0,3], ...],
+ * //     allCoordsByRow: { 0: [[0,0], [0,3]], 1: [[1,0], [1,3]], ... },
+ * //     activeCoords: [[0,0], [0,3], [1,0], [1,3], ...],
+ * //     inactiveCoords: [[0,1], [0,2], [0,4], ...]
+ * //   },
+ * //   "5-8": { ... } // 'I' character
+ * // }
+ */
 export function groupCoordsByChar(string: string) {
   const { allCoords, activeCoords, inactiveCoords }: IAllCoords =
     getAllCoords(string);
@@ -227,6 +333,24 @@ export function groupCoordsByChar(string: string) {
   return groupedCoordsHashtable;
 }
 
+/**
+ * Groups coordinates by words and spaces, maintaining the structure of the
+ * original text. This allows rendering to preserve word boundaries and spacing.
+ * 
+ * @param string - The text string to process
+ * @returns Array of arrays, where each inner array represents a word or space group.
+ *          Word groups contain character coordinate groups, space groups contain
+ *          only inactive coordinates.
+ * 
+ * @example
+ * groupCoordsByWordAndSpace("HI THERE")
+ * // Returns:
+ * // [
+ * //   [charGroupH, charGroupI],  // "HI" word
+ * //   [spaceGroup],               // " " space
+ * //   [charGroupT, charGroupH, charGroupE, charGroupR, charGroupE]  // "THERE" word
+ * // ]
+ */
 export function groupCoordsByWordAndSpace(string: string) {
   const groupedCoordsByChar = Object.values(groupCoordsByChar(string));
 
@@ -260,6 +384,22 @@ export function groupCoordsByWordAndSpace(string: string) {
   return groupedCoordsByWord;
 }
 
+/**
+ * Helper function to check if a coordinate's X value falls within a given range.
+ * Used to determine which character a coordinate belongs to.
+ * 
+ * @param coord - The coordinate to check [y, x]
+ * @param startXCoord - The start X coordinate of the range (inclusive)
+ * @param endXCoord - The end X coordinate of the range (inclusive)
+ * @returns True if coord[1] is between startXCoord and endXCoord (inclusive)
+ * 
+ * @example
+ * isBetweenXCoordRangeHelper([2, 3], 0, 4)
+ * // Returns: true (3 is between 0 and 4)
+ * 
+ * isBetweenXCoordRangeHelper([2, 5], 0, 4)
+ * // Returns: false (5 is not between 0 and 4)
+ */
 function isBetweenXCoordRangeHelper(
   coord: number[],
   startXCoord: number,

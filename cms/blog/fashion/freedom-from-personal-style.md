@@ -35,7 +35,7 @@ In order to free yourself from the endless cycle of personal style, you must fir
 
 For centuries, the upper echelons of humankind have ascribed social value unto objects, transforming meaningless forms of mass into aspirational status symbols that are worshipped and sought after by the masses. Status dictates both our quality of life and our esteem within micro and macro communities. Chasing status is a reward-seeking behavior that encourages future prosperity, with personal style playing an unexpected role in this pursuit.
 
-If the eyes are the windows to the soul, appearance opens the door to one’s social standing. There’s symbolism woven into your choice of clothing based composition, cut, cost and culture—all are interpreted on a subconscious level to assess the amount of respect you’re worth. Status seeking helps spin the wheel of personal style, but as we become aware of its role in our decision-making, we can take the necessary steps to jump off the wheel altogether.
+If the eyes are the windows to the soul, appearance opens the door to one’s social standing. There’s symbolism woven into your choice of clothing based on composition, cut, cost and culture—all are interpreted on a subconscious level to assess the amount of respect you’re worth. Status seeking helps spin the wheel of personal style, but as we become aware of its role in our decision-making, we can take the necessary steps to jump off the wheel altogether.
 
 ---
 

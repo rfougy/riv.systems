@@ -52,10 +52,11 @@ export const Box = styled.div`
   }
 `;
 
-export const Text = styled.div`
+export const Subheader = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
 
   padding: 1rem;
   background: ${(props: any) => props.theme.secondary};
@@ -65,6 +66,7 @@ export const MetadataContainer = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  gap: 1rem;
 `;
 
 export const Metadata = styled.div`
@@ -91,8 +93,19 @@ export const Title = styled.h2`
 `;
 
 export const Info = styled.div`
-  min-width: max-content;
   cursor: cell !important;
+  text-wrap: wrap;
+`;
+
+export const Excerpt = styled.div`
+  cursor: cell !important;
+  text-wrap: wrap;
+  opacity: 0.6;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 `;
 
 export const Category = styled.span`

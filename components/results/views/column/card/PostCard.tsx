@@ -3,7 +3,16 @@ import Image from "next/image";
 
 import { IPostFrontMatter } from "../../../../../interfaces/IPostFrontMatter";
 
-import { Box, Category, Info, Metadata, Text, Title } from "./PostCard.styled";
+import {
+  Box,
+  Category,
+  Excerpt,
+  Info,
+  Metadata,
+  MetadataContainer,
+  Subheader,
+  Title,
+} from "./PostCard.styled";
 
 import { capitalizeFirstChar } from "../../../../../utils/common/capitalizeFirstChar";
 import { formatAndStylizeDate } from "../../../../../utils/common/formatAndStylizeDate";
@@ -19,6 +28,7 @@ const PostCard: React.FC<{
     coverImage,
     placeholderImage,
     worksDuration,
+    excerpt,
   }: IPostFrontMatter = frontmatter;
 
   const stylizedDate: string = formatAndStylizeDate(datePublished);
@@ -47,12 +57,17 @@ const PostCard: React.FC<{
             objectFit: "cover",
           }}
         />
-        <Text>
-          <Title>{title}</Title>
-          <Metadata>
-            <Info>{stylizedDate}</Info>
-          </Metadata>
-        </Text>
+        <div>
+          <Subheader>
+            <MetadataContainer>
+              <Title>{title}</Title>
+              <Metadata>
+                <Info>{stylizedDate}</Info>
+              </Metadata>
+            </MetadataContainer>
+            <Excerpt>{excerpt}</Excerpt>
+          </Subheader>
+        </div>
       </Box>
     </Link>
   );

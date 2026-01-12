@@ -6,7 +6,6 @@ import NavLogo from "../../nav-logo/NavLogo";
 
 import { LogoAndButtonsBox, FeaturesBox } from "./DefaultLayout.styled";
 import { NavBox } from "../../Navbar.styled";
-import AudioPlayer from "../../../features/audio-player/AudioPlayer";
 
 const DefaultLayout: React.FC<{
   toggleTheme: () => void;
@@ -17,7 +16,6 @@ const DefaultLayout: React.FC<{
       <NavLogo />
       <FeaturesBox>
         <ThemeToggleButton toggleTheme={toggleTheme} />
-        <AudioPlayer />
       </FeaturesBox>
     </LogoAndButtonsBox>
     <NavMenu />

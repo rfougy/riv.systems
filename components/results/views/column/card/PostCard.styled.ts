@@ -19,7 +19,7 @@ export const Box = styled.div`
   background: padding-box,
     linear-gradient(
         180deg,
-        ${(props: any) => props.theme.secondary} 86%,
+        ${(props: any) => props.theme.secondary} 79%,
         ${(props: any) => props.theme.primary} 100%
       )
       border-box;
@@ -35,7 +35,7 @@ export const Box = styled.div`
     background: padding-box,
       linear-gradient(
           180deg,
-          ${(props: any) => props.theme.secondary} 92.5%,
+          ${(props: any) => props.theme.secondary} 79%,
           ${(props: any) => props.theme.primary} 100%
         )
         border-box;
@@ -45,7 +45,7 @@ export const Box = styled.div`
     background: padding-box,
       linear-gradient(
           180deg,
-          ${(props: any) => props.theme.secondary} 88%,
+          ${(props: any) => props.theme.secondary} 77.5%,
           ${(props: any) => props.theme.primary} 100%
         )
         border-box;
@@ -58,7 +58,7 @@ export const Subheader = styled.div`
   justify-content: space-between;
   gap: 1rem;
 
-  padding: 1rem;
+  padding: 1.25rem;
   background: ${(props: any) => props.theme.secondary};
 `;
 

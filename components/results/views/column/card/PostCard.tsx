@@ -57,17 +57,15 @@ const PostCard: React.FC<{
             objectFit: "cover",
           }}
         />
-        <div>
-          <Subheader>
-            <MetadataContainer>
-              <Title>{title}</Title>
-              <Metadata>
-                <Info>{stylizedDate}</Info>
-              </Metadata>
-            </MetadataContainer>
-            <Excerpt>{excerpt}</Excerpt>
-          </Subheader>
-        </div>
+        <Subheader>
+          <MetadataContainer>
+            <Title>{title}</Title>
+            <Metadata>
+              <Info>{stylizedDate}</Info>
+            </Metadata>
+          </MetadataContainer>
+          <Excerpt>{excerpt}</Excerpt>
+        </Subheader>
       </Box>
     </Link>
   );

@@ -19,7 +19,7 @@ export const Box = styled.div`
   background: padding-box,
     linear-gradient(
         180deg,
-        ${(props: any) => props.theme.secondary} 86%,
+        ${(props: any) => props.theme.secondary} 79%,
         ${(props: any) => props.theme.primary} 100%
       )
       border-box;
@@ -35,7 +35,7 @@ export const Box = styled.div`
     background: padding-box,
       linear-gradient(
           180deg,
-          ${(props: any) => props.theme.secondary} 92.5%,
+          ${(props: any) => props.theme.secondary} 79%,
           ${(props: any) => props.theme.primary} 100%
         )
         border-box;
@@ -45,19 +45,20 @@ export const Box = styled.div`
     background: padding-box,
       linear-gradient(
           180deg,
-          ${(props: any) => props.theme.secondary} 88%,
+          ${(props: any) => props.theme.secondary} 77.5%,
           ${(props: any) => props.theme.primary} 100%
         )
         border-box;
   }
 `;
 
-export const Text = styled.div`
+export const Subheader = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
 
-  padding: 1rem;
+  padding: 1.25rem;
   background: ${(props: any) => props.theme.secondary};
 `;
 
@@ -65,6 +66,7 @@ export const MetadataContainer = styled.div`
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  gap: 1rem;
 `;
 
 export const Metadata = styled.div`
@@ -91,8 +93,19 @@ export const Title = styled.h2`
 `;
 
 export const Info = styled.div`
-  min-width: max-content;
   cursor: cell !important;
+  text-wrap: wrap;
+`;
+
+export const Excerpt = styled.div`
+  cursor: cell !important;
+  text-wrap: wrap;
+  opacity: 0.6;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 `;
 
 export const Category = styled.span`

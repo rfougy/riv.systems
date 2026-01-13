@@ -23,11 +23,6 @@ export const socialsList: ISocials[] = [
     icon: instagramIcon,
   },
   {
-    title: "Tumblr",
-    url: "https://riv-photos.tumblr.com/",
-    icon: tumblrIcon,
-  },
-  {
     title: "Email",
     url: "mailto:rivierefougy@gmail.com",
     icon: emailIcon,

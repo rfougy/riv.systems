@@ -7,8 +7,8 @@ excerpt: Looking back on the journey of ARCHIVE.pdf, from scanning books in the 
 coverImage: "/portfolio/archive.pdf/archivepdf-retrospective-part-1/archivepdf-retrospective-part-1_cover.png"
 link: https://www.archivepdf.net/
 worksTeamSize: 20
-worksRoles: ["Founder", "CEO", "CTO"]
-worksDuration: ["02.19", "08.25"]
+worksRoles: ["Founder", "CEO"]
+worksDuration: ["02.19", "Present"]
 worksTools: ["Various"]
 ---
 
@@ -21,8 +21,6 @@ One day, while searching online for clothing to resell, I stumbled upon a book b
 With each new scan came a growing number of supporters who expressed their enthusiasm, and before long many wanted to contribute their own scans too. Eventually I created an [Instagram account](https://www.instagram.com/archivepdf/) that served as another platform to share the images we’ve scanned. This gradually <mark>evolved into a digital magazine</mark>, with each post featuring rare scans and informative captions.
 
 Our first team member, Isabelle, joined the then solo venture in 2020, followed by Johnny, Khan, and many more. Within the blink of an eye, <mark>the team grew from 1 to 20</mark>, the content and projects we created became more ambitious, and before we knew it we found ourselves <mark>attracting business partners and opportunities: adidas, Gucci, Y-3, Grailed</mark>. We now attend <mark>Paris Fashion Week year after year</mark>, providing coverage for the very brands that inspired the creation of this company.
-
-Although I’ve recently made the decision to leave ARCHIVE.pdf in pursuit of something new, I’m extremely proud that it can keep going with a team who truly love fashion. The foundations are set, the company’s full potential is still yet to be realized, and I’m excited to see what’s in store.
 
 From building and leading a team, to understanding and providing value for a unique industry and community, the experiences I’ve gained and the accomplishments I achieved will stay with me for the rest of my life. I’m forever grateful.
 
